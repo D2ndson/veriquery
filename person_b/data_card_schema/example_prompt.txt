@@ -1,0 +1,107 @@
+Database: california_schools
+
+Table "schools" -- 17,686 rows PK(CDSCode)
+  "CDSCode" (TEXT, id, e.g. '01100170000000', '01100170109835', '01100170112607') !! numbers stored as TEXT; CAST before arithmetic or comparison
+  "NCESDist" (TEXT, text, null 6%, e.g. '0691051', '0600002', '0600003') -- National Center for Educational Statistics school district identification number. This field represents the 7-digit National Center for Educational Statistics (... !! numbers stored as TEXT; CAST before arithmetic or comparison
+  "NCESSchool" (TEXT, text, null 28%, e.g. '10546', '10947', '12283') -- National Center for Educational Statistics school identification number. This field represents the 5-digit NCES school identification number. The NCESSchool com... !! numbers stored as TEXT; CAST before arithmetic or comparison
+  "StatusType" (TEXT, categorical, e.g. 'Active', 'Closed', 'Merged') -- This field identifies the status of the district. [Definitions of the valid status types are listed below: · Active: The district is in operation and providing instructional services. · Closed: The district is n...]
+  "County" (TEXT, text, e.g. 'Alameda') -- County name
+  "District" (TEXT, text, e.g. 'Alameda County Office of Education', 'California School for the Blind (State Special Schl)', 'California School for the Deaf-Fremont (State Special Schl)')
+  "School" (TEXT, text, null 8%, e.g. 'FAME Public Charter', 'Envision Academy for Arts & Technology', 'Aspire California College Preparatory Academy')
+  "Street" (TEXT, text, null 2%, e.g. '313 West Winton Avenue', '39899 Balentine Drive, Suite 335', '1515 Webster Street')
+  "StreetAbr" (TEXT, text, null 2%, e.g. '313 West Winton Ave.', '39899 Balentine Dr., Ste. 335', '1515 Webster St.') -- The abbreviated street address of the school, district, or administrative authority’s physical location. [The abbreviated street address of the school, district, or administrative authority’s physical location. Note: Some records (primarily records of closed or reti...]
+  "City" (TEXT, text, null 2%, e.g. 'Hayward', 'Newark', 'Oakland')
+  "Zip" (TEXT, text, null 2%, e.g. '94544-1136', '94560-5359', '94612-3355')
+  "State" (TEXT, categorical, null 2%, e.g. 'CA')
+  "MailStreet" (TEXT, text, null 2%, e.g. '313 West Winton Avenue', '39899 Balentine Drive, Suite 335', '1515 Webster Street') [The unabbreviated mailing address of the school, district, or administrative authority. Note: 1) Some entities (primarily closed or retired schools) may not hav...]
+  "MailStrAbr" (TEXT, text, null 2%, e.g. '313 West Winton Ave.', '39899 Balentine Dr., Ste. 335', '1515 Webster St.') -- mailing street address [the abbreviated mailing street address of the school, district, or administrative authority.Note: Many active entities have not provided a mailing street addres...]
+  "MailCity" (TEXT, text, null 2%, e.g. 'Hayward', 'Newark', 'Oakland') -- mailing city [The city associated with the mailing address of the school, district, or administrative authority. Note: Many entities have not provided a mailing address city....]
+  "MailZip" (TEXT, text, null 2%, e.g. '94544-1136', '94560-5359', '94612') -- mailing zip [The zip code associated with the mailing address of the school, district, or administrative authority. Note: Many entities have not provided a mailing address z...]
+  "MailState" (TEXT, categorical, null 2%, e.g. 'CA') -- mailing state [The state within the mailing address. For your convenience we have filled the unpopulated MailState cells with State data.]
+  "Phone" (TEXT, text, null 34%, e.g. '(510) 887-0152', '(510) 596-8901', '(510) 686-4131')
+  "Ext" (TEXT, text, null 97%, e.g. '130', '1240', '1200') -- The phone number extension of the school, district, or administrative authority. !! numbers stored as TEXT; CAST before arithmetic or comparison; 97% NULL; filter or handle NULLs
+  "Website" (TEXT, text, null 61%, e.g. 'www.acoe.org', 'www.envisionacademy.org/', 'www.aspirepublicschools.org') -- The website address of the school, district, or administrative authority. !! 61% NULL; filter or handle NULLs
+  "OpenDate" (DATE, date, null 8%, range 1850-07-01..2017-09-22) -- The date the school opened.
+  "ClosedDate" (DATE, date, null 68%, range 1980-07-01..2016-09-01) -- The date the school closed. !! 68% NULL; filter or handle NULLs
+  "Charter" (INTEGER, boolean, null 8%, e.g. 0, 1) -- This field identifies a charter school. [The field is coded as follows: · 1 = The school is a charter · 0 = The school is not a charter]
+  "CharterNum" (TEXT, text, null 90%, e.g. '0728', '0811', '1049') -- The charter school number, [4-digit number assigned to a charter school.] !! numbers stored as TEXT; CAST before arithmetic or comparison; 90% NULL; filter or handle NULLs
+  "FundingType" (TEXT, categorical, null 91%, e.g. 'Directly funded', 'Locally funded', 'Not in CS funding model') -- Indicates the charter school funding type [Values are as follows: · Not in CS (California School) funding model · Locally funded · Directly funded] !! 91% NULL; filter or handle NULLs
+  "DOC" (TEXT, categorical, e.g. '54', '52', '00') -- District Ownership Code [The District Ownership Code (DOC) is the numeric code used to identify the category of the Administrative Authority. • 00 - County Office of Education • 02 – St...] !! numbers stored as TEXT; CAST before arithmetic or comparison
+  "DOCType" (TEXT, categorical, e.g. 'Unified School District', 'Elementary School District', 'County Office of Education (COE)') -- The District Ownership Code Type is the text description of the DOC category. [(See text values in DOC field description above)]
+  "SOC" (TEXT, categorical, null 8%, e.g. '60', '66', '62') -- The School Ownership Code is a numeric code used to identify the type of school. [• 08 - Preschool • 09 – Special Education Schools (Public) • 11 – Youth Authority Facilities (CEA) • 13 – Opportunity Schools • 14 – Juvenile Court Schools • 15...] !! numbers stored as TEXT; CAST before arithmetic or comparison
+  "SOCType" (TEXT, categorical, null 8%, e.g. 'Elementary Schools (Public)', 'High Schools (Public)', 'Intermediate/Middle Schools (Public)') -- The School Ownership Code Type is the text description of the type of school.
+  "EdOpsCode" (TEXT, categorical, null 32%, e.g. 'TRAD', 'CON', 'COMMDAY') -- The Education Option Code is a short text description of the type of education offered. [• ALTSOC – Alternative School of Choice • COMM – County Community School • COMMDAY – Community Day School • CON – Continuation School • JUV – Juvenile Court Sch...]
+  "EdOpsName" (TEXT, categorical, null 32%, e.g. 'Traditional', 'Continuation School', 'Community Day School') -- Educational Option Name [The Educational Option Name is the long text description of the type of education being offered.]
+  "EILCode" (TEXT, categorical, null 8%, e.g. 'ELEM', 'HS', 'UG') -- The Educational Instruction Level Code is a short text description of the institution's type relative to the grade range served. [• A – Adult • ELEM – Elementary • ELEMHIGH – Elementary-High Combination • HS – High School • INTMIDJR – Intermediate/Middle/Junior High • PS – Preschool • UG –...]
+  "EILName" (TEXT, categorical, null 8%, e.g. 'Elementary', 'High School', 'Ungraded') -- The Educational Instruction Level Name is the long text description of the institution’s type relative to the grade range served.
+  "GSoffered" (TEXT, text, null 22%, e.g. 'K-12', '9-12', 'K-8') -- The grade span offered is the lowest grade and the highest grade offered or supported by the school, district, or administrative authority. This field might dif... [For example XYZ School might display the following data: GSoffered = P–Adult GSserved = K–12]
+  "GSserved" (TEXT, text, null 32%, e.g. 'K-12', '9-12', 'K-7') -- grade span served.. It is the lowest grade and the highest grade of student enrollment as reported in the most recent certified CALPADS Fall 1 data collection.... [commonsense evidence: 1. Only K–12 enrollment is reported through CALPADS 2. Note: Special programs at independent study, alternative education, and special edu...]
+  "Virtual" (TEXT, categorical, null 39%, e.g. 'N', 'P', 'F') -- This field identifies the type of virtual instruction offered by the school. Virtual instruction is instruction in which students and teachers are separated by... [The field is coded as follows: · F = Exclusively Virtual – The school has no physical building where students meet with each other or with teachers, all instruc...]
+  "Magnet" (INTEGER, boolean, null 40%, e.g. 0, 1) -- This field identifies whether a school is a magnet school and/or provides a magnet program. [The field is coded as follows: · 1 = Magnet - The school is a magnet school and/or offers a magnet program. · 0 = Not Magnet - The school is not a magnet school...]
+  "Latitude" (REAL, numeric, null 27%, range 32.547737..44.219305) -- The angular distance (expressed in degrees) between the location of the school, district, or administrative authority and the equator measured north to south.
+  "Longitude" (REAL, numeric, null 27%, range -124.28481..-83.781133) -- The angular distance (expressed in degrees) between the location of the school, district, or administrative authority and the prime meridian (Greenwich, England...
+  "AdmFName1" (TEXT, text, null 34%, e.g. 'L Karen', 'Laura', 'Clifford') -- administrator's first name [The superintendent’s or principal’s first name. commonsense evidence: Only active and pending districts and schools will display administrator information, if a...]
+  "AdmLName1" (TEXT, text, null 34%, e.g. 'Monroe', 'Robell', 'Thompson') -- administrator's last name [The superintendent’s or principal’s last name. commonsense evidence: Only active and pending districts and schools will display administrator information, if ap...]
+  "AdmEmail1" (TEXT, text, null 34%, e.g. 'lkmonroe@acoe.org', 'laura@envisionacademy.org', 'cliffordt@communityschoolforcreativeeducation.org') -- administrator's email address [The superintendent’s or principal’s email address. commonsense evidence: Only active and pending districts and schools will display administrator information, i...]
+  "AdmFName2" (TEXT, text, null 98%, e.g. 'Sau-Lim (Lance)', 'Jennifer', 'Annalisa') [SAME as 1] !! 98% NULL; filter or handle NULLs
+  "AdmLName2" (TEXT, text, null 98%, e.g. 'Tsang', 'Koelling', 'Moore') !! 98% NULL; filter or handle NULLs
+  "AdmEmail2" (TEXT, text, null 98%, e.g. 'stsang@unityhigh.org', 'jkoelling@efcps.net', 'annalisa.moore@neaclc.org') !! 98% NULL; filter or handle NULLs
+  "AdmFName3" (TEXT, categorical, null 100%, e.g. 'Mark', 'Eric', 'Vickie') [not useful] !! 100% NULL; filter or handle NULLs
+  "AdmLName3" (TEXT, categorical, null 100%, e.g. 'Zerpoli', 'Yount', 'Woodruff') [not useful] !! 100% NULL; filter or handle NULLs
+  "AdmEmail3" (TEXT, categorical, null 100%, e.g. 'vickiechang@acoe.org', 'tzerpoli@tricitiesrop.org', 'sroner@echs.org') [not useful] !! 100% NULL; filter or handle NULLs
+  "LastUpdate" (DATE, date, range 1999-06-24..2016-10-12) [when is this record updated last time]
+
+Table "satscores" -- 2,269 rows PK(cds)
+  "cds" (TEXT, id, e.g. '01100170000000', '01100170109835', '01100170112607') -- California Department Schools !! numbers stored as TEXT; CAST before arithmetic or comparison
+  "rtype" (TEXT, categorical, e.g. 'S', 'D') [unuseful]
+  "sname" (TEXT, text, null 23%, e.g. 'FAME Public Charter', 'Envision Academy for Arts & Technology', 'Aspire California College Preparatory Academy') -- school name
+  "dname" (TEXT, text, e.g. 'Alameda County Office of Education', 'Alameda Unified', 'Albany City Unified') -- district name. district segment
+  "cname" (TEXT, text, e.g. 'Alameda', 'Amador', 'Butte') -- county name
+  "enroll12" (INTEGER, numeric, range 0..43324) -- enrollment (1st-12nd grade)
+  "NumTstTakr" (INTEGER, numeric, range 0..24305) -- Number of Test Takers in this school [number of test takers in each school]
+  "AvgScrRead" (INTEGER, numeric, null 26%, range 308..653) -- average scores in Reading
+  "AvgScrMath" (INTEGER, numeric, null 26%, range 289..699) -- average scores in Math
+  "AvgScrWrite" (INTEGER, numeric, null 26%, range 312..671) -- average scores in writing
+  "NumGE1500" (INTEGER, numeric, null 26%, range 0..5837) -- Number of Test Takers Whose Total SAT Scores Are Greater or Equal to 1500 [Number of Test Takers Whose Total SAT Scores Are Greater or Equal to 1500 commonsense evidence: Excellence Rate = NumGE1500 / NumTstTakr]
+
+Table "frpm" -- 9,986 rows PK(CDSCode)
+  "CDSCode" (TEXT, id, e.g. '01100170109835', '01100170112607', '01100170118489') !! numbers stored as TEXT; CAST before arithmetic or comparison
+  "Academic Year" (TEXT, categorical, e.g. '2014-2015') !! name needs quoting in SQL (use backticks or double quotes)
+  "County Code" (TEXT, text, e.g. '01') !! numbers stored as TEXT; CAST before arithmetic or comparison; name needs quoting in SQL (use backticks or double quotes)
+  "District Code" (INTEGER, numeric, range 10017..76901) !! name needs quoting in SQL (use backticks or double quotes)
+  "School Code" (TEXT, id, e.g. '0109835', '0112607', '0118489') !! numbers stored as TEXT; CAST before arithmetic or comparison; name needs quoting in SQL (use backticks or double quotes)
+  "County Name" (TEXT, text, e.g. 'Alameda') -- County Code !! name needs quoting in SQL (use backticks or double quotes)
+  "District Name" (TEXT, text, e.g. 'Alameda County Office of Education', 'California School for the Blind (State Special Schl)', 'California School for the Deaf-Fremont (State Special Schl)') !! name needs quoting in SQL (use backticks or double quotes)
+  "School Name" (TEXT, text, e.g. 'FAME Public Charter', 'Envision Academy for Arts & Technology', 'Aspire California College Preparatory Academy') !! name needs quoting in SQL (use backticks or double quotes)
+  "District Type" (TEXT, categorical, e.g. 'Unified School District', 'Elementary School District', 'High School District') !! name needs quoting in SQL (use backticks or double quotes)
+  "School Type" (TEXT, categorical, null 0%, e.g. 'Elementary Schools (Public)', 'High Schools (Public)', 'Intermediate/Middle Schools (Public)') !! name needs quoting in SQL (use backticks or double quotes)
+  "Educational Option Type" (TEXT, categorical, null 0%, e.g. 'Traditional', 'Continuation School', 'Alternative School of Choice') !! name needs quoting in SQL (use backticks or double quotes)
+  "NSLP Provision Status" (TEXT, categorical, null 82%, e.g. 'Provision 2', 'Breakfast Provision 2', 'CEP') !! 82% NULL; filter or handle NULLs; name needs quoting in SQL (use backticks or double quotes)
+  "Charter School (Y/N)" (INTEGER, boolean, null 0%, e.g. 0, 1) [0: N; 1: Y] !! name needs quoting in SQL (use backticks or double quotes)
+  "Charter School Number" (TEXT, text, null 88%, e.g. '0728', '0811', '1049') !! numbers stored as TEXT; CAST before arithmetic or comparison; 88% NULL; filter or handle NULLs; name needs quoting in SQL (use backticks or double quotes)
+  "Charter Funding Type" (TEXT, categorical, null 88%, e.g. 'Directly funded', 'Locally funded', 'Not in CS funding model') !! 88% NULL; filter or handle NULLs; name needs quoting in SQL (use backticks or double quotes)
+  "IRC" (INTEGER, boolean, null 0%, e.g. 0, 1) [Not useful]
+  "Low Grade" (TEXT, categorical, e.g. 'K', '9', '6') !! name needs quoting in SQL (use backticks or double quotes)
+  "High Grade" (TEXT, categorical, e.g. '12', '5', '8') !! name needs quoting in SQL (use backticks or double quotes)
+  "Enrollment (K-12)" (REAL, numeric, range 1.0..5333.0) [commonsense evidence: K-12: 1st grade - 12nd grade] !! name needs quoting in SQL (use backticks or double quotes)
+  "Free Meal Count (K-12)" (REAL, numeric, null 1%, range 1.0..3927.0) [commonsense evidence: eligible free rate = Free Meal Count / Enrollment] !! name needs quoting in SQL (use backticks or double quotes)
+  "Percent (%) Eligible Free (K-12)" (REAL, numeric, null 1%, range 0.00176056338028169..1.0) !! name needs quoting in SQL (use backticks or double quotes)
+  "FRPM Count (K-12)" (REAL, numeric, null 0%, range 1.0..4419.0) -- Free or Reduced Price Meal Count (K-12) [commonsense evidence: eligible FRPM rate = FRPM / Enrollment] !! name needs quoting in SQL (use backticks or double quotes)
+  "Percent (%) Eligible FRPM (K-12)" (REAL, numeric, null 0%, range 0.00220507166482911..1.0) !! name needs quoting in SQL (use backticks or double quotes)
+  "Enrollment (Ages 5-17)" (REAL, numeric, null 0%, range 1.0..5271.0) !! name needs quoting in SQL (use backticks or double quotes)
+  "Free Meal Count (Ages 5-17)" (REAL, numeric, null 1%, range 1.0..3864.0) [commonsense evidence: eligible free rate = Free Meal Count / Enrollment] !! name needs quoting in SQL (use backticks or double quotes)
+  "Percent (%) Eligible Free (Ages 5-17)" (REAL, numeric, null 1%, range 0.00179856115107914..1.0) !! name needs quoting in SQL (use backticks or double quotes)
+  "FRPM Count (Ages 5-17)" (REAL, numeric, null 1%, range 1.0..4347.0) !! name needs quoting in SQL (use backticks or double quotes)
+  "Percent (%) Eligible FRPM (Ages 5-17)" (REAL, numeric, null 1%, range 0.00220507166482911..1.0) !! name needs quoting in SQL (use backticks or double quotes)
+  "2013-14 CALPADS Fall 1 Certification Status" (INTEGER, boolean, e.g. 1) !! name needs quoting in SQL (use backticks or double quotes)
+
+Joins:
+  "frpm"."CDSCode" = "schools"."CDSCode"  (one-to-one, declared)
+  "satscores"."cds" = "schools"."CDSCode"  (one-to-one, declared)
+
+Values from the question found in the data (use this exact spelling):
+  "frpm"."County Name": 'Fresno'
+  "satscores"."cname": 'Fresno'
+  "schools"."City": 'Fresno'
+  "schools"."County": 'Fresno'
+  "schools"."MailCity": 'Fresno'

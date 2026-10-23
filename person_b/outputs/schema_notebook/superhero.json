@@ -1,0 +1,2145 @@
+{
+ "db_id": "superhero",
+ "schema_version": "1.0",
+ "db_path": "data/bird_minidev/dev_databases/superhero/superhero.sqlite",
+ "fingerprint": "237568-1792489332628838200-v1.0",
+ "created_at": "2026-10-20T09:48:21+00:00",
+ "profile_seconds": 0.083,
+ "tables": [
+  {
+   "name": "alignment",
+   "row_count": 4,
+   "stats_rows": 4,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the unique identifier of the alignment",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "alignment",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": "Bad",
+     "max_value": "Neutral",
+     "examples": [
+      "Good",
+      "Bad",
+      "Neutral",
+      "N/A"
+     ],
+     "top_values": [
+      [
+       "Neutral",
+       1
+      ],
+      [
+       "N/A",
+       1
+      ],
+      [
+       "Good",
+       1
+      ],
+      [
+       "Bad",
+       1
+      ]
+     ],
+     "description": "the alignment of the superhero",
+     "value_description": "commonsense evidence:\nAlignment refers to a character's moral and ethical stance and can be used to describe the overall attitude or behavior of a superhero. Some common alignments for superheroes include:\nGood: These superheroes are typically kind, selfless, and dedicated to protecting others and upholding justice. Examples of good alignments include Superman, Wonder Woman, and Spider-Man.\nNeutral: These superheroes may not always prioritize the greater good, but they are not necessarily evil either. They may act in their own self-interest or make decisions based on their own moral code. Examples of neutral alignments include the Hulk and Deadpool.\n\tBad: These superheroes are typically selfish, manipulative, and willing to harm others in pursuit of their own goals. Examples of evil alignments include Lex Luthor and the Joker.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "alignment": "Good"
+    },
+    {
+     "id": 2,
+     "alignment": "Bad"
+    },
+    {
+     "id": 3,
+     "alignment": "Neutral"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "attribute",
+   "row_count": 6,
+   "stats_rows": 6,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 6,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the unique identifier of the attribute",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "attribute_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": true,
+     "min_value": "Combat",
+     "max_value": "Strength",
+     "examples": [
+      "Intelligence",
+      "Strength",
+      "Speed",
+      "Durability",
+      "Power"
+     ],
+     "top_values": [
+      [
+       "Strength",
+       1
+      ],
+      [
+       "Speed",
+       1
+      ],
+      [
+       "Power",
+       1
+      ],
+      [
+       "Intelligence",
+       1
+      ],
+      [
+       "Durability",
+       1
+      ],
+      [
+       "Combat",
+       1
+      ]
+     ],
+     "description": "attribute name. the attribute",
+     "value_description": "commonsense evidence:\nA superhero's attribute is a characteristic or quality that defines who they are and what they are capable of. This could be a physical trait, such as superhuman strength or the ability to fly, or a personal trait, such as extraordinary intelligence or exceptional bravery.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "attribute_name": "Intelligence"
+    },
+    {
+     "id": 2,
+     "attribute_name": "Strength"
+    },
+    {
+     "id": 3,
+     "attribute_name": "Speed"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "colour",
+   "row_count": 35,
+   "stats_rows": 35,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 35,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 35,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       35,
+       1
+      ],
+      [
+       34,
+       1
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       32,
+       1
+      ],
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the unique identifier of the color",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "colour",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 35,
+     "is_unique": true,
+     "min_value": "Amber",
+     "max_value": "Yellow/Red",
+     "examples": [
+      "No Colour",
+      "Amber",
+      "Auburn",
+      "Black",
+      "Black/Blue"
+     ],
+     "top_values": [
+      [
+       "Yellow/Red",
+       1
+      ],
+      [
+       "Yellow/Blue",
+       1
+      ],
+      [
+       "Yellow",
+       1
+      ],
+      [
+       "White/Red",
+       1
+      ],
+      [
+       "White",
+       1
+      ],
+      [
+       "Violet",
+       1
+      ],
+      [
+       "Strawberry Blond",
+       1
+      ],
+      [
+       "Silver",
+       1
+      ],
+      [
+       "Red/White",
+       1
+      ],
+      [
+       "Red/Orange",
+       1
+      ],
+      [
+       "Red/Grey",
+       1
+      ],
+      [
+       "Red/Black",
+       1
+      ],
+      [
+       "Red",
+       1
+      ],
+      [
+       "Purple",
+       1
+      ],
+      [
+       "Pink",
+       1
+      ],
+      [
+       "Orange/White",
+       1
+      ],
+      [
+       "Orange",
+       1
+      ],
+      [
+       "No Colour",
+       1
+      ],
+      [
+       "Magenta",
+       1
+      ],
+      [
+       "Indigo",
+       1
+      ],
+      [
+       "Hazel",
+       1
+      ],
+      [
+       "Grey",
+       1
+      ],
+      [
+       "Green/Blue",
+       1
+      ],
+      [
+       "Green",
+       1
+      ],
+      [
+       "Gold",
+       1
+      ],
+      [
+       "Brown/White",
+       1
+      ],
+      [
+       "Brown/Black",
+       1
+      ],
+      [
+       "Brown",
+       1
+      ],
+      [
+       "Blue/White",
+       1
+      ],
+      [
+       "Blue",
+       1
+      ],
+      [
+       "Blond",
+       1
+      ],
+      [
+       "Black/Blue",
+       1
+      ],
+      [
+       "Black",
+       1
+      ],
+      [
+       "Auburn",
+       1
+      ],
+      [
+       "Amber",
+       1
+      ]
+     ],
+     "description": "the color of the superhero's skin/eye/hair/etc",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "colour": "No Colour"
+    },
+    {
+     "id": 2,
+     "colour": "Amber"
+    },
+    {
+     "id": 3,
+     "colour": "Auburn"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "gender",
+   "row_count": 3,
+   "stats_rows": 3,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 3,
+     "examples": [
+      1,
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the unique identifier of the gender",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": "Female",
+     "max_value": "N/A",
+     "examples": [
+      "Male",
+      "Female",
+      "N/A"
+     ],
+     "top_values": [
+      [
+       "N/A",
+       1
+      ],
+      [
+       "Male",
+       1
+      ],
+      [
+       "Female",
+       1
+      ]
+     ],
+     "description": "the gender of the superhero",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "gender": "Male"
+    },
+    {
+     "id": 2,
+     "gender": "Female"
+    },
+    {
+     "id": 3,
+     "gender": "N/A"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "hero_attribute",
+   "row_count": 3738,
+   "stats_rows": 3738,
+   "columns": [
+    {
+     "name": "hero_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 623,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 756,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "hero id. the id of the hero\nMaps to superhero(id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "attribute_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 6,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       6,
+       623
+      ],
+      [
+       5,
+       623
+      ],
+      [
+       4,
+       623
+      ],
+      [
+       3,
+       623
+      ],
+      [
+       2,
+       623
+      ],
+      [
+       1,
+       623
+      ]
+     ],
+     "description": "attribute id. the id of the attribute\nMaps to attribute(id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "attribute_value",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": 5,
+     "max_value": 100,
+     "examples": [
+      80,
+      75,
+      95,
+      85,
+      100
+     ],
+     "top_values": [
+      [
+       35,
+       406
+      ],
+      [
+       25,
+       400
+      ],
+      [
+       85,
+       280
+      ],
+      [
+       100,
+       279
+      ],
+      [
+       50,
+       243
+      ],
+      [
+       15,
+       222
+      ],
+      [
+       10,
+       222
+      ],
+      [
+       80,
+       216
+      ],
+      [
+       30,
+       172
+      ],
+      [
+       45,
+       160
+      ],
+      [
+       75,
+       150
+      ],
+      [
+       95,
+       141
+      ],
+      [
+       60,
+       140
+      ],
+      [
+       90,
+       135
+      ],
+      [
+       20,
+       135
+      ],
+      [
+       55,
+       125
+      ],
+      [
+       70,
+       109
+      ],
+      [
+       65,
+       102
+      ],
+      [
+       40,
+       91
+      ],
+      [
+       5,
+       10
+      ]
+     ],
+     "description": "the attribute value",
+     "value_description": "commonsense evidence:\nIf a superhero has a higher attribute value on a particular attribute, it means that they are more skilled or powerful in that area compared to other superheroes. For example, if a superhero has a higher attribute value for strength, they may be able to lift heavier objects or deliver more powerful punches than other superheroes.",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "hero_id": 1,
+     "attribute_id": 1,
+     "attribute_value": 80
+    },
+    {
+     "hero_id": 2,
+     "attribute_id": 1,
+     "attribute_value": 75
+    },
+    {
+     "hero_id": 3,
+     "attribute_id": 1,
+     "attribute_value": 95
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "hero_power",
+   "row_count": 5825,
+   "stats_rows": 5825,
+   "columns": [
+    {
+     "name": "hero_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 652,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 756,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "hero id. the id of the hero\nMaps to superhero(id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "power_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 167,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 167,
+     "examples": [
+      1,
+      18,
+      26,
+      31,
+      2
+     ],
+     "top_values": [],
+     "description": "power id. the id of the power\nMaps to superpower(id)",
+     "value_description": "commonsense evidence:\nIn general, a superhero's attributes provide the foundation for their abilities and help to define who they are, while their powers are the specific abilities that they use to fight crime and protect others.",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "hero_id": 1,
+     "power_id": 1
+    },
+    {
+     "hero_id": 1,
+     "power_id": 18
+    },
+    {
+     "hero_id": 1,
+     "power_id": 26
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "publisher",
+   "row_count": 25,
+   "stats_rows": 25,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 25,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 25,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the unique identifier of the publisher",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "publisher_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 25,
+     "is_unique": true,
+     "min_value": "",
+     "max_value": "Wildstorm",
+     "examples": [
+      "",
+      "ABC Studios",
+      "Dark Horse Comics",
+      "DC Comics",
+      "George Lucas"
+     ],
+     "top_values": [
+      [
+       "Wildstorm",
+       1
+      ],
+      [
+       "Universal Studios",
+       1
+      ],
+      [
+       "Titan Books",
+       1
+      ],
+      [
+       "Team Epic TV",
+       1
+      ],
+      [
+       "SyFy",
+       1
+      ],
+      [
+       "Star Trek",
+       1
+      ],
+      [
+       "South Park",
+       1
+      ],
+      [
+       "Sony Pictures",
+       1
+      ],
+      [
+       "Shueisha",
+       1
+      ],
+      [
+       "Rebellion",
+       1
+      ],
+      [
+       "NBC - Heroes",
+       1
+      ],
+      [
+       "Microsoft",
+       1
+      ],
+      [
+       "Marvel Comics",
+       1
+      ],
+      [
+       "J. R. R. Tolkien",
+       1
+      ],
+      [
+       "J. K. Rowling",
+       1
+      ],
+      [
+       "Image Comics",
+       1
+      ],
+      [
+       "Icon Comics",
+       1
+      ],
+      [
+       "IDW Publishing",
+       1
+      ],
+      [
+       "HarperCollins",
+       1
+      ],
+      [
+       "Hanna-Barbera",
+       1
+      ],
+      [
+       "George Lucas",
+       1
+      ],
+      [
+       "Dark Horse Comics",
+       1
+      ],
+      [
+       "DC Comics",
+       1
+      ],
+      [
+       "ABC Studios",
+       1
+      ],
+      [
+       "",
+       1
+      ]
+     ],
+     "description": "the name of the publisher",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "publisher_name": ""
+    },
+    {
+     "id": 2,
+     "publisher_name": "ABC Studios"
+    },
+    {
+     "id": 3,
+     "publisher_name": "Dark Horse Comics"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "race",
+   "row_count": 61,
+   "stats_rows": 61,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 61,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 61,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique identifier of the race",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "race",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 61,
+     "is_unique": true,
+     "min_value": "-",
+     "max_value": "Zombie",
+     "examples": [
+      "-",
+      "Alien",
+      "Alpha",
+      "Amazon",
+      "Android"
+     ],
+     "top_values": [],
+     "description": "the race of the superhero",
+     "value_description": "commonsense evidence:\nIn the context of superheroes, a superhero's race would refer to the particular group of people that the superhero belongs to base on these physical characteristics",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "race": "-"
+    },
+    {
+     "id": 2,
+     "race": "Alien"
+    },
+    {
+     "id": 3,
+     "race": "Alpha"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "superhero",
+   "row_count": 750,
+   "stats_rows": 750,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 750,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 756,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique identifier of the superhero",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "superhero_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 743,
+     "is_unique": false,
+     "min_value": "3-D Man",
+     "max_value": "Zoom",
+     "examples": [
+      "3-D Man",
+      "A-Bomb",
+      "Abe Sapien",
+      "Abin Sur",
+      "Abomination"
+     ],
+     "top_values": [],
+     "description": "superhero name. the name of the superhero",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "full_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1627,
+     "distinct_count": 483,
+     "is_unique": false,
+     "min_value": "-",
+     "max_value": "Zebediah Killgrave",
+     "examples": [
+      "Charles Chandler",
+      "Richard Milhouse Jones",
+      "Abraham Sapien",
+      "-",
+      "Emil Blonsky"
+     ],
+     "top_values": [],
+     "description": "the full name of the superhero",
+     "value_description": "commonsense evidence:\nThe full name of a person typically consists of their given name, also known as their first name or personal name, and their surname, also known as their last name or family name. For example, if someone's given name is \"John\" and their surname is \"Smith,\" their full name would be \"John Smith.\"",
+     "notes": []
+    },
+    {
+     "name": "gender_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 3,
+     "examples": [
+      1,
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       1,
+       519
+      ],
+      [
+       2,
+       203
+      ],
+      [
+       3,
+       28
+      ]
+     ],
+     "description": "gender id. the id of the superhero's gender",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "eye_colour_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 35,
+     "examples": [
+      9,
+      33,
+      7,
+      14,
+      1
+     ],
+     "top_values": [
+      [
+       7,
+       234
+      ],
+      [
+       1,
+       169
+      ],
+      [
+       9,
+       131
+      ],
+      [
+       14,
+       76
+      ],
+      [
+       23,
+       47
+      ],
+      [
+       4,
+       24
+      ],
+      [
+       33,
+       22
+      ],
+      [
+       31,
+       16
+      ],
+      [
+       16,
+       6
+      ],
+      [
+       13,
+       6
+      ],
+      [
+       22,
+       4
+      ],
+      [
+       12,
+       3
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       30,
+       2
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       34,
+       1
+      ],
+      [
+       32,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       8,
+       1
+      ]
+     ],
+     "description": "eye colour id. the id of the superhero's eye color",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "hair_colour_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 26,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 33,
+     "examples": [
+      13,
+      1,
+      4,
+      6,
+      9
+     ],
+     "top_values": [
+      [
+       1,
+       246
+      ],
+      [
+       4,
+       166
+      ],
+      [
+       6,
+       105
+      ],
+      [
+       9,
+       90
+      ],
+      [
+       23,
+       55
+      ],
+      [
+       31,
+       23
+      ],
+      [
+       3,
+       13
+      ],
+      [
+       14,
+       8
+      ],
+      [
+       29,
+       7
+      ],
+      [
+       13,
+       6
+      ],
+      [
+       22,
+       5
+      ],
+      [
+       28,
+       4
+      ],
+      [
+       11,
+       4
+      ],
+      [
+       33,
+       3
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       19,
+       2
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       5,
+       1
+      ]
+     ],
+     "description": "hair colour id. the id of the superhero's hair color",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "skin_colour_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 33,
+     "examples": [
+      1,
+      7,
+      23,
+      4,
+      13
+     ],
+     "top_values": [
+      [
+       1,
+       681
+      ],
+      [
+       14,
+       21
+      ],
+      [
+       23,
+       9
+      ],
+      [
+       7,
+       9
+      ],
+      [
+       31,
+       7
+      ],
+      [
+       28,
+       5
+      ],
+      [
+       13,
+       4
+      ],
+      [
+       22,
+       3
+      ],
+      [
+       33,
+       2
+      ],
+      [
+       21,
+       2
+      ],
+      [
+       12,
+       2
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       4,
+       1
+      ]
+     ],
+     "description": "skin colour id. the id of the superhero's skin color",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "race_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0053,
+     "distinct_count": 61,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 61,
+     "examples": [
+      1,
+      24,
+      33,
+      55,
+      28
+     ],
+     "top_values": [],
+     "description": "race id. the id of the superhero's race",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "publisher_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.004,
+     "distinct_count": 25,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 25,
+     "examples": [
+      13,
+      3,
+      4,
+      15,
+      25
+     ],
+     "top_values": [
+      [
+       13,
+       387
+      ],
+      [
+       4,
+       224
+      ],
+      [
+       15,
+       19
+      ],
+      [
+       3,
+       19
+      ],
+      [
+       1,
+       17
+      ],
+      [
+       5,
+       15
+      ],
+      [
+       10,
+       14
+      ],
+      [
+       20,
+       6
+      ],
+      [
+       7,
+       6
+      ],
+      [
+       22,
+       5
+      ],
+      [
+       21,
+       5
+      ],
+      [
+       25,
+       4
+      ],
+      [
+       17,
+       4
+      ],
+      [
+       9,
+       4
+      ],
+      [
+       8,
+       4
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       18,
+       2
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       6,
+       1
+      ]
+     ],
+     "description": "publisher id. the id of the publisher",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "alignment_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.008,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 3,
+     "examples": [
+      1,
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       1,
+       504
+      ],
+      [
+       2,
+       212
+      ],
+      [
+       3,
+       28
+      ]
+     ],
+     "description": "alignment id. the id of the superhero's alignment",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "height_cm",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0773,
+     "distinct_count": 55,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 30480,
+     "examples": [
+      188,
+      203,
+      191,
+      185,
+      0
+     ],
+     "top_values": [],
+     "description": "height cm. the height of the superhero",
+     "value_description": "commonsense evidence:\nThe unit of height is centimeter. If the height_cm is NULL or 0, it means the height of the superhero is missing.",
+     "notes": []
+    },
+    {
+     "name": "weight_kg",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0853,
+     "distinct_count": 140,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 90000000,
+     "examples": [
+      90,
+      441,
+      65,
+      0,
+      122
+     ],
+     "top_values": [],
+     "description": "weight kg. the weight of the superhero",
+     "value_description": "commonsense evidence:\nThe unit of weight is kilogram. If the weight_kg is NULL or 0, it means the weight of the superhero is missing.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "superhero_name": "3-D Man",
+     "full_name": "Charles Chandler",
+     "gender_id": 1,
+     "eye_colour_id": 9,
+     "hair_colour_id": 13,
+     "skin_colour_id": 1,
+     "race_id": 1,
+     "publisher_id": 13,
+     "alignment_id": 1,
+     "height_cm": 188,
+     "weight_kg": 90
+    },
+    {
+     "id": 2,
+     "superhero_name": "A-Bomb",
+     "full_name": "Richard Milhouse Jones",
+     "gender_id": 1,
+     "eye_colour_id": 33,
+     "hair_colour_id": 1,
+     "skin_colour_id": 1,
+     "race_id": 24,
+     "publisher_id": 13,
+     "alignment_id": 1,
+     "height_cm": 203,
+     "weight_kg": 441
+    },
+    {
+     "id": 3,
+     "superhero_name": "Abe Sapien",
+     "full_name": "Abraham Sapien",
+     "gender_id": 1,
+     "eye_colour_id": 7,
+     "hair_colour_id": 1,
+     "skin_colour_id": 7,
+     "race_id": 33,
+     "publisher_id": 3,
+     "alignment_id": 1,
+     "height_cm": 191,
+     "weight_kg": 65
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "superpower",
+   "row_count": 167,
+   "stats_rows": 167,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 167,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 167,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique identifier of the superpower",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "power_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 167,
+     "is_unique": true,
+     "min_value": "Accelerated Healing",
+     "max_value": "Wind Control",
+     "examples": [
+      "Agility",
+      "Accelerated Healing",
+      "Lantern Power Ring",
+      "Dimensional Awareness",
+      "Cold Resistance"
+     ],
+     "top_values": [],
+     "description": "the superpower name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "power_name": "Agility"
+    },
+    {
+     "id": 2,
+     "power_name": "Accelerated Healing"
+    },
+    {
+     "id": 3,
+     "power_name": "Lantern Power Ring"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "hero_attribute",
+   "from_column": "hero_id",
+   "to_table": "superhero",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "hero_attribute",
+   "from_column": "attribute_id",
+   "to_table": "attribute",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "hero_power",
+   "from_column": "power_id",
+   "to_table": "superpower",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "hero_power",
+   "from_column": "hero_id",
+   "to_table": "superhero",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "superhero",
+   "from_column": "skin_colour_id",
+   "to_table": "colour",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "superhero",
+   "from_column": "race_id",
+   "to_table": "race",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "superhero",
+   "from_column": "publisher_id",
+   "to_table": "publisher",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "superhero",
+   "from_column": "hair_colour_id",
+   "to_table": "colour",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "superhero",
+   "from_column": "gender_id",
+   "to_table": "gender",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "superhero",
+   "from_column": "eye_colour_id",
+   "to_table": "colour",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "superhero",
+   "from_column": "alignment_id",
+   "to_table": "alignment",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

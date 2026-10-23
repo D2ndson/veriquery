@@ -1,0 +1,499 @@
+{
+ "db_id": "toxicology",
+ "schema_version": "1.0",
+ "db_path": "data/bird_minidev/dev_databases/toxicology/toxicology.sqlite",
+ "fingerprint": "2678784-1792489332569214100-v1.0",
+ "created_at": "2026-10-20T09:48:22+00:00",
+ "profile_seconds": 0.326,
+ "tables": [
+  {
+   "name": "atom",
+   "row_count": 9111,
+   "stats_rows": 9111,
+   "columns": [
+    {
+     "name": "atom_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9111,
+     "is_unique": true,
+     "min_value": "TR000_1",
+     "max_value": "TR501_9",
+     "examples": [
+      "TR000_1",
+      "TR000_2",
+      "TR000_3",
+      "TR000_4",
+      "TR000_5"
+     ],
+     "top_values": [],
+     "description": "atom id. the unique id of atoms",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "molecule_id",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 343,
+     "is_unique": false,
+     "min_value": "TR000",
+     "max_value": "TR501",
+     "examples": [
+      "TR000",
+      "TR001",
+      "TR002",
+      "TR004",
+      "TR006"
+     ],
+     "top_values": [],
+     "description": "molecule id. identifying the molecule to which the atom belongs",
+     "value_description": "commonsense evidence:\nTRXXX_i represents ith atom of molecule TRXXX",
+     "notes": []
+    },
+    {
+     "name": "element",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 18,
+     "is_unique": false,
+     "min_value": "br",
+     "max_value": "zn",
+     "examples": [
+      "cl",
+      "c",
+      "h",
+      "o",
+      "s"
+     ],
+     "top_values": [
+      [
+       "h",
+       4034
+      ],
+      [
+       "c",
+       3433
+      ],
+      [
+       "o",
+       737
+      ],
+      [
+       "n",
+       373
+      ],
+      [
+       "cl",
+       317
+      ],
+      [
+       "s",
+       94
+      ],
+      [
+       "br",
+       46
+      ],
+      [
+       "na",
+       32
+      ],
+      [
+       "p",
+       23
+      ],
+      [
+       "f",
+       10
+      ],
+      [
+       "i",
+       3
+      ],
+      [
+       "sn",
+       2
+      ],
+      [
+       "cu",
+       2
+      ],
+      [
+       "zn",
+       1
+      ],
+      [
+       "y",
+       1
+      ],
+      [
+       "pb",
+       1
+      ],
+      [
+       "k",
+       1
+      ],
+      [
+       "ca",
+       1
+      ]
+     ],
+     "description": "the element of the toxicology",
+     "value_description": " cl: chlorine\n c: carbon\n h: hydrogen\n o: oxygen\n s: sulfur\n n: nitrogen\n p: phosphorus\n na: sodium\n br: bromine\n f: fluorine\n i: iodine\n sn: Tin\n pb: lead\n te: tellurium\n ca: Calcium",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "atom_id"
+   ],
+   "sample_rows": [
+    {
+     "atom_id": "TR000_1",
+     "molecule_id": "TR000",
+     "element": "cl"
+    },
+    {
+     "atom_id": "TR000_2",
+     "molecule_id": "TR000",
+     "element": "c"
+    },
+    {
+     "atom_id": "TR000_3",
+     "molecule_id": "TR000",
+     "element": "cl"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "bond",
+   "row_count": 9156,
+   "stats_rows": 9156,
+   "columns": [
+    {
+     "name": "bond_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9156,
+     "is_unique": true,
+     "min_value": "TR000_1_2",
+     "max_value": "TR501_9_21",
+     "examples": [
+      "TR000_1_2",
+      "TR000_2_3",
+      "TR000_2_4",
+      "TR000_2_5",
+      "TR001_10_11"
+     ],
+     "top_values": [],
+     "description": "unique id representing bonds",
+     "value_description": "TRxxx_A1_A2:\nTRXXX refers to which molecule\nA1 and A2 refers to which atom",
+     "notes": []
+    },
+    {
+     "name": "molecule_id",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 343,
+     "is_unique": false,
+     "min_value": "TR000",
+     "max_value": "TR501",
+     "examples": [
+      "TR000",
+      "TR001",
+      "TR002",
+      "TR004",
+      "TR006"
+     ],
+     "top_values": [],
+     "description": "identifying the molecule in which the bond appears",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "bond_type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "#",
+     "max_value": "=",
+     "examples": [
+      "-",
+      "="
+     ],
+     "top_values": [
+      [
+       "-",
+       7743
+      ],
+      [
+       "=",
+       1408
+      ],
+      [
+       "#",
+       5
+      ]
+     ],
+     "description": "type of the bond",
+     "value_description": "commonsense evidence:\n-: single bond\n'=': double bond\n'#': triple bond",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "bond_id"
+   ],
+   "sample_rows": [
+    {
+     "bond_id": "TR000_1_2",
+     "molecule_id": "TR000",
+     "bond_type": "-"
+    },
+    {
+     "bond_id": "TR000_2_3",
+     "molecule_id": "TR000",
+     "bond_type": "-"
+    },
+    {
+     "bond_id": "TR000_2_4",
+     "molecule_id": "TR000",
+     "bond_type": "-"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "connected",
+   "row_count": 18312,
+   "stats_rows": 18312,
+   "columns": [
+    {
+     "name": "atom_id",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9073,
+     "is_unique": false,
+     "min_value": "TR000_1",
+     "max_value": "TR501_9",
+     "examples": [
+      "TR000_1",
+      "TR000_2",
+      "TR000_3",
+      "TR000_4",
+      "TR000_5"
+     ],
+     "top_values": [],
+     "description": "atom id. id of the first atom",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "atom_id2",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9073,
+     "is_unique": false,
+     "min_value": "TR000_1",
+     "max_value": "TR501_9",
+     "examples": [
+      "TR000_2",
+      "TR000_1",
+      "TR000_3",
+      "TR000_4",
+      "TR000_5"
+     ],
+     "top_values": [],
+     "description": "atom id 2. id of the second atom",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "bond_id",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9156,
+     "is_unique": false,
+     "min_value": "TR000_1_2",
+     "max_value": "TR501_9_21",
+     "examples": [
+      "TR000_1_2",
+      "TR000_2_3",
+      "TR000_2_4",
+      "TR000_2_5",
+      "TR001_10_11"
+     ],
+     "top_values": [],
+     "description": "bond id representing bond between two atoms",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "atom_id",
+    "atom_id2"
+   ],
+   "sample_rows": [
+    {
+     "atom_id": "TR000_1",
+     "atom_id2": "TR000_2",
+     "bond_id": "TR000_1_2"
+    },
+    {
+     "atom_id": "TR000_2",
+     "atom_id2": "TR000_1",
+     "bond_id": "TR000_1_2"
+    },
+    {
+     "atom_id": "TR000_2",
+     "atom_id2": "TR000_3",
+     "bond_id": "TR000_2_3"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "molecule",
+   "row_count": 343,
+   "stats_rows": 343,
+   "columns": [
+    {
+     "name": "molecule_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 343,
+     "is_unique": true,
+     "min_value": "TR000",
+     "max_value": "TR501",
+     "examples": [
+      "TR000",
+      "TR001",
+      "TR002",
+      "TR004",
+      "TR006"
+     ],
+     "top_values": [],
+     "description": "molecule id. unique id of molecule",
+     "value_description": "\"+\" --> this molecule / compound is carcinogenic\n'-' this molecule is not / compound carcinogenic",
+     "notes": []
+    },
+    {
+     "name": "label",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "+",
+     "max_value": "-",
+     "examples": [
+      "+",
+      "-"
+     ],
+     "top_values": [
+      [
+       "-",
+       191
+      ],
+      [
+       "+",
+       152
+      ]
+     ],
+     "description": "whether this molecule is carcinogenic or not",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "molecule_id"
+   ],
+   "sample_rows": [
+    {
+     "molecule_id": "TR000",
+     "label": "+"
+    },
+    {
+     "molecule_id": "TR001",
+     "label": "+"
+    },
+    {
+     "molecule_id": "TR002",
+     "label": "-"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "atom",
+   "from_column": "molecule_id",
+   "to_table": "molecule",
+   "to_column": "molecule_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "bond",
+   "from_column": "molecule_id",
+   "to_table": "molecule",
+   "to_column": "molecule_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "connected",
+   "from_column": "bond_id",
+   "to_table": "bond",
+   "to_column": "bond_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "connected",
+   "from_column": "atom_id2",
+   "to_table": "atom",
+   "to_column": "atom_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "connected",
+   "from_column": "atom_id",
+   "to_table": "atom",
+   "to_column": "atom_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

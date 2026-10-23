@@ -1,0 +1,3689 @@
+{
+ "db_id": "california_schools",
+ "schema_version": "1.0",
+ "db_path": "data/bird_dev/dev_databases/california_schools/california_schools.sqlite",
+ "fingerprint": "11116544-1792490204746949200-v1.0",
+ "created_at": "2026-10-20T09:58:12+00:00",
+ "profile_seconds": 1.03,
+ "tables": [
+  {
+   "name": "frpm",
+   "row_count": 9986,
+   "stats_rows": 9986,
+   "columns": [
+    {
+     "name": "CDSCode",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9986,
+     "is_unique": true,
+     "min_value": "01100170109835",
+     "max_value": "58727695838305",
+     "examples": [
+      "01100170109835",
+      "01100170112607",
+      "01100170118489",
+      "01100170123968",
+      "01100170124172"
+     ],
+     "top_values": [],
+     "description": "CDSCode",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "Academic Year",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2014-2015",
+     "max_value": "2014-2015",
+     "examples": [
+      "2014-2015"
+     ],
+     "top_values": [
+      [
+       "2014-2015",
+       9986
+      ]
+     ],
+     "description": "Academic Year",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "County Code",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 58,
+     "is_unique": false,
+     "min_value": "01",
+     "max_value": "58",
+     "examples": [
+      "01"
+     ],
+     "top_values": [],
+     "description": "County Code",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison",
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "District Code",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1012,
+     "is_unique": false,
+     "min_value": 10017,
+     "max_value": 76901,
+     "examples": [
+      10017,
+      31609,
+      31617,
+      61119,
+      61127
+     ],
+     "top_values": [],
+     "description": "District Code",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "School Code",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9942,
+     "is_unique": false,
+     "min_value": "0000000",
+     "max_value": "9010745",
+     "examples": [
+      "0109835",
+      "0112607",
+      "0118489",
+      "0123968",
+      "0124172"
+     ],
+     "top_values": [],
+     "description": "School Code",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison",
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "County Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 58,
+     "is_unique": false,
+     "min_value": "Alameda",
+     "max_value": "Yuba",
+     "examples": [
+      "Alameda"
+     ],
+     "top_values": [],
+     "description": "County Code",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "District Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1000,
+     "is_unique": false,
+     "min_value": "ABC Unified",
+     "max_value": "Yucaipa-Calimesa Joint Unified",
+     "examples": [
+      "Alameda County Office of Education",
+      "California School for the Blind (State Special Schl)",
+      "California School for the Deaf-Fremont (State Special Schl)",
+      "Alameda Unified",
+      "Albany City Unified"
+     ],
+     "top_values": [],
+     "description": "District Name",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "School Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8652,
+     "is_unique": false,
+     "min_value": "21st Century Learning Institute",
+     "max_value": "one.Charter",
+     "examples": [
+      "FAME Public Charter",
+      "Envision Academy for Arts & Technology",
+      "Aspire California College Preparatory Academy",
+      "Community School for Creative Education",
+      "Yu Ming Charter"
+     ],
+     "top_values": [],
+     "description": "School Name",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "District Type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": "County Office of Education (COE)",
+     "max_value": "Unified School District",
+     "examples": [
+      "County Office of Education (COE)",
+      "State Special Schools",
+      "Unified School District",
+      "Elementary School District"
+     ],
+     "top_values": [
+      [
+       "Unified School District",
+       6744
+      ],
+      [
+       "Elementary School District",
+       2356
+      ],
+      [
+       "High School District",
+       529
+      ],
+      [
+       "County Office of Education (COE)",
+       334
+      ],
+      [
+       "State Board of Education",
+       10
+      ],
+      [
+       "Statewide Benefit Charter",
+       6
+      ],
+      [
+       "Non-School Locations",
+       4
+      ],
+      [
+       "State Special Schools",
+       3
+      ]
+     ],
+     "description": "District Type",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "School Type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0045,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": "Alternative Schools of Choice",
+     "max_value": "Youth Authority Facilities",
+     "examples": [
+      "K-12 Schools (Public)",
+      "High Schools (Public)",
+      "Elementary Schools (Public)",
+      "Juvenile Court Schools",
+      "County Community"
+     ],
+     "top_values": [
+      [
+       "Elementary Schools (Public)",
+       5584
+      ],
+      [
+       "High Schools (Public)",
+       1331
+      ],
+      [
+       "Intermediate/Middle Schools (Public)",
+       1299
+      ],
+      [
+       "Continuation High Schools",
+       459
+      ],
+      [
+       "Alternative Schools of Choice",
+       259
+      ],
+      [
+       "K-12 Schools (Public)",
+       240
+      ],
+      [
+       "Elemen Schools In 1 School Dist. (Public)",
+       206
+      ],
+      [
+       "District Community Day Schools",
+       203
+      ],
+      [
+       "Special Education Schools (Public)",
+       132
+      ],
+      [
+       "County Community",
+       75
+      ],
+      [
+       "Juvenile Court Schools",
+       74
+      ],
+      [
+       "Junior High Schools (Public)",
+       46
+      ],
+      [
+       "Opportunity Schools",
+       23
+      ],
+      [
+       "Youth Authority Facilities",
+       4
+      ],
+      [
+       "State Special Schools",
+       3
+      ],
+      [
+       "Preschool",
+       2
+      ],
+      [
+       "High Schools In 1 School Dist. (Public)",
+       1
+      ]
+     ],
+     "description": "School Type",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Educational Option Type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0045,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": "Alternative School of Choice",
+     "max_value": "Youth Authority School",
+     "examples": [
+      "Traditional",
+      "Juvenile Court School",
+      "County Community School",
+      "State Special School",
+      "Alternative School of Choice"
+     ],
+     "top_values": [
+      [
+       "Traditional",
+       8696
+      ],
+      [
+       "Continuation School",
+       459
+      ],
+      [
+       "Alternative School of Choice",
+       259
+      ],
+      [
+       "Community Day School",
+       203
+      ],
+      [
+       "Special Education School",
+       128
+      ],
+      [
+       "County Community School",
+       84
+      ],
+      [
+       "Juvenile Court School",
+       74
+      ],
+      [
+       "Opportunity School",
+       24
+      ],
+      [
+       "Youth Authority School",
+       4
+      ],
+      [
+       "District Special Education Consortia School",
+       4
+      ],
+      [
+       "State Special School",
+       3
+      ],
+      [
+       "Home and Hospital",
+       3
+      ]
+     ],
+     "description": "Educational Option Type",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "NSLP Provision Status",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.815,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "Breakfast Provision 2",
+     "max_value": "Provision 3",
+     "examples": [
+      "Breakfast Provision 2",
+      "Provision 2",
+      "CEP"
+     ],
+     "top_values": [
+      [
+       "Provision 2",
+       1365
+      ],
+      [
+       "Breakfast Provision 2",
+       285
+      ],
+      [
+       "CEP",
+       172
+      ],
+      [
+       "Multiple Provision Types",
+       11
+      ],
+      [
+       "Provision 1",
+       7
+      ],
+      [
+       "Lunch Provision 2",
+       5
+      ],
+      [
+       "Provision 3",
+       2
+      ]
+     ],
+     "description": "NSLP Provision Status",
+     "value_description": "",
+     "notes": [
+      "82% NULL; filter or handle NULLs",
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Charter School (Y/N)",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0045,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      1,
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       8774
+      ],
+      [
+       1,
+       1167
+      ]
+     ],
+     "description": "Charter School (Y/N)",
+     "value_description": "0: N;\n1: Y",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Charter School Number",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.8831,
+     "distinct_count": 1152,
+     "is_unique": false,
+     "min_value": "0001",
+     "max_value": "1700",
+     "examples": [
+      "0728",
+      "0811",
+      "1049",
+      "1284",
+      "1296"
+     ],
+     "top_values": [],
+     "description": "Charter School Number",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison",
+      "88% NULL; filter or handle NULLs",
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Charter Funding Type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.8831,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Directly funded",
+     "max_value": "Not in CS funding model",
+     "examples": [
+      "Directly funded",
+      "Locally funded"
+     ],
+     "top_values": [
+      [
+       "Directly funded",
+       838
+      ],
+      [
+       "Locally funded",
+       328
+      ],
+      [
+       "Not in CS funding model",
+       1
+      ]
+     ],
+     "description": "Charter Funding Type",
+     "value_description": "",
+     "notes": [
+      "88% NULL; filter or handle NULLs",
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "IRC",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0045,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      1,
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       9212
+      ],
+      [
+       1,
+       729
+      ]
+     ],
+     "description": "",
+     "value_description": "Not useful",
+     "notes": []
+    },
+    {
+     "name": "Low Grade",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 15,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "P",
+     "examples": [
+      "K",
+      "9",
+      "1",
+      "P",
+      "6"
+     ],
+     "top_values": [
+      [
+       "K",
+       6057
+      ],
+      [
+       "9",
+       1733
+      ],
+      [
+       "6",
+       1024
+      ],
+      [
+       "7",
+       651
+      ],
+      [
+       "P",
+       181
+      ],
+      [
+       "5",
+       99
+      ],
+      [
+       "4",
+       68
+      ],
+      [
+       "10",
+       44
+      ],
+      [
+       "1",
+       42
+      ],
+      [
+       "3",
+       38
+      ],
+      [
+       "2",
+       19
+      ],
+      [
+       "11",
+       14
+      ],
+      [
+       "8",
+       10
+      ],
+      [
+       "Adult",
+       3
+      ],
+      [
+       "12",
+       3
+      ]
+     ],
+     "description": "Low Grade",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "High Grade",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "Post Secondary",
+     "examples": [
+      "12",
+      "8",
+      "5",
+      "Adult",
+      "6"
+     ],
+     "top_values": [
+      [
+       "12",
+       2641
+      ],
+      [
+       "5",
+       2534
+      ],
+      [
+       "8",
+       2401
+      ],
+      [
+       "6",
+       2091
+      ],
+      [
+       "3",
+       68
+      ],
+      [
+       "4",
+       65
+      ],
+      [
+       "2",
+       40
+      ],
+      [
+       "Adult",
+       35
+      ],
+      [
+       "7",
+       30
+      ],
+      [
+       "1",
+       22
+      ],
+      [
+       "9",
+       19
+      ],
+      [
+       "K",
+       18
+      ],
+      [
+       "10",
+       13
+      ],
+      [
+       "11",
+       5
+      ],
+      [
+       "P",
+       2
+      ],
+      [
+       "Post Secondary",
+       1
+      ],
+      [
+       "13",
+       1
+      ]
+     ],
+     "description": "High Grade",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Enrollment (K-12)",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1882,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 5333.0,
+     "examples": [
+      1087.0,
+      395.0,
+      244.0,
+      191.0,
+      257.0
+     ],
+     "top_values": [],
+     "description": "Enrollment (K-12)",
+     "value_description": "commonsense evidence:\n\nK-12: 1st grade - 12nd grade",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Free Meal Count (K-12)",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0056,
+     "distinct_count": 1216,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 3927.0,
+     "examples": [
+      565.0,
+      186.0,
+      134.0,
+      113.0,
+      14.0
+     ],
+     "top_values": [],
+     "description": "Free Meal Count (K-12)",
+     "value_description": "commonsense evidence:\n\neligible free rate = Free Meal Count / Enrollment",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Percent (%) Eligible Free (K-12)",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0056,
+     "distinct_count": 8658,
+     "is_unique": false,
+     "min_value": 0.00176056338028169,
+     "max_value": 1.0,
+     "examples": [
+      0.519779208831647,
+      0.470886075949367,
+      0.549180327868853,
+      0.591623036649215,
+      0.0544747081712062
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "FRPM Count (K-12)",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.005,
+     "distinct_count": 1361,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 4419.0,
+     "examples": [
+      715.0,
+      186.0,
+      175.0,
+      139.0,
+      21.0
+     ],
+     "top_values": [],
+     "description": "Free or Reduced Price Meal Count (K-12)",
+     "value_description": "commonsense evidence:\n\neligible FRPM rate = FRPM / Enrollment",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Percent (%) Eligible FRPM (K-12)",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.005,
+     "distinct_count": 8623,
+     "is_unique": false,
+     "min_value": 0.00220507166482911,
+     "max_value": 1.0,
+     "examples": [
+      0.657773689052438,
+      0.470886075949367,
+      0.717213114754098,
+      0.727748691099476,
+      0.0817120622568093
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Enrollment (Ages 5-17)",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0014,
+     "distinct_count": 1845,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 5271.0,
+     "examples": [
+      1070.0,
+      376.0,
+      230.0,
+      190.0,
+      257.0
+     ],
+     "top_values": [],
+     "description": "Enrollment (Ages 5-17)",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Free Meal Count (Ages 5-17)",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0078,
+     "distinct_count": 1205,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 3864.0,
+     "examples": [
+      553.0,
+      182.0,
+      128.0,
+      113.0,
+      14.0
+     ],
+     "top_values": [],
+     "description": "Free Meal Count (Ages 5-17)",
+     "value_description": "commonsense evidence:\n\neligible free rate = Free Meal Count / Enrollment",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Percent (%) Eligible Free (Ages 5-17)",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0078,
+     "distinct_count": 8552,
+     "is_unique": false,
+     "min_value": 0.00179856115107914,
+     "max_value": 1.0,
+     "examples": [
+      0.516822429906542,
+      0.484042553191489,
+      0.556521739130435,
+      0.594736842105263,
+      0.0544747081712062
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "FRPM Count (Ages 5-17)",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0072,
+     "distinct_count": 1330,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 4347.0,
+     "examples": [
+      702.0,
+      182.0,
+      168.0,
+      139.0,
+      21.0
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Percent (%) Eligible FRPM (Ages 5-17)",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0072,
+     "distinct_count": 8557,
+     "is_unique": false,
+     "min_value": 0.00220507166482911,
+     "max_value": 1.0,
+     "examples": [
+      0.65607476635514,
+      0.484042553191489,
+      0.730434782608696,
+      0.731578947368421,
+      0.0817120622568093
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "2013-14 CALPADS Fall 1 Certification Status",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       9986
+      ]
+     ],
+     "description": "2013-14 CALPADS Fall 1 Certification Status",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    }
+   ],
+   "primary_key": [
+    "CDSCode"
+   ],
+   "sample_rows": [
+    {
+     "CDSCode": "01100170109835",
+     "Academic Year": "2014-2015",
+     "County Code": "01",
+     "District Code": 10017,
+     "School Code": "0109835",
+     "County Name": "Alameda",
+     "District Name": "Alameda County Office of Education",
+     "School Name": "FAME Public Charter",
+     "District Type": "County Office of Education (COE)",
+     "School Type": "K-12 Schools (Public)",
+     "Educational Option Type": "Traditional",
+     "NSLP Provision Status": null,
+     "Charter School (Y/N)": 1,
+     "Charter School Number": "0728",
+     "Charter Funding Type": "Directly funded",
+     "IRC": 1,
+     "Low Grade": "K",
+     "High Grade": "12",
+     "Enrollment (K-12)": 1087.0,
+     "Free Meal Count (K-12)": 565.0,
+     "Percent (%) Eligible Free (K-12)": 0.519779208831647,
+     "FRPM Count (K-12)": 715.0,
+     "Percent (%) Eligible FRPM (K-12)": 0.657773689052438,
+     "Enrollment (Ages 5-17)": 1070.0,
+     "Free Meal Count (Ages 5-17)": 553.0,
+     "Percent (%) Eligible Free (Ages 5-17)": 0.516822429906542,
+     "FRPM Count (Ages 5-17)": 702.0,
+     "Percent (%) Eligible FRPM (Ages 5-17)": 0.65607476635514,
+     "2013-14 CALPADS Fall 1 Certification Status": 1
+    },
+    {
+     "CDSCode": "01100170112607",
+     "Academic Year": "2014-2015",
+     "County Code": "01",
+     "District Code": 10017,
+     "School Code": "0112607",
+     "County Name": "Alameda",
+     "District Name": "Alameda County Office of Education",
+     "School Name": "Envision Academy for Arts & Technology",
+     "District Type": "County Office of Education (COE)",
+     "School Type": "High Schools (Public)",
+     "Educational Option Type": "Traditional",
+     "NSLP Provision Status": null,
+     "Charter School (Y/N)": 1,
+     "Charter School Number": "0811",
+     "Charter Funding Type": "Directly funded",
+     "IRC": 1,
+     "Low Grade": "9",
+     "High Grade": "12",
+     "Enrollment (K-12)": 395.0,
+     "Free Meal Count (K-12)": 186.0,
+     "Percent (%) Eligible Free (K-12)": 0.470886075949367,
+     "FRPM Count (K-12)": 186.0,
+     "Percent (%) Eligible FRPM (K-12)": 0.470886075949367,
+     "Enrollment (Ages 5-17)": 376.0,
+     "Free Meal Count (Ages 5-17)": 182.0,
+     "Percent (%) Eligible Free (Ages 5-17)": 0.484042553191489,
+     "FRPM Count (Ages 5-17)": 182.0,
+     "Percent (%) Eligible FRPM (Ages 5-17)": 0.484042553191489,
+     "2013-14 CALPADS Fall 1 Certification Status": 1
+    },
+    {
+     "CDSCode": "01100170118489",
+     "Academic Year": "2014-2015",
+     "County Code": "01",
+     "District Code": 10017,
+     "School Code": "0118489",
+     "County Name": "Alameda",
+     "District Name": "Alameda County Office of Education",
+     "School Name": "Aspire California College Preparatory Academy",
+     "District Type": "County Office of Education (COE)",
+     "School Type": "High Schools (Public)",
+     "Educational Option Type": "Traditional",
+     "NSLP Provision Status": null,
+     "Charter School (Y/N)": 1,
+     "Charter School Number": "1049",
+     "Charter Funding Type": "Directly funded",
+     "IRC": 1,
+     "Low Grade": "9",
+     "High Grade": "12",
+     "Enrollment (K-12)": 244.0,
+     "Free Meal Count (K-12)": 134.0,
+     "Percent (%) Eligible Free (K-12)": 0.549180327868853,
+     "FRPM Count (K-12)": 175.0,
+     "Percent (%) Eligible FRPM (K-12)": 0.717213114754098,
+     "Enrollment (Ages 5-17)": 230.0,
+     "Free Meal Count (Ages 5-17)": 128.0,
+     "Percent (%) Eligible Free (Ages 5-17)": 0.556521739130435,
+     "FRPM Count (Ages 5-17)": 168.0,
+     "Percent (%) Eligible FRPM (Ages 5-17)": 0.730434782608696,
+     "2013-14 CALPADS Fall 1 Certification Status": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "satscores",
+   "row_count": 2269,
+   "stats_rows": 2269,
+   "columns": [
+    {
+     "name": "cds",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2269,
+     "is_unique": true,
+     "min_value": "10101080000000",
+     "max_value": "9737830930073",
+     "examples": [
+      "1100170000000",
+      "1100170109835",
+      "1100170112607",
+      "1100170118489",
+      "1611190000000"
+     ],
+     "top_values": [],
+     "description": "California Department Schools",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "rtype",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "D",
+     "max_value": "S",
+     "examples": [
+      "D",
+      "S"
+     ],
+     "top_values": [
+      [
+       "S",
+       1749
+      ],
+      [
+       "D",
+       520
+      ]
+     ],
+     "description": "rtype",
+     "value_description": "unuseful",
+     "notes": []
+    },
+    {
+     "name": "sname",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.2292,
+     "distinct_count": 1665,
+     "is_unique": false,
+     "min_value": "21st Century Learning Institute",
+     "max_value": "one.Charter",
+     "examples": [
+      "FAME Public Charter",
+      "Envision Academy for Arts & Technology",
+      "Aspire California College Preparatory Academy",
+      "Alameda Science and Technology Institute",
+      "Nea Community Learning Center"
+     ],
+     "top_values": [],
+     "description": "school name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "dname",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 520,
+     "is_unique": false,
+     "min_value": "ABC Unified",
+     "max_value": "Yucaipa-Calimesa Joint Unified",
+     "examples": [
+      "Alameda County Office of Education",
+      "Alameda Unified",
+      "Albany City Unified",
+      "Berkeley Unified",
+      "Castro Valley Unified"
+     ],
+     "top_values": [],
+     "description": "district name. district segment",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "cname",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 57,
+     "is_unique": false,
+     "min_value": "Alameda",
+     "max_value": "Yuba",
+     "examples": [
+      "Alameda",
+      "Amador",
+      "Butte",
+      "Calaveras",
+      "Colusa"
+     ],
+     "top_values": [],
+     "description": "county name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "enroll12",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 835,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 43324,
+     "examples": [
+      398,
+      62,
+      75,
+      61,
+      922
+     ],
+     "top_values": [],
+     "description": "enrollment (1st-12nd grade)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "NumTstTakr",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 547,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 24305,
+     "examples": [
+      88,
+      17,
+      71,
+      0,
+      544
+     ],
+     "top_values": [],
+     "description": "Number of Test Takers in this school",
+     "value_description": "number of test takers in each school",
+     "notes": []
+    },
+    {
+     "name": "AvgScrRead",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2627,
+     "distinct_count": 269,
+     "is_unique": false,
+     "min_value": 308,
+     "max_value": 653,
+     "examples": [
+      418,
+      503,
+      397,
+      521,
+      562
+     ],
+     "top_values": [],
+     "description": "average scores in Reading",
+     "value_description": "average scores in Reading",
+     "notes": []
+    },
+    {
+     "name": "AvgScrMath",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2627,
+     "distinct_count": 295,
+     "is_unique": false,
+     "min_value": 289,
+     "max_value": 699,
+     "examples": [
+      418,
+      546,
+      387,
+      590,
+      573
+     ],
+     "top_values": [],
+     "description": "average scores in Math",
+     "value_description": "average scores in Math",
+     "notes": []
+    },
+    {
+     "name": "AvgScrWrite",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2627,
+     "distinct_count": 267,
+     "is_unique": false,
+     "min_value": 312,
+     "max_value": 671,
+     "examples": [
+      417,
+      505,
+      395,
+      519,
+      555
+     ],
+     "top_values": [],
+     "description": "average scores in writing",
+     "value_description": "average scores in writing",
+     "notes": []
+    },
+    {
+     "name": "NumGE1500",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2627,
+     "distinct_count": 368,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 5837,
+     "examples": [
+      14,
+      9,
+      5,
+      333,
+      29
+     ],
+     "top_values": [],
+     "description": "Number of Test Takers Whose Total SAT Scores Are Greater or Equal to 1500",
+     "value_description": "Number of Test Takers Whose Total SAT Scores Are Greater or Equal to 1500\n\ncommonsense evidence:\n\nExcellence Rate = NumGE1500 / NumTstTakr",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "cds"
+   ],
+   "sample_rows": [
+    {
+     "cds": "1100170000000",
+     "rtype": "D",
+     "sname": null,
+     "dname": "Alameda County Office of Education",
+     "cname": "Alameda",
+     "enroll12": 398,
+     "NumTstTakr": 88,
+     "AvgScrRead": 418,
+     "AvgScrMath": 418,
+     "AvgScrWrite": 417,
+     "NumGE1500": 14
+    },
+    {
+     "cds": "1100170109835",
+     "rtype": "S",
+     "sname": "FAME Public Charter",
+     "dname": "Alameda County Office of Education",
+     "cname": "Alameda",
+     "enroll12": 62,
+     "NumTstTakr": 17,
+     "AvgScrRead": 503,
+     "AvgScrMath": 546,
+     "AvgScrWrite": 505,
+     "NumGE1500": 9
+    },
+    {
+     "cds": "1100170112607",
+     "rtype": "S",
+     "sname": "Envision Academy for Arts & Technology",
+     "dname": "Alameda County Office of Education",
+     "cname": "Alameda",
+     "enroll12": 75,
+     "NumTstTakr": 71,
+     "AvgScrRead": 397,
+     "AvgScrMath": 387,
+     "AvgScrWrite": 395,
+     "NumGE1500": 5
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "schools",
+   "row_count": 17686,
+   "stats_rows": 17686,
+   "columns": [
+    {
+     "name": "CDSCode",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 17686,
+     "is_unique": true,
+     "min_value": "01100170000000",
+     "max_value": "58727695838305",
+     "examples": [
+      "01100170000000",
+      "01100170109835",
+      "01100170112607",
+      "01100170118489",
+      "01100170123968"
+     ],
+     "top_values": [],
+     "description": "CDSCode",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "NCESDist",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0582,
+     "distinct_count": 1193,
+     "is_unique": false,
+     "min_value": "0600001",
+     "max_value": "0691137",
+     "examples": [
+      "0691051",
+      "0600002",
+      "0600003",
+      "0601397",
+      "0601770"
+     ],
+     "top_values": [],
+     "description": "National Center for Educational Statistics school district identification number. This field represents the 7-digit National Center for Educational Statistics (NCES) school district identification number. The first 2 digits identify the state and the last 5 digits identify the school district. Combined, they make a unique 7-digit ID for each school district",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "NCESSchool",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.285,
+     "distinct_count": 12321,
+     "is_unique": false,
+     "min_value": "00001",
+     "max_value": "14003",
+     "examples": [
+      "10546",
+      "10947",
+      "12283",
+      "12844",
+      "12901"
+     ],
+     "top_values": [],
+     "description": "National Center for Educational Statistics school identification number. This field represents the 5-digit NCES school identification number. The NCESSchool combined with the NCESDist form a unique 12-digit ID for each school",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "StatusType",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "Active",
+     "max_value": "Pending",
+     "examples": [
+      "Active",
+      "Closed",
+      "Merged"
+     ],
+     "top_values": [
+      [
+       "Active",
+       11708
+      ],
+      [
+       "Closed",
+       4518
+      ],
+      [
+       "Merged",
+       1448
+      ],
+      [
+       "Pending",
+       12
+      ]
+     ],
+     "description": "This field identifies the status of the district.",
+     "value_description": "Definitions of the valid status types are listed below:\n·       Active: The district is in operation and providing instructional services.\n·       Closed: The district is not in operation and no longer providing instructional services.\n·       Merged: The district has combined with another district or districts.\n·       Pending: The district has not opened for operation and instructional services yet, but plans to open within the next 9–12 months.",
+     "notes": []
+    },
+    {
+     "name": "County",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 58,
+     "is_unique": false,
+     "min_value": "Alameda",
+     "max_value": "Yuba",
+     "examples": [
+      "Alameda"
+     ],
+     "top_values": [],
+     "description": "County name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "District",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1411,
+     "is_unique": false,
+     "min_value": "ABC Unified",
+     "max_value": "Yucaipa-Calimesa Joint Unified",
+     "examples": [
+      "Alameda County Office of Education",
+      "California School for the Blind (State Special Schl)",
+      "California School for the Deaf-Fremont (State Special Schl)",
+      "California Community College, Chancellors",
+      "Mission Valley ROC/P"
+     ],
+     "top_values": [],
+     "description": "District",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "School",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0774,
+     "distinct_count": 13875,
+     "is_unique": false,
+     "min_value": "'3R' Middle",
+     "max_value": "one.Charter",
+     "examples": [
+      "FAME Public Charter",
+      "Envision Academy for Arts & Technology",
+      "Aspire California College Preparatory Academy",
+      "Community School for Creative Education",
+      "Yu Ming Charter"
+     ],
+     "top_values": [],
+     "description": "School",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Street",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0166,
+     "distinct_count": 13593,
+     "is_unique": false,
+     "min_value": "1 Carnes Road",
+     "max_value": "Zenia Lake Mountain Road & Burgess Ranch Road HC 62 Box 54",
+     "examples": [
+      "313 West Winton Avenue",
+      "39899 Balentine Drive, Suite 335",
+      "1515 Webster Street",
+      "2125 Jefferson Avenue",
+      "2111 International Boulevard"
+     ],
+     "top_values": [],
+     "description": "Street",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "StreetAbr",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0166,
+     "distinct_count": 13633,
+     "is_unique": false,
+     "min_value": "1 Carnes Rd.",
+     "max_value": "Zenia Lake Mountain Rd. & Burgess Ranch Rd. HC 62 Box 54",
+     "examples": [
+      "313 West Winton Ave.",
+      "39899 Balentine Dr., Ste. 335",
+      "1515 Webster St.",
+      "2125 Jefferson Ave.",
+      "2111 International Blvd."
+     ],
+     "top_values": [],
+     "description": "The abbreviated street address of the school, district, or administrative authority’s physical location.",
+     "value_description": "The abbreviated street address of the school, district, or administrative authority’s physical location. Note: Some records (primarily records of closed or retired schools) may not have data in this field.",
+     "notes": []
+    },
+    {
+     "name": "City",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0166,
+     "distinct_count": 1165,
+     "is_unique": false,
+     "min_value": "Acampo",
+     "max_value": "Zenia",
+     "examples": [
+      "Hayward",
+      "Newark",
+      "Oakland",
+      "Berkeley",
+      "San Leandro"
+     ],
+     "top_values": [],
+     "description": "City",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Zip",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0166,
+     "distinct_count": 11184,
+     "is_unique": false,
+     "min_value": "82025-1703",
+     "max_value": "97635-0084",
+     "examples": [
+      "94544-1136",
+      "94560-5359",
+      "94612-3355",
+      "94703-1414",
+      "94606-4903"
+     ],
+     "top_values": [],
+     "description": "Zip",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "State",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0166,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "CA",
+     "max_value": "CA",
+     "examples": [
+      "CA"
+     ],
+     "top_values": [
+      [
+       "CA",
+       17393
+      ]
+     ],
+     "description": "State",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "MailStreet",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0165,
+     "distinct_count": 12395,
+     "is_unique": false,
+     "min_value": "(Never Opened Per Cbeds Dir.)",
+     "max_value": "c/o Arvin High PO Box 518",
+     "examples": [
+      "313 West Winton Avenue",
+      "39899 Balentine Drive, Suite 335",
+      "1515 Webster Street",
+      "1001 22nd Avenue, Suite 100",
+      "2111 International Boulevard"
+     ],
+     "top_values": [],
+     "description": "MailStreet",
+     "value_description": "The unabbreviated mailing address of the school, district, or administrative authority. Note: 1) Some entities (primarily closed or retired schools) may not have data in this field; 2) Many active entities have not provided a mailing street address. For your convenience we have filled the unpopulated MailStreet cells with Street data.",
+     "notes": []
+    },
+    {
+     "name": "MailStrAbr",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0165,
+     "distinct_count": 12429,
+     "is_unique": false,
+     "min_value": "(Never Opened Per Cbeds Dir.)",
+     "max_value": "c/o Arvin High PO Box 518",
+     "examples": [
+      "313 West Winton Ave.",
+      "39899 Balentine Dr., Ste. 335",
+      "1515 Webster St.",
+      "1001 22nd Ave., Ste. 100",
+      "2111 International Blvd."
+     ],
+     "top_values": [],
+     "description": "mailing street address",
+     "value_description": "the abbreviated mailing street address of the school, district, or administrative authority.Note: Many active entities have not provided a mailing street address. For your convenience we have filled the unpopulated MailStrAbr cells with StreetAbr data.",
+     "notes": []
+    },
+    {
+     "name": "MailCity",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0165,
+     "distinct_count": 1132,
+     "is_unique": false,
+     "min_value": "Acampo",
+     "max_value": "Yucca Valley",
+     "examples": [
+      "Hayward",
+      "Newark",
+      "Oakland",
+      "San Leandro",
+      "Dublin"
+     ],
+     "top_values": [],
+     "description": "mailing city",
+     "value_description": "The city associated with the mailing address of the school, district, or administrative authority. Note: Many entities have not provided a mailing address city. For your convenience we have filled the unpopulated MailCity cells with City data.",
+     "notes": []
+    },
+    {
+     "name": "MailZip",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0165,
+     "distinct_count": 10298,
+     "is_unique": false,
+     "min_value": "65546",
+     "max_value": "97635-0084",
+     "examples": [
+      "94544-1136",
+      "94560-5359",
+      "94612",
+      "94606",
+      "94606-4903"
+     ],
+     "top_values": [],
+     "description": "mailing zip",
+     "value_description": "The zip code associated with the mailing address of the school, district, or administrative authority. Note: Many entities have not provided a mailing address zip code. For your convenience we have filled the unpopulated MailZip cells with Zip data.",
+     "notes": []
+    },
+    {
+     "name": "MailState",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0165,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "CA",
+     "max_value": "CA",
+     "examples": [
+      "CA"
+     ],
+     "top_values": [
+      [
+       "CA",
+       17394
+      ]
+     ],
+     "description": "mailing state",
+     "value_description": "The state within the mailing address. For your convenience we have filled the unpopulated MailState cells with State data.",
+     "notes": []
+    },
+    {
+     "name": "Phone",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.3375,
+     "distinct_count": 10632,
+     "is_unique": false,
+     "min_value": "(209) 223-1750",
+     "max_value": "(970) 258-0518",
+     "examples": [
+      "(510) 887-0152",
+      "(510) 596-8901",
+      "(510) 686-4131",
+      "(510) 452-2063",
+      "(510) 842-1181"
+     ],
+     "top_values": [],
+     "description": "Phone",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Ext",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9695,
+     "distinct_count": 379,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "9100",
+     "examples": [
+      "130",
+      "1240",
+      "1200",
+      "1311"
+     ],
+     "top_values": [],
+     "description": "The phone number extension of the school, district, or administrative authority.",
+     "value_description": "The phone number extension of the school, district, or administrative authority.",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison",
+      "97% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Website",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.6062,
+     "distinct_count": 4082,
+     "is_unique": false,
+     "min_value": "acornstooakscharter.org",
+     "max_value": "www.yumingschool.org",
+     "examples": [
+      "www.acoe.org",
+      "www.envisionacademy.org/",
+      "www.aspirepublicschools.org",
+      "www.communityschoolforcreativeeducation.org",
+      "www.yumingschool.org"
+     ],
+     "top_values": [],
+     "description": "The website address of the school, district, or administrative authority.",
+     "value_description": "The website address of the school, district, or administrative authority.",
+     "notes": [
+      "61% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "OpenDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0774,
+     "distinct_count": 1406,
+     "is_unique": false,
+     "min_value": "1850-07-01",
+     "max_value": "2017-09-22",
+     "examples": [
+      "2005-08-29",
+      "2006-08-28",
+      "2008-08-21",
+      "2011-08-22",
+      "2011-08-09"
+     ],
+     "top_values": [],
+     "description": "The date the school opened.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ClosedDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.6781,
+     "distinct_count": 899,
+     "is_unique": false,
+     "min_value": "1980-07-01",
+     "max_value": "2016-09-01",
+     "examples": [
+      "2015-07-31",
+      "2015-06-30",
+      "1989-06-30",
+      "2013-06-30",
+      "1987-06-22"
+     ],
+     "top_values": [],
+     "description": "The date the school closed.",
+     "value_description": "",
+     "notes": [
+      "68% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Charter",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0774,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      1,
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       14588
+      ],
+      [
+       1,
+       1729
+      ]
+     ],
+     "description": "This field identifies a charter school.",
+     "value_description": "The field is coded as follows:\n\n·       1 = The school is a charter\n\n·       0 = The school is not a charter",
+     "notes": []
+    },
+    {
+     "name": "CharterNum",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.8982,
+     "distinct_count": 1763,
+     "is_unique": false,
+     "min_value": "0000",
+     "max_value": "1838",
+     "examples": [
+      "0728",
+      "0811",
+      "1049",
+      "1284",
+      "1296"
+     ],
+     "top_values": [],
+     "description": "The charter school number,",
+     "value_description": "4-digit number assigned to a charter school.",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison",
+      "90% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "FundingType",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9072,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Directly funded",
+     "max_value": "Not in CS funding model",
+     "examples": [
+      "Directly funded",
+      "Locally funded"
+     ],
+     "top_values": [
+      [
+       "Directly funded",
+       1176
+      ],
+      [
+       "Locally funded",
+       460
+      ],
+      [
+       "Not in CS funding model",
+       6
+      ]
+     ],
+     "description": "Indicates the charter school funding type",
+     "value_description": "Values are as follows:\n\n·       Not in CS (California School) funding model\n\n·       Locally funded\n\n·       Directly funded",
+     "notes": [
+      "91% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "DOC",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": "00",
+     "max_value": "99",
+     "examples": [
+      "00",
+      "31",
+      "34",
+      "42",
+      "54"
+     ],
+     "top_values": [
+      [
+       "54",
+       10190
+      ],
+      [
+       "52",
+       4378
+      ],
+      [
+       "00",
+       1703
+      ],
+      [
+       "56",
+       1079
+      ],
+      [
+       "98",
+       156
+      ],
+      [
+       "02",
+       69
+      ],
+      [
+       "34",
+       49
+      ],
+      [
+       "58",
+       33
+      ],
+      [
+       "03",
+       11
+      ],
+      [
+       "99",
+       10
+      ],
+      [
+       "31",
+       6
+      ],
+      [
+       "42",
+       2
+      ]
+     ],
+     "description": "District Ownership Code",
+     "value_description": "The District Ownership Code (DOC) is the numeric code used to identify the category of the Administrative Authority.\n•       00 - County Office of Education\n•       02 – State Board of Education\n•       03 – Statewide Benefit Charter\n•       31 – State Special Schools\n•       34 – Non-school Location*\n•       52 – Elementary School District\n•       54 – Unified School District\n•       56 – High School District\n•       98 – Regional Occupational Center/Program (ROC/P)\ncommonsense evidence:\n*Only the California Education Authority has been included in the non-school location category.",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "DOCType",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": "Administration Only",
+     "max_value": "Unified School District",
+     "examples": [
+      "County Office of Education (COE)",
+      "State Special Schools",
+      "Non-School Locations",
+      "Joint Powers Authority (JPA)",
+      "Unified School District"
+     ],
+     "top_values": [
+      [
+       "Unified School District",
+       10190
+      ],
+      [
+       "Elementary School District",
+       4378
+      ],
+      [
+       "County Office of Education (COE)",
+       1703
+      ],
+      [
+       "High School District",
+       1079
+      ],
+      [
+       "Regional Occupation Center/Program (ROC/P)",
+       156
+      ],
+      [
+       "State Board of Education",
+       69
+      ],
+      [
+       "Non-School Locations",
+       49
+      ],
+      [
+       "Community College District",
+       33
+      ],
+      [
+       "Statewide Benefit Charter",
+       11
+      ],
+      [
+       "Administration Only",
+       10
+      ],
+      [
+       "State Special Schools",
+       6
+      ],
+      [
+       "Joint Powers Authority (JPA)",
+       2
+      ]
+     ],
+     "description": "The District Ownership Code Type is the text description of the DOC category.",
+     "value_description": "(See text values in DOC field description above)",
+     "notes": []
+    },
+    {
+     "name": "SOC",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0774,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": "08",
+     "max_value": "98",
+     "examples": [
+      "65",
+      "66",
+      "60",
+      "10",
+      "14"
+     ],
+     "top_values": [
+      [
+       "60",
+       7591
+      ],
+      [
+       "66",
+       1776
+      ],
+      [
+       "62",
+       1652
+      ],
+      [
+       "68",
+       754
+      ],
+      [
+       "09",
+       750
+      ],
+      [
+       "69",
+       615
+      ],
+      [
+       "70",
+       551
+      ],
+      [
+       "63",
+       500
+      ],
+      [
+       "10",
+       500
+      ],
+      [
+       "65",
+       438
+      ],
+      [
+       "61",
+       273
+      ],
+      [
+       "08",
+       272
+      ],
+      [
+       "14",
+       254
+      ],
+      [
+       "64",
+       122
+      ],
+      [
+       "13",
+       120
+      ],
+      [
+       "98",
+       86
+      ],
+      [
+       "11",
+       43
+      ],
+      [
+       "15",
+       11
+      ],
+      [
+       "67",
+       6
+      ],
+      [
+       "31",
+       3
+      ]
+     ],
+     "description": "The School Ownership Code is a numeric code used to identify the type of school.",
+     "value_description": "•      08 - Preschool      \n•       09 – Special Education Schools (Public)\n•      11 – Youth Authority Facilities (CEA)\n•       13 – Opportunity Schools\n•       14 – Juvenile Court Schools\n•       15 – Other County or District Programs\n•       31 – State Special Schools\n•       60 – Elementary School (Public)\n•       61 – Elementary School in 1 School District (Public)\n•       62 – Intermediate/Middle Schools (Public)\n•       63 – Alternative Schools of Choice\n•       64 – Junior High Schools (Public)\n•       65 – K-12 Schools (Public)\n•       66 – High Schools (Public)\n•       67 – High Schools in 1 School District (Public)\n•       68 – Continuation High Schools\n•       69 – District Community Day Schools\n•       70 – Adult Education Centers\n•       98 – Regional Occupational Center/Program (ROC/P)",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "SOCType",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0774,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": "Adult Education Centers",
+     "max_value": "Youth Authority Facilities",
+     "examples": [
+      "K-12 Schools (Public)",
+      "High Schools (Public)",
+      "Elementary Schools (Public)",
+      "County Community",
+      "Juvenile Court Schools"
+     ],
+     "top_values": [
+      [
+       "Elementary Schools (Public)",
+       7591
+      ],
+      [
+       "High Schools (Public)",
+       1776
+      ],
+      [
+       "Intermediate/Middle Schools (Public)",
+       1652
+      ],
+      [
+       "Continuation High Schools",
+       754
+      ],
+      [
+       "Special Education Schools (Public)",
+       750
+      ],
+      [
+       "District Community Day Schools",
+       615
+      ],
+      [
+       "Adult Education Centers",
+       551
+      ],
+      [
+       "County Community",
+       500
+      ],
+      [
+       "Alternative Schools of Choice",
+       500
+      ],
+      [
+       "K-12 Schools (Public)",
+       438
+      ],
+      [
+       "Elemen Schools In 1 School Dist. (Public)",
+       273
+      ],
+      [
+       "Preschool",
+       272
+      ],
+      [
+       "Juvenile Court Schools",
+       254
+      ],
+      [
+       "Junior High Schools (Public)",
+       122
+      ],
+      [
+       "Opportunity Schools",
+       120
+      ],
+      [
+       "ROC/ROP",
+       86
+      ],
+      [
+       "Youth Authority Facilities",
+       43
+      ],
+      [
+       "Other County Or District Programs",
+       11
+      ],
+      [
+       "High Schools In 1 School Dist. (Public)",
+       6
+      ],
+      [
+       "State Special Schools",
+       3
+      ]
+     ],
+     "description": "The School Ownership Code Type is the text description of the type of school.",
+     "value_description": "The School Ownership Code Type is the text description of the type of school.",
+     "notes": []
+    },
+    {
+     "name": "EdOpsCode",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.3229,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": "ALTSOC",
+     "max_value": "YTH",
+     "examples": [
+      "TRAD",
+      "JUV",
+      "COMM",
+      "OPP",
+      "SPEC"
+     ],
+     "top_values": [
+      [
+       "TRAD",
+       10103
+      ],
+      [
+       "CON",
+       539
+      ],
+      [
+       "COMMDAY",
+       486
+      ],
+      [
+       "ALTSOC",
+       320
+      ],
+      [
+       "SPEC",
+       228
+      ],
+      [
+       "COMM",
+       133
+      ],
+      [
+       "JUV",
+       94
+      ],
+      [
+       "OPP",
+       47
+      ],
+      [
+       "YTH",
+       6
+      ],
+      [
+       "ROP",
+       6
+      ],
+      [
+       "SPECON",
+       5
+      ],
+      [
+       "HOMHOS",
+       5
+      ],
+      [
+       "SSS",
+       3
+      ]
+     ],
+     "description": "The Education Option Code is a short text description of the type of education offered.",
+     "value_description": "•      ALTSOC – Alternative School of Choice\n•      COMM – County Community School\n•       COMMDAY – Community Day School\n•       CON – Continuation School\n•       JUV – Juvenile Court School\n•       OPP – Opportunity School\n•       YTH – Youth Authority School\n•       SSS – State Special School\n•       SPEC – Special Education School\n•       TRAD – Traditional\n•       ROP – Regional Occupational Program\n•       HOMHOS – Home and Hospital\n•       SPECON – District Consortia Special Education School",
+     "notes": []
+    },
+    {
+     "name": "EdOpsName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.3229,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": "Alternative School of Choice",
+     "max_value": "Youth Authority School",
+     "examples": [
+      "Traditional",
+      "Juvenile Court School",
+      "County Community School",
+      "Opportunity School",
+      "Special Education School"
+     ],
+     "top_values": [
+      [
+       "Traditional",
+       10103
+      ],
+      [
+       "Continuation School",
+       539
+      ],
+      [
+       "Community Day School",
+       486
+      ],
+      [
+       "Alternative School of Choice",
+       320
+      ],
+      [
+       "Special Education School",
+       228
+      ],
+      [
+       "County Community School",
+       133
+      ],
+      [
+       "Juvenile Court School",
+       94
+      ],
+      [
+       "Opportunity School",
+       47
+      ],
+      [
+       "Youth Authority School",
+       6
+      ],
+      [
+       "ROP",
+       6
+      ],
+      [
+       "Home and Hospital",
+       5
+      ],
+      [
+       "District Special Education Consortia School",
+       5
+      ],
+      [
+       "State Special School",
+       3
+      ]
+     ],
+     "description": "Educational Option Name",
+     "value_description": "The Educational Option Name is the long text description of the type of education being offered.",
+     "notes": []
+    },
+    {
+     "name": "EILCode",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0774,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "UG",
+     "examples": [
+      "ELEMHIGH",
+      "HS",
+      "ELEM",
+      "UG",
+      "INTMIDJR"
+     ],
+     "top_values": [
+      [
+       "ELEM",
+       7298
+      ],
+      [
+       "HS",
+       3367
+      ],
+      [
+       "UG",
+       2525
+      ],
+      [
+       "INTMIDJR",
+       1845
+      ],
+      [
+       "ELEMHIGH",
+       774
+      ],
+      [
+       "A",
+       352
+      ],
+      [
+       "PS",
+       156
+      ]
+     ],
+     "description": "The Educational Instruction Level Code is a short text description of the institution's type relative to the grade range served.",
+     "value_description": "•       A – Adult\n•       ELEM – Elementary\n•       ELEMHIGH – Elementary-High Combination\n•       HS – High School\n•       INTMIDJR – Intermediate/Middle/Junior High\n•       PS – Preschool\n•       UG – Ungraded",
+     "notes": []
+    },
+    {
+     "name": "EILName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0774,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "Adult",
+     "max_value": "Ungraded",
+     "examples": [
+      "Elementary-High Combination",
+      "High School",
+      "Elementary",
+      "Ungraded",
+      "Intermediate/Middle/Junior High"
+     ],
+     "top_values": [
+      [
+       "Elementary",
+       7298
+      ],
+      [
+       "High School",
+       3367
+      ],
+      [
+       "Ungraded",
+       2525
+      ],
+      [
+       "Intermediate/Middle/Junior High",
+       1845
+      ],
+      [
+       "Elementary-High Combination",
+       774
+      ],
+      [
+       "Adult",
+       352
+      ],
+      [
+       "Preschool",
+       156
+      ]
+     ],
+     "description": "The Educational Instruction Level Name is the long text description of the institution’s type relative to the grade range served.",
+     "value_description": "The Educational Instruction Level Name is the long text description of the institution’s type relative to the grade range served.",
+     "notes": []
+    },
+    {
+     "name": "GSoffered",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.2195,
+     "distinct_count": 94,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "P-Post Secondary",
+     "examples": [
+      "K-12",
+      "9-12",
+      "K-8",
+      "7-12",
+      "6-8"
+     ],
+     "top_values": [],
+     "description": "The grade span offered is the lowest grade and the highest grade offered or supported by the school, district, or administrative authority. This field might differ from the grade span served as reported in the most recent certified California Longitudinal Pupil Achievement (CALPADS) Fall 1 data collection.",
+     "value_description": "For example XYZ School might display the following data:\n\nGSoffered = P–Adult\n\nGSserved = K–12",
+     "notes": []
+    },
+    {
+     "name": "GSserved",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.3247,
+     "distinct_count": 81,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "K-9",
+     "examples": [
+      "K-12",
+      "9-12",
+      "K-7",
+      "K-5",
+      "8-12"
+     ],
+     "top_values": [],
+     "description": "grade span served.. It is the lowest grade and the highest grade of student enrollment as reported in the most recent certified CALPADS Fall 1 data collection. Only K–12 enrollment is reported through CALPADS. This field may differ from the grade span offered",
+     "value_description": "commonsense evidence:\n\n1.     Only K–12 enrollment is reported through CALPADS\n\n2.     Note: Special programs at independent study, alternative education, and special education schools will often exceed the typical grade span for schools of that type",
+     "notes": []
+    },
+    {
+     "name": "Virtual",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.3883,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "P",
+     "examples": [
+      "P",
+      "N"
+     ],
+     "top_values": [
+      [
+       "N",
+       9703
+      ],
+      [
+       "P",
+       1046
+      ],
+      [
+       "F",
+       69
+      ]
+     ],
+     "description": "This field identifies the type of virtual instruction offered by the school. Virtual instruction is instruction in which students and teachers are separated by time and/or location, and interaction occurs via computers and/or telecommunications technologies.",
+     "value_description": "The field is coded as follows:\n\n·       F = Exclusively Virtual – The school has no physical building where students meet with each other or with teachers, all instruction is virtual.\n\n·       V = Primarily Virtual – The school focuses on a systematic program of virtual instruction but includes some physical meetings among students or with teachers.\n\n·       C = Primarily Classroom – The school offers virtual courses but virtual instruction is not the primary means of instruction.\n\n·       N = Not Virtual – The school does not offer any virtual instruction.\n\n·       P = Partial Virtual – The school offers some, but not all, instruction through virtual instruction. Note: This value was retired and replaced with the Primarily Virtual and Primarily Classroom values beginning with the 2016–17 school year.",
+     "notes": []
+    },
+    {
+     "name": "Magnet",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.4001,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       10091
+      ],
+      [
+       1,
+       519
+      ]
+     ],
+     "description": "This field identifies whether a school is a magnet school and/or provides a magnet program.",
+     "value_description": "The field is coded as follows:\n\n·       1 = Magnet - The school is a magnet school and/or offers a magnet program.\n\n·       0 = Not Magnet - The school is not a magnet school and/or does not offer a magnet program.\n\ncommonsense evidence:\n\nNote: Preschools and adult education centers do not contain a magnet school indicator.",
+     "notes": []
+    },
+    {
+     "name": "Latitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2727,
+     "distinct_count": 11436,
+     "is_unique": false,
+     "min_value": 32.547737,
+     "max_value": 44.219305,
+     "examples": [
+      37.658212,
+      37.521436,
+      37.80452,
+      37.868991,
+      37.784648
+     ],
+     "top_values": [],
+     "description": "The angular distance (expressed in degrees) between the location of the school, district, or administrative authority and the equator measured north to south.",
+     "value_description": "The angular distance (expressed in degrees) between the location of the school, district, or administrative authority and the equator measured north to south.",
+     "notes": []
+    },
+    {
+     "name": "Longitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2727,
+     "distinct_count": 11278,
+     "is_unique": false,
+     "min_value": -124.28481,
+     "max_value": -83.781133,
+     "examples": [
+      -122.09713,
+      -121.99391,
+      -122.26815,
+      -122.27844,
+      -122.23863
+     ],
+     "top_values": [],
+     "description": "The angular distance (expressed in degrees) between the location of the school, district, or administrative authority and the prime meridian (Greenwich, England) measured from west to east.",
+     "value_description": "The angular distance (expressed in degrees) between the location of the school, district, or administrative authority and the prime meridian (Greenwich, England) measured from west to east.",
+     "notes": []
+    },
+    {
+     "name": "AdmFName1",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.3385,
+     "distinct_count": 2327,
+     "is_unique": false,
+     "min_value": "Aaron",
+     "max_value": "Ziggy",
+     "examples": [
+      "L Karen",
+      "Laura",
+      "Clifford",
+      "Sue",
+      "David"
+     ],
+     "top_values": [],
+     "description": "administrator's first name",
+     "value_description": "The superintendent’s or principal’s first name.\n\ncommonsense evidence:\n\nOnly active and pending districts and schools will display administrator information, if applicable.",
+     "notes": []
+    },
+    {
+     "name": "AdmLName1",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.3385,
+     "distinct_count": 6394,
+     "is_unique": false,
+     "min_value": "Aaberg",
+     "max_value": "kuykendall",
+     "examples": [
+      "Monroe",
+      "Robell",
+      "Thompson",
+      "Park",
+      "Castillo"
+     ],
+     "top_values": [],
+     "description": "administrator's last name",
+     "value_description": "The superintendent’s or principal’s last name.\n\ncommonsense evidence:\nOnly active and pending districts and schools will display administrator information, if applicable.",
+     "notes": []
+    },
+    {
+     "name": "AdmEmail1",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.3399,
+     "distinct_count": 10492,
+     "is_unique": false,
+     "min_value": "Albritton.j@monet.k12.ca.us",
+     "max_value": "zthurman@maxwell.k12.ca.us",
+     "examples": [
+      "lkmonroe@acoe.org",
+      "laura@envisionacademy.org",
+      "cliffordt@communityschoolforcreativeeducation.org",
+      "spark@yumingschool.org",
+      "davidc@urbanmontessori.org"
+     ],
+     "top_values": [],
+     "description": "administrator's email address",
+     "value_description": "The superintendent’s or principal’s email address.\n\ncommonsense evidence:\n\nOnly active and pending districts and schools will display administrator information, if applicable.",
+     "notes": []
+    },
+    {
+     "name": "AdmFName2",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9756,
+     "distinct_count": 285,
+     "is_unique": false,
+     "min_value": "Adam",
+     "max_value": "Zuzy",
+     "examples": [
+      "Sau-Lim (Lance)",
+      "Jennifer",
+      "Annalisa",
+      "Woo",
+      "David"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "SAME as 1",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "AdmLName2",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9756,
+     "distinct_count": 363,
+     "is_unique": false,
+     "min_value": "Adams",
+     "max_value": "Zamora-Day",
+     "examples": [
+      "Tsang",
+      "Koelling",
+      "Moore",
+      "Williams",
+      "Hoopes"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "AdmEmail2",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.976,
+     "distinct_count": 382,
+     "is_unique": false,
+     "min_value": "Pccshigh@mcn.org",
+     "max_value": "wwilliams@aoaschools.org",
+     "examples": [
+      "stsang@unityhigh.org",
+      "jkoelling@efcps.net",
+      "annalisa.moore@neaclc.org",
+      "wwilliams@aoaschools.org",
+      "david.hoopes@alamedaclc.org"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "AdmFName3",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9976,
+     "distinct_count": 40,
+     "is_unique": false,
+     "min_value": "Alex",
+     "max_value": "Vickie",
+     "examples": [],
+     "top_values": [
+      [
+       "Mark",
+       2
+      ],
+      [
+       "Eric",
+       2
+      ],
+      [
+       "Vickie",
+       1
+      ],
+      [
+       "Tracie",
+       1
+      ],
+      [
+       "Shawn",
+       1
+      ],
+      [
+       "Sarah",
+       1
+      ],
+      [
+       "Sabrina",
+       1
+      ],
+      [
+       "Rosemary",
+       1
+      ],
+      [
+       "Robert",
+       1
+      ],
+      [
+       "Renee",
+       1
+      ],
+      [
+       "Rachel",
+       1
+      ],
+      [
+       "Portia",
+       1
+      ],
+      [
+       "Patsy",
+       1
+      ],
+      [
+       "Michelle",
+       1
+      ],
+      [
+       "Melissa",
+       1
+      ],
+      [
+       "Mary",
+       1
+      ],
+      [
+       "Lydia",
+       1
+      ],
+      [
+       "Lisa",
+       1
+      ],
+      [
+       "Lily",
+       1
+      ],
+      [
+       "Kelly",
+       1
+      ],
+      [
+       "Kathy",
+       1
+      ],
+      [
+       "Joy",
+       1
+      ],
+      [
+       "Joseph",
+       1
+      ],
+      [
+       "Irma",
+       1
+      ],
+      [
+       "Horacio",
+       1
+      ],
+      [
+       "Gerardo",
+       1
+      ],
+      [
+       "Erik",
+       1
+      ],
+      [
+       "Dustin",
+       1
+      ],
+      [
+       "Drew",
+       1
+      ],
+      [
+       "Danielle",
+       1
+      ],
+      [
+       "Cindy",
+       1
+      ],
+      [
+       "Chris",
+       1
+      ],
+      [
+       "Bridget",
+       1
+      ],
+      [
+       "Bree",
+       1
+      ],
+      [
+       "Bianca",
+       1
+      ],
+      [
+       "Beth",
+       1
+      ],
+      [
+       "Barbara",
+       1
+      ],
+      [
+       "Andrew",
+       1
+      ],
+      [
+       "Amos",
+       1
+      ],
+      [
+       "Alex",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "not useful",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "AdmLName3",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9976,
+     "distinct_count": 42,
+     "is_unique": true,
+     "min_value": "Andreasen",
+     "max_value": "Zerpoli",
+     "examples": [],
+     "top_values": [
+      [
+       "Zerpoli",
+       1
+      ],
+      [
+       "Yount",
+       1
+      ],
+      [
+       "Woodruff",
+       1
+      ],
+      [
+       "Wood",
+       1
+      ],
+      [
+       "Wolk",
+       1
+      ],
+      [
+       "Spotts",
+       1
+      ],
+      [
+       "Shimer",
+       1
+      ],
+      [
+       "Scott-Femenella",
+       1
+      ],
+      [
+       "Schmidt",
+       1
+      ],
+      [
+       "Sarratore",
+       1
+      ],
+      [
+       "Saramago",
+       1
+      ],
+      [
+       "Roulette",
+       1
+      ],
+      [
+       "Roner",
+       1
+      ],
+      [
+       "Rojas",
+       1
+      ],
+      [
+       "Rivera",
+       1
+      ],
+      [
+       "Oxford",
+       1
+      ],
+      [
+       "Nugent",
+       1
+      ],
+      [
+       "Munoz",
+       1
+      ],
+      [
+       "Motsinger",
+       1
+      ],
+      [
+       "Martinez",
+       1
+      ],
+      [
+       "Martarano",
+       1
+      ],
+      [
+       "Mandelbaum",
+       1
+      ],
+      [
+       "Lopez",
+       1
+      ],
+      [
+       "Lemmon",
+       1
+      ],
+      [
+       "Lamb",
+       1
+      ],
+      [
+       "Kriss",
+       1
+      ],
+      [
+       "Kerns",
+       1
+      ],
+      [
+       "Griffith",
+       1
+      ],
+      [
+       "Gonzalez",
+       1
+      ],
+      [
+       "Gomez",
+       1
+      ],
+      [
+       "Fournier",
+       1
+      ],
+      [
+       "Farren",
+       1
+      ],
+      [
+       "Estrada",
+       1
+      ],
+      [
+       "DeBoer",
+       1
+      ],
+      [
+       "Crawford",
+       1
+      ],
+      [
+       "Chang",
+       1
+      ],
+      [
+       "Burgos",
+       1
+      ],
+      [
+       "Brown",
+       1
+      ],
+      [
+       "Bixby",
+       1
+      ],
+      [
+       "Bergmann",
+       1
+      ],
+      [
+       "Ayala",
+       1
+      ],
+      [
+       "Andreasen",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "not useful",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "AdmEmail3",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9976,
+     "distinct_count": 42,
+     "is_unique": true,
+     "min_value": "amos.nugent@gcccharters.org",
+     "max_value": "vickiechang@acoe.org",
+     "examples": [],
+     "top_values": [
+      [
+       "vickiechang@acoe.org",
+       1
+      ],
+      [
+       "tzerpoli@tricitiesrop.org",
+       1
+      ],
+      [
+       "sroner@echs.org",
+       1
+      ],
+      [
+       "spotts.eric@tusd.org",
+       1
+      ],
+      [
+       "sayala@greendot.org",
+       1
+      ],
+      [
+       "sarah.motsinger@cvesd.org",
+       1
+      ],
+      [
+       "rwood@rcsdk8.net",
+       1
+      ],
+      [
+       "roulette.mark@tusd.org",
+       1
+      ],
+      [
+       "rlemmon@ghsd.k12.ca.us",
+       1
+      ],
+      [
+       "rivera.portia@tusd.org",
+       1
+      ],
+      [
+       "rgonzalez@pivotcharterschools.org",
+       1
+      ],
+      [
+       "renee.scott-femenella@twinriversusd.org",
+       1
+      ],
+      [
+       "poxford@puesd.org",
+       1
+      ],
+      [
+       "mgriffith@sbusd.org",
+       1
+      ],
+      [
+       "mbixby@charterschool-sandiego.net",
+       1
+      ],
+      [
+       "mark_andreasen@riversideprep.net",
+       1
+      ],
+      [
+       "lydia.burgos@cvesd.org",
+       1
+      ],
+      [
+       "lshimer@burtonschools.org",
+       1
+      ],
+      [
+       "llamb@lcer.org",
+       1
+      ],
+      [
+       "kmartarano@scusd.net",
+       1
+      ],
+      [
+       "kkriss@pusdk12.org",
+       1
+      ],
+      [
+       "jsaramago@ghsd.k12.ca.us",
+       1
+      ],
+      [
+       "jdeboer@learn4life.org",
+       1
+      ],
+      [
+       "hgomez@santapaulaunified.org",
+       1
+      ],
+      [
+       "gmunoz@piedmont.k12.ca.us",
+       1
+      ],
+      [
+       "gmartinez@galt.k12.ca.us",
+       1
+      ],
+      [
+       "fournier.michelle@tusd.org",
+       1
+      ],
+      [
+       "ecrawford@scoe.net",
+       1
+      ],
+      [
+       "ebergmann@smusd.us",
+       1
+      ],
+      [
+       "dyount@roselandsd.org",
+       1
+      ],
+      [
+       "dustin.kerns@imagineschools.com",
+       1
+      ],
+      [
+       "dsarratore@vincentacademy.org",
+       1
+      ],
+      [
+       "cwoodruff@temeculaprep.com",
+       1
+      ],
+      [
+       "cschmidt@mjusd.com",
+       1
+      ],
+      [
+       "bwolk@husd.com",
+       1
+      ],
+      [
+       "bmandelbaum@bcoe.org",
+       1
+      ],
+      [
+       "blopez@santapaulaunified.org",
+       1
+      ],
+      [
+       "bfarren@harvestridgeschool.org",
+       1
+      ],
+      [
+       "bbrown@gerberschool.org",
+       1
+      ],
+      [
+       "arojas@lpvrop.org",
+       1
+      ],
+      [
+       "andrew.estrada@cvesd.org",
+       1
+      ],
+      [
+       "amos.nugent@gcccharters.org",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "not useful",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "LastUpdate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 757,
+     "is_unique": false,
+     "min_value": "1999-06-24",
+     "max_value": "2016-10-12",
+     "examples": [
+      "2015-06-23",
+      "2015-09-01",
+      "2015-06-18",
+      "2015-07-01",
+      "2016-07-18"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "when is this record updated last time",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "CDSCode"
+   ],
+   "sample_rows": [
+    {
+     "CDSCode": "01100170000000",
+     "NCESDist": "0691051",
+     "NCESSchool": null,
+     "StatusType": "Active",
+     "County": "Alameda",
+     "District": "Alameda County Office of Education",
+     "School": null,
+     "Street": "313 West Winton Avenue",
+     "StreetAbr": "313 West Winton Ave.",
+     "City": "Hayward",
+     "Zip": "94544-1136",
+     "State": "CA",
+     "MailStreet": "313 West Winton Avenue",
+     "MailStrAbr": "313 West Winton Ave.",
+     "MailCity": "Hayward",
+     "MailZip": "94544-1136",
+     "MailState": "CA",
+     "Phone": "(510) 887-0152",
+     "Ext": null,
+     "Website": "www.acoe.org",
+     "OpenDate": null,
+     "ClosedDate": null,
+     "Charter": null,
+     "CharterNum": null,
+     "FundingType": null,
+     "DOC": "00",
+     "DOCType": "County Office of Education (COE)",
+     "SOC": null,
+     "SOCType": null,
+     "EdOpsCode": null,
+     "EdOpsName": null,
+     "EILCode": null,
+     "EILName": null,
+     "GSoffered": null,
+     "GSserved": null,
+     "Virtual": null,
+     "Magnet": null,
+     "Latitude": 37.658212,
+     "Longitude": -122.09713,
+     "AdmFName1": "L Karen",
+     "AdmLName1": "Monroe",
+     "AdmEmail1": "lkmonroe@acoe.org",
+     "AdmFName2": null,
+     "AdmLName2": null,
+     "AdmEmail2": null,
+     "AdmFName3": null,
+     "AdmLName3": null,
+     "AdmEmail3": null,
+     "LastUpdate": "2015-06-23"
+    },
+    {
+     "CDSCode": "01100170109835",
+     "NCESDist": "0691051",
+     "NCESSchool": "10546",
+     "StatusType": "Closed",
+     "County": "Alameda",
+     "District": "Alameda County Office of Education",
+     "School": "FAME Public Charter",
+     "Street": "39899 Balentine Drive, Suite 335",
+     "StreetAbr": "39899 Balentine Dr., Ste. 335",
+     "City": "Newark",
+     "Zip": "94560-5359",
+     "State": "CA",
+     "MailStreet": "39899 Balentine Drive, Suite 335",
+     "MailStrAbr": "39899 Balentine Dr., Ste. 335",
+     "MailCity": "Newark",
+     "MailZip": "94560-5359",
+     "MailState": "CA",
+     "Phone": null,
+     "Ext": null,
+     "Website": null,
+     "OpenDate": "2005-08-29",
+     "ClosedDate": "2015-07-31",
+     "Charter": 1,
+     "CharterNum": "0728",
+     "FundingType": "Directly funded",
+     "DOC": "00",
+     "DOCType": "County Office of Education (COE)",
+     "SOC": "65",
+     "SOCType": "K-12 Schools (Public)",
+     "EdOpsCode": "TRAD",
+     "EdOpsName": "Traditional",
+     "EILCode": "ELEMHIGH",
+     "EILName": "Elementary-High Combination",
+     "GSoffered": "K-12",
+     "GSserved": "K-12",
+     "Virtual": "P",
+     "Magnet": 0,
+     "Latitude": 37.521436,
+     "Longitude": -121.99391,
+     "AdmFName1": null,
+     "AdmLName1": null,
+     "AdmEmail1": null,
+     "AdmFName2": null,
+     "AdmLName2": null,
+     "AdmEmail2": null,
+     "AdmFName3": null,
+     "AdmLName3": null,
+     "AdmEmail3": null,
+     "LastUpdate": "2015-09-01"
+    },
+    {
+     "CDSCode": "01100170112607",
+     "NCESDist": "0691051",
+     "NCESSchool": "10947",
+     "StatusType": "Active",
+     "County": "Alameda",
+     "District": "Alameda County Office of Education",
+     "School": "Envision Academy for Arts & Technology",
+     "Street": "1515 Webster Street",
+     "StreetAbr": "1515 Webster St.",
+     "City": "Oakland",
+     "Zip": "94612-3355",
+     "State": "CA",
+     "MailStreet": "1515 Webster Street",
+     "MailStrAbr": "1515 Webster St.",
+     "MailCity": "Oakland",
+     "MailZip": "94612",
+     "MailState": "CA",
+     "Phone": "(510) 596-8901",
+     "Ext": null,
+     "Website": "www.envisionacademy.org/",
+     "OpenDate": "2006-08-28",
+     "ClosedDate": null,
+     "Charter": 1,
+     "CharterNum": "0811",
+     "FundingType": "Directly funded",
+     "DOC": "00",
+     "DOCType": "County Office of Education (COE)",
+     "SOC": "66",
+     "SOCType": "High Schools (Public)",
+     "EdOpsCode": "TRAD",
+     "EdOpsName": "Traditional",
+     "EILCode": "HS",
+     "EILName": "High School",
+     "GSoffered": "9-12",
+     "GSserved": "9-12",
+     "Virtual": "N",
+     "Magnet": 0,
+     "Latitude": 37.80452,
+     "Longitude": -122.26815,
+     "AdmFName1": "Laura",
+     "AdmLName1": "Robell",
+     "AdmEmail1": "laura@envisionacademy.org",
+     "AdmFName2": null,
+     "AdmLName2": null,
+     "AdmEmail2": null,
+     "AdmFName3": null,
+     "AdmLName3": null,
+     "AdmEmail3": null,
+     "LastUpdate": "2015-06-18"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "frpm",
+   "from_column": "CDSCode",
+   "to_table": "schools",
+   "to_column": "CDSCode",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "satscores",
+   "from_column": "cds",
+   "to_table": "schools",
+   "to_column": "CDSCode",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

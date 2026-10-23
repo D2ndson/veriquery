@@ -1,0 +1,3095 @@
+{
+ "db_id": "thrombosis_prediction",
+ "schema_version": "1.0",
+ "db_path": "data/bird_minidev/dev_databases/thrombosis_prediction/thrombosis_prediction.sqlite",
+ "fingerprint": "7327744-1792489332517254800-v1.0",
+ "created_at": "2026-10-20T09:48:21+00:00",
+ "profile_seconds": 0.759,
+ "tables": [
+  {
+   "name": "Examination",
+   "row_count": 106,
+   "stats_rows": 106,
+   "columns": [
+    {
+     "name": "ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.3396,
+     "distinct_count": 69,
+     "is_unique": false,
+     "min_value": 14872,
+     "max_value": 5779550,
+     "examples": [
+      14872,
+      48473,
+      102490,
+      108788,
+      122405
+     ],
+     "top_values": [],
+     "description": "identification of the patient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Examination Date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0377,
+     "distinct_count": 94,
+     "is_unique": false,
+     "min_value": "1992-07-20",
+     "max_value": "1998-04-02",
+     "examples": [
+      "1997-05-27",
+      "1992-12-21",
+      "1995-04-20",
+      "1997-05-06",
+      "1998-04-02"
+     ],
+     "top_values": [],
+     "description": "Examination Date",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "aCL IgG",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 33,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 2150.3,
+     "examples": [
+      1.3,
+      4.3,
+      2.3,
+      0.0,
+      1.0
+     ],
+     "top_values": [
+      [
+       0.0,
+       40
+      ],
+      [
+       1.0,
+       8
+      ],
+      [
+       0.8,
+       7
+      ],
+      [
+       1.1,
+       4
+      ],
+      [
+       0.6,
+       4
+      ],
+      [
+       1.9,
+       3
+      ],
+      [
+       1.3,
+       3
+      ],
+      [
+       0.9,
+       3
+      ],
+      [
+       0.7,
+       3
+      ],
+      [
+       0.4,
+       3
+      ],
+      [
+       2.4,
+       2
+      ],
+      [
+       2.3,
+       2
+      ],
+      [
+       1.4,
+       2
+      ],
+      [
+       1.2,
+       2
+      ],
+      [
+       0.5,
+       2
+      ],
+      [
+       2150.3,
+       1
+      ],
+      [
+       802.4,
+       1
+      ],
+      [
+       199.8,
+       1
+      ],
+      [
+       157.6,
+       1
+      ],
+      [
+       80.3,
+       1
+      ],
+      [
+       20.2,
+       1
+      ],
+      [
+       19.3,
+       1
+      ],
+      [
+       15.4,
+       1
+      ],
+      [
+       7.9,
+       1
+      ],
+      [
+       6.1,
+       1
+      ],
+      [
+       5.1,
+       1
+      ],
+      [
+       4.5,
+       1
+      ],
+      [
+       4.3,
+       1
+      ],
+      [
+       3.7,
+       1
+      ],
+      [
+       3.3,
+       1
+      ],
+      [
+       2.9,
+       1
+      ],
+      [
+       2.7,
+       1
+      ],
+      [
+       1.8,
+       1
+      ]
+     ],
+     "description": "anti-Cardiolipin antibody (IgG) concentration",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "aCL IgM",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 49,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 200.0,
+     "examples": [
+      1.6,
+      4.6,
+      2.5,
+      0.0,
+      4.0
+     ],
+     "top_values": [
+      [
+       0.0,
+       11
+      ],
+      [
+       1.8,
+       9
+      ],
+      [
+       2.0,
+       8
+      ],
+      [
+       1.7,
+       8
+      ],
+      [
+       2.4,
+       4
+      ],
+      [
+       1.9,
+       4
+      ],
+      [
+       4.0,
+       3
+      ],
+      [
+       2.7,
+       3
+      ],
+      [
+       2.6,
+       3
+      ],
+      [
+       2.5,
+       3
+      ],
+      [
+       2.2,
+       3
+      ],
+      [
+       2.1,
+       3
+      ],
+      [
+       1.5,
+       3
+      ],
+      [
+       3.0,
+       2
+      ],
+      [
+       2.3,
+       2
+      ],
+      [
+       1.6,
+       2
+      ],
+      [
+       1.3,
+       2
+      ],
+      [
+       0.8,
+       2
+      ],
+      [
+       200.0,
+       1
+      ],
+      [
+       25.4,
+       1
+      ],
+      [
+       19.8,
+       1
+      ],
+      [
+       14.3,
+       1
+      ],
+      [
+       13.0,
+       1
+      ],
+      [
+       10.7,
+       1
+      ],
+      [
+       9.6,
+       1
+      ],
+      [
+       9.5,
+       1
+      ],
+      [
+       9.2,
+       1
+      ],
+      [
+       6.9,
+       1
+      ],
+      [
+       6.3,
+       1
+      ],
+      [
+       6.1,
+       1
+      ],
+      [
+       5.7,
+       1
+      ],
+      [
+       5.1,
+       1
+      ],
+      [
+       4.9,
+       1
+      ],
+      [
+       4.6,
+       1
+      ],
+      [
+       4.2,
+       1
+      ],
+      [
+       4.1,
+       1
+      ],
+      [
+       3.8,
+       1
+      ],
+      [
+       3.7,
+       1
+      ],
+      [
+       3.6,
+       1
+      ],
+      [
+       3.4,
+       1
+      ],
+      [
+       3.3,
+       1
+      ],
+      [
+       3.2,
+       1
+      ],
+      [
+       3.1,
+       1
+      ],
+      [
+       2.8,
+       1
+      ],
+      [
+       1.2,
+       1
+      ],
+      [
+       1.1,
+       1
+      ],
+      [
+       0.9,
+       1
+      ],
+      [
+       0.7,
+       1
+      ],
+      [
+       0.6,
+       1
+      ]
+     ],
+     "description": "anti-Cardiolipin antibody (IgM) concentration",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "ANA",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.1792,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 4096,
+     "examples": [
+      256,
+      0,
+      16,
+      4,
+      1024
+     ],
+     "top_values": [
+      [
+       0,
+       20
+      ],
+      [
+       16,
+       17
+      ],
+      [
+       64,
+       14
+      ],
+      [
+       256,
+       11
+      ],
+      [
+       4,
+       11
+      ],
+      [
+       4096,
+       7
+      ],
+      [
+       1024,
+       7
+      ]
+     ],
+     "description": "anti-nucleus antibody concentration",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ANA Pattern",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.3868,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "D,P,S",
+     "max_value": "S,P",
+     "examples": [
+      "P",
+      "P,S",
+      "S",
+      "D,P,S",
+      "S,D"
+     ],
+     "top_values": [
+      [
+       "S",
+       31
+      ],
+      [
+       "P",
+       19
+      ],
+      [
+       "P,S",
+       12
+      ],
+      [
+       "S,P",
+       1
+      ],
+      [
+       "S,D",
+       1
+      ],
+      [
+       "D,P,S",
+       1
+      ]
+     ],
+     "description": "pattern observed in the sheet of ANA examination",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "aCL IgA",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 223,
+     "examples": [
+      0,
+      3,
+      4,
+      9,
+      12
+     ],
+     "top_values": [
+      [
+       0,
+       56
+      ],
+      [
+       2,
+       9
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       9,
+       5
+      ],
+      [
+       8,
+       4
+      ],
+      [
+       7,
+       4
+      ],
+      [
+       6,
+       3
+      ],
+      [
+       12,
+       2
+      ],
+      [
+       10,
+       2
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       223,
+       1
+      ],
+      [
+       209,
+       1
+      ],
+      [
+       66,
+       1
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "anti-Cardiolipin antibody (IgA) concentration",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Diagnosis",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.2264,
+     "distinct_count": 44,
+     "is_unique": false,
+     "min_value": "ANA x5096",
+     "max_value": "collagen disease",
+     "examples": [
+      "MCTD, AMI",
+      "SLE",
+      "PSS",
+      "SLE, SjS, vertigo",
+      "SLE, AIHA"
+     ],
+     "top_values": [
+      [
+       "SLE",
+       17
+      ],
+      [
+       "SjS",
+       12
+      ],
+      [
+       "RA",
+       4
+      ],
+      [
+       "Behcet",
+       4
+      ],
+      [
+       "APS",
+       3
+      ],
+      [
+       "SLE, SjS",
+       2
+      ],
+      [
+       "PSS",
+       2
+      ],
+      [
+       "MCTD",
+       2
+      ],
+      [
+       "collagen disease",
+       1
+      ],
+      [
+       "brain infarction",
+       1
+      ],
+      [
+       "SjS, MCTD",
+       1
+      ],
+      [
+       "SjS, BOOP",
+       1
+      ],
+      [
+       "SjS susp",
+       1
+      ],
+      [
+       "Sgt",
+       1
+      ],
+      [
+       "SLE, SjS, vertigo",
+       1
+      ],
+      [
+       "SLE, SjS, ITP",
+       1
+      ],
+      [
+       "SLE, PM, SjS",
+       1
+      ],
+      [
+       "SLE, NS",
+       1
+      ],
+      [
+       "SLE, ITP, LA(-)",
+       1
+      ],
+      [
+       "SLE, AIHA",
+       1
+      ],
+      [
+       "SLE+Psy",
+       1
+      ],
+      [
+       "SLE+PH",
+       1
+      ],
+      [
+       "SLE+ABN+LIVER D+PM0",
+       1
+      ],
+      [
+       "SLE susp",
+       1
+      ],
+      [
+       "Raynaud",
+       1
+      ],
+      [
+       "RA, SjS susp",
+       1
+      ],
+      [
+       "RA+DVT",
+       1
+      ],
+      [
+       "RA susp",
+       1
+      ],
+      [
+       "PSS, SjS, IP",
+       1
+      ],
+      [
+       "PSS, MCTD",
+       1
+      ],
+      [
+       "PSS(CREST)",
+       1
+      ],
+      [
+       "PM, SjS",
+       1
+      ],
+      [
+       "PM",
+       1
+      ],
+      [
+       "MCTD, AMI",
+       1
+      ],
+      [
+       "JRA->SLE",
+       1
+      ],
+      [
+       "EN, paniculitis",
+       1
+      ],
+      [
+       "DM, IP",
+       1
+      ],
+      [
+       "DLE",
+       1
+      ],
+      [
+       "Behcet, SjS susp",
+       1
+      ],
+      [
+       "Aortitis",
+       1
+      ],
+      [
+       "APS, LAC(+)",
+       1
+      ],
+      [
+       "ANA, BFP",
+       1
+      ],
+      [
+       "ANA(+)",
+       1
+      ],
+      [
+       "ANA x5096",
+       1
+      ]
+     ],
+     "description": "disease names",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "KCT",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.8019,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "+",
+     "max_value": "-",
+     "examples": [
+      "-",
+      "+"
+     ],
+     "top_values": [
+      [
+       "-",
+       15
+      ],
+      [
+       "+",
+       6
+      ]
+     ],
+     "description": "measure of degree of coagulation",
+     "value_description": "+: positive\n\n-: negative",
+     "notes": [
+      "80% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "RVVT",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.8019,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "+",
+     "max_value": "-",
+     "examples": [
+      "-",
+      "+"
+     ],
+     "top_values": [
+      [
+       "-",
+       14
+      ],
+      [
+       "+",
+       7
+      ]
+     ],
+     "description": "measure of degree of coagulation",
+     "value_description": "+: positive\n\n-: negative",
+     "notes": [
+      "80% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "LAC",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.7642,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "+",
+     "max_value": "-",
+     "examples": [
+      "-",
+      "+"
+     ],
+     "top_values": [
+      [
+       "-",
+       16
+      ],
+      [
+       "+",
+       9
+      ]
+     ],
+     "description": "measure of degree of coagulation",
+     "value_description": "+: positive\n\n-: negative",
+     "notes": [
+      "76% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Symptoms",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.8868,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": "AMI",
+     "max_value": "thrombophlebitis",
+     "examples": [
+      "AMI",
+      "CNS lupus",
+      "thrombophlebitis",
+      "thrombocytopenia",
+      "CNS susp"
+     ],
+     "top_values": [
+      [
+       "CNS lupus",
+       2
+      ],
+      [
+       "Apo",
+       2
+      ],
+      [
+       "thrombophlebitis",
+       1
+      ],
+      [
+       "thrombocytopenia",
+       1
+      ],
+      [
+       "brain infarction",
+       1
+      ],
+      [
+       "PH",
+       1
+      ],
+      [
+       "DVT",
+       1
+      ],
+      [
+       "CVA, epilepsy",
+       1
+      ],
+      [
+       "CNS susp",
+       1
+      ],
+      [
+       "AMI",
+       1
+      ]
+     ],
+     "description": "other symptoms observed",
+     "value_description": "",
+     "notes": [
+      "89% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Thrombosis",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 3,
+     "examples": [
+      1,
+      0,
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       0,
+       94
+      ],
+      [
+       1,
+       8
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       3,
+       1
+      ]
+     ],
+     "description": "degree of thrombosis",
+     "value_description": "0: negative (no thrombosis)\n1: positive (the most severe one)\n2: positive (severe)3: positive (mild)",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "ID": 14872,
+     "Examination Date": "1997-05-27",
+     "aCL IgG": 1.3,
+     "aCL IgM": 1.6,
+     "ANA": 256,
+     "ANA Pattern": "P",
+     "aCL IgA": 0,
+     "Diagnosis": "MCTD, AMI",
+     "KCT": null,
+     "RVVT": null,
+     "LAC": "-",
+     "Symptoms": "AMI",
+     "Thrombosis": 1
+    },
+    {
+     "ID": 48473,
+     "Examination Date": "1992-12-21",
+     "aCL IgG": 4.3,
+     "aCL IgM": 4.6,
+     "ANA": 256,
+     "ANA Pattern": "P,S",
+     "aCL IgA": 3,
+     "Diagnosis": "SLE",
+     "KCT": "-",
+     "RVVT": "-",
+     "LAC": "-",
+     "Symptoms": null,
+     "Thrombosis": 0
+    },
+    {
+     "ID": 102490,
+     "Examination Date": "1995-04-20",
+     "aCL IgG": 2.3,
+     "aCL IgM": 2.5,
+     "ANA": 0,
+     "ANA Pattern": null,
+     "aCL IgA": 4,
+     "Diagnosis": "PSS",
+     "KCT": null,
+     "RVVT": null,
+     "LAC": null,
+     "Symptoms": null,
+     "Thrombosis": 0
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "Laboratory",
+   "row_count": 13908,
+   "stats_rows": 13908,
+   "columns": [
+    {
+     "name": "ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 302,
+     "is_unique": false,
+     "min_value": 27654,
+     "max_value": 5452747,
+     "examples": [
+      27654,
+      30609,
+      43003,
+      48473,
+      52199
+     ],
+     "top_values": [],
+     "description": "identification of the patient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3723,
+     "is_unique": false,
+     "min_value": "1981-01-27",
+     "max_value": "1999-03-04",
+     "examples": [
+      "1991-09-11",
+      "1991-09-17",
+      "1991-09-19",
+      "1991-09-20",
+      "1991-09-21"
+     ],
+     "top_values": [],
+     "description": "Date of the laboratory tests (YYMMDD)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "GOT",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1891,
+     "distinct_count": 218,
+     "is_unique": false,
+     "min_value": 3,
+     "max_value": 21480,
+     "examples": [
+      34,
+      29,
+      26,
+      23,
+      24
+     ],
+     "top_values": [],
+     "description": "AST glutamic oxaloacetic transaminase",
+     "value_description": "Commonsense evidence:\n\nNormal range: N < 60",
+     "notes": []
+    },
+    {
+     "name": "GPT",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1894,
+     "distinct_count": 302,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4780,
+     "examples": [
+      36,
+      31,
+      22,
+      18,
+      4
+     ],
+     "top_values": [],
+     "description": "ALT glutamic pyruvic transaminase",
+     "value_description": "Commonsense evidence:\n\nNormal range: N < 60",
+     "notes": []
+    },
+    {
+     "name": "LDH",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1872,
+     "distinct_count": 917,
+     "is_unique": false,
+     "min_value": 25,
+     "max_value": 67080,
+     "examples": [
+      567,
+      579,
+      684,
+      552,
+      701
+     ],
+     "top_values": [],
+     "description": "lactate dehydrogenase",
+     "value_description": "Commonsense evidence:\n\nNormal range: N < 500",
+     "notes": []
+    },
+    {
+     "name": "ALP",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1982,
+     "distinct_count": 532,
+     "is_unique": false,
+     "min_value": 11,
+     "max_value": 1308,
+     "examples": [
+      166,
+      154,
+      138,
+      131,
+      108
+     ],
+     "top_values": [],
+     "description": "alkaliphophatase",
+     "value_description": "Commonsense evidence:\n\nNormal range: N < 300",
+     "notes": []
+    },
+    {
+     "name": "TP",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2006,
+     "distinct_count": 62,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 9.9,
+     "examples": [
+      4.5,
+      5.1,
+      5.5,
+      4.2,
+      4.7
+     ],
+     "top_values": [],
+     "description": "total protein",
+     "value_description": "Commonsense evidence:\n\nNormal range: 6.0 < N < 8.5",
+     "notes": []
+    },
+    {
+     "name": "ALB",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2042,
+     "distinct_count": 39,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 5.8,
+     "examples": [
+      3.3,
+      3.4,
+      3.6,
+      2.9,
+      3.2
+     ],
+     "top_values": [
+      [
+       4.2,
+       1058
+      ],
+      [
+       4.3,
+       1047
+      ],
+      [
+       4.1,
+       976
+      ],
+      [
+       4.0,
+       926
+      ],
+      [
+       4.4,
+       912
+      ],
+      [
+       3.9,
+       846
+      ],
+      [
+       4.5,
+       835
+      ],
+      [
+       4.6,
+       663
+      ],
+      [
+       3.8,
+       572
+      ],
+      [
+       4.7,
+       544
+      ],
+      [
+       3.7,
+       462
+      ],
+      [
+       3.6,
+       364
+      ],
+      [
+       4.8,
+       361
+      ],
+      [
+       4.9,
+       232
+      ],
+      [
+       3.5,
+       228
+      ],
+      [
+       3.4,
+       170
+      ],
+      [
+       3.3,
+       140
+      ],
+      [
+       3.2,
+       118
+      ],
+      [
+       5.0,
+       112
+      ],
+      [
+       3.1,
+       88
+      ],
+      [
+       3.0,
+       76
+      ],
+      [
+       5.1,
+       65
+      ],
+      [
+       2.9,
+       58
+      ],
+      [
+       2.8,
+       38
+      ],
+      [
+       2.7,
+       34
+      ],
+      [
+       2.6,
+       29
+      ],
+      [
+       5.2,
+       28
+      ],
+      [
+       2.5,
+       24
+      ],
+      [
+       2.4,
+       15
+      ],
+      [
+       5.3,
+       14
+      ],
+      [
+       2.3,
+       14
+      ],
+      [
+       2.1,
+       6
+      ],
+      [
+       5.4,
+       4
+      ],
+      [
+       5.5,
+       2
+      ],
+      [
+       2.2,
+       2
+      ],
+      [
+       1.0,
+       2
+      ],
+      [
+       5.8,
+       1
+      ],
+      [
+       5.6,
+       1
+      ],
+      [
+       2.0,
+       1
+      ]
+     ],
+     "description": "albumin",
+     "value_description": "Commonsense evidence:\n\nNormal range: 3.5 < N < 5.5",
+     "notes": []
+    },
+    {
+     "name": "UA",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2017,
+     "distinct_count": 132,
+     "is_unique": false,
+     "min_value": 0.4,
+     "max_value": 17.3,
+     "examples": [
+      3.8,
+      4.2,
+      4.9,
+      4.8,
+      5.2
+     ],
+     "top_values": [],
+     "description": "uric acid",
+     "value_description": "Commonsense evidence:\n\nNormal range: N > 8.0 (Male)N > 6.5 (Female)",
+     "notes": []
+    },
+    {
+     "name": "UN",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.192,
+     "distinct_count": 108,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 152,
+     "examples": [
+      29,
+      36,
+      34,
+      22,
+      8
+     ],
+     "top_values": [],
+     "description": "urea nitrogen",
+     "value_description": "Commonsense evidence:\n\nNormal range: N < 30",
+     "notes": []
+    },
+    {
+     "name": "CRE",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1909,
+     "distinct_count": 65,
+     "is_unique": false,
+     "min_value": 0.1,
+     "max_value": 17.1,
+     "examples": [
+      0.8,
+      0.9,
+      0.7,
+      0.6,
+      1.0
+     ],
+     "top_values": [],
+     "description": "creatinine",
+     "value_description": "Commonsense evidence:\n\nNormal range: N < 1.5",
+     "notes": []
+    },
+    {
+     "name": "T-BIL",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.3082,
+     "distinct_count": 40,
+     "is_unique": false,
+     "min_value": 0.1,
+     "max_value": 7.9,
+     "examples": [
+      0.3,
+      0.2,
+      0.4,
+      0.5,
+      0.6
+     ],
+     "top_values": [
+      [
+       0.4,
+       2486
+      ],
+      [
+       0.5,
+       1901
+      ],
+      [
+       0.3,
+       1668
+      ],
+      [
+       0.6,
+       1226
+      ],
+      [
+       0.7,
+       742
+      ],
+      [
+       0.8,
+       491
+      ],
+      [
+       0.2,
+       308
+      ],
+      [
+       0.9,
+       255
+      ],
+      [
+       1.0,
+       179
+      ],
+      [
+       1.1,
+       97
+      ],
+      [
+       1.2,
+       51
+      ],
+      [
+       1.4,
+       37
+      ],
+      [
+       1.3,
+       30
+      ],
+      [
+       1.5,
+       18
+      ],
+      [
+       1.7,
+       17
+      ],
+      [
+       1.8,
+       16
+      ],
+      [
+       0.1,
+       14
+      ],
+      [
+       1.6,
+       10
+      ],
+      [
+       2.6,
+       9
+      ],
+      [
+       2.1,
+       9
+      ],
+      [
+       1.9,
+       9
+      ],
+      [
+       2.5,
+       7
+      ],
+      [
+       2.8,
+       6
+      ],
+      [
+       2.3,
+       6
+      ],
+      [
+       2.0,
+       5
+      ],
+      [
+       2.9,
+       3
+      ],
+      [
+       2.4,
+       3
+      ],
+      [
+       2.2,
+       3
+      ],
+      [
+       3.5,
+       2
+      ],
+      [
+       3.3,
+       2
+      ],
+      [
+       2.7,
+       2
+      ],
+      [
+       7.9,
+       1
+      ],
+      [
+       7.6,
+       1
+      ],
+      [
+       6.3,
+       1
+      ],
+      [
+       6.2,
+       1
+      ],
+      [
+       5.5,
+       1
+      ],
+      [
+       4.2,
+       1
+      ],
+      [
+       3.2,
+       1
+      ],
+      [
+       3.1,
+       1
+      ],
+      [
+       3.0,
+       1
+      ]
+     ],
+     "description": "total bilirubin",
+     "value_description": "Commonsense evidence:\n\nNormal range: N < 2.0",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "T-CHO",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2332,
+     "distinct_count": 325,
+     "is_unique": false,
+     "min_value": 37,
+     "max_value": 568,
+     "examples": [
+      165,
+      134,
+      140,
+      123,
+      107
+     ],
+     "top_values": [],
+     "description": "total cholesterol",
+     "value_description": "Commonsense evidence:\nNormal range: N < 250",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "TG",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.5372,
+     "distinct_count": 392,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 867,
+     "examples": [
+      185,
+      205,
+      254,
+      125,
+      131
+     ],
+     "top_values": [],
+     "description": "triglyceride",
+     "value_description": "Commonsense evidence:\n\nNormal range: N < 200",
+     "notes": [
+      "54% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "CPK",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.6393,
+     "distinct_count": 463,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 10835,
+     "examples": [
+      9,
+      10,
+      11,
+      26,
+      31
+     ],
+     "top_values": [],
+     "description": "creatinine phosphokinase",
+     "value_description": "Commonsense evidence:\nNormal range: N < 250",
+     "notes": [
+      "64% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "GLU",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.8774,
+     "distinct_count": 208,
+     "is_unique": false,
+     "min_value": 62,
+     "max_value": 499,
+     "examples": [
+      88,
+      134,
+      161,
+      93,
+      101
+     ],
+     "top_values": [],
+     "description": "blood glucose",
+     "value_description": "Commonsense evidence:\nNormal range: N < 180",
+     "notes": [
+      "88% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "WBC",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1314,
+     "distinct_count": 217,
+     "is_unique": false,
+     "min_value": 0.9,
+     "max_value": 35.2,
+     "examples": [
+      5.0,
+      10.4,
+      10.5,
+      10.3,
+      14.3
+     ],
+     "top_values": [],
+     "description": "White blood cell",
+     "value_description": "Commonsense evidence:\nNormal range: 3.5 < N < 9.0",
+     "notes": []
+    },
+    {
+     "name": "RBC",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1314,
+     "distinct_count": 56,
+     "is_unique": false,
+     "min_value": 0.4,
+     "max_value": 6.6,
+     "examples": [
+      2.6,
+      2.9,
+      3.4,
+      3.2,
+      3.3
+     ],
+     "top_values": [],
+     "description": "Red blood cell",
+     "value_description": "Commonsense evidence:\n\nNormal range: 3.5 < N < 6.0",
+     "notes": []
+    },
+    {
+     "name": "HGB",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1314,
+     "distinct_count": 138,
+     "is_unique": false,
+     "min_value": 1.3,
+     "max_value": 18.9,
+     "examples": [
+      6.4,
+      6.7,
+      7.9,
+      6.1,
+      7.2
+     ],
+     "top_values": [],
+     "description": "Hemoglobin",
+     "value_description": "Commonsense evidence:\n\nNormal range: 10 < N < 17",
+     "notes": []
+    },
+    {
+     "name": "HCT",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1314,
+     "distinct_count": 363,
+     "is_unique": false,
+     "min_value": 3.0,
+     "max_value": 56.0,
+     "examples": [
+      20.3,
+      21.6,
+      24.7,
+      19.3,
+      23.4
+     ],
+     "top_values": [],
+     "description": "Hematoclit",
+     "value_description": "Commonsense evidence:\nNormal range: 29 < N < 52",
+     "notes": []
+    },
+    {
+     "name": "PLT",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1885,
+     "distinct_count": 657,
+     "is_unique": false,
+     "min_value": 5,
+     "max_value": 5844,
+     "examples": [
+      227,
+      242,
+      233,
+      201,
+      215
+     ],
+     "top_values": [],
+     "description": "platelet",
+     "value_description": "Commonsense evidence:\n\nNormal range: 100 < N < 400",
+     "notes": []
+    },
+    {
+     "name": "PT",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.9553,
+     "distinct_count": 104,
+     "is_unique": false,
+     "min_value": 10.1,
+     "max_value": 27.0,
+     "examples": [
+      11.3,
+      12.0,
+      11.8
+     ],
+     "top_values": [],
+     "description": "prothrombin time",
+     "value_description": "Commonsense evidence:\n\nNormal range: N < 14",
+     "notes": [
+      "96% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "APTT",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.9963,
+     "distinct_count": 27,
+     "is_unique": false,
+     "min_value": 57,
+     "max_value": 146,
+     "examples": [],
+     "top_values": [
+      [
+       95,
+       7
+      ],
+      [
+       96,
+       6
+      ],
+      [
+       93,
+       4
+      ],
+      [
+       107,
+       3
+      ],
+      [
+       99,
+       3
+      ],
+      [
+       88,
+       3
+      ],
+      [
+       111,
+       2
+      ],
+      [
+       109,
+       2
+      ],
+      [
+       101,
+       2
+      ],
+      [
+       86,
+       2
+      ],
+      [
+       146,
+       1
+      ],
+      [
+       143,
+       1
+      ],
+      [
+       120,
+       1
+      ],
+      [
+       112,
+       1
+      ],
+      [
+       108,
+       1
+      ],
+      [
+       106,
+       1
+      ],
+      [
+       100,
+       1
+      ],
+      [
+       94,
+       1
+      ],
+      [
+       92,
+       1
+      ],
+      [
+       91,
+       1
+      ],
+      [
+       90,
+       1
+      ],
+      [
+       89,
+       1
+      ],
+      [
+       87,
+       1
+      ],
+      [
+       84,
+       1
+      ],
+      [
+       76,
+       1
+      ],
+      [
+       60,
+       1
+      ],
+      [
+       57,
+       1
+      ]
+     ],
+     "description": "activated partial prothrombin time",
+     "value_description": "Commonsense evidence:\n\nNormal range: N < 45",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "FG",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.9673,
+     "distinct_count": 279,
+     "is_unique": false,
+     "min_value": 23.8,
+     "max_value": 106.5,
+     "examples": [
+      27.0
+     ],
+     "top_values": [],
+     "description": "fibrinogen",
+     "value_description": "Commonsense evidence:\n\nNormal range: 150 < N < 450",
+     "notes": [
+      "97% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "PIC",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.9945,
+     "distinct_count": 63,
+     "is_unique": false,
+     "min_value": 114,
+     "max_value": 700,
+     "examples": [],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "TAT",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.9898,
+     "distinct_count": 82,
+     "is_unique": false,
+     "min_value": 63,
+     "max_value": 183,
+     "examples": [],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "TAT2",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.9914,
+     "distinct_count": 60,
+     "is_unique": false,
+     "min_value": 59,
+     "max_value": 155,
+     "examples": [],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "U-PRO",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.3049,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": "%%",
+     "max_value": "TR",
+     "examples": [
+      "-",
+      "0",
+      "TR",
+      "1",
+      "2"
+     ],
+     "top_values": [
+      [
+       "-",
+       4579
+      ],
+      [
+       "0",
+       2748
+      ],
+      [
+       "TR",
+       866
+      ],
+      [
+       "30",
+       398
+      ],
+      [
+       "1",
+       319
+      ],
+      [
+       "2",
+       313
+      ],
+      [
+       "3",
+       148
+      ],
+      [
+       "100",
+       138
+      ],
+      [
+       "300",
+       57
+      ],
+      [
+       "-15",
+       37
+      ],
+      [
+       "4",
+       21
+      ],
+      [
+       "+1(30)",
+       18
+      ],
+      [
+       ">=1000",
+       11
+      ],
+      [
+       ">=300",
+       6
+      ],
+      [
+       "+2(100)",
+       4
+      ],
+      [
+       "%%",
+       4
+      ]
+     ],
+     "description": "proteinuria",
+     "value_description": "Commonsense evidence:\n\nNormal range: 0 < N < 30",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "IGG",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.8073,
+     "distinct_count": 1516,
+     "is_unique": false,
+     "min_value": 3,
+     "max_value": 6510,
+     "examples": [
+      339,
+      771,
+      430,
+      562,
+      625
+     ],
+     "top_values": [],
+     "description": "Ig G",
+     "value_description": "Commonsense evidence:\n\nNormal range: 900 < N < 2000",
+     "notes": [
+      "81% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "IGA",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.8073,
+     "distinct_count": 682,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1765,
+     "examples": [
+      145,
+      188,
+      118,
+      152,
+      195
+     ],
+     "top_values": [],
+     "description": "Ig A",
+     "value_description": "Commonsense evidence:\n\nNormal range: 80 < N < 500",
+     "notes": [
+      "81% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "IGM",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.8074,
+     "distinct_count": 487,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1573,
+     "examples": [
+      46,
+      132,
+      56,
+      124,
+      142
+     ],
+     "top_values": [],
+     "description": "Ig M",
+     "value_description": "Commonsense evidence:\n\nNormal range: 40 < N < 400",
+     "notes": [
+      "81% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "CRP",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1764,
+     "distinct_count": 211,
+     "is_unique": false,
+     "min_value": "+",
+     "max_value": "M",
+     "examples": [
+      "0.6",
+      "2.7",
+      "1.2",
+      "3.9",
+      "2.8"
+     ],
+     "top_values": [],
+     "description": "C-reactive protein",
+     "value_description": "Commonsense evidence:\n\nNormal range: N= -, +-, or N < 1.0",
+     "notes": []
+    },
+    {
+     "name": "RA",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.7947,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "+",
+     "max_value": "7-",
+     "examples": [
+      "-"
+     ],
+     "top_values": [
+      [
+       "-",
+       1684
+      ],
+      [
+       "+",
+       658
+      ],
+      [
+       "2+",
+       323
+      ],
+      [
+       "+-",
+       189
+      ],
+      [
+       "7-",
+       1
+      ]
+     ],
+     "description": "Rhuematoid Factor",
+     "value_description": "Commonsense evidence:\n\nNormal range: N= -, +-",
+     "notes": [
+      "79% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "RF",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.7601,
+     "distinct_count": 903,
+     "is_unique": false,
+     "min_value": "100.2",
+     "max_value": ">2560",
+     "examples": [
+      "<20.5",
+      "<20.8",
+      "<40",
+      "<17.0",
+      "<21.3"
+     ],
+     "top_values": [],
+     "description": "RAHA",
+     "value_description": "Commonsense evidence:\n\nNormal range: N < 20",
+     "notes": [
+      "76% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "C3",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.6073,
+     "distinct_count": 151,
+     "is_unique": false,
+     "min_value": 15,
+     "max_value": 196,
+     "examples": [
+      30,
+      82,
+      103,
+      63,
+      53
+     ],
+     "top_values": [],
+     "description": "complement 3",
+     "value_description": "Commonsense evidence:\n\nNormal range: N > 35",
+     "notes": [
+      "61% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "C4",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.6073,
+     "distinct_count": 62,
+     "is_unique": false,
+     "min_value": 3,
+     "max_value": 80,
+     "examples": [
+      14,
+      26,
+      35,
+      31,
+      34
+     ],
+     "top_values": [],
+     "description": "complement 4",
+     "value_description": "Commonsense evidence:\n\nNormal range: N > 10",
+     "notes": [
+      "61% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "RNP",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9897,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "negative",
+     "examples": [
+      "0"
+     ],
+     "top_values": [
+      [
+       "0",
+       72
+      ],
+      [
+       "negative",
+       22
+      ],
+      [
+       "4",
+       14
+      ],
+      [
+       "16",
+       10
+      ],
+      [
+       "1",
+       10
+      ],
+      [
+       "64",
+       8
+      ],
+      [
+       "256",
+       6
+      ],
+      [
+       "15",
+       1
+      ]
+     ],
+     "description": "anti-ribonuclear protein",
+     "value_description": "Commonsense evidence:\n\nNormal range: N= -, +-",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison",
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "SM",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9908,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "negative",
+     "examples": [
+      "0"
+     ],
+     "top_values": [
+      [
+       "0",
+       102
+      ],
+      [
+       "negative",
+       20
+      ],
+      [
+       "1",
+       4
+      ],
+      [
+       "8",
+       1
+      ],
+      [
+       "2",
+       1
+      ]
+     ],
+     "description": "anti-SM",
+     "value_description": "Commonsense evidence:\n\nNormal range: N= -, +-",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison",
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "SC170",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.998,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "negative",
+     "examples": [],
+     "top_values": [
+      [
+       "negative",
+       12
+      ],
+      [
+       "0",
+       12
+      ],
+      [
+       "4",
+       2
+      ],
+      [
+       "16",
+       1
+      ],
+      [
+       "1",
+       1
+      ]
+     ],
+     "description": "anti-scl70",
+     "value_description": "Commonsense evidence:\n\nNormal range: N= -, +-",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "SSA",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9929,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "negative",
+     "examples": [
+      "0"
+     ],
+     "top_values": [
+      [
+       "0",
+       41
+      ],
+      [
+       "negative",
+       27
+      ],
+      [
+       "16",
+       11
+      ],
+      [
+       "64",
+       8
+      ],
+      [
+       "4",
+       5
+      ],
+      [
+       "1",
+       5
+      ],
+      [
+       "256",
+       2
+      ]
+     ],
+     "description": "anti-SSA",
+     "value_description": "Commonsense evidence:\n\nNormal range: N= -, +-",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison",
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "SSB",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9933,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "negative",
+     "examples": [
+      "0"
+     ],
+     "top_values": [
+      [
+       "0",
+       58
+      ],
+      [
+       "negative",
+       30
+      ],
+      [
+       "32",
+       2
+      ],
+      [
+       "8",
+       1
+      ],
+      [
+       "2",
+       1
+      ],
+      [
+       "1",
+       1
+      ]
+     ],
+     "description": "anti-SSB",
+     "value_description": "Commonsense evidence:\n\nNormal range: N= -, +-",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison",
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "CENTROMEA",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.9989,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "negative",
+     "examples": [],
+     "top_values": [
+      [
+       "0",
+       11
+      ],
+      [
+       "negative",
+       4
+      ]
+     ],
+     "description": "anti-centromere",
+     "value_description": "Commonsense evidence:\n\nNormal range: N= -, +-",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "DNA",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.995,
+     "distinct_count": 66,
+     "is_unique": false,
+     "min_value": "0.56",
+     "max_value": "95.5",
+     "examples": [
+      "41.9"
+     ],
+     "top_values": [],
+     "description": "anti-DNA",
+     "value_description": "Commonsense evidence:\n\nNormal range: N < 8",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison",
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "DNA-II",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "anti-DNA",
+     "value_description": "Commonsense evidence:\n\nNormal range: N < 8",
+     "notes": [
+      "100% NULL; filter or handle NULLs",
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    }
+   ],
+   "primary_key": [
+    "ID",
+    "Date"
+   ],
+   "sample_rows": [
+    {
+     "ID": 27654,
+     "Date": "1991-09-11",
+     "GOT": 34,
+     "GPT": 36,
+     "LDH": 567,
+     "ALP": 166,
+     "TP": 4.5,
+     "ALB": 3.3,
+     "UA": 3.8,
+     "UN": 29,
+     "CRE": 0.8,
+     "T-BIL": 0.3,
+     "T-CHO": 165,
+     "TG": null,
+     "CPK": 9,
+     "GLU": null,
+     "WBC": 5.0,
+     "RBC": 2.6,
+     "HGB": 6.4,
+     "HCT": 20.3,
+     "PLT": 227,
+     "PT": null,
+     "APTT": null,
+     "FG": null,
+     "PIC": null,
+     "TAT": null,
+     "TAT2": null,
+     "U-PRO": null,
+     "IGG": 339,
+     "IGA": 145,
+     "IGM": 46,
+     "CRP": "0.6",
+     "RA": null,
+     "RF": null,
+     "C3": null,
+     "C4": null,
+     "RNP": null,
+     "SM": null,
+     "SC170": null,
+     "SSA": null,
+     "SSB": null,
+     "CENTROMEA": null,
+     "DNA": null,
+     "DNA-II": null
+    },
+    {
+     "ID": 27654,
+     "Date": "1991-09-17",
+     "GOT": 29,
+     "GPT": 31,
+     "LDH": 579,
+     "ALP": 154,
+     "TP": 5.1,
+     "ALB": 3.4,
+     "UA": 4.2,
+     "UN": 36,
+     "CRE": 0.8,
+     "T-BIL": null,
+     "T-CHO": null,
+     "TG": null,
+     "CPK": null,
+     "GLU": null,
+     "WBC": 10.4,
+     "RBC": 2.9,
+     "HGB": 6.7,
+     "HCT": 21.6,
+     "PLT": 242,
+     "PT": null,
+     "APTT": null,
+     "FG": null,
+     "PIC": null,
+     "TAT": null,
+     "TAT2": null,
+     "U-PRO": null,
+     "IGG": 771,
+     "IGA": 188,
+     "IGM": 132,
+     "CRP": "0.6",
+     "RA": null,
+     "RF": null,
+     "C3": null,
+     "C4": null,
+     "RNP": null,
+     "SM": null,
+     "SC170": null,
+     "SSA": null,
+     "SSB": null,
+     "CENTROMEA": null,
+     "DNA": null,
+     "DNA-II": null
+    },
+    {
+     "ID": 27654,
+     "Date": "1991-09-19",
+     "GOT": 26,
+     "GPT": 22,
+     "LDH": 684,
+     "ALP": 138,
+     "TP": 5.5,
+     "ALB": 3.6,
+     "UA": 4.9,
+     "UN": 34,
+     "CRE": 0.9,
+     "T-BIL": null,
+     "T-CHO": null,
+     "TG": null,
+     "CPK": null,
+     "GLU": 88,
+     "WBC": 10.5,
+     "RBC": 3.4,
+     "HGB": 7.9,
+     "HCT": 24.7,
+     "PLT": 233,
+     "PT": null,
+     "APTT": null,
+     "FG": null,
+     "PIC": null,
+     "TAT": null,
+     "TAT2": null,
+     "U-PRO": null,
+     "IGG": null,
+     "IGA": null,
+     "IGM": null,
+     "CRP": "2.7",
+     "RA": null,
+     "RF": null,
+     "C3": null,
+     "C4": null,
+     "RNP": null,
+     "SM": null,
+     "SC170": null,
+     "SSA": null,
+     "SSB": null,
+     "CENTROMEA": null,
+     "DNA": null,
+     "DNA-II": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Patient",
+   "row_count": 1238,
+   "stats_rows": 1238,
+   "columns": [
+    {
+     "name": "ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1238,
+     "is_unique": true,
+     "min_value": 2110,
+     "max_value": 5845877,
+     "examples": [
+      2110,
+      11408,
+      12052,
+      14872,
+      27654
+     ],
+     "top_values": [],
+     "description": "identification of the patient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "SEX",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "M",
+     "examples": [
+      "F",
+      "M",
+      ""
+     ],
+     "top_values": [
+      [
+       "F",
+       1023
+      ],
+      [
+       "M",
+       202
+      ],
+      [
+       "",
+       13
+      ]
+     ],
+     "description": "Sex",
+     "value_description": "F: female; M: male",
+     "notes": []
+    },
+    {
+     "name": "Birthday",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0008,
+     "distinct_count": 1193,
+     "is_unique": false,
+     "min_value": "1912-08-28",
+     "max_value": "2007-05-28",
+     "examples": [
+      "1934-02-13",
+      "1937-05-02",
+      "1956-04-14",
+      "1953-09-21",
+      "1936-03-25"
+     ],
+     "top_values": [],
+     "description": "Birthday",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Description",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.1745,
+     "distinct_count": 97,
+     "is_unique": false,
+     "min_value": "1991-06-10",
+     "max_value": "1998-12-03",
+     "examples": [
+      "1994-02-14",
+      "1996-12-01",
+      "1991-08-13",
+      "1997-08-13",
+      "1994-03-08"
+     ],
+     "top_values": [],
+     "description": "the first date when a patient data was recorded",
+     "value_description": "null or empty: not recorded",
+     "notes": []
+    },
+    {
+     "name": "First Date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.2027,
+     "distinct_count": 797,
+     "is_unique": false,
+     "min_value": "1972-08-02",
+     "max_value": "1998-08-28",
+     "examples": [
+      "1993-02-10",
+      "1973-01-01",
+      "1992-02-03",
+      "1994-03-08",
+      "1993-02-05"
+     ],
+     "top_values": [],
+     "description": "the date when a patient came to the hospital",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Admission",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "-",
+     "examples": [
+      "+",
+      "-",
+      ""
+     ],
+     "top_values": [
+      [
+       "-",
+       713
+      ],
+      [
+       "+",
+       488
+      ],
+      [
+       "",
+       34
+      ],
+      [
+       "+(",
+       3
+      ]
+     ],
+     "description": "patient was admitted to the hospital (+) or followed at the outpatient clinic (-)",
+     "value_description": "patient was admitted to the hospital (+) or followed at the outpatient clinic (-)",
+     "notes": []
+    },
+    {
+     "name": "Diagnosis",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 220,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "vasculitis, TA susp",
+     "examples": [
+      "RA susp.",
+      "PSS",
+      "SLE",
+      "MCTD",
+      "RA, SLE susp"
+     ],
+     "top_values": [],
+     "description": "disease names",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "ID"
+   ],
+   "sample_rows": [
+    {
+     "ID": 2110,
+     "SEX": "F",
+     "Birthday": "1934-02-13",
+     "Description": "1994-02-14",
+     "First Date": "1993-02-10",
+     "Admission": "+",
+     "Diagnosis": "RA susp."
+    },
+    {
+     "ID": 11408,
+     "SEX": "F",
+     "Birthday": "1937-05-02",
+     "Description": "1996-12-01",
+     "First Date": "1973-01-01",
+     "Admission": "+",
+     "Diagnosis": "PSS"
+    },
+    {
+     "ID": 12052,
+     "SEX": "F",
+     "Birthday": "1956-04-14",
+     "Description": "1991-08-13",
+     "First Date": null,
+     "Admission": "+",
+     "Diagnosis": "SLE"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "Examination",
+   "from_column": "ID",
+   "to_table": "Patient",
+   "to_column": "ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Laboratory",
+   "from_column": "ID",
+   "to_table": "Patient",
+   "to_column": "ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

@@ -1,0 +1,127 @@
+{
+  "dataset": "minidev",
+  "schema_version": "1.0",
+  "databases": {
+    "california_schools": {
+      "tables": 3,
+      "columns": 89,
+      "join_keys": 2,
+      "profile_seconds": 0.957,
+      "get_seconds": 0.025,
+      "validation_errors": []
+    },
+    "card_games": {
+      "tables": 6,
+      "columns": 115,
+      "join_keys": 4,
+      "profile_seconds": 46.966,
+      "get_seconds": 0.03,
+      "validation_errors": []
+    },
+    "codebase_community": {
+      "tables": 8,
+      "columns": 71,
+      "join_keys": 13,
+      "profile_seconds": 62.914,
+      "get_seconds": 0.03,
+      "validation_errors": []
+    },
+    "debit_card_specializing": {
+      "tables": 5,
+      "columns": 21,
+      "join_keys": 5,
+      "profile_seconds": 2.643,
+      "get_seconds": 0.028,
+      "validation_errors": []
+    },
+    "european_football_2": {
+      "tables": 7,
+      "columns": 199,
+      "join_keys": 31,
+      "profile_seconds": 30.496,
+      "get_seconds": 0.035,
+      "validation_errors": []
+    },
+    "financial": {
+      "tables": 8,
+      "columns": 55,
+      "join_keys": 8,
+      "profile_seconds": 5.67,
+      "get_seconds": 0.028,
+      "validation_errors": []
+    },
+    "formula_1": {
+      "tables": 13,
+      "columns": 94,
+      "join_keys": 23,
+      "profile_seconds": 4.254,
+      "get_seconds": 0.031,
+      "validation_errors": []
+    },
+    "student_club": {
+      "tables": 8,
+      "columns": 48,
+      "join_keys": 10,
+      "profile_seconds": 0.927,
+      "get_seconds": 0.026,
+      "validation_errors": []
+    },
+    "superhero": {
+      "tables": 10,
+      "columns": 31,
+      "join_keys": 11,
+      "profile_seconds": 0.083,
+      "get_seconds": 0.027,
+      "validation_errors": []
+    },
+    "thrombosis_prediction": {
+      "tables": 3,
+      "columns": 64,
+      "join_keys": 2,
+      "profile_seconds": 0.759,
+      "get_seconds": 0.025,
+      "validation_errors": []
+    },
+    "toxicology": {
+      "tables": 4,
+      "columns": 11,
+      "join_keys": 5,
+      "profile_seconds": 0.326,
+      "get_seconds": 0.029,
+      "validation_errors": []
+    }
+  },
+  "checks": {
+    "memory": {
+      "cold_profile_seconds_total": 156.0,
+      "warm_load_seconds_total": 0.02,
+      "speedup_x": 7631.0,
+      "warm_hits": 11,
+      "warm_misses": 0
+    },
+    "retrieval": {
+      "questions": 500,
+      "k_tables": 5,
+      "all_gold_tables_recall": 0.938,
+      "avg_tables_selected": 3.53,
+      "avg_tables_in_db": 6.82,
+      "ms_per_question": 9.34,
+      "per_db_recall": {
+        "california_schools": 1.0,
+        "card_games": 1.0,
+        "codebase_community": 0.898,
+        "debit_card_specializing": 0.767,
+        "european_football_2": 1.0,
+        "financial": 0.844,
+        "formula_1": 0.924,
+        "student_club": 0.979,
+        "superhero": 0.962,
+        "thrombosis_prediction": 1.0,
+        "toxicology": 0.85
+      }
+    },
+    "notes_roundtrip": true,
+    "all_cards_valid": true
+  },
+  "passed": true
+}

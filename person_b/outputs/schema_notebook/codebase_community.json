@@ -1,0 +1,2188 @@
+{
+ "db_id": "codebase_community",
+ "schema_version": "1.0",
+ "db_path": "data/bird_minidev/dev_databases/codebase_community/codebase_community.sqlite",
+ "fingerprint": "481419264-1792489340562494100-v1.0",
+ "created_at": "2026-10-20T09:47:36+00:00",
+ "profile_seconds": 62.914,
+ "tables": [
+  {
+   "name": "badges",
+   "row_count": 79851,
+   "stats_rows": 79851,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 79851,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 92240,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the badge id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "UserId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 25078,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 55746,
+     "examples": [
+      5,
+      6,
+      8,
+      23,
+      36
+     ],
+     "top_values": [],
+     "description": "User Id. the unique id of the user",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 153,
+     "is_unique": false,
+     "min_value": "Altruist",
+     "max_value": "variance",
+     "examples": [
+      "Teacher",
+      "Student",
+      "Editor",
+      "Organizer",
+      "Supporter"
+     ],
+     "top_values": [],
+     "description": "the badge name the user obtained",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Date",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 65586,
+     "is_unique": false,
+     "min_value": "2010-07-19 19:39:07.0",
+     "max_value": "2014-09-14 02:31:28.0",
+     "examples": [
+      "2010-07-19 19:39:07.0",
+      "2010-07-19 19:39:08.0",
+      "2010-07-19 19:39:09.0",
+      "2010-07-19 19:39:10.0",
+      "2010-07-19 19:44:07.0"
+     ],
+     "top_values": [],
+     "description": "the date that the user obtained the badge",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 1,
+     "UserId": 5,
+     "Name": "Teacher",
+     "Date": "2010-07-19 19:39:07.0"
+    },
+    {
+     "Id": 2,
+     "UserId": 6,
+     "Name": "Teacher",
+     "Date": "2010-07-19 19:39:07.0"
+    },
+    {
+     "Id": 3,
+     "UserId": 8,
+     "Name": "Teacher",
+     "Date": "2010-07-19 19:39:07.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "comments",
+   "row_count": 174285,
+   "stats_rows": 174285,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the comment Id",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "PostId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      3,
+      5,
+      9,
+      14,
+      18
+     ],
+     "top_values": [],
+     "description": "Post Id. the unique id of the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Score",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      5,
+      0,
+      11,
+      1,
+      9
+     ],
+     "top_values": [],
+     "description": "rating score",
+     "value_description": "commonsense evidence:\nThe score is from 0 to 100. The score more than 60 refers that the comment is a positive comment. The score less than 60 refers that the comment is a negative comment.",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Text",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "Could be a poster child fo argumentative and subjective.  At...",
+      "Yes, R is nice- but WHY is it 'valuable'.",
+      "Again- why?  How would I convince my boss to use this over, ...",
+      "It's mature, well supported, and a standard within certain s...",
+      "Define \"valuable\"..."
+     ],
+     "top_values": [],
+     "description": "the detailed content of the comment",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "CreationDate",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "2010-07-19 19:15:52.0",
+      "2010-07-19 19:16:14.0",
+      "2010-07-19 19:18:54.0",
+      "2010-07-19 19:19:56.0",
+      "2010-07-19 19:20:28.0"
+     ],
+     "top_values": [],
+     "description": "the creation date of the comment",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "UserId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      13,
+      37,
+      5,
+      23,
+      36
+     ],
+     "top_values": [],
+     "description": "User Id. the id of the user who post the comment",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "UserDisplayName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "user28",
+      "Statprof"
+     ],
+     "top_values": [],
+     "description": "User Display Name. user's display name",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 1,
+     "PostId": 3,
+     "Score": 5,
+     "Text": "Could be a poster child fo argumentative and subjective.  At...",
+     "CreationDate": "2010-07-19 19:15:52.0",
+     "UserId": 13,
+     "UserDisplayName": null
+    },
+    {
+     "Id": 2,
+     "PostId": 5,
+     "Score": 0,
+     "Text": "Yes, R is nice- but WHY is it 'valuable'.",
+     "CreationDate": "2010-07-19 19:16:14.0",
+     "UserId": 13,
+     "UserDisplayName": null
+    },
+    {
+     "Id": 3,
+     "PostId": 9,
+     "Score": 0,
+     "Text": "Again- why?  How would I convince my boss to use this over, ...",
+     "CreationDate": "2010-07-19 19:18:54.0",
+     "UserId": 13,
+     "UserDisplayName": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "postHistory",
+   "row_count": 303155,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the post history id",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "PostHistoryTypeId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      2,
+      1,
+      3,
+      16,
+      6
+     ],
+     "top_values": [],
+     "description": "Post History Type Id. the id of the post history type",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "PostId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "Post Id. the unique id of the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "RevisionGUID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "e58bf7fd-e60f-4c58-a6e4-dfc91cf98a69",
+      "18bf9150-f1cb-432d-b7b7-26d2f8e33581",
+      "6320bb0f-c792-4a8c-8083-89507c28d375",
+      "ccbe017d-d22c-4c0a-83b0-1d82a792a098",
+      "5631dbb1-2781-4924-b7bd-5a67c06c5e4e"
+     ],
+     "top_values": [],
+     "description": "Revision GUID. the revision globally unique id of the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "CreationDate",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "2010-07-19 19:12:12.0",
+      "2010-07-19 19:12:57.0",
+      "2010-07-19 19:13:28.0",
+      "2010-07-19 19:13:31.0",
+      "2010-07-19 19:14:43.0"
+     ],
+     "top_values": [],
+     "description": "the creation date of the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "UserId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      8,
+      24,
+      18,
+      23,
+      -1
+     ],
+     "top_values": [],
+     "description": "User Id. the user who post the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Text",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "How should I elicit prior distributions from experts when fi...",
+      "Eliciting priors from experts",
+      "<bayesian><prior><elicitation>",
+      "In many different statistical methods there is an \"assumptio...",
+      "What is normality?"
+     ],
+     "top_values": [],
+     "description": "the detailed content of the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Comment",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "",
+      "edited tags",
+      "add content from the comments;",
+      "Removed the word \"most\" and used \"some\"- most is way too sub...",
+      "added 310 characters in body"
+     ],
+     "top_values": [],
+     "description": "comments of the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "UserDisplayName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "",
+      "user28"
+     ],
+     "top_values": [],
+     "description": "User Display Name. user's display name",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 1,
+     "PostHistoryTypeId": 2,
+     "PostId": 1,
+     "RevisionGUID": "e58bf7fd-e60f-4c58-a6e4-dfc91cf98a69",
+     "CreationDate": "2010-07-19 19:12:12.0",
+     "UserId": 8,
+     "Text": "How should I elicit prior distributions from experts when fi...",
+     "Comment": "",
+     "UserDisplayName": ""
+    },
+    {
+     "Id": 2,
+     "PostHistoryTypeId": 1,
+     "PostId": 1,
+     "RevisionGUID": "e58bf7fd-e60f-4c58-a6e4-dfc91cf98a69",
+     "CreationDate": "2010-07-19 19:12:12.0",
+     "UserId": 8,
+     "Text": "Eliciting priors from experts",
+     "Comment": "",
+     "UserDisplayName": ""
+    },
+    {
+     "Id": 3,
+     "PostHistoryTypeId": 3,
+     "PostId": 1,
+     "RevisionGUID": "e58bf7fd-e60f-4c58-a6e4-dfc91cf98a69",
+     "CreationDate": "2010-07-19 19:12:12.0",
+     "UserId": 8,
+     "Text": "<bayesian><prior><elicitation>",
+     "Comment": "",
+     "UserDisplayName": ""
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 303,155 rows"
+   ]
+  },
+  {
+   "name": "postLinks",
+   "row_count": 11102,
+   "stats_rows": 11102,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 11102,
+     "is_unique": true,
+     "min_value": 108,
+     "max_value": 3356789,
+     "examples": [
+      108,
+      145,
+      217,
+      263,
+      264
+     ],
+     "top_values": [],
+     "description": "the post link id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CreationDate",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9450,
+     "is_unique": false,
+     "min_value": "2010-07-21 14:47:33.0",
+     "max_value": "2014-09-13 20:54:31.0",
+     "examples": [
+      "2010-07-21 14:47:33.0",
+      "2010-07-23 16:30:41.0",
+      "2010-07-26 20:12:15.0",
+      "2010-07-27 16:00:22.0",
+      "2010-07-27 17:19:27.0"
+     ],
+     "top_values": [],
+     "description": "the creation date of the post link",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "PostId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7604,
+     "is_unique": false,
+     "min_value": 4,
+     "max_value": 115360,
+     "examples": [
+      395,
+      548,
+      375,
+      769,
+      790
+     ],
+     "top_values": [],
+     "description": "the post id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "RelatedPostId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5177,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 115163,
+     "examples": [
+      173,
+      539,
+      30,
+      31,
+      6
+     ],
+     "top_values": [],
+     "description": "Related Post Id. the id of the related post",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LinkTypeId",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 3,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       10186
+      ],
+      [
+       3,
+       916
+      ]
+     ],
+     "description": "Link Type Id. the id of the link type",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 108,
+     "CreationDate": "2010-07-21 14:47:33.0",
+     "PostId": 395,
+     "RelatedPostId": 173,
+     "LinkTypeId": 1
+    },
+    {
+     "Id": 145,
+     "CreationDate": "2010-07-23 16:30:41.0",
+     "PostId": 548,
+     "RelatedPostId": 539,
+     "LinkTypeId": 1
+    },
+    {
+     "Id": 217,
+     "CreationDate": "2010-07-26 20:12:15.0",
+     "PostId": 375,
+     "RelatedPostId": 30,
+     "LinkTypeId": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "posts",
+   "row_count": 91966,
+   "stats_rows": 91966,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the post id",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "PostTypeId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [],
+     "description": "Post Type Id. the id of the post type",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "AcceptedAnswerId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      15,
+      59,
+      5,
+      135,
+      18
+     ],
+     "top_values": [],
+     "description": "the accepted answer id of the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "CreaionDate",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "2010-07-19 19:12:12.0",
+      "2010-07-19 19:12:57.0",
+      "2010-07-19 19:13:28.0",
+      "2010-07-19 19:13:31.0",
+      "2010-07-19 19:14:43.0"
+     ],
+     "top_values": [],
+     "description": "the creation date of the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Score",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      23,
+      22,
+      54,
+      13,
+      81
+     ],
+     "top_values": [],
+     "description": "the score of the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "ViewCount",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      1278,
+      8198,
+      3613,
+      5224,
+      29229
+     ],
+     "top_values": [],
+     "description": "the view count of the post",
+     "value_description": "commonsense evidence:\nHigher view count means the post has higher popularity",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Body",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "<p>How should I elicit prior distributions from experts when...",
+      "<p>In many different statistical methods there is an \"assump...",
+      "<p>What are some valuable Statistical Analysis open source p...",
+      "<p>I have two groups of data.  Each with a different distrib...",
+      "<p>The R-project</p>\n\n<p><a href=\"http://www.r-project.org/\"..."
+     ],
+     "top_values": [],
+     "description": "the body of the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "OwnerUserId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      8,
+      24,
+      18,
+      23,
+      5
+     ],
+     "top_values": [],
+     "description": "Owner User Id. the id of the owner user",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "LasActivityDate",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "2010-09-15 21:08:26.0",
+      "2012-11-12 09:21:54.0",
+      "2013-05-27 14:48:36.0",
+      "2010-09-08 03:00:19.0",
+      "2010-07-19 19:21:15.0"
+     ],
+     "top_values": [],
+     "description": "the last activity date",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Title",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "Eliciting priors from experts",
+      "What is normality?",
+      "What are some valuable Statistical Analysis open source proj...",
+      "Assessing the significance of differences in distributions",
+      "The Two Cultures: statistics vs. machine learning?"
+     ],
+     "top_values": [],
+     "description": "the title of the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Tags",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "<bayesian><prior><elicitation>",
+      "<distributions><normality>",
+      "<software><open-source>",
+      "<distributions><statistical-significance>",
+      "<machine-learning>"
+     ],
+     "top_values": [],
+     "description": "the tag of the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "AnswerCount",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      5,
+      7,
+      19,
+      15,
+      24
+     ],
+     "top_values": [],
+     "description": "Answer Count. the total number of answers of the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "CommentCount",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      1,
+      4,
+      2,
+      3,
+      5
+     ],
+     "top_values": [],
+     "description": "Comment Count. the total number of comments of the post",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "FavoriteCount",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      14,
+      8,
+      36,
+      2,
+      137
+     ],
+     "top_values": [],
+     "description": "Favorite Count. the total number of favorites of the post",
+     "value_description": "commonsense evidence:\nmore favorite count refers to more valuable posts.",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "LastEditorUserId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      88,
+      183,
+      23,
+      22047,
+      253
+     ],
+     "top_values": [],
+     "description": "Last Editor User Id. the id of the last editor",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "LastEditDate",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "2010-08-07 17:56:44.0",
+      "2011-02-12 05:50:03.0",
+      "2010-07-19 19:21:15.0",
+      "2013-06-07 06:38:10.0",
+      "2013-09-26 21:50:36.0"
+     ],
+     "top_values": [],
+     "description": "the last edit date",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "CommunityOwnedDate",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "2010-07-19 19:13:28.0",
+      "2010-07-19 19:14:43.0",
+      "2010-08-09 13:05:50.0",
+      "2010-07-20 20:50:48.0",
+      "2010-07-19 19:16:27.0"
+     ],
+     "top_values": [],
+     "description": "the community owned date",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "ParentId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      3,
+      7,
+      6,
+      1,
+      2
+     ],
+     "top_values": [],
+     "description": "the id of the parent post",
+     "value_description": "commonsense evidence:\nIf the parent id is null, the post is the root post. Otherwise, the post is the child post of other post.",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "ClosedDate",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "2010-07-19 20:19:46.0",
+      "2010-08-05 13:06:12.0",
+      "2014-02-12 01:23:48.0",
+      "2010-07-20 00:21:48.0"
+     ],
+     "top_values": [],
+     "description": "the closed date of the post",
+     "value_description": "commonsense evidence:\nif ClosedDate is null or empty, it means this post is not well-finished\nif CloseDate is not null or empty, it means this post has well-finished.",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "OwnerDisplayName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "user28"
+     ],
+     "top_values": [],
+     "description": "Owner Display Name. the display name of the post owner",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "LastEditorDisplayName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [
+      "user28"
+     ],
+     "top_values": [],
+     "description": "Last Editor Display Name. the display name of the last editor",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 1,
+     "PostTypeId": 1,
+     "AcceptedAnswerId": 15,
+     "CreaionDate": "2010-07-19 19:12:12.0",
+     "Score": 23,
+     "ViewCount": 1278,
+     "Body": "<p>How should I elicit prior distributions from experts when...",
+     "OwnerUserId": 8,
+     "LasActivityDate": "2010-09-15 21:08:26.0",
+     "Title": "Eliciting priors from experts",
+     "Tags": "<bayesian><prior><elicitation>",
+     "AnswerCount": 5,
+     "CommentCount": 1,
+     "FavoriteCount": 14,
+     "LastEditorUserId": null,
+     "LastEditDate": null,
+     "CommunityOwnedDate": null,
+     "ParentId": null,
+     "ClosedDate": null,
+     "OwnerDisplayName": null,
+     "LastEditorDisplayName": null
+    },
+    {
+     "Id": 2,
+     "PostTypeId": 1,
+     "AcceptedAnswerId": 59,
+     "CreaionDate": "2010-07-19 19:12:57.0",
+     "Score": 22,
+     "ViewCount": 8198,
+     "Body": "<p>In many different statistical methods there is an \"assump...",
+     "OwnerUserId": 24,
+     "LasActivityDate": "2012-11-12 09:21:54.0",
+     "Title": "What is normality?",
+     "Tags": "<distributions><normality>",
+     "AnswerCount": 7,
+     "CommentCount": 1,
+     "FavoriteCount": 8,
+     "LastEditorUserId": 88,
+     "LastEditDate": "2010-08-07 17:56:44.0",
+     "CommunityOwnedDate": null,
+     "ParentId": null,
+     "ClosedDate": null,
+     "OwnerDisplayName": null,
+     "LastEditorDisplayName": null
+    },
+    {
+     "Id": 3,
+     "PostTypeId": 1,
+     "AcceptedAnswerId": 5,
+     "CreaionDate": "2010-07-19 19:13:28.0",
+     "Score": 54,
+     "ViewCount": 3613,
+     "Body": "<p>What are some valuable Statistical Analysis open source p...",
+     "OwnerUserId": 18,
+     "LasActivityDate": "2013-05-27 14:48:36.0",
+     "Title": "What are some valuable Statistical Analysis open source proj...",
+     "Tags": "<software><open-source>",
+     "AnswerCount": 19,
+     "CommentCount": 4,
+     "FavoriteCount": 36,
+     "LastEditorUserId": 183,
+     "LastEditDate": "2011-02-12 05:50:03.0",
+     "CommunityOwnedDate": "2010-07-19 19:13:28.0",
+     "ParentId": null,
+     "ClosedDate": null,
+     "OwnerDisplayName": null,
+     "LastEditorDisplayName": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "tags",
+   "row_count": 1032,
+   "stats_rows": 1032,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1032,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 1869,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the tag id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "TagName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1032,
+     "is_unique": true,
+     "min_value": "2sls",
+     "max_value": "zipf",
+     "examples": [
+      "bayesian",
+      "prior",
+      "elicitation",
+      "normality",
+      "open-source"
+     ],
+     "top_values": [],
+     "description": "Tag Name. the name of the tag",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Count",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 272,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 7244,
+     "examples": [
+      1342,
+      168,
+      6,
+      191,
+      13
+     ],
+     "top_values": [],
+     "description": "the count of posts that contain this tag",
+     "value_description": "more counts --> this tag is more popular",
+     "notes": []
+    },
+    {
+     "name": "ExcerptPostId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.4225,
+     "distinct_count": 596,
+     "is_unique": true,
+     "min_value": 2331,
+     "max_value": 114058,
+     "examples": [
+      20258,
+      62158,
+      67815,
+      8046,
+      9066
+     ],
+     "top_values": [],
+     "description": "the excerpt post id of the tag",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "WikiPostId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.4225,
+     "distinct_count": 596,
+     "is_unique": true,
+     "min_value": 2254,
+     "max_value": 114057,
+     "examples": [
+      20257,
+      62157,
+      67814,
+      8045,
+      9065
+     ],
+     "top_values": [],
+     "description": "the wiki post id of the tag",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 1,
+     "TagName": "bayesian",
+     "Count": 1342,
+     "ExcerptPostId": 20258,
+     "WikiPostId": 20257
+    },
+    {
+     "Id": 2,
+     "TagName": "prior",
+     "Count": 168,
+     "ExcerptPostId": 62158,
+     "WikiPostId": 62157
+    },
+    {
+     "Id": 3,
+     "TagName": "elicitation",
+     "Count": 6,
+     "ExcerptPostId": null,
+     "WikiPostId": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "users",
+   "row_count": 40325,
+   "stats_rows": 40325,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 40325,
+     "is_unique": true,
+     "min_value": -1,
+     "max_value": 55747,
+     "examples": [
+      -1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the user id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Reputation",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 965,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 87393,
+     "examples": [
+      1,
+      101,
+      6792,
+      457,
+      429
+     ],
+     "top_values": [],
+     "description": "the user's reputation",
+     "value_description": "commonsense evidence:\nThe user with higher reputation has more influence.",
+     "notes": []
+    },
+    {
+     "name": "CreationDate",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 40315,
+     "is_unique": false,
+     "min_value": "2010-07-19 06:55:26.0",
+     "max_value": "2014-09-14 01:01:44.0",
+     "examples": [
+      "2010-07-19 06:55:26.0",
+      "2010-07-19 14:01:36.0",
+      "2010-07-19 15:34:50.0",
+      "2010-07-19 19:03:27.0",
+      "2010-07-19 19:03:57.0"
+     ],
+     "top_values": [],
+     "description": "the creation date of the user account",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DisplayName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 35644,
+     "is_unique": false,
+     "min_value": "   Raid-Mahbouba",
+     "max_value": "Ｊ. Ｍ.",
+     "examples": [
+      "Community",
+      "Geoff Dalgas",
+      "Jarrod Dixon",
+      "Emmett",
+      "Shane"
+     ],
+     "top_values": [],
+     "description": "the user's display name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LastAccessDate",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 40287,
+     "is_unique": false,
+     "min_value": "2010-07-19 06:55:26.0",
+     "max_value": "2014-09-14 03:05:57.0",
+     "examples": [
+      "2010-07-19 06:55:26.0",
+      "2013-11-12 22:07:23.0",
+      "2014-08-08 06:42:58.0",
+      "2014-01-02 09:31:02.0",
+      "2014-08-13 00:23:47.0"
+     ],
+     "top_values": [],
+     "description": "the last access date of the user account",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "WebsiteUrl",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.7986,
+     "distinct_count": 7787,
+     "is_unique": false,
+     "min_value": "Http://Twitter.com/Firoozye",
+     "max_value": "https://www.youtube.com/playlist?list=PLkes6AxGmNZ7AuvPXe9Wf...",
+     "examples": [
+      "http://meta.stackexchange.com/",
+      "http://stackoverflow.com",
+      "http://minesweeperonline.com",
+      "http://www.statalgo.com",
+      "http://www.harlan.harris.name"
+     ],
+     "top_values": [],
+     "description": "the website url of the user account",
+     "value_description": "",
+     "notes": [
+      "80% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Location",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.7101,
+     "distinct_count": 2464,
+     "is_unique": false,
+     "min_value": " ",
+     "max_value": "北京",
+     "examples": [
+      "on the server farm",
+      "Corvallis, OR",
+      "New York, NY",
+      "San Francisco, CA",
+      "District of Columbia"
+     ],
+     "top_values": [],
+     "description": "user's location",
+     "value_description": "",
+     "notes": [
+      "71% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "AboutMe",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.7674,
+     "distinct_count": 9140,
+     "is_unique": false,
+     "min_value": "\n\n\n\n\n\n\n",
+     "max_value": "xyzzy",
+     "examples": [
+      "<p>Hi, I'm not really a person.</p>\n\n<p>I'm a background pro...",
+      "<p>Developer on the StackOverflow team.  Find me on</p>\n\n<p>...",
+      "<p><a href=\"http://blog.stackoverflow.com/2009/01/welcome-st...",
+      "<p>currently at a startup in SF</p>\n\n<p>formerly a dev at St...",
+      "<p>Quantitative researcher focusing on statistics and machin..."
+     ],
+     "top_values": [],
+     "description": "About Me. the self introduction of the user",
+     "value_description": "",
+     "notes": [
+      "77% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Views",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 362,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 20932,
+     "examples": [
+      0,
+      25,
+      22,
+      11,
+      1145
+     ],
+     "top_values": [],
+     "description": "the number of views",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "UpVotes",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 332,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 11442,
+     "examples": [
+      5007,
+      3,
+      19,
+      0,
+      662
+     ],
+     "top_values": [],
+     "description": "the number of upvotes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DownVotes",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 76,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1920,
+     "examples": [
+      1920,
+      0,
+      5,
+      25,
+      1
+     ],
+     "top_values": [],
+     "description": "the number of downvotes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "AccountId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 40325,
+     "is_unique": true,
+     "min_value": -1,
+     "max_value": 5027354,
+     "examples": [
+      -1,
+      2,
+      3,
+      1998,
+      54503
+     ],
+     "top_values": [],
+     "description": "Account Id. the unique id of the account",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Age",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.7937,
+     "distinct_count": 70,
+     "is_unique": false,
+     "min_value": 13,
+     "max_value": 94,
+     "examples": [
+      37,
+      35,
+      28,
+      41,
+      36
+     ],
+     "top_values": [],
+     "description": "user's age",
+     "value_description": " teenager: 13-18\n adult: 19-65\n elder: > 65",
+     "notes": [
+      "79% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "ProfileImageUrl",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.5913,
+     "distinct_count": 13115,
+     "is_unique": false,
+     "min_value": "http://graph.facebook.com/100000000133708/picture?type=large",
+     "max_value": "https://www.gravatar.com/avatar/ffff9a6eda96897189a5b7bc2f15...",
+     "examples": [
+      "http://i.stack.imgur.com/d1oHX.jpg",
+      "http://i.stack.imgur.com/km1pr.jpg",
+      "http://i.stack.imgur.com/wSfuj.png",
+      "http://i.stack.imgur.com/ILcTf.png",
+      "https://www.gravatar.com/avatar/?s=128&d=identicon&r=PG&f=1"
+     ],
+     "top_values": [],
+     "description": "the profile image url",
+     "value_description": "",
+     "notes": [
+      "59% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": -1,
+     "Reputation": 1,
+     "CreationDate": "2010-07-19 06:55:26.0",
+     "DisplayName": "Community",
+     "LastAccessDate": "2010-07-19 06:55:26.0",
+     "WebsiteUrl": "http://meta.stackexchange.com/",
+     "Location": "on the server farm",
+     "AboutMe": "<p>Hi, I'm not really a person.</p>\n\n<p>I'm a background pro...",
+     "Views": 0,
+     "UpVotes": 5007,
+     "DownVotes": 1920,
+     "AccountId": -1,
+     "Age": null,
+     "ProfileImageUrl": null
+    },
+    {
+     "Id": 2,
+     "Reputation": 101,
+     "CreationDate": "2010-07-19 14:01:36.0",
+     "DisplayName": "Geoff Dalgas",
+     "LastAccessDate": "2013-11-12 22:07:23.0",
+     "WebsiteUrl": "http://stackoverflow.com",
+     "Location": "Corvallis, OR",
+     "AboutMe": "<p>Developer on the StackOverflow team.  Find me on</p>\n\n<p>...",
+     "Views": 25,
+     "UpVotes": 3,
+     "DownVotes": 0,
+     "AccountId": 2,
+     "Age": 37,
+     "ProfileImageUrl": null
+    },
+    {
+     "Id": 3,
+     "Reputation": 101,
+     "CreationDate": "2010-07-19 15:34:50.0",
+     "DisplayName": "Jarrod Dixon",
+     "LastAccessDate": "2014-08-08 06:42:58.0",
+     "WebsiteUrl": "http://stackoverflow.com",
+     "Location": "New York, NY",
+     "AboutMe": "<p><a href=\"http://blog.stackoverflow.com/2009/01/welcome-st...",
+     "Views": 22,
+     "UpVotes": 19,
+     "DownVotes": 0,
+     "AccountId": 3,
+     "Age": 35,
+     "ProfileImageUrl": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "votes",
+   "row_count": 38930,
+   "stats_rows": 38930,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 38930,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 43538,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the vote id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "PostId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8584,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 16921,
+     "examples": [
+      3,
+      2,
+      5,
+      4,
+      6
+     ],
+     "top_values": [],
+     "description": "Post Id. the id of the post that is voted",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "VoteTypeId",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 16,
+     "examples": [
+      2,
+      5,
+      3
+     ],
+     "top_values": [
+      [
+       2,
+       33323
+      ],
+      [
+       5,
+       3365
+      ],
+      [
+       1,
+       1451
+      ],
+      [
+       3,
+       444
+      ],
+      [
+       16,
+       111
+      ],
+      [
+       15,
+       72
+      ],
+      [
+       8,
+       60
+      ],
+      [
+       9,
+       59
+      ],
+      [
+       11,
+       44
+      ],
+      [
+       10,
+       1
+      ]
+     ],
+     "description": "Vote Type Id. the id of the vote type",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CreationDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 287,
+     "is_unique": false,
+     "min_value": "2010-07-19",
+     "max_value": "2011-05-01",
+     "examples": [
+      "2010-07-19"
+     ],
+     "top_values": [],
+     "description": "the creation date of the vote",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "UserId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.912,
+     "distinct_count": 509,
+     "is_unique": false,
+     "min_value": 5,
+     "max_value": 11954,
+     "examples": [
+      58,
+      6,
+      66,
+      71,
+      22
+     ],
+     "top_values": [],
+     "description": "User Id. the id of the voter",
+     "value_description": "",
+     "notes": [
+      "91% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "BountyAmount",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9974,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 200,
+     "examples": [],
+     "top_values": [
+      [
+       50,
+       53
+      ],
+      [
+       100,
+       30
+      ],
+      [
+       25,
+       12
+      ],
+      [
+       150,
+       3
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       200,
+       1
+      ]
+     ],
+     "description": "Bounty Amount. the amount of bounty",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 1,
+     "PostId": 3,
+     "VoteTypeId": 2,
+     "CreationDate": "2010-07-19",
+     "UserId": null,
+     "BountyAmount": null
+    },
+    {
+     "Id": 2,
+     "PostId": 2,
+     "VoteTypeId": 2,
+     "CreationDate": "2010-07-19",
+     "UserId": null,
+     "BountyAmount": null
+    },
+    {
+     "Id": 3,
+     "PostId": 5,
+     "VoteTypeId": 2,
+     "CreationDate": "2010-07-19",
+     "UserId": null,
+     "BountyAmount": null
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "badges",
+   "from_column": "UserId",
+   "to_table": "users",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "comments",
+   "from_column": "UserId",
+   "to_table": "users",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "comments",
+   "from_column": "PostId",
+   "to_table": "posts",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "postHistory",
+   "from_column": "UserId",
+   "to_table": "users",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "postHistory",
+   "from_column": "PostId",
+   "to_table": "posts",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "postLinks",
+   "from_column": "RelatedPostId",
+   "to_table": "posts",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "postLinks",
+   "from_column": "PostId",
+   "to_table": "posts",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "posts",
+   "from_column": "ParentId",
+   "to_table": "posts",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "posts",
+   "from_column": "OwnerUserId",
+   "to_table": "users",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "posts",
+   "from_column": "LastEditorUserId",
+   "to_table": "users",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "tags",
+   "from_column": "ExcerptPostId",
+   "to_table": "posts",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "votes",
+   "from_column": "UserId",
+   "to_table": "users",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "votes",
+   "from_column": "PostId",
+   "to_table": "posts",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

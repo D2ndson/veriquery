@@ -1,0 +1,463 @@
+[
+ {
+  "question_id": 1490,
+  "db_id": "debit_card_specializing",
+  "question": "How many percent of LAM customer consumed more than 46.73?",
+  "gold": [
+   "customers",
+   "yearmonth"
+  ],
+  "retrieved": [
+   "customers"
+  ]
+ },
+ {
+  "question_id": 1509,
+  "db_id": "debit_card_specializing",
+  "question": "Among the transactions made in the gas stations in the Czech Republic, how many of them are taken place after 2012/1/1?",
+  "gold": [
+   "gasstations",
+   "transactions_1k"
+  ],
+  "retrieved": [
+   "gasstations"
+  ]
+ },
+ {
+  "question_id": 1514,
+  "db_id": "debit_card_specializing",
+  "question": "What kind of currency did the customer paid at 16:25:00 in 2012/8/24?",
+  "gold": [
+   "customers",
+   "gasstations",
+   "transactions_1k"
+  ],
+  "retrieved": [
+   "customers",
+   "transactions_1k"
+  ]
+ },
+ {
+  "question_id": 1524,
+  "db_id": "debit_card_specializing",
+  "question": "What's the nationality of the customer who spent 548.4 in 2012/8/24?",
+  "gold": [
+   "gasstations",
+   "transactions_1k"
+  ],
+  "retrieved": [
+   "customers",
+   "transactions_1k"
+  ]
+ },
+ {
+  "question_id": 1525,
+  "db_id": "debit_card_specializing",
+  "question": "What is the percentage of the customers who used EUR in 2012/8/25?",
+  "gold": [
+   "customers",
+   "transactions_1k"
+  ],
+  "retrieved": [
+   "customers"
+  ]
+ },
+ {
+  "question_id": 1526,
+  "db_id": "debit_card_specializing",
+  "question": "For the customer who paid 634.8 in 2012/8/25, what was the consumption decrease rate from Year 2012 to 2013?",
+  "gold": [
+   "gasstations",
+   "transactions_1k",
+   "yearmonth"
+  ],
+  "retrieved": [
+   "customers",
+   "transactions_1k",
+   "yearmonth"
+  ]
+ },
+ {
+  "question_id": 1531,
+  "db_id": "debit_card_specializing",
+  "question": "Who is the top spending customer and how much is the average price per single item purchased by this customer? What currency was being used?",
+  "gold": [
+   "customers",
+   "transactions_1k",
+   "yearmonth"
+  ],
+  "retrieved": [
+   "customers",
+   "transactions_1k"
+  ]
+ },
+ {
+  "question_id": 1387,
+  "db_id": "student_club",
+  "question": "Which student has been entrusted to manage the budget for the Yearly Kickoff?",
+  "gold": [
+   "budget",
+   "event",
+   "expense",
+   "member"
+  ],
+  "retrieved": [
+   "attendance",
+   "budget",
+   "event",
+   "member"
+  ]
+ },
+ {
+  "question_id": 892,
+  "db_id": "formula_1",
+  "question": "State the driver with the most points scored. Find his full name with that points.",
+  "gold": [
+   "driverStandings",
+   "drivers",
+   "races"
+  ],
+  "retrieved": [
+   "driverStandings",
+   "drivers",
+   "results"
+  ]
+ },
+ {
+  "question_id": 928,
+  "db_id": "formula_1",
+  "question": "Which driver ranked the first in the Canadian Grand Prix in 2007? Please give his reference name.",
+  "gold": [
+   "drivers",
+   "races",
+   "results"
+  ],
+  "retrieved": [
+   "circuits",
+   "constructors",
+   "drivers",
+   "qualifying",
+   "races"
+  ]
+ },
+ {
+  "question_id": 930,
+  "db_id": "formula_1",
+  "question": "In which Formula_1 race did Lewis Hamilton rank the highest?",
+  "gold": [
+   "drivers",
+   "races",
+   "results"
+  ],
+  "retrieved": [
+   "drivers",
+   "results"
+  ]
+ },
+ {
+  "question_id": 1002,
+  "db_id": "formula_1",
+  "question": "As of the present, what is the full name of the youngest racer? Indicate her nationality and the name of the race to which he/she first joined.",
+  "gold": [
+   "driverStandings",
+   "drivers",
+   "races"
+  ],
+  "retrieved": [
+   "constructors",
+   "drivers",
+   "qualifying"
+  ]
+ },
+ {
+  "question_id": 1003,
+  "db_id": "formula_1",
+  "question": "How many accidents did the driver who had the highest number accidents in the Canadian Grand Prix have?",
+  "gold": [
+   "races",
+   "results",
+   "status"
+  ],
+  "retrieved": [
+   "constructors",
+   "drivers",
+   "qualifying",
+   "races",
+   "results"
+  ]
+ },
+ {
+  "question_id": 785,
+  "db_id": "superhero",
+  "question": "Describe the names of neutral alignment superheroes.",
+  "gold": [
+   "alignment",
+   "superhero"
+  ],
+  "retrieved": [
+   "alignment"
+  ]
+ },
+ {
+  "question_id": 829,
+  "db_id": "superhero",
+  "question": "Which publisher created more superheroes: DC or Marvel Comics? Find the difference in the number of superheroes.",
+  "gold": [
+   "publisher",
+   "superhero"
+  ],
+  "retrieved": [
+   "publisher"
+  ]
+ },
+ {
+  "question_id": 581,
+  "db_id": "codebase_community",
+  "question": "Who is the owner of the post titled 'Open source tools for visualizing multi-dimensional data?'",
+  "gold": [
+   "posts",
+   "users"
+  ],
+  "retrieved": [
+   "comments",
+   "postHistory",
+   "postLinks",
+   "posts",
+   "tags"
+  ]
+ },
+ {
+  "question_id": 584,
+  "db_id": "codebase_community",
+  "question": "Write all the comments left by users who edited the post titled 'Why square the difference instead of taking the absolute value in standard deviation?'",
+  "gold": [
+   "postHistory",
+   "posts"
+  ],
+  "retrieved": [
+   "badges",
+   "comments",
+   "posts",
+   "tags",
+   "users"
+  ]
+ },
+ {
+  "question_id": 637,
+  "db_id": "codebase_community",
+  "question": "State all the tags used by Mark Meckes in his posts that doesn't have comments.",
+  "gold": [
+   "postHistory",
+   "posts",
+   "users"
+  ],
+  "retrieved": [
+   "comments",
+   "postHistory",
+   "posts",
+   "tags"
+  ]
+ },
+ {
+  "question_id": 639,
+  "db_id": "codebase_community",
+  "question": "Based on posts posted by Community, calculate the percentage of posts that use the R language.",
+  "gold": [
+   "postHistory",
+   "tags",
+   "users"
+  ],
+  "retrieved": [
+   "comments",
+   "postHistory",
+   "postLinks",
+   "posts",
+   "tags"
+  ]
+ },
+ {
+  "question_id": 682,
+  "db_id": "codebase_community",
+  "question": "Which is the most valuable post in 2010? Please give its id and the owner's display name.",
+  "gold": [
+   "posts",
+   "users"
+  ],
+  "retrieved": [
+   "comments",
+   "postHistory",
+   "postLinks",
+   "posts",
+   "tags"
+  ]
+ },
+ {
+  "question_id": 207,
+  "db_id": "toxicology",
+  "question": "What elements are in a double type bond?",
+  "gold": [
+   "atom",
+   "bond",
+   "connected"
+  ],
+  "retrieved": [
+   "bond"
+  ]
+ },
+ {
+  "question_id": 215,
+  "db_id": "toxicology",
+  "question": "How many atoms with iodine and with sulfur type elements are there in single bond molecules?",
+  "gold": [
+   "atom",
+   "bond",
+   "connected"
+  ],
+  "retrieved": [
+   "atom",
+   "bond",
+   "molecule"
+  ]
+ },
+ {
+  "question_id": 219,
+  "db_id": "toxicology",
+  "question": "What is the percentage of carcinogenic molecules in triple type bonds?",
+  "gold": [
+   "atom",
+   "bond",
+   "molecule"
+  ],
+  "retrieved": [
+   "bond",
+   "molecule"
+  ]
+ },
+ {
+  "question_id": 248,
+  "db_id": "toxicology",
+  "question": "What are the atoms of the triple bond with the molecule \"TR041\"?",
+  "gold": [
+   "atom",
+   "bond",
+   "connected"
+  ],
+  "retrieved": [
+   "atom",
+   "bond",
+   "molecule"
+  ]
+ },
+ {
+  "question_id": 253,
+  "db_id": "toxicology",
+  "question": "List the elements of all the triple bonds.",
+  "gold": [
+   "atom",
+   "bond",
+   "connected"
+  ],
+  "retrieved": [
+   "bond"
+  ]
+ },
+ {
+  "question_id": 268,
+  "db_id": "toxicology",
+  "question": "What are the elements for bond id TR001_10_11?",
+  "gold": [
+   "atom",
+   "connected"
+  ],
+  "retrieved": [
+   "bond",
+   "connected"
+  ]
+ },
+ {
+  "question_id": 94,
+  "db_id": "financial",
+  "question": "List out the account numbers of female clients who are oldest and has lowest average salary, calculate the gap between this lowest average salary with the highest average salary?",
+  "gold": [
+   "account",
+   "client",
+   "disp",
+   "district"
+  ],
+  "retrieved": [
+   "account",
+   "client",
+   "district",
+   "order",
+   "trans"
+  ]
+ },
+ {
+  "question_id": 137,
+  "db_id": "financial",
+  "question": "How many accounts have running contracts in Branch location 1?",
+  "gold": [
+   "account",
+   "district",
+   "loan"
+  ],
+  "retrieved": [
+   "account",
+   "client",
+   "disp",
+   "loan"
+  ]
+ },
+ {
+  "question_id": 137,
+  "db_id": "financial",
+  "question": "How many accounts have running contracts in Branch location 1?",
+  "gold": [
+   "account",
+   "district",
+   "loan"
+  ],
+  "retrieved": [
+   "account",
+   "client",
+   "disp",
+   "loan"
+  ]
+ },
+ {
+  "question_id": 186,
+  "db_id": "financial",
+  "question": "What percentage of male clients request for weekly statements to be issued?",
+  "gold": [
+   "account",
+   "client",
+   "disp",
+   "district"
+  ],
+  "retrieved": [
+   "account",
+   "card",
+   "client",
+   "disp",
+   "loan",
+   "trans"
+  ]
+ },
+ {
+  "question_id": 194,
+  "db_id": "financial",
+  "question": "Provide the IDs and age of the client with high level credit card, which is eligible for loans.",
+  "gold": [
+   "card",
+   "client",
+   "disp"
+  ],
+  "retrieved": [
+   "account",
+   "card",
+   "disp",
+   "loan",
+   "trans"
+  ]
+ }
+]
