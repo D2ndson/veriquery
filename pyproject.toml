@@ -1,0 +1,15 @@
+[project]
+name = "veriquery"
+version = "0.1.0"
+description = "Data analyst agent that clarifies ambiguous questions and verifies its own numbers"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "sqlglot",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+demo = ["streamlit"]
+dev = ["pytest"]
