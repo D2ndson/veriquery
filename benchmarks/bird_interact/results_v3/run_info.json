@@ -1,0 +1,8 @@
+{
+ "system_model": "Qwen/Qwen3-14B-AWQ",
+ "simulator_model": "Qwen/Qwen3-14B-AWQ",
+ "patience": 3,
+ "n_tasks": 100,
+ "seed": 42,
+ "gpu": "NVIDIA GeForce RTX 4090"
+}
