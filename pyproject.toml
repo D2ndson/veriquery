@@ -3,13 +3,23 @@ name = "veriquery"
 version = "0.1.0"
 description = "Data analyst agent that clarifies ambiguous questions and verifies its own numbers"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "pandas",
-    "sqlglot",
+    "sqlglot>=30.24,<31",
     "matplotlib",
 ]
 
 [project.optional-dependencies]
 demo = ["streamlit"]
 dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["veriquery*", "benchmarks*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
