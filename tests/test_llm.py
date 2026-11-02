@@ -62,3 +62,29 @@ def test_from_env_and_legacy_signature(monkeypatch):
     assert legacy.provider == "ollama" and legacy.temperature == 0.2
     with pytest.raises(ValueError):
         LLM(provider="nope")
+
+
+def test_cache_does_not_reuse_other_servers_model_alias(tmp_path, monkeypatch):
+    cache = tmp_path / 'cache.sqlite'
+    first = LLM(model='writer', base_url='http://first:11434', cache_path=cache)
+    scripted(monkeypatch, first, 'SELECT 1')
+    assert first('q') == 'SELECT 1'
+    second = LLM(model='writer', base_url='http://second:11434', cache_path=cache)
+    calls = scripted(monkeypatch, second, 'SELECT 2')
+    assert second('q') == 'SELECT 2'
+    assert len(calls) == 1
+
+
+@pytest.mark.parametrize('provider', ['ollama', 'openai'])
+def test_truncated_but_executable_sql_is_rejected_and_not_cached(tmp_path, monkeypatch, provider):
+    llm = LLM(provider=provider, cache_path=tmp_path / 'cache.sqlite')
+    # The missing WHERE clause need not make SQL invalid: reject at transport level.
+    partial = 'SELECT count(*) FROM sales'
+    payload = ({'message': {'content': partial}, 'done_reason': 'length'} if provider == 'ollama'
+               else {'choices': [{'message': {'content': partial}, 'finish_reason': 'length'}]})
+    monkeypatch.setattr(llm, '_post', lambda *args: payload)
+    with pytest.raises(ValueError, match='token limit'):
+        llm('Count sales in 2025')
+    calls = scripted(monkeypatch, llm, 'SELECT 1')
+    assert llm('Count sales in 2025') == 'SELECT 1'
+    assert len(calls) == 1

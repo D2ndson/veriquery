@@ -132,6 +132,10 @@ def main(argv=None):
     p.add_argument('--db-root',type=Path,required=True,help='Directory containing db_id/db_id.sqlite')
     p.add_argument('--model',required=True,help='Installed Ollama model tag; digest is recorded automatically')
     p.add_argument('--base-url',default='http://localhost:11434')
+    p.add_argument('--context-tokens', type=int, default=16384,
+                   help='Ollama context window; record the same value for paired runs')
+    p.add_argument('--max-output-tokens', type=int, default=1024)
+    p.add_argument('--model-timeout', type=float, default=120.0)
     p.add_argument('--output',type=Path,required=True,help='New run directory; existing runs are never overwritten')
     p.add_argument('--mode',choices=['once','repair','react','all'],default='all')
     p.add_argument('--size',type=int,default=100,help='Fixed subset size; use --full for all rows')
@@ -146,6 +150,8 @@ def main(argv=None):
     p.add_argument('--few-shots',type=Path,help='Audited BIRD train-only example JSON')
     p.add_argument('--corrections',type=Path,help='Validated external label overlay, scored separately')
     args=p.parse_args(argv)
+    if args.context_tokens < 1 or args.max_output_tokens < 1 or args.model_timeout <= 0:
+        p.error('Model context, output and timeout budgets must be positive')
     examples=load_bird(args.data)
     selected=fixed_subset(examples,size=len(examples) if args.full else args.size,seed=args.seed)
     shots=load_few_shots(args.few_shots)
@@ -170,7 +176,9 @@ def main(argv=None):
     try:manifest['commit']=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
     except (OSError,subprocess.CalledProcessError):manifest['commit']=None
     (args.output/'manifest.json').write_text(json.dumps(manifest,indent=2))
-    client=CachedOllama(args.model,base_url=args.base_url,cache_path=args.cache,model_digest=model_info['digest'])
+    client=CachedOllama(args.model,base_url=args.base_url,cache_path=args.cache,model_digest=model_info['digest'],
+                        context_tokens=args.context_tokens, max_output_tokens=args.max_output_tokens,
+                        timeout_seconds=args.model_timeout)
     try:
         for mode in ['once','repair','react'] if args.mode=='all' else [args.mode]:
             with (args.output/f'{mode}.jsonl').open('w') as f:

@@ -66,6 +66,11 @@ def run_shard(args, questions: list[dict]) -> None:
         for a in (state or {}).get("answers", []):
             ran = a.get("sql") and a.get("result") is not None  # an unexecutable draft scores as wrong
             readings.append({"label": a["label"], "sql": a.get("sql"),
+                             "executed": bool(ran),
+                             "initial_sql": a.get("sql_trace", {}).get("sql"),
+                             "sql_status": a.get("sql_status"),
+                             "candidates": a.get("candidates", []),
+                             "verification_rounds": a.get("verification_rounds", []),
                              "correct": bool(ran) and scorer.correct(q, db, a["sql"]),
                              "confidence": a["report"]["confidence"],
                              "decision": a.get("verification_status"), "repairs": a.get("repair_round", 0),
