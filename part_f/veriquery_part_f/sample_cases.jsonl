@@ -1,0 +1,3 @@
+{"question":"total sales","expected_value":500}
+{"question":"average sales","expected_value":125}
+{"question":"count rows","expected_value":4}
