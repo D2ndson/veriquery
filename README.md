@@ -52,3 +52,7 @@ data/               local datasets (git-ignored)
 notebooks/          exploration
 tests/
 ```
+
+## Role C implementation
+
+See [the SQL writer and repair handoff](docs/role_c.md) for setup, Role B/E integration, the offline demo, reproducible BIRD commands, and evaluation limitations. The implementation and synthetic tests are available; real BIRD/model results remain pending.
