@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "veriquery/data_card/1.0",
+  "title": "VeriQuery DatabaseCard (schema_version 1.0)",
+  "description": "One data card per database, produced by component B (schema_memory.py). Stored as outputs/schema_notebook/<db_id>.json.",
+  "type": "object",
+  "required": ["db_id", "schema_version", "db_path", "fingerprint", "created_at", "profile_seconds", "tables", "join_keys", "notes"],
+  "properties": {
+    "db_id": {"type": "string", "description": "BIRD db_id, e.g. california_schools"},
+    "schema_version": {"const": "1.0"},
+    "db_path": {"type": "string"},
+    "fingerprint": {"type": "string", "description": "size-mtime-version of the DB file; card is rebuilt when it changes"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "profile_seconds": {"type": "number"},
+    "notes": {"type": "array", "items": {"type": "string"}, "description": "database-level lessons learned (add_note)"},
+    "tables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "row_count", "stats_rows", "columns", "primary_key", "sample_rows", "notes"],
+        "properties": {
+          "name": {"type": "string"},
+          "row_count": {"type": "integer", "minimum": 0, "description": "exact COUNT(*)"},
+          "stats_rows": {"type": "integer", "minimum": 0, "description": "rows the column stats were computed on (first 200k)"},
+          "primary_key": {"type": "array", "items": {"type": "string"}},
+          "sample_rows": {"type": "array", "items": {"type": "object"}, "maxItems": 3},
+          "notes": {"type": "array", "items": {"type": "string"}},
+          "columns": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["name", "declared_type", "semantic_type", "is_primary_key", "null_rate", "distinct_count", "is_unique"],
+              "properties": {
+                "name": {"type": "string"},
+                "declared_type": {"type": "string", "description": "type from CREATE TABLE, may be empty"},
+                "semantic_type": {"enum": ["id", "numeric", "categorical", "date", "boolean", "text"]},
+                "is_primary_key": {"type": "boolean"},
+                "null_rate": {"type": "number", "minimum": 0, "maximum": 1},
+                "distinct_count": {"type": "integer", "minimum": 0},
+                "is_unique": {"type": "boolean", "description": "distinct_count == non-null count"},
+                "min_value": {},
+                "max_value": {},
+                "examples": {"type": "array", "maxItems": 5},
+                "top_values": {"type": "array", "items": {"type": "array", "prefixItems": [{}, {"type": "integer"}]}, "description": "[[value, count], ...] only for columns with <= 50 distinct values"},
+                "description": {"type": "string", "description": "from BIRD database_description CSV"},
+                "value_description": {"type": "string"},
+                "notes": {"type": "array", "items": {"type": "string"}, "description": "warnings, e.g. 'numbers stored as TEXT; CAST before arithmetic'"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "join_keys": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from_table", "from_column", "to_table", "to_column", "source", "cardinality"],
+        "properties": {
+          "from_table": {"type": "string"},
+          "from_column": {"type": "string"},
+          "to_table": {"type": "string"},
+          "to_column": {"type": "string"},
+          "source": {"enum": ["declared", "inferred"]},
+          "cardinality": {"enum": ["one-to-one", "many-to-one", "one-to-many", "many-to-many", "unknown"], "description": "many-to-many => joining can duplicate rows (verifier should check)"},
+          "overlap": {"type": ["number", "null"], "description": "share of from-values found in to-column (inferred keys only)"}
+        }
+      }
+    }
+  }
+}

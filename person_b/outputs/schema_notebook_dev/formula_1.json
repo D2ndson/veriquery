@@ -1,0 +1,5623 @@
+{
+ "db_id": "formula_1",
+ "schema_version": "1.0",
+ "db_path": "data/bird_dev/dev_databases/formula_1/formula_1.sqlite",
+ "fingerprint": "22360064-1792490204678310100-v1.0",
+ "created_at": "2026-10-20T09:59:06+00:00",
+ "profile_seconds": 1.005,
+ "tables": [
+  {
+   "name": "circuits",
+   "row_count": 72,
+   "stats_rows": 72,
+   "columns": [
+    {
+     "name": "circuitId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 72,
+     "is_unique": true,
+     "min_value": 2,
+     "max_value": 73,
+     "examples": [
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "top_values": [],
+     "description": "circuit Id. unique identification number of the circuit",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "circuitRef",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 72,
+     "is_unique": true,
+     "min_value": "BAK",
+     "max_value": "zolder",
+     "examples": [
+      "sepang",
+      "bahrain",
+      "catalunya",
+      "istanbul",
+      "monaco"
+     ],
+     "top_values": [],
+     "description": "circuit reference name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 72,
+     "is_unique": true,
+     "min_value": "A1-Ring",
+     "max_value": "Zolder",
+     "examples": [
+      "Sepang International Circuit",
+      "Bahrain International Circuit",
+      "Circuit de Barcelona-Catalunya",
+      "Istanbul Park",
+      "Circuit de Monaco"
+     ],
+     "top_values": [],
+     "description": "full name of circuit",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "location",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 69,
+     "is_unique": false,
+     "min_value": "Abu Dhabi",
+     "max_value": "Zandvoort",
+     "examples": [
+      "Kuala Lumpur",
+      "Sakhir",
+      "Montmeló",
+      "Istanbul",
+      "Monte-Carlo"
+     ],
+     "top_values": [],
+     "description": "location of circuit",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "country",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 32,
+     "is_unique": false,
+     "min_value": "Argentina",
+     "max_value": "USA",
+     "examples": [
+      "Malaysia",
+      "Bahrain",
+      "Spain",
+      "Turkey",
+      "Monaco"
+     ],
+     "top_values": [
+      [
+       "USA",
+       11
+      ],
+      [
+       "France",
+       7
+      ],
+      [
+       "Spain",
+       6
+      ],
+      [
+       "UK",
+       4
+      ],
+      [
+       "Portugal",
+       3
+      ],
+      [
+       "Japan",
+       3
+      ],
+      [
+       "Italy",
+       3
+      ],
+      [
+       "Germany",
+       3
+      ],
+      [
+       "Canada",
+       3
+      ],
+      [
+       "Belgium",
+       3
+      ],
+      [
+       "Austria",
+       3
+      ],
+      [
+       "South Africa",
+       2
+      ],
+      [
+       "Brazil",
+       2
+      ],
+      [
+       "UAE",
+       1
+      ],
+      [
+       "Turkey",
+       1
+      ],
+      [
+       "Switzerland",
+       1
+      ],
+      [
+       "Sweden",
+       1
+      ],
+      [
+       "Singapore",
+       1
+      ],
+      [
+       "Russia",
+       1
+      ],
+      [
+       "Netherlands",
+       1
+      ],
+      [
+       "Morocco",
+       1
+      ],
+      [
+       "Monaco",
+       1
+      ],
+      [
+       "Mexico",
+       1
+      ],
+      [
+       "Malaysia",
+       1
+      ],
+      [
+       "Korea",
+       1
+      ],
+      [
+       "India",
+       1
+      ],
+      [
+       "Hungary",
+       1
+      ],
+      [
+       "China",
+       1
+      ],
+      [
+       "Bahrain",
+       1
+      ],
+      [
+       "Azerbaijan",
+       1
+      ],
+      [
+       "Australia",
+       1
+      ],
+      [
+       "Argentina",
+       1
+      ]
+     ],
+     "description": "country of circuit",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lat",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 71,
+     "is_unique": false,
+     "min_value": -34.9272,
+     "max_value": 57.2653,
+     "examples": [
+      2.76083,
+      26.0325,
+      41.57,
+      40.9517,
+      43.7347
+     ],
+     "top_values": [],
+     "description": "latitude of location of circuit",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lng",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 71,
+     "is_unique": false,
+     "min_value": -118.189,
+     "max_value": 138.927,
+     "examples": [
+      101.738,
+      50.5106,
+      2.26111,
+      29.405,
+      7.42056
+     ],
+     "top_values": [],
+     "description": "longitude of location of circuit",
+     "value_description": "commonsense evidence: \nLocation coordinates: (lat, lng)",
+     "notes": []
+    },
+    {
+     "name": "alt",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "",
+     "value_description": "not useful",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 72,
+     "is_unique": true,
+     "min_value": "http://en.wikipedia.org/wiki/A1-Ring",
+     "max_value": "http://en.wikipedia.org/wiki/Zolder",
+     "examples": [
+      "http://en.wikipedia.org/wiki/Sepang_International_Circuit",
+      "http://en.wikipedia.org/wiki/Bahrain_International_Circuit",
+      "http://en.wikipedia.org/wiki/Circuit_de_Barcelona-Catalunya",
+      "http://en.wikipedia.org/wiki/Istanbul_Park",
+      "http://en.wikipedia.org/wiki/Circuit_de_Monaco"
+     ],
+     "top_values": [],
+     "description": "url",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "circuitId"
+   ],
+   "sample_rows": [
+    {
+     "circuitId": 2,
+     "circuitRef": "sepang",
+     "name": "Sepang International Circuit",
+     "location": "Kuala Lumpur",
+     "country": "Malaysia",
+     "lat": 2.76083,
+     "lng": 101.738,
+     "alt": null,
+     "url": "http://en.wikipedia.org/wiki/Sepang_International_Circuit"
+    },
+    {
+     "circuitId": 3,
+     "circuitRef": "bahrain",
+     "name": "Bahrain International Circuit",
+     "location": "Sakhir",
+     "country": "Bahrain",
+     "lat": 26.0325,
+     "lng": 50.5106,
+     "alt": null,
+     "url": "http://en.wikipedia.org/wiki/Bahrain_International_Circuit"
+    },
+    {
+     "circuitId": 4,
+     "circuitRef": "catalunya",
+     "name": "Circuit de Barcelona-Catalunya",
+     "location": "Montmeló",
+     "country": "Spain",
+     "lat": 41.57,
+     "lng": 2.26111,
+     "alt": null,
+     "url": "http://en.wikipedia.org/wiki/Circuit_de_Barcelona-Catalunya"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "constructorResults",
+   "row_count": 11082,
+   "stats_rows": 11082,
+   "columns": [
+    {
+     "name": "constructorResultsId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 11082,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 15579,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "constructor Results Id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "raceId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 907,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 982,
+     "examples": [
+      18,
+      19,
+      20,
+      21,
+      22
+     ],
+     "top_values": [],
+     "description": "race id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "constructorId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 172,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 210,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "constructor id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "points",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 45,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 66.0,
+     "examples": [
+      14.0,
+      8.0,
+      9.0,
+      5.0,
+      2.0
+     ],
+     "top_values": [
+      [
+       0.0,
+       6458
+      ],
+      [
+       1.0,
+       588
+      ],
+      [
+       2.0,
+       563
+      ],
+      [
+       4.0,
+       529
+      ],
+      [
+       3.0,
+       528
+      ],
+      [
+       6.0,
+       507
+      ],
+      [
+       9.0,
+       370
+      ],
+      [
+       10.0,
+       271
+      ],
+      [
+       8.0,
+       163
+      ],
+      [
+       5.0,
+       138
+      ],
+      [
+       15.0,
+       104
+      ],
+      [
+       12.0,
+       91
+      ],
+      [
+       16.0,
+       87
+      ],
+      [
+       18.0,
+       84
+      ],
+      [
+       14.0,
+       83
+      ],
+      [
+       7.0,
+       83
+      ],
+      [
+       13.0,
+       58
+      ],
+      [
+       43.0,
+       54
+      ],
+      [
+       11.0,
+       43
+      ],
+      [
+       25.0,
+       37
+      ],
+      [
+       22.0,
+       29
+      ],
+      [
+       33.0,
+       28
+      ],
+      [
+       27.0,
+       26
+      ],
+      [
+       40.0,
+       25
+      ],
+      [
+       37.0,
+       19
+      ],
+      [
+       26.0,
+       14
+      ],
+      [
+       20.0,
+       14
+      ],
+      [
+       28.0,
+       13
+      ],
+      [
+       23.0,
+       12
+      ],
+      [
+       30.0,
+       11
+      ],
+      [
+       35.0,
+       9
+      ],
+      [
+       31.0,
+       6
+      ],
+      [
+       21.0,
+       6
+      ],
+      [
+       19.0,
+       5
+      ],
+      [
+       1.5,
+       5
+      ],
+      [
+       24.0,
+       4
+      ],
+      [
+       17.0,
+       4
+      ],
+      [
+       4.5,
+       3
+      ],
+      [
+       0.5,
+       3
+      ],
+      [
+       29.0,
+       2
+      ],
+      [
+       66.0,
+       1
+      ],
+      [
+       50.0,
+       1
+      ],
+      [
+       32.0,
+       1
+      ],
+      [
+       5.5,
+       1
+      ],
+      [
+       2.5,
+       1
+      ]
+     ],
+     "description": "points",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "status",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9985,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "D",
+     "max_value": "D",
+     "examples": [
+      "D"
+     ],
+     "top_values": [
+      [
+       "D",
+       17
+      ]
+     ],
+     "description": "status",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "constructorResultsId"
+   ],
+   "sample_rows": [
+    {
+     "constructorResultsId": 1,
+     "raceId": 18,
+     "constructorId": 1,
+     "points": 14.0,
+     "status": null
+    },
+    {
+     "constructorResultsId": 2,
+     "raceId": 18,
+     "constructorId": 2,
+     "points": 8.0,
+     "status": null
+    },
+    {
+     "constructorResultsId": 3,
+     "raceId": 18,
+     "constructorId": 3,
+     "points": 9.0,
+     "status": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "constructorStandings",
+   "row_count": 11836,
+   "stats_rows": 11836,
+   "columns": [
+    {
+     "name": "constructorStandingsId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 11836,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 26872,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "constructor Standings Id. unique identification of the constructor standing records",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "raceId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 906,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 982,
+     "examples": [
+      18,
+      19,
+      20,
+      21,
+      22
+     ],
+     "top_values": [],
+     "description": "race id. id number identifying which races",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "constructorId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 156,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 210,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "constructor id. id number identifying which id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "points",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 436,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 765.0,
+     "examples": [
+      14.0,
+      8.0,
+      9.0,
+      5.0,
+      2.0
+     ],
+     "top_values": [],
+     "description": "how many points acquired in each race",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "position",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 22,
+     "examples": [
+      1,
+      3,
+      2,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       3,
+       906
+      ],
+      [
+       2,
+       906
+      ],
+      [
+       1,
+       906
+      ],
+      [
+       6,
+       905
+      ],
+      [
+       5,
+       905
+      ],
+      [
+       4,
+       905
+      ],
+      [
+       7,
+       901
+      ],
+      [
+       8,
+       889
+      ],
+      [
+       9,
+       875
+      ],
+      [
+       10,
+       839
+      ],
+      [
+       11,
+       723
+      ],
+      [
+       12,
+       497
+      ],
+      [
+       13,
+       389
+      ],
+      [
+       14,
+       333
+      ],
+      [
+       15,
+       300
+      ],
+      [
+       16,
+       227
+      ],
+      [
+       17,
+       179
+      ],
+      [
+       18,
+       124
+      ],
+      [
+       19,
+       94
+      ],
+      [
+       20,
+       29
+      ],
+      [
+       21,
+       3
+      ],
+      [
+       22,
+       1
+      ]
+     ],
+     "description": "position or track of circuits",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "positionText",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 23,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "E",
+     "examples": [
+      "1",
+      "3",
+      "2",
+      "4",
+      "5"
+     ],
+     "top_values": [
+      [
+       "3",
+       906
+      ],
+      [
+       "2",
+       906
+      ],
+      [
+       "1",
+       906
+      ],
+      [
+       "6",
+       905
+      ],
+      [
+       "5",
+       905
+      ],
+      [
+       "4",
+       905
+      ],
+      [
+       "7",
+       901
+      ],
+      [
+       "8",
+       889
+      ],
+      [
+       "9",
+       875
+      ],
+      [
+       "10",
+       839
+      ],
+      [
+       "11",
+       706
+      ],
+      [
+       "12",
+       497
+      ],
+      [
+       "13",
+       389
+      ],
+      [
+       "14",
+       333
+      ],
+      [
+       "15",
+       300
+      ],
+      [
+       "16",
+       227
+      ],
+      [
+       "17",
+       179
+      ],
+      [
+       "18",
+       124
+      ],
+      [
+       "19",
+       94
+      ],
+      [
+       "20",
+       29
+      ],
+      [
+       "E",
+       17
+      ],
+      [
+       "21",
+       3
+      ],
+      [
+       "22",
+       1
+      ]
+     ],
+     "description": "position text",
+     "value_description": "same with position, not quite useful",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "wins",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 19,
+     "examples": [
+      1,
+      0,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       0,
+       9272
+      ],
+      [
+       1,
+       1019
+      ],
+      [
+       2,
+       484
+      ],
+      [
+       3,
+       330
+      ],
+      [
+       4,
+       207
+      ],
+      [
+       5,
+       153
+      ],
+      [
+       6,
+       123
+      ],
+      [
+       7,
+       82
+      ],
+      [
+       8,
+       56
+      ],
+      [
+       9,
+       32
+      ],
+      [
+       10,
+       26
+      ],
+      [
+       11,
+       14
+      ],
+      [
+       12,
+       11
+      ],
+      [
+       15,
+       7
+      ],
+      [
+       14,
+       7
+      ],
+      [
+       13,
+       7
+      ],
+      [
+       16,
+       3
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ]
+     ],
+     "description": "wins",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "constructorStandingsId"
+   ],
+   "sample_rows": [
+    {
+     "constructorStandingsId": 1,
+     "raceId": 18,
+     "constructorId": 1,
+     "points": 14.0,
+     "position": 1,
+     "positionText": "1",
+     "wins": 1
+    },
+    {
+     "constructorStandingsId": 2,
+     "raceId": 18,
+     "constructorId": 2,
+     "points": 8.0,
+     "position": 3,
+     "positionText": "3",
+     "wins": 0
+    },
+    {
+     "constructorStandingsId": 3,
+     "raceId": 18,
+     "constructorId": 3,
+     "points": 9.0,
+     "position": 2,
+     "positionText": "2",
+     "wins": 0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "constructors",
+   "row_count": 208,
+   "stats_rows": 208,
+   "columns": [
+    {
+     "name": "constructorId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 208,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 210,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "constructor Id. the unique identification number identifying constructors",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "constructorRef",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 208,
+     "is_unique": true,
+     "min_value": "adams",
+     "max_value": "zakspeed",
+     "examples": [
+      "mclaren",
+      "bmw_sauber",
+      "williams",
+      "renault",
+      "toro_rosso"
+     ],
+     "top_values": [],
+     "description": "Constructor Reference name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 208,
+     "is_unique": true,
+     "min_value": "AFM",
+     "max_value": "Zakspeed",
+     "examples": [
+      "McLaren",
+      "BMW Sauber",
+      "Williams",
+      "Renault",
+      "Toro Rosso"
+     ],
+     "top_values": [],
+     "description": "full name of the constructor",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "nationality",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": "American",
+     "max_value": "Swiss",
+     "examples": [
+      "British",
+      "German",
+      "French",
+      "Italian",
+      "Japanese"
+     ],
+     "top_values": [
+      [
+       "British",
+       85
+      ],
+      [
+       "American",
+       39
+      ],
+      [
+       "Italian",
+       29
+      ],
+      [
+       "French",
+       12
+      ],
+      [
+       "German",
+       10
+      ],
+      [
+       "Japanese",
+       5
+      ],
+      [
+       "Swiss",
+       4
+      ],
+      [
+       "South African",
+       3
+      ],
+      [
+       "Dutch",
+       3
+      ],
+      [
+       "Russian",
+       2
+      ],
+      [
+       "Malaysian",
+       2
+      ],
+      [
+       "Canadian",
+       2
+      ],
+      [
+       "Spanish",
+       1
+      ],
+      [
+       "Rhodesian",
+       1
+      ],
+      [
+       "New Zealand",
+       1
+      ],
+      [
+       "Mexican",
+       1
+      ],
+      [
+       "Irish",
+       1
+      ],
+      [
+       "Indian",
+       1
+      ],
+      [
+       "Hong Kong",
+       1
+      ],
+      [
+       "East German",
+       1
+      ],
+      [
+       "Brazilian",
+       1
+      ],
+      [
+       "Belgium",
+       1
+      ],
+      [
+       "Austrian",
+       1
+      ],
+      [
+       "Australian",
+       1
+      ]
+     ],
+     "description": "nationality of the constructor",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 171,
+     "is_unique": false,
+     "min_value": "http://en.wikipedia.org/wiki/A.J._Watson",
+     "max_value": "http://en.wikipedia.org/wiki/Zakspeed",
+     "examples": [
+      "http://en.wikipedia.org/wiki/McLaren",
+      "http://en.wikipedia.org/wiki/BMW_Sauber",
+      "http://en.wikipedia.org/wiki/Williams_Grand_Prix_Engineering",
+      "http://en.wikipedia.org/wiki/Renault_F1",
+      "http://en.wikipedia.org/wiki/Scuderia_Toro_Rosso"
+     ],
+     "top_values": [],
+     "description": "the introduction website of the constructor",
+     "value_description": "commonsense evidence: How to find out the detailed introduction of the constructor: through its url",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "constructorId"
+   ],
+   "sample_rows": [
+    {
+     "constructorId": 1,
+     "constructorRef": "mclaren",
+     "name": "McLaren",
+     "nationality": "British",
+     "url": "http://en.wikipedia.org/wiki/McLaren"
+    },
+    {
+     "constructorId": 2,
+     "constructorRef": "bmw_sauber",
+     "name": "BMW Sauber",
+     "nationality": "German",
+     "url": "http://en.wikipedia.org/wiki/BMW_Sauber"
+    },
+    {
+     "constructorId": 3,
+     "constructorRef": "williams",
+     "name": "Williams",
+     "nationality": "British",
+     "url": "http://en.wikipedia.org/wiki/Williams_Grand_Prix_Engineering"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "driverStandings",
+   "row_count": 31578,
+   "stats_rows": 31578,
+   "columns": [
+    {
+     "name": "driverStandingsId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 31578,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 68460,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "driver Standings Id. the unique identification number identifying driver standing records",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "raceId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 970,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 982,
+     "examples": [
+      18,
+      19,
+      20,
+      21,
+      22
+     ],
+     "top_values": [],
+     "description": "constructor Reference name. id number identifying which races",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "driverId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 833,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 841,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "id number identifying which drivers",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "points",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 337,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 397.0,
+     "examples": [
+      10.0,
+      8.0,
+      6.0,
+      5.0,
+      4.0
+     ],
+     "top_values": [],
+     "description": "how many points acquired in each race",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "position",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 108,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 108,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "position or track of circuits",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "positionText",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 109,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "D",
+     "examples": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "top_values": [],
+     "description": "position text",
+     "value_description": "same with position, not quite useful",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "wins",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 14,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 13,
+     "examples": [
+      1,
+      0,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       0,
+       27946
+      ],
+      [
+       1,
+       1898
+      ],
+      [
+       2,
+       744
+      ],
+      [
+       3,
+       382
+      ],
+      [
+       4,
+       223
+      ],
+      [
+       5,
+       145
+      ],
+      [
+       6,
+       116
+      ],
+      [
+       7,
+       50
+      ],
+      [
+       8,
+       25
+      ],
+      [
+       9,
+       21
+      ],
+      [
+       10,
+       13
+      ],
+      [
+       11,
+       7
+      ],
+      [
+       12,
+       5
+      ],
+      [
+       13,
+       3
+      ]
+     ],
+     "description": "wins",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "driverStandingsId"
+   ],
+   "sample_rows": [
+    {
+     "driverStandingsId": 1,
+     "raceId": 18,
+     "driverId": 1,
+     "points": 10.0,
+     "position": 1,
+     "positionText": "1",
+     "wins": 1
+    },
+    {
+     "driverStandingsId": 2,
+     "raceId": 18,
+     "driverId": 2,
+     "points": 8.0,
+     "position": 2,
+     "positionText": "2",
+     "wins": 0
+    },
+    {
+     "driverStandingsId": 3,
+     "raceId": 18,
+     "driverId": 3,
+     "points": 6.0,
+     "position": 3,
+     "positionText": "3",
+     "wins": 0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "drivers",
+   "row_count": 840,
+   "stats_rows": 840,
+   "columns": [
+    {
+     "name": "driverId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 840,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 841,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "driver ID. the unique identification number identifying each driver",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "driverRef",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 840,
+     "is_unique": true,
+     "min_value": "Cannoc",
+     "max_value": "zunino",
+     "examples": [
+      "hamilton",
+      "heidfeld",
+      "rosberg",
+      "alonso",
+      "kovalainen"
+     ],
+     "top_values": [],
+     "description": "driver reference name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "number",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.9571,
+     "distinct_count": 36,
+     "is_unique": true,
+     "min_value": 2,
+     "max_value": 99,
+     "examples": [
+      44,
+      6,
+      14,
+      7,
+      19
+     ],
+     "top_values": [
+      [
+       99,
+       1
+      ],
+      [
+       98,
+       1
+      ],
+      [
+       94,
+       1
+      ],
+      [
+       88,
+       1
+      ],
+      [
+       77,
+       1
+      ],
+      [
+       55,
+       1
+      ],
+      [
+       53,
+       1
+      ],
+      [
+       45,
+       1
+      ],
+      [
+       44,
+       1
+      ],
+      [
+       36,
+       1
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ]
+     ],
+     "description": "number",
+     "value_description": "",
+     "notes": [
+      "96% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "code",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.9012,
+     "distinct_count": 80,
+     "is_unique": false,
+     "min_value": "ALB",
+     "max_value": "ZON",
+     "examples": [
+      "HAM",
+      "HEI",
+      "ROS",
+      "ALO",
+      "KOV"
+     ],
+     "top_values": [],
+     "description": "abbreviated code for drivers",
+     "value_description": "if \"null\" or empty, it means it doesn't have code",
+     "notes": [
+      "90% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "forename",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 465,
+     "is_unique": false,
+     "min_value": "Adolf",
+     "max_value": "Óscar",
+     "examples": [
+      "Lewis",
+      "Nick",
+      "Nico",
+      "Fernando",
+      "Heikki"
+     ],
+     "top_values": [],
+     "description": "forename",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "surname",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 784,
+     "is_unique": false,
+     "min_value": "Abate",
+     "max_value": "Étancelin",
+     "examples": [
+      "Hamilton",
+      "Heidfeld",
+      "Rosberg",
+      "Alonso",
+      "Kovalainen"
+     ],
+     "top_values": [],
+     "description": "surname",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "dob",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0012,
+     "distinct_count": 821,
+     "is_unique": false,
+     "min_value": "1896-12-28",
+     "max_value": "1998-10-29",
+     "examples": [
+      "1985-01-07",
+      "1977-05-10",
+      "1985-06-27",
+      "1981-07-29",
+      "1981-10-19"
+     ],
+     "top_values": [],
+     "description": "date of birth",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "nationality",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 41,
+     "is_unique": false,
+     "min_value": "American",
+     "max_value": "Venezuelan",
+     "examples": [
+      "British",
+      "German",
+      "Spanish",
+      "Finnish",
+      "Japanese"
+     ],
+     "top_values": [
+      [
+       "British",
+       162
+      ],
+      [
+       "American",
+       157
+      ],
+      [
+       "Italian",
+       99
+      ],
+      [
+       "French",
+       72
+      ],
+      [
+       "German",
+       49
+      ],
+      [
+       "Brazilian",
+       31
+      ],
+      [
+       "Argentine",
+       24
+      ],
+      [
+       "Swiss",
+       23
+      ],
+      [
+       "South African",
+       23
+      ],
+      [
+       "Belgian",
+       23
+      ],
+      [
+       "Japanese",
+       19
+      ],
+      [
+       "Dutch",
+       17
+      ],
+      [
+       "Australian",
+       17
+      ],
+      [
+       "Spanish",
+       15
+      ],
+      [
+       "Austrian",
+       15
+      ],
+      [
+       "Canadian",
+       13
+      ],
+      [
+       "Swedish",
+       10
+      ],
+      [
+       "Finnish",
+       9
+      ],
+      [
+       "New Zealander",
+       8
+      ],
+      [
+       "Mexican",
+       6
+      ],
+      [
+       "Irish",
+       5
+      ],
+      [
+       "Danish",
+       5
+      ],
+      [
+       "Uruguayan",
+       4
+      ],
+      [
+       "Rhodesian",
+       4
+      ],
+      [
+       "Portuguese",
+       4
+      ],
+      [
+       "Venezuelan",
+       3
+      ],
+      [
+       "Monegasque",
+       3
+      ],
+      [
+       "East German",
+       3
+      ],
+      [
+       "Colombian",
+       3
+      ],
+      [
+       "Russian",
+       2
+      ],
+      [
+       "Indian",
+       2
+      ],
+      [
+       "Thai",
+       1
+      ],
+      [
+       "Polish",
+       1
+      ],
+      [
+       "Malaysian",
+       1
+      ],
+      [
+       "Liechtensteiner",
+       1
+      ],
+      [
+       "Indonesian",
+       1
+      ],
+      [
+       "Hungarian",
+       1
+      ],
+      [
+       "Czech",
+       1
+      ],
+      [
+       "Chilean",
+       1
+      ],
+      [
+       "Argentine-Italian",
+       1
+      ],
+      [
+       "American-Italian",
+       1
+      ]
+     ],
+     "description": "nationality of drivers",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 840,
+     "is_unique": true,
+     "min_value": "",
+     "max_value": "http://en.wikipedia.org/wiki/Zsolt_Baumgartner",
+     "examples": [
+      "http://en.wikipedia.org/wiki/Lewis_Hamilton",
+      "http://en.wikipedia.org/wiki/Nick_Heidfeld",
+      "http://en.wikipedia.org/wiki/Nico_Rosberg",
+      "http://en.wikipedia.org/wiki/Fernando_Alonso",
+      "http://en.wikipedia.org/wiki/Heikki_Kovalainen"
+     ],
+     "top_values": [],
+     "description": "the introduction website of the drivers",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "driverId"
+   ],
+   "sample_rows": [
+    {
+     "driverId": 1,
+     "driverRef": "hamilton",
+     "number": 44,
+     "code": "HAM",
+     "forename": "Lewis",
+     "surname": "Hamilton",
+     "dob": "1985-01-07",
+     "nationality": "British",
+     "url": "http://en.wikipedia.org/wiki/Lewis_Hamilton"
+    },
+    {
+     "driverId": 2,
+     "driverRef": "heidfeld",
+     "number": null,
+     "code": "HEI",
+     "forename": "Nick",
+     "surname": "Heidfeld",
+     "dob": "1977-05-10",
+     "nationality": "German",
+     "url": "http://en.wikipedia.org/wiki/Nick_Heidfeld"
+    },
+    {
+     "driverId": 3,
+     "driverRef": "rosberg",
+     "number": 6,
+     "code": "ROS",
+     "forename": "Nico",
+     "surname": "Rosberg",
+     "dob": "1985-06-27",
+     "nationality": "German",
+     "url": "http://en.wikipedia.org/wiki/Nico_Rosberg"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "lapTimes",
+   "row_count": 420369,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "raceId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 192,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 192,
+     "examples": [
+      1
+     ],
+     "top_values": [],
+     "description": "race ID. the identification number identifying race",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "driverId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 78,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 155,
+     "examples": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [],
+     "description": "driver ID. the identification number identifying each driver",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lap",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 78,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 78,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "lap number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "position",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 22,
+     "examples": [
+      13,
+      12,
+      11,
+      10,
+      9
+     ],
+     "top_values": [
+      [
+       2,
+       11986
+      ],
+      [
+       1,
+       11986
+      ],
+      [
+       3,
+       11980
+      ],
+      [
+       4,
+       11972
+      ],
+      [
+       5,
+       11959
+      ],
+      [
+       6,
+       11935
+      ],
+      [
+       7,
+       11834
+      ],
+      [
+       8,
+       11798
+      ],
+      [
+       9,
+       11727
+      ],
+      [
+       10,
+       11563
+      ],
+      [
+       11,
+       11347
+      ],
+      [
+       12,
+       11013
+      ],
+      [
+       13,
+       10518
+      ],
+      [
+       14,
+       9969
+      ],
+      [
+       15,
+       9277
+      ],
+      [
+       16,
+       8246
+      ],
+      [
+       17,
+       7185
+      ],
+      [
+       18,
+       5692
+      ],
+      [
+       19,
+       4202
+      ],
+      [
+       20,
+       2469
+      ],
+      [
+       21,
+       966
+      ],
+      [
+       22,
+       376
+      ]
+     ],
+     "description": "position or track of circuits",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "time",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 50425,
+     "is_unique": false,
+     "min_value": "10:32.179",
+     "max_value": "9:45.712",
+     "examples": [
+      "1:49.088",
+      "1:33.740",
+      "1:31.600",
+      "1:31.067",
+      "1:32.129"
+     ],
+     "top_values": [],
+     "description": "lap time",
+     "value_description": "in minutes / seconds / ...",
+     "notes": []
+    },
+    {
+     "name": "milliseconds",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 50425,
+     "is_unique": false,
+     "min_value": 68337,
+     "max_value": 2022173,
+     "examples": [
+      109088,
+      93740,
+      91600,
+      91067,
+      92129
+     ],
+     "top_values": [],
+     "description": "milliseconds",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "raceId",
+    "driverId",
+    "lap"
+   ],
+   "sample_rows": [
+    {
+     "raceId": 1,
+     "driverId": 1,
+     "lap": 1,
+     "position": 13,
+     "time": "1:49.088",
+     "milliseconds": 109088
+    },
+    {
+     "raceId": 1,
+     "driverId": 1,
+     "lap": 2,
+     "position": 12,
+     "time": "1:33.740",
+     "milliseconds": 93740
+    },
+    {
+     "raceId": 1,
+     "driverId": 1,
+     "lap": 3,
+     "position": 11,
+     "time": "1:31.600",
+     "milliseconds": 91600
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 420,369 rows"
+   ]
+  },
+  {
+   "name": "pitStops",
+   "row_count": 6070,
+   "stats_rows": 6070,
+   "columns": [
+    {
+     "name": "raceId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 131,
+     "is_unique": false,
+     "min_value": 841,
+     "max_value": 982,
+     "examples": [
+      841,
+      842,
+      843,
+      844
+     ],
+     "top_values": [],
+     "description": "race ID. the identification number identifying race",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "driverId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 54,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 841,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "driver ID. the identification number identifying each driver",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "stop",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 6,
+     "examples": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       1,
+       2680
+      ],
+      [
+       2,
+       2097
+      ],
+      [
+       3,
+       966
+      ],
+      [
+       4,
+       251
+      ],
+      [
+       5,
+       63
+      ],
+      [
+       6,
+       13
+      ]
+     ],
+     "description": "stop number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lap",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 73,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 74,
+     "examples": [
+      16,
+      36,
+      15,
+      30,
+      12
+     ],
+     "top_values": [],
+     "description": "lap number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "time",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4872,
+     "is_unique": false,
+     "min_value": "13:04:51",
+     "max_value": "21:53:08",
+     "examples": [
+      "17:28:24",
+      "17:59:29",
+      "17:27:41",
+      "17:51:32",
+      "17:29:00"
+     ],
+     "top_values": [],
+     "description": "time",
+     "value_description": "exact time",
+     "notes": []
+    },
+    {
+     "name": "duration",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4713,
+     "is_unique": false,
+     "min_value": "12.897",
+     "max_value": "59.555",
+     "examples": [
+      "23.227",
+      "23.199",
+      "22.994",
+      "25.098",
+      "23.716"
+     ],
+     "top_values": [],
+     "description": "duration time",
+     "value_description": "seconds/",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "milliseconds",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4713,
+     "is_unique": false,
+     "min_value": 12897,
+     "max_value": 2011266,
+     "examples": [
+      23227,
+      23199,
+      22994,
+      25098,
+      23716
+     ],
+     "top_values": [],
+     "description": "milliseconds",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "raceId",
+    "driverId",
+    "stop"
+   ],
+   "sample_rows": [
+    {
+     "raceId": 841,
+     "driverId": 1,
+     "stop": 1,
+     "lap": 16,
+     "time": "17:28:24",
+     "duration": "23.227",
+     "milliseconds": 23227
+    },
+    {
+     "raceId": 841,
+     "driverId": 1,
+     "stop": 2,
+     "lap": 36,
+     "time": "17:59:29",
+     "duration": "23.199",
+     "milliseconds": 23199
+    },
+    {
+     "raceId": 841,
+     "driverId": 2,
+     "stop": 1,
+     "lap": 15,
+     "time": "17:27:41",
+     "duration": "22.994",
+     "milliseconds": 22994
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "qualifying",
+   "row_count": 7397,
+   "stats_rows": 7397,
+   "columns": [
+    {
+     "name": "qualifyId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 7397,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 7419,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "qualify Id. the unique identification number identifying qualifying",
+     "value_description": "How does F1 Sprint qualifying work? Sprint qualifying is essentially a short-form Grand Prix – a race that is one-third the number of laps of the main event on Sunday. However, the drivers are battling for positions on the grid for the start of Sunday's race.",
+     "notes": []
+    },
+    {
+     "name": "raceId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 339,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 982,
+     "examples": [
+      18,
+      19,
+      20,
+      21,
+      22
+     ],
+     "top_values": [],
+     "description": "race Id. the identification number identifying each race",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "driverId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 151,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 841,
+     "examples": [
+      1,
+      9,
+      5,
+      13,
+      2
+     ],
+     "top_values": [],
+     "description": "driver Id. the identification number identifying each driver",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "constructorId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 41,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 210,
+     "examples": [
+      1,
+      2,
+      6,
+      7,
+      3
+     ],
+     "top_values": [
+      [
+       6,
+       678
+      ],
+      [
+       3,
+       677
+      ],
+      [
+       1,
+       675
+      ],
+      [
+       15,
+       534
+      ],
+      [
+       9,
+       476
+      ],
+      [
+       5,
+       439
+      ],
+      [
+       4,
+       392
+      ],
+      [
+       10,
+       369
+      ],
+      [
+       131,
+       299
+      ],
+      [
+       7,
+       250
+      ],
+      [
+       18,
+       238
+      ],
+      [
+       17,
+       237
+      ],
+      [
+       208,
+       154
+      ],
+      [
+       2,
+       140
+      ],
+      [
+       22,
+       128
+      ],
+      [
+       16,
+       121
+      ],
+      [
+       206,
+       118
+      ],
+      [
+       164,
+       115
+      ],
+      [
+       207,
+       112
+      ],
+      [
+       25,
+       111
+      ],
+      [
+       11,
+       106
+      ],
+      [
+       19,
+       82
+      ],
+      [
+       29,
+       78
+      ],
+      [
+       27,
+       78
+      ],
+      [
+       8,
+       78
+      ],
+      [
+       205,
+       76
+      ],
+      [
+       166,
+       76
+      ],
+      [
+       210,
+       70
+      ],
+      [
+       209,
+       66
+      ],
+      [
+       21,
+       52
+      ],
+      [
+       20,
+       50
+      ],
+      [
+       28,
+       41
+      ],
+      [
+       30,
+       40
+      ],
+      [
+       24,
+       40
+      ],
+      [
+       31,
+       37
+      ],
+      [
+       23,
+       34
+      ],
+      [
+       12,
+       34
+      ],
+      [
+       33,
+       30
+      ],
+      [
+       32,
+       30
+      ],
+      [
+       13,
+       28
+      ],
+      [
+       14,
+       8
+      ]
+     ],
+     "description": "constructor Id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "number",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 48,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 99,
+     "examples": [
+      22,
+      4,
+      23,
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       8,
+       339
+      ],
+      [
+       3,
+       338
+      ],
+      [
+       14,
+       337
+      ],
+      [
+       7,
+       337
+      ],
+      [
+       9,
+       334
+      ],
+      [
+       6,
+       326
+      ],
+      [
+       11,
+       325
+      ],
+      [
+       5,
+       320
+      ],
+      [
+       20,
+       301
+      ],
+      [
+       12,
+       293
+      ],
+      [
+       19,
+       288
+      ],
+      [
+       21,
+       286
+      ],
+      [
+       10,
+       282
+      ],
+      [
+       4,
+       279
+      ],
+      [
+       2,
+       278
+      ],
+      [
+       1,
+       269
+      ],
+      [
+       17,
+       266
+      ],
+      [
+       15,
+       265
+      ],
+      [
+       22,
+       254
+      ],
+      [
+       16,
+       252
+      ],
+      [
+       18,
+       215
+      ],
+      [
+       23,
+       207
+      ],
+      [
+       26,
+       108
+      ],
+      [
+       25,
+       108
+      ],
+      [
+       27,
+       105
+      ],
+      [
+       24,
+       91
+      ],
+      [
+       77,
+       73
+      ],
+      [
+       44,
+       73
+      ],
+      [
+       30,
+       65
+      ],
+      [
+       33,
+       56
+      ],
+      [
+       55,
+       53
+      ],
+      [
+       28,
+       49
+      ],
+      [
+       13,
+       38
+      ],
+      [
+       31,
+       37
+      ],
+      [
+       94,
+       33
+      ],
+      [
+       29,
+       31
+      ],
+      [
+       99,
+       19
+      ],
+      [
+       0,
+       15
+      ],
+      [
+       98,
+       13
+      ],
+      [
+       88,
+       12
+      ],
+      [
+       32,
+       12
+      ],
+      [
+       53,
+       5
+      ],
+      [
+       34,
+       4
+      ],
+      [
+       36,
+       2
+      ],
+      [
+       47,
+       1
+      ],
+      [
+       46,
+       1
+      ],
+      [
+       45,
+       1
+      ],
+      [
+       40,
+       1
+      ]
+     ],
+     "description": "number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "position",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 28,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 28,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       18,
+       339
+      ],
+      [
+       17,
+       339
+      ],
+      [
+       16,
+       339
+      ],
+      [
+       15,
+       339
+      ],
+      [
+       14,
+       339
+      ],
+      [
+       13,
+       339
+      ],
+      [
+       12,
+       339
+      ],
+      [
+       11,
+       339
+      ],
+      [
+       10,
+       339
+      ],
+      [
+       9,
+       339
+      ],
+      [
+       8,
+       339
+      ],
+      [
+       7,
+       339
+      ],
+      [
+       6,
+       339
+      ],
+      [
+       5,
+       339
+      ],
+      [
+       4,
+       339
+      ],
+      [
+       3,
+       339
+      ],
+      [
+       2,
+       339
+      ],
+      [
+       1,
+       339
+      ],
+      [
+       19,
+       333
+      ],
+      [
+       20,
+       328
+      ],
+      [
+       21,
+       214
+      ],
+      [
+       22,
+       206
+      ],
+      [
+       23,
+       90
+      ],
+      [
+       24,
+       82
+      ],
+      [
+       26,
+       20
+      ],
+      [
+       25,
+       20
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ]
+     ],
+     "description": "position or track of circuit",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "q1",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0158,
+     "distinct_count": 6635,
+     "is_unique": false,
+     "min_value": "16:42.640",
+     "max_value": "2:33.885",
+     "examples": [
+      "1:26.572",
+      "1:26.103",
+      "1:25.664",
+      "1:25.994",
+      "1:25.960"
+     ],
+     "top_values": [],
+     "description": "time in qualifying 1",
+     "value_description": "in minutes / seconds / ... \ncommonsense evidence: \nQ1 lap times determine pole position and the order of the front 10 positions on the grid. The slowest driver in Q1 starts 10th, the next starts ninth and so on. \nAll 20 F1 drivers participate in the first period, called Q1, with each trying to set the fastest time possible. Those in the top 15 move on to the next period of qualifying, called Q2. The five slowest drivers are eliminated and will start the race in the last five positions on the grid.",
+     "notes": []
+    },
+    {
+     "name": "q2",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.5147,
+     "distinct_count": 3403,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "2:12.470",
+     "examples": [
+      "1:25.187",
+      "1:25.315",
+      "1:25.452",
+      "1:25.691",
+      "1:25.518"
+     ],
+     "top_values": [],
+     "description": "time in qualifying 2",
+     "value_description": "in minutes / seconds / ... \ncommonsense evidence: \nonly top 15 in the q1 has the record of q2 \nQ2 is slightly shorter but follows the same format. Drivers try to put down their best times to move on to Q1 as one of the 10 fastest cars. The five outside of the top 10 are eliminated and start the race from 11th to 15th based on their best lap time.",
+     "notes": [
+      "51% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "q3",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.7099,
+     "distinct_count": 2066,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "2:09.776",
+     "examples": [
+      "1:26.714",
+      "1:26.869",
+      "1:27.079",
+      "1:27.178",
+      "1:27.236"
+     ],
+     "top_values": [],
+     "description": "time in qualifying 3",
+     "value_description": "in minutes / seconds / ... \ncommonsense evidence: \nonly top 10 in the q2 has the record of q3",
+     "notes": [
+      "71% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "qualifyId"
+   ],
+   "sample_rows": [
+    {
+     "qualifyId": 1,
+     "raceId": 18,
+     "driverId": 1,
+     "constructorId": 1,
+     "number": 22,
+     "position": 1,
+     "q1": "1:26.572",
+     "q2": "1:25.187",
+     "q3": "1:26.714"
+    },
+    {
+     "qualifyId": 2,
+     "raceId": 18,
+     "driverId": 9,
+     "constructorId": 2,
+     "number": 4,
+     "position": 2,
+     "q1": "1:26.103",
+     "q2": "1:25.315",
+     "q3": "1:26.869"
+    },
+    {
+     "qualifyId": 3,
+     "raceId": 18,
+     "driverId": 5,
+     "constructorId": 1,
+     "number": 23,
+     "position": 3,
+     "q1": "1:25.664",
+     "q2": "1:25.452",
+     "q3": "1:27.079"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "races",
+   "row_count": 976,
+   "stats_rows": 976,
+   "columns": [
+    {
+     "name": "raceId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 976,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 988,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "race ID. the unique identification number identifying the race",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 68,
+     "is_unique": false,
+     "min_value": 1950,
+     "max_value": 2017,
+     "examples": [
+      2009,
+      2008,
+      2007,
+      2006,
+      2005
+     ],
+     "top_values": [],
+     "description": "year",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "round",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 21,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       7,
+       68
+      ],
+      [
+       6,
+       68
+      ],
+      [
+       5,
+       68
+      ],
+      [
+       4,
+       68
+      ],
+      [
+       3,
+       68
+      ],
+      [
+       2,
+       68
+      ],
+      [
+       1,
+       68
+      ],
+      [
+       8,
+       66
+      ],
+      [
+       9,
+       61
+      ],
+      [
+       10,
+       56
+      ],
+      [
+       11,
+       52
+      ],
+      [
+       12,
+       48
+      ],
+      [
+       13,
+       46
+      ],
+      [
+       14,
+       45
+      ],
+      [
+       15,
+       43
+      ],
+      [
+       16,
+       38
+      ],
+      [
+       17,
+       20
+      ],
+      [
+       18,
+       12
+      ],
+      [
+       19,
+       9
+      ],
+      [
+       20,
+       3
+      ],
+      [
+       21,
+       1
+      ]
+     ],
+     "description": "round",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "circuitId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 72,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 73,
+     "examples": [
+      1,
+      2,
+      17,
+      3,
+      4
+     ],
+     "top_values": [],
+     "description": "circuit Id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 42,
+     "is_unique": false,
+     "min_value": "Abu Dhabi Grand Prix",
+     "max_value": "United States Grand Prix West",
+     "examples": [
+      "Australian Grand Prix",
+      "Malaysian Grand Prix",
+      "Chinese Grand Prix",
+      "Bahrain Grand Prix",
+      "Spanish Grand Prix"
+     ],
+     "top_values": [
+      [
+       "Italian Grand Prix",
+       68
+      ],
+      [
+       "British Grand Prix",
+       68
+      ],
+      [
+       "Monaco Grand Prix",
+       64
+      ],
+      [
+       "German Grand Prix",
+       62
+      ],
+      [
+       "Belgian Grand Prix",
+       62
+      ],
+      [
+       "French Grand Prix",
+       58
+      ],
+      [
+       "Canadian Grand Prix",
+       48
+      ],
+      [
+       "Spanish Grand Prix",
+       47
+      ],
+      [
+       "Brazilian Grand Prix",
+       45
+      ],
+      [
+       "United States Grand Prix",
+       39
+      ],
+      [
+       "Japanese Grand Prix",
+       33
+      ],
+      [
+       "Australian Grand Prix",
+       33
+      ],
+      [
+       "Hungarian Grand Prix",
+       32
+      ],
+      [
+       "Dutch Grand Prix",
+       30
+      ],
+      [
+       "Austrian Grand Prix",
+       30
+      ],
+      [
+       "San Marino Grand Prix",
+       26
+      ],
+      [
+       "South African Grand Prix",
+       23
+      ],
+      [
+       "European Grand Prix",
+       23
+      ],
+      [
+       "Argentine Grand Prix",
+       20
+      ],
+      [
+       "Malaysian Grand Prix",
+       19
+      ],
+      [
+       "Mexican Grand Prix",
+       18
+      ],
+      [
+       "Portuguese Grand Prix",
+       16
+      ],
+      [
+       "Chinese Grand Prix",
+       14
+      ],
+      [
+       "Bahrain Grand Prix",
+       13
+      ],
+      [
+       "Indianapolis 500",
+       11
+      ],
+      [
+       "Singapore Grand Prix",
+       10
+      ],
+      [
+       "Abu Dhabi Grand Prix",
+       9
+      ],
+      [
+       "United States Grand Prix West",
+       8
+      ],
+      [
+       "Turkish Grand Prix",
+       7
+      ],
+      [
+       "Detroit Grand Prix",
+       7
+      ],
+      [
+       "Swiss Grand Prix",
+       6
+      ],
+      [
+       "Swedish Grand Prix",
+       6
+      ],
+      [
+       "Russian Grand Prix",
+       4
+      ],
+      [
+       "Korean Grand Prix",
+       4
+      ],
+      [
+       "Indian Grand Prix",
+       3
+      ],
+      [
+       "Pacific Grand Prix",
+       2
+      ],
+      [
+       "Luxembourg Grand Prix",
+       2
+      ],
+      [
+       "Caesars Palace Grand Prix",
+       2
+      ],
+      [
+       "Pescara Grand Prix",
+       1
+      ],
+      [
+       "Moroccan Grand Prix",
+       1
+      ],
+      [
+       "Dallas Grand Prix",
+       1
+      ],
+      [
+       "Azerbaijan Grand Prix",
+       1
+      ]
+     ],
+     "description": "name of the race",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 976,
+     "is_unique": true,
+     "min_value": "1950-05-13",
+     "max_value": "2017-11-26",
+     "examples": [
+      "2009-03-29",
+      "2009-04-05",
+      "2009-04-19",
+      "2009-04-26",
+      "2009-05-10"
+     ],
+     "top_values": [],
+     "description": "duration time",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "time",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.749,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": "03:00:00",
+     "max_value": "20:00:00",
+     "examples": [
+      "06:00:00",
+      "09:00:00",
+      "07:00:00",
+      "12:00:00",
+      "05:00:00"
+     ],
+     "top_values": [
+      [
+       "12:00:00",
+       107
+      ],
+      [
+       "14:00:00",
+       28
+      ],
+      [
+       "06:00:00",
+       19
+      ],
+      [
+       "16:00:00",
+       11
+      ],
+      [
+       "13:00:00",
+       11
+      ],
+      [
+       "07:00:00",
+       11
+      ],
+      [
+       "19:00:00",
+       8
+      ],
+      [
+       "15:00:00",
+       8
+      ],
+      [
+       "05:00:00",
+       8
+      ],
+      [
+       "18:00:00",
+       6
+      ],
+      [
+       "17:00:00",
+       6
+      ],
+      [
+       "08:00:00",
+       5
+      ],
+      [
+       "11:00:00",
+       4
+      ],
+      [
+       "09:30:00",
+       3
+      ],
+      [
+       "04:30:00",
+       3
+      ],
+      [
+       "14:30:00",
+       2
+      ],
+      [
+       "11:30:00",
+       2
+      ],
+      [
+       "20:00:00",
+       1
+      ],
+      [
+       "09:00:00",
+       1
+      ],
+      [
+       "03:00:00",
+       1
+      ]
+     ],
+     "description": "time of the location",
+     "value_description": "",
+     "notes": [
+      "75% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 976,
+     "is_unique": true,
+     "min_value": "http://en.wikipedia.org/wiki/1950_Belgian_Grand_Prix",
+     "max_value": "https://en.wikipedia.org/wiki/2017_United_States_Grand_Prix",
+     "examples": [
+      "http://en.wikipedia.org/wiki/2009_Australian_Grand_Prix",
+      "http://en.wikipedia.org/wiki/2009_Malaysian_Grand_Prix",
+      "http://en.wikipedia.org/wiki/2009_Chinese_Grand_Prix",
+      "http://en.wikipedia.org/wiki/2009_Bahrain_Grand_Prix",
+      "http://en.wikipedia.org/wiki/2009_Spanish_Grand_Prix"
+     ],
+     "top_values": [],
+     "description": "introduction of races",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "raceId"
+   ],
+   "sample_rows": [
+    {
+     "raceId": 1,
+     "year": 2009,
+     "round": 1,
+     "circuitId": 1,
+     "name": "Australian Grand Prix",
+     "date": "2009-03-29",
+     "time": "06:00:00",
+     "url": "http://en.wikipedia.org/wiki/2009_Australian_Grand_Prix"
+    },
+    {
+     "raceId": 2,
+     "year": 2009,
+     "round": 2,
+     "circuitId": 2,
+     "name": "Malaysian Grand Prix",
+     "date": "2009-04-05",
+     "time": "09:00:00",
+     "url": "http://en.wikipedia.org/wiki/2009_Malaysian_Grand_Prix"
+    },
+    {
+     "raceId": 3,
+     "year": 2009,
+     "round": 3,
+     "circuitId": 17,
+     "name": "Chinese Grand Prix",
+     "date": "2009-04-19",
+     "time": "07:00:00",
+     "url": "http://en.wikipedia.org/wiki/2009_Chinese_Grand_Prix"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "results",
+   "row_count": 23657,
+   "stats_rows": 23657,
+   "columns": [
+    {
+     "name": "resultId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 23657,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 23661,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "Result ID. the unique identification number identifying race result",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "raceId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 970,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 982,
+     "examples": [
+      18,
+      19,
+      20,
+      21,
+      22
+     ],
+     "top_values": [],
+     "description": "race ID. the identification number identifying the race",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "driverId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 840,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 841,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "driver ID. the identification number identifying the driver",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "constructorId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 207,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 210,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "constructor Id. the identification number identifying which constructors",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "number",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 128,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 208,
+     "examples": [
+      22,
+      3,
+      7,
+      5,
+      23
+     ],
+     "top_values": [],
+     "description": "number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "grid",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 35,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 34,
+     "examples": [
+      1,
+      5,
+      7,
+      11,
+      3
+     ],
+     "top_values": [
+      [
+       0,
+       1565
+      ],
+      [
+       7,
+       981
+      ],
+      [
+       1,
+       980
+      ],
+      [
+       11,
+       978
+      ],
+      [
+       10,
+       977
+      ],
+      [
+       9,
+       977
+      ],
+      [
+       5,
+       977
+      ],
+      [
+       4,
+       977
+      ],
+      [
+       8,
+       975
+      ],
+      [
+       3,
+       975
+      ],
+      [
+       13,
+       972
+      ],
+      [
+       12,
+       972
+      ],
+      [
+       2,
+       972
+      ],
+      [
+       6,
+       970
+      ],
+      [
+       14,
+       966
+      ],
+      [
+       15,
+       958
+      ],
+      [
+       16,
+       946
+      ],
+      [
+       17,
+       934
+      ],
+      [
+       18,
+       899
+      ],
+      [
+       19,
+       885
+      ],
+      [
+       20,
+       867
+      ],
+      [
+       21,
+       697
+      ],
+      [
+       22,
+       657
+      ],
+      [
+       23,
+       453
+      ],
+      [
+       24,
+       429
+      ],
+      [
+       25,
+       301
+      ],
+      [
+       26,
+       248
+      ],
+      [
+       27,
+       46
+      ],
+      [
+       28,
+       30
+      ],
+      [
+       29,
+       25
+      ],
+      [
+       30,
+       19
+      ],
+      [
+       31,
+       18
+      ],
+      [
+       32,
+       17
+      ],
+      [
+       33,
+       13
+      ],
+      [
+       34,
+       1
+      ]
+     ],
+     "description": "the number identifying the area where cars are set into a grid formation in order to start the race.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "position",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.445,
+     "distinct_count": 33,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 33,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       4,
+       980
+      ],
+      [
+       3,
+       980
+      ],
+      [
+       2,
+       978
+      ],
+      [
+       5,
+       976
+      ],
+      [
+       1,
+       973
+      ],
+      [
+       6,
+       969
+      ],
+      [
+       7,
+       949
+      ],
+      [
+       8,
+       921
+      ],
+      [
+       9,
+       883
+      ],
+      [
+       10,
+       823
+      ],
+      [
+       11,
+       745
+      ],
+      [
+       12,
+       645
+      ],
+      [
+       13,
+       559
+      ],
+      [
+       14,
+       454
+      ],
+      [
+       15,
+       385
+      ],
+      [
+       16,
+       306
+      ],
+      [
+       17,
+       224
+      ],
+      [
+       18,
+       147
+      ],
+      [
+       19,
+       101
+      ],
+      [
+       20,
+       58
+      ],
+      [
+       21,
+       34
+      ],
+      [
+       22,
+       19
+      ],
+      [
+       23,
+       8
+      ],
+      [
+       24,
+       3
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       32,
+       1
+      ],
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ]
+     ],
+     "description": "The finishing position or track of circuits",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "positionText",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 39,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "W",
+     "examples": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "top_values": [
+      [
+       "R",
+       8495
+      ],
+      [
+       "F",
+       1368
+      ],
+      [
+       "4",
+       980
+      ],
+      [
+       "3",
+       980
+      ],
+      [
+       "2",
+       978
+      ],
+      [
+       "5",
+       976
+      ],
+      [
+       "1",
+       973
+      ],
+      [
+       "6",
+       969
+      ],
+      [
+       "7",
+       949
+      ],
+      [
+       "8",
+       921
+      ],
+      [
+       "9",
+       883
+      ],
+      [
+       "10",
+       823
+      ],
+      [
+       "11",
+       746
+      ],
+      [
+       "12",
+       645
+      ],
+      [
+       "13",
+       559
+      ],
+      [
+       "14",
+       455
+      ],
+      [
+       "15",
+       385
+      ],
+      [
+       "W",
+       323
+      ],
+      [
+       "16",
+       306
+      ],
+      [
+       "17",
+       224
+      ],
+      [
+       "N",
+       190
+      ],
+      [
+       "18",
+       147
+      ],
+      [
+       "D",
+       141
+      ],
+      [
+       "19",
+       101
+      ],
+      [
+       "20",
+       58
+      ],
+      [
+       "21",
+       34
+      ],
+      [
+       "22",
+       19
+      ],
+      [
+       "E",
+       9
+      ],
+      [
+       "23",
+       8
+      ],
+      [
+       "24",
+       3
+      ],
+      [
+       "33",
+       1
+      ],
+      [
+       "32",
+       1
+      ],
+      [
+       "31",
+       1
+      ],
+      [
+       "30",
+       1
+      ],
+      [
+       "29",
+       1
+      ],
+      [
+       "28",
+       1
+      ],
+      [
+       "27",
+       1
+      ],
+      [
+       "26",
+       1
+      ],
+      [
+       "25",
+       1
+      ]
+     ],
+     "description": "position text",
+     "value_description": "not quite useful",
+     "notes": []
+    },
+    {
+     "name": "positionOrder",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 39,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 39,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       4,
+       980
+      ],
+      [
+       3,
+       980
+      ],
+      [
+       2,
+       979
+      ],
+      [
+       11,
+       977
+      ],
+      [
+       8,
+       977
+      ],
+      [
+       7,
+       977
+      ],
+      [
+       6,
+       977
+      ],
+      [
+       5,
+       977
+      ],
+      [
+       9,
+       976
+      ],
+      [
+       10,
+       975
+      ],
+      [
+       12,
+       974
+      ],
+      [
+       1,
+       973
+      ],
+      [
+       13,
+       971
+      ],
+      [
+       14,
+       967
+      ],
+      [
+       15,
+       965
+      ],
+      [
+       16,
+       952
+      ],
+      [
+       17,
+       945
+      ],
+      [
+       18,
+       930
+      ],
+      [
+       19,
+       907
+      ],
+      [
+       20,
+       892
+      ],
+      [
+       21,
+       745
+      ],
+      [
+       22,
+       715
+      ],
+      [
+       23,
+       505
+      ],
+      [
+       24,
+       478
+      ],
+      [
+       25,
+       386
+      ],
+      [
+       26,
+       349
+      ],
+      [
+       27,
+       270
+      ],
+      [
+       28,
+       221
+      ],
+      [
+       29,
+       180
+      ],
+      [
+       30,
+       156
+      ],
+      [
+       31,
+       117
+      ],
+      [
+       32,
+       79
+      ],
+      [
+       33,
+       65
+      ],
+      [
+       34,
+       46
+      ],
+      [
+       35,
+       29
+      ],
+      [
+       36,
+       18
+      ],
+      [
+       38,
+       17
+      ],
+      [
+       37,
+       17
+      ],
+      [
+       39,
+       13
+      ]
+     ],
+     "description": "position order. the finishing order of positions",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "points",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 33,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 50.0,
+     "examples": [
+      10.0,
+      8.0,
+      6.0,
+      5.0,
+      4.0
+     ],
+     "top_values": [
+      [
+       0.0,
+       17037
+      ],
+      [
+       2.0,
+       972
+      ],
+      [
+       4.0,
+       959
+      ],
+      [
+       6.0,
+       943
+      ],
+      [
+       1.0,
+       913
+      ],
+      [
+       3.0,
+       820
+      ],
+      [
+       10.0,
+       467
+      ],
+      [
+       9.0,
+       437
+      ],
+      [
+       8.0,
+       326
+      ],
+      [
+       12.0,
+       150
+      ],
+      [
+       25.0,
+       149
+      ],
+      [
+       18.0,
+       149
+      ],
+      [
+       15.0,
+       149
+      ],
+      [
+       5.0,
+       132
+      ],
+      [
+       1.5,
+       17
+      ],
+      [
+       7.0,
+       9
+      ],
+      [
+       0.5,
+       5
+      ],
+      [
+       4.5,
+       4
+      ],
+      [
+       1.33,
+       3
+      ],
+      [
+       8.5,
+       2
+      ],
+      [
+       6.5,
+       2
+      ],
+      [
+       50.0,
+       1
+      ],
+      [
+       36.0,
+       1
+      ],
+      [
+       30.0,
+       1
+      ],
+      [
+       24.0,
+       1
+      ],
+      [
+       20.0,
+       1
+      ],
+      [
+       16.0,
+       1
+      ],
+      [
+       8.14,
+       1
+      ],
+      [
+       6.14,
+       1
+      ],
+      [
+       4.14,
+       1
+      ],
+      [
+       3.5,
+       1
+      ],
+      [
+       3.14,
+       1
+      ],
+      [
+       2.5,
+       1
+      ]
+     ],
+     "description": "points",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "laps",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 172,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 200,
+     "examples": [
+      58,
+      57,
+      55,
+      53,
+      47
+     ],
+     "top_values": [],
+     "description": "lap number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "time",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.748,
+     "distinct_count": 5755,
+     "is_unique": false,
+     "min_value": "+ 1:06.7",
+     "max_value": "4:04:39.537",
+     "examples": [
+      "1:34:50.616",
+      "+5.478",
+      "+8.163",
+      "+17.181",
+      "+18.014"
+     ],
+     "top_values": [],
+     "description": "finish time",
+     "value_description": "commonsense evidence: \n1. if the value exists, it means the driver finished the race. \n2. Only the time of the champion shows in the format of \"minutes: seconds.millionsecond\", the time of the other drivers shows as \"seconds.millionsecond\" , which means their actual time is the time of the champion adding the value in this cell.",
+     "notes": [
+      "75% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "milliseconds",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.7481,
+     "distinct_count": 5923,
+     "is_unique": false,
+     "min_value": 1474899,
+     "max_value": 15090540,
+     "examples": [
+      5690616,
+      5696094,
+      5698779,
+      5707797,
+      5708630
+     ],
+     "top_values": [],
+     "description": "the actual finishing time of drivers in milliseconds",
+     "value_description": "the actual finishing time of drivers",
+     "notes": [
+      "75% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "fastestLap",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.7773,
+     "distinct_count": 77,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 78,
+     "examples": [
+      39,
+      41,
+      58,
+      43,
+      50
+     ],
+     "top_values": [],
+     "description": "fastest lap number",
+     "value_description": "",
+     "notes": [
+      "78% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "rank",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.7713,
+     "distinct_count": 25,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 24,
+     "examples": [
+      2,
+      3,
+      5,
+      7,
+      1
+     ],
+     "top_values": [
+      [
+       6,
+       256
+      ],
+      [
+       5,
+       256
+      ],
+      [
+       4,
+       256
+      ],
+      [
+       3,
+       256
+      ],
+      [
+       2,
+       256
+      ],
+      [
+       1,
+       256
+      ],
+      [
+       13,
+       255
+      ],
+      [
+       12,
+       255
+      ],
+      [
+       11,
+       255
+      ],
+      [
+       10,
+       255
+      ],
+      [
+       9,
+       255
+      ],
+      [
+       7,
+       255
+      ],
+      [
+       15,
+       254
+      ],
+      [
+       14,
+       254
+      ],
+      [
+       8,
+       254
+      ],
+      [
+       16,
+       253
+      ],
+      [
+       17,
+       247
+      ],
+      [
+       18,
+       242
+      ],
+      [
+       19,
+       223
+      ],
+      [
+       20,
+       195
+      ],
+      [
+       0,
+       143
+      ],
+      [
+       21,
+       121
+      ],
+      [
+       22,
+       90
+      ],
+      [
+       23,
+       42
+      ],
+      [
+       24,
+       27
+      ]
+     ],
+     "description": "starting rank positioned by fastest lap speed",
+     "value_description": "",
+     "notes": [
+      "77% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "fastestLapTime",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.7773,
+     "distinct_count": 4955,
+     "is_unique": false,
+     "min_value": "1:07.411",
+     "max_value": "3:22.300",
+     "examples": [
+      "1:27.452",
+      "1:27.739",
+      "1:28.090",
+      "1:28.603",
+      "1:27.418"
+     ],
+     "top_values": [],
+     "description": "fastest Lap Time",
+     "value_description": "faster (smaller in the value) \"fastestLapTime\" leads to higher rank (smaller is higher rank)",
+     "notes": [
+      "78% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "fastestLapSpeed",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.7773,
+     "distinct_count": 5045,
+     "is_unique": false,
+     "min_value": "100.615",
+     "max_value": "91.610",
+     "examples": [
+      "218.300",
+      "217.586",
+      "216.719",
+      "215.464",
+      "218.385"
+     ],
+     "top_values": [],
+     "description": "fastest Lap Speed",
+     "value_description": "(km / h)",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison",
+      "78% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "statusId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 132,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 136,
+     "examples": [
+      1,
+      11,
+      5,
+      4,
+      3
+     ],
+     "top_values": [],
+     "description": "status ID",
+     "value_description": "its category description appear in the table status",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "resultId"
+   ],
+   "sample_rows": [
+    {
+     "resultId": 1,
+     "raceId": 18,
+     "driverId": 1,
+     "constructorId": 1,
+     "number": 22,
+     "grid": 1,
+     "position": 1,
+     "positionText": "1",
+     "positionOrder": 1,
+     "points": 10.0,
+     "laps": 58,
+     "time": "1:34:50.616",
+     "milliseconds": 5690616,
+     "fastestLap": 39,
+     "rank": 2,
+     "fastestLapTime": "1:27.452",
+     "fastestLapSpeed": "218.300",
+     "statusId": 1
+    },
+    {
+     "resultId": 2,
+     "raceId": 18,
+     "driverId": 2,
+     "constructorId": 2,
+     "number": 3,
+     "grid": 5,
+     "position": 2,
+     "positionText": "2",
+     "positionOrder": 2,
+     "points": 8.0,
+     "laps": 58,
+     "time": "+5.478",
+     "milliseconds": 5696094,
+     "fastestLap": 41,
+     "rank": 3,
+     "fastestLapTime": "1:27.739",
+     "fastestLapSpeed": "217.586",
+     "statusId": 1
+    },
+    {
+     "resultId": 3,
+     "raceId": 18,
+     "driverId": 3,
+     "constructorId": 3,
+     "number": 7,
+     "grid": 7,
+     "position": 3,
+     "positionText": "3",
+     "positionOrder": 3,
+     "points": 6.0,
+     "laps": 58,
+     "time": "+8.163",
+     "milliseconds": 5698779,
+     "fastestLap": 41,
+     "rank": 5,
+     "fastestLapTime": "1:28.090",
+     "fastestLapSpeed": "216.719",
+     "statusId": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "seasons",
+   "row_count": 68,
+   "stats_rows": 68,
+   "columns": [
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 68,
+     "is_unique": true,
+     "min_value": 1950,
+     "max_value": 2017,
+     "examples": [
+      1950,
+      1951,
+      1952,
+      1953,
+      1954
+     ],
+     "top_values": [],
+     "description": "race ID. the unique identification number identifying the race",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 68,
+     "is_unique": true,
+     "min_value": "http://en.wikipedia.org/wiki/1950_Formula_One_season",
+     "max_value": "https://en.wikipedia.org/wiki/2017_Formula_One_season",
+     "examples": [
+      "http://en.wikipedia.org/wiki/1950_Formula_One_season",
+      "http://en.wikipedia.org/wiki/1951_Formula_One_season",
+      "http://en.wikipedia.org/wiki/1952_Formula_One_season",
+      "http://en.wikipedia.org/wiki/1953_Formula_One_season",
+      "http://en.wikipedia.org/wiki/1954_Formula_One_season"
+     ],
+     "top_values": [],
+     "description": "website link of season race introduction",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "year"
+   ],
+   "sample_rows": [
+    {
+     "year": 1950,
+     "url": "http://en.wikipedia.org/wiki/1950_Formula_One_season"
+    },
+    {
+     "year": 1951,
+     "url": "http://en.wikipedia.org/wiki/1951_Formula_One_season"
+    },
+    {
+     "year": 1952,
+     "url": "http://en.wikipedia.org/wiki/1952_Formula_One_season"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "status",
+   "row_count": 134,
+   "stats_rows": 134,
+   "columns": [
+    {
+     "name": "statusId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 134,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 136,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "status ID. the unique identification number identifying status",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "status",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 134,
+     "is_unique": true,
+     "min_value": "+1 Lap",
+     "max_value": "Withdrew",
+     "examples": [
+      "Finished",
+      "Disqualified",
+      "Accident",
+      "Collision",
+      "Engine"
+     ],
+     "top_values": [],
+     "description": "full name of status",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "statusId"
+   ],
+   "sample_rows": [
+    {
+     "statusId": 1,
+     "status": "Finished"
+    },
+    {
+     "statusId": 2,
+     "status": "Disqualified"
+    },
+    {
+     "statusId": 3,
+     "status": "Accident"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "constructorResults",
+   "from_column": "constructorId",
+   "to_table": "constructors",
+   "to_column": "constructorId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "constructorResults",
+   "from_column": "raceId",
+   "to_table": "races",
+   "to_column": "raceId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "constructorStandings",
+   "from_column": "constructorId",
+   "to_table": "constructors",
+   "to_column": "constructorId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "constructorStandings",
+   "from_column": "raceId",
+   "to_table": "races",
+   "to_column": "raceId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "driverStandings",
+   "from_column": "driverId",
+   "to_table": "drivers",
+   "to_column": "driverId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "driverStandings",
+   "from_column": "raceId",
+   "to_table": "races",
+   "to_column": "raceId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "lapTimes",
+   "from_column": "driverId",
+   "to_table": "drivers",
+   "to_column": "driverId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "lapTimes",
+   "from_column": "raceId",
+   "to_table": "races",
+   "to_column": "raceId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "pitStops",
+   "from_column": "driverId",
+   "to_table": "drivers",
+   "to_column": "driverId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "pitStops",
+   "from_column": "raceId",
+   "to_table": "races",
+   "to_column": "raceId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "qualifying",
+   "from_column": "constructorId",
+   "to_table": "constructors",
+   "to_column": "constructorId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "qualifying",
+   "from_column": "driverId",
+   "to_table": "drivers",
+   "to_column": "driverId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "qualifying",
+   "from_column": "raceId",
+   "to_table": "races",
+   "to_column": "raceId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "races",
+   "from_column": "circuitId",
+   "to_table": "circuits",
+   "to_column": "circuitId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "races",
+   "from_column": "year",
+   "to_table": "seasons",
+   "to_column": "year",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "results",
+   "from_column": "statusId",
+   "to_table": "status",
+   "to_column": "statusId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "results",
+   "from_column": "constructorId",
+   "to_table": "constructors",
+   "to_column": "constructorId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "results",
+   "from_column": "driverId",
+   "to_table": "drivers",
+   "to_column": "driverId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "results",
+   "from_column": "raceId",
+   "to_table": "races",
+   "to_column": "raceId",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "pitStops",
+   "from_column": "raceId",
+   "to_table": "lapTimes",
+   "to_column": "raceId",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "pitStops",
+   "from_column": "driverId",
+   "to_table": "lapTimes",
+   "to_column": "driverId",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "pitStops",
+   "from_column": "lap",
+   "to_table": "lapTimes",
+   "to_column": "lap",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "qualifying",
+   "from_column": "raceId",
+   "to_table": "lapTimes",
+   "to_column": "raceId",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.893
+  }
+ ],
+ "notes": []
+}

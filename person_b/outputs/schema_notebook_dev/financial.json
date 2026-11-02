@@ -1,0 +1,2530 @@
+{
+ "db_id": "financial",
+ "schema_version": "1.0",
+ "db_path": "data/bird_dev/dev_databases/financial/financial.sqlite",
+ "fingerprint": "71294976-1792490204508765700-v1.0",
+ "created_at": "2026-10-20T09:59:05+00:00",
+ "profile_seconds": 1.159,
+ "tables": [
+  {
+   "name": "account",
+   "row_count": 4500,
+   "stats_rows": 4500,
+   "columns": [
+    {
+     "name": "account_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4500,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 11382,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "account id. the id of the account",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "district_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 77,
+     "examples": [
+      18,
+      1,
+      5,
+      12,
+      15
+     ],
+     "top_values": [],
+     "description": "location of branch",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "frequency",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "POPLATEK MESICNE",
+     "max_value": "POPLATEK TYDNE",
+     "examples": [
+      "POPLATEK MESICNE",
+      "POPLATEK TYDNE",
+      "POPLATEK PO OBRATU"
+     ],
+     "top_values": [
+      [
+       "POPLATEK MESICNE",
+       4167
+      ],
+      [
+       "POPLATEK TYDNE",
+       240
+      ],
+      [
+       "POPLATEK PO OBRATU",
+       93
+      ]
+     ],
+     "description": "frequency of the acount",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1535,
+     "is_unique": false,
+     "min_value": "1993-01-01",
+     "max_value": "1997-12-29",
+     "examples": [
+      "1995-03-24",
+      "1993-02-26",
+      "1997-07-07",
+      "1996-02-21",
+      "1997-05-30"
+     ],
+     "top_values": [],
+     "description": "the creation date of the account",
+     "value_description": "in the form YYMMDD",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "account_id"
+   ],
+   "sample_rows": [
+    {
+     "account_id": 1,
+     "district_id": 18,
+     "frequency": "POPLATEK MESICNE",
+     "date": "1995-03-24"
+    },
+    {
+     "account_id": 2,
+     "district_id": 1,
+     "frequency": "POPLATEK MESICNE",
+     "date": "1993-02-26"
+    },
+    {
+     "account_id": 3,
+     "district_id": 5,
+     "frequency": "POPLATEK MESICNE",
+     "date": "1997-07-07"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "card",
+   "row_count": 892,
+   "stats_rows": 892,
+   "columns": [
+    {
+     "name": "card_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 892,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 1247,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "credit card id. id number of credit card",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "disp_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 892,
+     "is_unique": true,
+     "min_value": 9,
+     "max_value": 13660,
+     "examples": [
+      9,
+      19,
+      41,
+      42,
+      51
+     ],
+     "top_values": [],
+     "description": "disposition id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "classic",
+     "max_value": "junior",
+     "examples": [
+      "gold",
+      "classic",
+      "junior"
+     ],
+     "top_values": [
+      [
+       "classic",
+       659
+      ],
+      [
+       "junior",
+       145
+      ],
+      [
+       "gold",
+       88
+      ]
+     ],
+     "description": "type of credit card",
+     "value_description": "\"junior\": junior class of credit card; \n\"classic\": standard class of credit card; \n\"gold\": high-level credit card",
+     "notes": []
+    },
+    {
+     "name": "issued",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 607,
+     "is_unique": false,
+     "min_value": "1993-11-07",
+     "max_value": "1998-12-29",
+     "examples": [
+      "1998-10-16",
+      "1998-03-13",
+      "1995-09-03",
+      "1998-11-26",
+      "1995-04-24"
+     ],
+     "top_values": [],
+     "description": "the date when the credit card issued",
+     "value_description": "in the form YYMMDD",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "card_id"
+   ],
+   "sample_rows": [
+    {
+     "card_id": 1,
+     "disp_id": 9,
+     "type": "gold",
+     "issued": "1998-10-16"
+    },
+    {
+     "card_id": 2,
+     "disp_id": 19,
+     "type": "classic",
+     "issued": "1998-03-13"
+    },
+    {
+     "card_id": 3,
+     "disp_id": 41,
+     "type": "gold",
+     "issued": "1995-09-03"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "client",
+   "row_count": 5369,
+   "stats_rows": 5369,
+   "columns": [
+    {
+     "name": "client_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5369,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 13998,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "M",
+     "examples": [
+      "F",
+      "M"
+     ],
+     "top_values": [
+      [
+       "M",
+       2724
+      ],
+      [
+       "F",
+       2645
+      ]
+     ],
+     "description": "",
+     "value_description": "F：female \nM：male",
+     "notes": []
+    },
+    {
+     "name": "birth_date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4738,
+     "is_unique": false,
+     "min_value": "1911-08-20",
+     "max_value": "1987-09-27",
+     "examples": [
+      "1970-12-13",
+      "1945-02-04",
+      "1940-10-09",
+      "1956-12-01",
+      "1960-07-03"
+     ],
+     "top_values": [],
+     "description": "birth date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "district_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 77,
+     "examples": [
+      18,
+      1,
+      5,
+      12,
+      15
+     ],
+     "top_values": [],
+     "description": "location of branch",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "client_id"
+   ],
+   "sample_rows": [
+    {
+     "client_id": 1,
+     "gender": "F",
+     "birth_date": "1970-12-13",
+     "district_id": 18
+    },
+    {
+     "client_id": 2,
+     "gender": "M",
+     "birth_date": "1945-02-04",
+     "district_id": 1
+    },
+    {
+     "client_id": 3,
+     "gender": "F",
+     "birth_date": "1940-10-09",
+     "district_id": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "disp",
+   "row_count": 5369,
+   "stats_rows": 5369,
+   "columns": [
+    {
+     "name": "disp_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5369,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 13690,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "disposition id. unique number of identifying this row of record",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "client_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5369,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 13998,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "id number of client",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "account_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4500,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 11382,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "id number of account",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "DISPONENT",
+     "max_value": "OWNER",
+     "examples": [
+      "OWNER",
+      "DISPONENT"
+     ],
+     "top_values": [
+      [
+       "OWNER",
+       4500
+      ],
+      [
+       "DISPONENT",
+       869
+      ]
+     ],
+     "description": "type of disposition",
+     "value_description": "\"OWNER\" : \"USER\" : \"DISPONENT\"\ncommonsense evidence:\nthe account can only have the right to issue permanent orders or apply for loans",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "disp_id"
+   ],
+   "sample_rows": [
+    {
+     "disp_id": 1,
+     "client_id": 1,
+     "account_id": 1,
+     "type": "OWNER"
+    },
+    {
+     "disp_id": 2,
+     "client_id": 2,
+     "account_id": 2,
+     "type": "OWNER"
+    },
+    {
+     "disp_id": 3,
+     "client_id": 3,
+     "account_id": 2,
+     "type": "DISPONENT"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "district",
+   "row_count": 77,
+   "stats_rows": 77,
+   "columns": [
+    {
+     "name": "district_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 77,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "location of branch",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "A2",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": true,
+     "min_value": "Benesov",
+     "max_value": "Znojmo",
+     "examples": [
+      "Hl.m. Praha",
+      "Benesov",
+      "Beroun",
+      "Kladno",
+      "Kolin"
+     ],
+     "top_values": [],
+     "description": "district_name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "A3",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": "Prague",
+     "max_value": "west Bohemia",
+     "examples": [
+      "Prague",
+      "central Bohemia",
+      "south Bohemia",
+      "west Bohemia",
+      "north Bohemia"
+     ],
+     "top_values": [
+      [
+       "south Moravia",
+       14
+      ],
+      [
+       "central Bohemia",
+       12
+      ],
+      [
+       "north Moravia",
+       11
+      ],
+      [
+       "east Bohemia",
+       11
+      ],
+      [
+       "west Bohemia",
+       10
+      ],
+      [
+       "north Bohemia",
+       10
+      ],
+      [
+       "south Bohemia",
+       8
+      ],
+      [
+       "Prague",
+       1
+      ]
+     ],
+     "description": "region",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "A4",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": true,
+     "min_value": "102609",
+     "max_value": "95907",
+     "examples": [
+      "1204953",
+      "88884",
+      "75232",
+      "149893",
+      "95616"
+     ],
+     "top_values": [],
+     "description": "number of inhabitants",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "A5",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 53,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "99",
+     "examples": [
+      "0",
+      "80",
+      "55",
+      "63",
+      "65"
+     ],
+     "top_values": [],
+     "description": "no. of municipalities with inhabitants < 499. municipality < district < region",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "A6",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 36,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "8",
+     "examples": [
+      "0",
+      "26",
+      "29",
+      "30",
+      "23"
+     ],
+     "top_values": [
+      [
+       "41",
+       6
+      ],
+      [
+       "26",
+       6
+      ],
+      [
+       "19",
+       5
+      ],
+      [
+       "16",
+       5
+      ],
+      [
+       "29",
+       4
+      ],
+      [
+       "28",
+       4
+      ],
+      [
+       "0",
+       4
+      ],
+      [
+       "33",
+       3
+      ],
+      [
+       "23",
+       3
+      ],
+      [
+       "21",
+       3
+      ],
+      [
+       "13",
+       3
+      ],
+      [
+       "11",
+       3
+      ],
+      [
+       "36",
+       2
+      ],
+      [
+       "35",
+       2
+      ],
+      [
+       "30",
+       2
+      ],
+      [
+       "25",
+       2
+      ],
+      [
+       "8",
+       1
+      ],
+      [
+       "70",
+       1
+      ],
+      [
+       "50",
+       1
+      ],
+      [
+       "49",
+       1
+      ],
+      [
+       "42",
+       1
+      ],
+      [
+       "40",
+       1
+      ],
+      [
+       "4",
+       1
+      ],
+      [
+       "37",
+       1
+      ],
+      [
+       "32",
+       1
+      ],
+      [
+       "27",
+       1
+      ],
+      [
+       "24",
+       1
+      ],
+      [
+       "22",
+       1
+      ],
+      [
+       "20",
+       1
+      ],
+      [
+       "2",
+       1
+      ],
+      [
+       "18",
+       1
+      ],
+      [
+       "17",
+       1
+      ],
+      [
+       "15",
+       1
+      ],
+      [
+       "14",
+       1
+      ],
+      [
+       "12",
+       1
+      ],
+      [
+       "10",
+       1
+      ]
+     ],
+     "description": "no. of municipalities with inhabitants 500-1999. municipality < district < region",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "A7",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "9",
+     "examples": [
+      "0",
+      "6",
+      "4",
+      "1",
+      "7"
+     ],
+     "top_values": [
+      [
+       "4",
+       12
+      ],
+      [
+       "6",
+       11
+      ],
+      [
+       "7",
+       10
+      ],
+      [
+       "5",
+       9
+      ],
+      [
+       "8",
+       5
+      ],
+      [
+       "3",
+       5
+      ],
+      [
+       "10",
+       5
+      ],
+      [
+       "0",
+       4
+      ],
+      [
+       "2",
+       3
+      ],
+      [
+       "1",
+       3
+      ],
+      [
+       "18",
+       2
+      ],
+      [
+       "13",
+       2
+      ],
+      [
+       "12",
+       2
+      ],
+      [
+       "9",
+       1
+      ],
+      [
+       "20",
+       1
+      ],
+      [
+       "14",
+       1
+      ],
+      [
+       "11",
+       1
+      ]
+     ],
+     "description": "no. of municipalities with inhabitants 2000-9999. municipality < district < region",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "A8",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 5,
+     "examples": [
+      1,
+      2,
+      3,
+      0,
+      4
+     ],
+     "top_values": [
+      [
+       1,
+       34
+      ],
+      [
+       2,
+       23
+      ],
+      [
+       3,
+       12
+      ],
+      [
+       0,
+       4
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       5,
+       1
+      ]
+     ],
+     "description": "no. of municipalities with inhabitants > 10000. municipality < district < region",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "A9",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 11,
+     "examples": [
+      1,
+      5,
+      6,
+      4,
+      8
+     ],
+     "top_values": [
+      [
+       6,
+       14
+      ],
+      [
+       4,
+       12
+      ],
+      [
+       7,
+       11
+      ],
+      [
+       5,
+       10
+      ],
+      [
+       10,
+       7
+      ],
+      [
+       9,
+       7
+      ],
+      [
+       8,
+       7
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       11,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       2,
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "not useful",
+     "notes": []
+    },
+    {
+     "name": "A10",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 70,
+     "is_unique": false,
+     "min_value": 33.9,
+     "max_value": 100.0,
+     "examples": [
+      100.0,
+      46.7,
+      41.7,
+      67.4,
+      51.4
+     ],
+     "top_values": [],
+     "description": "ratio of urban inhabitants",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "A11",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 76,
+     "is_unique": false,
+     "min_value": 8110,
+     "max_value": 12541,
+     "examples": [
+      12541,
+      8507,
+      8980,
+      9753,
+      9307
+     ],
+     "top_values": [],
+     "description": "average salary",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "A12",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.013,
+     "distinct_count": 41,
+     "is_unique": false,
+     "min_value": 0.2,
+     "max_value": 7.3,
+     "examples": [
+      0.2,
+      1.6,
+      1.9,
+      4.6,
+      3.8
+     ],
+     "top_values": [
+      [
+       3.3,
+       6
+      ],
+      [
+       1.7,
+       4
+      ],
+      [
+       1.6,
+       4
+      ],
+      [
+       5.7,
+       3
+      ],
+      [
+       4.7,
+       3
+      ],
+      [
+       3.8,
+       3
+      ],
+      [
+       2.8,
+       3
+      ],
+      [
+       2.5,
+       3
+      ],
+      [
+       6.4,
+       2
+      ],
+      [
+       4.6,
+       2
+      ],
+      [
+       4.0,
+       2
+      ],
+      [
+       3.7,
+       2
+      ],
+      [
+       3.5,
+       2
+      ],
+      [
+       3.1,
+       2
+      ],
+      [
+       2.7,
+       2
+      ],
+      [
+       2.6,
+       2
+      ],
+      [
+       2.4,
+       2
+      ],
+      [
+       2.2,
+       2
+      ],
+      [
+       1.8,
+       2
+      ],
+      [
+       1.5,
+       2
+      ],
+      [
+       1.2,
+       2
+      ],
+      [
+       1.1,
+       2
+      ],
+      [
+       7.3,
+       1
+      ],
+      [
+       7.0,
+       1
+      ],
+      [
+       6.6,
+       1
+      ],
+      [
+       5.9,
+       1
+      ],
+      [
+       5.3,
+       1
+      ],
+      [
+       4.8,
+       1
+      ],
+      [
+       4.4,
+       1
+      ],
+      [
+       3.4,
+       1
+      ],
+      [
+       3.2,
+       1
+      ],
+      [
+       2.9,
+       1
+      ],
+      [
+       2.3,
+       1
+      ],
+      [
+       1.9,
+       1
+      ],
+      [
+       1.4,
+       1
+      ],
+      [
+       1.3,
+       1
+      ],
+      [
+       1.0,
+       1
+      ],
+      [
+       0.6,
+       1
+      ],
+      [
+       0.5,
+       1
+      ],
+      [
+       0.4,
+       1
+      ],
+      [
+       0.2,
+       1
+      ]
+     ],
+     "description": "unemployment rate 1995",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "A13",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 73,
+     "is_unique": false,
+     "min_value": 0.43,
+     "max_value": 9.4,
+     "examples": [
+      0.43,
+      1.85,
+      2.21,
+      5.05,
+      4.43
+     ],
+     "top_values": [],
+     "description": "unemployment rate 1996",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "A14",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 44,
+     "is_unique": false,
+     "min_value": 81,
+     "max_value": 167,
+     "examples": [
+      167,
+      132,
+      111,
+      109,
+      118
+     ],
+     "top_values": [
+      [
+       131,
+       4
+      ],
+      [
+       100,
+       4
+      ],
+      [
+       124,
+       3
+      ],
+      [
+       123,
+       3
+      ],
+      [
+       113,
+       3
+      ],
+      [
+       111,
+       3
+      ],
+      [
+       110,
+       3
+      ],
+      [
+       109,
+       3
+      ],
+      [
+       107,
+       3
+      ],
+      [
+       102,
+       3
+      ],
+      [
+       132,
+       2
+      ],
+      [
+       130,
+       2
+      ],
+      [
+       126,
+       2
+      ],
+      [
+       120,
+       2
+      ],
+      [
+       118,
+       2
+      ],
+      [
+       116,
+       2
+      ],
+      [
+       108,
+       2
+      ],
+      [
+       99,
+       2
+      ],
+      [
+       97,
+       2
+      ],
+      [
+       96,
+       2
+      ],
+      [
+       90,
+       2
+      ],
+      [
+       167,
+       1
+      ],
+      [
+       155,
+       1
+      ],
+      [
+       154,
+       1
+      ],
+      [
+       149,
+       1
+      ],
+      [
+       145,
+       1
+      ],
+      [
+       141,
+       1
+      ],
+      [
+       140,
+       1
+      ],
+      [
+       137,
+       1
+      ],
+      [
+       135,
+       1
+      ],
+      [
+       128,
+       1
+      ],
+      [
+       127,
+       1
+      ],
+      [
+       125,
+       1
+      ],
+      [
+       119,
+       1
+      ],
+      [
+       117,
+       1
+      ],
+      [
+       115,
+       1
+      ],
+      [
+       114,
+       1
+      ],
+      [
+       112,
+       1
+      ],
+      [
+       106,
+       1
+      ],
+      [
+       105,
+       1
+      ],
+      [
+       104,
+       1
+      ],
+      [
+       94,
+       1
+      ],
+      [
+       87,
+       1
+      ],
+      [
+       81,
+       1
+      ]
+     ],
+     "description": "no. of entrepreneurs per 1000 inhabitants",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "A15",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.013,
+     "distinct_count": 75,
+     "is_unique": false,
+     "min_value": 818,
+     "max_value": 85677,
+     "examples": [
+      85677,
+      2159,
+      2824,
+      5244,
+      2616
+     ],
+     "top_values": [],
+     "description": "no. of committed crimes 1995",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "A16",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 76,
+     "is_unique": false,
+     "min_value": 888,
+     "max_value": 99107,
+     "examples": [
+      99107,
+      2674,
+      2813,
+      5892,
+      3040
+     ],
+     "top_values": [],
+     "description": "no. of committed crimes 1996",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "district_id"
+   ],
+   "sample_rows": [
+    {
+     "district_id": 1,
+     "A2": "Hl.m. Praha",
+     "A3": "Prague",
+     "A4": "1204953",
+     "A5": "0",
+     "A6": "0",
+     "A7": "0",
+     "A8": 1,
+     "A9": 1,
+     "A10": 100.0,
+     "A11": 12541,
+     "A12": 0.2,
+     "A13": 0.43,
+     "A14": 167,
+     "A15": 85677,
+     "A16": 99107
+    },
+    {
+     "district_id": 2,
+     "A2": "Benesov",
+     "A3": "central Bohemia",
+     "A4": "88884",
+     "A5": "80",
+     "A6": "26",
+     "A7": "6",
+     "A8": 2,
+     "A9": 5,
+     "A10": 46.7,
+     "A11": 8507,
+     "A12": 1.6,
+     "A13": 1.85,
+     "A14": 132,
+     "A15": 2159,
+     "A16": 2674
+    },
+    {
+     "district_id": 3,
+     "A2": "Beroun",
+     "A3": "central Bohemia",
+     "A4": "75232",
+     "A5": "55",
+     "A6": "26",
+     "A7": "4",
+     "A8": 1,
+     "A9": 5,
+     "A10": 41.7,
+     "A11": 8980,
+     "A12": 1.9,
+     "A13": 2.21,
+     "A14": 111,
+     "A15": 2824,
+     "A16": 2813
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "loan",
+   "row_count": 682,
+   "stats_rows": 682,
+   "columns": [
+    {
+     "name": "loan_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 682,
+     "is_unique": true,
+     "min_value": 4959,
+     "max_value": 7308,
+     "examples": [
+      4959,
+      4961,
+      4962,
+      4967,
+      4968
+     ],
+     "top_values": [],
+     "description": "the id number identifying the loan data",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "account_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 682,
+     "is_unique": true,
+     "min_value": 2,
+     "max_value": 11362,
+     "examples": [
+      2,
+      19,
+      25,
+      37,
+      38
+     ],
+     "top_values": [],
+     "description": "the id number identifying the account",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 559,
+     "is_unique": false,
+     "min_value": "1993-07-05",
+     "max_value": "1998-12-08",
+     "examples": [
+      "1994-01-05",
+      "1996-04-29",
+      "1997-12-08",
+      "1998-10-14",
+      "1998-04-19"
+     ],
+     "top_values": [],
+     "description": "the date when the loan is approved",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "amount",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 645,
+     "is_unique": false,
+     "min_value": 4980,
+     "max_value": 590820,
+     "examples": [
+      80952,
+      30276,
+      318480,
+      110736,
+      165960
+     ],
+     "top_values": [],
+     "description": "approved amount",
+     "value_description": "unit：US dollar",
+     "notes": []
+    },
+    {
+     "name": "duration",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 12,
+     "max_value": 60,
+     "examples": [
+      24,
+      12,
+      60,
+      48,
+      36
+     ],
+     "top_values": [
+      [
+       60,
+       145
+      ],
+      [
+       48,
+       138
+      ],
+      [
+       24,
+       138
+      ],
+      [
+       12,
+       131
+      ],
+      [
+       36,
+       130
+      ]
+     ],
+     "description": "loan duration",
+     "value_description": "unit：month",
+     "notes": []
+    },
+    {
+     "name": "payments",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 577,
+     "is_unique": false,
+     "min_value": 304.0,
+     "max_value": 9910.0,
+     "examples": [
+      3373.0,
+      2523.0,
+      5308.0,
+      2307.0,
+      6915.0
+     ],
+     "top_values": [],
+     "description": "monthly payments",
+     "value_description": "unit：month",
+     "notes": []
+    },
+    {
+     "name": "status",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "D",
+     "examples": [
+      "A",
+      "B",
+      "D",
+      "C"
+     ],
+     "top_values": [
+      [
+       "C",
+       403
+      ],
+      [
+       "A",
+       203
+      ],
+      [
+       "D",
+       45
+      ],
+      [
+       "B",
+       31
+      ]
+     ],
+     "description": "repayment status",
+     "value_description": "'A' stands for contract finished, no problems;\n'B' stands for contract finished, loan not paid;\n'C' stands for running contract, OK so far;\n'D' stands for running contract, client in debt",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "loan_id"
+   ],
+   "sample_rows": [
+    {
+     "loan_id": 4959,
+     "account_id": 2,
+     "date": "1994-01-05",
+     "amount": 80952,
+     "duration": 24,
+     "payments": 3373.0,
+     "status": "A"
+    },
+    {
+     "loan_id": 4961,
+     "account_id": 19,
+     "date": "1996-04-29",
+     "amount": 30276,
+     "duration": 12,
+     "payments": 2523.0,
+     "status": "B"
+    },
+    {
+     "loan_id": 4962,
+     "account_id": 25,
+     "date": "1997-12-08",
+     "amount": 30276,
+     "duration": 12,
+     "payments": 2523.0,
+     "status": "A"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "order",
+   "row_count": 6471,
+   "stats_rows": 6471,
+   "columns": [
+    {
+     "name": "order_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6471,
+     "is_unique": true,
+     "min_value": 29401,
+     "max_value": 46338,
+     "examples": [
+      29401,
+      29402,
+      29403,
+      29404,
+      29405
+     ],
+     "top_values": [],
+     "description": "identifying the unique order",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "account_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3758,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 11362,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "id number of account",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "bank_to",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": "AB",
+     "max_value": "YZ",
+     "examples": [
+      "YZ",
+      "ST",
+      "QR",
+      "WX",
+      "CD"
+     ],
+     "top_values": [
+      [
+       "QR",
+       531
+      ],
+      [
+       "YZ",
+       521
+      ],
+      [
+       "AB",
+       519
+      ],
+      [
+       "WX",
+       515
+      ],
+      [
+       "ST",
+       511
+      ],
+      [
+       "KL",
+       500
+      ],
+      [
+       "UV",
+       499
+      ],
+      [
+       "IJ",
+       496
+      ],
+      [
+       "GH",
+       487
+      ],
+      [
+       "OP",
+       485
+      ],
+      [
+       "EF",
+       483
+      ],
+      [
+       "MN",
+       466
+      ],
+      [
+       "CD",
+       458
+      ]
+     ],
+     "description": "bank of the recipient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "account_to",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6446,
+     "is_unique": false,
+     "min_value": 399,
+     "max_value": 99994199,
+     "examples": [
+      87144583,
+      89597016,
+      13943797,
+      83084338,
+      24485939
+     ],
+     "top_values": [],
+     "description": "account of the recipient",
+     "value_description": "each bank has unique two-letter code",
+     "notes": []
+    },
+    {
+     "name": "amount",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4412,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 14882.0,
+     "examples": [
+      2452.0,
+      3372.7,
+      7266.0,
+      1135.0,
+      327.0
+     ],
+     "top_values": [],
+     "description": "debited amount",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "k_symbol",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "UVER",
+     "examples": [
+      "SIPO",
+      "UVER",
+      "",
+      "POJISTNE",
+      "LEASING"
+     ],
+     "top_values": [
+      [
+       "SIPO",
+       3502
+      ],
+      [
+       "",
+       1379
+      ],
+      [
+       "UVER",
+       717
+      ],
+      [
+       "POJISTNE",
+       532
+      ],
+      [
+       "LEASING",
+       341
+      ]
+     ],
+     "description": "characterization of the payment. purpose of the payment",
+     "value_description": "\"POJISTNE\" stands for insurance payment\n\"SIPO\" stands for household payment\n\"LEASING\" stands for leasing\n\"UVER\" stands for loan payment",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "order_id"
+   ],
+   "sample_rows": [
+    {
+     "order_id": 29401,
+     "account_id": 1,
+     "bank_to": "YZ",
+     "account_to": 87144583,
+     "amount": 2452.0,
+     "k_symbol": "SIPO"
+    },
+    {
+     "order_id": 29402,
+     "account_id": 2,
+     "bank_to": "ST",
+     "account_to": 89597016,
+     "amount": 3372.7,
+     "k_symbol": "UVER"
+    },
+    {
+     "order_id": 29403,
+     "account_id": 2,
+     "bank_to": "QR",
+     "account_to": 13943797,
+     "amount": 7266.0,
+     "k_symbol": "SIPO"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "trans",
+   "row_count": 1056320,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "trans_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 323278,
+     "examples": [
+      1,
+      5,
+      6,
+      7,
+      8
+     ],
+     "top_values": [],
+     "description": "transaction id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "account_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1056,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1105,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2171,
+     "is_unique": false,
+     "min_value": "1993-01-01",
+     "max_value": "1998-12-30",
+     "examples": [
+      "1995-03-24",
+      "1995-04-13",
+      "1995-05-13",
+      "1995-06-13",
+      "1995-07-13"
+     ],
+     "top_values": [],
+     "description": "date of transaction",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "PRIJEM",
+     "max_value": "VYDAJ",
+     "examples": [
+      "PRIJEM",
+      "VYDAJ"
+     ],
+     "top_values": [
+      [
+       "VYDAJ",
+       146281
+      ],
+      [
+       "PRIJEM",
+       50934
+      ],
+      [
+       "VYBER",
+       2785
+      ]
+     ],
+     "description": "+/- transaction",
+     "value_description": "\"PRIJEM\" stands for credit\n\"VYDAJ\" stands for withdrawal",
+     "notes": []
+    },
+    {
+     "name": "operation",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "PREVOD NA UCET",
+     "max_value": "VYBER KARTOU",
+     "examples": [
+      "VKLAD",
+      "PREVOD Z UCTU",
+      "PREVOD NA UCET",
+      "VYBER"
+     ],
+     "top_values": [
+      [
+       "VYBER",
+       97405
+      ],
+      [
+       "PREVOD NA UCET",
+       49524
+      ],
+      [
+       "VKLAD",
+       34335
+      ],
+      [
+       "PREVOD Z UCTU",
+       16599
+      ],
+      [
+       "VYBER KARTOU",
+       2137
+      ]
+     ],
+     "description": "mode of transaction",
+     "value_description": "\"VYBER KARTOU\": credit card withdrawal\n\"VKLAD\": credit in cash\n\"PREVOD Z UCTU\" :collection from another bank\n\"VYBER\": withdrawal in cash\n\"PREVOD NA UCET\": remittance to another bank",
+     "notes": []
+    },
+    {
+     "name": "amount",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10664,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 87400,
+     "examples": [
+      1000,
+      3679,
+      2452,
+      540,
+      180
+     ],
+     "top_values": [],
+     "description": "amount of money",
+     "value_description": "Unit：USD",
+     "notes": []
+    },
+    {
+     "name": "balance",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 67901,
+     "is_unique": false,
+     "min_value": -17036,
+     "max_value": 194119,
+     "examples": [
+      1000,
+      4679,
+      20977,
+      26835,
+      30415
+     ],
+     "top_values": [],
+     "description": "balance after transaction",
+     "value_description": "Unit：USD",
+     "notes": []
+    },
+    {
+     "name": "k_symbol",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.5441,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": " ",
+     "max_value": "UVER",
+     "examples": [
+      "SIPO",
+      "SLUZBY"
+     ],
+     "top_values": [
+      [
+       "SLUZBY",
+       36466
+      ],
+      [
+       "SIPO",
+       28677
+      ],
+      [
+       " ",
+       12744
+      ],
+      [
+       "DUCHOD",
+       7838
+      ],
+      [
+       "POJISTNE",
+       4334
+      ],
+      [
+       "UVER",
+       1130
+      ]
+     ],
+     "description": "characterization of the transaction",
+     "value_description": "\"POJISTNE\": stands for insurrance payment\n\"SLUZBY\": stands for payment for statement\n\"UROK\": stands for interest credited\n\"SANKC. UROK\": sanction interest if negative balance\n\"SIPO\": stands for household\n\"DUCHOD\": stands for old-age pension\n\"UVER\": stands for loan payment",
+     "notes": [
+      "54% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "bank",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.6694,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": "AB",
+     "max_value": "YZ",
+     "examples": [
+      "AB",
+      "YZ",
+      "ST"
+     ],
+     "top_values": [
+      [
+       "IJ",
+       5545
+      ],
+      [
+       "GH",
+       5511
+      ],
+      [
+       "YZ",
+       5291
+      ],
+      [
+       "OP",
+       5282
+      ],
+      [
+       "AB",
+       5252
+      ],
+      [
+       "UV",
+       5139
+      ],
+      [
+       "KL",
+       5138
+      ],
+      [
+       "MN",
+       5020
+      ],
+      [
+       "QR",
+       4940
+      ],
+      [
+       "EF",
+       4885
+      ],
+      [
+       "ST",
+       4878
+      ],
+      [
+       "WX",
+       4651
+      ],
+      [
+       "CD",
+       4590
+      ]
+     ],
+     "description": "bank of the partner",
+     "value_description": "each bank has unique two-letter code",
+     "notes": [
+      "67% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "account",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.6527,
+     "distinct_count": 1804,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 99959903,
+     "examples": [
+      41403269,
+      87144583,
+      66487163
+     ],
+     "top_values": [],
+     "description": "account of the partner",
+     "value_description": "",
+     "notes": [
+      "65% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "trans_id"
+   ],
+   "sample_rows": [
+    {
+     "trans_id": 1,
+     "account_id": 1,
+     "date": "1995-03-24",
+     "type": "PRIJEM",
+     "operation": "VKLAD",
+     "amount": 1000,
+     "balance": 1000,
+     "k_symbol": null,
+     "bank": null,
+     "account": null
+    },
+    {
+     "trans_id": 5,
+     "account_id": 1,
+     "date": "1995-04-13",
+     "type": "PRIJEM",
+     "operation": "PREVOD Z UCTU",
+     "amount": 3679,
+     "balance": 4679,
+     "k_symbol": null,
+     "bank": "AB",
+     "account": 41403269
+    },
+    {
+     "trans_id": 6,
+     "account_id": 1,
+     "date": "1995-05-13",
+     "type": "PRIJEM",
+     "operation": "PREVOD Z UCTU",
+     "amount": 3679,
+     "balance": 20977,
+     "k_symbol": null,
+     "bank": "AB",
+     "account": 41403269
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 1,056,320 rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "account",
+   "from_column": "district_id",
+   "to_table": "district",
+   "to_column": "district_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "card",
+   "from_column": "disp_id",
+   "to_table": "disp",
+   "to_column": "disp_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "client",
+   "from_column": "district_id",
+   "to_table": "district",
+   "to_column": "district_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "disp",
+   "from_column": "client_id",
+   "to_table": "client",
+   "to_column": "client_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "disp",
+   "from_column": "account_id",
+   "to_table": "account",
+   "to_column": "account_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "loan",
+   "from_column": "account_id",
+   "to_table": "account",
+   "to_column": "account_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "order",
+   "from_column": "account_id",
+   "to_table": "account",
+   "to_column": "account_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "trans",
+   "from_column": "account_id",
+   "to_table": "account",
+   "to_column": "account_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}
