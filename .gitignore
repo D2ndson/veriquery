@@ -11,3 +11,6 @@ data/*
 runs/
 *.sqlite
 *.db
+!data/subsets/
+results/
+.cache/
