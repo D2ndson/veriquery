@@ -42,17 +42,74 @@ Baselines: single-agent ReAct SQL agent, Spider-Agent, plain "write SQL once" pr
 - **Core**: add Python analyst, verifier and clarifier; evaluate on BIRD, InfiAgent-DABench and BIRD-INTERACT; Streamlit demo for uploaded CSVs.
 - **Maximum**: Spider 2.0-Snow/Lite and DABstep, corrected-labels study, fine-tuned small model.
 
+## Quick start
+
+```bash
+python -m venv .venv && .venv/Scripts/activate      # source .venv/bin/activate on Linux/macOS
+pip install -e ".[dev,demo]"
+ollama pull qwen2.5-coder:7b                        # the default model; fits an 8 GB GPU
+python examples/retail_demo.py                      # sample use case, 4 questions, ~3 min cold
+python -m veriquery --db path/to/db.sqlite "Which region had the highest revenue in 2025?"
+python -m veriquery --db ... --interactive "..."    # let the clarifier ask you
+python -m pytest -q                                 # no model or data needed
+```
+
+From Python:
+
+```python
+from veriquery.agents.orchestrator import Config, VeriQuery
+from veriquery.llm import LLM
+
+vq = VeriQuery(LLM("qwen2.5-coder:7b"), Config())   # Config(use_verifier=False) etc. for ablations
+vq.remember("shop.sqlite", "amount is in cents", table="payments", column="amount")  # schema memory
+state = vq.ask("Which region lost the most revenue last quarter?", "shop.sqlite", ask_user=None)
+state["report"]      # answers (one per reading if ambiguous), SQL, verification, confidence, cost
+state["trace"]       # each agent's step and time
+```
+
+## Integration (A)
+
+- **Central LLM** — [`veriquery/llm.py`](veriquery/llm.py). One client for all agents: local Ollama or any
+  OpenAI-compatible server (vLLM, hosted APIs), chosen with `LLM(...)` or `LLM.from_env()`
+  (`VERIQUERY_LLM_PROVIDER`, `_MODEL`, `_BASE_URL`, `_API_KEY`, `_CACHE`). Every call is cached on disk and
+  counted per agent (calls, cache hits, tokens, seconds, estimated cost). `VeriQuery(llm, clarifier_llm=...)`
+  gives the clarifier a stronger reasoning model; D's evaluation used Qwen3-14B.
+- **Orchestrator** — [`veriquery/agents/orchestrator.py`](veriquery/agents/orchestrator.py). Plan → schema
+  scout → clarifier → SQL writer → verifier ⇄ repair → analyst → reporter. Schemas small enough for one prompt
+  (`Config.full_schema_chars`) go in whole; larger ones go through B's retrieval.
+- **Shared state** — [`veriquery/state.py`](veriquery/state.py) documents every key and which agent writes it.
+- **Confidence** — `high` only when the verifier accepted *and* an independent route recomputed the same
+  result; `medium` when checks passed but nothing recomputed it; `low` when the verifier still disagreed after
+  repairs; `unverified` when the verifier is off.
+- **Facts vs evidence** — stable facts about a database ("today is …", units) belong in schema notes
+  (`vq.remember`). Per-question `evidence` is also read by the verifier's checks, so a date range there looks
+  like part of the question.
+
+Each owner's original entry points still work: `person_b/schema_memory.py` and `part_f/veriquery_part_f/*.py`
+are shims over the package modules.
+
 ## Layout
 
 ```
 veriquery/          package
-  agents/           orchestrator, scout, clarifier, sql_writer, analyst, verifier, reporter
+  agents/           orchestrator, scout, clarifier, sql_writer, analyst, verifier, reporter (entry points)
+  llm.py            central LLM client
+  state.py          shared state format
+  schema_memory.py  B: scout, data cards, notebook, retrieval
+  clarifier/        D
+  verifier/         E
+  sql_execution.py  C: read-only SQLite executor
+examples/           retail_demo.py: end-to-end sample use case
 benchmarks/         benchmark loaders and eval scripts
+person_b/, part_f/  owners' working folders (outputs, Streamlit app, notes)
 data/               local datasets (git-ignored)
-notebooks/          exploration
 tests/
 ```
 
-## Role C implementation
+## Component docs
 
-See [the SQL writer and repair handoff](docs/role_c.md) for setup, Role B/E integration, the offline demo, reproducible BIRD commands, and evaluation limitations. The implementation and synthetic tests are available; real BIRD/model results remain pending.
+- B: [person_b/README.md](person_b/README.md), [interface](person_b/data_card_schema/INTERFACE.md)
+- C: [the SQL writer and repair handoff](docs/role_c.md) (setup, offline demo, BIRD commands, limitations)
+- D: [veriquery/clarifier/README.md](veriquery/clarifier/README.md), [BIRD-INTERACT results](benchmarks/bird_interact/README.md)
+- E: [veriquery/verifier/README.md](veriquery/verifier/README.md)
+- F: [part_f/veriquery_part_f/README.md](part_f/veriquery_part_f/README.md)

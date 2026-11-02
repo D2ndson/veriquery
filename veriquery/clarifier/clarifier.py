@@ -106,6 +106,7 @@ Check the question against the database schema and the external knowledge given 
    - A knowledge-base entry the question relies on refers to another concept that is NOT defined anywhere -> CRITICAL metric_definition.
    - Named exactly like a knowledge-base entry, or the question spells out the definition -> clear.
 2. Time ranges ("last quarter", "recent", "this year"): calendar vs fiscal, relative to which date, inclusive or not. If the question already says which one ("calendar year 2025", an explicit date range), it is clear.
+   Change words ("lost", "gained", "grew", "dropped", "declined", "fell", "improved") describe a change against a baseline. Unless the question names the baseline, the change from the previous period of the same length (e.g. this quarter vs the quarter before) is the default reading: always include it among the readings and interpretations, first unless the schema or knowledge base points elsewhere.
 3. Grouping level: per which entity / at what granularity.
 4. Filters and thresholds: which rows count ("active", "large", "failed", "problematic"), vague cut-offs.
 5. Entity references: a word that could map to more than one table or column.
@@ -137,6 +138,7 @@ Return ONLY a JSON object, no other text:
 - "Show weekly net sales per store for March 2025." (the knowledge base defines "net sales") -> no critical ambiguity: the term is defined and the period is explicit.
 - "List the top 5 products by units sold last month." -> no critical ambiguity ("top 5", "units sold" and "last month" are explicit enough); at most a non-critical output_format note.
 - "Which suppliers are unreliable?" (nothing defines "unreliable") -> CRITICAL metric_definition on "unreliable"; ask e.g. "What makes a supplier unreliable for you - late deliveries, defect rate, or something else, and above what threshold?"
+- "Which store lost the most visitors last month?" (no baseline given) -> CRITICAL metric_definition on "lost the most visitors"; readings: "largest drop in visitors from the month before to last month" (first) and e.g. "fewest visitors last month".
 - "Show the risk score and flagged accounts for each branch." (the knowledge base has "Credit Risk Index" and "Fraud Risk Score"; nothing defines "flagged") -> CRITICAL metric_definition on "risk score" (two possible entries) and CRITICAL filter on "flagged accounts" (no rule given).
 
 ## User question

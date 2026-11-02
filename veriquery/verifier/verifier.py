@@ -5,7 +5,7 @@ from typing import Any, Callable
 
 import pandas as pd
 
-from .compare import results_match
+from .compare import results_match, unit_scale
 from .db import run_sql
 from .dual_route import SecondRoute
 from .models import CheckResult, Decision, RouteResult, Severity, VerificationReport, VerifierInput
@@ -55,8 +55,19 @@ class Verifier:
                                           {"second_sql": route.code}))
             else:
                 agree, reason = results_match(result, route.result)
+                scale = None if agree else unit_scale(result, route.result)
                 if agree:
                     checks.append(CheckResult("dual_route", Severity.INFO, "Independent query agrees."))
+                elif scale:
+                    # Same answer in other units (cents vs dollars): not a disagreement, but the
+                    # units deserve a look, so the check stays visible.
+                    agree = True
+                    column, factor = scale
+                    checks.append(CheckResult("dual_route_units", Severity.WARN,
+                                              f"Independent query agrees once its `{column}` is multiplied by "
+                                              f"{factor:g}; the two queries used different units. "
+                                              "Check the answer is in the units the question asks for.",
+                                              {"second_sql": route.code, "column": column, "factor": factor}))
                 else:
                     checks.append(CheckResult("dual_route", Severity.FAIL,
                                               f"Independent query disagrees: {reason}.",

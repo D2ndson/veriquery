@@ -74,6 +74,26 @@ def results_match(
     return True, "match"
 
 
+UNIT_FACTORS = (100.0, 1000.0, 0.01, 0.001)  # cents/dollars, units/thousands
+
+
+def unit_scale(a: pd.DataFrame, b: pd.DataFrame) -> tuple[str, float] | None:
+    """If `b` matches `a` once one numeric column of `b` is multiplied by a unit factor
+    (e.g. the other route answered in cents, not dollars), return (column of b, factor)."""
+    if a.shape[1] != b.shape[1] or len(a) != len(b):
+        return None
+    for j in range(b.shape[1]):
+        col = pd.to_numeric(b.iloc[:, j], errors="coerce")
+        if col.isna().any():
+            continue
+        for f in UNIT_FACTORS:
+            scaled = b.copy()
+            scaled.isetitem(j, (col * f).astype(float))
+            if results_match(a, scaled)[0]:
+                return str(b.columns[j]), f
+    return None
+
+
 def execution_match(db_path: str, pred_sql: str, gold_sql: str, timeout_s: float = 30.0) -> bool:
     """BIRD's official execution-accuracy rule: set(pred rows) == set(gold rows)."""
     try:

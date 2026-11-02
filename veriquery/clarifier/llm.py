@@ -7,7 +7,13 @@ import threading
 import time
 from collections import defaultdict
 
-from openai import OpenAI, BadRequestError
+try:  # only LLM below needs openai; the pipeline uses veriquery.llm and just the helpers here
+    from openai import OpenAI, BadRequestError
+except ImportError:  # pragma: no cover
+    OpenAI = None
+
+    class BadRequestError(Exception):
+        pass
 
 
 def _strip_think(text):

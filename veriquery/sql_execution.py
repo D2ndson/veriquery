@@ -14,7 +14,7 @@ import time
 
 import sqlglot
 from sqlglot import exp
-from sqlglot.errors import ParseError
+from sqlglot.errors import SqlglotError
 
 
 @dataclass
@@ -125,7 +125,8 @@ class SQLiteExecutor:
         conn = None
         try:
             _validate_sql(sql)
-        except (ValueError, ParseError, RecursionError) as exc:
+        # SqlglotError covers ParseError and TokenError (e.g. an unclosed quote).
+        except (ValueError, SqlglotError, RecursionError) as exc:
             result.error, result.error_type = str(exc), "validation"
             result.elapsed_seconds = time.monotonic() - started
             return result

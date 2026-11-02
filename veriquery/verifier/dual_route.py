@@ -147,7 +147,7 @@ class SqlSecondRoute:
 # Runs in a separate Python process: loads tables lazily from the read-only database,
 # executes the generated code, and prints `result` as JSON.
 _RUNNER = r'''
-import json, sqlite3, sys
+import json, re, sqlite3, sys
 from pathlib import Path
 import pandas as pd
 
@@ -159,8 +159,14 @@ class Tables(dict):
         self[name] = df
         return df
 
-scope = {"pd": pd, "tables": Tables(), "__name__": "__analysis__"}
-exec(compile(Path(sys.argv[2]).read_text(encoding="utf-8"), "analysis", "exec"), scope)
+code = Path(sys.argv[2]).read_text(encoding="utf-8")
+tables = Tables()
+scope = {"pd": pd, "tables": tables, "__name__": "__analysis__"}
+# Models often write `orders[...]` instead of `tables["orders"]`; bind tables the code names directly.
+for (name,) in conn.execute("SELECT name FROM sqlite_master WHERE type IN ('table', 'view')").fetchall():
+    if name.isidentifier() and name not in scope and re.search(r"\b" + re.escape(name) + r"\b", code):
+        scope[name] = tables[name]
+exec(compile(code, "analysis", "exec"), scope)
 result = scope.get("result")
 if isinstance(result, pd.Series):
     result = result.to_frame()

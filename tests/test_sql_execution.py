@@ -1,4 +1,5 @@
 import sqlite3
+import sys
 import time
 
 import pytest
@@ -8,7 +9,8 @@ from veriquery.sql_execution import SQLiteExecutor
 
 @pytest.fixture
 def database(tmp_path):
-    path = tmp_path / "business ?#.sqlite"
+    # URI-special characters in the file name; Windows forbids "?" in file names.
+    path = tmp_path / ("business #%.sqlite" if sys.platform == "win32" else "business ?#.sqlite")
     with sqlite3.connect(path) as conn:
         conn.executescript('''
         CREATE TABLE customers(id INTEGER PRIMARY KEY, name TEXT);
@@ -63,6 +65,11 @@ def test_error_is_repairable_and_no_partial_rows(database):
     assert result.error_type == "execution"
     assert "missing_column" in result.error
     assert result.rows == []
+
+
+def test_untokenizable_sql_is_a_validation_error(database):
+    result = SQLiteExecutor(database).execute("SELECT name FROM customers WHERE name = 'Ada")
+    assert result.error_type == "validation" and result.rows == []
 
 
 def test_timeout(database):

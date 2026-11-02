@@ -88,7 +88,10 @@ def test_database_rejects_escaping_symlink(tmp_path):
     outside = tmp_path / "outside"
     outside.mkdir()
     (outside / "sales.sqlite").write_bytes(b"")
-    (root / "sales").symlink_to(outside, target_is_directory=True)
+    try:
+        (root / "sales").symlink_to(outside, target_is_directory=True)
+    except OSError:  # Windows without developer mode or admin rights
+        pytest.skip("creating symlinks is not permitted here")
     with pytest.raises(ValueError, match="escapes"):
         database_path(root, "sales")
 

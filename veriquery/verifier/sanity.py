@@ -314,11 +314,16 @@ def check_integer_division(ctx: CheckContext) -> list[CheckResult]:
         if _is_float_expr(div, ctx):
             continue
         idx = next((i for i, p in enumerate(projections) if any(d is div for d in p.find_all(exp.Div))), None)
+        whole = False
         if idx is not None and idx < ctx.result.shape[1]:
             col = pd.to_numeric(ctx.result.iloc[:, idx], errors="coerce").dropna()
             if len(col) and (col != col.round()).any():
                 continue  # result has fractions, so no truncation happened
-        sev = Severity.FAIL if _RATIO_WORDS.search(ctx.inp.question) else Severity.WARN
+            whole = len(col) > 0
+        # Dividing by an integer constant in the output is a unit conversion (cents / 100):
+        # whole-number results mean the fractions were dropped.
+        unit_conversion = whole and isinstance(div.expression, exp.Literal) and div.expression.this not in ("0", "1")
+        sev = Severity.FAIL if unit_conversion or _RATIO_WORDS.search(ctx.inp.question) else Severity.WARN
         out.append(CheckResult("integer_division", sev,
                                f"`{div.sql(dialect='sqlite')}` divides integers, which SQLite truncates. "
                                "Use CAST(... AS REAL) or multiply by 1.0.",

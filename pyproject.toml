@@ -8,11 +8,14 @@ dependencies = [
     "pandas",
     "sqlglot>=30.24,<31",
     "matplotlib",
+    "plotly",
 ]
 
 [project.optional-dependencies]
 demo = ["streamlit"]
 dev = ["pytest"]
+# The clarifier's BIRD-INTERACT harness uses its own OpenAI-compatible client.
+clarifier-eval = ["openai"]
 
 [build-system]
 requires = ["setuptools>=68"]

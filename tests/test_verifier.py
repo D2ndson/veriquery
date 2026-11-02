@@ -82,6 +82,27 @@ def test_integer_division(db):
     assert good.decision is Decision.ACCEPT
 
 
+def test_integer_division_unit_conversion(db):
+    # 23999 cents / 100 -> 239: SQLite dropped the cents. No ratio words in the question.
+    bad = Verifier().verify(VerifierInput("What is the total price of all products in dollars?",
+                                          "SELECT SUM(price_cents) / 100 FROM products", db))
+    assert "integer_division" in names(bad, Severity.FAIL)
+    good = Verifier().verify(VerifierInput("What is the total price of all products in dollars?",
+                                           "SELECT SUM(price_cents) / 100.0 FROM products", db))
+    assert "integer_division" not in names(good)
+
+
+def test_routes_differing_only_in_units_agree_with_a_warning(db):
+    # The question names no unit, so neither route breaks the `units` check; one answers in cents.
+    v = Verifier(SqlSecondRoute(stub_llm("SELECT name, price_cents FROM products")))
+    r = v.verify(VerifierInput("List each product's price.",
+                               "SELECT name, price_cents / 100.0 FROM products", db))
+    assert r.routes_agree is True and r.decision is Decision.ACCEPT
+    units = next(c for c in r.checks if c.name == "dual_route_units")
+    assert units.severity is Severity.WARN and units.evidence["factor"] == 0.01
+    assert "dual_route" not in names(r, Severity.FAIL)
+
+
 def test_filter_value_case_mismatch(db):
     r = Verifier().verify(VerifierInput(
         "List the names of customers in the east region.",
@@ -320,6 +341,13 @@ def test_fallback_to_pandas_when_sql_route_fails(db):
         VerifierInput("How many customers are there?", "SELECT COUNT(*) FROM customers", db))
     assert r.routes_agree is True
     assert "tables['customers']" in r.second_route.code
+
+
+def test_pandas_route_tables_by_bare_name(db):
+    code = "result = pd.DataFrame({'n': [int((customers['region'] == 'East').sum())]})"
+    out = PandasSecondRoute(lambda p: f"```python\n{code}\n```")(
+        VerifierInput("q", "SELECT 1", db), pd.DataFrame({"n": [1]}))
+    assert out.error is None and out.result.iloc[0, 0] == 3
 
 
 def test_pandas_error_is_reported(db):

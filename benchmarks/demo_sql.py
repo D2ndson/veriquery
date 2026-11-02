@@ -7,6 +7,7 @@ execution-feedback path can be inspected independently of model quality.
 from __future__ import annotations
 
 import json
+from contextlib import closing
 from pathlib import Path
 import sqlite3
 from tempfile import TemporaryDirectory
@@ -35,7 +36,9 @@ def run_demo() -> dict:
     inspection_sql = "SELECT amount FROM sales ORDER BY id"
     with TemporaryDirectory(prefix="veriquery-demo-") as directory:
         database = Path(directory) / "sales.sqlite"
-        with sqlite3.connect(database) as connection:
+        # closing(): sqlite3's own context manager commits but never closes, and an open
+        # handle stops TemporaryDirectory from deleting the file on Windows.
+        with closing(sqlite3.connect(database)) as connection:
             connection.executescript(
                 "CREATE TABLE sales (id INTEGER PRIMARY KEY, amount REAL NOT NULL);"
                 "INSERT INTO sales VALUES (1, 10.0), (2, 15.0), (3, 30.0);"
