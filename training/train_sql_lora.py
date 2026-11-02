@@ -128,7 +128,7 @@ def main():
         per_device_train_batch_size=1, per_device_eval_batch_size=1, gradient_accumulation_steps=1 if a.smoke else 16,
         learning_rate=1e-4, warmup_ratio=.03, lr_scheduler_type='cosine', gradient_checkpointing=True,
         bf16=bf16, fp16=not bf16, logging_steps=10, save_steps=100, save_total_limit=2,
-        eval_strategy='no', report_to='none', seed=6130, data_seed=6130)
+        eval_strategy='no', label_names=['labels'], report_to='none', seed=6130, data_seed=6130)
     a.output.mkdir(parents=True, exist_ok=a.resume_from_checkpoint is not None)
     trainer = Trainer(model=model, args=args, train_dataset=splits['train'], eval_dataset=splits['validation'],
         data_collator=DataCollatorForSeq2Seq(tokenizer, padding=True, label_pad_token_id=-100))
