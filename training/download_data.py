@@ -7,6 +7,7 @@ import urllib.request
 import zipfile
 from huggingface_hub import HfApi, hf_hub_download, snapshot_download
 from remotezip import RemoteZip
+from extract_databases import extract_databases
 
 root = Path('data')
 root.mkdir(exist_ok=True)
@@ -54,17 +55,12 @@ if not archive_path.exists():
     with urllib.request.urlopen(url, timeout=120) as src, temporary.open('wb') as out:
         shutil.copyfileobj(src, out, length=1024*1024)
     temporary.rename(archive_path)
-with zipfile.ZipFile(archive_path) as archive:
-    bad = archive.testzip()
-    if bad: raise ValueError(f'Corrupt archive: {bad}')
-    for member in archive.infolist():
-        if not member.filename.endswith('.sqlite') or member.filename.startswith('__MACOSX'):
-            continue
-        name = Path(member.filename).name
-        folder = root/'dev_databases'/Path(name).stem
-        folder.mkdir(parents=True, exist_ok=True)
-        with archive.open(member) as src, (folder/name).open('wb') as out:
-            shutil.copyfileobj(src,out)
+if not (root/'dev_databases').exists():
+    extract_databases(archive_path, root/'dev_databases')
+for row in json.loads((root/'mini_dev.json').read_text()):
+    expected = root/'dev_databases'/row['db_id']/(row['db_id']+'.sqlite')
+    if not expected.is_file():
+        raise FileNotFoundError(f'Missing evaluation database: {expected}')
 manifest['evaluation_databases'] = {'url':url, 'zip_sha256':hashlib.sha256(archive_path.read_bytes()).hexdigest(),
     'files':[str(p) for p in sorted((root/'dev_databases').glob('*/*.sqlite'))]}
 (root/'download_manifest.json').write_text(json.dumps(manifest,indent=2))

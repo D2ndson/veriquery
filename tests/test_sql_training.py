@@ -87,3 +87,19 @@ def test_metadata_preparation_preserves_keys_and_labels_validation_scope(tmp_pat
     splits,manifest=prepare(rows,None,{'heldout'},schemas={'a':schema,'b':schema})
     assert manifest['reference_validation']=='syntax_and_safety_only'
     assert sum(map(len,splits.values()))==2
+
+
+def test_extracts_nested_bird_database_archive(tmp_path):
+    from training.extract_databases import extract_databases
+    import io, zipfile
+    inner=io.BytesIO()
+    with zipfile.ZipFile(inner,'w') as z:
+        z.writestr('dev_databases/sales/sales.sqlite',b'sqlite fixture')
+    outer=tmp_path/'dev.zip'
+    with zipfile.ZipFile(outer,'w') as z:
+        z.writestr('dev_20240627/dev_databases.zip',inner.getvalue())
+    paths=extract_databases(outer,tmp_path/'db')
+    assert paths==[tmp_path/'db/sales/sales.sqlite']
+    assert paths[0].read_bytes()==b'sqlite fixture'
+    with pytest.raises(FileExistsError):
+        extract_databases(outer,tmp_path/'db')
