@@ -15,7 +15,8 @@ from sqlglot.errors import ParseError
 def metadata_cards(schema):
     tables = schema['table_names_original']
     columns = schema['column_names_original']
-    primary = set(schema.get('primary_keys', []))
+    primary = {index for key in schema.get('primary_keys', [])
+               for index in (key if isinstance(key, list) else [key])}
     cards = [{'table': name, 'columns': [], 'foreign_keys': []} for name in tables]
     for i, (table, column) in enumerate(columns):
         if table < 0:

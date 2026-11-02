@@ -79,7 +79,7 @@ def test_metadata_preparation_preserves_keys_and_labels_validation_scope(tmp_pat
     from training.prepare_sql_data import metadata_cards
     schema = {'table_names_original':['sales','items'],
               'column_names_original':[[-1,'*'],[0,'id'],[1,'sale_id']],
-              'column_types':['text','number','number'], 'primary_keys':[1], 'foreign_keys':[[2,1]]}
+              'column_types':['text','number','number'], 'primary_keys':[[1]], 'foreign_keys':[[2,1]]}
     cards=metadata_cards(schema)
     assert cards[0]['columns'][0]['primary_key'] is True
     assert cards[1]['foreign_keys']==[{'from':'sale_id','to_table':'sales','to_column':'id'}]

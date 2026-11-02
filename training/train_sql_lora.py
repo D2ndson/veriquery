@@ -97,13 +97,19 @@ def main():
         path = a.data/f'{split}.jsonl'
         sources[split] = hashlib.sha256(path.read_bytes()).hexdigest()
         rows = [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
-        if a.smoke:
-            rows = rows[:2]
-        encoded = [encode_example(tokenizer, row, a.max_length) for row in rows]
+        encoded = []
+        retained_count = 0
+        for row in rows:
+            item = encode_example(tokenizer, row, a.max_length)
+            encoded.append(item)
+            retained_count += item is not None
+            if a.smoke and retained_count == 2:
+                break
         retained = [x for x in encoded if x is not None]
         if not retained:
             raise ValueError(f'No {split} examples fit the sequence budget')
-        counts[split] = {'source': len(rows), 'retained': len(retained), 'overlength': len(rows)-len(retained)}
+        counts[split] = {'source': len(rows), 'examined': len(encoded), 'retained': len(retained),
+                         'overlength': len(encoded)-len(retained)}
         splits[split] = Dataset.from_list(retained)
     resume_identity = {'model': a.model, 'revision': a.revision, 'source_sha256': sources,
                        'max_length': a.max_length, 'smoke': a.smoke, 'max_steps': a.max_steps, 'epochs': a.epochs}
