@@ -56,7 +56,7 @@ def main():
         'No evidence that the 32B baseline improves','Disagreement-directed repair is a proposal, not an evaluated method']
     (out/'summary.json').write_text(json.dumps(summary,indent=2))
     with (out/'paired_outcomes.csv').open('w',newline='') as f:
-        writer=csv.DictWriter(f,fieldnames=list(paired[0]));writer.writeheader();writer.writerows(paired)
+        writer=csv.DictWriter(f,fieldnames=list(paired[0]),lineterminator="\n");writer.writeheader();writer.writerows(paired)
     for name,manifest in manifests.items():(out/f'{name}_manifest.json').write_text(json.dumps(manifest,indent=2))
     print(json.dumps(summary,indent=2))
 
