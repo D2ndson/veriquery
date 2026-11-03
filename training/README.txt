@@ -36,3 +36,6 @@ https://huggingface.co/datasets/birdsql/bird23-train-filtered
 https://github.com/bird-bench/mini_dev/tree/main/finetuning
 https://huggingface.co/docs/peft/developer_guides/quantization
 https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct
+
+Completed experiment (3 November 2026)
+Base 36/99 correct; QLoRA 40/99. Thirteen fixes and nine regressions; exact paired p = 0.523. See experiments/sql_qlora_7b for verified results and limitations. This does not establish a reliable gain or validate the proposed novelty method.

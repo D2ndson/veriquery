@@ -1,0 +1,65 @@
+{
+  "scope": "SQL writer only, Qwen2.5-Coder-7B-Instruct; not the team 32B pipeline",
+  "model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+  "model_revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+  "runs": {
+    "base7b": {
+      "attempted": 100,
+      "scorable": 99,
+      "correct": 36,
+      "accuracy": 0.36363636363636365,
+      "correct_per_attempted": 0.36,
+      "status_counts": {
+        "prediction_error": 19,
+        "incorrect": 44,
+        "correct": 36,
+        "unscorable_gold_truncated": 1
+      },
+      "model_calls": 154,
+      "writer_seconds": 625.2526849889764
+    },
+    "tuned7b": {
+      "attempted": 100,
+      "scorable": 99,
+      "correct": 40,
+      "accuracy": 0.40404040404040403,
+      "correct_per_attempted": 0.4,
+      "status_counts": {
+        "incorrect": 49,
+        "correct": 40,
+        "unscorable_gold_truncated": 1,
+        "prediction_error": 10
+      },
+      "model_calls": 133,
+      "writer_seconds": 791.3775809729559
+    }
+  },
+  "paired": {
+    "both_wrong": 50,
+    "both_correct": 27,
+    "fixed": 13,
+    "regressed": 9,
+    "unscorable": 1
+  },
+  "exact_mcnemar_two_sided_p": 0.5234670639038086,
+  "accuracy_change_percentage_points": 4.040404040404041,
+  "excluded": [
+    {
+      "db_id": "card_games",
+      "question_id": 397,
+      "reason": "unscorable_gold_truncated"
+    }
+  ],
+  "verification": {
+    "same_questions_and_settings": true,
+    "dataset_hash_matched": true,
+    "all_adapter_hashes_matched": true
+  },
+  "limitations": [
+    "One seed and one 100-question development subset",
+    "One reference result exceeds the 10000-row limit",
+    "No clarifier, verifier, schema-memory retrieval or high-confidence labels in this component experiment",
+    "No evidence that the 32B baseline improves",
+    "Disagreement-directed repair is a proposal, not an evaluated method"
+  ]
+}

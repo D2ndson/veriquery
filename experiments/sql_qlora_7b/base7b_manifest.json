@@ -1,0 +1,448 @@
+{
+  "data": "data/mini_dev.json",
+  "db_root": "data/dev_databases",
+  "output": "results/base7b",
+  "model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+  "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+  "adapter": null,
+  "size": 100,
+  "mode": "repair",
+  "context_tokens": 16384,
+  "max_output_tokens": 1024,
+  "runtime": {
+    "packages": {
+      "torch": "2.5.1+cu121",
+      "transformers": "4.49.0",
+      "peft": "0.14.0",
+      "accelerate": "1.5.2",
+      "bitsandbytes": "0.45.3",
+      "datasets": "5.0.1"
+    },
+    "python": "3.11.18",
+    "cuda": "12.1",
+    "code_sha256": {
+      "extract_databases.py": "53bc91cb705943c7e478626b2a894e9bdc3f4be0d79e72cfbd41842b6d0c970d",
+      "train_sql_lora.py": "0a32cd72712f659031b78bdcf04b1958c62f195af2771c4789afe49afecc14ae",
+      "download_data.py": "e5b82395fae13d491857fac8b136685b293ec6c2e338c9c23a16459be4190ae3",
+      "prepare_sql_data.py": "3c360c0434d4a1ef722445da76f428a8b55bd4b906e8e547b90fdd562cdbb070",
+      "evaluate_sql_adapter.py": "5fcb2e87c862f953c36f3b3e9b9e21da48ff548a88f29daed3846d78d253d21a"
+    }
+  },
+  "dataset_sha256": "be02a202933e694d08127f502b1c224276c67758391dbe6f6bc81565bf7a90d8",
+  "selected_ids": [
+    {
+      "db_id": "card_games",
+      "question_id": 409
+    },
+    {
+      "db_id": "european_football_2",
+      "question_id": 1080
+    },
+    {
+      "db_id": "superhero",
+      "question_id": 781
+    },
+    {
+      "db_id": "debit_card_specializing",
+      "question_id": 1500
+    },
+    {
+      "db_id": "formula_1",
+      "question_id": 988
+    },
+    {
+      "db_id": "superhero",
+      "question_id": 825
+    },
+    {
+      "db_id": "debit_card_specializing",
+      "question_id": 1481
+    },
+    {
+      "db_id": "european_football_2",
+      "question_id": 1025
+    },
+    {
+      "db_id": "european_football_2",
+      "question_id": 1092
+    },
+    {
+      "db_id": "debit_card_specializing",
+      "question_id": 1515
+    },
+    {
+      "db_id": "card_games",
+      "question_id": 405
+    },
+    {
+      "db_id": "codebase_community",
+      "question_id": 678
+    },
+    {
+      "db_id": "thrombosis_prediction",
+      "question_id": 1179
+    },
+    {
+      "db_id": "european_football_2",
+      "question_id": 1133
+    },
+    {
+      "db_id": "debit_card_specializing",
+      "question_id": 1501
+    },
+    {
+      "db_id": "card_games",
+      "question_id": 397
+    },
+    {
+      "db_id": "formula_1",
+      "question_id": 948
+    },
+    {
+      "db_id": "debit_card_specializing",
+      "question_id": 1514
+    },
+    {
+      "db_id": "student_club",
+      "question_id": 1427
+    },
+    {
+      "db_id": "superhero",
+      "question_id": 732
+    },
+    {
+      "db_id": "toxicology",
+      "question_id": 220
+    },
+    {
+      "db_id": "formula_1",
+      "question_id": 962
+    },
+    {
+      "db_id": "card_games",
+      "question_id": 466
+    },
+    {
+      "db_id": "toxicology",
+      "question_id": 208
+    },
+    {
+      "db_id": "superhero",
+      "question_id": 779
+    },
+    {
+      "db_id": "formula_1",
+      "question_id": 933
+    },
+    {
+      "db_id": "california_schools",
+      "question_id": 31
+    },
+    {
+      "db_id": "debit_card_specializing",
+      "question_id": 1498
+    },
+    {
+      "db_id": "toxicology",
+      "question_id": 281
+    },
+    {
+      "db_id": "card_games",
+      "question_id": 469
+    },
+    {
+      "db_id": "student_club",
+      "question_id": 1392
+    },
+    {
+      "db_id": "superhero",
+      "question_id": 788
+    },
+    {
+      "db_id": "codebase_community",
+      "question_id": 665
+    },
+    {
+      "db_id": "california_schools",
+      "question_id": 37
+    },
+    {
+      "db_id": "student_club",
+      "question_id": 1356
+    },
+    {
+      "db_id": "thrombosis_prediction",
+      "question_id": 1198
+    },
+    {
+      "db_id": "thrombosis_prediction",
+      "question_id": 1164
+    },
+    {
+      "db_id": "student_club",
+      "question_id": 1340
+    },
+    {
+      "db_id": "formula_1",
+      "question_id": 955
+    },
+    {
+      "db_id": "formula_1",
+      "question_id": 989
+    },
+    {
+      "db_id": "superhero",
+      "question_id": 819
+    },
+    {
+      "db_id": "card_games",
+      "question_id": 468
+    },
+    {
+      "db_id": "toxicology",
+      "question_id": 268
+    },
+    {
+      "db_id": "formula_1",
+      "question_id": 959
+    },
+    {
+      "db_id": "student_club",
+      "question_id": 1435
+    },
+    {
+      "db_id": "financial",
+      "question_id": 93
+    },
+    {
+      "db_id": "thrombosis_prediction",
+      "question_id": 1229
+    },
+    {
+      "db_id": "california_schools",
+      "question_id": 62
+    },
+    {
+      "db_id": "student_club",
+      "question_id": 1322
+    },
+    {
+      "db_id": "european_football_2",
+      "question_id": 1135
+    },
+    {
+      "db_id": "thrombosis_prediction",
+      "question_id": 1227
+    },
+    {
+      "db_id": "superhero",
+      "question_id": 739
+    },
+    {
+      "db_id": "codebase_community",
+      "question_id": 578
+    },
+    {
+      "db_id": "codebase_community",
+      "question_id": 532
+    },
+    {
+      "db_id": "california_schools",
+      "question_id": 82
+    },
+    {
+      "db_id": "formula_1",
+      "question_id": 881
+    },
+    {
+      "db_id": "codebase_community",
+      "question_id": 531
+    },
+    {
+      "db_id": "formula_1",
+      "question_id": 879
+    },
+    {
+      "db_id": "student_club",
+      "question_id": 1359
+    },
+    {
+      "db_id": "card_games",
+      "question_id": 480
+    },
+    {
+      "db_id": "student_club",
+      "question_id": 1399
+    },
+    {
+      "db_id": "card_games",
+      "question_id": 484
+    },
+    {
+      "db_id": "superhero",
+      "question_id": 794
+    },
+    {
+      "db_id": "formula_1",
+      "question_id": 910
+    },
+    {
+      "db_id": "superhero",
+      "question_id": 800
+    },
+    {
+      "db_id": "student_club",
+      "question_id": 1371
+    },
+    {
+      "db_id": "student_club",
+      "question_id": 1339
+    },
+    {
+      "db_id": "student_club",
+      "question_id": 1362
+    },
+    {
+      "db_id": "superhero",
+      "question_id": 743
+    },
+    {
+      "db_id": "thrombosis_prediction",
+      "question_id": 1187
+    },
+    {
+      "db_id": "codebase_community",
+      "question_id": 584
+    },
+    {
+      "db_id": "financial",
+      "question_id": 116
+    },
+    {
+      "db_id": "thrombosis_prediction",
+      "question_id": 1235
+    },
+    {
+      "db_id": "student_club",
+      "question_id": 1422
+    },
+    {
+      "db_id": "california_schools",
+      "question_id": 39
+    },
+    {
+      "db_id": "thrombosis_prediction",
+      "question_id": 1275
+    },
+    {
+      "db_id": "card_games",
+      "question_id": 473
+    },
+    {
+      "db_id": "toxicology",
+      "question_id": 232
+    },
+    {
+      "db_id": "toxicology",
+      "question_id": 198
+    },
+    {
+      "db_id": "thrombosis_prediction",
+      "question_id": 1257
+    },
+    {
+      "db_id": "card_games",
+      "question_id": 352
+    },
+    {
+      "db_id": "card_games",
+      "question_id": 358
+    },
+    {
+      "db_id": "codebase_community",
+      "question_id": 565
+    },
+    {
+      "db_id": "thrombosis_prediction",
+      "question_id": 1241
+    },
+    {
+      "db_id": "financial",
+      "question_id": 119
+    },
+    {
+      "db_id": "thrombosis_prediction",
+      "question_id": 1157
+    },
+    {
+      "db_id": "toxicology",
+      "question_id": 248
+    },
+    {
+      "db_id": "formula_1",
+      "question_id": 866
+    },
+    {
+      "db_id": "card_games",
+      "question_id": 486
+    },
+    {
+      "db_id": "california_schools",
+      "question_id": 32
+    },
+    {
+      "db_id": "toxicology",
+      "question_id": 244
+    },
+    {
+      "db_id": "financial",
+      "question_id": 94
+    },
+    {
+      "db_id": "codebase_community",
+      "question_id": 640
+    },
+    {
+      "db_id": "card_games",
+      "question_id": 356
+    },
+    {
+      "db_id": "thrombosis_prediction",
+      "question_id": 1150
+    },
+    {
+      "db_id": "european_football_2",
+      "question_id": 1039
+    },
+    {
+      "db_id": "superhero",
+      "question_id": 750
+    },
+    {
+      "db_id": "european_football_2",
+      "question_id": 1058
+    },
+    {
+      "db_id": "european_football_2",
+      "question_id": 1030
+    },
+    {
+      "db_id": "debit_card_specializing",
+      "question_id": 1521
+    }
+  ],
+  "database_sha256": {
+    "card_games": "c98bdb57fe7474da798b407785544b9af0daaad5d61fd21e2a73309493bc1227",
+    "european_football_2": "e4d361dbeec6591a4b315877c0c481da05c8ff5a3d389b34d6e17b6f15bee4e0",
+    "superhero": "75e94a2c3236ee3bb2c01fb97a1c4b4c1c269bcefd4eab1d04be323d2d0825b1",
+    "debit_card_specializing": "b3d149ad05746dbbe5116e229e17e18f09c39db43cf117d9ef3441753608b691",
+    "formula_1": "17185981cd747f6cdc374cb02a6096db3130e6ec2ddc582fe1686a28fb4c4c8a",
+    "codebase_community": "92101be6d2a9f6adceea59d38f6d1c556087f9eea1432432a21268cb1348036d",
+    "thrombosis_prediction": "e7e16d74b4731b4b8d33fdbe8c29cd5622620788ce8d1f335631f65fc7cf1db9",
+    "student_club": "eb89bcfe97eefa386a27904ec5aa15159811a7eac894ec659a36e48fa9f76b77",
+    "toxicology": "f5fa7f21af1ad878ff8fef1b0582b8cb2d7ed63dbac65ff16d2ba05667650c5b",
+    "california_schools": "986817d793479801ed55133e55aa27e335422c0cd3866b54a3d6317b7c5f09c1",
+    "financial": "d15d89cdb068a202b6f2b99342af44dffc1d52545b39ceaf62efdc0ba570101e"
+  },
+  "adapter_sha256": null
+}
