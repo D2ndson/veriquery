@@ -160,7 +160,8 @@ class LLM:
         tag = tag or getattr(self._local, "agent", None) or "untagged"
         max_tokens = max_tokens or self.max_tokens
         temperature = self.temperature if temperature is None else temperature
-        key_parts = [self.provider, self.model, self.num_ctx, temperature, max_tokens, messages]
+        # Different servers can serve different weights under the same model alias.
+        key_parts = ['v2', self.provider, self.base_url, self.model, self.num_ctx, temperature, max_tokens, messages]
         if self.seed != 6130:  # keep cache keys of the default seed unchanged
             key_parts.append(self.seed)
         if self.think is not None:
@@ -180,6 +181,8 @@ class LLM:
             text, pt, ct = self._openai(messages, max_tokens, temperature)
         seconds = time.monotonic() - start
         text = _strip_think(text)
+        if not text.strip():
+            raise ValueError('Model returned no final answer text')
         cost = (pt * self.price_per_mtok[0] + ct * self.price_per_mtok[1]) / 1e6
         self._record(tag, LLMStats(calls=1, prompt_tokens=pt, completion_tokens=ct, seconds=seconds, cost_usd=cost))
         if use_cache and self._cache is not None and text.strip():
@@ -208,6 +211,8 @@ class LLM:
         if self.think is not None:
             body["think"] = self.think
         data = self._post(f"{self.base_url}/api/chat", body)
+        if data.get('done_reason') == 'length':
+            raise ValueError('Model output exceeded the token limit; partial SQL was rejected')
         return data.get("message", {}).get("content", ""), data.get("prompt_eval_count", 0), data.get("eval_count", 0)
 
     def _openai(self, messages, max_tokens, temperature) -> tuple[str, int, int]:
@@ -216,7 +221,10 @@ class LLM:
             "seed": self.seed,
         })
         usage = data.get("usage") or {}
-        text = (data.get("choices") or [{}])[0].get("message", {}).get("content") or ""
+        choice = (data.get("choices") or [{}])[0]
+        if choice.get('finish_reason') == 'length':
+            raise ValueError('Model output exceeded the token limit; partial SQL was rejected')
+        text = choice.get("message", {}).get("content") or ""
         return text, usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
 
     def close(self) -> None:
