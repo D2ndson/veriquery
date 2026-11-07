@@ -139,3 +139,19 @@ def test_plan():
     assert plan_question("total sales in 2024?") == "sql_only"
     assert plan_question("Compare revenue by region") == "sql_then_python"
     assert plan_question("anything", files=["a.csv"]) == "python_on_files"
+
+
+def test_parallel_calls_give_the_same_answer(db, monkeypatch, config):
+    # Drafts and readings run concurrently by default; each keeps its client and seed, so nothing changes.
+    def run(parallel, analysis=CLEAR, question=QUESTION, **kw):
+        llm = make_llm(monkeypatch, analysis=analysis, first_sql=WRONG, sampled_sql=RIGHT)
+        cfg = Config(**{**config.__dict__, "parallel": parallel, **kw})
+        return VeriQuery(llm, cfg).ask(question, db)
+
+    for kw in ({}, {"analysis": AMBIGUOUS, "question": "How many big orders?", "use_verifier": False}):
+        seq, par = run(False, **kw), run(True, **kw)
+        for a, b in zip(seq["answers"], par["answers"], strict=True):
+            assert (a["label"], a["sql"], a["candidates"], a["verification_status"]) == \
+                   (b["label"], b["sql"], b["candidates"], b["verification_status"])
+            assert a["result"].equals(b["result"])
+        assert seq["usage"]["total"]["calls"] == par["usage"]["total"]["calls"]

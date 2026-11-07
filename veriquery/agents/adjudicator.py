@@ -17,6 +17,7 @@ is narrowed to the differing clauses and grounded in probes executed on the data
 from __future__ import annotations
 
 import re
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 
 import pandas as pd
@@ -283,8 +284,8 @@ def adjudicate(judge, question: str, evidence: str, schema: str, sql_a: str, sql
     """A is the majority draft, B the runner-up. Returns B only if both orderings of the judge prefer it."""
     diff = sql_diff(sql_a, sql_b)
     notes = probes(executor, sql_a, sql_b, diff)
-    verdicts = []
-    for swap in (False, True):
+
+    def ask(swap: bool) -> str | None:
         first, second = (sql_b, sql_a) if swap else (sql_a, sql_b)
         da, db = (df_b, df_a) if swap else (df_a, df_b)
         prompt = JUDGE_PROMPT.format(
@@ -293,10 +294,14 @@ def adjudicate(judge, question: str, evidence: str, schema: str, sql_a: str, sql
             probes="\n".join(_swap_labels(notes) if swap else notes) or "(no probes apply)",
             results=result_diff(da, db))
         try:
-            v = _verdict(judge.chat([{"role": "user", "content": prompt}], temperature=0.0, max_tokens=600))
+            v = _verdict(judge.chat([{"role": "user", "content": prompt}], temperature=0.0, max_tokens=600,
+                                    tag="adjudicator"))
         except Exception:
             v = None
-        verdicts.append({"A": "B", "B": "A"}[v] if swap and v else v)  # map back to the unswapped labels
+        return {"A": "B", "B": "A"}[v] if swap and v else v  # map back to the unswapped labels
+
+    with ThreadPoolExecutor(2) as pool:  # the two orderings are independent
+        verdicts = list(pool.map(ask, (False, True)))
     choice = "B" if verdicts == ["B", "B"] else "A"
     return Adjudication(choice, diff, notes, verdicts)
 

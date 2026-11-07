@@ -92,7 +92,8 @@ def test_orchestrator_adjudicates_a_split_vote(db, monkeypatch, tmp_path):
         return reply(messages, max_tokens, temperature)
 
     monkeypatch.setattr(llm, "_ollama", counting)
-    cfg = Config(notebook_dir=str(tmp_path / "nb"), use_clarifier=False, use_verifier=False, adjudicate=True)
+    cfg = Config(notebook_dir=str(tmp_path / "nb"), use_clarifier=False, use_verifier=False, adjudicate=True,
+                 parallel=False)  # the fake tells drafts apart by call order
     [answer] = VeriQuery(llm, cfg).ask(question, db)["answers"]
     assert [c["group"] for c in answer["candidates"]] == [0, 1, 0]
     assert answer["adjudication"]["choice"] == "B"

@@ -20,6 +20,7 @@ from __future__ import annotations
 import re
 import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
 from contextlib import contextmanager, nullcontext
 from dataclasses import dataclass, replace
 from pathlib import Path
@@ -111,6 +112,7 @@ class Config:
     calibrator_path: str = ""          # fitted calibrator JSON (veriquery.verifier.calibrator)
     record_prompts: bool = False       # keep writer prompts / raw replies (training-data mining)
     adjudicate: bool = False           # drafts disagree: diff them, probe the database, let a judge pick (adjudicator)
+    parallel: bool = True              # run independent model calls (drafts, readings) concurrently; same results
 
 
 class _Notebook(SchemaNotebook):
@@ -233,6 +235,24 @@ class VeriQuery:
         self.calibrator = calibrator or (Calibrator.load(self.config.calibrator_path)
                                          if self.config.calibrator_path else None)
         self._tl = threading.local()
+
+    def _map(self, fn, items) -> list:
+        """`fn` over `items`, results in order; concurrent when Config.parallel. Each call keeps its own client and
+        seed, so the results do not depend on it. The event bus (thread-local) is carried into the worker threads."""
+        items = list(items)
+        if not self.config.parallel or len(items) < 2:
+            return [fn(x) for x in items]
+        bus = getattr(self._tl, "bus", None)
+
+        def run(x):
+            self._tl.bus = bus
+            try:
+                return fn(x)
+            finally:
+                self._tl.bus = None
+
+        with ThreadPoolExecutor(len(items)) as pool:
+            return list(pool.map(run, items))
 
     def _sampler(self, temperature: float, seed: int):
         if not hasattr(self.llm, "with_temperature"):
@@ -360,8 +380,8 @@ class VeriQuery:
                                 for r in readings],
                       ambiguities=[a["span"] for a in c["ambiguities"] if a["critical"]])
 
-        for reading in readings:
-            state["answers"].append(self._answer(state, reading))
+        # Readings are independent (one per interpretation when no user can be asked): answer them at once.
+        state["answers"].extend(self._map(lambda r: self._answer(state, r), readings))
 
         state["usage"] = self._usage_delta(usage_before)
         state["report"] = self._final_report(state, time.monotonic() - started)
@@ -456,7 +476,8 @@ class VeriQuery:
         pending = None        # a verification report computed on the fast path, reused by the loop
 
         with self._step(state, "sql_writer" + tag) as note:
-            drafts = [write(self.samplers[0])]
+            # Without the adaptive fast path every draft is needed, so all are written at once.
+            drafts = [write(self.samplers[0])] if adaptive else self._map(write, self.samplers)
             if adaptive and drafts[0].ok:
                 df0 = pd.DataFrame(drafts[0].execution.rows, columns=drafts[0].execution.columns)
                 pending = self._verify(state, q, drafts[0].sql, evidence, df0, 0, tag, answer)
@@ -466,9 +487,10 @@ class VeriQuery:
                     answer["path"] = "fast"
                 else:
                     answer["path"] = "escalated"
-                    drafts += [write(c) for c in self.samplers[1:]]
+                    drafts += self._map(write, self.samplers[1:])
             else:
-                drafts += [write(c) for c in self.samplers[1:]]
+                if adaptive:  # the first draft did not execute: write the rest
+                    drafts += self._map(write, self.samplers[1:])
                 answer["path"] = "escalated" if adaptive else "full"
             out, groups = _vote(drafts)
             pair = top_two(drafts, groups) if self.config.adjudicate and out.ok else None
