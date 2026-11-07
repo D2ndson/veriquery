@@ -1,0 +1,3960 @@
+{
+ "db_id": "public_review_platform",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/public_review_platform/public_review_platform.sqlite",
+ "fingerprint": "65339392-1793993072042365601-v1.0",
+ "created_at": "2026-11-06T19:25:12+00:00",
+ "profile_seconds": 4.746,
+ "tables": [
+  {
+   "name": "Attributes",
+   "row_count": 80,
+   "stats_rows": 80,
+   "columns": [
+    {
+     "name": "attribute_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 80,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 80,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "attribute id. unique number identifying the attribute",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "attribute_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 80,
+     "is_unique": true,
+     "min_value": "Accepts Credit Cards",
+     "max_value": "payment_types_visa",
+     "examples": [
+      "Alcohol",
+      "Waiter Service",
+      "Delivery",
+      "Attire",
+      "Good for Kids"
+     ],
+     "top_values": [],
+     "description": "attribute name. the name of the attribute",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "attribute_id"
+   ],
+   "sample_rows": [
+    {
+     "attribute_id": 1,
+     "attribute_name": "Alcohol"
+    },
+    {
+     "attribute_id": 2,
+     "attribute_name": "Waiter Service"
+    },
+    {
+     "attribute_id": 3,
+     "attribute_name": "Delivery"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Business",
+   "row_count": 15585,
+   "stats_rows": 15585,
+   "columns": [
+    {
+     "name": "business_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 15585,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 15585,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "business id. unique number identifying the business",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "active",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "false",
+     "max_value": "true",
+     "examples": [
+      "true",
+      "false"
+     ],
+     "top_values": [
+      [
+       "true",
+       13733
+      ],
+      [
+       "false",
+       1852
+      ]
+     ],
+     "description": "whether the business is still actively running until now",
+     "value_description": "commonsense reasoning:\n� \"True\": the business is still running \n� \"False\": the business is closed or not running now",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 68,
+     "is_unique": false,
+     "min_value": "Ahwatukee",
+     "max_value": "chandler",
+     "examples": [
+      "Phoenix",
+      "Scottsdale",
+      "Glendale",
+      "Casa Grande",
+      "Peoria"
+     ],
+     "top_values": [],
+     "description": "The city where the business is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "AZ",
+     "max_value": "SC",
+     "examples": [
+      "AZ"
+     ],
+     "top_values": [
+      [
+       "AZ",
+       15582
+      ],
+      [
+       "CA",
+       2
+      ],
+      [
+       "SC",
+       1
+      ]
+     ],
+     "description": "The state where the business is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "stars",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 5.0,
+     "examples": [
+      3.0,
+      4.5,
+      4.0,
+      5.0,
+      3.5
+     ],
+     "top_values": [
+      [
+       4.0,
+       3425
+      ],
+      [
+       3.5,
+       3389
+      ],
+      [
+       4.5,
+       2323
+      ],
+      [
+       3.0,
+       2038
+      ],
+      [
+       5.0,
+       1999
+      ],
+      [
+       2.5,
+       1350
+      ],
+      [
+       2.0,
+       571
+      ],
+      [
+       1.5,
+       292
+      ],
+      [
+       1.0,
+       198
+      ]
+     ],
+     "description": "ratings of the business",
+     "value_description": "5 � Great experience \n4 � Good experience \n3 � Average experience \n2 � Bad experience \n1 - Terrible experience \ncommonsense evidence: \n� the rating of >3 stars referring to \"wonderful experience\" or positive comments and vice versa",
+     "notes": []
+    },
+    {
+     "name": "review_count",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "Low",
+      "Medium",
+      "High",
+      "Uber"
+     ],
+     "top_values": [
+      [
+       "Low",
+       12064
+      ],
+      [
+       "Medium",
+       2747
+      ],
+      [
+       "High",
+       686
+      ],
+      [
+       "Uber",
+       88
+      ]
+     ],
+     "description": "review count. the total number of reviews the users have written for a business",
+     "value_description": "commonsense evidence: \n� If a business has a low total review count and a high star rating of >3, it means there is a low veracity of reviews. \n� higher review count and with high star rating of > 3 means this business is more popular or more appealing to users.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "business_id"
+   ],
+   "sample_rows": [
+    {
+     "business_id": 1,
+     "active": "true",
+     "city": "Phoenix",
+     "state": "AZ",
+     "stars": 3.0,
+     "review_count": "Low"
+    },
+    {
+     "business_id": 2,
+     "active": "true",
+     "city": "Scottsdale",
+     "state": "AZ",
+     "stars": 4.5,
+     "review_count": "Medium"
+    },
+    {
+     "business_id": 3,
+     "active": "true",
+     "city": "Scottsdale",
+     "state": "AZ",
+     "stars": 4.0,
+     "review_count": "Medium"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Business_Attributes",
+   "row_count": 206934,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "attribute_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 73,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 74,
+     "examples": [
+      1
+     ],
+     "top_values": [],
+     "description": "attribute id. id number identifying the attribute",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "business_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 12851,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 15585,
+     "examples": [
+      2,
+      3,
+      13,
+      17,
+      22
+     ],
+     "top_values": [],
+     "description": "business id. id number identifying the business",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "attribute_value",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 26,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "yes_free",
+     "examples": [
+      "none",
+      "full_bar",
+      "beer_and_wine"
+     ],
+     "top_values": [
+      [
+       "false",
+       113571
+      ],
+      [
+       "true",
+       57839
+      ],
+      [
+       "2",
+       4795
+      ],
+      [
+       "casual",
+       4716
+      ],
+      [
+       "1",
+       3893
+      ],
+      [
+       "average",
+       2753
+      ],
+      [
+       "no",
+       2553
+      ],
+      [
+       "none",
+       2214
+      ],
+      [
+       "full_bar",
+       1928
+      ],
+      [
+       "free",
+       1585
+      ],
+      [
+       "3",
+       939
+      ],
+      [
+       "quiet",
+       873
+      ],
+      [
+       "beer_and_wine",
+       648
+      ],
+      [
+       "outdoor",
+       464
+      ],
+      [
+       "loud",
+       371
+      ],
+      [
+       "yes_free",
+       201
+      ],
+      [
+       "very_loud",
+       185
+      ],
+      [
+       "4",
+       178
+      ],
+      [
+       "dressy",
+       113
+      ],
+      [
+       "paid",
+       90
+      ],
+      [
+       "yes_corkage",
+       27
+      ],
+      [
+       "yes",
+       24
+      ],
+      [
+       "21plus",
+       20
+      ],
+      [
+       "formal",
+       14
+      ],
+      [
+       "allages",
+       3
+      ],
+      [
+       "18plus",
+       3
+      ]
+     ],
+     "description": "attribute value. sort of the attributes for each business",
+     "value_description": "commonsense evidence: \n“None”, “No” or “FALSE” means the business does not have the attribute.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "attribute_id",
+    "business_id"
+   ],
+   "sample_rows": [
+    {
+     "attribute_id": 1,
+     "business_id": 2,
+     "attribute_value": "none"
+    },
+    {
+     "attribute_id": 1,
+     "business_id": 3,
+     "attribute_value": "none"
+    },
+    {
+     "attribute_id": 1,
+     "business_id": 13,
+     "attribute_value": "none"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 206,934 rows"
+   ]
+  },
+  {
+   "name": "Business_Categories",
+   "row_count": 43703,
+   "stats_rows": 43703,
+   "columns": [
+    {
+     "name": "business_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 15470,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 15585,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "business id. id number identifying the business",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "category_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 591,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 591,
+     "examples": [
+      8,
+      143,
+      18,
+      170,
+      93
+     ],
+     "top_values": [],
+     "description": "category id. id number identifying the categories",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "business_id",
+    "category_id"
+   ],
+   "sample_rows": [
+    {
+     "business_id": 1,
+     "category_id": 8
+    },
+    {
+     "business_id": 1,
+     "category_id": 143
+    },
+    {
+     "business_id": 2,
+     "category_id": 18
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Business_Hours",
+   "row_count": 47831,
+   "stats_rows": 47831,
+   "columns": [
+    {
+     "name": "business_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 7452,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 15583,
+     "examples": [
+      2,
+      3,
+      4,
+      7,
+      11
+     ],
+     "top_values": [],
+     "description": "business id. id number identifying the business",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "day_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 7,
+     "examples": [
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "top_values": [
+      [
+       5,
+       7332
+      ],
+      [
+       4,
+       7320
+      ],
+      [
+       6,
+       7288
+      ],
+      [
+       3,
+       7266
+      ],
+      [
+       2,
+       6957
+      ],
+      [
+       7,
+       6621
+      ],
+      [
+       1,
+       5047
+      ]
+     ],
+     "description": "day id. id number identifying each day of the week",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "opening_time",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": "10AM",
+     "max_value": "9PM",
+     "examples": [
+      "11AM",
+      "12PM",
+      "10AM",
+      "8AM",
+      "9AM"
+     ],
+     "top_values": [
+      [
+       "11AM",
+       10258
+      ],
+      [
+       "10AM",
+       8620
+      ],
+      [
+       "9AM",
+       8431
+      ],
+      [
+       "8AM",
+       5562
+      ],
+      [
+       "7AM",
+       5242
+      ],
+      [
+       "6AM",
+       3400
+      ],
+      [
+       "12AM",
+       1312
+      ],
+      [
+       "12PM",
+       1139
+      ],
+      [
+       "5PM",
+       921
+      ],
+      [
+       "5AM",
+       772
+      ],
+      [
+       "4PM",
+       763
+      ],
+      [
+       "3PM",
+       365
+      ],
+      [
+       "4AM",
+       249
+      ],
+      [
+       "6PM",
+       159
+      ],
+      [
+       "2PM",
+       153
+      ],
+      [
+       "1PM",
+       153
+      ],
+      [
+       "7PM",
+       90
+      ],
+      [
+       "8PM",
+       89
+      ],
+      [
+       "10PM",
+       47
+      ],
+      [
+       "9PM",
+       44
+      ],
+      [
+       "11PM",
+       25
+      ],
+      [
+       "3AM",
+       19
+      ],
+      [
+       "1AM",
+       15
+      ],
+      [
+       "2AM",
+       3
+      ]
+     ],
+     "description": "opening time of the business",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "closing_time",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": "10AM",
+     "max_value": "9PM",
+     "examples": [
+      "8PM",
+      "9PM",
+      "6PM",
+      "5PM",
+      "7PM"
+     ],
+     "top_values": [
+      [
+       "9PM",
+       9115
+      ],
+      [
+       "10PM",
+       6754
+      ],
+      [
+       "5PM",
+       6063
+      ],
+      [
+       "6PM",
+       5497
+      ],
+      [
+       "7PM",
+       4080
+      ],
+      [
+       "8PM",
+       3789
+      ],
+      [
+       "12AM",
+       2741
+      ],
+      [
+       "11PM",
+       2405
+      ],
+      [
+       "2AM",
+       1722
+      ],
+      [
+       "4PM",
+       1432
+      ],
+      [
+       "2PM",
+       1232
+      ],
+      [
+       "3PM",
+       945
+      ],
+      [
+       "1AM",
+       554
+      ],
+      [
+       "12PM",
+       328
+      ],
+      [
+       "5AM",
+       250
+      ],
+      [
+       "1PM",
+       242
+      ],
+      [
+       "6AM",
+       163
+      ],
+      [
+       "3AM",
+       124
+      ],
+      [
+       "7AM",
+       110
+      ],
+      [
+       "9AM",
+       94
+      ],
+      [
+       "11AM",
+       65
+      ],
+      [
+       "4AM",
+       57
+      ],
+      [
+       "10AM",
+       41
+      ],
+      [
+       "8AM",
+       28
+      ]
+     ],
+     "description": "closing time of the business",
+     "value_description": "commonsense evidence: \nhow much time does this business open: closing_time - opening_time",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "business_id",
+    "day_id"
+   ],
+   "sample_rows": [
+    {
+     "business_id": 2,
+     "day_id": 2,
+     "opening_time": "11AM",
+     "closing_time": "8PM"
+    },
+    {
+     "business_id": 2,
+     "day_id": 3,
+     "opening_time": "11AM",
+     "closing_time": "8PM"
+    },
+    {
+     "business_id": 2,
+     "day_id": 4,
+     "opening_time": "11AM",
+     "closing_time": "8PM"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Categories",
+   "row_count": 591,
+   "stats_rows": 591,
+   "columns": [
+    {
+     "name": "category_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 591,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 591,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "category id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "category_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 591,
+     "is_unique": true,
+     "min_value": "Accessories",
+     "max_value": "Zoos",
+     "examples": [
+      "Active Life",
+      "Arts & Entertainment",
+      "Stadiums & Arenas",
+      "Horse Racing",
+      "Tires"
+     ],
+     "top_values": [],
+     "description": "category name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "category_id"
+   ],
+   "sample_rows": [
+    {
+     "category_id": 1,
+     "category_name": "Active Life"
+    },
+    {
+     "category_id": 2,
+     "category_name": "Arts & Entertainment"
+    },
+    {
+     "category_id": 3,
+     "category_name": "Stadiums & Arenas"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Checkins",
+   "row_count": 80038,
+   "stats_rows": 80038,
+   "columns": [
+    {
+     "name": "business_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 11434,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 15584,
+     "examples": [
+      1,
+      2,
+      3,
+      5,
+      6
+     ],
+     "top_values": [],
+     "description": "business id. id number identifying the business",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "day_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 7,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       7,
+       11434
+      ],
+      [
+       6,
+       11434
+      ],
+      [
+       5,
+       11434
+      ],
+      [
+       4,
+       11434
+      ],
+      [
+       3,
+       11434
+      ],
+      [
+       2,
+       11434
+      ],
+      [
+       1,
+       11434
+      ]
+     ],
+     "description": "day id. id number identifying each day of the week",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_0",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "None",
+     "examples": [
+      "None",
+      "Low"
+     ],
+     "top_values": [
+      [
+       "None",
+       76261
+      ],
+      [
+       "Low",
+       3626
+      ],
+      [
+       "Medium",
+       142
+      ],
+      [
+       "High",
+       9
+      ]
+     ],
+     "description": "indicates times of checkins on a business",
+     "value_description": "label_time_0: 12:00 a.m. \nlabel_time_23: 23:00 p.m. \ncommonsense evidence: If the label_time recorded \"None\" for check-in on one day, then it means the business is closed on that day.",
+     "notes": []
+    },
+    {
+     "name": "label_time_1",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "None",
+     "examples": [
+      "None",
+      "Low"
+     ],
+     "top_values": [
+      [
+       "None",
+       77696
+      ],
+      [
+       "Low",
+       2304
+      ],
+      [
+       "Medium",
+       36
+      ],
+      [
+       "High",
+       2
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_2",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Low",
+     "max_value": "None",
+     "examples": [
+      "None",
+      "Low"
+     ],
+     "top_values": [
+      [
+       "None",
+       78813
+      ],
+      [
+       "Low",
+       1217
+      ],
+      [
+       "Medium",
+       8
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_3",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Low",
+     "max_value": "None",
+     "examples": [
+      "None",
+      "Low"
+     ],
+     "top_values": [
+      [
+       "None",
+       79225
+      ],
+      [
+       "Low",
+       802
+      ],
+      [
+       "Medium",
+       11
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_4",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "None",
+     "examples": [
+      "None",
+      "Low"
+     ],
+     "top_values": [
+      [
+       "None",
+       78412
+      ],
+      [
+       "Low",
+       1577
+      ],
+      [
+       "Medium",
+       42
+      ],
+      [
+       "High",
+       7
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_5",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low"
+     ],
+     "top_values": [
+      [
+       "None",
+       76496
+      ],
+      [
+       "Low",
+       3416
+      ],
+      [
+       "Medium",
+       109
+      ],
+      [
+       "High",
+       14
+      ],
+      [
+       "Uber",
+       3
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_6",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium"
+     ],
+     "top_values": [
+      [
+       "None",
+       73110
+      ],
+      [
+       "Low",
+       6649
+      ],
+      [
+       "Medium",
+       258
+      ],
+      [
+       "High",
+       16
+      ],
+      [
+       "Uber",
+       5
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_7",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium",
+      "High"
+     ],
+     "top_values": [
+      [
+       "None",
+       69326
+      ],
+      [
+       "Low",
+       10206
+      ],
+      [
+       "Medium",
+       472
+      ],
+      [
+       "High",
+       26
+      ],
+      [
+       "Uber",
+       8
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_8",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium",
+      "High"
+     ],
+     "top_values": [
+      [
+       "None",
+       66307
+      ],
+      [
+       "Low",
+       13062
+      ],
+      [
+       "Medium",
+       628
+      ],
+      [
+       "High",
+       29
+      ],
+      [
+       "Uber",
+       12
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_9",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "Low",
+      "None",
+      "Medium",
+      "High"
+     ],
+     "top_values": [
+      [
+       "None",
+       63039
+      ],
+      [
+       "Low",
+       16235
+      ],
+      [
+       "Medium",
+       713
+      ],
+      [
+       "High",
+       44
+      ],
+      [
+       "Uber",
+       7
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_10",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium",
+      "High",
+      "Uber"
+     ],
+     "top_values": [
+      [
+       "None",
+       55299
+      ],
+      [
+       "Low",
+       23654
+      ],
+      [
+       "Medium",
+       1025
+      ],
+      [
+       "High",
+       52
+      ],
+      [
+       "Uber",
+       8
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_11",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "Low",
+      "None",
+      "Medium",
+      "High"
+     ],
+     "top_values": [
+      [
+       "None",
+       48670
+      ],
+      [
+       "Low",
+       29179
+      ],
+      [
+       "Medium",
+       2040
+      ],
+      [
+       "High",
+       142
+      ],
+      [
+       "Uber",
+       7
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_12",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium",
+      "High"
+     ],
+     "top_values": [
+      [
+       "None",
+       47217
+      ],
+      [
+       "Low",
+       30337
+      ],
+      [
+       "Medium",
+       2339
+      ],
+      [
+       "High",
+       138
+      ],
+      [
+       "Uber",
+       7
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_13",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium",
+      "High"
+     ],
+     "top_values": [
+      [
+       "None",
+       49975
+      ],
+      [
+       "Low",
+       28682
+      ],
+      [
+       "Medium",
+       1343
+      ],
+      [
+       "High",
+       30
+      ],
+      [
+       "Uber",
+       8
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_14",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium"
+     ],
+     "top_values": [
+      [
+       "None",
+       52695
+      ],
+      [
+       "Low",
+       26395
+      ],
+      [
+       "Medium",
+       924
+      ],
+      [
+       "High",
+       18
+      ],
+      [
+       "Uber",
+       6
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_15",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium"
+     ],
+     "top_values": [
+      [
+       "None",
+       53325
+      ],
+      [
+       "Low",
+       25771
+      ],
+      [
+       "Medium",
+       915
+      ],
+      [
+       "High",
+       20
+      ],
+      [
+       "Uber",
+       7
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_16",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium"
+     ],
+     "top_values": [
+      [
+       "None",
+       50794
+      ],
+      [
+       "Low",
+       27752
+      ],
+      [
+       "Medium",
+       1437
+      ],
+      [
+       "High",
+       47
+      ],
+      [
+       "Uber",
+       8
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_17",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "Low",
+      "None",
+      "Medium"
+     ],
+     "top_values": [
+      [
+       "None",
+       48856
+      ],
+      [
+       "Low",
+       28526
+      ],
+      [
+       "Medium",
+       2537
+      ],
+      [
+       "High",
+       109
+      ],
+      [
+       "Uber",
+       10
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_18",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium"
+     ],
+     "top_values": [
+      [
+       "None",
+       49819
+      ],
+      [
+       "Low",
+       26985
+      ],
+      [
+       "Medium",
+       3092
+      ],
+      [
+       "High",
+       132
+      ],
+      [
+       "Uber",
+       10
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_19",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium"
+     ],
+     "top_values": [
+      [
+       "None",
+       52899
+      ],
+      [
+       "Low",
+       24626
+      ],
+      [
+       "Medium",
+       2396
+      ],
+      [
+       "High",
+       110
+      ],
+      [
+       "Uber",
+       7
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_20",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium"
+     ],
+     "top_values": [
+      [
+       "None",
+       58160
+      ],
+      [
+       "Low",
+       20396
+      ],
+      [
+       "Medium",
+       1420
+      ],
+      [
+       "High",
+       57
+      ],
+      [
+       "Uber",
+       5
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_21",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low"
+     ],
+     "top_values": [
+      [
+       "None",
+       65104
+      ],
+      [
+       "Low",
+       14087
+      ],
+      [
+       "Medium",
+       796
+      ],
+      [
+       "High",
+       47
+      ],
+      [
+       "Uber",
+       4
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_22",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low"
+     ],
+     "top_values": [
+      [
+       "None",
+       71204
+      ],
+      [
+       "Low",
+       8378
+      ],
+      [
+       "Medium",
+       410
+      ],
+      [
+       "High",
+       44
+      ],
+      [
+       "Uber",
+       2
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_time_23",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "None",
+     "examples": [
+      "None",
+      "Low"
+     ],
+     "top_values": [
+      [
+       "None",
+       74509
+      ],
+      [
+       "Low",
+       5249
+      ],
+      [
+       "Medium",
+       255
+      ],
+      [
+       "High",
+       25
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "business_id",
+    "day_id"
+   ],
+   "sample_rows": [
+    {
+     "business_id": 1,
+     "day_id": 1,
+     "label_time_0": "None",
+     "label_time_1": "None",
+     "label_time_2": "None",
+     "label_time_3": "None",
+     "label_time_4": "None",
+     "label_time_5": "None",
+     "label_time_6": "None",
+     "label_time_7": "None",
+     "label_time_8": "None",
+     "label_time_9": "Low",
+     "label_time_10": "None",
+     "label_time_11": "Low",
+     "label_time_12": "None",
+     "label_time_13": "None",
+     "label_time_14": "None",
+     "label_time_15": "None",
+     "label_time_16": "None",
+     "label_time_17": "Low",
+     "label_time_18": "None",
+     "label_time_19": "None",
+     "label_time_20": "None",
+     "label_time_21": "None",
+     "label_time_22": "None",
+     "label_time_23": "None"
+    },
+    {
+     "business_id": 1,
+     "day_id": 2,
+     "label_time_0": "None",
+     "label_time_1": "None",
+     "label_time_2": "None",
+     "label_time_3": "None",
+     "label_time_4": "None",
+     "label_time_5": "None",
+     "label_time_6": "None",
+     "label_time_7": "None",
+     "label_time_8": "None",
+     "label_time_9": "None",
+     "label_time_10": "None",
+     "label_time_11": "None",
+     "label_time_12": "None",
+     "label_time_13": "None",
+     "label_time_14": "None",
+     "label_time_15": "Low",
+     "label_time_16": "None",
+     "label_time_17": "None",
+     "label_time_18": "None",
+     "label_time_19": "Low",
+     "label_time_20": "None",
+     "label_time_21": "None",
+     "label_time_22": "None",
+     "label_time_23": "None"
+    },
+    {
+     "business_id": 1,
+     "day_id": 3,
+     "label_time_0": "None",
+     "label_time_1": "None",
+     "label_time_2": "None",
+     "label_time_3": "None",
+     "label_time_4": "None",
+     "label_time_5": "None",
+     "label_time_6": "None",
+     "label_time_7": "None",
+     "label_time_8": "None",
+     "label_time_9": "None",
+     "label_time_10": "None",
+     "label_time_11": "Low",
+     "label_time_12": "None",
+     "label_time_13": "Low",
+     "label_time_14": "Low",
+     "label_time_15": "Low",
+     "label_time_16": "None",
+     "label_time_17": "Low",
+     "label_time_18": "None",
+     "label_time_19": "None",
+     "label_time_20": "None",
+     "label_time_21": "None",
+     "label_time_22": "None",
+     "label_time_23": "None"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Compliments",
+   "row_count": 11,
+   "stats_rows": 11,
+   "columns": [
+    {
+     "name": "compliment_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 11,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "compliment id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "compliment_type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": true,
+     "min_value": "cool",
+     "max_value": "writer",
+     "examples": [
+      "photos",
+      "cool",
+      "hot",
+      "note",
+      "more"
+     ],
+     "top_values": [
+      [
+       "writer",
+       1
+      ],
+      [
+       "profile",
+       1
+      ],
+      [
+       "plain",
+       1
+      ],
+      [
+       "photos",
+       1
+      ],
+      [
+       "note",
+       1
+      ],
+      [
+       "more",
+       1
+      ],
+      [
+       "list",
+       1
+      ],
+      [
+       "hot",
+       1
+      ],
+      [
+       "funny",
+       1
+      ],
+      [
+       "cute",
+       1
+      ],
+      [
+       "cool",
+       1
+      ]
+     ],
+     "description": "compliment type",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "compliment_id"
+   ],
+   "sample_rows": [
+    {
+     "compliment_id": 1,
+     "compliment_type": "photos"
+    },
+    {
+     "compliment_id": 2,
+     "compliment_type": "cool"
+    },
+    {
+     "compliment_id": 3,
+     "compliment_type": "hot"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Days",
+   "row_count": 7,
+   "stats_rows": 7,
+   "columns": [
+    {
+     "name": "day_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 7,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "day id. the unique id identifying the day of the week",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "day_of_week",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": true,
+     "min_value": "Friday",
+     "max_value": "Wednesday",
+     "examples": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+     ],
+     "top_values": [
+      [
+       "Wednesday",
+       1
+      ],
+      [
+       "Tuesday",
+       1
+      ],
+      [
+       "Thursday",
+       1
+      ],
+      [
+       "Sunday",
+       1
+      ],
+      [
+       "Saturday",
+       1
+      ],
+      [
+       "Monday",
+       1
+      ],
+      [
+       "Friday",
+       1
+      ]
+     ],
+     "description": "day of week. indicate the day of the week",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "day_id"
+   ],
+   "sample_rows": [
+    {
+     "day_id": 1,
+     "day_of_week": "Sunday"
+    },
+    {
+     "day_id": 2,
+     "day_of_week": "Monday"
+    },
+    {
+     "day_id": 3,
+     "day_of_week": "Tuesday"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Elite",
+   "row_count": 16366,
+   "stats_rows": 16366,
+   "columns": [
+    {
+     "name": "user_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5008,
+     "is_unique": false,
+     "min_value": 3,
+     "max_value": 70804,
+     "examples": [
+      3,
+      19,
+      33,
+      45,
+      65
+     ],
+     "top_values": [],
+     "description": "user id. id number identifying the users",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "year_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": 2005,
+     "max_value": 2014,
+     "examples": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014
+     ],
+     "top_values": [
+      [
+       2012,
+       3149
+      ],
+      [
+       2013,
+       3089
+      ],
+      [
+       2014,
+       2561
+      ],
+      [
+       2011,
+       2537
+      ],
+      [
+       2010,
+       2112
+      ],
+      [
+       2009,
+       1379
+      ],
+      [
+       2008,
+       833
+      ],
+      [
+       2007,
+       483
+      ],
+      [
+       2006,
+       189
+      ],
+      [
+       2005,
+       34
+      ]
+     ],
+     "description": "year id. id number identifying the year",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "user_id",
+    "year_id"
+   ],
+   "sample_rows": [
+    {
+     "user_id": 3,
+     "year_id": 2010
+    },
+    {
+     "user_id": 3,
+     "year_id": 2011
+    },
+    {
+     "user_id": 3,
+     "year_id": 2012
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Reviews",
+   "row_count": 322906,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "business_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9651,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 9655,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "business id. the number identifying the business",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 55152,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 70817,
+     "examples": [
+      36129,
+      40299,
+      59125,
+      60776,
+      62013
+     ],
+     "top_values": [],
+     "description": "user id. the number identifying the user who comments on this business",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "review_stars",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 5,
+     "examples": [
+      2,
+      1,
+      5,
+      4,
+      3
+     ],
+     "top_values": [
+      [
+       5,
+       70705
+      ],
+      [
+       4,
+       66018
+      ],
+      [
+       3,
+       28391
+      ],
+      [
+       2,
+       17813
+      ],
+      [
+       1,
+       17073
+      ]
+     ],
+     "description": "review stars. review on this business",
+     "value_description": "5 – Great experience \n4 – Good experience \n3 – Average experience \n2 – Bad experience \n1 - Terrible experience",
+     "notes": []
+    },
+    {
+     "name": "review_votes_funny",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium"
+     ],
+     "top_values": [
+      [
+       "None",
+       146444
+      ],
+      [
+       "Low",
+       52480
+      ],
+      [
+       "Medium",
+       918
+      ],
+      [
+       "High",
+       149
+      ],
+      [
+       "Uber",
+       9
+      ]
+     ],
+     "description": "review votes funny. the amount of funny votes that the user received for the review",
+     "value_description": "commonsense evidence: If the reviews receive an “Uber” number of votes for funny, they will also receive an “Uber”, “High” or “Medium” number of votes for “useful” and “cool”.",
+     "notes": []
+    },
+    {
+     "name": "review_votes_useful",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium"
+     ],
+     "top_values": [
+      [
+       "Low",
+       104806
+      ],
+      [
+       "None",
+       93461
+      ],
+      [
+       "Medium",
+       1581
+      ],
+      [
+       "High",
+       140
+      ],
+      [
+       "Uber",
+       12
+      ]
+     ],
+     "description": "review votes useful. how many useful votes that the user received for the review",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "review_votes_cool",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "None",
+      "Low",
+      "Medium"
+     ],
+     "top_values": [
+      [
+       "None",
+       131601
+      ],
+      [
+       "Low",
+       67256
+      ],
+      [
+       "Medium",
+       1033
+      ],
+      [
+       "High",
+       101
+      ],
+      [
+       "Uber",
+       9
+      ]
+     ],
+     "description": "review votes cool. how many cool votes that the user received for the review",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "review_length",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Long",
+     "max_value": "Short",
+     "examples": [
+      "Medium",
+      "Short",
+      "Long"
+     ],
+     "top_values": [
+      [
+       "Medium",
+       138136
+      ],
+      [
+       "Long",
+       40393
+      ],
+      [
+       "Short",
+       21471
+      ]
+     ],
+     "description": "review length. The length of the review written by the user",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "business_id",
+    "user_id"
+   ],
+   "sample_rows": [
+    {
+     "business_id": 1,
+     "user_id": 36129,
+     "review_stars": 2,
+     "review_votes_funny": "None",
+     "review_votes_useful": "None",
+     "review_votes_cool": "None",
+     "review_length": "Medium"
+    },
+    {
+     "business_id": 1,
+     "user_id": 40299,
+     "review_stars": 1,
+     "review_votes_funny": "None",
+     "review_votes_useful": "None",
+     "review_votes_cool": "None",
+     "review_length": "Short"
+    },
+    {
+     "business_id": 1,
+     "user_id": 59125,
+     "review_stars": 5,
+     "review_votes_funny": "None",
+     "review_votes_useful": "None",
+     "review_votes_cool": "None",
+     "review_length": "Short"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 322,906 rows"
+   ]
+  },
+  {
+   "name": "Tips",
+   "row_count": 87157,
+   "stats_rows": 87157,
+   "columns": [
+    {
+     "name": "business_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 10473,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 15585,
+     "examples": [
+      2,
+      3,
+      6,
+      8,
+      9
+     ],
+     "top_values": [],
+     "description": "business id. the number identifying the business",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 15231,
+     "is_unique": false,
+     "min_value": 3,
+     "max_value": 70816,
+     "examples": [
+      12490,
+      16328,
+      19191,
+      25891,
+      34759
+     ],
+     "top_values": [],
+     "description": "user id. the number identifying the user who comments on this business",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "likes",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 3,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       86435
+      ],
+      [
+       1,
+       683
+      ],
+      [
+       2,
+       36
+      ],
+      [
+       3,
+       3
+      ]
+     ],
+     "description": "how many likes of this tips",
+     "value_description": "commonsense evidence: more likes mean this tip is more valuable",
+     "notes": []
+    },
+    {
+     "name": "tip_length",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Long",
+     "max_value": "Short",
+     "examples": [
+      "Medium",
+      "Short",
+      "Long"
+     ],
+     "top_values": [
+      [
+       "Medium",
+       66302
+      ],
+      [
+       "Short",
+       16019
+      ],
+      [
+       "Long",
+       4836
+      ]
+     ],
+     "description": "tip length. length of the tip",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "business_id",
+    "user_id"
+   ],
+   "sample_rows": [
+    {
+     "business_id": 2,
+     "user_id": 12490,
+     "likes": 0,
+     "tip_length": "Medium"
+    },
+    {
+     "business_id": 2,
+     "user_id": 16328,
+     "likes": 0,
+     "tip_length": "Medium"
+    },
+    {
+     "business_id": 2,
+     "user_id": 19191,
+     "likes": 0,
+     "tip_length": "Short"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Users",
+   "row_count": 70817,
+   "stats_rows": 70817,
+   "columns": [
+    {
+     "name": "user_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 70817,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 70817,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "user id. the unique id number identifying which user",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_yelping_since_year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": 2004,
+     "max_value": 2014,
+     "examples": [
+      2012,
+      2010,
+      2009,
+      2008,
+      2013
+     ],
+     "top_values": [
+      [
+       2011,
+       16564
+      ],
+      [
+       2012,
+       14114
+      ],
+      [
+       2010,
+       12460
+      ],
+      [
+       2013,
+       11243
+      ],
+      [
+       2009,
+       7933
+      ],
+      [
+       2008,
+       4561
+      ],
+      [
+       2007,
+       2345
+      ],
+      [
+       2006,
+       855
+      ],
+      [
+       2014,
+       546
+      ],
+      [
+       2005,
+       178
+      ],
+      [
+       2004,
+       18
+      ]
+     ],
+     "description": "user yelping since year. the time when the user join Yelp",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_average_stars",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": "0.0",
+     "max_value": "5.0",
+     "examples": [
+      "4.0",
+      "2.5",
+      "4.5",
+      "5.0",
+      "2.0"
+     ],
+     "top_values": [
+      [
+       "4.0",
+       18275
+      ],
+      [
+       "3.5",
+       13534
+      ],
+      [
+       "5.0",
+       13359
+      ],
+      [
+       "4.5",
+       8400
+      ],
+      [
+       "3.0",
+       7839
+      ],
+      [
+       "1.0",
+       3766
+      ],
+      [
+       "2.5",
+       2748
+      ],
+      [
+       "2.0",
+       2230
+      ],
+      [
+       "1.5",
+       664
+      ],
+      [
+       "0.0",
+       2
+      ]
+     ],
+     "description": "user average stars. the average ratings of all review",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "user_votes_funny",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "Low",
+      "None",
+      "Uber",
+      "Medium",
+      "High"
+     ],
+     "top_values": [
+      [
+       "None",
+       29808
+      ],
+      [
+       "Low",
+       28935
+      ],
+      [
+       "Medium",
+       7299
+      ],
+      [
+       "High",
+       2962
+      ],
+      [
+       "Uber",
+       1813
+      ]
+     ],
+     "description": "user votes funny. total number of funny votes sent by the user",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_votes_useful",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "Low",
+      "Medium",
+      "Uber",
+      "None",
+      "High"
+     ],
+     "top_values": [
+      [
+       "Low",
+       34194
+      ],
+      [
+       "Medium",
+       14800
+      ],
+      [
+       "None",
+       12107
+      ],
+      [
+       "High",
+       6026
+      ],
+      [
+       "Uber",
+       3690
+      ]
+     ],
+     "description": "user votes useful. how many useful votes created by the user",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_votes_cool",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "Low",
+      "Uber",
+      "None",
+      "High",
+      "Medium"
+     ],
+     "top_values": [
+      [
+       "Low",
+       30413
+      ],
+      [
+       "None",
+       27747
+      ],
+      [
+       "Medium",
+       7470
+      ],
+      [
+       "High",
+       3161
+      ],
+      [
+       "Uber",
+       2026
+      ]
+     ],
+     "description": "user votes cool. how many cool votes created by the user",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_review_count",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "Medium",
+      "High",
+      "Low",
+      "Uber"
+     ],
+     "top_values": [
+      [
+       "Low",
+       45966
+      ],
+      [
+       "Medium",
+       15907
+      ],
+      [
+       "High",
+       6187
+      ],
+      [
+       "Uber",
+       2757
+      ]
+     ],
+     "description": "user review count. total number of reviews the user has written",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_fans",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "Low",
+      "None",
+      "Medium"
+     ],
+     "top_values": [
+      [
+       "None",
+       54342
+      ],
+      [
+       "Low",
+       14547
+      ],
+      [
+       "Medium",
+       1618
+      ],
+      [
+       "High",
+       256
+      ],
+      [
+       "Uber",
+       54
+      ]
+     ],
+     "description": "user fans. total number of fans / followers the user has",
+     "value_description": "commonsense evidence: Users with “Uber” number of fans indicate that they have sent an “Uber” number of ‘cool’, ‘useful’ and ‘funny” votes.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "user_id"
+   ],
+   "sample_rows": [
+    {
+     "user_id": 1,
+     "user_yelping_since_year": 2012,
+     "user_average_stars": "4.0",
+     "user_votes_funny": "Low",
+     "user_votes_useful": "Low",
+     "user_votes_cool": "Low",
+     "user_review_count": "Medium",
+     "user_fans": "Low"
+    },
+    {
+     "user_id": 2,
+     "user_yelping_since_year": 2010,
+     "user_average_stars": "2.5",
+     "user_votes_funny": "None",
+     "user_votes_useful": "Medium",
+     "user_votes_cool": "Low",
+     "user_review_count": "Medium",
+     "user_fans": "None"
+    },
+    {
+     "user_id": 3,
+     "user_yelping_since_year": 2009,
+     "user_average_stars": "4.0",
+     "user_votes_funny": "Uber",
+     "user_votes_useful": "Uber",
+     "user_votes_cool": "Uber",
+     "user_review_count": "High",
+     "user_fans": "Medium"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Users_Compliments",
+   "row_count": 98810,
+   "stats_rows": 98810,
+   "columns": [
+    {
+     "name": "compliment_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 11,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       4,
+       15187
+      ],
+      [
+       8,
+       15080
+      ],
+      [
+       2,
+       14341
+      ],
+      [
+       7,
+       10684
+      ],
+      [
+       3,
+       10431
+      ],
+      [
+       6,
+       9107
+      ],
+      [
+       5,
+       8183
+      ],
+      [
+       1,
+       5267
+      ],
+      [
+       9,
+       4513
+      ],
+      [
+       10,
+       3481
+      ],
+      [
+       11,
+       2536
+      ]
+     ],
+     "description": "compliment id. the id number indicating the compliment",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 26799,
+     "is_unique": false,
+     "min_value": 3,
+     "max_value": 70815,
+     "examples": [
+      3,
+      19,
+      45,
+      53,
+      102
+     ],
+     "top_values": [],
+     "description": "user id. the id number indicating the user",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "number_of_compliments",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "High",
+     "max_value": "Uber",
+     "examples": [
+      "Medium",
+      "Low",
+      "High",
+      "Uber"
+     ],
+     "top_values": [
+      [
+       "Low",
+       81083
+      ],
+      [
+       "Medium",
+       11765
+      ],
+      [
+       "High",
+       3925
+      ],
+      [
+       "Uber",
+       2037
+      ]
+     ],
+     "description": "number of compliments. how many compliments a user has received from other users",
+     "value_description": "commonsense evidence: more number_of_compliments indicates this user is more welcome or he / she is high-quality user",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "compliment_id",
+    "user_id"
+   ],
+   "sample_rows": [
+    {
+     "compliment_id": 1,
+     "user_id": 3,
+     "number_of_compliments": "Medium"
+    },
+    {
+     "compliment_id": 1,
+     "user_id": 19,
+     "number_of_compliments": "Low"
+    },
+    {
+     "compliment_id": 1,
+     "user_id": 45,
+     "number_of_compliments": "Low"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Years",
+   "row_count": 10,
+   "stats_rows": 10,
+   "columns": [
+    {
+     "name": "year_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": 2005,
+     "max_value": 2014,
+     "examples": [
+      2005,
+      2006,
+      2007,
+      2008,
+      2009
+     ],
+     "top_values": [
+      [
+       2014,
+       1
+      ],
+      [
+       2013,
+       1
+      ],
+      [
+       2012,
+       1
+      ],
+      [
+       2011,
+       1
+      ],
+      [
+       2010,
+       1
+      ],
+      [
+       2009,
+       1
+      ],
+      [
+       2008,
+       1
+      ],
+      [
+       2007,
+       1
+      ],
+      [
+       2006,
+       1
+      ],
+      [
+       2005,
+       1
+      ]
+     ],
+     "description": "year id. the unique number identifying the year",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "actual_year",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": 2005,
+     "max_value": 2014,
+     "examples": [
+      2005,
+      2006,
+      2007,
+      2008,
+      2009
+     ],
+     "top_values": [
+      [
+       2014,
+       1
+      ],
+      [
+       2013,
+       1
+      ],
+      [
+       2012,
+       1
+      ],
+      [
+       2011,
+       1
+      ],
+      [
+       2010,
+       1
+      ],
+      [
+       2009,
+       1
+      ],
+      [
+       2008,
+       1
+      ],
+      [
+       2007,
+       1
+      ],
+      [
+       2006,
+       1
+      ],
+      [
+       2005,
+       1
+      ]
+     ],
+     "description": "actual year",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "year_id"
+   ],
+   "sample_rows": [
+    {
+     "year_id": 2005,
+     "actual_year": 2005
+    },
+    {
+     "year_id": 2006,
+     "actual_year": 2006
+    },
+    {
+     "year_id": 2007,
+     "actual_year": 2007
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "Business_Attributes",
+   "from_column": "business_id",
+   "to_table": "Business",
+   "to_column": "business_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Business_Attributes",
+   "from_column": "attribute_id",
+   "to_table": "Attributes",
+   "to_column": "attribute_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Business_Categories",
+   "from_column": "category_id",
+   "to_table": "Categories",
+   "to_column": "category_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Business_Categories",
+   "from_column": "business_id",
+   "to_table": "Business",
+   "to_column": "business_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Business_Hours",
+   "from_column": "day_id",
+   "to_table": "Days",
+   "to_column": "day_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Business_Hours",
+   "from_column": "business_id",
+   "to_table": "Business",
+   "to_column": "business_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Checkins",
+   "from_column": "day_id",
+   "to_table": "Days",
+   "to_column": "day_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Checkins",
+   "from_column": "business_id",
+   "to_table": "Business",
+   "to_column": "business_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Elite",
+   "from_column": "year_id",
+   "to_table": "Years",
+   "to_column": "year_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Elite",
+   "from_column": "user_id",
+   "to_table": "Users",
+   "to_column": "user_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Reviews",
+   "from_column": "user_id",
+   "to_table": "Users",
+   "to_column": "user_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Reviews",
+   "from_column": "business_id",
+   "to_table": "Business",
+   "to_column": "business_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Tips",
+   "from_column": "user_id",
+   "to_table": "Users",
+   "to_column": "user_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Tips",
+   "from_column": "business_id",
+   "to_table": "Business",
+   "to_column": "business_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Users_Compliments",
+   "from_column": "user_id",
+   "to_table": "Users",
+   "to_column": "user_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Users_Compliments",
+   "from_column": "compliment_id",
+   "to_table": "Compliments",
+   "to_column": "compliment_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Business_Attributes",
+   "from_column": "business_id",
+   "to_table": "Business_Categories",
+   "to_column": "business_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Business_Attributes",
+   "from_column": "business_id",
+   "to_table": "Checkins",
+   "to_column": "business_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.9
+  },
+  {
+   "from_table": "Business_Attributes",
+   "from_column": "business_id",
+   "to_table": "Reviews",
+   "to_column": "business_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Business_Attributes",
+   "from_column": "business_id",
+   "to_table": "Tips",
+   "to_column": "business_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.897
+  },
+  {
+   "from_table": "Business_Categories",
+   "from_column": "business_id",
+   "to_table": "Reviews",
+   "to_column": "business_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Business_Hours",
+   "from_column": "business_id",
+   "to_table": "Business_Attributes",
+   "to_column": "business_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.85
+  },
+  {
+   "from_table": "Business_Hours",
+   "from_column": "business_id",
+   "to_table": "Business_Categories",
+   "to_column": "business_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Business_Hours",
+   "from_column": "day_id",
+   "to_table": "Checkins",
+   "to_column": "day_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Business_Hours",
+   "from_column": "business_id",
+   "to_table": "Reviews",
+   "to_column": "business_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Checkins",
+   "from_column": "business_id",
+   "to_table": "Business_Categories",
+   "to_column": "business_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Checkins",
+   "from_column": "business_id",
+   "to_table": "Reviews",
+   "to_column": "business_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Checkins",
+   "from_column": "business_id",
+   "to_table": "Tips",
+   "to_column": "business_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.85
+  },
+  {
+   "from_table": "Elite",
+   "from_column": "user_id",
+   "to_table": "Reviews",
+   "to_column": "user_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Elite",
+   "from_column": "user_id",
+   "to_table": "Users_Compliments",
+   "to_column": "user_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.997
+  },
+  {
+   "from_table": "Tips",
+   "from_column": "business_id",
+   "to_table": "Business_Categories",
+   "to_column": "business_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Tips",
+   "from_column": "business_id",
+   "to_table": "Reviews",
+   "to_column": "business_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Tips",
+   "from_column": "user_id",
+   "to_table": "Reviews",
+   "to_column": "user_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Users_Compliments",
+   "from_column": "user_id",
+   "to_table": "Reviews",
+   "to_column": "user_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

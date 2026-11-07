@@ -1,0 +1,36 @@
+[project]
+name = "veriquery"
+version = "0.1.0"
+description = "Data analyst agent that clarifies ambiguous questions and verifies its own numbers"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas",
+    "numpy",
+    "sqlglot>=30.24,<31",
+    "matplotlib",
+    "plotly",
+    "fastapi",
+    "uvicorn[standard]",
+    "python-multipart",
+    "pyyaml",
+    "tqdm",
+    "scikit-learn",
+]
+
+[project.optional-dependencies]
+demo = ["streamlit"]
+dev = ["pytest"]
+# The clarifier's BIRD-INTERACT harness uses its own OpenAI-compatible client.
+clarifier-eval = ["openai"]
+train = ["torch", "transformers", "peft", "accelerate", "datasets", "huggingface_hub", "safetensors", "vllm"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["veriquery*", "benchmarks*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

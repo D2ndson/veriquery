@@ -1,0 +1,344 @@
+{
+ "db_id": "mental_health_survey",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/mental_health_survey/mental_health_survey.sqlite",
+ "fingerprint": "18276352-1793993045495829179-v1.0",
+ "created_at": "2026-11-06T19:24:57+00:00",
+ "profile_seconds": 0.339,
+ "tables": [
+  {
+   "name": "Answer",
+   "row_count": 234640,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "AnswerText",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2797,
+     "is_unique": false,
+     "min_value": "\n",
+     "max_value": "¯\\(°_o)/¯",
+     "examples": [
+      "37",
+      "44",
+      "32",
+      "31",
+      "33"
+     ],
+     "top_values": [],
+     "description": "The specific and detailed answer text of each question.",
+     "value_description": "The content is highly depend on the question.",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "SurveyID",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 2014,
+     "max_value": 2018,
+     "examples": [
+      2014
+     ],
+     "top_values": [
+      [
+       2016,
+       81681
+      ],
+      [
+       2017,
+       57456
+      ],
+      [
+       2014,
+       32760
+      ],
+      [
+       2018,
+       28103
+      ]
+     ],
+     "description": "Survey ID. The id of each survey",
+     "value_description": "The SurveyID is simply survey year i.e., 2014, 2016, 2017, 2018, 2019.",
+     "notes": []
+    },
+    {
+     "name": "UserID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3866,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 3866,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "User ID. The id of different user",
+     "value_description": "commonsense evidence: \nSome questions can contain multiple answers, thus the same user can appear more than once for that QuestionID.",
+     "notes": []
+    },
+    {
+     "name": "QuestionID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 102,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 118,
+     "examples": [
+      1
+     ],
+     "top_values": [],
+     "description": "Question ID. The id of different questions",
+     "value_description": "commonsense evidence: \nSome questions can contain multiple answers, thus the same user can appear more than once for that QuestionID.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "UserID",
+    "QuestionID"
+   ],
+   "sample_rows": [
+    {
+     "AnswerText": "37",
+     "SurveyID": 2014,
+     "UserID": 1,
+     "QuestionID": 1
+    },
+    {
+     "AnswerText": "44",
+     "SurveyID": 2014,
+     "UserID": 2,
+     "QuestionID": 1
+    },
+    {
+     "AnswerText": "32",
+     "SurveyID": 2014,
+     "UserID": 3,
+     "QuestionID": 1
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 234,640 rows"
+   ]
+  },
+  {
+   "name": "Question",
+   "row_count": 105,
+   "stats_rows": 105,
+   "columns": [
+    {
+     "name": "questiontext",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 105,
+     "is_unique": true,
+     "min_value": "Any additional notes or comments",
+     "max_value": "Would you have felt more comfortable talking to your previou...",
+     "examples": [
+      "What is your age?",
+      "What is your gender?",
+      "What country do you live in?",
+      "If you live in the United States, which state or territory d...",
+      "Are you self-employed?"
+     ],
+     "top_values": [],
+     "description": "question text. The detailed text of the question",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "questionid",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 105,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 118,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "question id. The unique id of the question",
+     "value_description": "Each questiontext can only have one unique questionid",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "questionid"
+   ],
+   "sample_rows": [
+    {
+     "questiontext": "What is your age?",
+     "questionid": 1
+    },
+    {
+     "questiontext": "What is your gender?",
+     "questionid": 2
+    },
+    {
+     "questiontext": "What country do you live in?",
+     "questionid": 3
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Survey",
+   "row_count": 5,
+   "stats_rows": 5,
+   "columns": [
+    {
+     "name": "SurveyID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": true,
+     "min_value": 2014,
+     "max_value": 2019,
+     "examples": [
+      2014,
+      2016,
+      2017,
+      2018,
+      2019
+     ],
+     "top_values": [
+      [
+       2019,
+       1
+      ],
+      [
+       2018,
+       1
+      ],
+      [
+       2017,
+       1
+      ],
+      [
+       2016,
+       1
+      ],
+      [
+       2014,
+       1
+      ]
+     ],
+     "description": "Survey ID. The unique id of each survey",
+     "value_description": "commonsense evidence: \nEach SurveyID is unique. And SurveyID is simply survey year ie 2014, 2016, 2017, 2018, 2019.",
+     "notes": []
+    },
+    {
+     "name": "Description",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": true,
+     "min_value": "mental health survey for 2014",
+     "max_value": "mental health survey for 2019",
+     "examples": [
+      "mental health survey for 2014",
+      "mental health survey for 2016",
+      "mental health survey for 2017",
+      "mental health survey for 2018",
+      "mental health survey for 2019"
+     ],
+     "top_values": [
+      [
+       "mental health survey for 2019",
+       1
+      ],
+      [
+       "mental health survey for 2018",
+       1
+      ],
+      [
+       "mental health survey for 2017",
+       1
+      ],
+      [
+       "mental health survey for 2016",
+       1
+      ],
+      [
+       "mental health survey for 2014",
+       1
+      ]
+     ],
+     "description": "The Description of the specific survey.",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "SurveyID"
+   ],
+   "sample_rows": [
+    {
+     "SurveyID": 2014,
+     "Description": "mental health survey for 2014"
+    },
+    {
+     "SurveyID": 2016,
+     "Description": "mental health survey for 2016"
+    },
+    {
+     "SurveyID": 2017,
+     "Description": "mental health survey for 2017"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "Answer",
+   "from_column": "QuestionID",
+   "to_table": "Question",
+   "to_column": "questionid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Answer",
+   "from_column": "SurveyID",
+   "to_table": "Survey",
+   "to_column": "SurveyID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

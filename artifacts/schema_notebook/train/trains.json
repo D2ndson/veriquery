@@ -1,0 +1,641 @@
+{
+ "db_id": "trains",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/trains/trains.sqlite",
+ "fingerprint": "5070848-1793993071896362648-v1.0",
+ "created_at": "2026-11-06T19:25:20+00:00",
+ "profile_seconds": 0.004,
+ "tables": [
+  {
+   "name": "cars",
+   "row_count": 63,
+   "stats_rows": 63,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 63,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 63,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique id number representing the cars",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "train_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 20,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       19,
+       4
+      ],
+      [
+       17,
+       4
+      ],
+      [
+       14,
+       4
+      ],
+      [
+       10,
+       4
+      ],
+      [
+       9,
+       4
+      ],
+      [
+       8,
+       4
+      ],
+      [
+       6,
+       4
+      ],
+      [
+       4,
+       4
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       12,
+       3
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       20,
+       2
+      ],
+      [
+       18,
+       2
+      ],
+      [
+       16,
+       2
+      ],
+      [
+       15,
+       2
+      ],
+      [
+       13,
+       2
+      ],
+      [
+       11,
+       2
+      ]
+     ],
+     "description": "train id. the counterpart id for trains that the cars belong to",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "position",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       2,
+       20
+      ],
+      [
+       1,
+       20
+      ],
+      [
+       3,
+       14
+      ],
+      [
+       4,
+       9
+      ]
+     ],
+     "description": "postion id of cars in the trains",
+     "value_description": "1-4:\ncommonsense evidence:\n1: head car\n4: tail car",
+     "notes": []
+    },
+    {
+     "name": "shape",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "bucket",
+     "max_value": "u_shaped",
+     "examples": [
+      "rectangle",
+      "bucket",
+      "u_shaped",
+      "hexagon",
+      "ellipse"
+     ],
+     "top_values": [
+      [
+       "rectangle",
+       44
+      ],
+      [
+       "u_shaped",
+       9
+      ],
+      [
+       "bucket",
+       7
+      ],
+      [
+       "hexagon",
+       2
+      ],
+      [
+       "ellipse",
+       1
+      ]
+     ],
+     "description": "shape of the cars",
+     "value_description": "â¢ rectangle\nâ¢ bucket\nâ¢ u_shaped\nâ¢ hexagon\nâ¢ elipse\ncommonsense evidence:\nregular shape: \nrectangle, u_shaped, hexagon",
+     "notes": []
+    },
+    {
+     "name": "len",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "long",
+     "max_value": "short",
+     "examples": [
+      "short",
+      "long"
+     ],
+     "top_values": [
+      [
+       "short",
+       40
+      ],
+      [
+       "long",
+       23
+      ]
+     ],
+     "description": "length of the cars",
+     "value_description": "â¢ short \nâ¢ long",
+     "notes": []
+    },
+    {
+     "name": "sides",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "double",
+     "max_value": "not_double",
+     "examples": [
+      "not_double",
+      "double"
+     ],
+     "top_values": [
+      [
+       "not_double",
+       59
+      ],
+      [
+       "double",
+       4
+      ]
+     ],
+     "description": "sides of the cars",
+     "value_description": "â¢ not_double\nâ¢ double",
+     "notes": []
+    },
+    {
+     "name": "roof",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "arc",
+     "max_value": "peaked",
+     "examples": [
+      "none",
+      "peaked",
+      "flat",
+      "arc",
+      "jagged"
+     ],
+     "top_values": [
+      [
+       "none",
+       41
+      ],
+      [
+       "flat",
+       14
+      ],
+      [
+       "jagged",
+       5
+      ],
+      [
+       "peaked",
+       2
+      ],
+      [
+       "arc",
+       1
+      ]
+     ],
+     "description": "roof of the cars",
+     "value_description": "commonsense evidence:\nâ¢ none: the roof is open\nâ¢ peaked\nâ¢ flat\nâ¢ arc\nâ¢ jagged",
+     "notes": []
+    },
+    {
+     "name": "wheels",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 3,
+     "examples": [
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       2,
+       53
+      ],
+      [
+       3,
+       10
+      ]
+     ],
+     "description": "wheels of the cars",
+     "value_description": "â¢ 2:\nâ¢ 3:",
+     "notes": []
+    },
+    {
+     "name": "load_shape",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "circle",
+     "max_value": "triangle",
+     "examples": [
+      "circle",
+      "hexagon",
+      "triangle",
+      "rectangle",
+      "diamond"
+     ],
+     "top_values": [
+      [
+       "rectangle",
+       22
+      ],
+      [
+       "triangle",
+       19
+      ],
+      [
+       "circle",
+       16
+      ],
+      [
+       "hexagon",
+       5
+      ],
+      [
+       "diamond",
+       1
+      ]
+     ],
+     "description": "load shape",
+     "value_description": "â¢ circle\nâ¢ hexagon\nâ¢ triangle\nâ¢ rectangle \nâ¢ diamond",
+     "notes": []
+    },
+    {
+     "name": "load_num",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 3,
+     "examples": [
+      1,
+      3,
+      2,
+      0
+     ],
+     "top_values": [
+      [
+       1,
+       50
+      ],
+      [
+       3,
+       8
+      ],
+      [
+       0,
+       3
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "description": "load number",
+     "value_description": "0-3:\ncommonsense evidence:\nâ¢ 0: empty load\nâ¢ 3: full load",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "train_id": 1,
+     "position": 1,
+     "shape": "rectangle",
+     "len": "short",
+     "sides": "not_double",
+     "roof": "none",
+     "wheels": 2,
+     "load_shape": "circle",
+     "load_num": 1
+    },
+    {
+     "id": 2,
+     "train_id": 1,
+     "position": 2,
+     "shape": "rectangle",
+     "len": "long",
+     "sides": "not_double",
+     "roof": "none",
+     "wheels": 3,
+     "load_shape": "hexagon",
+     "load_num": 1
+    },
+    {
+     "id": 3,
+     "train_id": 1,
+     "position": 3,
+     "shape": "rectangle",
+     "len": "short",
+     "sides": "not_double",
+     "roof": "peaked",
+     "wheels": 2,
+     "load_shape": "triangle",
+     "load_num": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "trains",
+   "row_count": 20,
+   "stats_rows": 20,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 20,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the unique id representing the trains",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "direction",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "east",
+     "max_value": "west",
+     "examples": [
+      "east",
+      "west"
+     ],
+     "top_values": [
+      [
+       "west",
+       10
+      ],
+      [
+       "east",
+       10
+      ]
+     ],
+     "description": "the direction of trains that are running",
+     "value_description": "â¢ east;\nâ¢ west;",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "direction": "east"
+    },
+    {
+     "id": 2,
+     "direction": "east"
+    },
+    {
+     "id": 3,
+     "direction": "east"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "cars",
+   "from_column": "train_id",
+   "to_table": "trains",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

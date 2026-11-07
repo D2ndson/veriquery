@@ -1,0 +1,680 @@
+{
+ "db_id": "authors",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/authors/authors.sqlite",
+ "fingerprint": "616001536-1793993024802411776-v1.0",
+ "created_at": "2026-11-06T19:24:51+00:00",
+ "profile_seconds": 2.885,
+ "tables": [
+  {
+   "name": "Author",
+   "row_count": 247030,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 9,
+     "max_value": 1855221,
+     "examples": [
+      9,
+      14,
+      15,
+      25,
+      37
+     ],
+     "top_values": [],
+     "description": "Id of the author",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 187561,
+     "is_unique": false,
+     "min_value": ", W. M. Reimer",
+     "max_value": "ˉ? O. N. Gerek",
+     "examples": [
+      "Ernest Jordan",
+      "K. MORIBE",
+      "D. Jakominich",
+      "William H. Nailon",
+      "P. B. Littlewood"
+     ],
+     "top_values": [],
+     "description": "Author Name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Affiliation",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.5962,
+     "distinct_count": 49209,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "∗ Institut fur Theoretische Physik|Niels Bohr Institute",
+     "examples": [
+      "Cavendish Laboratory|Cambridge University",
+      "Department of Molecular Biology|School of Science|Nagoya Uni...",
+      "HASLab / INESC TEC and Universidade do Minho",
+      "Purdue University, West Lafayette, Indiana 47907-2023",
+      "This project,is supported,by a Hong,Kong,Polytechnic,Univers..."
+     ],
+     "top_values": [],
+     "description": "Organization name with which the author is affiliated.",
+     "value_description": "the name of an organization with which an author can be affiliated",
+     "notes": [
+      "60% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 9,
+     "Name": "Ernest Jordan",
+     "Affiliation": null
+    },
+    {
+     "Id": 14,
+     "Name": "K. MORIBE",
+     "Affiliation": null
+    },
+    {
+     "Id": 15,
+     "Name": "D. Jakominich",
+     "Affiliation": null
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 247,030 rows"
+   ]
+  },
+  {
+   "name": "Conference",
+   "row_count": 4545,
+   "stats_rows": 4545,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4545,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 5222,
+     "examples": [
+      1,
+      2,
+      4,
+      5,
+      6
+     ],
+     "top_values": [],
+     "description": "Conference Id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ShortName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3692,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "nD",
+     "examples": [
+      "IADIS",
+      "IADT",
+      "",
+      "ICOMP",
+      "ICAC"
+     ],
+     "top_values": [],
+     "description": "Short name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "FullName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4481,
+     "is_unique": false,
+     "min_value": "#Series: Distributed Diagnosis and Home Healthcare D2H2 Tran...",
+     "max_value": "workshop on security of ad hoc and sensor networks",
+     "examples": [
+      "International Association for Development of the Information...",
+      "Issues and Applications of Database Technology",
+      "IBM Germany Scientific Symposium Series",
+      "International Conference on Internet Computing",
+      "International Conference on Autonomic Computing"
+     ],
+     "top_values": [],
+     "description": "Full name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "HomePage",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3900,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "www.servicescongress.org",
+     "examples": [
+      "",
+      "http://www.informatik.uni-trier.de/~ley/db/conf/iadt/index.h...",
+      "http://www.informatik.uni-trier.de/~ley/db/conf/ibm/index.ht...",
+      "http://www.informatik.uni-trier.de/~ley/db/conf/ic/index.htm...",
+      "http://www.autonomic-conference.org/"
+     ],
+     "top_values": [],
+     "description": "Homepage URL of conference",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 1,
+     "ShortName": "IADIS",
+     "FullName": "International Association for Development of the Information...",
+     "HomePage": ""
+    },
+    {
+     "Id": 2,
+     "ShortName": "IADT",
+     "FullName": "Issues and Applications of Database Technology",
+     "HomePage": "http://www.informatik.uni-trier.de/~ley/db/conf/iadt/index.h..."
+    },
+    {
+     "Id": 4,
+     "ShortName": "",
+     "FullName": "IBM Germany Scientific Symposium Series",
+     "HomePage": "http://www.informatik.uni-trier.de/~ley/db/conf/ibm/index.ht..."
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Journal",
+   "row_count": 15151,
+   "stats_rows": 15151,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 15151,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 22228,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "Journal Id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ShortName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8284,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "iJOE",
+     "examples": [
+      "ICOM",
+      "AEPIA",
+      "IBMRD",
+      "IBMSJ",
+      ""
+     ],
+     "top_values": [],
+     "description": "Short name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "FullName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 15108,
+     "is_unique": false,
+     "min_value": "3c On-line",
+     "max_value": "on The Horizon",
+     "examples": [
+      "Zeitschrift Für Interaktive Und Kooperative Medien",
+      "Inteligencia Artificial,revista Iberoamericana De Inteligenc...",
+      "Ibm Journal of Research and Development",
+      "Ibm Systems Journal",
+      "Iet Software/iee Proceedings - Software"
+     ],
+     "top_values": [],
+     "description": "Full name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "HomePage",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12864,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "www.worldscinet.com/ijprai/",
+     "examples": [
+      "http://www.i-com-media.de",
+      "http://aepia.dsic.upv.es/revista/",
+      "http://www-tr.watson.ibm.com/journal/rdindex.html",
+      "http://researchweb.watson.ibm.com/journal/",
+      "http://www.ietdl.org/IET-SEN"
+     ],
+     "top_values": [],
+     "description": "Homepage URL of journal",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 1,
+     "ShortName": "ICOM",
+     "FullName": "Zeitschrift Für Interaktive Und Kooperative Medien",
+     "HomePage": "http://www.i-com-media.de"
+    },
+    {
+     "Id": 2,
+     "ShortName": "AEPIA",
+     "FullName": "Inteligencia Artificial,revista Iberoamericana De Inteligenc...",
+     "HomePage": "http://aepia.dsic.upv.es/revista/"
+    },
+    {
+     "Id": 3,
+     "ShortName": "IBMRD",
+     "FullName": "Ibm Journal of Research and Development",
+     "HomePage": "http://www-tr.watson.ibm.com/journal/rdindex.html"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Paper",
+   "row_count": 2254920,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 200372,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "Id of the paper",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Title",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0718,
+     "distinct_count": 184196,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "�tude des solutions extr�males et repr�sentation int�grale d...",
+     "examples": [
+      "Stitching videos streamed by mobile phones in real-time",
+      "A nonlocal convection–diffusion equation",
+      "Area Effects in Cepaea",
+      "Multiple paternity in a natural population of a salamander w...",
+      "Complexity of Finding Short Resolution Proofs"
+     ],
+     "top_values": [],
+     "description": "Title of the paper",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 161,
+     "is_unique": false,
+     "min_value": -1,
+     "max_value": 777092,
+     "examples": [
+      2009,
+      2007,
+      1963,
+      2005,
+      1997
+     ],
+     "top_values": [],
+     "description": "Year of the paper",
+     "value_description": "commonsense reasoning: if the year is \"0\", it means this paper is preprint, or not published",
+     "notes": []
+    },
+    {
+     "name": "ConferenceId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3392,
+     "is_unique": false,
+     "min_value": -1,
+     "max_value": 5222,
+     "examples": [
+      167,
+      0,
+      158,
+      341,
+      2397
+     ],
+     "top_values": [],
+     "description": "Conference Id in which paper was published",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "JournalId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9323,
+     "is_unique": false,
+     "min_value": -1,
+     "max_value": 22225,
+     "examples": [
+      0,
+      7234,
+      16867,
+      6130,
+      17639
+     ],
+     "top_values": [],
+     "description": "Journal Id in which paper was published",
+     "value_description": "commonsense reasoning: If a paper contain \"0\" in both ConferenceID and JournalId, it means this paper is preprint",
+     "notes": []
+    },
+    {
+     "name": "Keyword",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.7664,
+     "distinct_count": 44797,
+     "is_unique": false,
+     "min_value": " $K$-traveling salesman problem (K-TSP); matching; multiple-...",
+     "max_value": "� smolin@phys.psu.edu",
+     "examples": [
+      "mobile video capturing|real-time|video stitching",
+      "Nonlocal diffusion; Convection–diffusion; Asymptotic behavio...",
+      "Keywords: methylation, epigenetic, metastasis, promoter, col...",
+      "Optical properties, Organic materials, Polarization-sensitiv...",
+      "Computational model; X-machine; Ants; Foraging patterns; Phe..."
+     ],
+     "top_values": [],
+     "description": "Keywords of the paper",
+     "value_description": "commonsense reasoning: Keywords should contain words and phrases that suggest what the topic is about. \nSimilar keywords represent similar fields or sub-field.",
+     "notes": [
+      "77% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 1,
+     "Title": "Stitching videos streamed by mobile phones in real-time",
+     "Year": 2009,
+     "ConferenceId": 167,
+     "JournalId": 0,
+     "Keyword": "mobile video capturing|real-time|video stitching"
+    },
+    {
+     "Id": 2,
+     "Title": "A nonlocal convection–diffusion equation",
+     "Year": 2007,
+     "ConferenceId": 0,
+     "JournalId": 7234,
+     "Keyword": "Nonlocal diffusion; Convection–diffusion; Asymptotic behavio..."
+    },
+    {
+     "Id": 3,
+     "Title": "Area Effects in Cepaea",
+     "Year": 1963,
+     "ConferenceId": 0,
+     "JournalId": 16867,
+     "Keyword": null
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 2,254,920 rows"
+   ]
+  },
+  {
+   "name": "PaperAuthor",
+   "row_count": 2315574,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "PaperId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 32935,
+     "is_unique": false,
+     "min_value": 4,
+     "max_value": 33059,
+     "examples": [
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "top_values": [],
+     "description": "Paper Id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "AuthorId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 122846,
+     "is_unique": false,
+     "min_value": 22,
+     "max_value": 2293834,
+     "examples": [
+      1456512,
+      1102257,
+      1806301,
+      2252569,
+      1491002
+     ],
+     "top_values": [],
+     "description": "Author Id",
+     "value_description": "commonsense reasoning: A paper can have more than one author. Co-authorship can be derived from (paper ID, author ID) pair.",
+     "notes": []
+    },
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 127389,
+     "is_unique": false,
+     "min_value": "&Idot;. Gündüz",
+     "max_value": "Željko Ivezić",
+     "examples": [
+      "ADAM G. JONES",
+      "Kazuo Iwama",
+      "Asgeir Finnseth",
+      "Guðmundur Jökulsson",
+      "M. H. Friedman"
+     ],
+     "top_values": [],
+     "description": "Author Name (as written on paper)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Affiliation",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.6523,
+     "distinct_count": 19401,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "•,What are the goals of the new research unit Sustainability...",
+     "examples": [
+      "Kyushu University 812 Fukuoka Japan 812 Fukuoka Japan",
+      "The french National Institute for Research in Computer scien...",
+      "Nanjing University",
+      "NOAA|Forecast Systems Laboratory|Colorado State University",
+      "Office of Naval Research"
+     ],
+     "top_values": [],
+     "description": "Author Affiliation (as written on paper)",
+     "value_description": "the name of an organization with which an author can be affiliated",
+     "notes": [
+      "65% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "PaperId": 4,
+     "AuthorId": 1456512,
+     "Name": "ADAM G. JONES",
+     "Affiliation": null
+    },
+    {
+     "PaperId": 5,
+     "AuthorId": 1102257,
+     "Name": "Kazuo Iwama",
+     "Affiliation": "Kyushu University 812 Fukuoka Japan 812 Fukuoka Japan"
+    },
+    {
+     "PaperId": 6,
+     "AuthorId": 1806301,
+     "Name": "Asgeir Finnseth",
+     "Affiliation": null
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 2,315,574 rows",
+    "no declared primary key; beware duplicate rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "Paper",
+   "from_column": "JournalId",
+   "to_table": "Journal",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Paper",
+   "from_column": "ConferenceId",
+   "to_table": "Conference",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "PaperAuthor",
+   "from_column": "AuthorId",
+   "to_table": "Author",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "PaperAuthor",
+   "from_column": "PaperId",
+   "to_table": "Paper",
+   "to_column": "Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

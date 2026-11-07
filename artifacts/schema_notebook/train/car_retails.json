@@ -1,0 +1,3202 @@
+{
+ "db_id": "car_retails",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/car_retails/car_retails.sqlite",
+ "fingerprint": "487424-1793993045451828291-v1.0",
+ "created_at": "2026-11-06T19:24:48+00:00",
+ "profile_seconds": 0.023,
+ "tables": [
+  {
+   "name": "customers",
+   "row_count": 122,
+   "stats_rows": 122,
+   "columns": [
+    {
+     "name": "customerNumber",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 122,
+     "is_unique": true,
+     "min_value": 103,
+     "max_value": 496,
+     "examples": [
+      103,
+      112,
+      114,
+      119,
+      121
+     ],
+     "top_values": [],
+     "description": "customer number. unique id number of customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "customerName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 122,
+     "is_unique": true,
+     "min_value": "ANG Resellers",
+     "max_value": "giftsbymail.co.uk",
+     "examples": [
+      "Atelier graphique",
+      "Signal Gift Stores",
+      "Australian Collectors, Co.",
+      "La Rochelle Gifts",
+      "Baane Mini Imports"
+     ],
+     "top_values": [],
+     "description": "customer name. the name when the customer registered",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "contactLastName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 108,
+     "is_unique": false,
+     "min_value": "Accorti",
+     "max_value": "de Castro",
+     "examples": [
+      "Schmitt",
+      "King",
+      "Ferguson",
+      "Labrune",
+      "Bergulfsen"
+     ],
+     "top_values": [],
+     "description": "contact last name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "contactFirstName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 111,
+     "is_unique": false,
+     "min_value": "Adrian",
+     "max_value": "Zbyszek ",
+     "examples": [
+      "Carine ",
+      "Jean",
+      "Peter",
+      "Janine ",
+      "Jonas "
+     ],
+     "top_values": [],
+     "description": "contact first name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "phone",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 121,
+     "is_unique": false,
+     "min_value": " +49 89 61 08 9555",
+     "max_value": "981-443655",
+     "examples": [
+      "40.32.2555",
+      "7025551838",
+      "03 9520 4555",
+      "40.67.8555",
+      "07-98 9555"
+     ],
+     "top_values": [],
+     "description": "phone",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "addressLine1",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 122,
+     "is_unique": true,
+     "min_value": "1 rue Alsace-Lorraine",
+     "max_value": "Åkergatan 24",
+     "examples": [
+      "54, rue Royale",
+      "8489 Strong St.",
+      "636 St Kilda Road",
+      "67, rue des Cinquante Otages",
+      "Erling Skakkes gate 78"
+     ],
+     "top_values": [],
+     "description": "addressLine1",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "addressLine2",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.8197,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": "1 Garden Road",
+     "max_value": "Suite 750",
+     "examples": [
+      "Level 3",
+      "Bronz Apt. 3/6 Tesvikiye",
+      "Suite 400",
+      "2nd Floor",
+      "PR 334 Sentrum"
+     ],
+     "top_values": [
+      [
+       "Suite 101",
+       2
+      ],
+      [
+       "Suite 750",
+       1
+      ],
+      [
+       "Suite 400",
+       1
+      ],
+      [
+       "Suite 200",
+       1
+      ],
+      [
+       "SEC Oy",
+       1
+      ],
+      [
+       "PR 334 Sentrum",
+       1
+      ],
+      [
+       "PB 211 Sentrum",
+       1
+      ],
+      [
+       "NatWest Center #13-03",
+       1
+      ],
+      [
+       "Level 3",
+       1
+      ],
+      [
+       "Level 2",
+       1
+      ],
+      [
+       "Level 15",
+       1
+      ],
+      [
+       "Level 11",
+       1
+      ],
+      [
+       "Floor No. 4",
+       1
+      ],
+      [
+       "Crowther Way 23",
+       1
+      ],
+      [
+       "Bronz Apt. 3/6 Tesvikiye",
+       1
+      ],
+      [
+       "Alessandro Volta 16",
+       1
+      ],
+      [
+       "815 Pacific Hwy",
+       1
+      ],
+      [
+       "8 Temasek",
+       1
+      ],
+      [
+       "2nd Floor",
+       1
+      ],
+      [
+       "27-30 Merchant's Quay",
+       1
+      ],
+      [
+       "1 Garden Road",
+       1
+      ]
+     ],
+     "description": "addressLine2",
+     "value_description": "commonsense evidence: \naddressLine1 + addressLine2 = entire address",
+     "notes": [
+      "82% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 96,
+     "is_unique": false,
+     "min_value": "Aachen",
+     "max_value": "Århus",
+     "examples": [
+      "Nantes",
+      "Las Vegas",
+      "Melbourne",
+      "Stavern",
+      "San Rafael"
+     ],
+     "top_values": [],
+     "description": "city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.5984,
+     "distinct_count": 18,
+     "is_unique": false,
+     "min_value": "BC",
+     "max_value": "Victoria",
+     "examples": [
+      "NV",
+      "Victoria",
+      "CA",
+      "NY",
+      "PA"
+     ],
+     "top_values": [
+      [
+       "CA",
+       11
+      ],
+      [
+       "MA",
+       9
+      ],
+      [
+       "NY",
+       6
+      ],
+      [
+       "CT",
+       4
+      ],
+      [
+       "PA",
+       3
+      ],
+      [
+       "Victoria",
+       2
+      ],
+      [
+       "NSW",
+       2
+      ],
+      [
+       "BC",
+       2
+      ],
+      [
+       "Tokyo",
+       1
+      ],
+      [
+       "Québec",
+       1
+      ],
+      [
+       "Queensland",
+       1
+      ],
+      [
+       "Pretoria",
+       1
+      ],
+      [
+       "Osaka",
+       1
+      ],
+      [
+       "NV",
+       1
+      ],
+      [
+       "NJ",
+       1
+      ],
+      [
+       "NH",
+       1
+      ],
+      [
+       "Isle of Wight",
+       1
+      ],
+      [
+       "Co. Cork",
+       1
+      ]
+     ],
+     "description": "state",
+     "value_description": "",
+     "notes": [
+      "60% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "postalCode",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0574,
+     "distinct_count": 94,
+     "is_unique": false,
+     "min_value": " 530-0003",
+     "max_value": "WX3 6FW",
+     "examples": [
+      "44000",
+      "83030",
+      "3004",
+      "4110",
+      "97562"
+     ],
+     "top_values": [],
+     "description": "postalCode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "country",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 28,
+     "is_unique": false,
+     "min_value": "Australia",
+     "max_value": "USA",
+     "examples": [
+      "France",
+      "USA",
+      "Australia",
+      "Norway",
+      "Poland"
+     ],
+     "top_values": [
+      [
+       "USA",
+       36
+      ],
+      [
+       "Germany",
+       13
+      ],
+      [
+       "France",
+       12
+      ],
+      [
+       "Spain",
+       7
+      ],
+      [
+       "UK",
+       5
+      ],
+      [
+       "Australia",
+       5
+      ],
+      [
+       "New Zealand",
+       4
+      ],
+      [
+       "Italy",
+       4
+      ],
+      [
+       "Switzerland",
+       3
+      ],
+      [
+       "Singapore",
+       3
+      ],
+      [
+       "Finland",
+       3
+      ],
+      [
+       "Canada",
+       3
+      ],
+      [
+       "Sweden",
+       2
+      ],
+      [
+       "Portugal",
+       2
+      ],
+      [
+       "Norway  ",
+       2
+      ],
+      [
+       "Japan",
+       2
+      ],
+      [
+       "Ireland",
+       2
+      ],
+      [
+       "Denmark",
+       2
+      ],
+      [
+       "Belgium",
+       2
+      ],
+      [
+       "Austria",
+       2
+      ],
+      [
+       "South Africa",
+       1
+      ],
+      [
+       "Russia",
+       1
+      ],
+      [
+       "Poland",
+       1
+      ],
+      [
+       "Philippines",
+       1
+      ],
+      [
+       "Norway",
+       1
+      ],
+      [
+       "Netherlands",
+       1
+      ],
+      [
+       "Israel",
+       1
+      ],
+      [
+       "Hong Kong",
+       1
+      ]
+     ],
+     "description": "country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "salesRepEmployeeNumber",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1803,
+     "distinct_count": 15,
+     "is_unique": false,
+     "min_value": 1165,
+     "max_value": 1702,
+     "examples": [
+      1370,
+      1166,
+      1611,
+      1504,
+      1165
+     ],
+     "top_values": [
+      [
+       1401,
+       10
+      ],
+      [
+       1504,
+       9
+      ],
+      [
+       1501,
+       8
+      ],
+      [
+       1323,
+       8
+      ],
+      [
+       1370,
+       7
+      ],
+      [
+       1286,
+       7
+      ],
+      [
+       1702,
+       6
+      ],
+      [
+       1337,
+       6
+      ],
+      [
+       1216,
+       6
+      ],
+      [
+       1188,
+       6
+      ],
+      [
+       1166,
+       6
+      ],
+      [
+       1165,
+       6
+      ],
+      [
+       1621,
+       5
+      ],
+      [
+       1612,
+       5
+      ],
+      [
+       1611,
+       5
+      ]
+     ],
+     "description": "sales representative employee number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "creditLimit",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 93,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 227600.0,
+     "examples": [
+      21000.0,
+      71800.0,
+      117300.0,
+      118200.0,
+      81700.0
+     ],
+     "top_values": [],
+     "description": "credit limit",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "customerNumber"
+   ],
+   "sample_rows": [
+    {
+     "customerNumber": 103,
+     "customerName": "Atelier graphique",
+     "contactLastName": "Schmitt",
+     "contactFirstName": "Carine ",
+     "phone": "40.32.2555",
+     "addressLine1": "54, rue Royale",
+     "addressLine2": null,
+     "city": "Nantes",
+     "state": null,
+     "postalCode": "44000",
+     "country": "France",
+     "salesRepEmployeeNumber": 1370,
+     "creditLimit": 21000.0
+    },
+    {
+     "customerNumber": 112,
+     "customerName": "Signal Gift Stores",
+     "contactLastName": "King",
+     "contactFirstName": "Jean",
+     "phone": "7025551838",
+     "addressLine1": "8489 Strong St.",
+     "addressLine2": null,
+     "city": "Las Vegas",
+     "state": "NV",
+     "postalCode": "83030",
+     "country": "USA",
+     "salesRepEmployeeNumber": 1166,
+     "creditLimit": 71800.0
+    },
+    {
+     "customerNumber": 114,
+     "customerName": "Australian Collectors, Co.",
+     "contactLastName": "Ferguson",
+     "contactFirstName": "Peter",
+     "phone": "03 9520 4555",
+     "addressLine1": "636 St Kilda Road",
+     "addressLine2": "Level 3",
+     "city": "Melbourne",
+     "state": "Victoria",
+     "postalCode": "3004",
+     "country": "Australia",
+     "salesRepEmployeeNumber": 1611,
+     "creditLimit": 117300.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "employees",
+   "row_count": 23,
+   "stats_rows": 23,
+   "columns": [
+    {
+     "name": "employeeNumber",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 23,
+     "is_unique": true,
+     "min_value": 1002,
+     "max_value": 1702,
+     "examples": [
+      1002,
+      1056,
+      1076,
+      1088,
+      1102
+     ],
+     "top_values": [
+      [
+       1702,
+       1
+      ],
+      [
+       1625,
+       1
+      ],
+      [
+       1621,
+       1
+      ],
+      [
+       1619,
+       1
+      ],
+      [
+       1612,
+       1
+      ],
+      [
+       1611,
+       1
+      ],
+      [
+       1504,
+       1
+      ],
+      [
+       1501,
+       1
+      ],
+      [
+       1401,
+       1
+      ],
+      [
+       1370,
+       1
+      ],
+      [
+       1337,
+       1
+      ],
+      [
+       1323,
+       1
+      ],
+      [
+       1286,
+       1
+      ],
+      [
+       1216,
+       1
+      ],
+      [
+       1188,
+       1
+      ],
+      [
+       1166,
+       1
+      ],
+      [
+       1165,
+       1
+      ],
+      [
+       1143,
+       1
+      ],
+      [
+       1102,
+       1
+      ],
+      [
+       1088,
+       1
+      ],
+      [
+       1076,
+       1
+      ],
+      [
+       1056,
+       1
+      ],
+      [
+       1002,
+       1
+      ]
+     ],
+     "description": "Employee Number. unique string ID of the employees",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lastName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 19,
+     "is_unique": false,
+     "min_value": "Bondur",
+     "max_value": "Vanauf",
+     "examples": [
+      "Murphy",
+      "Patterson",
+      "Firrelli",
+      "Bondur",
+      "Bow"
+     ],
+     "top_values": [
+      [
+       "Patterson",
+       3
+      ],
+      [
+       "Firrelli",
+       2
+      ],
+      [
+       "Bondur",
+       2
+      ],
+      [
+       "Vanauf",
+       1
+      ],
+      [
+       "Tseng",
+       1
+      ],
+      [
+       "Thompson",
+       1
+      ],
+      [
+       "Nishi",
+       1
+      ],
+      [
+       "Murphy",
+       1
+      ],
+      [
+       "Marsh",
+       1
+      ],
+      [
+       "King",
+       1
+      ],
+      [
+       "Kato",
+       1
+      ],
+      [
+       "Jones",
+       1
+      ],
+      [
+       "Jennings",
+       1
+      ],
+      [
+       "Hernandez",
+       1
+      ],
+      [
+       "Gerard",
+       1
+      ],
+      [
+       "Fixter",
+       1
+      ],
+      [
+       "Castillo",
+       1
+      ],
+      [
+       "Bow",
+       1
+      ],
+      [
+       "Bott",
+       1
+      ]
+     ],
+     "description": "last name of employees",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "firstName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": "Andy",
+     "max_value": "Yoshimi",
+     "examples": [
+      "Diane",
+      "Mary",
+      "Jeff",
+      "William",
+      "Gerard"
+     ],
+     "top_values": [
+      [
+       "Leslie",
+       2
+      ],
+      [
+       "Gerard",
+       2
+      ],
+      [
+       "Yoshimi",
+       1
+      ],
+      [
+       "William",
+       1
+      ],
+      [
+       "Tom",
+       1
+      ],
+      [
+       "Steve",
+       1
+      ],
+      [
+       "Peter",
+       1
+      ],
+      [
+       "Pamela",
+       1
+      ],
+      [
+       "Mary",
+       1
+      ],
+      [
+       "Martin",
+       1
+      ],
+      [
+       "Mami",
+       1
+      ],
+      [
+       "Loui",
+       1
+      ],
+      [
+       "Larry",
+       1
+      ],
+      [
+       "Julie",
+       1
+      ],
+      [
+       "Jeff",
+       1
+      ],
+      [
+       "George",
+       1
+      ],
+      [
+       "Foon Yue",
+       1
+      ],
+      [
+       "Diane",
+       1
+      ],
+      [
+       "Barry",
+       1
+      ],
+      [
+       "Anthony",
+       1
+      ],
+      [
+       "Andy",
+       1
+      ]
+     ],
+     "description": "first name of employees",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "extension",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": "x101",
+     "max_value": "x9273",
+     "examples": [
+      "x5800",
+      "x4611",
+      "x9273",
+      "x4871",
+      "x5408"
+     ],
+     "top_values": [
+      [
+       "x102",
+       3
+      ],
+      [
+       "x101",
+       2
+      ],
+      [
+       "x9273",
+       1
+      ],
+      [
+       "x6493",
+       1
+      ],
+      [
+       "x5800",
+       1
+      ],
+      [
+       "x5428",
+       1
+      ],
+      [
+       "x5408",
+       1
+      ],
+      [
+       "x4871",
+       1
+      ],
+      [
+       "x4611",
+       1
+      ],
+      [
+       "x4334",
+       1
+      ],
+      [
+       "x4102",
+       1
+      ],
+      [
+       "x4065",
+       1
+      ],
+      [
+       "x3291",
+       1
+      ],
+      [
+       "x2759",
+       1
+      ],
+      [
+       "x2312",
+       1
+      ],
+      [
+       "x2311",
+       1
+      ],
+      [
+       "x2248",
+       1
+      ],
+      [
+       "x2173",
+       1
+      ],
+      [
+       "x2028",
+       1
+      ],
+      [
+       "x103",
+       1
+      ]
+     ],
+     "description": "extension number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "email",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": "abow@classicmodelcars.com",
+     "max_value": "ykato@classicmodelcars.com",
+     "examples": [
+      "dmurphy@classicmodelcars.com",
+      "mpatterso@classicmodelcars.com",
+      "jfirrelli@classicmodelcars.com",
+      "wpatterson@classicmodelcars.com",
+      "gbondur@classicmodelcars.com"
+     ],
+     "top_values": [
+      [
+       "jfirrelli@classicmodelcars.com",
+       2
+      ],
+      [
+       "ykato@classicmodelcars.com",
+       1
+      ],
+      [
+       "wpatterson@classicmodelcars.com",
+       1
+      ],
+      [
+       "tking@classicmodelcars.com",
+       1
+      ],
+      [
+       "spatterson@classicmodelcars.com",
+       1
+      ],
+      [
+       "pmarsh@classicmodelcars.com",
+       1
+      ],
+      [
+       "pcastillo@classicmodelcars.com",
+       1
+      ],
+      [
+       "mpatterso@classicmodelcars.com",
+       1
+      ],
+      [
+       "mnishi@classicmodelcars.com",
+       1
+      ],
+      [
+       "mgerard@classicmodelcars.com",
+       1
+      ],
+      [
+       "lthompson@classicmodelcars.com",
+       1
+      ],
+      [
+       "ljennings@classicmodelcars.com",
+       1
+      ],
+      [
+       "lbott@classicmodelcars.com",
+       1
+      ],
+      [
+       "lbondur@classicmodelcars.com",
+       1
+      ],
+      [
+       "gvanauf@classicmodelcars.com",
+       1
+      ],
+      [
+       "ghernande@classicmodelcars.com",
+       1
+      ],
+      [
+       "gbondur@classicmodelcars.com",
+       1
+      ],
+      [
+       "ftseng@classicmodelcars.com",
+       1
+      ],
+      [
+       "dmurphy@classicmodelcars.com",
+       1
+      ],
+      [
+       "bjones@classicmodelcars.com",
+       1
+      ],
+      [
+       "afixter@classicmodelcars.com",
+       1
+      ],
+      [
+       "abow@classicmodelcars.com",
+       1
+      ]
+     ],
+     "description": "email",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "officeCode",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "7",
+     "examples": [
+      "1",
+      "6",
+      "4",
+      "2",
+      "3"
+     ],
+     "top_values": [
+      [
+       "1",
+       6
+      ],
+      [
+       "4",
+       5
+      ],
+      [
+       "6",
+       4
+      ],
+      [
+       "7",
+       2
+      ],
+      [
+       "5",
+       2
+      ],
+      [
+       "3",
+       2
+      ],
+      [
+       "2",
+       2
+      ]
+     ],
+     "description": "office code of the employees",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "reportsTo",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0435,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 1002,
+     "max_value": 1621,
+     "examples": [
+      1002,
+      1056,
+      1143,
+      1102,
+      1088
+     ],
+     "top_values": [
+      [
+       1143,
+       6
+      ],
+      [
+       1102,
+       6
+      ],
+      [
+       1056,
+       4
+      ],
+      [
+       1088,
+       3
+      ],
+      [
+       1002,
+       2
+      ],
+      [
+       1621,
+       1
+      ]
+     ],
+     "description": "represents for organization structure such as who reports to whom",
+     "value_description": "commonsense evidence: \n\"reportsTO\" is the leader of the \"employeeNumber\"",
+     "notes": []
+    },
+    {
+     "name": "jobTitle",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "President",
+     "max_value": "VP Sales",
+     "examples": [
+      "President",
+      "VP Sales",
+      "VP Marketing",
+      "Sales Manager (APAC)",
+      "Sale Manager (EMEA)"
+     ],
+     "top_values": [
+      [
+       "Sales Rep",
+       17
+      ],
+      [
+       "VP Sales",
+       1
+      ],
+      [
+       "VP Marketing",
+       1
+      ],
+      [
+       "Sales Manager (NA)",
+       1
+      ],
+      [
+       "Sales Manager (APAC)",
+       1
+      ],
+      [
+       "Sale Manager (EMEA)",
+       1
+      ],
+      [
+       "President",
+       1
+      ]
+     ],
+     "description": "job title",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "employeeNumber"
+   ],
+   "sample_rows": [
+    {
+     "employeeNumber": 1002,
+     "lastName": "Murphy",
+     "firstName": "Diane",
+     "extension": "x5800",
+     "email": "dmurphy@classicmodelcars.com",
+     "officeCode": "1",
+     "reportsTo": null,
+     "jobTitle": "President"
+    },
+    {
+     "employeeNumber": 1056,
+     "lastName": "Patterson",
+     "firstName": "Mary",
+     "extension": "x4611",
+     "email": "mpatterso@classicmodelcars.com",
+     "officeCode": "1",
+     "reportsTo": 1002,
+     "jobTitle": "VP Sales"
+    },
+    {
+     "employeeNumber": 1076,
+     "lastName": "Firrelli",
+     "firstName": "Jeff",
+     "extension": "x9273",
+     "email": "jfirrelli@classicmodelcars.com",
+     "officeCode": "1",
+     "reportsTo": 1002,
+     "jobTitle": "VP Marketing"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "offices",
+   "row_count": 7,
+   "stats_rows": 7,
+   "columns": [
+    {
+     "name": "officeCode",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": true,
+     "min_value": "1",
+     "max_value": "7",
+     "examples": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "top_values": [
+      [
+       "7",
+       1
+      ],
+      [
+       "6",
+       1
+      ],
+      [
+       "5",
+       1
+      ],
+      [
+       "4",
+       1
+      ],
+      [
+       "3",
+       1
+      ],
+      [
+       "2",
+       1
+      ],
+      [
+       "1",
+       1
+      ]
+     ],
+     "description": "office code. unique ID of the office",
+     "value_description": "unique ID of the office",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": true,
+     "min_value": "Boston",
+     "max_value": "Tokyo",
+     "examples": [
+      "San Francisco",
+      "Boston",
+      "NYC",
+      "Paris",
+      "Tokyo"
+     ],
+     "top_values": [
+      [
+       "Tokyo",
+       1
+      ],
+      [
+       "Sydney",
+       1
+      ],
+      [
+       "San Francisco",
+       1
+      ],
+      [
+       "Paris",
+       1
+      ],
+      [
+       "NYC",
+       1
+      ],
+      [
+       "London",
+       1
+      ],
+      [
+       "Boston",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "phone",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": true,
+     "min_value": "+1 212 555 3000",
+     "max_value": "+81 33 224 5000",
+     "examples": [
+      "+1 650 219 4782",
+      "+1 215 837 0825",
+      "+1 212 555 3000",
+      "+33 14 723 4404",
+      "+81 33 224 5000"
+     ],
+     "top_values": [
+      [
+       "+81 33 224 5000",
+       1
+      ],
+      [
+       "+61 2 9264 2451",
+       1
+      ],
+      [
+       "+44 20 7877 2041",
+       1
+      ],
+      [
+       "+33 14 723 4404",
+       1
+      ],
+      [
+       "+1 650 219 4782",
+       1
+      ],
+      [
+       "+1 215 837 0825",
+       1
+      ],
+      [
+       "+1 212 555 3000",
+       1
+      ]
+     ],
+     "description": "phone number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "addressLine1",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": true,
+     "min_value": "100 Market Street",
+     "max_value": "523 East 53rd Street",
+     "examples": [
+      "100 Market Street",
+      "1550 Court Place",
+      "523 East 53rd Street",
+      "43 Rue Jouffroy D'abbans",
+      "4-1 Kioicho"
+     ],
+     "top_values": [
+      [
+       "523 East 53rd Street",
+       1
+      ],
+      [
+       "5-11 Wentworth Avenue",
+       1
+      ],
+      [
+       "43 Rue Jouffroy D'abbans",
+       1
+      ],
+      [
+       "4-1 Kioicho",
+       1
+      ],
+      [
+       "25 Old Broad Street",
+       1
+      ],
+      [
+       "1550 Court Place",
+       1
+      ],
+      [
+       "100 Market Street",
+       1
+      ]
+     ],
+     "description": "addressLine1",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "addressLine2",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.2857,
+     "distinct_count": 5,
+     "is_unique": true,
+     "min_value": "Floor #2",
+     "max_value": "apt. 5A",
+     "examples": [
+      "Suite 300",
+      "Suite 102",
+      "apt. 5A",
+      "Floor #2",
+      "Level 7"
+     ],
+     "top_values": [
+      [
+       "apt. 5A",
+       1
+      ],
+      [
+       "Suite 300",
+       1
+      ],
+      [
+       "Suite 102",
+       1
+      ],
+      [
+       "Level 7",
+       1
+      ],
+      [
+       "Floor #2",
+       1
+      ]
+     ],
+     "description": "addressLine2",
+     "value_description": "commonsense evidence: \naddressLine1 + addressLine2 = entire address",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.4286,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": "CA",
+     "max_value": "NY",
+     "examples": [
+      "CA",
+      "MA",
+      "NY",
+      "Chiyoda-Ku"
+     ],
+     "top_values": [
+      [
+       "NY",
+       1
+      ],
+      [
+       "MA",
+       1
+      ],
+      [
+       "Chiyoda-Ku",
+       1
+      ],
+      [
+       "CA",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "country",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "Australia",
+     "max_value": "USA",
+     "examples": [
+      "USA",
+      "France",
+      "Japan",
+      "Australia",
+      "UK"
+     ],
+     "top_values": [
+      [
+       "USA",
+       3
+      ],
+      [
+       "UK",
+       1
+      ],
+      [
+       "Japan",
+       1
+      ],
+      [
+       "France",
+       1
+      ],
+      [
+       "Australia",
+       1
+      ]
+     ],
+     "description": "country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "postalCode",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": true,
+     "min_value": "02107",
+     "max_value": "NSW 2010",
+     "examples": [
+      "94080",
+      "02107",
+      "10022",
+      "75017",
+      "102-8578"
+     ],
+     "top_values": [
+      [
+       "NSW 2010",
+       1
+      ],
+      [
+       "EC2N 1HN",
+       1
+      ],
+      [
+       "94080",
+       1
+      ],
+      [
+       "75017",
+       1
+      ],
+      [
+       "102-8578",
+       1
+      ],
+      [
+       "10022",
+       1
+      ],
+      [
+       "02107",
+       1
+      ]
+     ],
+     "description": "postalCode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "territory",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "APAC",
+     "max_value": "NA",
+     "examples": [
+      "NA",
+      "EMEA",
+      "Japan",
+      "APAC"
+     ],
+     "top_values": [
+      [
+       "NA",
+       3
+      ],
+      [
+       "EMEA",
+       2
+      ],
+      [
+       "Japan",
+       1
+      ],
+      [
+       "APAC",
+       1
+      ]
+     ],
+     "description": "territory",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "officeCode"
+   ],
+   "sample_rows": [
+    {
+     "officeCode": "1",
+     "city": "San Francisco",
+     "phone": "+1 650 219 4782",
+     "addressLine1": "100 Market Street",
+     "addressLine2": "Suite 300",
+     "state": "CA",
+     "country": "USA",
+     "postalCode": "94080",
+     "territory": "NA"
+    },
+    {
+     "officeCode": "2",
+     "city": "Boston",
+     "phone": "+1 215 837 0825",
+     "addressLine1": "1550 Court Place",
+     "addressLine2": "Suite 102",
+     "state": "MA",
+     "country": "USA",
+     "postalCode": "02107",
+     "territory": "NA"
+    },
+    {
+     "officeCode": "3",
+     "city": "NYC",
+     "phone": "+1 212 555 3000",
+     "addressLine1": "523 East 53rd Street",
+     "addressLine2": "apt. 5A",
+     "state": "NY",
+     "country": "USA",
+     "postalCode": "10022",
+     "territory": "NA"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "orderdetails",
+   "row_count": 2996,
+   "stats_rows": 2996,
+   "columns": [
+    {
+     "name": "orderNumber",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 326,
+     "is_unique": false,
+     "min_value": 10100,
+     "max_value": 10425,
+     "examples": [
+      10100,
+      10101,
+      10102,
+      10103,
+      10104
+     ],
+     "top_values": [],
+     "description": "order number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "productCode",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 109,
+     "is_unique": false,
+     "min_value": "S10_1678",
+     "max_value": "S72_3212",
+     "examples": [
+      "S18_1749",
+      "S18_2248",
+      "S18_4409",
+      "S24_3969",
+      "S18_2325"
+     ],
+     "top_values": [],
+     "description": "product code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "quantityOrdered",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 61,
+     "is_unique": false,
+     "min_value": 6,
+     "max_value": 97,
+     "examples": [
+      30,
+      50,
+      22,
+      49,
+      25
+     ],
+     "top_values": [],
+     "description": "quantity ordered",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "priceEach",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1573,
+     "is_unique": false,
+     "min_value": 26.55,
+     "max_value": 214.3,
+     "examples": [
+      136.0,
+      55.09,
+      75.46,
+      35.29,
+      108.06
+     ],
+     "top_values": [],
+     "description": "price for each",
+     "value_description": "commonsense evidence: \ntotal price = quantityOrdered x priceEach",
+     "notes": []
+    },
+    {
+     "name": "orderLineNumber",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 18,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 18,
+     "examples": [
+      3,
+      2,
+      4,
+      1,
+      11
+     ],
+     "top_values": [
+      [
+       1,
+       326
+      ],
+      [
+       2,
+       309
+      ],
+      [
+       3,
+       287
+      ],
+      [
+       4,
+       273
+      ],
+      [
+       5,
+       256
+      ],
+      [
+       6,
+       238
+      ],
+      [
+       7,
+       212
+      ],
+      [
+       8,
+       201
+      ],
+      [
+       9,
+       177
+      ],
+      [
+       10,
+       149
+      ],
+      [
+       11,
+       134
+      ],
+      [
+       12,
+       114
+      ],
+      [
+       13,
+       101
+      ],
+      [
+       14,
+       82
+      ],
+      [
+       15,
+       57
+      ],
+      [
+       16,
+       43
+      ],
+      [
+       17,
+       26
+      ],
+      [
+       18,
+       11
+      ]
+     ],
+     "description": "order Line Number",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "orderNumber",
+    "productCode"
+   ],
+   "sample_rows": [
+    {
+     "orderNumber": 10100,
+     "productCode": "S18_1749",
+     "quantityOrdered": 30,
+     "priceEach": 136.0,
+     "orderLineNumber": 3
+    },
+    {
+     "orderNumber": 10100,
+     "productCode": "S18_2248",
+     "quantityOrdered": 50,
+     "priceEach": 55.09,
+     "orderLineNumber": 2
+    },
+    {
+     "orderNumber": 10100,
+     "productCode": "S18_4409",
+     "quantityOrdered": 22,
+     "priceEach": 75.46,
+     "orderLineNumber": 4
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "orders",
+   "row_count": 326,
+   "stats_rows": 326,
+   "columns": [
+    {
+     "name": "orderNumber",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 326,
+     "is_unique": true,
+     "min_value": 10100,
+     "max_value": 10425,
+     "examples": [
+      10100,
+      10101,
+      10102,
+      10103,
+      10104
+     ],
+     "top_values": [],
+     "description": "unique order number",
+     "value_description": "unique order number",
+     "notes": []
+    },
+    {
+     "name": "orderDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 265,
+     "is_unique": false,
+     "min_value": "2003-01-06",
+     "max_value": "2005-05-31",
+     "examples": [
+      "2003-01-06",
+      "2003-01-09",
+      "2003-01-10",
+      "2003-01-29",
+      "2003-01-31"
+     ],
+     "top_values": [],
+     "description": "order date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "requiredDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 264,
+     "is_unique": false,
+     "min_value": "2003-01-13",
+     "max_value": "2005-06-11",
+     "examples": [
+      "2003-01-13",
+      "2003-01-18",
+      "2003-02-07",
+      "2003-02-09",
+      "2003-02-21"
+     ],
+     "top_values": [],
+     "description": "required Date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "shippedDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0429,
+     "distinct_count": 247,
+     "is_unique": false,
+     "min_value": "2003-01-10",
+     "max_value": "2005-05-20",
+     "examples": [
+      "2003-01-10",
+      "2003-01-11",
+      "2003-01-14",
+      "2003-02-02",
+      "2003-02-01"
+     ],
+     "top_values": [],
+     "description": "shipped Date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "status",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "Cancelled",
+     "max_value": "Shipped",
+     "examples": [
+      "Shipped",
+      "Resolved",
+      "Cancelled"
+     ],
+     "top_values": [
+      [
+       "Shipped",
+       303
+      ],
+      [
+       "In Process",
+       6
+      ],
+      [
+       "Cancelled",
+       6
+      ],
+      [
+       "Resolved",
+       4
+      ],
+      [
+       "On Hold",
+       4
+      ],
+      [
+       "Disputed",
+       3
+      ]
+     ],
+     "description": "status",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "comments",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.7546,
+     "distinct_count": 37,
+     "is_unique": false,
+     "min_value": " I need all the information I can get on our competitors.",
+     "max_value": "We need to keep in close contact with their Marketing VP. He...",
+     "examples": [
+      "Check on availability.",
+      "Difficult to negotiate with customer. We need more marketing...",
+      "Customer requested that FedEx Ground is used for this shippi...",
+      "Customer requested that ad materials (such as posters, pamph...",
+      "Customer has worked with some of our vendors in the past and..."
+     ],
+     "top_values": [
+      [
+       "They want to reevaluate their terms agreement with Finance.",
+       7
+      ],
+      [
+       "Customer requested that DHL is used for this shipping",
+       6
+      ],
+      [
+       "Customer requested that FedEx Ground is used for this shippi...",
+       4
+      ],
+      [
+       "We need to keep in close contact with their Marketing VP. He...",
+       3
+      ],
+      [
+       "We must be cautions with this customer. Their VP of Sales re...",
+       3
+      ],
+      [
+       "Difficult to negotiate with customer. We need more marketing...",
+       3
+      ],
+      [
+       "Customer very concerned about the exact color of the models....",
+       3
+      ],
+      [
+       "Customer requested that ad materials (such as posters, pamph...",
+       3
+      ],
+      [
+       "Customer requested special shippment. The instructions were ...",
+       3
+      ],
+      [
+       "Customer is interested in buying more Ferrari models",
+       3
+      ],
+      [
+       "Customer has worked with some of our vendors in the past and...",
+       3
+      ],
+      [
+       "Customer credit limit exceeded. Will ship when a payment is ...",
+       3
+      ],
+      [
+       "Custom shipping instructions sent to warehouse",
+       3
+      ],
+      [
+       "Check on availability.",
+       3
+      ],
+      [
+       "Cautious optimism. We have happy customers here, if we can k...",
+       3
+      ],
+      [
+       "Can we renegotiate this one?",
+       3
+      ],
+      [
+       "Can we deliver the new Ford Mustang models by end-of-quarter...",
+       3
+      ],
+      [
+       "Customer inquired about remote controlled models and gold mo...",
+       2
+      ],
+      [
+       "This order was on hold because customers's credit limit had ...",
+       1
+      ],
+      [
+       "This order was disputed, but resolved on 11/1/2003; Customer...",
+       1
+      ],
+      [
+       "This order was disputed and resolved on 2/1/2005. Customer c...",
+       1
+      ],
+      [
+       "This customer found a better offer from one of our competito...",
+       1
+      ],
+      [
+       "They want to reevaluate their terms agreement with the VP of...",
+       1
+      ],
+      [
+       "The outstaniding balance for this customer exceeds their cre...",
+       1
+      ],
+      [
+       "Order was mistakenly placed. The warehouse noticed the lack ...",
+       1
+      ],
+      [
+       "Order was disputed and resolved on 12/1/04. The Sales Manage...",
+       1
+      ],
+      [
+       "Disputed then Resolved on 3/15/2005. Customer doesn't like t...",
+       1
+      ],
+      [
+       "Customer will send a truck to our local warehouse on 7/1/200...",
+       1
+      ],
+      [
+       "Customer heard complaints from their customers and called to...",
+       1
+      ],
+      [
+       "Customer doesn't like the colors and precision of the models...",
+       1
+      ],
+      [
+       "Customer disputed the order and we agreed to cancel it. We m...",
+       1
+      ],
+      [
+       "Customer claims the scales of the models don't match what wa...",
+       1
+      ],
+      [
+       "Customer claims container with shipment was damaged during s...",
+       1
+      ],
+      [
+       "Customer cancelled due to urgent budgeting issues. Must be c...",
+       1
+      ],
+      [
+       "Customer called to cancel. The warehouse was notified in tim...",
+       1
+      ],
+      [
+       "Custom shipping instructions were sent to warehouse",
+       1
+      ],
+      [
+       " I need all the information I can get on our competitors.",
+       1
+      ]
+     ],
+     "description": "comments",
+     "value_description": "",
+     "notes": [
+      "75% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "customerNumber",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 98,
+     "is_unique": false,
+     "min_value": 103,
+     "max_value": 496,
+     "examples": [
+      363,
+      128,
+      181,
+      121,
+      141
+     ],
+     "top_values": [],
+     "description": "customer number",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "orderNumber"
+   ],
+   "sample_rows": [
+    {
+     "orderNumber": 10100,
+     "orderDate": "2003-01-06",
+     "requiredDate": "2003-01-13",
+     "shippedDate": "2003-01-10",
+     "status": "Shipped",
+     "comments": null,
+     "customerNumber": 363
+    },
+    {
+     "orderNumber": 10101,
+     "orderDate": "2003-01-09",
+     "requiredDate": "2003-01-18",
+     "shippedDate": "2003-01-11",
+     "status": "Shipped",
+     "comments": "Check on availability.",
+     "customerNumber": 128
+    },
+    {
+     "orderNumber": 10102,
+     "orderDate": "2003-01-10",
+     "requiredDate": "2003-01-18",
+     "shippedDate": "2003-01-14",
+     "status": "Shipped",
+     "comments": null,
+     "customerNumber": 181
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "payments",
+   "row_count": 273,
+   "stats_rows": 273,
+   "columns": [
+    {
+     "name": "customerNumber",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 98,
+     "is_unique": false,
+     "min_value": 103,
+     "max_value": 496,
+     "examples": [
+      103,
+      112,
+      114,
+      119,
+      121
+     ],
+     "top_values": [],
+     "description": "customer number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "checkNumber",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 273,
+     "is_unique": true,
+     "min_value": "AB661578",
+     "max_value": "PT550181",
+     "examples": [
+      "HQ336336",
+      "JM555205",
+      "OM314933",
+      "BO864823",
+      "HQ55022"
+     ],
+     "top_values": [],
+     "description": "check Number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "paymentDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 232,
+     "is_unique": false,
+     "min_value": "2003-01-16",
+     "max_value": "2005-06-09",
+     "examples": [
+      "2004-10-19",
+      "2003-06-05",
+      "2004-12-18",
+      "2004-12-17",
+      "2003-06-06"
+     ],
+     "top_values": [],
+     "description": "payment Date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "amount",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 273,
+     "is_unique": true,
+     "min_value": 615.45,
+     "max_value": 120166.58,
+     "examples": [
+      6066.78,
+      14571.44,
+      1676.14,
+      14191.12,
+      32641.98
+     ],
+     "top_values": [],
+     "description": "amount",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "customerNumber",
+    "checkNumber"
+   ],
+   "sample_rows": [
+    {
+     "customerNumber": 103,
+     "checkNumber": "HQ336336",
+     "paymentDate": "2004-10-19",
+     "amount": 6066.78
+    },
+    {
+     "customerNumber": 103,
+     "checkNumber": "JM555205",
+     "paymentDate": "2003-06-05",
+     "amount": 14571.44
+    },
+    {
+     "customerNumber": 103,
+     "checkNumber": "OM314933",
+     "paymentDate": "2004-12-18",
+     "amount": 1676.14
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "productlines",
+   "row_count": 7,
+   "stats_rows": 7,
+   "columns": [
+    {
+     "name": "productLine",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": true,
+     "min_value": "Classic Cars",
+     "max_value": "Vintage Cars",
+     "examples": [
+      "Classic Cars",
+      "Motorcycles",
+      "Planes",
+      "Ships",
+      "Trains"
+     ],
+     "top_values": [
+      [
+       "Vintage Cars",
+       1
+      ],
+      [
+       "Trucks and Buses",
+       1
+      ],
+      [
+       "Trains",
+       1
+      ],
+      [
+       "Ships",
+       1
+      ],
+      [
+       "Planes",
+       1
+      ],
+      [
+       "Motorcycles",
+       1
+      ],
+      [
+       "Classic Cars",
+       1
+      ]
+     ],
+     "description": "unique product line name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "textDescription",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": true,
+     "min_value": "Attention car enthusiasts: Make your wildest car ownership d...",
+     "max_value": "Unique, diecast airplane and helicopter replicas suitable fo...",
+     "examples": [
+      "Attention car enthusiasts: Make your wildest car ownership d...",
+      "Our motorcycles are state of the art replicas of classic as ...",
+      "Unique, diecast airplane and helicopter replicas suitable fo...",
+      "The perfect holiday or anniversary gift for executives, clie...",
+      "Model trains are a rewarding hobby for enthusiasts of all ag..."
+     ],
+     "top_values": [
+      [
+       "Unique, diecast airplane and helicopter replicas suitable fo...",
+       1
+      ],
+      [
+       "The perfect holiday or anniversary gift for executives, clie...",
+       1
+      ],
+      [
+       "The Truck and Bus models are realistic replicas of buses and...",
+       1
+      ],
+      [
+       "Our motorcycles are state of the art replicas of classic as ...",
+       1
+      ],
+      [
+       "Our Vintage Car models realistically portray automobiles pro...",
+       1
+      ],
+      [
+       "Model trains are a rewarding hobby for enthusiasts of all ag...",
+       1
+      ],
+      [
+       "Attention car enthusiasts: Make your wildest car ownership d...",
+       1
+      ]
+     ],
+     "description": "text description",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "htmlDescription",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "html description",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "image",
+     "declared_type": "BLOB",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "image",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "productLine"
+   ],
+   "sample_rows": [
+    {
+     "productLine": "Classic Cars",
+     "textDescription": "Attention car enthusiasts: Make your wildest car ownership d...",
+     "htmlDescription": null,
+     "image": null
+    },
+    {
+     "productLine": "Motorcycles",
+     "textDescription": "Our motorcycles are state of the art replicas of classic as ...",
+     "htmlDescription": null,
+     "image": null
+    },
+    {
+     "productLine": "Planes",
+     "textDescription": "Unique, diecast airplane and helicopter replicas suitable fo...",
+     "htmlDescription": null,
+     "image": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "products",
+   "row_count": 110,
+   "stats_rows": 110,
+   "columns": [
+    {
+     "name": "productCode",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 110,
+     "is_unique": true,
+     "min_value": "S10_1678",
+     "max_value": "S72_3212",
+     "examples": [
+      "S10_1678",
+      "S10_1949",
+      "S10_2016",
+      "S10_4698",
+      "S10_4757"
+     ],
+     "top_values": [],
+     "description": "unique product code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "productName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 110,
+     "is_unique": true,
+     "min_value": "18th Century Vintage Horse Carriage",
+     "max_value": "The USS Constitution Ship",
+     "examples": [
+      "1969 Harley Davidson Ultimate Chopper",
+      "1952 Alpine Renault 1300",
+      "1996 Moto Guzzi 1100i",
+      "2003 Harley-Davidson Eagle Drag Bike",
+      "1972 Alfa Romeo GTA"
+     ],
+     "top_values": [],
+     "description": "product name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "productLine",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "Classic Cars",
+     "max_value": "Vintage Cars",
+     "examples": [
+      "Motorcycles",
+      "Classic Cars",
+      "Trucks and Buses",
+      "Vintage Cars",
+      "Planes"
+     ],
+     "top_values": [
+      [
+       "Classic Cars",
+       38
+      ],
+      [
+       "Vintage Cars",
+       24
+      ],
+      [
+       "Motorcycles",
+       13
+      ],
+      [
+       "Planes",
+       12
+      ],
+      [
+       "Trucks and Buses",
+       11
+      ],
+      [
+       "Ships",
+       9
+      ],
+      [
+       "Trains",
+       3
+      ]
+     ],
+     "description": "product line name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "productScale",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": "1:10",
+     "max_value": "1:72",
+     "examples": [
+      "1:10",
+      "1:12",
+      "1:18",
+      "1:72",
+      "1:24"
+     ],
+     "top_values": [
+      [
+       "1:18",
+       42
+      ],
+      [
+       "1:24",
+       27
+      ],
+      [
+       "1:700",
+       10
+      ],
+      [
+       "1:12",
+       9
+      ],
+      [
+       "1:32",
+       8
+      ],
+      [
+       "1:10",
+       6
+      ],
+      [
+       "1:72",
+       4
+      ],
+      [
+       "1:50",
+       4
+      ]
+     ],
+     "description": "product scale",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "productVendor",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": "Autoart Studio Design",
+     "max_value": "Welly Diecast Productions",
+     "examples": [
+      "Min Lin Diecast",
+      "Classic Metal Creations",
+      "Highway 66 Mini Classics",
+      "Red Start Diecast",
+      "Motor City Art Classics"
+     ],
+     "top_values": [
+      [
+       "Classic Metal Creations",
+       10
+      ],
+      [
+       "Motor City Art Classics",
+       9
+      ],
+      [
+       "Highway 66 Mini Classics",
+       9
+      ],
+      [
+       "Gearbox Collectibles",
+       9
+      ],
+      [
+       "Exoto Designs",
+       9
+      ],
+      [
+       "Carousel DieCast Legends",
+       9
+      ],
+      [
+       "Welly Diecast Productions",
+       8
+      ],
+      [
+       "Unimax Art Galleries",
+       8
+      ],
+      [
+       "Studio M Art Models",
+       8
+      ],
+      [
+       "Second Gear Diecast",
+       8
+      ],
+      [
+       "Min Lin Diecast",
+       8
+      ],
+      [
+       "Autoart Studio Design",
+       8
+      ],
+      [
+       "Red Start Diecast",
+       7
+      ]
+     ],
+     "description": "product vendor",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "productDescription",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 95,
+     "is_unique": false,
+     "min_value": "10\" Wingspan with retractable landing gears.Comes with pilot",
+     "max_value": "his replica features opening doors, superb detail and crafts...",
+     "examples": [
+      "This replica features working kickstand, front suspension, g...",
+      "Turnable front wheels; steering function; detailed interior;...",
+      "Official Moto Guzzi logos and insignias, saddle bags located...",
+      "Model features, official Harley Davidson logos and insignias...",
+      "Features include: Turnable front wheels; steering function; ..."
+     ],
+     "top_values": [],
+     "description": "product description",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "quantityInStock",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 110,
+     "is_unique": true,
+     "min_value": 15,
+     "max_value": 9997,
+     "examples": [
+      7933,
+      7305,
+      6625,
+      5582,
+      3252
+     ],
+     "top_values": [],
+     "description": "quantity in stock",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "buyPrice",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 108,
+     "is_unique": false,
+     "min_value": 15.91,
+     "max_value": 103.42,
+     "examples": [
+      48.81,
+      98.58,
+      68.99,
+      91.02,
+      85.68
+     ],
+     "top_values": [],
+     "description": "buy price from vendors",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "MSRP",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 108,
+     "is_unique": false,
+     "min_value": 33.19,
+     "max_value": 214.3,
+     "examples": [
+      95.7,
+      214.3,
+      118.94,
+      193.66,
+      136.0
+     ],
+     "top_values": [],
+     "description": "Manufacturer Suggested Retail Price",
+     "value_description": "commonsense evidence: \nexpected profits: msrp - buyPrice",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "productCode"
+   ],
+   "sample_rows": [
+    {
+     "productCode": "S10_1678",
+     "productName": "1969 Harley Davidson Ultimate Chopper",
+     "productLine": "Motorcycles",
+     "productScale": "1:10",
+     "productVendor": "Min Lin Diecast",
+     "productDescription": "This replica features working kickstand, front suspension, g...",
+     "quantityInStock": 7933,
+     "buyPrice": 48.81,
+     "MSRP": 95.7
+    },
+    {
+     "productCode": "S10_1949",
+     "productName": "1952 Alpine Renault 1300",
+     "productLine": "Classic Cars",
+     "productScale": "1:10",
+     "productVendor": "Classic Metal Creations",
+     "productDescription": "Turnable front wheels; steering function; detailed interior;...",
+     "quantityInStock": 7305,
+     "buyPrice": 98.58,
+     "MSRP": 214.3
+    },
+    {
+     "productCode": "S10_2016",
+     "productName": "1996 Moto Guzzi 1100i",
+     "productLine": "Motorcycles",
+     "productScale": "1:10",
+     "productVendor": "Highway 66 Mini Classics",
+     "productDescription": "Official Moto Guzzi logos and insignias, saddle bags located...",
+     "quantityInStock": 6625,
+     "buyPrice": 68.99,
+     "MSRP": 118.94
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "customers",
+   "from_column": "salesRepEmployeeNumber",
+   "to_table": "employees",
+   "to_column": "employeeNumber",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "employees",
+   "from_column": "reportsTo",
+   "to_table": "employees",
+   "to_column": "employeeNumber",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "employees",
+   "from_column": "officeCode",
+   "to_table": "offices",
+   "to_column": "officeCode",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "orderdetails",
+   "from_column": "productCode",
+   "to_table": "products",
+   "to_column": "productCode",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "orderdetails",
+   "from_column": "orderNumber",
+   "to_table": "orders",
+   "to_column": "orderNumber",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "orders",
+   "from_column": "customerNumber",
+   "to_table": "customers",
+   "to_column": "customerNumber",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "payments",
+   "from_column": "customerNumber",
+   "to_table": "customers",
+   "to_column": "customerNumber",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "products",
+   "from_column": "productLine",
+   "to_table": "productlines",
+   "to_column": "productLine",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "orders",
+   "from_column": "customerNumber",
+   "to_table": "payments",
+   "to_column": "customerNumber",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

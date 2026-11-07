@@ -1,0 +1,22 @@
+{
+ "stage": "dpo_train",
+ "seconds": 423.7,
+ "finished": "2026-11-06 21:04:46",
+ "info": {
+  "kind": "dpo",
+  "base_model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+  "init_adapter": "/workspace/veriquery-final/artifacts/adapters/writer-sft",
+  "beta": 0.1,
+  "sft_alpha": 0.2,
+  "lr": 5e-06,
+  "epochs": 1,
+  "pairs": 226,
+  "pairs_file": "/workspace/veriquery-final/artifacts/sft/pairs_gold.jsonl",
+  "steps": 14,
+  "final_loss": 0.6793155781924725,
+  "val_loss": null,
+  "train_seconds": 312.19983959198,
+  "n_examples": 226,
+  "finished": "2026-11-06 21:04:46"
+ }
+}

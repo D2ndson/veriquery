@@ -1,0 +1,2253 @@
+{
+ "db_id": "movies_4",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/movies_4/movies_4.sqlite",
+ "fingerprint": "13070336-1793993024846412663-v1.0",
+ "created_at": "2026-11-06T19:25:02+00:00",
+ "profile_seconds": 1.322,
+ "tables": [
+  {
+   "name": "country",
+   "row_count": 88,
+   "stats_rows": 88,
+   "columns": [
+    {
+     "name": "country_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 88,
+     "is_unique": true,
+     "min_value": 128,
+     "max_value": 215,
+     "examples": [
+      128,
+      129,
+      130,
+      131,
+      132
+     ],
+     "top_values": [],
+     "description": "country id. the unique identifier of the country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "country_iso_code",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 88,
+     "is_unique": true,
+     "min_value": "AE",
+     "max_value": "ZA",
+     "examples": [
+      "AE",
+      "AF",
+      "AO",
+      "AR",
+      "AT"
+     ],
+     "top_values": [],
+     "description": "country iso code. the ISO code",
+     "value_description": "commonsense evidence:\nISO codes are typically used to identify countries and their subdivisions, and there are different types of ISO codes depending on the specific application. Here we use ISO 3166 code to identify countries.",
+     "notes": []
+    },
+    {
+     "name": "country_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 88,
+     "is_unique": true,
+     "min_value": "Afghanistan",
+     "max_value": "United States of America",
+     "examples": [
+      "United Arab Emirates",
+      "Afghanistan",
+      "Angola",
+      "Argentina",
+      "Austria"
+     ],
+     "top_values": [],
+     "description": "country name. the name of the country",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "country_id"
+   ],
+   "sample_rows": [
+    {
+     "country_id": 128,
+     "country_iso_code": "AE",
+     "country_name": "United Arab Emirates"
+    },
+    {
+     "country_id": 129,
+     "country_iso_code": "AF",
+     "country_name": "Afghanistan"
+    },
+    {
+     "country_id": 130,
+     "country_iso_code": "AO",
+     "country_name": "Angola"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "department",
+   "row_count": 12,
+   "stats_rows": 12,
+   "columns": [
+    {
+     "name": "department_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 12,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "department id. the unique identifier of the department",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "department_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": true,
+     "min_value": "Actors",
+     "max_value": "Writing",
+     "examples": [
+      "Camera",
+      "Directing",
+      "Production",
+      "Writing",
+      "Editing"
+     ],
+     "top_values": [
+      [
+       "Writing",
+       1
+      ],
+      [
+       "Visual Effects",
+       1
+      ],
+      [
+       "Sound",
+       1
+      ],
+      [
+       "Production",
+       1
+      ],
+      [
+       "Lighting",
+       1
+      ],
+      [
+       "Editing",
+       1
+      ],
+      [
+       "Directing",
+       1
+      ],
+      [
+       "Crew",
+       1
+      ],
+      [
+       "Costume & Make-Up",
+       1
+      ],
+      [
+       "Camera",
+       1
+      ],
+      [
+       "Art",
+       1
+      ],
+      [
+       "Actors",
+       1
+      ]
+     ],
+     "description": "department name. the name of the department",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "department_id"
+   ],
+   "sample_rows": [
+    {
+     "department_id": 1,
+     "department_name": "Camera"
+    },
+    {
+     "department_id": 2,
+     "department_name": "Directing"
+    },
+    {
+     "department_id": 3,
+     "department_name": "Production"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "gender",
+   "row_count": 3,
+   "stats_rows": 3,
+   "columns": [
+    {
+     "name": "gender_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": 0,
+     "max_value": 2,
+     "examples": [
+      0,
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "description": "gender id. the unique identifier of the gender",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": "Female",
+     "max_value": "Unspecified",
+     "examples": [
+      "Unspecified",
+      "Female",
+      "Male"
+     ],
+     "top_values": [
+      [
+       "Unspecified",
+       1
+      ],
+      [
+       "Male",
+       1
+      ],
+      [
+       "Female",
+       1
+      ]
+     ],
+     "description": "the gender",
+     "value_description": "commonsense evidence:\nfemale/ male/ unspecified",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "gender_id"
+   ],
+   "sample_rows": [
+    {
+     "gender_id": 0,
+     "gender": "Unspecified"
+    },
+    {
+     "gender_id": 1,
+     "gender": "Female"
+    },
+    {
+     "gender_id": 2,
+     "gender": "Male"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "genre",
+   "row_count": 20,
+   "stats_rows": 20,
+   "columns": [
+    {
+     "name": "genre_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": true,
+     "min_value": 12,
+     "max_value": 10770,
+     "examples": [
+      12,
+      14,
+      16,
+      18,
+      27
+     ],
+     "top_values": [
+      [
+       10770,
+       1
+      ],
+      [
+       10769,
+       1
+      ],
+      [
+       10752,
+       1
+      ],
+      [
+       10751,
+       1
+      ],
+      [
+       10749,
+       1
+      ],
+      [
+       10402,
+       1
+      ],
+      [
+       9648,
+       1
+      ],
+      [
+       878,
+       1
+      ],
+      [
+       99,
+       1
+      ],
+      [
+       80,
+       1
+      ],
+      [
+       53,
+       1
+      ],
+      [
+       37,
+       1
+      ],
+      [
+       36,
+       1
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       12,
+       1
+      ]
+     ],
+     "description": "genre id. the unique identifier of the genre",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "genre_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": true,
+     "min_value": "Action",
+     "max_value": "Western",
+     "examples": [
+      "Adventure",
+      "Fantasy",
+      "Animation",
+      "Drama",
+      "Horror"
+     ],
+     "top_values": [
+      [
+       "Western",
+       1
+      ],
+      [
+       "War",
+       1
+      ],
+      [
+       "Thriller",
+       1
+      ],
+      [
+       "TV Movie",
+       1
+      ],
+      [
+       "Science Fiction",
+       1
+      ],
+      [
+       "Romance",
+       1
+      ],
+      [
+       "Mystery",
+       1
+      ],
+      [
+       "Music",
+       1
+      ],
+      [
+       "Horror",
+       1
+      ],
+      [
+       "History",
+       1
+      ],
+      [
+       "Foreign",
+       1
+      ],
+      [
+       "Fantasy",
+       1
+      ],
+      [
+       "Family",
+       1
+      ],
+      [
+       "Drama",
+       1
+      ],
+      [
+       "Documentary",
+       1
+      ],
+      [
+       "Crime",
+       1
+      ],
+      [
+       "Comedy",
+       1
+      ],
+      [
+       "Animation",
+       1
+      ],
+      [
+       "Adventure",
+       1
+      ],
+      [
+       "Action",
+       1
+      ]
+     ],
+     "description": "the genre",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "genre_id"
+   ],
+   "sample_rows": [
+    {
+     "genre_id": 12,
+     "genre_name": "Adventure"
+    },
+    {
+     "genre_id": 14,
+     "genre_name": "Fantasy"
+    },
+    {
+     "genre_id": 16,
+     "genre_name": "Animation"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "keyword",
+   "row_count": 9794,
+   "stats_rows": 9794,
+   "columns": [
+    {
+     "name": "keyword_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9794,
+     "is_unique": true,
+     "min_value": 30,
+     "max_value": 238222,
+     "examples": [
+      30,
+      65,
+      74,
+      75,
+      83
+     ],
+     "top_values": [],
+     "description": "keyword id. the unique identifier of the keyword",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "keyword_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9794,
+     "is_unique": true,
+     "min_value": "15th century",
+     "max_value": "zurich",
+     "examples": [
+      "individual",
+      "holiday",
+      "germany",
+      "gunslinger",
+      "saving the world"
+     ],
+     "top_values": [],
+     "description": "keyword name. the keyword",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "keyword_id"
+   ],
+   "sample_rows": [
+    {
+     "keyword_id": 30,
+     "keyword_name": "individual"
+    },
+    {
+     "keyword_id": 65,
+     "keyword_name": "holiday"
+    },
+    {
+     "keyword_id": 74,
+     "keyword_name": "germany"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "language",
+   "row_count": 88,
+   "stats_rows": 88,
+   "columns": [
+    {
+     "name": "language_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 88,
+     "is_unique": true,
+     "min_value": 24574,
+     "max_value": 24701,
+     "examples": [
+      24574,
+      24575,
+      24576,
+      24577,
+      24578
+     ],
+     "top_values": [],
+     "description": "language id. the unique identifier of the language",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "language_code",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 88,
+     "is_unique": true,
+     "min_value": "af",
+     "max_value": "zu",
+     "examples": [
+      "en",
+      "sv",
+      "de",
+      "xx",
+      "ja"
+     ],
+     "top_values": [],
+     "description": "language code. the code of the language",
+     "value_description": "commonsense evidence:\nHere we use ISO 639 codes to identify the language.",
+     "notes": []
+    },
+    {
+     "name": "language_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 63,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "ud55cuad6duc5b4/uc870uc120ub9d0",
+     "examples": [
+      "English",
+      "svenska",
+      "Deutsch",
+      "No Language",
+      "u65e5u672cu8a9e"
+     ],
+     "top_values": [],
+     "description": "the language name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "language_id"
+   ],
+   "sample_rows": [
+    {
+     "language_id": 24574,
+     "language_code": "en",
+     "language_name": "English"
+    },
+    {
+     "language_id": 24575,
+     "language_code": "sv",
+     "language_name": "svenska"
+    },
+    {
+     "language_id": 24576,
+     "language_code": "de",
+     "language_name": "Deutsch"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "language_role",
+   "row_count": 2,
+   "stats_rows": 2,
+   "columns": [
+    {
+     "name": "role_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "role id. the unique identifier of the language id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "language_role",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": "Original",
+     "max_value": "Spoken",
+     "examples": [
+      "Original",
+      "Spoken"
+     ],
+     "top_values": [
+      [
+       "Spoken",
+       1
+      ],
+      [
+       "Original",
+       1
+      ]
+     ],
+     "description": "the language role",
+     "value_description": "commonsense evidence:\nIn the context of language roles in a movie or other audio-visual production, \"original\" and \"spoken\" refer to the languages in which the movie was originally produced, and the languages spoken by the characters in the movie, respectively.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "role_id"
+   ],
+   "sample_rows": [
+    {
+     "role_id": 1,
+     "language_role": "Original"
+    },
+    {
+     "role_id": 2,
+     "language_role": "Spoken"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "movie",
+   "row_count": 4627,
+   "stats_rows": 4627,
+   "columns": [
+    {
+     "name": "movie_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4627,
+     "is_unique": true,
+     "min_value": 5,
+     "max_value": 302579,
+     "examples": [
+      5,
+      11,
+      12,
+      13,
+      14
+     ],
+     "top_values": [],
+     "description": "movie id. the unique identifier of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4625,
+     "is_unique": false,
+     "min_value": "#Horror",
+     "max_value": "해운대",
+     "examples": [
+      "Four Rooms",
+      "Star Wars",
+      "Finding Nemo",
+      "Forrest Gump",
+      "American Beauty"
+     ],
+     "top_values": [],
+     "description": "the title of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "budget",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 427,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 380000000,
+     "examples": [
+      4000000,
+      11000000,
+      94000000,
+      55000000,
+      15000000
+     ],
+     "top_values": [],
+     "description": "the budget for the movie",
+     "value_description": "commonsense evidence:\nIf a movie has higher popularity, it means that it is well-liked by a large number of people. This can be determined by looking at the movie's ratings and reviews, as well as the box office performance and overall buzz surrounding the film. Higher popularity often translates to more success for the movie, both financially and critically.",
+     "notes": []
+    },
+    {
+     "name": "homepage",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1623,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "https://www.warnerbros.com/watchmen",
+     "examples": [
+      "",
+      "http://www.starwars.com/films/star-wars-episode-iv-a-new-hop...",
+      "http://movies.disney.com/finding-nemo",
+      "http://www.dreamworks.com/ab/",
+      "http://www.clubcultura.com/clubcine/clubcineastas/isabelcoix..."
+     ],
+     "top_values": [],
+     "description": "the homepage of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "overview",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4627,
+     "is_unique": true,
+     "min_value": "",
+     "max_value": "“The Perfect Wave” is the true story of Ian McCormack who gr...",
+     "examples": [
+      "It's Ted the Bellhop's first night on the job...and the hote...",
+      "Princess Leia is captured and held hostage by the evil Imper...",
+      "Nemo, an adventurous young clownfish, is unexpectedly taken ...",
+      "A man with a low IQ has accomplished great things in his lif...",
+      "Lester Burnham, a depressed suburban father in a mid-life cr..."
+     ],
+     "top_values": [],
+     "description": "the overview of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "popularity",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4626,
+     "is_unique": false,
+     "min_value": 0.000372,
+     "max_value": 875.581305,
+     "examples": [
+      22.87623,
+      126.393695,
+      85.688789,
+      138.133331,
+      80.878605
+     ],
+     "top_values": [],
+     "description": "the popularity of the movie",
+     "value_description": "commonsense evidence:\nIf a movie has higher popularity, it means that it is well-liked by a large number of people. This can be determined by looking at the movie's ratings and reviews, as well as the box office performance and overall buzz surrounding the film. Higher popularity often translates to more success for the movie, both financially and critically.",
+     "notes": []
+    },
+    {
+     "name": "release_date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3196,
+     "is_unique": false,
+     "min_value": "1916-09-04",
+     "max_value": "2016-08-26",
+     "examples": [
+      "1995-12-09",
+      "1977-05-25",
+      "2003-05-30",
+      "1994-07-06",
+      "1999-09-15"
+     ],
+     "top_values": [],
+     "description": "the release date of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "revenue",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3244,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 2787965087,
+     "examples": [
+      4300000,
+      775398007,
+      940335536,
+      677945399,
+      356296601
+     ],
+     "top_values": [],
+     "description": "the revenue of the movie",
+     "value_description": "commonsense evidence:\nA higher vote average indicates that a greater proportion of people who have seen the movie have given it positive ratings.",
+     "notes": []
+    },
+    {
+     "name": "runtime",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 156,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 338,
+     "examples": [
+      98,
+      121,
+      100,
+      142,
+      122
+     ],
+     "top_values": [],
+     "description": "the runtime of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "movie_status",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Post Production",
+     "max_value": "Rumored",
+     "examples": [
+      "Released"
+     ],
+     "top_values": [
+      [
+       "Released",
+       4620
+      ],
+      [
+       "Rumored",
+       5
+      ],
+      [
+       "Post Production",
+       2
+      ]
+     ],
+     "description": "the status of the movie\nThe only value of this column is 'Released'.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "tagline",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3843,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "最后的舞者",
+     "examples": [
+      "Twelve outrageous guests. Four scandalous requests. And one ...",
+      "A long time ago in a galaxy far, far away...",
+      "There are 3.7 trillion fish in the ocean, they're looking fo...",
+      "The world will never be the same, once you've seen it throug...",
+      "Look closer."
+     ],
+     "top_values": [],
+     "description": "the tagline of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vote_average",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 69,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 10.0,
+     "examples": [
+      6.5,
+      8.1,
+      7.6,
+      8.2,
+      7.9
+     ],
+     "top_values": [],
+     "description": "vote average. the average vote for the movie",
+     "value_description": "commonsense evidence:\nA higher vote average indicates that a greater proportion of people who have seen the movie have given it positive ratings.",
+     "notes": []
+    },
+    {
+     "name": "vote_count",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1595,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 13752,
+     "examples": [
+      530,
+      6624,
+      6122,
+      7927,
+      3313
+     ],
+     "top_values": [],
+     "description": "the vote count for the movie",
+     "value_description": "commonsense evidence:\nIf a movie has a higher vote average and vote count, it means that it has been well-received by audiences and critics. A higher vote count means that more people have rated the movie, which can indicate a greater level of interest in the film.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "movie_id"
+   ],
+   "sample_rows": [
+    {
+     "movie_id": 5,
+     "title": "Four Rooms",
+     "budget": 4000000,
+     "homepage": "",
+     "overview": "It's Ted the Bellhop's first night on the job...and the hote...",
+     "popularity": 22.87623,
+     "release_date": "1995-12-09",
+     "revenue": 4300000,
+     "runtime": 98,
+     "movie_status": "Released",
+     "tagline": "Twelve outrageous guests. Four scandalous requests. And one ...",
+     "vote_average": 6.5,
+     "vote_count": 530
+    },
+    {
+     "movie_id": 11,
+     "title": "Star Wars",
+     "budget": 11000000,
+     "homepage": "http://www.starwars.com/films/star-wars-episode-iv-a-new-hop...",
+     "overview": "Princess Leia is captured and held hostage by the evil Imper...",
+     "popularity": 126.393695,
+     "release_date": "1977-05-25",
+     "revenue": 775398007,
+     "runtime": 121,
+     "movie_status": "Released",
+     "tagline": "A long time ago in a galaxy far, far away...",
+     "vote_average": 8.1,
+     "vote_count": 6624
+    },
+    {
+     "movie_id": 12,
+     "title": "Finding Nemo",
+     "budget": 94000000,
+     "homepage": "http://movies.disney.com/finding-nemo",
+     "overview": "Nemo, an adventurous young clownfish, is unexpectedly taken ...",
+     "popularity": 85.688789,
+     "release_date": "2003-05-30",
+     "revenue": 940335536,
+     "runtime": 100,
+     "movie_status": "Released",
+     "tagline": "There are 3.7 trillion fish in the ocean, they're looking fo...",
+     "vote_average": 7.6,
+     "vote_count": 6122
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "movie_cast",
+   "row_count": 59083,
+   "stats_rows": 59083,
+   "columns": [
+    {
+     "name": "movie_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2443,
+     "is_unique": false,
+     "min_value": 5,
+     "max_value": 34851,
+     "examples": [
+      285,
+      559,
+      767
+     ],
+     "top_values": [],
+     "description": "movie id. the id of the movie\nMaps to movie(movie_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "person_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 32697,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1892757,
+     "examples": [
+      85,
+      114,
+      116,
+      1640,
+      1619
+     ],
+     "top_values": [],
+     "description": "person id. the id of the person\nMaps to person(person_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "character_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 42994,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "von Waldheim",
+     "examples": [
+      "Captain Jack Sparrow",
+      "Will Turner",
+      "Elizabeth Swann",
+      "William Bootstrap Bill Turner",
+      "Captain Sao Feng"
+     ],
+     "top_values": [],
+     "description": "the character name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "gender_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 2,
+     "examples": [
+      2,
+      1,
+      0
+     ],
+     "top_values": [
+      [
+       2,
+       28976
+      ],
+      [
+       0,
+       16649
+      ],
+      [
+       1,
+       13458
+      ]
+     ],
+     "description": "gender id. the id of the cast's gender\nMaps to gender(gender_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "cast_order",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 213,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 212,
+     "examples": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [],
+     "description": "the cast order of the cast",
+     "value_description": "commonsense evidence:\nThe cast order of a movie or television show refers to the sequence in which the actors and actresses are listed in the credits. This order is typically determined by the relative importance of each actor's role in the production, with the main actors and actresses appearing first, followed by the supporting cast and extras.",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "movie_id": 285,
+     "person_id": 85,
+     "character_name": "Captain Jack Sparrow",
+     "gender_id": 2,
+     "cast_order": 0
+    },
+    {
+     "movie_id": 285,
+     "person_id": 114,
+     "character_name": "Will Turner",
+     "gender_id": 2,
+     "cast_order": 1
+    },
+    {
+     "movie_id": 285,
+     "person_id": 116,
+     "character_name": "Elizabeth Swann",
+     "gender_id": 1,
+     "cast_order": 2
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "movie_company",
+   "row_count": 13677,
+   "stats_rows": 13677,
+   "columns": [
+    {
+     "name": "movie_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4452,
+     "is_unique": false,
+     "min_value": 5,
+     "max_value": 459488,
+     "examples": [
+      5,
+      11,
+      12,
+      13,
+      14
+     ],
+     "top_values": [],
+     "description": "movie id. the id of the movie \nMaps to movie(movie_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "company_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5047,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 95063,
+     "examples": [
+      14,
+      59,
+      1,
+      306,
+      3
+     ],
+     "top_values": [],
+     "description": "company id. the id of the company that produced the movie\nMaps to production_company(company_id)",
+     "value_description": "commonsense evidence:\nIf movies with different movie_id have the same company_id, it means these movies were made by the same company.",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "movie_id": 5,
+     "company_id": 14
+    },
+    {
+     "movie_id": 5,
+     "company_id": 59
+    },
+    {
+     "movie_id": 11,
+     "company_id": 1
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "movie_crew",
+   "row_count": 129581,
+   "stats_rows": 129581,
+   "columns": [
+    {
+     "name": "movie_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4775,
+     "is_unique": false,
+     "min_value": 5,
+     "max_value": 459488,
+     "examples": [
+      285,
+      559,
+      767,
+      1452,
+      58
+     ],
+     "top_values": [],
+     "description": "movie id. the id of the movie that the crew worked for\nMaps to movie(movie_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "person_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 52885,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1893239,
+     "examples": [
+      120,
+      1704,
+      770,
+      1705,
+      1706
+     ],
+     "top_values": [],
+     "description": "person id. the id of the crew\nMaps to person(person_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "department_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 12,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       3,
+       27675
+      ],
+      [
+       6,
+       16176
+      ],
+      [
+       7,
+       14853
+      ],
+      [
+       9,
+       13826
+      ],
+      [
+       8,
+       11188
+      ],
+      [
+       4,
+       10688
+      ],
+      [
+       1,
+       9204
+      ],
+      [
+       2,
+       8149
+      ],
+      [
+       5,
+       7855
+      ],
+      [
+       10,
+       7553
+      ],
+      [
+       11,
+       2410
+      ],
+      [
+       12,
+       4
+      ]
+     ],
+     "description": "department id. the id of the crew's department\nMaps to department(department_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "job",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 418,
+     "is_unique": false,
+     "min_value": "24 Frame Playback",
+     "max_value": "Writer",
+     "examples": [
+      "Director of Photography",
+      "Director",
+      "Producer",
+      "Screenplay",
+      "Editor"
+     ],
+     "top_values": [],
+     "description": "the job of the crew",
+     "value_description": "commonsense evidence:\nA movie may involve several crews with the same job title.",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "movie_id": 285,
+     "person_id": 120,
+     "department_id": 1,
+     "job": "Director of Photography"
+    },
+    {
+     "movie_id": 285,
+     "person_id": 1704,
+     "department_id": 2,
+     "job": "Director"
+    },
+    {
+     "movie_id": 285,
+     "person_id": 770,
+     "department_id": 3,
+     "job": "Producer"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "movie_genres",
+   "row_count": 12160,
+   "stats_rows": 12160,
+   "columns": [
+    {
+     "name": "movie_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4775,
+     "is_unique": false,
+     "min_value": 5,
+     "max_value": 459488,
+     "examples": [
+      5,
+      11,
+      12,
+      13,
+      14
+     ],
+     "top_values": [],
+     "description": "movie id. the id of the movie \nMaps to movie(movie_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "genre_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": 12,
+     "max_value": 10770,
+     "examples": [
+      35,
+      80,
+      12,
+      28,
+      878
+     ],
+     "top_values": [
+      [
+       18,
+       2297
+      ],
+      [
+       35,
+       1722
+      ],
+      [
+       53,
+       1274
+      ],
+      [
+       28,
+       1154
+      ],
+      [
+       10749,
+       894
+      ],
+      [
+       12,
+       790
+      ],
+      [
+       80,
+       696
+      ],
+      [
+       878,
+       535
+      ],
+      [
+       27,
+       519
+      ],
+      [
+       10751,
+       513
+      ],
+      [
+       14,
+       424
+      ],
+      [
+       9648,
+       348
+      ],
+      [
+       16,
+       234
+      ],
+      [
+       36,
+       197
+      ],
+      [
+       10402,
+       185
+      ],
+      [
+       10752,
+       144
+      ],
+      [
+       99,
+       110
+      ],
+      [
+       37,
+       82
+      ],
+      [
+       10769,
+       34
+      ],
+      [
+       10770,
+       8
+      ]
+     ],
+     "description": "genre id. the id of the movie genre\nMaps to genre(genre_id)",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "movie_id": 5,
+     "genre_id": 35
+    },
+    {
+     "movie_id": 5,
+     "genre_id": 80
+    },
+    {
+     "movie_id": 11,
+     "genre_id": 12
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "movie_keywords",
+   "row_count": 36162,
+   "stats_rows": 36162,
+   "columns": [
+    {
+     "name": "movie_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4391,
+     "is_unique": false,
+     "min_value": 5,
+     "max_value": 459488,
+     "examples": [
+      5,
+      11,
+      12,
+      13,
+      14
+     ],
+     "top_values": [],
+     "description": "movie id. the id of the movie \nMaps to movie(movie_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "keyword_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9794,
+     "is_unique": false,
+     "min_value": 30,
+     "max_value": 238222,
+     "examples": [
+      612,
+      613,
+      616,
+      622,
+      922
+     ],
+     "top_values": [],
+     "description": "keyword id. the id of the movie keyword\nMaps to keyword(keyword_id)",
+     "value_description": "commonsense evidence:\nA movie may have many keywords. Audience could get the genre of the movie according to the movie keywords.",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "movie_id": 5,
+     "keyword_id": 612
+    },
+    {
+     "movie_id": 5,
+     "keyword_id": 613
+    },
+    {
+     "movie_id": 5,
+     "keyword_id": 616
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "movie_languages",
+   "row_count": 11740,
+   "stats_rows": 11740,
+   "columns": [
+    {
+     "name": "movie_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4803,
+     "is_unique": false,
+     "min_value": 5,
+     "max_value": 459488,
+     "examples": [
+      5,
+      11,
+      12,
+      13,
+      14
+     ],
+     "top_values": [],
+     "description": "movie id. the id of the movie \nMaps to movie(movie_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "language_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 88,
+     "is_unique": false,
+     "min_value": 24574,
+     "max_value": 24701,
+     "examples": [
+      24574
+     ],
+     "top_values": [],
+     "description": "language id. the id of the movie language\nMaps to language(language_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "language_role_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       6937
+      ],
+      [
+       1,
+       4803
+      ]
+     ],
+     "description": "language role id. the id of the role's language",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "movie_id": 5,
+     "language_id": 24574,
+     "language_role_id": 2
+    },
+    {
+     "movie_id": 11,
+     "language_id": 24574,
+     "language_role_id": 2
+    },
+    {
+     "movie_id": 12,
+     "language_id": 24574,
+     "language_role_id": 2
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "person",
+   "row_count": 104838,
+   "stats_rows": 104838,
+   "columns": [
+    {
+     "name": "person_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 104838,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 1893239,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "person id. the unique identifier of the person",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "person_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 103147,
+     "is_unique": false,
+     "min_value": "  Jorge de los Reyes ",
+     "max_value": "u5f90u5e06",
+     "examples": [
+      "George Lucas",
+      "Mark Hamill",
+      "Harrison Ford",
+      "Carrie Fisher",
+      "Peter Cushing"
+     ],
+     "top_values": [],
+     "description": "person name. the name of the person",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "person_id"
+   ],
+   "sample_rows": [
+    {
+     "person_id": 1,
+     "person_name": "George Lucas"
+    },
+    {
+     "person_id": 2,
+     "person_name": "Mark Hamill"
+    },
+    {
+     "person_id": 3,
+     "person_name": "Harrison Ford"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "production_company",
+   "row_count": 5047,
+   "stats_rows": 5047,
+   "columns": [
+    {
+     "name": "company_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5047,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 95063,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "company id. the unique identifier of the company",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "company_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5017,
+     "is_unique": false,
+     "min_value": "1.85 Films",
+     "max_value": "winchester films",
+     "examples": [
+      "Lucasfilm",
+      "Walt Disney Pictures",
+      "Pixar Animation Studios",
+      "Paramount Pictures",
+      "Columbia Pictures"
+     ],
+     "top_values": [],
+     "description": "company name. the name of the company",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "company_id"
+   ],
+   "sample_rows": [
+    {
+     "company_id": 1,
+     "company_name": "Lucasfilm"
+    },
+    {
+     "company_id": 2,
+     "company_name": "Walt Disney Pictures"
+    },
+    {
+     "company_id": 3,
+     "company_name": "Pixar Animation Studios"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "production_country",
+   "row_count": 6436,
+   "stats_rows": 6436,
+   "columns": [
+    {
+     "name": "movie_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4629,
+     "is_unique": false,
+     "min_value": 5,
+     "max_value": 459488,
+     "examples": [
+      5,
+      11,
+      12,
+      13,
+      14
+     ],
+     "top_values": [],
+     "description": "mivie id. the unique identifier of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "country_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 88,
+     "is_unique": false,
+     "min_value": 128,
+     "max_value": 215,
+     "examples": [
+      214,
+      131,
+      152,
+      159,
+      161
+     ],
+     "top_values": [],
+     "description": "country id. the id of the country",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "movie_id": 5,
+     "country_id": 214
+    },
+    {
+     "movie_id": 11,
+     "country_id": 214
+    },
+    {
+     "movie_id": 12,
+     "country_id": 214
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "movie_cast",
+   "from_column": "person_id",
+   "to_table": "person",
+   "to_column": "person_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movie_cast",
+   "from_column": "movie_id",
+   "to_table": "movie",
+   "to_column": "movie_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movie_cast",
+   "from_column": "gender_id",
+   "to_table": "gender",
+   "to_column": "gender_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movie_company",
+   "from_column": "company_id",
+   "to_table": "production_company",
+   "to_column": "company_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movie_company",
+   "from_column": "movie_id",
+   "to_table": "movie",
+   "to_column": "movie_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movie_crew",
+   "from_column": "person_id",
+   "to_table": "person",
+   "to_column": "person_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movie_crew",
+   "from_column": "movie_id",
+   "to_table": "movie",
+   "to_column": "movie_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movie_crew",
+   "from_column": "department_id",
+   "to_table": "department",
+   "to_column": "department_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movie_genres",
+   "from_column": "movie_id",
+   "to_table": "movie",
+   "to_column": "movie_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movie_genres",
+   "from_column": "genre_id",
+   "to_table": "genre",
+   "to_column": "genre_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movie_keywords",
+   "from_column": "keyword_id",
+   "to_table": "keyword",
+   "to_column": "keyword_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movie_keywords",
+   "from_column": "movie_id",
+   "to_table": "movie",
+   "to_column": "movie_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movie_languages",
+   "from_column": "language_role_id",
+   "to_table": "language_role",
+   "to_column": "role_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movie_languages",
+   "from_column": "movie_id",
+   "to_table": "movie",
+   "to_column": "movie_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movie_languages",
+   "from_column": "language_id",
+   "to_table": "language",
+   "to_column": "language_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "production_country",
+   "from_column": "movie_id",
+   "to_table": "movie",
+   "to_column": "movie_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "production_country",
+   "from_column": "country_id",
+   "to_table": "country",
+   "to_column": "country_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

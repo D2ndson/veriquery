@@ -1,0 +1,762 @@
+{
+ "db_id": "shooting",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/shooting/shooting.sqlite",
+ "fingerprint": "180224-1793993088287509111-v1.0",
+ "created_at": "2026-11-06T19:25:12+00:00",
+ "profile_seconds": 0.009,
+ "tables": [
+  {
+   "name": "incidents",
+   "row_count": 219,
+   "stats_rows": 219,
+   "columns": [
+    {
+     "name": "case_number",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 219,
+     "is_unique": true,
+     "min_value": "031347-2015",
+     "max_value": "997316P",
+     "examples": [
+      "031347-2015",
+      "072458-2016",
+      "089985-2016",
+      "1004453N",
+      "100577T"
+     ],
+     "top_values": [],
+     "description": "case number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 213,
+     "is_unique": false,
+     "min_value": "2003/1/11",
+     "max_value": "2016/8/25",
+     "examples": [
+      "2015/2/9",
+      "2016/3/26",
+      "2016/4/16",
+      "2004/12/29",
+      "2007/2/12"
+     ],
+     "top_values": [],
+     "description": "date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "location",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 219,
+     "is_unique": true,
+     "min_value": "10008 Mesita Drive",
+     "max_value": "9850 Whitehurst Drive",
+     "examples": [
+      "7400 Bonnie View Road",
+      "8218 Willoughby Boulevard",
+      "4800 Columbia Ave",
+      "2400 Walnut Hill Lane",
+      "3847 Timberglen Road, #3116"
+     ],
+     "top_values": [],
+     "description": "location",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "subject_statuses",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "1 Deceased 1 Injured",
+     "max_value": "Shoot and Miss",
+     "examples": [
+      "Deceased",
+      "Shoot and Miss",
+      "Injured",
+      "Other",
+      "Deceased Injured"
+     ],
+     "top_values": [
+      [
+       "Shoot and Miss",
+       83
+      ],
+      [
+       "Deceased",
+       68
+      ],
+      [
+       "Injured",
+       62
+      ],
+      [
+       "Other",
+       3
+      ],
+      [
+       "Deceased Injured",
+       1
+      ],
+      [
+       "2 Injured",
+       1
+      ],
+      [
+       "1 Deceased 1 Injured",
+       1
+      ]
+     ],
+     "description": "subject statuses. statuses of the victims",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "subject_weapon",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": "Assault Rifle",
+     "max_value": "Vehicle",
+     "examples": [
+      "Vehicle",
+      "Shotgun",
+      "Handgun",
+      "Toy Handun",
+      "Knife"
+     ],
+     "top_values": [
+      [
+       "Handgun",
+       99
+      ],
+      [
+       "Vehicle",
+       34
+      ],
+      [
+       "Unarmed",
+       32
+      ],
+      [
+       "Shotgun",
+       10
+      ],
+      [
+       "Knife",
+       10
+      ],
+      [
+       "Hands",
+       10
+      ],
+      [
+       "Rifle",
+       4
+      ],
+      [
+       "Assault Rifle",
+       4
+      ],
+      [
+       "Taser",
+       2
+      ],
+      [
+       "Pellet Gun",
+       2
+      ],
+      [
+       "BB Rifle",
+       2
+      ],
+      [
+       "Toy Rifle",
+       1
+      ],
+      [
+       "Toy Handun",
+       1
+      ],
+      [
+       "Toy Handgun",
+       1
+      ],
+      [
+       "Simulated Handgun",
+       1
+      ],
+      [
+       "Screwdriver",
+       1
+      ],
+      [
+       "Rock",
+       1
+      ],
+      [
+       "Paint Ball Rifle",
+       1
+      ],
+      [
+       "OC Spray",
+       1
+      ],
+      [
+       "Box Cutter",
+       1
+      ],
+      [
+       "BB Gun",
+       1
+      ]
+     ],
+     "description": "subject weapon",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "subjects",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 205,
+     "is_unique": false,
+     "min_value": "Abdel, Aziz W/M",
+     "max_value": "Zoller, Jonathan W/M",
+     "examples": [
+      "Luster, Desmond Dwayne B/M",
+      "Gilstrap, Bryan B/M",
+      "Unknown L/M",
+      "Evans, Jerry W/M",
+      "Mims, Carlton B/M"
+     ],
+     "top_values": [],
+     "description": "subjects",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "subject_count",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 3,
+     "examples": [
+      1,
+      2,
+      0,
+      3
+     ],
+     "top_values": [
+      [
+       1,
+       210
+      ],
+      [
+       2,
+       5
+      ],
+      [
+       0,
+       3
+      ],
+      [
+       3,
+       1
+      ]
+     ],
+     "description": "subject_count",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "officers",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 211,
+     "is_unique": false,
+     "min_value": "Aguinaga, Juan L/M",
+     "max_value": "Zarate, Daniel W/M",
+     "examples": [
+      "Tollerton, Aaron W/M",
+      "Cardenas, Steven L/M",
+      "Ruben, Fredirick W/M",
+      "Nguyen, Buu A/M",
+      "Ragsdale, Barry W/M"
+     ],
+     "top_values": [],
+     "description": "officers",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "case_number"
+   ],
+   "sample_rows": [
+    {
+     "case_number": "031347-2015",
+     "date": "2015/2/9",
+     "location": "7400 Bonnie View Road",
+     "subject_statuses": "Deceased",
+     "subject_weapon": "Vehicle",
+     "subjects": "Luster, Desmond Dwayne B/M",
+     "subject_count": 1,
+     "officers": "Tollerton, Aaron W/M"
+    },
+    {
+     "case_number": "072458-2016",
+     "date": "2016/3/26",
+     "location": "8218 Willoughby Boulevard",
+     "subject_statuses": "Shoot and Miss",
+     "subject_weapon": "Shotgun",
+     "subjects": "Gilstrap, Bryan B/M",
+     "subject_count": 1,
+     "officers": "Cardenas, Steven L/M"
+    },
+    {
+     "case_number": "089985-2016",
+     "date": "2016/4/16",
+     "location": "4800 Columbia Ave",
+     "subject_statuses": "Shoot and Miss",
+     "subject_weapon": "Handgun",
+     "subjects": "Unknown L/M",
+     "subject_count": 1,
+     "officers": "Ruben, Fredirick W/M"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "officers",
+   "row_count": 370,
+   "stats_rows": 370,
+   "columns": [
+    {
+     "name": "case_number",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 219,
+     "is_unique": false,
+     "min_value": "031347-2015",
+     "max_value": "997316P",
+     "examples": [
+      "44523A",
+      "121982X",
+      "605484T",
+      "384832T",
+      "244659R"
+     ],
+     "top_values": [],
+     "description": "case number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "race",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0108,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "W",
+     "examples": [
+      "L",
+      "W",
+      "B",
+      "A"
+     ],
+     "top_values": [
+      [
+       "W",
+       207
+      ],
+      [
+       "L",
+       79
+      ],
+      [
+       "B",
+       68
+      ],
+      [
+       "A",
+       12
+      ]
+     ],
+     "description": "race",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "M",
+     "examples": [
+      "M",
+      "F"
+     ],
+     "top_values": [
+      [
+       "M",
+       351
+      ],
+      [
+       "F",
+       19
+      ]
+     ],
+     "description": "gender",
+     "value_description": "M: male;\n\nF: female",
+     "notes": []
+    },
+    {
+     "name": "last_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 307,
+     "is_unique": false,
+     "min_value": "Adams",
+     "max_value": "Zarate",
+     "examples": [
+      "Patino",
+      "Fillingim",
+      "Padilla",
+      "Poston",
+      "Mondy"
+     ],
+     "top_values": [],
+     "description": "last name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "first_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0081,
+     "distinct_count": 199,
+     "is_unique": false,
+     "min_value": "Aaron",
+     "max_value": "Zachary",
+     "examples": [
+      "Michael",
+      "Brian",
+      "Gilbert",
+      "Jerry",
+      "Jesse"
+     ],
+     "top_values": [],
+     "description": "first name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "full_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 344,
+     "is_unique": false,
+     "min_value": "Adams, Joseph",
+     "max_value": "Zarate, Daniel",
+     "examples": [
+      "Patino, Michael",
+      "Fillingim, Brian",
+      "Padilla, Gilbert",
+      "Poston, Jerry",
+      "Mondy, Michael"
+     ],
+     "top_values": [],
+     "description": "full name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "case_number": "44523A",
+     "race": "L",
+     "gender": "M",
+     "last_name": "Patino",
+     "first_name": "Michael",
+     "full_name": "Patino, Michael"
+    },
+    {
+     "case_number": "44523A",
+     "race": "W",
+     "gender": "M",
+     "last_name": "Fillingim",
+     "first_name": "Brian",
+     "full_name": "Fillingim, Brian"
+    },
+    {
+     "case_number": "121982X",
+     "race": "L",
+     "gender": "M",
+     "last_name": "Padilla",
+     "first_name": "Gilbert",
+     "full_name": "Padilla, Gilbert"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "subjects",
+   "row_count": 223,
+   "stats_rows": 223,
+   "columns": [
+    {
+     "name": "case_number",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 216,
+     "is_unique": false,
+     "min_value": "031347-2015",
+     "max_value": "997316P",
+     "examples": [
+      "44523A",
+      "121982X",
+      "605484T",
+      "384832T",
+      "244659R"
+     ],
+     "top_values": [],
+     "description": "case number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "race",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "W",
+     "examples": [
+      "L",
+      "B",
+      "W",
+      "A"
+     ],
+     "top_values": [
+      [
+       "B",
+       111
+      ],
+      [
+       "L",
+       72
+      ],
+      [
+       "W",
+       38
+      ],
+      [
+       "A",
+       2
+      ]
+     ],
+     "description": "race",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "M",
+     "examples": [
+      "M",
+      "F"
+     ],
+     "top_values": [
+      [
+       "M",
+       215
+      ],
+      [
+       "F",
+       8
+      ]
+     ],
+     "description": "gender",
+     "value_description": "M: male;\n\nF: female",
+     "notes": []
+    },
+    {
+     "name": "last_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 182,
+     "is_unique": false,
+     "min_value": "Abdel",
+     "max_value": "Zoller",
+     "examples": [
+      "Curry",
+      "Chavez",
+      "Salinas",
+      "Smith",
+      "Dews"
+     ],
+     "top_values": [],
+     "description": "last name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "first_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0807,
+     "distinct_count": 158,
+     "is_unique": false,
+     "min_value": "Able",
+     "max_value": "William",
+     "examples": [
+      "James",
+      "Gabriel",
+      "Nick",
+      "Antonio",
+      "Damion"
+     ],
+     "top_values": [],
+     "description": "first name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "full_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 208,
+     "is_unique": false,
+     "min_value": "Abdel, Aziz",
+     "max_value": "Zoller, Jonathan",
+     "examples": [
+      "Curry, James",
+      "Chavez, Gabriel",
+      "Salinas, Nick",
+      "Smith, James",
+      "Dews, Antonio"
+     ],
+     "top_values": [],
+     "description": "full name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "case_number": "44523A",
+     "race": "L",
+     "gender": "M",
+     "last_name": "Curry",
+     "first_name": "James",
+     "full_name": "Curry, James"
+    },
+    {
+     "case_number": "121982X",
+     "race": "L",
+     "gender": "M",
+     "last_name": "Chavez",
+     "first_name": "Gabriel",
+     "full_name": "Chavez, Gabriel"
+    },
+    {
+     "case_number": "605484T",
+     "race": "L",
+     "gender": "M",
+     "last_name": "Salinas",
+     "first_name": "Nick",
+     "full_name": "Salinas, Nick"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "officers",
+   "from_column": "case_number",
+   "to_table": "incidents",
+   "to_column": "case_number",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "subjects",
+   "from_column": "case_number",
+   "to_table": "incidents",
+   "to_column": "case_number",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

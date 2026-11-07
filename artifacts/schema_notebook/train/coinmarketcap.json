@@ -1,0 +1,1008 @@
+{
+ "db_id": "coinmarketcap",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/coinmarketcap/coinmarketcap.sqlite",
+ "fingerprint": "1508139008-1793993088270694031-v1.0",
+ "created_at": "2026-11-06T19:24:52+00:00",
+ "profile_seconds": 2.07,
+ "tables": [
+  {
+   "name": "coins",
+   "row_count": 8927,
+   "stats_rows": 8927,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 8927,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 11123,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique id number identifying coins",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8863,
+     "is_unique": false,
+     "min_value": "#MetaHash",
+     "max_value": "τDoge",
+     "examples": [
+      "Bitcoin",
+      "Litecoin",
+      "Namecoin",
+      "Terracoin",
+      "Peercoin"
+     ],
+     "top_values": [],
+     "description": "name of coins",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "slug",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8924,
+     "is_unique": false,
+     "min_value": "007coin",
+     "max_value": "zzz-finance-v2",
+     "examples": [
+      "bitcoin",
+      "litecoin",
+      "namecoin",
+      "terracoin",
+      "peercoin"
+     ],
+     "top_values": [],
+     "description": "slug names of coins",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "symbol",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7566,
+     "is_unique": false,
+     "min_value": "$$$",
+     "max_value": "ΤDOGE",
+     "examples": [
+      "BTC",
+      "LTC",
+      "NMC",
+      "TRC",
+      "PPC"
+     ],
+     "top_values": [],
+     "description": "symbol of names of coins",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "status",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "active",
+     "max_value": "untracked",
+     "examples": [
+      "active",
+      "untracked",
+      "inactive",
+      "extinct"
+     ],
+     "top_values": [
+      [
+       "active",
+       6204
+      ],
+      [
+       "inactive",
+       1635
+      ],
+      [
+       "untracked",
+       1030
+      ],
+      [
+       "extinct",
+       58
+      ]
+     ],
+     "description": "status of coins",
+     "value_description": "commonsense reasoning:\r\n• active: this coin is active and available for transactions\r\n• untracked: this coin cannot be tracked\r\n• inactive: this coin is not available for transactions\r\n• extinct: this coin has been disappeared",
+     "notes": []
+    },
+    {
+     "name": "category",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0065,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "coin",
+     "max_value": "token",
+     "examples": [
+      "coin",
+      "token"
+     ],
+     "top_values": [
+      [
+       "token",
+       6228
+      ],
+      [
+       "coin",
+       2641
+      ]
+     ],
+     "description": "category of coins",
+     "value_description": "commonsense reasoning:\r\n• token: \r\n• coin:",
+     "notes": []
+    },
+    {
+     "name": "description",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0291,
+     "distinct_count": 8530,
+     "is_unique": false,
+     "min_value": " ## What is dForce?\\n\\n  dForce advocates for building an in...",
+     "max_value": "‘Foxy Equilibrium is a fully functional, play to earn NFT ga...",
+     "examples": [
+      "## **What Is Bitcoin (BTC)?**\\n\\nBitcoin is a decentralized ...",
+      "## What Is Litecoin (LTC)?\\n\\nLitecoin (LTC) is a cryptocurr...",
+      "Namecoin (NMC) is a cryptocurrency . Users are able to gener...",
+      "Terracoin (TRC) launched in 2012 with the aim to create an e...",
+      "Peercoin (PPC) is a cryptocurrency . Users are able to gener..."
+     ],
+     "top_values": [],
+     "description": "description of coins",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "subreddit",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.7042,
+     "distinct_count": 2431,
+     "is_unique": false,
+     "min_value": "01coin",
+     "max_value": "zootoken",
+     "examples": [
+      "bitcoin",
+      "litecoin",
+      "namecoin",
+      "terracoin",
+      "peercoin"
+     ],
+     "top_values": [],
+     "description": "name of coins on reddit",
+     "value_description": "",
+     "notes": [
+      "70% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "notice",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9771,
+     "distinct_count": 197,
+     "is_unique": false,
+     "min_value": "$HH has migrated to $MOVE (current page). For more informati...",
+     "max_value": "zzz.finance has migrated to [ZZZv2](https://coinmarketcap.co...",
+     "examples": [
+      "TIPS has undergone a [swap](https://bitcointalk.org/index.ph...",
+      "We have received reports that withdrawals for this asset are..."
+     ],
+     "top_values": [],
+     "description": "notice if any",
+     "value_description": "",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "tags",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.5795,
+     "distinct_count": 1276,
+     "is_unique": false,
+     "min_value": "adult",
+     "max_value": "zero-knowledge-proofs, quantum-resistant, scaling, sharding,...",
+     "examples": [
+      "mineable, pow, sha-256, store-of-value, state-channels, coin...",
+      "mineable, pow, scrypt, medium-of-exchange, binance-chain",
+      "mineable, pow, sha-256, platform",
+      "mineable, pow, sha-256, masternodes",
+      "mineable, hybrid-pow-pos, sha-256, medium-of-exchange, payme..."
+     ],
+     "top_values": [],
+     "description": "tags of coins",
+     "value_description": "",
+     "notes": [
+      "58% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "tag_names",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.5803,
+     "distinct_count": 1276,
+     "is_unique": false,
+     "min_value": "AI & Big Data",
+     "max_value": "Zero Knowledge Proofs, Quantum-Resistant, Scaling, Sharding,...",
+     "examples": [
+      "Mineable, PoW, SHA-256, Store of Value, State channels, Coin...",
+      "Mineable, PoW, Scrypt, Medium of Exchange, Binance Chain",
+      "Mineable, PoW, SHA-256, Platform",
+      "Mineable, PoW, SHA-256, Masternodes",
+      "Mineable, Hybrid - PoW & PoS, SHA-256, Medium of Exchange, P..."
+     ],
+     "top_values": [],
+     "description": "tag names of coins",
+     "value_description": "",
+     "notes": [
+      "58% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "website",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0472,
+     "distinct_count": 8169,
+     "is_unique": false,
+     "min_value": "Https://zper.io",
+     "max_value": "www.mechashiba.net",
+     "examples": [
+      "https://bitcoin.org/",
+      "https://litecoin.org/",
+      "https://www.namecoin.org/",
+      "http://www.terracoin.io/",
+      "http://www.peercoin.net"
+     ],
+     "top_values": [],
+     "description": "website introduction of coins",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "platform_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.3647,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": 512,
+     "max_value": 5805,
+     "examples": [],
+     "top_values": [
+      [
+       1027,
+       4108
+      ],
+      [
+       1839,
+       1292
+      ],
+      [
+       1958,
+       85
+      ],
+      [
+       3890,
+       36
+      ],
+      [
+       2502,
+       32
+      ],
+      [
+       1765,
+       31
+      ],
+      [
+       1376,
+       24
+      ],
+      [
+       5426,
+       12
+      ],
+      [
+       2606,
+       10
+      ],
+      [
+       4066,
+       9
+      ],
+      [
+       5805,
+       8
+      ],
+      [
+       5601,
+       5
+      ],
+      [
+       4256,
+       5
+      ],
+      [
+       3513,
+       3
+      ],
+      [
+       2087,
+       2
+      ],
+      [
+       2010,
+       2
+      ],
+      [
+       1274,
+       2
+      ],
+      [
+       512,
+       2
+      ],
+      [
+       5567,
+       1
+      ],
+      [
+       2570,
+       1
+      ],
+      [
+       2405,
+       1
+      ]
+     ],
+     "description": "platform id. id number of the platform",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "date_added",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1701,
+     "is_unique": false,
+     "min_value": "2013-04-28T00:00:00.000Z",
+     "max_value": "2021-07-31T00:00:00.000Z",
+     "examples": [
+      "2013-04-28T00:00:00.000Z",
+      "2013-05-03T00:00:00.000Z",
+      "2013-05-08T00:00:00.000Z",
+      "2013-05-09T00:00:00.000Z",
+      "2013-05-10T00:00:00.000Z"
+     ],
+     "top_values": [],
+     "description": "date added. the added date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "date_launched",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.8461,
+     "distinct_count": 461,
+     "is_unique": false,
+     "min_value": "1970-01-19T12:43:37.000Z",
+     "max_value": "2021-07-31T00:00:00.000Z",
+     "examples": [
+      "2018-01-16T00:00:00.000Z"
+     ],
+     "top_values": [],
+     "description": "date lanched. lanched date",
+     "value_description": "",
+     "notes": [
+      "85% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "name": "Bitcoin",
+     "slug": "bitcoin",
+     "symbol": "BTC",
+     "status": "active",
+     "category": "coin",
+     "description": "## **What Is Bitcoin (BTC)?**\\n\\nBitcoin is a decentralized ...",
+     "subreddit": "bitcoin",
+     "notice": null,
+     "tags": "mineable, pow, sha-256, store-of-value, state-channels, coin...",
+     "tag_names": "Mineable, PoW, SHA-256, Store of Value, State channels, Coin...",
+     "website": "https://bitcoin.org/",
+     "platform_id": null,
+     "date_added": "2013-04-28T00:00:00.000Z",
+     "date_launched": null
+    },
+    {
+     "id": 2,
+     "name": "Litecoin",
+     "slug": "litecoin",
+     "symbol": "LTC",
+     "status": "active",
+     "category": "coin",
+     "description": "## What Is Litecoin (LTC)?\\n\\nLitecoin (LTC) is a cryptocurr...",
+     "subreddit": "litecoin",
+     "notice": null,
+     "tags": "mineable, pow, scrypt, medium-of-exchange, binance-chain",
+     "tag_names": "Mineable, PoW, Scrypt, Medium of Exchange, Binance Chain",
+     "website": "https://litecoin.org/",
+     "platform_id": null,
+     "date_added": "2013-04-28T00:00:00.000Z",
+     "date_launched": null
+    },
+    {
+     "id": 3,
+     "name": "Namecoin",
+     "slug": "namecoin",
+     "symbol": "NMC",
+     "status": "active",
+     "category": "coin",
+     "description": "Namecoin (NMC) is a cryptocurrency . Users are able to gener...",
+     "subreddit": "namecoin",
+     "notice": null,
+     "tags": "mineable, pow, sha-256, platform",
+     "tag_names": "Mineable, PoW, SHA-256, Platform",
+     "website": "https://www.namecoin.org/",
+     "platform_id": null,
+     "date_added": "2013-04-28T00:00:00.000Z",
+     "date_launched": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "historical",
+   "row_count": 4441972,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 747,
+     "is_unique": false,
+     "min_value": "2013-04-28",
+     "max_value": "2015-05-14",
+     "examples": [
+      "2013-04-28",
+      "2013-04-29",
+      "2013-04-30",
+      "2013-05-01",
+      "2013-05-02"
+     ],
+     "top_values": [],
+     "description": "transaction date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "coin_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 923,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 930,
+     "examples": [
+      1,
+      2,
+      5,
+      3,
+      4
+     ],
+     "top_values": [],
+     "description": "id number referring to coins",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "cmc_rank",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 571,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 571,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "coinmarketcap rank. CMC rank is a metric used by CoinMarketCap to rank the relative popularity of different cryptocurrencies",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "market_cap",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0536,
+     "distinct_count": 189155,
+     "is_unique": false,
+     "min_value": 1.0717699277163481e-08,
+     "max_value": 13903428881.256073,
+     "examples": [
+      1488566971.9558687,
+      74637021.56790735,
+      7250186.647688276,
+      5995997.185385211,
+      1503099.4011388426
+     ],
+     "top_values": [],
+     "description": "Market capitalization refers to how much a coin is worth as determined by the coin market.",
+     "value_description": "dollars\nmarket cap (latest trade price x circulating supply).",
+     "notes": []
+    },
+    {
+     "name": "price",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 187547,
+     "is_unique": false,
+     "min_value": 1.2241900548e-10,
+     "max_value": 793273.0625,
+     "examples": [
+      134.210021972656,
+      4.34840488433838,
+      0.386524856090546,
+      1.10723268985748,
+      0.646892309188843
+     ],
+     "top_values": [],
+     "description": "how much is a coin",
+     "value_description": "dollars",
+     "notes": []
+    },
+    {
+     "name": "open",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0196,
+     "distinct_count": 175199,
+     "is_unique": false,
+     "min_value": 1.000000013351432e-10,
+     "max_value": 3337760.0,
+     "examples": [
+      134.44400024414062,
+      4.366759777069092,
+      0.3871999979019165,
+      1.103790044784546,
+      0.6493669748306274
+     ],
+     "top_values": [],
+     "description": "the price at which a cryptocurrency (coin) opens at a time period",
+     "value_description": "dollars\ncommonsense reasoning:\nif null or empty, it means this coins has not opened yet today.",
+     "notes": []
+    },
+    {
+     "name": "high",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0196,
+     "distinct_count": 185756,
+     "is_unique": false,
+     "min_value": 1.3342700555529774e-10,
+     "max_value": 5819400.0,
+     "examples": [
+      147.48800659179688,
+      4.573599815368652,
+      0.4247649908065796,
+      1.3357700109481812,
+      0.7197409868240356
+     ],
+     "top_values": [],
+     "description": "highest price",
+     "value_description": "dollars",
+     "notes": []
+    },
+    {
+     "name": "low",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0196,
+     "distinct_count": 184060,
+     "is_unique": false,
+     "min_value": 1.1115899867242263e-10,
+     "max_value": 732467.0,
+     "examples": [
+      134.0,
+      4.225639820098877,
+      0.37790799140930176,
+      1.1027400493621826,
+      0.6421470046043396
+     ],
+     "top_values": [],
+     "description": "lowest price",
+     "value_description": "commonsense reasoning:\n1.\tIt's the best time to purchase this coin\n2.\tusers can make the max profit today by computation: high - low",
+     "notes": []
+    },
+    {
+     "name": "close",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0196,
+     "distinct_count": 174891,
+     "is_unique": false,
+     "min_value": 1.000000013351432e-10,
+     "max_value": 785399.0,
+     "examples": [
+      144.5399932861328,
+      4.383900165557861,
+      0.4088610112667084,
+      1.328320026397705,
+      0.7096909880638123
+     ],
+     "top_values": [],
+     "description": "the price at which a cryptocurrency (coin) closes at a time period, for example at the end of the day.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "time_high",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0196,
+     "distinct_count": 38124,
+     "is_unique": false,
+     "min_value": "00:00:00",
+     "max_value": "23:59:59",
+     "examples": [
+      "13:15:01",
+      "13:15:03",
+      "12:45:02",
+      "13:15:02",
+      "16:05:14"
+     ],
+     "top_values": [],
+     "description": "the time to achieve highest price",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "time_low",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0196,
+     "distinct_count": 38036,
+     "is_unique": false,
+     "min_value": "00:00:00",
+     "max_value": "23:59:59",
+     "examples": [
+      "05:20:01",
+      "19:25:02",
+      "04:05:04",
+      "00:05:02",
+      "02:20:02"
+     ],
+     "top_values": [],
+     "description": "the time to achieve lowest price",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "volume_24h",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 191004,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 126314008.0,
+     "examples": [
+      0.0
+     ],
+     "top_values": [],
+     "description": "the total value of cryptocurrency coined traded in the past 24 hours.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "percent_change_1h",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0068,
+     "distinct_count": 147818,
+     "is_unique": false,
+     "min_value": -99.8425,
+     "max_value": 1132740.0,
+     "examples": [
+      0.639231,
+      0.799273,
+      -0.934763,
+      -0.0505028,
+      0.609159
+     ],
+     "top_values": [],
+     "description": "percent change 1h. price percentage change in the first hour",
+     "value_description": "The change is the difference (in percent) between the price now compared to the price around this time 1 hours ago",
+     "notes": []
+    },
+    {
+     "name": "percent_change_24h",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0337,
+     "distinct_count": 178555,
+     "is_unique": false,
+     "min_value": -99.9985,
+     "max_value": 4925830.0,
+     "examples": [
+      7.63553,
+      0.920718,
+      18.558,
+      9.58407,
+      14.6398
+     ],
+     "top_values": [],
+     "description": "percent change 24h. price percentage change in the first 24 hours",
+     "value_description": "The change is the difference (in percent) between the price now compared to the price around this time 24 hours ago",
+     "notes": []
+    },
+    {
+     "name": "percent_change_7d",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0621,
+     "distinct_count": 176918,
+     "is_unique": false,
+     "min_value": -99.9993,
+     "max_value": 5643300.0,
+     "examples": [
+      -13.809,
+      -16.7201,
+      1.64395,
+      -22.2015,
+      -12.337
+     ],
+     "top_values": [],
+     "description": "percent change 7d. price percentage change in the first 7 days",
+     "value_description": "The change is the difference (in percent) between the price now compared to the price around this time 7 days ago",
+     "notes": []
+    },
+    {
+     "name": "circulating_supply",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0536,
+     "distinct_count": 118188,
+     "is_unique": false,
+     "min_value": 9.9999999747524e-07,
+     "max_value": 533671182336.0,
+     "examples": [
+      11091325.0,
+      17164230.0,
+      18757362.0,
+      5415300.0,
+      2323569.75
+     ],
+     "top_values": [],
+     "description": "circulating supply. the best approximation of the number of coins that are circulating in the market and in the general public's hands",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "total_supply",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0536,
+     "distinct_count": 117558,
+     "is_unique": false,
+     "min_value": 9.9999999747524e-07,
+     "max_value": 2138130087936.0,
+     "examples": [
+      11091325.0,
+      17164230.0,
+      18757362.0,
+      5415300.0,
+      2323569.75
+     ],
+     "top_values": [],
+     "description": "total supply. the total amount of coins in existence right now",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "max_supply",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.8679,
+     "distinct_count": 60,
+     "is_unique": false,
+     "min_value": 300000.0,
+     "max_value": 184470000000.0,
+     "examples": [
+      21000000.0,
+      84000000.0,
+      42000000.0,
+      336000000.0
+     ],
+     "top_values": [],
+     "description": "Max Supply is the best approximation of the maximum amount of coins that will ever exist in the lifetime of the cryptocurrency.",
+     "value_description": "commonsense reasoning:\nthe number of coins verifiably burned so far = max_supply - total_supply",
+     "notes": [
+      "87% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "num_market_pairs",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "number market pairs. number of market pairs across all exchanges trading each currency",
+     "value_description": "commonsense reasoning:\nactive coins that have gone inactive can easily be identified as having a num_market_pairs of 0",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "date": "2013-04-28",
+     "coin_id": 1,
+     "cmc_rank": 1,
+     "market_cap": 1488566971.9558687,
+     "price": 134.210021972656,
+     "open": null,
+     "high": null,
+     "low": null,
+     "close": null,
+     "time_high": null,
+     "time_low": null,
+     "volume_24h": 0.0,
+     "percent_change_1h": 0.639231,
+     "percent_change_24h": null,
+     "percent_change_7d": null,
+     "circulating_supply": 11091325.0,
+     "total_supply": 11091325.0,
+     "max_supply": 21000000.0,
+     "num_market_pairs": null
+    },
+    {
+     "date": "2013-04-28",
+     "coin_id": 2,
+     "cmc_rank": 2,
+     "market_cap": 74637021.56790735,
+     "price": 4.34840488433838,
+     "open": null,
+     "high": null,
+     "low": null,
+     "close": null,
+     "time_high": null,
+     "time_low": null,
+     "volume_24h": 0.0,
+     "percent_change_1h": 0.799273,
+     "percent_change_24h": null,
+     "percent_change_7d": null,
+     "circulating_supply": 17164230.0,
+     "total_supply": 17164230.0,
+     "max_supply": 84000000.0,
+     "num_market_pairs": null
+    },
+    {
+     "date": "2013-04-28",
+     "coin_id": 5,
+     "cmc_rank": 3,
+     "market_cap": 7250186.647688276,
+     "price": 0.386524856090546,
+     "open": null,
+     "high": null,
+     "low": null,
+     "close": null,
+     "time_high": null,
+     "time_low": null,
+     "volume_24h": 0.0,
+     "percent_change_1h": -0.934763,
+     "percent_change_24h": null,
+     "percent_change_7d": null,
+     "circulating_supply": 18757362.0,
+     "total_supply": 18757362.0,
+     "max_supply": null,
+     "num_market_pairs": null
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 4,441,972 rows",
+    "no declared primary key; beware duplicate rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "historical",
+   "from_column": "coin_id",
+   "to_table": "coins",
+   "to_column": "id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

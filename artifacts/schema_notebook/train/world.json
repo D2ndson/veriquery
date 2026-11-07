@@ -1,0 +1,975 @@
+{
+ "db_id": "world",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/world/world.sqlite",
+ "fingerprint": "253952-1793993033351710354-v1.0",
+ "created_at": "2026-11-06T19:25:25+00:00",
+ "profile_seconds": 0.014,
+ "tables": [
+  {
+   "name": "City",
+   "row_count": 4079,
+   "stats_rows": 4079,
+   "columns": [
+    {
+     "name": "ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4079,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 4079,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique id for the city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4001,
+     "is_unique": false,
+     "min_value": "A Coruña (La Coruña)",
+     "max_value": "Šumen",
+     "examples": [
+      "Kabul",
+      "Qandahar",
+      "Herat",
+      "Mazar-e-Sharif",
+      "Amsterdam"
+     ],
+     "top_values": [],
+     "description": "the name of the city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CountryCode",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 232,
+     "is_unique": false,
+     "min_value": "ABW",
+     "max_value": "ZWE",
+     "examples": [
+      "AFG",
+      "NLD",
+      "ANT",
+      "ALB",
+      "DZA"
+     ],
+     "top_values": [],
+     "description": "the country code of the country that the city is belonged",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "District",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1367,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "–",
+     "examples": [
+      "Kabol",
+      "Qandahar",
+      "Herat",
+      "Balkh",
+      "Noord-Holland"
+     ],
+     "top_values": [],
+     "description": "the district where the city locates",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3897,
+     "is_unique": false,
+     "min_value": 42,
+     "max_value": 10500000,
+     "examples": [
+      1780000,
+      237500,
+      186800,
+      127800,
+      731200
+     ],
+     "top_values": [],
+     "description": "the number of the population in the area",
+     "value_description": "commonsense evidence:\n\nmore population --> more crowded",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "ID"
+   ],
+   "sample_rows": [
+    {
+     "ID": 1,
+     "Name": "Kabul",
+     "CountryCode": "AFG",
+     "District": "Kabol",
+     "Population": 1780000
+    },
+    {
+     "ID": 2,
+     "Name": "Qandahar",
+     "CountryCode": "AFG",
+     "District": "Qandahar",
+     "Population": 237500
+    },
+    {
+     "ID": 3,
+     "Name": "Herat",
+     "CountryCode": "AFG",
+     "District": "Herat",
+     "Population": 186800
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Country",
+   "row_count": 239,
+   "stats_rows": 239,
+   "columns": [
+    {
+     "name": "Code",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 239,
+     "is_unique": true,
+     "min_value": "ABW",
+     "max_value": "ZWE",
+     "examples": [
+      "ABW",
+      "AFG",
+      "AGO",
+      "AIA",
+      "ALB"
+     ],
+     "top_values": [],
+     "description": "the unique country code of the country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 239,
+     "is_unique": true,
+     "min_value": "Afghanistan",
+     "max_value": "Zimbabwe",
+     "examples": [
+      "Aruba",
+      "Afghanistan",
+      "Angola",
+      "Anguilla",
+      "Albania"
+     ],
+     "top_values": [],
+     "description": "the country name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Continent",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "Africa",
+     "max_value": "South America",
+     "examples": [
+      "North America",
+      "Asia",
+      "Africa",
+      "Europe",
+      "South America"
+     ],
+     "top_values": [
+      [
+       "Africa",
+       58
+      ],
+      [
+       "Asia",
+       51
+      ],
+      [
+       "Europe",
+       46
+      ],
+      [
+       "North America",
+       37
+      ],
+      [
+       "Oceania",
+       28
+      ],
+      [
+       "South America",
+       14
+      ],
+      [
+       "Antarctica",
+       5
+      ]
+     ],
+     "description": "the continent that the country locates",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 25,
+     "is_unique": false,
+     "min_value": "Antarctica",
+     "max_value": "Western Europe",
+     "examples": [
+      "Caribbean",
+      "Southern and Central Asia",
+      "Central Africa",
+      "Southern Europe",
+      "Middle East"
+     ],
+     "top_values": [
+      [
+       "Caribbean",
+       24
+      ],
+      [
+       "Eastern Africa",
+       20
+      ],
+      [
+       "Middle East",
+       18
+      ],
+      [
+       "Western Africa",
+       17
+      ],
+      [
+       "Southern Europe",
+       15
+      ],
+      [
+       "Southern and Central Asia",
+       14
+      ],
+      [
+       "South America",
+       14
+      ],
+      [
+       "Southeast Asia",
+       11
+      ],
+      [
+       "Polynesia",
+       10
+      ],
+      [
+       "Eastern Europe",
+       10
+      ],
+      [
+       "Western Europe",
+       9
+      ],
+      [
+       "Central Africa",
+       9
+      ],
+      [
+       "Eastern Asia",
+       8
+      ],
+      [
+       "Central America",
+       8
+      ],
+      [
+       "Northern Africa",
+       7
+      ],
+      [
+       "Nordic Countries",
+       7
+      ],
+      [
+       "Micronesia",
+       7
+      ],
+      [
+       "Southern Africa",
+       5
+      ],
+      [
+       "North America",
+       5
+      ],
+      [
+       "Melanesia",
+       5
+      ],
+      [
+       "Australia and New Zealand",
+       5
+      ],
+      [
+       "Antarctica",
+       5
+      ],
+      [
+       "Baltic Countries",
+       3
+      ],
+      [
+       "British Islands",
+       2
+      ],
+      [
+       "Micronesia/Caribbean",
+       1
+      ]
+     ],
+     "description": "the region that the country locates",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "SurfaceArea",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 238,
+     "is_unique": false,
+     "min_value": 0.4,
+     "max_value": 17075400.0,
+     "examples": [
+      193.0,
+      652090.0,
+      1246700.0,
+      96.0,
+      28748.0
+     ],
+     "top_values": [],
+     "description": "the surface area of the country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "IndepYear",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1967,
+     "distinct_count": 88,
+     "is_unique": false,
+     "min_value": -1523,
+     "max_value": 1994,
+     "examples": [
+      1919,
+      1975,
+      1912,
+      1278,
+      1971
+     ],
+     "top_values": [],
+     "description": "Independence Year. the year that the country declared independence",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 226,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1277558000,
+     "examples": [
+      103000,
+      22720000,
+      12878000,
+      8000,
+      3401200
+     ],
+     "top_values": [],
+     "description": "the number of the population in the area",
+     "value_description": "commonsense evidence:\r\n\r\nmore population --> more crowded",
+     "notes": []
+    },
+    {
+     "name": "LifeExpectancy",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0711,
+     "distinct_count": 160,
+     "is_unique": false,
+     "min_value": 37.2,
+     "max_value": 83.5,
+     "examples": [
+      78.4,
+      45.9,
+      38.3,
+      76.1,
+      71.6
+     ],
+     "top_values": [],
+     "description": "the life expectancy at birth of the country",
+     "value_description": "commonsense evidence:\r\n\r\n Life expectancy at birth is defined as how long, on average, a newborn can expect to live if current death rates do not change",
+     "notes": []
+    },
+    {
+     "name": "GNP",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 214,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 8510700.0,
+     "examples": [
+      828.0,
+      5976.0,
+      6648.0,
+      63.2,
+      3205.0
+     ],
+     "top_values": [],
+     "description": "Gross National Product. the GNP of the country",
+     "value_description": "commonsense evidence:\r\n\r\n GNP measures the total monetary value of the output produced by a country's residents.",
+     "notes": []
+    },
+    {
+     "name": "GNPOld",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2552,
+     "distinct_count": 178,
+     "is_unique": true,
+     "min_value": 157.0,
+     "max_value": 8110900.0,
+     "examples": [
+      793.0,
+      7984.0,
+      2500.0,
+      36846.0,
+      323310.0
+     ],
+     "top_values": [],
+     "description": "Gross National Product Old. Gross national product - old value",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LocalName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 239,
+     "is_unique": true,
+     "min_value": "Afganistan/Afqanestan",
+     "max_value": "–",
+     "examples": [
+      "Aruba",
+      "Afganistan/Afqanestan",
+      "Angola",
+      "Anguilla",
+      "Shqipëria"
+     ],
+     "top_values": [],
+     "description": "The country's local name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "GovernmentForm",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 35,
+     "is_unique": false,
+     "min_value": "Administrated by the UN",
+     "max_value": "US Territory",
+     "examples": [
+      "Nonmetropolitan Territory of The Netherlands",
+      "Islamic Emirate",
+      "Republic",
+      "Dependent Territory of the UK",
+      "Parliamentary Coprincipality"
+     ],
+     "top_values": [
+      [
+       "Republic",
+       122
+      ],
+      [
+       "Constitutional Monarchy",
+       29
+      ],
+      [
+       "Federal Republic",
+       15
+      ],
+      [
+       "Dependent Territory of the UK",
+       12
+      ],
+      [
+       "Monarchy",
+       5
+      ],
+      [
+       "Territory of Australia",
+       4
+      ],
+      [
+       "Overseas Department of France",
+       4
+      ],
+      [
+       "Nonmetropolitan Territory of France",
+       4
+      ],
+      [
+       "Constitutional Monarchy, Federation",
+       4
+      ],
+      [
+       "US Territory",
+       3
+      ],
+      [
+       "Socialistic Republic",
+       3
+      ],
+      [
+       "Nonmetropolitan Territory of New Zealand",
+       3
+      ],
+      [
+       "Territorial Collectivity of France",
+       2
+      ],
+      [
+       "Special Administrative Region of China",
+       2
+      ],
+      [
+       "Part of Denmark",
+       2
+      ],
+      [
+       "Nonmetropolitan Territory of The Netherlands",
+       2
+      ],
+      [
+       "Monarchy (Sultanate)",
+       2
+      ],
+      [
+       "Islamic Republic",
+       2
+      ],
+      [
+       "Dependent Territory of Norway",
+       2
+      ],
+      [
+       "Commonwealth of the US",
+       2
+      ],
+      [
+       "Socialistic State",
+       1
+      ],
+      [
+       "People\\\"sRepublic",
+       1
+      ],
+      [
+       "Parliamentary Coprincipality",
+       1
+      ],
+      [
+       "Parlementary Monarchy",
+       1
+      ],
+      [
+       "Occupied by Marocco",
+       1
+      ],
+      [
+       "Monarchy (Emirate)",
+       1
+      ],
+      [
+       "Islamic Emirate",
+       1
+      ],
+      [
+       "Independent Church State",
+       1
+      ],
+      [
+       "Federation",
+       1
+      ],
+      [
+       "Emirate Federation",
+       1
+      ],
+      [
+       "Dependent Territory of the US",
+       1
+      ],
+      [
+       "Constitutional Monarchy (Emirate)",
+       1
+      ],
+      [
+       "Co-administrated",
+       1
+      ],
+      [
+       "Autonomous Area",
+       1
+      ],
+      [
+       "Administrated by the UN",
+       1
+      ]
+     ],
+     "description": "Government Form. The country's goverment form",
+     "value_description": "commonsense evidence:\r\n\r\nRepublic: governmentform contains \"Republic\"",
+     "notes": []
+    },
+    {
+     "name": "HeadOfState",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0042,
+     "distinct_count": 179,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Štipe Mesic",
+     "examples": [
+      "Beatrix",
+      "Mohammad Omar",
+      "José Eduardo dos Santos",
+      "Elisabeth II",
+      "Rexhep Mejdani"
+     ],
+     "top_values": [],
+     "description": "The head of state full name.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Capital",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0293,
+     "distinct_count": 232,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 4074,
+     "examples": [
+      129,
+      1,
+      56,
+      62,
+      34
+     ],
+     "top_values": [],
+     "description": "The country's capital",
+     "value_description": "commonsense evidence:\r\n\r\nif the capital is null, it means this country doesn't have a city where a region's government is located",
+     "notes": []
+    },
+    {
+     "name": "Code2",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 239,
+     "is_unique": true,
+     "min_value": "AD",
+     "max_value": "ZW",
+     "examples": [
+      "AW",
+      "AF",
+      "AO",
+      "AI",
+      "AL"
+     ],
+     "top_values": [],
+     "description": "The second country code.",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Code"
+   ],
+   "sample_rows": [
+    {
+     "Code": "ABW",
+     "Name": "Aruba",
+     "Continent": "North America",
+     "Region": "Caribbean",
+     "SurfaceArea": 193.0,
+     "IndepYear": null,
+     "Population": 103000,
+     "LifeExpectancy": 78.4,
+     "GNP": 828.0,
+     "GNPOld": 793.0,
+     "LocalName": "Aruba",
+     "GovernmentForm": "Nonmetropolitan Territory of The Netherlands",
+     "HeadOfState": "Beatrix",
+     "Capital": 129,
+     "Code2": "AW"
+    },
+    {
+     "Code": "AFG",
+     "Name": "Afghanistan",
+     "Continent": "Asia",
+     "Region": "Southern and Central Asia",
+     "SurfaceArea": 652090.0,
+     "IndepYear": 1919,
+     "Population": 22720000,
+     "LifeExpectancy": 45.9,
+     "GNP": 5976.0,
+     "GNPOld": null,
+     "LocalName": "Afganistan/Afqanestan",
+     "GovernmentForm": "Islamic Emirate",
+     "HeadOfState": "Mohammad Omar",
+     "Capital": 1,
+     "Code2": "AF"
+    },
+    {
+     "Code": "AGO",
+     "Name": "Angola",
+     "Continent": "Africa",
+     "Region": "Central Africa",
+     "SurfaceArea": 1246700.0,
+     "IndepYear": 1975,
+     "Population": 12878000,
+     "LifeExpectancy": 38.3,
+     "GNP": 6648.0,
+     "GNPOld": 7984.0,
+     "LocalName": "Angola",
+     "GovernmentForm": "Republic",
+     "HeadOfState": "José Eduardo dos Santos",
+     "Capital": 56,
+     "Code2": "AO"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "CountryLanguage",
+   "row_count": 984,
+   "stats_rows": 984,
+   "columns": [
+    {
+     "name": "CountryCode",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 233,
+     "is_unique": false,
+     "min_value": "ABW",
+     "max_value": "ZWE",
+     "examples": [
+      "ABW",
+      "AFG",
+      "AGO",
+      "AIA",
+      "ALB"
+     ],
+     "top_values": [],
+     "description": "Country Code. The unique code for country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Language",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 457,
+     "is_unique": false,
+     "min_value": "Abhyasi",
+     "max_value": "[South]Mande",
+     "examples": [
+      "Dutch",
+      "English",
+      "Papiamento",
+      "Spanish",
+      "Balochi"
+     ],
+     "top_values": [],
+     "description": "Country language",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "IsOfficial",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "T",
+     "examples": [
+      "T",
+      "F"
+     ],
+     "top_values": [
+      [
+       "F",
+       746
+      ],
+      [
+       "T",
+       238
+      ]
+     ],
+     "description": "Information on whether the language is official in a given country",
+     "value_description": "T / F",
+     "notes": []
+    },
+    {
+     "name": "Percentage",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 357,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 100.0,
+     "examples": [
+      5.3,
+      9.5,
+      76.7,
+      7.4,
+      0.9
+     ],
+     "top_values": [],
+     "description": "Percentage of language use",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "CountryCode",
+    "Language"
+   ],
+   "sample_rows": [
+    {
+     "CountryCode": "ABW",
+     "Language": "Dutch",
+     "IsOfficial": "T",
+     "Percentage": 5.3
+    },
+    {
+     "CountryCode": "ABW",
+     "Language": "English",
+     "IsOfficial": "F",
+     "Percentage": 9.5
+    },
+    {
+     "CountryCode": "ABW",
+     "Language": "Papiamento",
+     "IsOfficial": "F",
+     "Percentage": 76.7
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "City",
+   "from_column": "CountryCode",
+   "to_table": "Country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "CountryLanguage",
+   "from_column": "CountryCode",
+   "to_table": "Country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "City",
+   "from_column": "CountryCode",
+   "to_table": "CountryLanguage",
+   "to_column": "CountryCode",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

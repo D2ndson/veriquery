@@ -1,0 +1,2996 @@
+{
+ "db_id": "retail_world",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/retail_world/retail_world.sqlite",
+ "fingerprint": "65536-1793993065756238482-v1.0",
+ "created_at": "2026-11-06T19:25:08+00:00",
+ "profile_seconds": 0.013,
+ "tables": [
+  {
+   "name": "Categories",
+   "row_count": 8,
+   "stats_rows": 8,
+   "columns": [
+    {
+     "name": "CategoryID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 8,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "Category ID. the unique id for the category",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CategoryName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": true,
+     "min_value": "Beverages",
+     "max_value": "Seafood",
+     "examples": [
+      "Beverages",
+      "Condiments",
+      "Confections",
+      "Dairy Products",
+      "Grains/Cereals"
+     ],
+     "top_values": [
+      [
+       "Seafood",
+       1
+      ],
+      [
+       "Produce",
+       1
+      ],
+      [
+       "Meat/Poultry",
+       1
+      ],
+      [
+       "Grains/Cereals",
+       1
+      ],
+      [
+       "Dairy Products",
+       1
+      ],
+      [
+       "Confections",
+       1
+      ],
+      [
+       "Condiments",
+       1
+      ],
+      [
+       "Beverages",
+       1
+      ]
+     ],
+     "description": "the category name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Description",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": true,
+     "min_value": "Breads, crackers, pasta, and cereal",
+     "max_value": "Sweet and savory sauces, relishes, spreads, and seasonings",
+     "examples": [
+      "Soft drinks, coffees, teas, beers, and ales",
+      "Sweet and savory sauces, relishes, spreads, and seasonings",
+      "Desserts, candies, and sweet breads",
+      "Cheeses",
+      "Breads, crackers, pasta, and cereal"
+     ],
+     "top_values": [
+      [
+       "Sweet and savory sauces, relishes, spreads, and seasonings",
+       1
+      ],
+      [
+       "Soft drinks, coffees, teas, beers, and ales",
+       1
+      ],
+      [
+       "Seaweed and fish",
+       1
+      ],
+      [
+       "Prepared meats",
+       1
+      ],
+      [
+       "Dried fruit and bean curd",
+       1
+      ],
+      [
+       "Desserts, candies, and sweet breads",
+       1
+      ],
+      [
+       "Cheeses",
+       1
+      ],
+      [
+       "Breads, crackers, pasta, and cereal",
+       1
+      ]
+     ],
+     "description": "the detailed description of the category",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "CategoryID"
+   ],
+   "sample_rows": [
+    {
+     "CategoryID": 1,
+     "CategoryName": "Beverages",
+     "Description": "Soft drinks, coffees, teas, beers, and ales"
+    },
+    {
+     "CategoryID": 2,
+     "CategoryName": "Condiments",
+     "Description": "Sweet and savory sauces, relishes, spreads, and seasonings"
+    },
+    {
+     "CategoryID": 3,
+     "CategoryName": "Confections",
+     "Description": "Desserts, candies, and sweet breads"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Customers",
+   "row_count": 91,
+   "stats_rows": 91,
+   "columns": [
+    {
+     "name": "CustomerID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 91,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 91,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "Customer ID. the unique id for customers",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CustomerName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 91,
+     "is_unique": true,
+     "min_value": "Alfreds Futterkiste",
+     "max_value": "Wolski",
+     "examples": [
+      "Alfreds Futterkiste",
+      "Ana Trujillo Emparedados y helados",
+      "Antonio Moreno Taquería",
+      "Around the Horn",
+      "Berglunds snabbköp"
+     ],
+     "top_values": [],
+     "description": "the customer name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ContactName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 91,
+     "is_unique": true,
+     "min_value": "Alejandra Camino",
+     "max_value": "Zbyszek",
+     "examples": [
+      "Maria Anders",
+      "Ana Trujillo",
+      "Antonio Moreno",
+      "Thomas Hardy",
+      "Christina Berglund"
+     ],
+     "top_values": [],
+     "description": "Contact Name. the contact person's name representing the company",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Address",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 91,
+     "is_unique": true,
+     "min_value": "1 rue Alsace-Lorraine",
+     "max_value": "Åkergatan 24",
+     "examples": [
+      "Obere Str. 57",
+      "Avda. de la Constitución 2222",
+      "Mataderos 2312",
+      "120 Hanover Sq.",
+      "Berguvsvägen 8"
+     ],
+     "top_values": [],
+     "description": "the address of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "City",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 69,
+     "is_unique": false,
+     "min_value": "Aachen",
+     "max_value": "Århus",
+     "examples": [
+      "Berlin",
+      "México D.F.",
+      "London",
+      "Luleå",
+      "Mannheim"
+     ],
+     "top_values": [],
+     "description": "the city where the customer is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "PostalCode",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 86,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "WX3 6FW",
+     "examples": [
+      "12209",
+      "5021",
+      "5023",
+      "WA1 1DP",
+      "S-958 22"
+     ],
+     "top_values": [],
+     "description": "the postal code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": "Argentina",
+     "max_value": "Venezuela",
+     "examples": [
+      "Germany",
+      "Mexico",
+      "UK",
+      "Sweden",
+      "France"
+     ],
+     "top_values": [
+      [
+       "USA",
+       13
+      ],
+      [
+       "Germany",
+       11
+      ],
+      [
+       "France",
+       11
+      ],
+      [
+       "Brazil",
+       9
+      ],
+      [
+       "UK",
+       7
+      ],
+      [
+       "Spain",
+       5
+      ],
+      [
+       "Mexico",
+       5
+      ],
+      [
+       "Venezuela",
+       4
+      ],
+      [
+       "Italy",
+       3
+      ],
+      [
+       "Canada",
+       3
+      ],
+      [
+       "Argentina",
+       3
+      ],
+      [
+       "Switzerland",
+       2
+      ],
+      [
+       "Sweden",
+       2
+      ],
+      [
+       "Portugal",
+       2
+      ],
+      [
+       "Finland",
+       2
+      ],
+      [
+       "Denmark",
+       2
+      ],
+      [
+       "Belgium",
+       2
+      ],
+      [
+       "Austria",
+       2
+      ],
+      [
+       "Poland",
+       1
+      ],
+      [
+       "Norway",
+       1
+      ],
+      [
+       "Ireland",
+       1
+      ]
+     ],
+     "description": "the country",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "CustomerID"
+   ],
+   "sample_rows": [
+    {
+     "CustomerID": 1,
+     "CustomerName": "Alfreds Futterkiste",
+     "ContactName": "Maria Anders",
+     "Address": "Obere Str. 57",
+     "City": "Berlin",
+     "PostalCode": "12209",
+     "Country": "Germany"
+    },
+    {
+     "CustomerID": 2,
+     "CustomerName": "Ana Trujillo Emparedados y helados",
+     "ContactName": "Ana Trujillo",
+     "Address": "Avda. de la Constitución 2222",
+     "City": "México D.F.",
+     "PostalCode": "5021",
+     "Country": "Mexico"
+    },
+    {
+     "CustomerID": 3,
+     "CustomerName": "Antonio Moreno Taquería",
+     "ContactName": "Antonio Moreno",
+     "Address": "Mataderos 2312",
+     "City": "México D.F.",
+     "PostalCode": "5023",
+     "Country": "Mexico"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Employees",
+   "row_count": 10,
+   "stats_rows": 10,
+   "columns": [
+    {
+     "name": "EmployeeID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 10,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "Employee ID. the unique id for employees",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LastName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": "Buchanan",
+     "max_value": "West",
+     "examples": [
+      "Davolio",
+      "Fuller",
+      "Leverling",
+      "Peacock",
+      "Buchanan"
+     ],
+     "top_values": [
+      [
+       "West",
+       1
+      ],
+      [
+       "Suyama",
+       1
+      ],
+      [
+       "Peacock",
+       1
+      ],
+      [
+       "Leverling",
+       1
+      ],
+      [
+       "King",
+       1
+      ],
+      [
+       "Fuller",
+       1
+      ],
+      [
+       "Dodsworth",
+       1
+      ],
+      [
+       "Davolio",
+       1
+      ],
+      [
+       "Callahan",
+       1
+      ],
+      [
+       "Buchanan",
+       1
+      ]
+     ],
+     "description": "the employee's last name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "FirstName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": "Adam",
+     "max_value": "Steven",
+     "examples": [
+      "Nancy",
+      "Andrew",
+      "Janet",
+      "Margaret",
+      "Steven"
+     ],
+     "top_values": [
+      [
+       "Steven",
+       1
+      ],
+      [
+       "Robert",
+       1
+      ],
+      [
+       "Nancy",
+       1
+      ],
+      [
+       "Michael",
+       1
+      ],
+      [
+       "Margaret",
+       1
+      ],
+      [
+       "Laura",
+       1
+      ],
+      [
+       "Janet",
+       1
+      ],
+      [
+       "Anne",
+       1
+      ],
+      [
+       "Andrew",
+       1
+      ],
+      [
+       "Adam",
+       1
+      ]
+     ],
+     "description": "the employee's first name",
+     "value_description": "commonsense evidence:\nthe employee's full name is 'first_name last_name'.",
+     "notes": []
+    },
+    {
+     "name": "BirthDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": "1928-09-19",
+     "max_value": "1969-07-02",
+     "examples": [
+      "1968-12-08",
+      "1952-02-19",
+      "1963-08-30",
+      "1958-09-19",
+      "1955-03-04"
+     ],
+     "top_values": [
+      [
+       "1969-07-02",
+       1
+      ],
+      [
+       "1968-12-08",
+       1
+      ],
+      [
+       "1963-08-30",
+       1
+      ],
+      [
+       "1963-07-02",
+       1
+      ],
+      [
+       "1960-05-29",
+       1
+      ],
+      [
+       "1958-09-19",
+       1
+      ],
+      [
+       "1958-01-09",
+       1
+      ],
+      [
+       "1955-03-04",
+       1
+      ],
+      [
+       "1952-02-19",
+       1
+      ],
+      [
+       "1928-09-19",
+       1
+      ]
+     ],
+     "description": "the birth date of the employee",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Photo",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": "EmpID1.pic",
+     "max_value": "EmpID9.pic",
+     "examples": [
+      "EmpID1.pic",
+      "EmpID2.pic",
+      "EmpID3.pic",
+      "EmpID4.pic",
+      "EmpID5.pic"
+     ],
+     "top_values": [
+      [
+       "EmpID9.pic",
+       1
+      ],
+      [
+       "EmpID8.pic",
+       1
+      ],
+      [
+       "EmpID7.pic",
+       1
+      ],
+      [
+       "EmpID6.pic",
+       1
+      ],
+      [
+       "EmpID5.pic",
+       1
+      ],
+      [
+       "EmpID4.pic",
+       1
+      ],
+      [
+       "EmpID3.pic",
+       1
+      ],
+      [
+       "EmpID2.pic",
+       1
+      ],
+      [
+       "EmpID10.pic",
+       1
+      ],
+      [
+       "EmpID1.pic",
+       1
+      ]
+     ],
+     "description": "the photo of the employee",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Notes",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": "An old chum.",
+     "max_value": "Steven Buchanan graduated from St. Andrews University, Scotl...",
+     "examples": [
+      "Education includes a BA in psychology from Colorado State Un...",
+      "Andrew received his BTS commercial and a Ph.D. in internatio...",
+      "Janet has a BS degree in chemistry from Boston College). She...",
+      "Margaret holds a BA in English literature from Concordia Col...",
+      "Steven Buchanan graduated from St. Andrews University, Scotl..."
+     ],
+     "top_values": [
+      [
+       "Steven Buchanan graduated from St. Andrews University, Scotl...",
+       1
+      ],
+      [
+       "Robert King served in the Peace Corps and traveled extensive...",
+       1
+      ],
+      [
+       "Michael is a graduate of Sussex University (MA, economics) a...",
+       1
+      ],
+      [
+       "Margaret holds a BA in English literature from Concordia Col...",
+       1
+      ],
+      [
+       "Laura received a BA in psychology from the University of Was...",
+       1
+      ],
+      [
+       "Janet has a BS degree in chemistry from Boston College). She...",
+       1
+      ],
+      [
+       "Education includes a BA in psychology from Colorado State Un...",
+       1
+      ],
+      [
+       "Anne has a BA degree in English from St. Lawrence College. S...",
+       1
+      ],
+      [
+       "Andrew received his BTS commercial and a Ph.D. in internatio...",
+       1
+      ],
+      [
+       "An old chum.",
+       1
+      ]
+     ],
+     "description": "some additional information of the employee",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "EmployeeID"
+   ],
+   "sample_rows": [
+    {
+     "EmployeeID": 1,
+     "LastName": "Davolio",
+     "FirstName": "Nancy",
+     "BirthDate": "1968-12-08",
+     "Photo": "EmpID1.pic",
+     "Notes": "Education includes a BA in psychology from Colorado State Un..."
+    },
+    {
+     "EmployeeID": 2,
+     "LastName": "Fuller",
+     "FirstName": "Andrew",
+     "BirthDate": "1952-02-19",
+     "Photo": "EmpID2.pic",
+     "Notes": "Andrew received his BTS commercial and a Ph.D. in internatio..."
+    },
+    {
+     "EmployeeID": 3,
+     "LastName": "Leverling",
+     "FirstName": "Janet",
+     "BirthDate": "1963-08-30",
+     "Photo": "EmpID3.pic",
+     "Notes": "Janet has a BS degree in chemistry from Boston College). She..."
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "OrderDetails",
+   "row_count": 518,
+   "stats_rows": 518,
+   "columns": [
+    {
+     "name": "OrderDetailID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 518,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 518,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "order detail id. id of the order detail",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "OrderID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 196,
+     "is_unique": false,
+     "min_value": 10248,
+     "max_value": 10443,
+     "examples": [
+      10248,
+      10249,
+      10250,
+      10251,
+      10252
+     ],
+     "top_values": [],
+     "description": "Order ID. the unique id for orders",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ProductID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 77,
+     "examples": [
+      11,
+      42,
+      72,
+      14,
+      51
+     ],
+     "top_values": [],
+     "description": "Product ID. the unique id for products",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Quantity",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 43,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 120,
+     "examples": [
+      12,
+      10,
+      5,
+      9,
+      40
+     ],
+     "top_values": [
+      [
+       20,
+       61
+      ],
+      [
+       15,
+       46
+      ],
+      [
+       10,
+       44
+      ],
+      [
+       30,
+       40
+      ],
+      [
+       40,
+       32
+      ],
+      [
+       12,
+       25
+      ],
+      [
+       6,
+       22
+      ],
+      [
+       50,
+       20
+      ],
+      [
+       25,
+       19
+      ],
+      [
+       60,
+       15
+      ],
+      [
+       35,
+       15
+      ],
+      [
+       24,
+       15
+      ],
+      [
+       5,
+       14
+      ],
+      [
+       70,
+       13
+      ],
+      [
+       18,
+       12
+      ],
+      [
+       4,
+       11
+      ],
+      [
+       16,
+       10
+      ],
+      [
+       8,
+       10
+      ],
+      [
+       2,
+       10
+      ],
+      [
+       21,
+       9
+      ],
+      [
+       28,
+       8
+      ],
+      [
+       9,
+       8
+      ],
+      [
+       14,
+       7
+      ],
+      [
+       7,
+       6
+      ],
+      [
+       80,
+       5
+      ],
+      [
+       42,
+       5
+      ],
+      [
+       36,
+       5
+      ],
+      [
+       45,
+       4
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       49,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       65,
+       2
+      ],
+      [
+       56,
+       2
+      ],
+      [
+       55,
+       2
+      ],
+      [
+       32,
+       2
+      ],
+      [
+       13,
+       2
+      ],
+      [
+       120,
+       1
+      ],
+      [
+       100,
+       1
+      ],
+      [
+       90,
+       1
+      ],
+      [
+       77,
+       1
+      ],
+      [
+       54,
+       1
+      ],
+      [
+       48,
+       1
+      ],
+      [
+       33,
+       1
+      ]
+     ],
+     "description": "the quantity of the ordered products",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "OrderDetailID"
+   ],
+   "sample_rows": [
+    {
+     "OrderDetailID": 1,
+     "OrderID": 10248,
+     "ProductID": 11,
+     "Quantity": 12
+    },
+    {
+     "OrderDetailID": 2,
+     "OrderID": 10248,
+     "ProductID": 42,
+     "Quantity": 10
+    },
+    {
+     "OrderDetailID": 3,
+     "OrderID": 10248,
+     "ProductID": 72,
+     "Quantity": 5
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Orders",
+   "row_count": 196,
+   "stats_rows": 196,
+   "columns": [
+    {
+     "name": "OrderID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 196,
+     "is_unique": true,
+     "min_value": 10248,
+     "max_value": 10443,
+     "examples": [
+      10248,
+      10249,
+      10250,
+      10251,
+      10252
+     ],
+     "top_values": [],
+     "description": "Order ID. the unique id for orders",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CustomerID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 74,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 91,
+     "examples": [
+      90,
+      81,
+      34,
+      84,
+      76
+     ],
+     "top_values": [],
+     "description": "Customer ID. the unique id for customers",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "EmployeeID",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 9,
+     "examples": [
+      5,
+      6,
+      4,
+      3,
+      9
+     ],
+     "top_values": [
+      [
+       4,
+       40
+      ],
+      [
+       3,
+       31
+      ],
+      [
+       1,
+       29
+      ],
+      [
+       8,
+       27
+      ],
+      [
+       2,
+       20
+      ],
+      [
+       6,
+       18
+      ],
+      [
+       7,
+       14
+      ],
+      [
+       5,
+       11
+      ],
+      [
+       9,
+       6
+      ]
+     ],
+     "description": "Employee ID. the unique id for employees",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "OrderDate",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 160,
+     "is_unique": false,
+     "min_value": "1996-07-04",
+     "max_value": "1997-02-12",
+     "examples": [
+      "1996-07-04",
+      "1996-07-05",
+      "1996-07-08",
+      "1996-07-09",
+      "1996-07-10"
+     ],
+     "top_values": [],
+     "description": "the order date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ShipperID",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 3,
+     "examples": [
+      3,
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       74
+      ],
+      [
+       3,
+       68
+      ],
+      [
+       1,
+       54
+      ]
+     ],
+     "description": "Shipper ID. the id of the shipper",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "OrderID"
+   ],
+   "sample_rows": [
+    {
+     "OrderID": 10248,
+     "CustomerID": 90,
+     "EmployeeID": 5,
+     "OrderDate": "1996-07-04",
+     "ShipperID": 3
+    },
+    {
+     "OrderID": 10249,
+     "CustomerID": 81,
+     "EmployeeID": 6,
+     "OrderDate": "1996-07-05",
+     "ShipperID": 1
+    },
+    {
+     "OrderID": 10250,
+     "CustomerID": 34,
+     "EmployeeID": 4,
+     "OrderDate": "1996-07-08",
+     "ShipperID": 2
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Products",
+   "row_count": 77,
+   "stats_rows": 77,
+   "columns": [
+    {
+     "name": "ProductID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 77,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "Product ID. the unique id for products",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ProductName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": true,
+     "min_value": "Alice Mutton",
+     "max_value": "Zaanse koeken",
+     "examples": [
+      "Chais",
+      "Chang",
+      "Aniseed Syrup",
+      "Chef Anton's Cajun Seasoning",
+      "Chef Anton's Gumbo Mix"
+     ],
+     "top_values": [],
+     "description": "Product Name. the name of the product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "SupplierID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 29,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 29,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       12,
+       5
+      ],
+      [
+       7,
+       5
+      ],
+      [
+       8,
+       4
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       24,
+       3
+      ],
+      [
+       23,
+       3
+      ],
+      [
+       20,
+       3
+      ],
+      [
+       17,
+       3
+      ],
+      [
+       16,
+       3
+      ],
+      [
+       15,
+       3
+      ],
+      [
+       14,
+       3
+      ],
+      [
+       11,
+       3
+      ],
+      [
+       6,
+       3
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       29,
+       2
+      ],
+      [
+       28,
+       2
+      ],
+      [
+       26,
+       2
+      ],
+      [
+       25,
+       2
+      ],
+      [
+       22,
+       2
+      ],
+      [
+       21,
+       2
+      ],
+      [
+       19,
+       2
+      ],
+      [
+       18,
+       2
+      ],
+      [
+       9,
+       2
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       10,
+       1
+      ]
+     ],
+     "description": "Supplier ID. the unique id for supplier",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CategoryID",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 8,
+     "examples": [
+      1,
+      2,
+      7,
+      6,
+      8
+     ],
+     "top_values": [
+      [
+       3,
+       13
+      ],
+      [
+       8,
+       12
+      ],
+      [
+       2,
+       12
+      ],
+      [
+       1,
+       12
+      ],
+      [
+       4,
+       10
+      ],
+      [
+       5,
+       7
+      ],
+      [
+       6,
+       6
+      ],
+      [
+       7,
+       5
+      ]
+     ],
+     "description": "Category ID. the unique id for the product category",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Unit",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 70,
+     "is_unique": false,
+     "min_value": "1 kg pkg.",
+     "max_value": "750 cc per bottle",
+     "examples": [
+      "10 boxes x 20 bags",
+      "24 - 12 oz bottles",
+      "12 - 550 ml bottles",
+      "48 - 6 oz jars",
+      "36 boxes"
+     ],
+     "top_values": [],
+     "description": "the unit of the product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Price",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 62,
+     "is_unique": false,
+     "min_value": 2.5,
+     "max_value": 263.5,
+     "examples": [
+      18.0,
+      19.0,
+      10.0,
+      22.0,
+      21.35
+     ],
+     "top_values": [],
+     "description": "the price",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "ProductID"
+   ],
+   "sample_rows": [
+    {
+     "ProductID": 1,
+     "ProductName": "Chais",
+     "SupplierID": 1,
+     "CategoryID": 1,
+     "Unit": "10 boxes x 20 bags",
+     "Price": 18.0
+    },
+    {
+     "ProductID": 2,
+     "ProductName": "Chang",
+     "SupplierID": 1,
+     "CategoryID": 1,
+     "Unit": "24 - 12 oz bottles",
+     "Price": 19.0
+    },
+    {
+     "ProductID": 3,
+     "ProductName": "Aniseed Syrup",
+     "SupplierID": 1,
+     "CategoryID": 2,
+     "Unit": "12 - 550 ml bottles",
+     "Price": 10.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Shippers",
+   "row_count": 3,
+   "stats_rows": 3,
+   "columns": [
+    {
+     "name": "ShipperID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 3,
+     "examples": [
+      1,
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "Shipper ID. the unique id for shippers",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ShipperName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": "Federal Shipping",
+     "max_value": "United Package",
+     "examples": [
+      "Speedy Express",
+      "United Package",
+      "Federal Shipping"
+     ],
+     "top_values": [
+      [
+       "United Package",
+       1
+      ],
+      [
+       "Speedy Express",
+       1
+      ],
+      [
+       "Federal Shipping",
+       1
+      ]
+     ],
+     "description": "Shipper Name. the shipped company name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Phone",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": "(503) 555-3199",
+     "max_value": "(503) 555-9931",
+     "examples": [
+      "(503) 555-9831",
+      "(503) 555-3199",
+      "(503) 555-9931"
+     ],
+     "top_values": [
+      [
+       "(503) 555-9931",
+       1
+      ],
+      [
+       "(503) 555-9831",
+       1
+      ],
+      [
+       "(503) 555-3199",
+       1
+      ]
+     ],
+     "description": "the phone of the company",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "ShipperID"
+   ],
+   "sample_rows": [
+    {
+     "ShipperID": 1,
+     "ShipperName": "Speedy Express",
+     "Phone": "(503) 555-9831"
+    },
+    {
+     "ShipperID": 2,
+     "ShipperName": "United Package",
+     "Phone": "(503) 555-3199"
+    },
+    {
+     "ShipperID": 3,
+     "ShipperName": "Federal Shipping",
+     "Phone": "(503) 555-9931"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Suppliers",
+   "row_count": 29,
+   "stats_rows": 29,
+   "columns": [
+    {
+     "name": "SupplierID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 29,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 29,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "Supplier ID. the unique id for suppliers",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "SupplierName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 29,
+     "is_unique": true,
+     "min_value": "Aux joyeux ecclésiastiques",
+     "max_value": "Zaanse Snoepfabriek",
+     "examples": [
+      "Exotic Liquid",
+      "New Orleans Cajun Delights",
+      "Grandma Kelly's Homestead",
+      "Tokyo Traders",
+      "Cooperativa de Quesos 'Las Cabras'"
+     ],
+     "top_values": [
+      [
+       "Zaanse Snoepfabriek",
+       1
+      ],
+      [
+       "Tokyo Traders",
+       1
+      ],
+      [
+       "Svensk Sjöföda AB",
+       1
+      ],
+      [
+       "Specialty Biscuits, Ltd.",
+       1
+      ],
+      [
+       "Refrescos Americanas LTDA",
+       1
+      ],
+      [
+       "Plutzer Lebensmittelgroßmärkte AG",
+       1
+      ],
+      [
+       "Pavlova, Ltd.",
+       1
+      ],
+      [
+       "Pasta Buttini s.r.l.",
+       1
+      ],
+      [
+       "PB Knäckebröd AB",
+       1
+      ],
+      [
+       "Norske Meierier",
+       1
+      ],
+      [
+       "Nord-Ost-Fisch Handelsgesellschaft mbH",
+       1
+      ],
+      [
+       "New Orleans Cajun Delights",
+       1
+      ],
+      [
+       "New England Seafood Cannery",
+       1
+      ],
+      [
+       "Mayumi's",
+       1
+      ],
+      [
+       "Ma Maison",
+       1
+      ],
+      [
+       "Lyngbysild",
+       1
+      ],
+      [
+       "Leka Trading",
+       1
+      ],
+      [
+       "Karkki Oy",
+       1
+      ],
+      [
+       "Heli Süßwaren GmbH & Co. KG",
+       1
+      ],
+      [
+       "Grandma Kelly's Homestead",
+       1
+      ],
+      [
+       "Gai pâturage",
+       1
+      ],
+      [
+       "G'day, Mate",
+       1
+      ],
+      [
+       "Forêts d'érables",
+       1
+      ],
+      [
+       "Formaggi Fortini s.r.l.",
+       1
+      ],
+      [
+       "Exotic Liquid",
+       1
+      ],
+      [
+       "Escargots Nouveaux",
+       1
+      ],
+      [
+       "Cooperativa de Quesos 'Las Cabras'",
+       1
+      ],
+      [
+       "Bigfoot Breweries",
+       1
+      ],
+      [
+       "Aux joyeux ecclésiastiques",
+       1
+      ]
+     ],
+     "description": "the supplier name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ContactName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 29,
+     "is_unique": true,
+     "min_value": "Anne Heikkonen",
+     "max_value": "Yoshi Nagase",
+     "examples": [
+      "Charlotte Cooper",
+      "Shelley Burke",
+      "Regina Murphy",
+      "Yoshi Nagase",
+      "Antonio del Valle Saavedra"
+     ],
+     "top_values": [
+      [
+       "Yoshi Nagase",
+       1
+      ],
+      [
+       "Wendy Mackenzie",
+       1
+      ],
+      [
+       "Sven Petersen",
+       1
+      ],
+      [
+       "Shelley Burke",
+       1
+      ],
+      [
+       "Robb Merchant",
+       1
+      ],
+      [
+       "Regina Murphy",
+       1
+      ],
+      [
+       "Petra Winkler",
+       1
+      ],
+      [
+       "Peter Wilson",
+       1
+      ],
+      [
+       "Niels Petersen",
+       1
+      ],
+      [
+       "Michael Björn",
+       1
+      ],
+      [
+       "Mayumi Ohno",
+       1
+      ],
+      [
+       "Martin Bein",
+       1
+      ],
+      [
+       "Marie Delamare",
+       1
+      ],
+      [
+       "Lars Peterson",
+       1
+      ],
+      [
+       "Jean-Guy Lauzon",
+       1
+      ],
+      [
+       "Ian Devling",
+       1
+      ],
+      [
+       "Guylène Nodier",
+       1
+      ],
+      [
+       "Giovanni Giudici",
+       1
+      ],
+      [
+       "Elio Rossi",
+       1
+      ],
+      [
+       "Eliane Noz",
+       1
+      ],
+      [
+       "Dirk Luchte",
+       1
+      ],
+      [
+       "Cheryl Saylor",
+       1
+      ],
+      [
+       "Charlotte Cooper",
+       1
+      ],
+      [
+       "Chantal Goulet",
+       1
+      ],
+      [
+       "Chandra Leka",
+       1
+      ],
+      [
+       "Carlos Diaz",
+       1
+      ],
+      [
+       "Beate Vileid",
+       1
+      ],
+      [
+       "Antonio del Valle Saavedra",
+       1
+      ],
+      [
+       "Anne Heikkonen",
+       1
+      ]
+     ],
+     "description": "Contact Name. the contact person's name representing the company",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Address",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 29,
+     "is_unique": true,
+     "min_value": "148 rue Chasseur",
+     "max_value": "Viale Dante, 75",
+     "examples": [
+      "49 Gilbert St.",
+      "P.O. Box 78934",
+      "707 Oxford Rd.",
+      "9-8 Sekimai Musashino-shi",
+      "Calle del Rosal 4"
+     ],
+     "top_values": [
+      [
+       "Viale Dante, 75",
+       1
+      ],
+      [
+       "Via dei Gelsomini, 153",
+       1
+      ],
+      [
+       "Verkoop Rijnweg 22",
+       1
+      ],
+      [
+       "Valtakatu 12",
+       1
+      ],
+      [
+       "Tiergartenstraße 5",
+       1
+      ],
+      [
+       "P.O. Box 78934",
+       1
+      ],
+      [
+       "Order Processing Dept. 2100 Paul Revere Blvd.",
+       1
+      ],
+      [
+       "Lyngbysild Fiskebakken 10",
+       1
+      ],
+      [
+       "Kaloadagatan 13",
+       1
+      ],
+      [
+       "Hatlevegen 5",
+       1
+      ],
+      [
+       "Frahmredder 112a",
+       1
+      ],
+      [
+       "Calle del Rosal 4",
+       1
+      ],
+      [
+       "Brovallavägen 231",
+       1
+      ],
+      [
+       "Bogenallee 51",
+       1
+      ],
+      [
+       "Bat. B 3, rue des Alpes",
+       1
+      ],
+      [
+       "Av. das Americanas 12.890",
+       1
+      ],
+      [
+       "92 Setsuko Chuo-ku",
+       1
+      ],
+      [
+       "9-8 Sekimai Musashino-shi",
+       1
+      ],
+      [
+       "74 Rose St. Moonie Ponds",
+       1
+      ],
+      [
+       "707 Oxford Rd.",
+       1
+      ],
+      [
+       "49 Gilbert St.",
+       1
+      ],
+      [
+       "471 Serangoon Loop, Suite #402",
+       1
+      ],
+      [
+       "3400 - 8th Avenue Suite 210",
+       1
+      ],
+      [
+       "2960 Rue St. Laurent",
+       1
+      ],
+      [
+       "29 King's Way",
+       1
+      ],
+      [
+       "22, rue H. Voiron",
+       1
+      ],
+      [
+       "203, Rue des Francs-Bourgeois",
+       1
+      ],
+      [
+       "170 Prince Edward Parade Hunter's Hill",
+       1
+      ],
+      [
+       "148 rue Chasseur",
+       1
+      ]
+     ],
+     "description": "the address of the supplier",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "City",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 29,
+     "is_unique": true,
+     "min_value": "Ann Arbor",
+     "max_value": "Zaandam",
+     "examples": [
+      "Londona",
+      "New Orleans",
+      "Ann Arbor",
+      "Tokyo",
+      "Oviedo"
+     ],
+     "top_values": [
+      [
+       "Zaandam",
+       1
+      ],
+      [
+       "Tokyo",
+       1
+      ],
+      [
+       "São Paulo",
+       1
+      ],
+      [
+       "Sydney",
+       1
+      ],
+      [
+       "Stockholm",
+       1
+      ],
+      [
+       "Ste-Hyacinthe",
+       1
+      ],
+      [
+       "Singapore",
+       1
+      ],
+      [
+       "Sandvika",
+       1
+      ],
+      [
+       "Salerno",
+       1
+      ],
+      [
+       "Ravenna",
+       1
+      ],
+      [
+       "Paris",
+       1
+      ],
+      [
+       "Oviedo",
+       1
+      ],
+      [
+       "Osaka",
+       1
+      ],
+      [
+       "New Orleans",
+       1
+      ],
+      [
+       "Montréal",
+       1
+      ],
+      [
+       "Montceau",
+       1
+      ],
+      [
+       "Melbourne",
+       1
+      ],
+      [
+       "Manchester",
+       1
+      ],
+      [
+       "Lyngby",
+       1
+      ],
+      [
+       "Londona",
+       1
+      ],
+      [
+       "Lappeenranta",
+       1
+      ],
+      [
+       "Göteborg",
+       1
+      ],
+      [
+       "Frankfurt",
+       1
+      ],
+      [
+       "Cuxhaven",
+       1
+      ],
+      [
+       "Boston",
+       1
+      ],
+      [
+       "Berlin",
+       1
+      ],
+      [
+       "Bend",
+       1
+      ],
+      [
+       "Annecy",
+       1
+      ],
+      [
+       "Ann Arbor",
+       1
+      ]
+     ],
+     "description": "the city where the supplier is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "PostalCode",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 29,
+     "is_unique": true,
+     "min_value": "100",
+     "max_value": "S-345 67",
+     "examples": [
+      "EC1 4SD",
+      "70117",
+      "48104",
+      "100",
+      "33007"
+     ],
+     "top_values": [
+      [
+       "S-345 67",
+       1
+      ],
+      [
+       "S-123 45",
+       1
+      ],
+      [
+       "M14 GSD",
+       1
+      ],
+      [
+       "J2S 7S8",
+       1
+      ],
+      [
+       "H1J 1C3",
+       1
+      ],
+      [
+       "EC1 4SD",
+       1
+      ],
+      [
+       "9999 ZZ",
+       1
+      ],
+      [
+       "97101",
+       1
+      ],
+      [
+       "84100",
+       1
+      ],
+      [
+       "75004",
+       1
+      ],
+      [
+       "74000",
+       1
+      ],
+      [
+       "71300",
+       1
+      ],
+      [
+       "70117",
+       1
+      ],
+      [
+       "60439",
+       1
+      ],
+      [
+       "545",
+       1
+      ],
+      [
+       "5442",
+       1
+      ],
+      [
+       "53120",
+       1
+      ],
+      [
+       "512",
+       1
+      ],
+      [
+       "48104",
+       1
+      ],
+      [
+       "48100",
+       1
+      ],
+      [
+       "33007",
+       1
+      ],
+      [
+       "3058",
+       1
+      ],
+      [
+       "2800",
+       1
+      ],
+      [
+       "27478",
+       1
+      ],
+      [
+       "2134",
+       1
+      ],
+      [
+       "2042",
+       1
+      ],
+      [
+       "1320",
+       1
+      ],
+      [
+       "10785",
+       1
+      ],
+      [
+       "100",
+       1
+      ]
+     ],
+     "description": "the postal code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": "Australia",
+     "max_value": "USA",
+     "examples": [
+      "UK",
+      "USA",
+      "Japan",
+      "Spain",
+      "Australia"
+     ],
+     "top_values": [
+      [
+       "USA",
+       4
+      ],
+      [
+       "Germany",
+       3
+      ],
+      [
+       "France",
+       3
+      ],
+      [
+       "UK",
+       2
+      ],
+      [
+       "Sweden",
+       2
+      ],
+      [
+       "Japan",
+       2
+      ],
+      [
+       "Italy",
+       2
+      ],
+      [
+       "Canada",
+       2
+      ],
+      [
+       "Australia",
+       2
+      ],
+      [
+       "Spain",
+       1
+      ],
+      [
+       "Singapore",
+       1
+      ],
+      [
+       "Norway",
+       1
+      ],
+      [
+       "Netherlands",
+       1
+      ],
+      [
+       "Finland",
+       1
+      ],
+      [
+       "Denmark",
+       1
+      ],
+      [
+       "Brazil",
+       1
+      ]
+     ],
+     "description": "the country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Phone",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 29,
+     "is_unique": true,
+     "min_value": "(0)2-953010",
+     "max_value": "85.57.00.07",
+     "examples": [
+      "(171) 555-2222",
+      "(100) 555-4822",
+      "(313) 555-5735",
+      "(03) 3555-5011",
+      "(98) 598 76 54"
+     ],
+     "top_values": [
+      [
+       "85.57.00.07",
+       1
+      ],
+      [
+       "555-8787",
+       1
+      ],
+      [
+       "43844108",
+       1
+      ],
+      [
+       "38.76.98.06",
+       1
+      ],
+      [
+       "08-123 45 67",
+       1
+      ],
+      [
+       "031-987 65 43",
+       1
+      ],
+      [
+       "(98) 598 76 54",
+       1
+      ],
+      [
+       "(953) 10956",
+       1
+      ],
+      [
+       "(617) 555-3267",
+       1
+      ],
+      [
+       "(514) 555-9022",
+       1
+      ],
+      [
+       "(514) 555-2955",
+       1
+      ],
+      [
+       "(503) 555-9931",
+       1
+      ],
+      [
+       "(313) 555-5735",
+       1
+      ],
+      [
+       "(171) 555-2222",
+       1
+      ],
+      [
+       "(161) 555-4448",
+       1
+      ],
+      [
+       "(12345) 1212",
+       1
+      ],
+      [
+       "(11) 555 4640",
+       1
+      ],
+      [
+       "(100) 555-4822",
+       1
+      ],
+      [
+       "(1) 03.83.00.68",
+       1
+      ],
+      [
+       "(089) 6547665",
+       1
+      ],
+      [
+       "(069) 992755",
+       1
+      ],
+      [
+       "(06) 431-7877",
+       1
+      ],
+      [
+       "(0544) 60323",
+       1
+      ],
+      [
+       "(04721) 8713",
+       1
+      ],
+      [
+       "(03) 444-2343",
+       1
+      ],
+      [
+       "(03) 3555-5011",
+       1
+      ],
+      [
+       "(02) 555-5914",
+       1
+      ],
+      [
+       "(010) 9984510",
+       1
+      ],
+      [
+       "(0)2-953010",
+       1
+      ]
+     ],
+     "description": "the phone number",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "SupplierID"
+   ],
+   "sample_rows": [
+    {
+     "SupplierID": 1,
+     "SupplierName": "Exotic Liquid",
+     "ContactName": "Charlotte Cooper",
+     "Address": "49 Gilbert St.",
+     "City": "Londona",
+     "PostalCode": "EC1 4SD",
+     "Country": "UK",
+     "Phone": "(171) 555-2222"
+    },
+    {
+     "SupplierID": 2,
+     "SupplierName": "New Orleans Cajun Delights",
+     "ContactName": "Shelley Burke",
+     "Address": "P.O. Box 78934",
+     "City": "New Orleans",
+     "PostalCode": "70117",
+     "Country": "USA",
+     "Phone": "(100) 555-4822"
+    },
+    {
+     "SupplierID": 3,
+     "SupplierName": "Grandma Kelly's Homestead",
+     "ContactName": "Regina Murphy",
+     "Address": "707 Oxford Rd.",
+     "City": "Ann Arbor",
+     "PostalCode": "48104",
+     "Country": "USA",
+     "Phone": "(313) 555-5735"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "OrderDetails",
+   "from_column": "ProductID",
+   "to_table": "Products",
+   "to_column": "ProductID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "OrderDetails",
+   "from_column": "OrderID",
+   "to_table": "Orders",
+   "to_column": "OrderID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Orders",
+   "from_column": "ShipperID",
+   "to_table": "Shippers",
+   "to_column": "ShipperID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Orders",
+   "from_column": "CustomerID",
+   "to_table": "Customers",
+   "to_column": "CustomerID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Orders",
+   "from_column": "EmployeeID",
+   "to_table": "Employees",
+   "to_column": "EmployeeID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Products",
+   "from_column": "SupplierID",
+   "to_table": "Suppliers",
+   "to_column": "SupplierID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Products",
+   "from_column": "CategoryID",
+   "to_table": "Categories",
+   "to_column": "CategoryID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

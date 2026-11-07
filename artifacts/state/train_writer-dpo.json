@@ -1,0 +1,1 @@
+{"name": "writer-dpo", "step": 14, "total": 14, "loss": 0.6793155781924725, "elapsed_s": 311.5490839481354, "eta_s": 0.0, "updated": 1793999085.373092, "lr": 2.5000000000000004e-07, "grad_norm": 1.1418275833129883, "epoch": 1.0, "val_loss": null}

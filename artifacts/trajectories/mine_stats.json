@@ -1,0 +1,10 @@
+{
+ "questions": 916,
+ "greedy_acc": 0.6506550218340611,
+ "pass_at_k": 0.7281659388646288,
+ "label_free_top1_acc": 0.6724890829694323,
+ "wrong_executable_samples": 1045,
+ "of_which_flagged_by_sanity_checks": 0.21722488038277513,
+ "repair_attempts": 334,
+ "repair_success_rate": 0.12574850299401197
+}

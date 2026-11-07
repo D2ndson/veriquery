@@ -1,0 +1,3280 @@
+{
+ "db_id": "retails",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/retails/retails.sqlite",
+ "fingerprint": "1027735552-1793993054048001876-v1.0",
+ "created_at": "2026-11-06T19:25:25+00:00",
+ "profile_seconds": 17.001,
+ "tables": [
+  {
+   "name": "customer",
+   "row_count": 150000,
+   "stats_rows": 150000,
+   "columns": [
+    {
+     "name": "c_custkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 150000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 150000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "customer key. unique id number identifying the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "c_mktsegment",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "AUTOMOBILE",
+     "max_value": "MACHINERY",
+     "examples": [
+      "BUILDING",
+      "MACHINERY",
+      "FURNITURE",
+      "AUTOMOBILE",
+      "HOUSEHOLD"
+     ],
+     "top_values": [
+      [
+       "FURNITURE",
+       30262
+      ],
+      [
+       "MACHINERY",
+       30144
+      ],
+      [
+       "BUILDING",
+       29957
+      ],
+      [
+       "AUTOMOBILE",
+       29820
+      ],
+      [
+       "HOUSEHOLD",
+       29817
+      ]
+     ],
+     "description": "customer market segment. the segment of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "c_nationkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 25,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 24,
+     "examples": [
+      8,
+      16,
+      11,
+      24,
+      4
+     ],
+     "top_values": [
+      [
+       10,
+       6158
+      ],
+      [
+       18,
+       6138
+      ],
+      [
+       24,
+       6100
+      ],
+      [
+       8,
+       6083
+      ],
+      [
+       12,
+       6064
+      ],
+      [
+       9,
+       6041
+      ],
+      [
+       4,
+       6031
+      ],
+      [
+       7,
+       6027
+      ],
+      [
+       22,
+       6025
+      ],
+      [
+       16,
+       6023
+      ],
+      [
+       14,
+       6017
+      ],
+      [
+       13,
+       6001
+      ],
+      [
+       0,
+       5997
+      ],
+      [
+       11,
+       5992
+      ],
+      [
+       3,
+       5986
+      ],
+      [
+       2,
+       5975
+      ],
+      [
+       1,
+       5967
+      ],
+      [
+       19,
+       5957
+      ],
+      [
+       21,
+       5941
+      ],
+      [
+       20,
+       5933
+      ],
+      [
+       17,
+       5933
+      ],
+      [
+       23,
+       5917
+      ],
+      [
+       15,
+       5908
+      ],
+      [
+       5,
+       5905
+      ],
+      [
+       6,
+       5881
+      ]
+     ],
+     "description": "customer nation key. the nation key number of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "c_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 150000,
+     "is_unique": true,
+     "min_value": "Customer#000000001",
+     "max_value": "Customer#000150000",
+     "examples": [
+      "Customer#000000001",
+      "Customer#000000002",
+      "Customer#000000003",
+      "Customer#000000004",
+      "Customer#000000005"
+     ],
+     "top_values": [],
+     "description": "customer name. name of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "c_address",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 150000,
+     "is_unique": true,
+     "min_value": "  0dIvzPgVPROA2",
+     "max_value": "zzzjj8vW7XVi2HkFYkx",
+     "examples": [
+      "KwX3hMHjZ6",
+      "ioUn,eqTTXOdo",
+      "YddJqmIdouNT9Yj",
+      "iE7PADWuxr4pR5f9ewKqg",
+      "h3yhvBTVbF2IJPzTKLoUe4"
+     ],
+     "top_values": [],
+     "description": "customer address. address of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "c_phone",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 149990,
+     "is_unique": false,
+     "min_value": "100-104-1787",
+     "max_value": "999-996-7016",
+     "examples": [
+      "937-241-3198",
+      "906-965-7556",
+      "328-750-7603",
+      "127-505-7633",
+      "322-864-6707"
+     ],
+     "top_values": [],
+     "description": "customer phone. phone of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "c_acctbal",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 140231,
+     "is_unique": false,
+     "min_value": -999.98,
+     "max_value": 9999.96,
+     "examples": [
+      3560.03,
+      7550.21,
+      -926.96,
+      -78.75,
+      7741.9
+     ],
+     "top_values": [],
+     "description": "customer account balance. account balance",
+     "value_description": "if c_acctbal < 0: this account is in debt",
+     "notes": []
+    },
+    {
+     "name": "c_comment",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 149905,
+     "is_unique": false,
+     "min_value": "Tiresias above the pending express ideas haggle fluffi",
+     "max_value": "waters x-ray whithout the even bold pinto be",
+     "examples": [
+      "ironic excuses detect slyly silent requests. requests accord...",
+      "final express accounts mold slyly. ironic accounts cajole! q...",
+      "carefully express foxes sleep carefully. pending platelets s...",
+      "silent packages sleep. even re",
+      "slyly special frays nag quietly bl"
+     ],
+     "top_values": [],
+     "description": "customer comment. comment of the customer",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "c_custkey"
+   ],
+   "sample_rows": [
+    {
+     "c_custkey": 1,
+     "c_mktsegment": "BUILDING",
+     "c_nationkey": 8,
+     "c_name": "Customer#000000001",
+     "c_address": "KwX3hMHjZ6",
+     "c_phone": "937-241-3198",
+     "c_acctbal": 3560.03,
+     "c_comment": "ironic excuses detect slyly silent requests. requests accord..."
+    },
+    {
+     "c_custkey": 2,
+     "c_mktsegment": "MACHINERY",
+     "c_nationkey": 16,
+     "c_name": "Customer#000000002",
+     "c_address": "ioUn,eqTTXOdo",
+     "c_phone": "906-965-7556",
+     "c_acctbal": 7550.21,
+     "c_comment": "final express accounts mold slyly. ironic accounts cajole! q..."
+    },
+    {
+     "c_custkey": 3,
+     "c_mktsegment": "FURNITURE",
+     "c_nationkey": 11,
+     "c_name": "Customer#000000003",
+     "c_address": "YddJqmIdouNT9Yj",
+     "c_phone": "328-750-7603",
+     "c_acctbal": -926.96,
+     "c_comment": "carefully express foxes sleep carefully. pending platelets s..."
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "lineitem",
+   "row_count": 4423659,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "l_shipdate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1831,
+     "is_unique": false,
+     "min_value": "1993-11-25",
+     "max_value": "1998-11-29",
+     "examples": [
+      "1995-08-16",
+      "1995-08-13",
+      "1995-06-17",
+      "1995-07-16",
+      "1995-04-29"
+     ],
+     "top_values": [],
+     "description": "line item ship date. ship date of line item",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "l_orderkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 50778,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 271205,
+     "examples": [
+      1,
+      2,
+      4,
+      5,
+      6
+     ],
+     "top_values": [],
+     "description": "line item order key. order key number of line item",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "l_discount",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 0.1,
+     "examples": [
+      0.1,
+      0.09,
+      0.02,
+      0.08,
+      0.07
+     ],
+     "top_values": [
+      [
+       0.09,
+       18306
+      ],
+      [
+       0.01,
+       18256
+      ],
+      [
+       0.05,
+       18242
+      ],
+      [
+       0.08,
+       18235
+      ],
+      [
+       0.03,
+       18219
+      ],
+      [
+       0.02,
+       18204
+      ],
+      [
+       0.1,
+       18200
+      ],
+      [
+       0.0,
+       18185
+      ],
+      [
+       0.07,
+       18122
+      ],
+      [
+       0.04,
+       18057
+      ],
+      [
+       0.06,
+       17974
+      ]
+     ],
+     "description": "line item discount. discount of line item",
+     "value_description": "0.1: 10% off",
+     "notes": []
+    },
+    {
+     "name": "l_extendedprice",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 178137,
+     "is_unique": false,
+     "min_value": 910.0,
+     "max_value": 104849.5,
+     "examples": [
+      58303.08,
+      16947.7,
+      63642.9,
+      22521.96,
+      4081.08
+     ],
+     "top_values": [],
+     "description": "line item extended price. extended price of line item",
+     "value_description": "commonsense evidence:\nfull price before discount\ndiscounted price = (l_extendedprice*(1-l_discount))",
+     "notes": []
+    },
+    {
+     "name": "l_suppkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10000,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 10000,
+     "examples": [
+      6296,
+      8776,
+      3859,
+      7225,
+      5890
+     ],
+     "top_values": [],
+     "description": "line item suppkey. suppkey of line item",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "l_quantity",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 50,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 50,
+     "examples": [
+      33,
+      10,
+      34,
+      18,
+      3
+     ],
+     "top_values": [
+      [
+       46,
+       4121
+      ],
+      [
+       4,
+       4116
+      ],
+      [
+       7,
+       4078
+      ],
+      [
+       42,
+       4074
+      ],
+      [
+       36,
+       4067
+      ],
+      [
+       11,
+       4063
+      ],
+      [
+       27,
+       4062
+      ],
+      [
+       39,
+       4058
+      ],
+      [
+       30,
+       4056
+      ],
+      [
+       13,
+       4056
+      ],
+      [
+       5,
+       4049
+      ],
+      [
+       26,
+       4046
+      ],
+      [
+       2,
+       4040
+      ],
+      [
+       44,
+       4035
+      ],
+      [
+       31,
+       4034
+      ],
+      [
+       38,
+       4026
+      ],
+      [
+       22,
+       4024
+      ],
+      [
+       48,
+       4023
+      ],
+      [
+       25,
+       4022
+      ],
+      [
+       9,
+       4018
+      ],
+      [
+       41,
+       4015
+      ],
+      [
+       28,
+       4015
+      ],
+      [
+       34,
+       4008
+      ],
+      [
+       21,
+       4008
+      ],
+      [
+       17,
+       4008
+      ],
+      [
+       24,
+       4006
+      ],
+      [
+       14,
+       4004
+      ],
+      [
+       10,
+       4001
+      ],
+      [
+       16,
+       3996
+      ],
+      [
+       29,
+       3993
+      ],
+      [
+       1,
+       3991
+      ],
+      [
+       50,
+       3989
+      ],
+      [
+       20,
+       3982
+      ],
+      [
+       45,
+       3981
+      ],
+      [
+       43,
+       3973
+      ],
+      [
+       40,
+       3973
+      ],
+      [
+       37,
+       3973
+      ],
+      [
+       47,
+       3972
+      ],
+      [
+       23,
+       3955
+      ],
+      [
+       18,
+       3951
+      ],
+      [
+       12,
+       3951
+      ],
+      [
+       33,
+       3942
+      ],
+      [
+       19,
+       3931
+      ],
+      [
+       32,
+       3926
+      ],
+      [
+       3,
+       3906
+      ],
+      [
+       35,
+       3903
+      ],
+      [
+       15,
+       3903
+      ],
+      [
+       6,
+       3898
+      ],
+      [
+       49,
+       3889
+      ],
+      [
+       8,
+       3889
+      ]
+     ],
+     "description": "line item quantity. quantity of line item",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "l_returnflag",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "R",
+     "examples": [
+      "N",
+      "A",
+      "R"
+     ],
+     "top_values": [
+      [
+       "N",
+       136928
+      ],
+      [
+       "R",
+       31650
+      ],
+      [
+       "A",
+       31422
+      ]
+     ],
+     "description": "line item return flag. return flag of line item",
+     "value_description": "commonsense evidence:\n R ? returned item\n A and \"N\": not returned item.",
+     "notes": []
+    },
+    {
+     "name": "l_partkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 126290,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 200000,
+     "examples": [
+      98768,
+      23771,
+      113858,
+      127224,
+      98362
+     ],
+     "top_values": [],
+     "description": "line item part key. part key of line item",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "l_linestatus",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "O",
+     "examples": [
+      "O",
+      "F"
+     ],
+     "top_values": [
+      [
+       "O",
+       135145
+      ],
+      [
+       "F",
+       64855
+      ]
+     ],
+     "description": "line item line status. line status of line item",
+     "value_description": "NOT USEFUL",
+     "notes": []
+    },
+    {
+     "name": "l_tax",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 0.08,
+     "examples": [
+      0.06,
+      0.08,
+      0.07,
+      0.02,
+      0.01
+     ],
+     "top_values": [
+      [
+       0.06,
+       22389
+      ],
+      [
+       0.07,
+       22385
+      ],
+      [
+       0.08,
+       22279
+      ],
+      [
+       0.02,
+       22248
+      ],
+      [
+       0.01,
+       22223
+      ],
+      [
+       0.0,
+       22198
+      ],
+      [
+       0.04,
+       22111
+      ],
+      [
+       0.03,
+       22094
+      ],
+      [
+       0.05,
+       22073
+      ]
+     ],
+     "description": "line item tax. tax of line item",
+     "value_description": "commonsense evidence:\ncharge = l_extendedprice * (1- l_discount) * (1+ l_tax)",
+     "notes": []
+    },
+    {
+     "name": "l_commitdate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1886,
+     "is_unique": false,
+     "min_value": "1993-08-30",
+     "max_value": "1998-10-30",
+     "examples": [
+      "1995-07-12",
+      "1995-07-09",
+      "1995-05-22",
+      "1995-06-28",
+      "1995-06-27"
+     ],
+     "top_values": [],
+     "description": "line item commit date. commit date of line item",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "l_receiptdate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1853,
+     "is_unique": false,
+     "min_value": "1993-11-26",
+     "max_value": "1998-12-27",
+     "examples": [
+      "1995-09-14",
+      "1995-08-27",
+      "1995-06-30",
+      "1995-07-18",
+      "1995-05-19"
+     ],
+     "top_values": [],
+     "description": "line item receipt date. receipt date of line item",
+     "value_description": "commonsense evidence:\nfreight / shipping / delivery time = l_receiptdate - l_commitdate;\nless shipping / delivery time --> faster shipping speed.",
+     "notes": []
+    },
+    {
+     "name": "l_shipmode",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "AIR",
+     "max_value": "TRUCK",
+     "examples": [
+      "RAIL",
+      "TRUCK",
+      "SHIP",
+      "MAIL",
+      "AIR"
+     ],
+     "top_values": [
+      [
+       "TRUCK",
+       28798
+      ],
+      [
+       "AIR",
+       28744
+      ],
+      [
+       "SHIP",
+       28559
+      ],
+      [
+       "REG AIR",
+       28529
+      ],
+      [
+       "MAIL",
+       28497
+      ],
+      [
+       "RAIL",
+       28460
+      ],
+      [
+       "FOB",
+       28413
+      ]
+     ],
+     "description": "line item ship mode. ship mode of line item",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "l_linenumber",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 7,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       1,
+       49910
+      ],
+      [
+       2,
+       42802
+      ],
+      [
+       3,
+       35712
+      ],
+      [
+       4,
+       28725
+      ],
+      [
+       5,
+       21477
+      ],
+      [
+       6,
+       14300
+      ],
+      [
+       7,
+       7074
+      ]
+     ],
+     "description": "line item line number. unique id number identifying the line item",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "l_shipinstruct",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "COLLECT COD",
+     "max_value": "TAKE BACK RETURN",
+     "examples": [
+      "NONE",
+      "TAKE BACK RETURN",
+      "COLLECT COD",
+      "DELIVER IN PERSON"
+     ],
+     "top_values": [
+      [
+       "COLLECT COD",
+       50540
+      ],
+      [
+       "NONE",
+       49938
+      ],
+      [
+       "DELIVER IN PERSON",
+       49860
+      ],
+      [
+       "TAKE BACK RETURN",
+       49662
+      ]
+     ],
+     "description": "line item ship instruct. ship instruct of line item",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "l_comment",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 151812,
+     "is_unique": false,
+     "min_value": "Tiresias about the slyly regular packages ",
+     "max_value": "waters wake. slyly special foxes cajole at",
+     "examples": [
+      "carefully bo",
+      "blithely regular pac",
+      "ironic accounts sleep furiously silen",
+      "idly even platelets acr",
+      "unusual speci"
+     ],
+     "top_values": [],
+     "description": "line item comment. comment of line item",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "l_orderkey",
+    "l_linenumber"
+   ],
+   "sample_rows": [
+    {
+     "l_shipdate": "1995-08-16",
+     "l_orderkey": 1,
+     "l_discount": 0.1,
+     "l_extendedprice": 58303.08,
+     "l_suppkey": 6296,
+     "l_quantity": 33,
+     "l_returnflag": "N",
+     "l_partkey": 98768,
+     "l_linestatus": "O",
+     "l_tax": 0.06,
+     "l_commitdate": "1995-07-12",
+     "l_receiptdate": "1995-09-14",
+     "l_shipmode": "RAIL",
+     "l_linenumber": 1,
+     "l_shipinstruct": "NONE",
+     "l_comment": "carefully bo"
+    },
+    {
+     "l_shipdate": "1995-08-13",
+     "l_orderkey": 1,
+     "l_discount": 0.09,
+     "l_extendedprice": 16947.7,
+     "l_suppkey": 8776,
+     "l_quantity": 10,
+     "l_returnflag": "N",
+     "l_partkey": 23771,
+     "l_linestatus": "O",
+     "l_tax": 0.08,
+     "l_commitdate": "1995-07-09",
+     "l_receiptdate": "1995-08-27",
+     "l_shipmode": "TRUCK",
+     "l_linenumber": 2,
+     "l_shipinstruct": "TAKE BACK RETURN",
+     "l_comment": "blithely regular pac"
+    },
+    {
+     "l_shipdate": "1995-06-17",
+     "l_orderkey": 1,
+     "l_discount": 0.1,
+     "l_extendedprice": 63642.9,
+     "l_suppkey": 3859,
+     "l_quantity": 34,
+     "l_returnflag": "N",
+     "l_partkey": 113858,
+     "l_linestatus": "O",
+     "l_tax": 0.08,
+     "l_commitdate": "1995-05-22",
+     "l_receiptdate": "1995-06-30",
+     "l_shipmode": "SHIP",
+     "l_linenumber": 3,
+     "l_shipinstruct": "COLLECT COD",
+     "l_comment": "ironic accounts sleep furiously silen"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 4,423,659 rows"
+   ]
+  },
+  {
+   "name": "nation",
+   "row_count": 25,
+   "stats_rows": 25,
+   "columns": [
+    {
+     "name": "n_nationkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 25,
+     "is_unique": true,
+     "min_value": 0,
+     "max_value": 24,
+     "examples": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "description": "nation key. unique id number identifying the nation",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "n_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 25,
+     "is_unique": true,
+     "min_value": "ALGERIA",
+     "max_value": "VIETNAM",
+     "examples": [
+      "ALGERIA",
+      "ARGENTINA",
+      "BRAZIL",
+      "CANADA",
+      "EGYPT"
+     ],
+     "top_values": [
+      [
+       "VIETNAM",
+       1
+      ],
+      [
+       "UNITED STATES",
+       1
+      ],
+      [
+       "UNITED KINGDOM",
+       1
+      ],
+      [
+       "SAUDI ARABIA",
+       1
+      ],
+      [
+       "RUSSIA",
+       1
+      ],
+      [
+       "ROMANIA",
+       1
+      ],
+      [
+       "PERU",
+       1
+      ],
+      [
+       "MOZAMBIQUE",
+       1
+      ],
+      [
+       "MOROCCO",
+       1
+      ],
+      [
+       "KENYA",
+       1
+      ],
+      [
+       "JORDAN",
+       1
+      ],
+      [
+       "JAPAN",
+       1
+      ],
+      [
+       "IRAQ",
+       1
+      ],
+      [
+       "IRAN",
+       1
+      ],
+      [
+       "INDONESIA",
+       1
+      ],
+      [
+       "INDIA",
+       1
+      ],
+      [
+       "GERMANY",
+       1
+      ],
+      [
+       "FRANCE",
+       1
+      ],
+      [
+       "ETHIOPIA",
+       1
+      ],
+      [
+       "EGYPT",
+       1
+      ],
+      [
+       "CHINA",
+       1
+      ],
+      [
+       "CANADA",
+       1
+      ],
+      [
+       "BRAZIL",
+       1
+      ],
+      [
+       "ARGENTINA",
+       1
+      ],
+      [
+       "ALGERIA",
+       1
+      ]
+     ],
+     "description": "nation name. name of the nation",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "n_regionkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 4,
+     "examples": [
+      0,
+      1,
+      3,
+      2,
+      4
+     ],
+     "top_values": [
+      [
+       0,
+       6
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       2,
+       5
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "description": "nation region key. region key number of the nation",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "n_comment",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 25,
+     "is_unique": true,
+     "min_value": "blithely regular dolphins nag furiously above the slyly sile...",
+     "max_value": "special asymptotes cajole carefully. slyly regular accounts ...",
+     "examples": [
+      "slyly express pinto beans cajole idly. deposits use blithely...",
+      "instructions detect blithely stealthily pending packages",
+      "blithely unusual deposits are quickly--",
+      "carefully pending packages haggle blithely. blithely final p...",
+      "slyly express deposits haggle furiously. slyly final platele..."
+     ],
+     "top_values": [
+      [
+       "special asymptotes cajole carefully. slyly regular accounts ...",
+       1
+      ],
+      [
+       "slyly final pinto beans affix slyly regular even packages. c...",
+       1
+      ],
+      [
+       "slyly express pinto beans cajole idly. deposits use blithely...",
+       1
+      ],
+      [
+       "slyly express deposits haggle furiously. slyly final platele...",
+       1
+      ],
+      [
+       "slyly even theodolites maintain. even pending requests might...",
+       1
+      ],
+      [
+       "slow deposits nag around the furiously final requests. quick...",
+       1
+      ],
+      [
+       "silent Tiresias thrash for the blithely",
+       1
+      ],
+      [
+       "quickly special pinto beans nag quickly blithely close instr...",
+       1
+      ],
+      [
+       "quickly regular sauternes affix. blithely final excuses are ...",
+       1
+      ],
+      [
+       "quickly regular pinto beans boost slyly express decoys. furi...",
+       1
+      ],
+      [
+       "ironic dependencies wake carefully alongside of the realms? ...",
+       1
+      ],
+      [
+       "instructions detect blithely stealthily pending packages",
+       1
+      ],
+      [
+       "furiously unusual attainments poach. pending accounts cajole...",
+       1
+      ],
+      [
+       "furiously regular requests are furiously special deposits. e...",
+       1
+      ],
+      [
+       "furiously ironic deposits sleep blithely against the furious...",
+       1
+      ],
+      [
+       "even idle instructions haggle evenly carefully even theodoli...",
+       1
+      ],
+      [
+       "even foxes wake quickly. furiously special ideas are above t...",
+       1
+      ],
+      [
+       "enticingly silent platelets above the blithely sil",
+       1
+      ],
+      [
+       "carefully regular dependencies was regular dependencies. eve...",
+       1
+      ],
+      [
+       "carefully pending packages haggle blithely. blithely final p...",
+       1
+      ],
+      [
+       "carefully pending notornis across the quickly even theodolit...",
+       1
+      ],
+      [
+       "carefully ironic dolphins should sleep slyly furiously speci...",
+       1
+      ],
+      [
+       "carefully furious packages are-- furiously ironic accounts c...",
+       1
+      ],
+      [
+       "blithely unusual deposits are quickly--",
+       1
+      ],
+      [
+       "blithely regular dolphins nag furiously above the slyly sile...",
+       1
+      ]
+     ],
+     "description": "nation comment. comment description of nation",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "n_nationkey"
+   ],
+   "sample_rows": [
+    {
+     "n_nationkey": 0,
+     "n_name": "ALGERIA",
+     "n_regionkey": 0,
+     "n_comment": "slyly express pinto beans cajole idly. deposits use blithely..."
+    },
+    {
+     "n_nationkey": 1,
+     "n_name": "ARGENTINA",
+     "n_regionkey": 1,
+     "n_comment": "instructions detect blithely stealthily pending packages"
+    },
+    {
+     "n_nationkey": 2,
+     "n_name": "BRAZIL",
+     "n_regionkey": 1,
+     "n_comment": "blithely unusual deposits are quickly--"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "orders",
+   "row_count": 1500000,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "o_orderdate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2405,
+     "is_unique": false,
+     "min_value": "1992-01-01",
+     "max_value": "1998-08-01",
+     "examples": [
+      "1995-04-19",
+      "1996-11-04",
+      "1992-02-15",
+      "1997-07-03",
+      "1994-01-03"
+     ],
+     "top_values": [],
+     "description": "order date. date of the order",
+     "value_description": "commonsense evidence:\nearlier order date --> higher priority in delivery",
+     "notes": []
+    },
+    {
+     "name": "o_orderkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 800000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "order key. unique id number identifying the order",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "o_custkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 86416,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 149999,
+     "examples": [
+      73100,
+      92861,
+      44875,
+      72076,
+      93697
+     ],
+     "top_values": [],
+     "description": "order customer key. customer key of order",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "o_orderpriority",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "1-URGENT",
+     "max_value": "5-LOW",
+     "examples": [
+      "4-NOT SPECIFIED",
+      "1-URGENT",
+      "5-LOW",
+      "3-MEDIUM",
+      "2-HIGH"
+     ],
+     "top_values": [
+      [
+       "4-NOT SPECIFIED",
+       40201
+      ],
+      [
+       "5-LOW",
+       40061
+      ],
+      [
+       "3-MEDIUM",
+       40022
+      ],
+      [
+       "1-URGENT",
+       39907
+      ],
+      [
+       "2-HIGH",
+       39809
+      ]
+     ],
+     "description": "order priority. priority rate of order",
+     "value_description": "A smaller number means a higher priority: 0-Urgent",
+     "notes": []
+    },
+    {
+     "name": "o_shippriority",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 0,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       200000
+      ]
+     ],
+     "description": "order ship priority. ship priority of order",
+     "value_description": "NOT USEFUL",
+     "notes": []
+    },
+    {
+     "name": "o_clerk",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1000,
+     "is_unique": false,
+     "min_value": "Clerk#000000001",
+     "max_value": "Clerk#000001000",
+     "examples": [
+      "Clerk#000000916",
+      "Clerk#000000373",
+      "Clerk#000000485",
+      "Clerk#000000426",
+      "Clerk#000000944"
+     ],
+     "top_values": [],
+     "description": "order clerk. clerk of order",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "o_orderstatus",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "P",
+     "examples": [
+      "P",
+      "O",
+      "F"
+     ],
+     "top_values": [
+      [
+       "F",
+       97632
+      ],
+      [
+       "O",
+       97254
+      ],
+      [
+       "P",
+       5114
+      ]
+     ],
+     "description": "order status. status of order",
+     "value_description": "NOT USEFUL",
+     "notes": []
+    },
+    {
+     "name": "o_totalprice",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 199380,
+     "is_unique": false,
+     "min_value": 931.92,
+     "max_value": 496726.35,
+     "examples": [
+      203198.56,
+      317719.99,
+      146674.98,
+      317595.77,
+      191918.92
+     ],
+     "top_values": [],
+     "description": "order total price. total price of the order",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "o_comment",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 194035,
+     "is_unique": false,
+     "min_value": "Tiresias about the quickly ironi",
+     "max_value": "waters wake. blithely final ideas cajole",
+     "examples": [
+      "final packages sleep blithely packa",
+      "final excuses about the ironic even deposits detect express ...",
+      "final final deposits cajole foxes. blithely pendin",
+      "deposits hang slyly across the en",
+      "slowly even requests detect fluffily alongs"
+     ],
+     "top_values": [],
+     "description": "order comment. comment description of order",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "o_orderkey"
+   ],
+   "sample_rows": [
+    {
+     "o_orderdate": "1995-04-19",
+     "o_orderkey": 1,
+     "o_custkey": 73100,
+     "o_orderpriority": "4-NOT SPECIFIED",
+     "o_shippriority": 0,
+     "o_clerk": "Clerk#000000916",
+     "o_orderstatus": "P",
+     "o_totalprice": 203198.56,
+     "o_comment": "final packages sleep blithely packa"
+    },
+    {
+     "o_orderdate": "1996-11-04",
+     "o_orderkey": 2,
+     "o_custkey": 92861,
+     "o_orderpriority": "1-URGENT",
+     "o_shippriority": 0,
+     "o_clerk": "Clerk#000000373",
+     "o_orderstatus": "O",
+     "o_totalprice": 317719.99,
+     "o_comment": "final excuses about the ironic even deposits detect express ..."
+    },
+    {
+     "o_orderdate": "1992-02-15",
+     "o_orderkey": 3,
+     "o_custkey": 44875,
+     "o_orderpriority": "1-URGENT",
+     "o_shippriority": 0,
+     "o_clerk": "Clerk#000000485",
+     "o_orderstatus": "F",
+     "o_totalprice": 146674.98,
+     "o_comment": "final final deposits cajole foxes. blithely pendin"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 1,500,000 rows"
+   ]
+  },
+  {
+   "name": "part",
+   "row_count": 200000,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "p_partkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 200000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "part key. unique id number identifying the part",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "p_type",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 150,
+     "is_unique": false,
+     "min_value": "ECONOMY ANODIZED BRASS",
+     "max_value": "STANDARD POLISHED TIN",
+     "examples": [
+      "LARGE PLATED TIN",
+      "LARGE POLISHED STEEL",
+      "STANDARD PLATED COPPER",
+      "STANDARD BURNISHED BRASS",
+      "ECONOMY BRUSHED BRASS"
+     ],
+     "top_values": [],
+     "description": "part type. type of part",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "p_size",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 50,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 50,
+     "examples": [
+      31,
+      4,
+      30,
+      3,
+      7
+     ],
+     "top_values": [
+      [
+       18,
+       4173
+      ],
+      [
+       23,
+       4161
+      ],
+      [
+       20,
+       4139
+      ],
+      [
+       31,
+       4105
+      ],
+      [
+       7,
+       4080
+      ],
+      [
+       3,
+       4075
+      ],
+      [
+       25,
+       4069
+      ],
+      [
+       43,
+       4058
+      ],
+      [
+       11,
+       4052
+      ],
+      [
+       26,
+       4050
+      ],
+      [
+       49,
+       4047
+      ],
+      [
+       9,
+       4045
+      ],
+      [
+       28,
+       4043
+      ],
+      [
+       32,
+       4042
+      ],
+      [
+       50,
+       4036
+      ],
+      [
+       21,
+       4032
+      ],
+      [
+       10,
+       4025
+      ],
+      [
+       46,
+       4024
+      ],
+      [
+       22,
+       4021
+      ],
+      [
+       33,
+       4020
+      ],
+      [
+       6,
+       4009
+      ],
+      [
+       35,
+       4002
+      ],
+      [
+       36,
+       4001
+      ],
+      [
+       4,
+       3997
+      ],
+      [
+       17,
+       3996
+      ],
+      [
+       41,
+       3994
+      ],
+      [
+       27,
+       3992
+      ],
+      [
+       34,
+       3985
+      ],
+      [
+       13,
+       3983
+      ],
+      [
+       15,
+       3982
+      ],
+      [
+       14,
+       3978
+      ],
+      [
+       2,
+       3975
+      ],
+      [
+       40,
+       3969
+      ],
+      [
+       45,
+       3968
+      ],
+      [
+       5,
+       3966
+      ],
+      [
+       42,
+       3965
+      ],
+      [
+       44,
+       3960
+      ],
+      [
+       48,
+       3957
+      ],
+      [
+       30,
+       3953
+      ],
+      [
+       8,
+       3948
+      ],
+      [
+       38,
+       3944
+      ],
+      [
+       1,
+       3933
+      ],
+      [
+       29,
+       3930
+      ],
+      [
+       16,
+       3923
+      ],
+      [
+       24,
+       3916
+      ],
+      [
+       37,
+       3914
+      ],
+      [
+       12,
+       3914
+      ],
+      [
+       39,
+       3902
+      ],
+      [
+       47,
+       3901
+      ],
+      [
+       19,
+       3846
+      ]
+     ],
+     "description": "part size. size number of part",
+     "value_description": "larger number --> larger part",
+     "notes": []
+    },
+    {
+     "name": "p_brand",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 25,
+     "is_unique": false,
+     "min_value": "Brand#11",
+     "max_value": "Brand#55",
+     "examples": [
+      "Brand#43",
+      "Brand#55",
+      "Brand#53",
+      "Brand#13",
+      "Brand#14"
+     ],
+     "top_values": [
+      [
+       "Brand#15",
+       8160
+      ],
+      [
+       "Brand#32",
+       8141
+      ],
+      [
+       "Brand#41",
+       8100
+      ],
+      [
+       "Brand#14",
+       8099
+      ],
+      [
+       "Brand#55",
+       8096
+      ],
+      [
+       "Brand#52",
+       8075
+      ],
+      [
+       "Brand#44",
+       8055
+      ],
+      [
+       "Brand#22",
+       8031
+      ],
+      [
+       "Brand#34",
+       8028
+      ],
+      [
+       "Brand#23",
+       8028
+      ],
+      [
+       "Brand#31",
+       8019
+      ],
+      [
+       "Brand#11",
+       8018
+      ],
+      [
+       "Brand#54",
+       8011
+      ],
+      [
+       "Brand#51",
+       8007
+      ],
+      [
+       "Brand#42",
+       7994
+      ],
+      [
+       "Brand#53",
+       7989
+      ],
+      [
+       "Brand#33",
+       7983
+      ],
+      [
+       "Brand#13",
+       7951
+      ],
+      [
+       "Brand#24",
+       7945
+      ],
+      [
+       "Brand#21",
+       7915
+      ],
+      [
+       "Brand#25",
+       7909
+      ],
+      [
+       "Brand#12",
+       7897
+      ],
+      [
+       "Brand#35",
+       7892
+      ],
+      [
+       "Brand#43",
+       7836
+      ],
+      [
+       "Brand#45",
+       7821
+      ]
+     ],
+     "description": "part brand. brand of part",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "p_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 199998,
+     "is_unique": false,
+     "min_value": "almond almond antique snow goldenrod",
+     "max_value": "yellow yellow yellow pale beige",
+     "examples": [
+      "burlywood plum powder puff mint",
+      "hot spring dodger dim light",
+      "dark slate grey steel misty",
+      "cream turquoise dark thistle light",
+      "drab papaya lemon orange yellow"
+     ],
+     "top_values": [],
+     "description": "part name. name of part",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "p_container",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 40,
+     "is_unique": false,
+     "min_value": "JUMBO BAG",
+     "max_value": "WRAP PKG",
+     "examples": [
+      "LG BAG",
+      "LG CASE",
+      "WRAP CASE",
+      "LG PKG",
+      "MED PACK"
+     ],
+     "top_values": [
+      [
+       "WRAP PACK",
+       5138
+      ],
+      [
+       "WRAP DRUM",
+       5102
+      ],
+      [
+       "WRAP JAR",
+       5093
+      ],
+      [
+       "SM BOX",
+       5082
+      ],
+      [
+       "MED JAR",
+       5063
+      ],
+      [
+       "MED CAN",
+       5058
+      ],
+      [
+       "WRAP CASE",
+       5056
+      ],
+      [
+       "LG BAG",
+       5056
+      ],
+      [
+       "SM PACK",
+       5051
+      ],
+      [
+       "JUMBO PKG",
+       5050
+      ],
+      [
+       "WRAP BAG",
+       5046
+      ],
+      [
+       "MED CASE",
+       5044
+      ],
+      [
+       "MED DRUM",
+       5041
+      ],
+      [
+       "LG JAR",
+       5037
+      ],
+      [
+       "SM CAN",
+       5033
+      ],
+      [
+       "WRAP BOX",
+       5031
+      ],
+      [
+       "JUMBO JAR",
+       5025
+      ],
+      [
+       "SM PKG",
+       5022
+      ],
+      [
+       "LG DRUM",
+       5020
+      ],
+      [
+       "SM DRUM",
+       5018
+      ],
+      [
+       "SM CASE",
+       5018
+      ],
+      [
+       "JUMBO PACK",
+       5008
+      ],
+      [
+       "SM JAR",
+       4983
+      ],
+      [
+       "JUMBO BOX",
+       4981
+      ],
+      [
+       "LG PKG",
+       4980
+      ],
+      [
+       "MED PKG",
+       4972
+      ],
+      [
+       "WRAP CAN",
+       4964
+      ],
+      [
+       "MED BAG",
+       4960
+      ],
+      [
+       "JUMBO BAG",
+       4953
+      ],
+      [
+       "LG CAN",
+       4949
+      ],
+      [
+       "MED BOX",
+       4946
+      ],
+      [
+       "JUMBO DRUM",
+       4943
+      ],
+      [
+       "LG BOX",
+       4941
+      ],
+      [
+       "JUMBO CAN",
+       4941
+      ],
+      [
+       "WRAP PKG",
+       4936
+      ],
+      [
+       "SM BAG",
+       4922
+      ],
+      [
+       "MED PACK",
+       4913
+      ],
+      [
+       "LG CASE",
+       4904
+      ],
+      [
+       "LG PACK",
+       4880
+      ],
+      [
+       "JUMBO CASE",
+       4840
+      ]
+     ],
+     "description": "part container. container of part",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "p_mfgr",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "Manufacturer#1",
+     "max_value": "Manufacturer#5",
+     "examples": [
+      "Manufacturer#4",
+      "Manufacturer#5",
+      "Manufacturer#1",
+      "Manufacturer#3",
+      "Manufacturer#2"
+     ],
+     "top_values": [
+      [
+       "Manufacturer#5",
+       40178
+      ],
+      [
+       "Manufacturer#1",
+       40125
+      ],
+      [
+       "Manufacturer#3",
+       40063
+      ],
+      [
+       "Manufacturer#2",
+       39828
+      ],
+      [
+       "Manufacturer#4",
+       39806
+      ]
+     ],
+     "description": "part manufacturer. manufacturer of part",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "p_retailprice",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20899,
+     "is_unique": false,
+     "min_value": 901.0,
+     "max_value": 2098.99,
+     "examples": [
+      901.0,
+      902.0,
+      903.0,
+      904.0,
+      905.0
+     ],
+     "top_values": [],
+     "description": "part retail price. retail price of part",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "p_comment",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 55692,
+     "is_unique": false,
+     "min_value": "Tiresia",
+     "max_value": "waters will ca",
+     "examples": [
+      "blithely busy reque",
+      "even ironic requests s",
+      "slyly ironic fox",
+      "even silent pla",
+      "regular accounts"
+     ],
+     "top_values": [],
+     "description": "part comment. comment description text of part",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "p_partkey"
+   ],
+   "sample_rows": [
+    {
+     "p_partkey": 1,
+     "p_type": "LARGE PLATED TIN",
+     "p_size": 31,
+     "p_brand": "Brand#43",
+     "p_name": "burlywood plum powder puff mint",
+     "p_container": "LG BAG",
+     "p_mfgr": "Manufacturer#4",
+     "p_retailprice": 901.0,
+     "p_comment": "blithely busy reque"
+    },
+    {
+     "p_partkey": 2,
+     "p_type": "LARGE POLISHED STEEL",
+     "p_size": 4,
+     "p_brand": "Brand#55",
+     "p_name": "hot spring dodger dim light",
+     "p_container": "LG CASE",
+     "p_mfgr": "Manufacturer#5",
+     "p_retailprice": 902.0,
+     "p_comment": "even ironic requests s"
+    },
+    {
+     "p_partkey": 3,
+     "p_type": "STANDARD PLATED COPPER",
+     "p_size": 30,
+     "p_brand": "Brand#53",
+     "p_name": "dark slate grey steel misty",
+     "p_container": "WRAP CASE",
+     "p_mfgr": "Manufacturer#5",
+     "p_retailprice": 903.0,
+     "p_comment": "slyly ironic fox"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "partsupp",
+   "row_count": 800000,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "ps_partkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 50000,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 50000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "part supply part key. unique id number identifying the part key",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ps_suppkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 10000,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 10000,
+     "examples": [
+      2,
+      2502,
+      5002,
+      7502,
+      3
+     ],
+     "top_values": [],
+     "description": "part supply supply key. unique id number identifying the supply key",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ps_supplycost",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 86339,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 1000.0,
+     "examples": [
+      400.75,
+      702.61,
+      383.95,
+      682.18,
+      42.67
+     ],
+     "top_values": [],
+     "description": "part supply cost. cost number of the part supply",
+     "value_description": "commonsense evidence:\nprofit = (l_extendedprice*(1-l_discount)) - (ps_supplycost * l_quantity)] l_quantity comes from table lineitem!",
+     "notes": []
+    },
+    {
+     "name": "ps_availqty",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9999,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 9999,
+     "examples": [
+      1111,
+      3999,
+      7411,
+      5795,
+      4360
+     ],
+     "top_values": [],
+     "description": "part supply available quantity. available quantity of the part supply",
+     "value_description": "if ps_availqty < 10 --> closer to OOS (out of stock)",
+     "notes": []
+    },
+    {
+     "name": "ps_comment",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": "Tiresias above the even accounts are ironic packages. quickl...",
+     "max_value": "waters wake slyly after the pinto beans. permanently special...",
+     "examples": [
+      "carefully ironic deposits use against the carefully unusual ...",
+      "slyly regular accounts serve carefully. asymptotes after the...",
+      "carefully special ideas are slyly. slyly ironic epitaphs use...",
+      "deposits along the ironic pinto beans boost fluffily even ",
+      "regular pending foxes affix carefully furiously pending no"
+     ],
+     "top_values": [],
+     "description": "part supply comment. comment description of the part supply",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "ps_partkey",
+    "ps_suppkey"
+   ],
+   "sample_rows": [
+    {
+     "ps_partkey": 1,
+     "ps_suppkey": 2,
+     "ps_supplycost": 400.75,
+     "ps_availqty": 1111,
+     "ps_comment": "carefully ironic deposits use against the carefully unusual ..."
+    },
+    {
+     "ps_partkey": 1,
+     "ps_suppkey": 2502,
+     "ps_supplycost": 702.61,
+     "ps_availqty": 3999,
+     "ps_comment": "slyly regular accounts serve carefully. asymptotes after the..."
+    },
+    {
+     "ps_partkey": 1,
+     "ps_suppkey": 5002,
+     "ps_supplycost": 383.95,
+     "ps_availqty": 7411,
+     "ps_comment": "carefully special ideas are slyly. slyly ironic epitaphs use..."
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 800,000 rows"
+   ]
+  },
+  {
+   "name": "region",
+   "row_count": 5,
+   "stats_rows": 5,
+   "columns": [
+    {
+     "name": "r_regionkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": true,
+     "min_value": 0,
+     "max_value": 4,
+     "examples": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "description": "region key. unique id number identifying the region",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "r_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": true,
+     "min_value": "AFRICA",
+     "max_value": "MIDDLE EAST",
+     "examples": [
+      "AFRICA",
+      "AMERICA",
+      "ASIA",
+      "EUROPE",
+      "MIDDLE EAST"
+     ],
+     "top_values": [
+      [
+       "MIDDLE EAST",
+       1
+      ],
+      [
+       "EUROPE",
+       1
+      ],
+      [
+       "ASIA",
+       1
+      ],
+      [
+       "AMERICA",
+       1
+      ],
+      [
+       "AFRICA",
+       1
+      ]
+     ],
+     "description": "region name. name of the region",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "r_comment",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": true,
+     "min_value": "accounts cajole carefully according to the carefully exp",
+     "max_value": "slyly even theodolites are carefully ironic pinto beans. pla...",
+     "examples": [
+      "asymptotes sublate after the r",
+      "requests affix quickly final tithes. blithely even packages ...",
+      "accounts cajole carefully according to the carefully exp",
+      "slyly even theodolites are carefully ironic pinto beans. pla...",
+      "furiously express accounts wake sly"
+     ],
+     "top_values": [
+      [
+       "slyly even theodolites are carefully ironic pinto beans. pla...",
+       1
+      ],
+      [
+       "requests affix quickly final tithes. blithely even packages ...",
+       1
+      ],
+      [
+       "furiously express accounts wake sly",
+       1
+      ],
+      [
+       "asymptotes sublate after the r",
+       1
+      ],
+      [
+       "accounts cajole carefully according to the carefully exp",
+       1
+      ]
+     ],
+     "description": "region comment. comment description of the region",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "r_regionkey"
+   ],
+   "sample_rows": [
+    {
+     "r_regionkey": 0,
+     "r_name": "AFRICA",
+     "r_comment": "asymptotes sublate after the r"
+    },
+    {
+     "r_regionkey": 1,
+     "r_name": "AMERICA",
+     "r_comment": "requests affix quickly final tithes. blithely even packages ..."
+    },
+    {
+     "r_regionkey": 2,
+     "r_name": "ASIA",
+     "r_comment": "accounts cajole carefully according to the carefully exp"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "supplier",
+   "row_count": 10000,
+   "stats_rows": 10000,
+   "columns": [
+    {
+     "name": "s_suppkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 10000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 10000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "supply key. unique id number identifying the supply",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "s_nationkey",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 25,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 24,
+     "examples": [
+      13,
+      5,
+      22,
+      9,
+      2
+     ],
+     "top_values": [
+      [
+       7,
+       444
+      ],
+      [
+       19,
+       432
+      ],
+      [
+       4,
+       426
+      ],
+      [
+       21,
+       425
+      ],
+      [
+       9,
+       422
+      ],
+      [
+       23,
+       418
+      ],
+      [
+       13,
+       416
+      ],
+      [
+       0,
+       416
+      ],
+      [
+       10,
+       414
+      ],
+      [
+       12,
+       412
+      ],
+      [
+       22,
+       410
+      ],
+      [
+       3,
+       405
+      ],
+      [
+       17,
+       403
+      ],
+      [
+       1,
+       401
+      ],
+      [
+       6,
+       400
+      ],
+      [
+       15,
+       394
+      ],
+      [
+       18,
+       393
+      ],
+      [
+       2,
+       392
+      ],
+      [
+       24,
+       391
+      ],
+      [
+       14,
+       384
+      ],
+      [
+       5,
+       370
+      ],
+      [
+       16,
+       366
+      ],
+      [
+       11,
+       365
+      ],
+      [
+       8,
+       361
+      ],
+      [
+       20,
+       340
+      ]
+     ],
+     "description": "supplier nation key. nation key of the supply",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "s_comment",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9998,
+     "is_unique": false,
+     "min_value": "Tiresias about the packages affix blithely fluffily special ...",
+     "max_value": "waters sleep alongside of the regular platelets. furiously f...",
+     "examples": [
+      "blithely final pearls are. instructions thra",
+      "requests integrate fluffily. fluffily ironic deposits wake. ...",
+      "carefully express ideas shall have to unwin",
+      "quickly ironic instructions snooze? express deposits are fur...",
+      "regular requests haggle. final deposits according to the"
+     ],
+     "top_values": [],
+     "description": "supplier comment. comment description of the comment",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "s_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10000,
+     "is_unique": true,
+     "min_value": "Supplier#000000001",
+     "max_value": "Supplier#000010000",
+     "examples": [
+      "Supplier#000000001",
+      "Supplier#000000002",
+      "Supplier#000000003",
+      "Supplier#000000004",
+      "Supplier#000000005"
+     ],
+     "top_values": [],
+     "description": "supplier name. name of the supplier",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "s_address",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10000,
+     "is_unique": true,
+     "min_value": " ,eJx,LXLBsRwTo0yvof6W8C n1zIsz",
+     "max_value": "zzpppzghbP02w9qWev8Qc8G80Yeb cS",
+     "examples": [
+      ",wWs4pnykQOFl8mgVCU8EZMXqZs1w",
+      "WkXT6MSAJrp4qWq3W9N",
+      "KjUqa42JEHaRDVQTHV6Yq2h",
+      " dxp8WejdtFKFPKa Q7Emf0RjnKx3gR3",
+      "W9VO4vl4dfoDYZ RhawP8xLoc"
+     ],
+     "top_values": [],
+     "description": "supplier address. address of the supplier",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "s_phone",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10000,
+     "is_unique": true,
+     "min_value": "100-133-5786",
+     "max_value": "999-997-7974",
+     "examples": [
+      "800-807-9579",
+      "348-617-6055",
+      "471-986-9888",
+      "893-133-4384",
+      "752-877-4449"
+     ],
+     "top_values": [],
+     "description": "supplier phone. phone number of the supplier",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "s_acctbal",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9964,
+     "is_unique": false,
+     "min_value": -999.62,
+     "max_value": 9999.08,
+     "examples": [
+      3082.86,
+      3009.73,
+      9159.78,
+      9846.01,
+      -74.94
+     ],
+     "top_values": [],
+     "description": "supplier account balance. account balance of the supplier",
+     "value_description": "commonsense evidence:\nif c_acctbal < 0: this account is in debt",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "s_suppkey"
+   ],
+   "sample_rows": [
+    {
+     "s_suppkey": 1,
+     "s_nationkey": 13,
+     "s_comment": "blithely final pearls are. instructions thra",
+     "s_name": "Supplier#000000001",
+     "s_address": ",wWs4pnykQOFl8mgVCU8EZMXqZs1w",
+     "s_phone": "800-807-9579",
+     "s_acctbal": 3082.86
+    },
+    {
+     "s_suppkey": 2,
+     "s_nationkey": 5,
+     "s_comment": "requests integrate fluffily. fluffily ironic deposits wake. ...",
+     "s_name": "Supplier#000000002",
+     "s_address": "WkXT6MSAJrp4qWq3W9N",
+     "s_phone": "348-617-6055",
+     "s_acctbal": 3009.73
+    },
+    {
+     "s_suppkey": 3,
+     "s_nationkey": 22,
+     "s_comment": "carefully express ideas shall have to unwin",
+     "s_name": "Supplier#000000003",
+     "s_address": "KjUqa42JEHaRDVQTHV6Yq2h",
+     "s_phone": "471-986-9888",
+     "s_acctbal": 9159.78
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "customer",
+   "from_column": "c_nationkey",
+   "to_table": "nation",
+   "to_column": "n_nationkey",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "lineitem",
+   "from_column": "l_partkey",
+   "to_table": "partsupp",
+   "to_column": "ps_partkey",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "lineitem",
+   "from_column": "l_suppkey",
+   "to_table": "partsupp",
+   "to_column": "ps_suppkey",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "lineitem",
+   "from_column": "l_orderkey",
+   "to_table": "orders",
+   "to_column": "o_orderkey",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "nation",
+   "from_column": "n_regionkey",
+   "to_table": "region",
+   "to_column": "r_regionkey",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "orders",
+   "from_column": "o_custkey",
+   "to_table": "customer",
+   "to_column": "c_custkey",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "partsupp",
+   "from_column": "ps_suppkey",
+   "to_table": "supplier",
+   "to_column": "s_suppkey",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "partsupp",
+   "from_column": "ps_partkey",
+   "to_table": "part",
+   "to_column": "p_partkey",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "supplier",
+   "from_column": "s_nationkey",
+   "to_table": "nation",
+   "to_column": "n_nationkey",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

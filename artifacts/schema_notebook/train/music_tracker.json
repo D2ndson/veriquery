@@ -1,0 +1,524 @@
+{
+ "db_id": "music_tracker",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/music_tracker/music_tracker.sqlite",
+ "fingerprint": "15204352-1793993065800239372-v1.0",
+ "created_at": "2026-11-06T19:25:05+00:00",
+ "profile_seconds": 0.502,
+ "tables": [
+  {
+   "name": "tags",
+   "row_count": 161283,
+   "stats_rows": 161283,
+   "columns": [
+    {
+     "name": "index",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 161283,
+     "is_unique": true,
+     "min_value": 0,
+     "max_value": 161282,
+     "examples": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [],
+     "description": "index",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 59853,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 75718,
+     "examples": [
+      0,
+      2,
+      3,
+      4,
+      6
+     ],
+     "top_values": [],
+     "description": "release identifier which can be matched with id field in the torrents table",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "tag",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3678,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "zydeco",
+     "examples": [
+      "1970s",
+      "funk",
+      "disco",
+      "new.york",
+      "united.states"
+     ],
+     "top_values": [],
+     "description": "tag",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "index"
+   ],
+   "sample_rows": [
+    {
+     "index": 0,
+     "id": 0,
+     "tag": "1970s"
+    },
+    {
+     "index": 1,
+     "id": 0,
+     "tag": "funk"
+    },
+    {
+     "index": 2,
+     "id": 0,
+     "tag": "disco"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "torrents",
+   "row_count": 75719,
+   "stats_rows": 75719,
+   "columns": [
+    {
+     "name": "groupName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 69692,
+     "is_unique": false,
+     "min_value": " chapter 016: late night fuckin&#39; yo bitch",
+     "max_value": "~wave drops ~",
+     "examples": [
+      "superappin&#39;",
+      "spiderap / a corona jam",
+      "rapper&#39;s delight",
+      "rap-o clap-o / el rap-o clap-o",
+      "christmas rappin&#39;"
+     ],
+     "top_values": [],
+     "description": "release title",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "totalSnatched",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2816,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 76457,
+     "examples": [
+      239,
+      156,
+      480,
+      200,
+      109
+     ],
+     "top_values": [],
+     "description": "number of times the release has been downloaded",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "artist",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 31287,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "ｏｌｄ ｍａｓｋ",
+     "examples": [
+      "grandmaster flash & the furious five",
+      "ron hunt & ronnie g & the sm crew",
+      "sugarhill gang",
+      "joe bataan",
+      "kurtis blow"
+     ],
+     "top_values": [],
+     "description": "artist / group name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "groupYear",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 38,
+     "is_unique": false,
+     "min_value": 1979,
+     "max_value": 2016,
+     "examples": [
+      1979,
+      1980,
+      1981,
+      1982,
+      1983
+     ],
+     "top_values": [
+      [
+       2015,
+       8852
+      ],
+      [
+       2012,
+       6952
+      ],
+      [
+       2013,
+       6751
+      ],
+      [
+       2014,
+       6360
+      ],
+      [
+       2016,
+       6089
+      ],
+      [
+       2011,
+       5328
+      ],
+      [
+       2010,
+       4277
+      ],
+      [
+       2009,
+       3352
+      ],
+      [
+       2008,
+       2836
+      ],
+      [
+       2007,
+       2312
+      ],
+      [
+       2006,
+       2163
+      ],
+      [
+       2005,
+       2043
+      ],
+      [
+       2004,
+       1906
+      ],
+      [
+       2003,
+       1781
+      ],
+      [
+       2002,
+       1576
+      ],
+      [
+       2001,
+       1511
+      ],
+      [
+       2000,
+       1416
+      ],
+      [
+       1998,
+       1408
+      ],
+      [
+       1999,
+       1389
+      ],
+      [
+       1996,
+       1286
+      ],
+      [
+       1997,
+       1260
+      ],
+      [
+       1995,
+       1126
+      ],
+      [
+       1994,
+       868
+      ],
+      [
+       1993,
+       689
+      ],
+      [
+       1992,
+       482
+      ],
+      [
+       1991,
+       451
+      ],
+      [
+       1990,
+       325
+      ],
+      [
+       1989,
+       297
+      ],
+      [
+       1988,
+       210
+      ],
+      [
+       1987,
+       95
+      ],
+      [
+       1984,
+       81
+      ],
+      [
+       1986,
+       68
+      ],
+      [
+       1985,
+       68
+      ],
+      [
+       1983,
+       56
+      ],
+      [
+       1982,
+       20
+      ],
+      [
+       1980,
+       18
+      ],
+      [
+       1981,
+       9
+      ],
+      [
+       1979,
+       8
+      ]
+     ],
+     "description": "release year",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "releaseType",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 15,
+     "is_unique": false,
+     "min_value": "album",
+     "max_value": "unknown",
+     "examples": [
+      "single",
+      "album",
+      "live album",
+      "ep",
+      "unknown"
+     ],
+     "top_values": [
+      [
+       "album",
+       35233
+      ],
+      [
+       "single",
+       12228
+      ],
+      [
+       "ep",
+       10260
+      ],
+      [
+       "compilation",
+       5691
+      ],
+      [
+       "mixtape",
+       5620
+      ],
+      [
+       "remix",
+       1887
+      ],
+      [
+       "anthology",
+       1373
+      ],
+      [
+       "dj mix",
+       1099
+      ],
+      [
+       "bootleg",
+       976
+      ],
+      [
+       "soundtrack",
+       578
+      ],
+      [
+       "live album",
+       449
+      ],
+      [
+       "unknown",
+       187
+      ],
+      [
+       "demo",
+       96
+      ],
+      [
+       "concert recording",
+       32
+      ],
+      [
+       "interview",
+       10
+      ]
+     ],
+     "description": "release type (e.g., album, single, mixtape)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "groupId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 75719,
+     "is_unique": true,
+     "min_value": 5,
+     "max_value": 73340658,
+     "examples": [
+      720949,
+      728752,
+      18513,
+      756236,
+      71818958
+     ],
+     "top_values": [],
+     "description": "Unique release identifier from What.CD. Used to ensure no releases are duplicates.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 75719,
+     "is_unique": true,
+     "min_value": 0,
+     "max_value": 75718,
+     "examples": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [],
+     "description": "unique identifier (essentially an index)",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "groupName": "superappin&#39;",
+     "totalSnatched": 239,
+     "artist": "grandmaster flash & the furious five",
+     "groupYear": 1979,
+     "releaseType": "single",
+     "groupId": 720949,
+     "id": 0
+    },
+    {
+     "groupName": "spiderap / a corona jam",
+     "totalSnatched": 156,
+     "artist": "ron hunt & ronnie g & the sm crew",
+     "groupYear": 1979,
+     "releaseType": "single",
+     "groupId": 728752,
+     "id": 1
+    },
+    {
+     "groupName": "rapper&#39;s delight",
+     "totalSnatched": 480,
+     "artist": "sugarhill gang",
+     "groupYear": 1979,
+     "releaseType": "single",
+     "groupId": 18513,
+     "id": 2
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "tags",
+   "from_column": "id",
+   "to_table": "torrents",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

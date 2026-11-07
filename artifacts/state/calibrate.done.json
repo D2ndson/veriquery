@@ -1,0 +1,22 @@
+{
+ "stage": "calibrate",
+ "seconds": 0.4,
+ "finished": "2026-11-06 21:18:33",
+ "info": {
+  "fitted": true,
+  "n": 261,
+  "positive_rate": 0.6091954022988506,
+  "ece": 7.273874988923439e-17,
+  "auroc": 0.8385127635960046,
+  "threshold": {
+   "threshold": 1.0,
+   "coverage": 0.09195402298850575,
+   "accepted": 24,
+   "errors": 0,
+   "risk_upper_bound": 0.09148242434831322,
+   "empirical_risk": 0.0,
+   "alpha": 0.1,
+   "delta": 0.1
+  }
+ }
+}

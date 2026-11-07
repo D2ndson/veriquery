@@ -1,0 +1,1 @@
+{"fingerprint": "5070848-1793993071896362648-v1.0", "values": {"cars": {"shape": ["bucket", "ellipse", "hexagon", "rectangle", "u_shaped"], "len": ["long", "short"], "sides": ["double", "not_double"], "roof": ["arc", "flat", "jagged", "none", "peaked"], "load_shape": ["circle", "diamond", "hexagon", "rectangle", "triangle"]}, "trains": {"direction": ["east", "west"]}}}

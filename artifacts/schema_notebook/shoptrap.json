@@ -1,0 +1,2356 @@
+{
+ "db_id": "shoptrap",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/shoptrap/shoptrap.sqlite",
+ "fingerprint": "618496-1793992856257040181-v1.0",
+ "created_at": "2026-11-06T19:25:48+00:00",
+ "profile_seconds": 0.036,
+ "tables": [
+  {
+   "name": "customers",
+   "row_count": 300,
+   "stats_rows": 300,
+   "columns": [
+    {
+     "name": "customer_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 300,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 300,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 201,
+     "is_unique": false,
+     "min_value": "Aiden Ali",
+     "max_value": "Zara Wong",
+     "examples": [
+      "Wei Wong",
+      "Ravi Tan",
+      "Rahul Singh",
+      "Ravi Teo",
+      "Lina Lee"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "email",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 300,
+     "is_unique": true,
+     "min_value": "aiden.ali148@example.com",
+     "max_value": "zara.wong68@example.com",
+     "examples": [
+      "wei.wong1@example.com",
+      "ravi.tan2@example.com",
+      "rahul.singh3@example.com",
+      "ravi.teo4@example.com",
+      "lina.lee5@example.com"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "phone",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 300,
+     "is_unique": true,
+     "min_value": "+65 8103 9055",
+     "max_value": "+65 9996 6627",
+     "examples": [
+      "+65 8174 9779",
+      "+65 8138 2408",
+      "+65 9160 3028",
+      "+65 8326 1763",
+      "+65 8684 6054"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "Bangkok",
+     "max_value": "Singapore",
+     "examples": [
+      "Singapore",
+      "Johor Bahru",
+      "Jakarta",
+      "Kuala Lumpur",
+      "Bangkok"
+     ],
+     "top_values": [
+      [
+       "Singapore",
+       154
+      ],
+      [
+       "Manila",
+       35
+      ],
+      [
+       "Kuala Lumpur",
+       32
+      ],
+      [
+       "Johor Bahru",
+       28
+      ],
+      [
+       "Jakarta",
+       28
+      ],
+      [
+       "Bangkok",
+       23
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "signup_date",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 262,
+     "is_unique": false,
+     "min_value": "2022-06-02",
+     "max_value": "2024-11-09",
+     "examples": [
+      "2023-07-10",
+      "2023-11-02",
+      "2022-09-01",
+      "2023-07-12",
+      "2022-10-26"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "segment",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Consumer",
+     "max_value": "Home Office",
+     "examples": [
+      "Corporate",
+      "Home Office",
+      "Consumer"
+     ],
+     "top_values": [
+      [
+       "Consumer",
+       141
+      ],
+      [
+       "Corporate",
+       86
+      ],
+      [
+       "Home Office",
+       73
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "customer_id"
+   ],
+   "sample_rows": [
+    {
+     "customer_id": 1,
+     "name": "Wei Wong",
+     "email": "wei.wong1@example.com",
+     "phone": "+65 8174 9779",
+     "city": "Singapore",
+     "signup_date": "2023-07-10",
+     "segment": "Corporate"
+    },
+    {
+     "customer_id": 2,
+     "name": "Ravi Tan",
+     "email": "ravi.tan2@example.com",
+     "phone": "+65 8138 2408",
+     "city": "Johor Bahru",
+     "signup_date": "2023-11-02",
+     "segment": "Home Office"
+    },
+    {
+     "customer_id": 3,
+     "name": "Rahul Singh",
+     "email": "rahul.singh3@example.com",
+     "phone": "+65 9160 3028",
+     "city": "Singapore",
+     "signup_date": "2022-09-01",
+     "segment": "Consumer"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "monthly_targets",
+   "row_count": 180,
+   "stats_rows": 180,
+   "columns": [
+    {
+     "name": "month",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 30,
+     "is_unique": false,
+     "min_value": "202301",
+     "max_value": "202506",
+     "examples": [
+      "202301",
+      "202302",
+      "202303",
+      "202304",
+      "202305"
+     ],
+     "top_values": [
+      [
+       "202506",
+       6
+      ],
+      [
+       "202505",
+       6
+      ],
+      [
+       "202504",
+       6
+      ],
+      [
+       "202503",
+       6
+      ],
+      [
+       "202502",
+       6
+      ],
+      [
+       "202501",
+       6
+      ],
+      [
+       "202412",
+       6
+      ],
+      [
+       "202411",
+       6
+      ],
+      [
+       "202410",
+       6
+      ],
+      [
+       "202409",
+       6
+      ],
+      [
+       "202408",
+       6
+      ],
+      [
+       "202407",
+       6
+      ],
+      [
+       "202406",
+       6
+      ],
+      [
+       "202405",
+       6
+      ],
+      [
+       "202404",
+       6
+      ],
+      [
+       "202403",
+       6
+      ],
+      [
+       "202402",
+       6
+      ],
+      [
+       "202401",
+       6
+      ],
+      [
+       "202312",
+       6
+      ],
+      [
+       "202311",
+       6
+      ],
+      [
+       "202310",
+       6
+      ],
+      [
+       "202309",
+       6
+      ],
+      [
+       "202308",
+       6
+      ],
+      [
+       "202307",
+       6
+      ],
+      [
+       "202306",
+       6
+      ],
+      [
+       "202305",
+       6
+      ],
+      [
+       "202304",
+       6
+      ],
+      [
+       "202303",
+       6
+      ],
+      [
+       "202302",
+       6
+      ],
+      [
+       "202301",
+       6
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "category",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "Accessories",
+     "max_value": "Sports",
+     "examples": [
+      "Electronics",
+      "Home",
+      "Fashion",
+      "Grocery",
+      "Accessories"
+     ],
+     "top_values": [
+      [
+       "Sports",
+       30
+      ],
+      [
+       "Home",
+       30
+      ],
+      [
+       "Grocery",
+       30
+      ],
+      [
+       "Fashion",
+       30
+      ],
+      [
+       "Electronics",
+       30
+      ],
+      [
+       "Accessories",
+       30
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "target_revenue",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 180,
+     "is_unique": true,
+     "min_value": 20032.19,
+     "max_value": 59888.83,
+     "examples": [
+      50456.67,
+      46398.76,
+      47011.51,
+      57627.96,
+      25155.88
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "month": "202301",
+     "category": "Electronics",
+     "target_revenue": 50456.67
+    },
+    {
+     "month": "202301",
+     "category": "Home",
+     "target_revenue": 46398.76
+    },
+    {
+     "month": "202301",
+     "category": "Fashion",
+     "target_revenue": 47011.51
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "order_items",
+   "row_count": 12595,
+   "stats_rows": 12595,
+   "columns": [
+    {
+     "name": "item_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 12595,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 12595,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "order_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5089,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 5089,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "product_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 39,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 39,
+     "examples": [
+      6,
+      1,
+      23,
+      2,
+      36
+     ],
+     "top_values": [
+      [
+       24,
+       533
+      ],
+      [
+       25,
+       530
+      ],
+      [
+       22,
+       528
+      ],
+      [
+       26,
+       520
+      ],
+      [
+       23,
+       518
+      ],
+      [
+       21,
+       488
+      ],
+      [
+       31,
+       446
+      ],
+      [
+       32,
+       439
+      ],
+      [
+       27,
+       422
+      ],
+      [
+       28,
+       411
+      ],
+      [
+       29,
+       399
+      ],
+      [
+       30,
+       398
+      ],
+      [
+       18,
+       328
+      ],
+      [
+       14,
+       318
+      ],
+      [
+       17,
+       313
+      ],
+      [
+       16,
+       311
+      ],
+      [
+       20,
+       302
+      ],
+      [
+       13,
+       287
+      ],
+      [
+       11,
+       285
+      ],
+      [
+       15,
+       284
+      ],
+      [
+       19,
+       280
+      ],
+      [
+       8,
+       273
+      ],
+      [
+       7,
+       272
+      ],
+      [
+       4,
+       267
+      ],
+      [
+       5,
+       264
+      ],
+      [
+       6,
+       261
+      ],
+      [
+       12,
+       257
+      ],
+      [
+       3,
+       256
+      ],
+      [
+       2,
+       256
+      ],
+      [
+       10,
+       255
+      ],
+      [
+       9,
+       254
+      ],
+      [
+       1,
+       245
+      ],
+      [
+       34,
+       231
+      ],
+      [
+       35,
+       201
+      ],
+      [
+       37,
+       200
+      ],
+      [
+       36,
+       200
+      ],
+      [
+       39,
+       195
+      ],
+      [
+       38,
+       186
+      ],
+      [
+       33,
+       182
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "quantity",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 3,
+     "examples": [
+      3,
+      2,
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       4346
+      ],
+      [
+       3,
+       4227
+      ],
+      [
+       2,
+       4022
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "unit_price_cents",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 33,
+     "is_unique": false,
+     "min_value": 600,
+     "max_value": 129900,
+     "examples": [
+      31900,
+      129900,
+      800,
+      89900,
+      12900
+     ],
+     "top_values": [
+      [
+       1500,
+       1111
+      ],
+      [
+       3500,
+       581
+      ],
+      [
+       1900,
+       567
+      ],
+      [
+       7900,
+       541
+      ],
+      [
+       600,
+       533
+      ],
+      [
+       1400,
+       530
+      ],
+      [
+       1200,
+       528
+      ],
+      [
+       1800,
+       520
+      ],
+      [
+       800,
+       518
+      ],
+      [
+       8900,
+       486
+      ],
+      [
+       12900,
+       472
+      ],
+      [
+       2500,
+       446
+      ],
+      [
+       3900,
+       439
+      ],
+      [
+       900,
+       411
+      ],
+      [
+       700,
+       398
+      ],
+      [
+       4900,
+       328
+      ],
+      [
+       9900,
+       318
+      ],
+      [
+       5900,
+       313
+      ],
+      [
+       6900,
+       311
+      ],
+      [
+       2900,
+       302
+      ],
+      [
+       15900,
+       285
+      ],
+      [
+       39900,
+       273
+      ],
+      [
+       19900,
+       267
+      ],
+      [
+       24900,
+       264
+      ],
+      [
+       31900,
+       261
+      ],
+      [
+       89900,
+       256
+      ],
+      [
+       49900,
+       256
+      ],
+      [
+       4500,
+       254
+      ],
+      [
+       129900,
+       214
+      ],
+      [
+       2200,
+       200
+      ],
+      [
+       2600,
+       195
+      ],
+      [
+       1100,
+       186
+      ],
+      [
+       116910,
+       31
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "discount_pct",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 20.0,
+     "examples": [
+      0.0,
+      5.0,
+      10.0,
+      15.0,
+      20.0
+     ],
+     "top_values": [
+      [
+       0.0,
+       5299
+      ],
+      [
+       5.0,
+       1849
+      ],
+      [
+       20.0,
+       1834
+      ],
+      [
+       10.0,
+       1814
+      ],
+      [
+       15.0,
+       1799
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "item_id"
+   ],
+   "sample_rows": [
+    {
+     "item_id": 1,
+     "order_id": 1,
+     "product_id": 6,
+     "quantity": 3,
+     "unit_price_cents": 31900,
+     "discount_pct": 0.0
+    },
+    {
+     "item_id": 2,
+     "order_id": 2,
+     "product_id": 1,
+     "quantity": 3,
+     "unit_price_cents": 129900,
+     "discount_pct": 0.0
+    },
+    {
+     "item_id": 3,
+     "order_id": 2,
+     "product_id": 1,
+     "quantity": 2,
+     "unit_price_cents": 129900,
+     "discount_pct": 5.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "orders",
+   "row_count": 5089,
+   "stats_rows": 5089,
+   "columns": [
+    {
+     "name": "order_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5089,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 5089,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "customer_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 300,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 300,
+     "examples": [
+      129,
+      268,
+      204,
+      203,
+      128
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "order_date",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 834,
+     "is_unique": false,
+     "min_value": "2023-01-01",
+     "max_value": "2025-06-28",
+     "examples": [
+      "2023-01-06",
+      "2023-01-01",
+      "2023-01-28",
+      "2023-01-27",
+      "2023-01-05"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "status",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "cancelled",
+     "max_value": "returned",
+     "examples": [
+      "delivered",
+      "returned",
+      "cancelled"
+     ],
+     "top_values": [
+      [
+       "delivered",
+       4397
+      ],
+      [
+       "cancelled",
+       379
+      ],
+      [
+       "returned",
+       269
+      ],
+      [
+       "pending",
+       44
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "channel",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "app",
+     "max_value": "web",
+     "examples": [
+      "web",
+      "store",
+      "app"
+     ],
+     "top_values": [
+      [
+       "web",
+       2561
+      ],
+      [
+       "app",
+       1291
+      ],
+      [
+       "store",
+       1237
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "shipping_fee",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 7.5,
+     "examples": [
+      5.0,
+      7.5,
+      0.0,
+      3.5
+     ],
+     "top_values": [
+      [
+       7.5,
+       1291
+      ],
+      [
+       5.0,
+       1290
+      ],
+      [
+       3.5,
+       1274
+      ],
+      [
+       0.0,
+       1234
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "order_id"
+   ],
+   "sample_rows": [
+    {
+     "order_id": 1,
+     "customer_id": 129,
+     "order_date": "2023-01-06",
+     "status": "delivered",
+     "channel": "web",
+     "shipping_fee": 5.0
+    },
+    {
+     "order_id": 2,
+     "customer_id": 268,
+     "order_date": "2023-01-01",
+     "status": "delivered",
+     "channel": "web",
+     "shipping_fee": 7.5
+    },
+    {
+     "order_id": 3,
+     "customer_id": 204,
+     "order_date": "2023-01-28",
+     "status": "delivered",
+     "channel": "web",
+     "shipping_fee": 7.5
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "payments",
+   "row_count": 5089,
+   "stats_rows": 5089,
+   "columns": [
+    {
+     "name": "payment_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5089,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 5089,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "order_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5089,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 5089,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "amount_cents",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3835,
+     "is_unique": false,
+     "min_value": 560,
+     "max_value": 880790,
+     "examples": [
+      96200,
+      880790,
+      37515,
+      26170,
+      5400
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "method",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "card",
+     "max_value": "paynow",
+     "examples": [
+      "paynow",
+      "card",
+      "cash"
+     ],
+     "top_values": [
+      [
+       "cash",
+       1743
+      ],
+      [
+       "paynow",
+       1691
+      ],
+      [
+       "card",
+       1655
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "payment_id"
+   ],
+   "sample_rows": [
+    {
+     "payment_id": 1,
+     "order_id": 1,
+     "amount_cents": 96200,
+     "method": "paynow"
+    },
+    {
+     "payment_id": 2,
+     "order_id": 2,
+     "amount_cents": 880790,
+     "method": "card"
+    },
+    {
+     "payment_id": 3,
+     "order_id": 3,
+     "amount_cents": 37515,
+     "method": "cash"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "products",
+   "row_count": 39,
+   "stats_rows": 39,
+   "columns": [
+    {
+     "name": "product_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 39,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 39,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       39,
+       1
+      ],
+      [
+       38,
+       1
+      ],
+      [
+       37,
+       1
+      ],
+      [
+       36,
+       1
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       34,
+       1
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       32,
+       1
+      ],
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 39,
+     "is_unique": true,
+     "min_value": "Air Fryer",
+     "max_value": "Yoga Mat",
+     "examples": [
+      "Laptop Pro",
+      "Phone X",
+      "Tablet Air",
+      "Headphones",
+      "Smartwatch"
+     ],
+     "top_values": [
+      [
+       "Yoga Mat",
+       1
+      ],
+      [
+       "Wool Scarf",
+       1
+      ],
+      [
+       "Wireless Charger",
+       1
+      ],
+      [
+       "Water Bottle",
+       1
+      ],
+      [
+       "Vacuum Robot",
+       1
+      ],
+      [
+       "USB-C Cable",
+       1
+      ],
+      [
+       "Tennis Racket",
+       1
+      ],
+      [
+       "Tablet Air",
+       1
+      ],
+      [
+       "Sunglasses",
+       1
+      ],
+      [
+       "Storage Box",
+       1
+      ],
+      [
+       "Smartwatch",
+       1
+      ],
+      [
+       "Screen Guard",
+       1
+      ],
+      [
+       "Running Shoes",
+       1
+      ],
+      [
+       "Rain Jacket",
+       1
+      ],
+      [
+       "Power Bank",
+       1
+      ],
+      [
+       "Phone X",
+       1
+      ],
+      [
+       "Phone Case",
+       1
+      ],
+      [
+       "Olive Oil",
+       1
+      ],
+      [
+       "Monitor 27",
+       1
+      ],
+      [
+       "Laptop Sleeve",
+       1
+      ],
+      [
+       "Laptop Pro",
+       1
+      ],
+      [
+       "Jump Rope",
+       1
+      ],
+      [
+       "Honey",
+       1
+      ],
+      [
+       "Headphones",
+       1
+      ],
+      [
+       "Green Tea",
+       1
+      ],
+      [
+       "Granola",
+       1
+      ],
+      [
+       "Foam Roller",
+       1
+      ],
+      [
+       "Dumbbell Set",
+       1
+      ],
+      [
+       "Desk Lamp",
+       1
+      ],
+      [
+       "Denim Jeans",
+       1
+      ],
+      [
+       "Dark Chocolate",
+       1
+      ],
+      [
+       "Cycling Gloves",
+       1
+      ],
+      [
+       "Cotton Tee",
+       1
+      ],
+      [
+       "Coffee Maker",
+       1
+      ],
+      [
+       "Coffee Beans",
+       1
+      ],
+      [
+       "Blender",
+       1
+      ],
+      [
+       "Bedding Set",
+       1
+      ],
+      [
+       "Backpack",
+       1
+      ],
+      [
+       "Air Fryer",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "category",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "Accessories",
+     "max_value": "Sports",
+     "examples": [
+      "Electronics",
+      "Home",
+      "Fashion",
+      "Grocery",
+      "Accessories"
+     ],
+     "top_values": [
+      [
+       "Sports",
+       7
+      ],
+      [
+       "Home",
+       7
+      ],
+      [
+       "Fashion",
+       7
+      ],
+      [
+       "Grocery",
+       6
+      ],
+      [
+       "Electronics",
+       6
+      ],
+      [
+       "Accessories",
+       6
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "unit_price_cents",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 32,
+     "is_unique": false,
+     "min_value": 600,
+     "max_value": 129900,
+     "examples": [
+      129900,
+      89900,
+      49900,
+      19900,
+      24900
+     ],
+     "top_values": [
+      [
+       1500,
+       3
+      ],
+      [
+       12900,
+       2
+      ],
+      [
+       8900,
+       2
+      ],
+      [
+       7900,
+       2
+      ],
+      [
+       3500,
+       2
+      ],
+      [
+       1900,
+       2
+      ],
+      [
+       129900,
+       1
+      ],
+      [
+       89900,
+       1
+      ],
+      [
+       49900,
+       1
+      ],
+      [
+       39900,
+       1
+      ],
+      [
+       31900,
+       1
+      ],
+      [
+       24900,
+       1
+      ],
+      [
+       19900,
+       1
+      ],
+      [
+       15900,
+       1
+      ],
+      [
+       9900,
+       1
+      ],
+      [
+       6900,
+       1
+      ],
+      [
+       5900,
+       1
+      ],
+      [
+       4900,
+       1
+      ],
+      [
+       4500,
+       1
+      ],
+      [
+       3900,
+       1
+      ],
+      [
+       2900,
+       1
+      ],
+      [
+       2600,
+       1
+      ],
+      [
+       2500,
+       1
+      ],
+      [
+       2200,
+       1
+      ],
+      [
+       1800,
+       1
+      ],
+      [
+       1400,
+       1
+      ],
+      [
+       1200,
+       1
+      ],
+      [
+       1100,
+       1
+      ],
+      [
+       900,
+       1
+      ],
+      [
+       800,
+       1
+      ],
+      [
+       700,
+       1
+      ],
+      [
+       600,
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "launched",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 39,
+     "is_unique": true,
+     "min_value": "01/01/2024",
+     "max_value": "31/12/2023",
+     "examples": [
+      "22/02/2022",
+      "17/11/2023",
+      "12/08/2022",
+      "22/08/2022",
+      "17/11/2024"
+     ],
+     "top_values": [
+      [
+       "31/12/2023",
+       1
+      ],
+      [
+       "31/01/2024",
+       1
+      ],
+      [
+       "30/06/2023",
+       1
+      ],
+      [
+       "29/01/2023",
+       1
+      ],
+      [
+       "25/08/2023",
+       1
+      ],
+      [
+       "24/04/2022",
+       1
+      ],
+      [
+       "22/11/2024",
+       1
+      ],
+      [
+       "22/08/2022",
+       1
+      ],
+      [
+       "22/02/2022",
+       1
+      ],
+      [
+       "22/01/2024",
+       1
+      ],
+      [
+       "20/10/2023",
+       1
+      ],
+      [
+       "18/04/2024",
+       1
+      ],
+      [
+       "17/11/2024",
+       1
+      ],
+      [
+       "17/11/2023",
+       1
+      ],
+      [
+       "17/04/2024",
+       1
+      ],
+      [
+       "17/04/2023",
+       1
+      ],
+      [
+       "17/01/2024",
+       1
+      ],
+      [
+       "16/08/2023",
+       1
+      ],
+      [
+       "15/05/2022",
+       1
+      ],
+      [
+       "14/05/2023",
+       1
+      ],
+      [
+       "12/11/2024",
+       1
+      ],
+      [
+       "12/08/2022",
+       1
+      ],
+      [
+       "12/06/2022",
+       1
+      ],
+      [
+       "11/10/2024",
+       1
+      ],
+      [
+       "10/10/2024",
+       1
+      ],
+      [
+       "10/10/2022",
+       1
+      ],
+      [
+       "10/08/2023",
+       1
+      ],
+      [
+       "10/06/2024",
+       1
+      ],
+      [
+       "09/03/2023",
+       1
+      ],
+      [
+       "08/10/2022",
+       1
+      ],
+      [
+       "06/10/2024",
+       1
+      ],
+      [
+       "06/05/2022",
+       1
+      ],
+      [
+       "05/01/2025",
+       1
+      ],
+      [
+       "04/05/2023",
+       1
+      ],
+      [
+       "04/01/2022",
+       1
+      ],
+      [
+       "02/09/2022",
+       1
+      ],
+      [
+       "02/02/2022",
+       1
+      ],
+      [
+       "01/08/2023",
+       1
+      ],
+      [
+       "01/01/2024",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "rating",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2564,
+     "distinct_count": 14,
+     "is_unique": false,
+     "min_value": 3.1,
+     "max_value": 4.9,
+     "examples": [
+      4.7,
+      3.5,
+      4.8,
+      3.4,
+      3.2
+     ],
+     "top_values": [
+      [
+       4.7,
+       5
+      ],
+      [
+       3.4,
+       5
+      ],
+      [
+       4.0,
+       4
+      ],
+      [
+       4.8,
+       2
+      ],
+      [
+       4.1,
+       2
+      ],
+      [
+       3.5,
+       2
+      ],
+      [
+       3.2,
+       2
+      ],
+      [
+       4.9,
+       1
+      ],
+      [
+       4.6,
+       1
+      ],
+      [
+       4.4,
+       1
+      ],
+      [
+       3.9,
+       1
+      ],
+      [
+       3.7,
+       1
+      ],
+      [
+       3.3,
+       1
+      ],
+      [
+       3.1,
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "product_id"
+   ],
+   "sample_rows": [
+    {
+     "product_id": 1,
+     "name": "Laptop Pro",
+     "category": "Electronics",
+     "unit_price_cents": 129900,
+     "launched": "22/02/2022",
+     "rating": 4.7
+    },
+    {
+     "product_id": 2,
+     "name": "Phone X",
+     "category": "Electronics",
+     "unit_price_cents": 89900,
+     "launched": "17/11/2023",
+     "rating": 3.5
+    },
+    {
+     "product_id": 3,
+     "name": "Tablet Air",
+     "category": "Electronics",
+     "unit_price_cents": 49900,
+     "launched": "12/08/2022",
+     "rating": 4.8
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "returns",
+   "row_count": 328,
+   "stats_rows": 328,
+   "columns": [
+    {
+     "name": "return_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 328,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 328,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "item_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 328,
+     "is_unique": true,
+     "min_value": 15,
+     "max_value": 12102,
+     "examples": [
+      15,
+      190,
+      263,
+      266,
+      267
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "reason",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "changed mind",
+     "max_value": "wrong item",
+     "examples": [
+      "damaged",
+      "changed mind",
+      "wrong item"
+     ],
+     "top_values": [
+      [
+       "changed mind",
+       116
+      ],
+      [
+       "wrong item",
+       108
+      ],
+      [
+       "damaged",
+       104
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "refund_cents",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 200,
+     "is_unique": false,
+     "min_value": 510,
+     "max_value": 389700,
+     "examples": [
+      11730,
+      3060,
+      74700,
+      15900,
+      4500
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "return_id"
+   ],
+   "sample_rows": [
+    {
+     "return_id": 1,
+     "item_id": 15,
+     "reason": "damaged",
+     "refund_cents": 11730
+    },
+    {
+     "return_id": 2,
+     "item_id": 190,
+     "reason": "damaged",
+     "refund_cents": 3060
+    },
+    {
+     "return_id": 3,
+     "item_id": 263,
+     "reason": "changed mind",
+     "refund_cents": 74700
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "order_items",
+   "from_column": "product_id",
+   "to_table": "products",
+   "to_column": "product_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "order_items",
+   "from_column": "order_id",
+   "to_table": "orders",
+   "to_column": "order_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "orders",
+   "from_column": "customer_id",
+   "to_table": "customers",
+   "to_column": "customer_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "payments",
+   "from_column": "order_id",
+   "to_table": "orders",
+   "to_column": "order_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "returns",
+   "from_column": "item_id",
+   "to_table": "order_items",
+   "to_column": "item_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "order_items",
+   "from_column": "order_id",
+   "to_table": "payments",
+   "to_column": "order_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

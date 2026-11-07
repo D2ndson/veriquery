@@ -1,0 +1,262 @@
+{
+ "db_id": "citeseer",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/citeseer/citeseer.sqlite",
+ "fingerprint": "7430144-1793993025801431912-v1.0",
+ "created_at": "2026-11-06T19:24:49+00:00",
+ "profile_seconds": 0.409,
+ "tables": [
+  {
+   "name": "cites",
+   "row_count": 4732,
+   "stats_rows": 4732,
+   "columns": [
+    {
+     "name": "cited_paper_id",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1962,
+     "is_unique": false,
+     "min_value": "100157",
+     "max_value": "zhu00segmenting",
+     "examples": [
+      "100157",
+      "100598",
+      "101570",
+      "10227",
+      "103027"
+     ],
+     "top_values": [],
+     "description": "cited_paper_id is the ID of the paper being cited",
+     "value_description": "cited_paper_id is the ID of the paper being cited",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "citing_paper_id",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2321,
+     "is_unique": false,
+     "min_value": "100157",
+     "max_value": "zunino01representing",
+     "examples": [
+      "100157",
+      "364207",
+      "38848",
+      "bradshaw97introduction",
+      "bylund99coordinating"
+     ],
+     "top_values": [],
+     "description": "citing_paper_id stands for the paper which contains the citation",
+     "value_description": "citing_paper_id stands for the paper which contains the citation",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "cited_paper_id",
+    "citing_paper_id"
+   ],
+   "sample_rows": [
+    {
+     "cited_paper_id": "100157",
+     "citing_paper_id": "100157"
+    },
+    {
+     "cited_paper_id": "100157",
+     "citing_paper_id": "364207"
+    },
+    {
+     "cited_paper_id": "100157",
+     "citing_paper_id": "38848"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "content",
+   "row_count": 105165,
+   "stats_rows": 105165,
+   "columns": [
+    {
+     "name": "paper_id",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3312,
+     "is_unique": false,
+     "min_value": "100157",
+     "max_value": "zunino01representing",
+     "examples": [
+      "100157",
+      "100598",
+      "101570",
+      "10227",
+      "102637"
+     ],
+     "top_values": [],
+     "description": "paper id. unique string ID of the paper",
+     "value_description": "unique string ID of the paper",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "word_cited_id",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3703,
+     "is_unique": false,
+     "min_value": "word1",
+     "max_value": "word999",
+     "examples": [
+      "word1163",
+      "word1509",
+      "word1614",
+      "word1642",
+      "word1663"
+     ],
+     "top_values": [],
+     "description": "word cited id. rtype",
+     "value_description": "whether each word in the vocabulary is present (indicated by 1) or absent (indicated by 0) in the paper",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "paper_id",
+    "word_cited_id"
+   ],
+   "sample_rows": [
+    {
+     "paper_id": "100157",
+     "word_cited_id": "word1163"
+    },
+    {
+     "paper_id": "100157",
+     "word_cited_id": "word1509"
+    },
+    {
+     "paper_id": "100157",
+     "word_cited_id": "word1614"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "paper",
+   "row_count": 3312,
+   "stats_rows": 3312,
+   "columns": [
+    {
+     "name": "paper_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3312,
+     "is_unique": true,
+     "min_value": "100157",
+     "max_value": "zunino01representing",
+     "examples": [
+      "100157",
+      "100598",
+      "101570",
+      "10227",
+      "102637"
+     ],
+     "top_values": [],
+     "description": "paper id. unique string ID of the paper",
+     "value_description": "unique string ID of the paper",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "class_label",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "AI",
+     "max_value": "ML",
+     "examples": [
+      "Agents",
+      "IR",
+      "ML",
+      "AI",
+      "DB"
+     ],
+     "top_values": [
+      [
+       "DB",
+       701
+      ],
+      [
+       "IR",
+       668
+      ],
+      [
+       "Agents",
+       596
+      ],
+      [
+       "ML",
+       590
+      ],
+      [
+       "HCI",
+       508
+      ],
+      [
+       "AI",
+       249
+      ]
+     ],
+     "description": "class label",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "paper_id"
+   ],
+   "sample_rows": [
+    {
+     "paper_id": "100157",
+     "class_label": "Agents"
+    },
+    {
+     "paper_id": "100598",
+     "class_label": "IR"
+    },
+    {
+     "paper_id": "101570",
+     "class_label": "ML"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "content",
+   "from_column": "paper_id",
+   "to_table": "paper",
+   "to_column": "paper_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

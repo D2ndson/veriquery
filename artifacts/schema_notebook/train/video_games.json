@@ -1,0 +1,1477 @@
+{
+ "db_id": "video_games",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/video_games/video_games.sqlite",
+ "fingerprint": "2547712-1793993021766350594-v1.0",
+ "created_at": "2026-11-06T19:25:20+00:00",
+ "profile_seconds": 0.186,
+ "tables": [
+  {
+   "name": "game",
+   "row_count": 11317,
+   "stats_rows": 11317,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 11317,
+     "is_unique": true,
+     "min_value": 44,
+     "max_value": 11364,
+     "examples": [
+      44,
+      45,
+      46,
+      47,
+      48
+     ],
+     "top_values": [],
+     "description": "the unique identifier of the game",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "genre_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 12,
+     "examples": [
+      4,
+      5,
+      11,
+      2,
+      9
+     ],
+     "top_values": [
+      [
+       1,
+       1894
+      ],
+      [
+       11,
+       1361
+      ],
+      [
+       4,
+       1308
+      ],
+      [
+       8,
+       1197
+      ],
+      [
+       2,
+       1032
+      ],
+      [
+       9,
+       804
+      ],
+      [
+       7,
+       755
+      ],
+      [
+       10,
+       713
+      ],
+      [
+       3,
+       605
+      ],
+      [
+       5,
+       580
+      ],
+      [
+       12,
+       578
+      ],
+      [
+       6,
+       490
+      ]
+     ],
+     "description": "genre id. the id of the game genre",
+     "value_description": "commonsense evidence:\nIf game A and game B have the same genre, the user who likes game A may also like game B.",
+     "notes": []
+    },
+    {
+     "name": "game_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11317,
+     "is_unique": true,
+     "min_value": "2 Games in 1: Sonic Advance & ChuChu Rocket!",
+     "max_value": "¡Shin Chan Flipa en colores!",
+     "examples": [
+      "2 Games in 1: Sonic Advance & ChuChu Rocket!",
+      "2 Games in 1: Sonic Battle & ChuChu Rocket!",
+      "2 Games in 1: Sonic Pinball Party & Columns Crown",
+      "2 Games in 1: SpongeBob SquarePants: SuperSponge & Rugrats G...",
+      "2 in 1 Combo Pack: Sonic Heroes / Super Monkey Ball Deluxe"
+     ],
+     "top_values": [],
+     "description": "game name. the name of the game",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 44,
+     "genre_id": 4,
+     "game_name": "2 Games in 1: Sonic Advance & ChuChu Rocket!"
+    },
+    {
+     "id": 45,
+     "genre_id": 4,
+     "game_name": "2 Games in 1: Sonic Battle & ChuChu Rocket!"
+    },
+    {
+     "id": 46,
+     "genre_id": 4,
+     "game_name": "2 Games in 1: Sonic Pinball Party & Columns Crown"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "game_platform",
+   "row_count": 16326,
+   "stats_rows": 16326,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 16326,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 16326,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique identifier of the record",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "game_publisher_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11732,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 11732,
+     "examples": [
+      8564,
+      9852,
+      11063,
+      9065,
+      9544
+     ],
+     "top_values": [],
+     "description": "game publisher id. the id of the game publisher",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "platform_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 31,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 31,
+     "examples": [
+      4,
+      7,
+      15,
+      16,
+      12
+     ],
+     "top_values": [
+      [
+       4,
+       2133
+      ],
+      [
+       7,
+       2127
+      ],
+      [
+       6,
+       1303
+      ],
+      [
+       1,
+       1290
+      ],
+      [
+       5,
+       1235
+      ],
+      [
+       17,
+       1197
+      ],
+      [
+       13,
+       1189
+      ],
+      [
+       15,
+       943
+      ],
+      [
+       9,
+       811
+      ],
+      [
+       14,
+       803
+      ],
+      [
+       19,
+       542
+      ],
+      [
+       10,
+       500
+      ],
+      [
+       23,
+       412
+      ],
+      [
+       11,
+       336
+      ],
+      [
+       12,
+       316
+      ],
+      [
+       8,
+       239
+      ],
+      [
+       18,
+       213
+      ],
+      [
+       24,
+       173
+      ],
+      [
+       20,
+       143
+      ],
+      [
+       16,
+       116
+      ],
+      [
+       2,
+       98
+      ],
+      [
+       3,
+       97
+      ],
+      [
+       22,
+       52
+      ],
+      [
+       21,
+       27
+      ],
+      [
+       27,
+       12
+      ],
+      [
+       26,
+       6
+      ],
+      [
+       25,
+       6
+      ],
+      [
+       29,
+       3
+      ],
+      [
+       28,
+       2
+      ],
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ]
+     ],
+     "description": "platform id. the id of the platform",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "release_year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 39,
+     "is_unique": false,
+     "min_value": 1980,
+     "max_value": 2020,
+     "examples": [
+      2007,
+      2006,
+      2011,
+      2009,
+      1981
+     ],
+     "top_values": [
+      [
+       2009,
+       1431
+      ],
+      [
+       2008,
+       1428
+      ],
+      [
+       2010,
+       1259
+      ],
+      [
+       2007,
+       1202
+      ],
+      [
+       2011,
+       1139
+      ],
+      [
+       2006,
+       1008
+      ],
+      [
+       2005,
+       941
+      ],
+      [
+       2002,
+       829
+      ],
+      [
+       2003,
+       775
+      ],
+      [
+       2004,
+       763
+      ],
+      [
+       2012,
+       656
+      ],
+      [
+       2015,
+       614
+      ],
+      [
+       2014,
+       582
+      ],
+      [
+       2013,
+       546
+      ],
+      [
+       2001,
+       482
+      ],
+      [
+       1998,
+       379
+      ],
+      [
+       2000,
+       349
+      ],
+      [
+       2016,
+       344
+      ],
+      [
+       1999,
+       338
+      ],
+      [
+       1997,
+       289
+      ],
+      [
+       1996,
+       263
+      ],
+      [
+       1995,
+       219
+      ],
+      [
+       1994,
+       121
+      ],
+      [
+       1993,
+       60
+      ],
+      [
+       1981,
+       46
+      ],
+      [
+       1992,
+       43
+      ],
+      [
+       1991,
+       41
+      ],
+      [
+       1982,
+       36
+      ],
+      [
+       1986,
+       21
+      ],
+      [
+       1989,
+       17
+      ],
+      [
+       1983,
+       17
+      ],
+      [
+       1990,
+       16
+      ],
+      [
+       1987,
+       16
+      ],
+      [
+       1988,
+       15
+      ],
+      [
+       1985,
+       14
+      ],
+      [
+       1984,
+       14
+      ],
+      [
+       1980,
+       9
+      ],
+      [
+       2017,
+       3
+      ],
+      [
+       2020,
+       1
+      ]
+     ],
+     "description": "the release year of the game",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "game_publisher_id": 8564,
+     "platform_id": 4,
+     "release_year": 2007
+    },
+    {
+     "id": 2,
+     "game_publisher_id": 9852,
+     "platform_id": 4,
+     "release_year": 2007
+    },
+    {
+     "id": 3,
+     "game_publisher_id": 11063,
+     "platform_id": 7,
+     "release_year": 2006
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "game_publisher",
+   "row_count": 11732,
+   "stats_rows": 11732,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 11732,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 11732,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique identifier of the game publisher",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "game_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11360,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 11364,
+     "examples": [
+      10866,
+      9244,
+      5464,
+      10868,
+      7282
+     ],
+     "top_values": [],
+     "description": "game id. the id of the game",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "publisher_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 577,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 577,
+     "examples": [
+      369,
+      328,
+      498,
+      464,
+      17
+     ],
+     "top_values": [],
+     "description": "publisher id. the id of the publisher",
+     "value_description": "commonsense evidence:\nIf game A and game B were published by the same publisher, the user who likes game A may also like game B if the user is a fan of the publisher company.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "game_id": 10866,
+     "publisher_id": 369
+    },
+    {
+     "id": 2,
+     "game_id": 9244,
+     "publisher_id": 369
+    },
+    {
+     "id": 3,
+     "game_id": 5464,
+     "publisher_id": 369
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "genre",
+   "row_count": 12,
+   "stats_rows": 12,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 12,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the unique identifier of the game genre",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "genre_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": true,
+     "min_value": "Action",
+     "max_value": "Strategy",
+     "examples": [
+      "Action",
+      "Adventure",
+      "Fighting",
+      "Misc",
+      "Platform"
+     ],
+     "top_values": [
+      [
+       "Strategy",
+       1
+      ],
+      [
+       "Sports",
+       1
+      ],
+      [
+       "Simulation",
+       1
+      ],
+      [
+       "Shooter",
+       1
+      ],
+      [
+       "Role-Playing",
+       1
+      ],
+      [
+       "Racing",
+       1
+      ],
+      [
+       "Puzzle",
+       1
+      ],
+      [
+       "Platform",
+       1
+      ],
+      [
+       "Misc",
+       1
+      ],
+      [
+       "Fighting",
+       1
+      ],
+      [
+       "Adventure",
+       1
+      ],
+      [
+       "Action",
+       1
+      ]
+     ],
+     "description": "the game genre",
+     "value_description": "commonsense evidence:\nThe game genre can have a significant effect on the game. The genre refers to the category or type of game, such as action, adventure, strategy, or role-playing. The genre can determine the general style and gameplay of the game, as well as the expectations of the players. The genre can also affect the audience for the game, as different genres may appeal to different groups of players.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "genre_name": "Action"
+    },
+    {
+     "id": 2,
+     "genre_name": "Adventure"
+    },
+    {
+     "id": 3,
+     "genre_name": "Fighting"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "platform",
+   "row_count": 31,
+   "stats_rows": 31,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 31,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 31,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the unique identifier of the game platform",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "platform_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 31,
+     "is_unique": true,
+     "min_value": "2600",
+     "max_value": "XOne",
+     "examples": [
+      "Wii",
+      "NES",
+      "GB",
+      "DS",
+      "X360"
+     ],
+     "top_values": [
+      [
+       "XOne",
+       1
+      ],
+      [
+       "XB",
+       1
+      ],
+      [
+       "X360",
+       1
+      ],
+      [
+       "WiiU",
+       1
+      ],
+      [
+       "Wii",
+       1
+      ],
+      [
+       "WS",
+       1
+      ],
+      [
+       "TG16",
+       1
+      ],
+      [
+       "SNES",
+       1
+      ],
+      [
+       "SCD",
+       1
+      ],
+      [
+       "SAT",
+       1
+      ],
+      [
+       "PSV",
+       1
+      ],
+      [
+       "PSP",
+       1
+      ],
+      [
+       "PS4",
+       1
+      ],
+      [
+       "PS3",
+       1
+      ],
+      [
+       "PS2",
+       1
+      ],
+      [
+       "PS",
+       1
+      ],
+      [
+       "PCFX",
+       1
+      ],
+      [
+       "PC",
+       1
+      ],
+      [
+       "NG",
+       1
+      ],
+      [
+       "NES",
+       1
+      ],
+      [
+       "N64",
+       1
+      ],
+      [
+       "GG",
+       1
+      ],
+      [
+       "GEN",
+       1
+      ],
+      [
+       "GC",
+       1
+      ],
+      [
+       "GBA",
+       1
+      ],
+      [
+       "GB",
+       1
+      ],
+      [
+       "DS",
+       1
+      ],
+      [
+       "DC",
+       1
+      ],
+      [
+       "3DS",
+       1
+      ],
+      [
+       "3DO",
+       1
+      ],
+      [
+       "2600",
+       1
+      ]
+     ],
+     "description": "the name of the platform",
+     "value_description": "commonsense evidence:\nThe game platform, or the platform on which a game is played, can have a significant effect on the game. The platform can determine what hardware and software the game can run on, as well as the technical capabilities of the game. The platform can also affect the audience for the game, as different platforms may attract different groups of players.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "platform_name": "Wii"
+    },
+    {
+     "id": 2,
+     "platform_name": "NES"
+    },
+    {
+     "id": 3,
+     "platform_name": "GB"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "publisher",
+   "row_count": 577,
+   "stats_rows": 577,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 577,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 577,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique identifier of the game publisher",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "publisher_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 577,
+     "is_unique": true,
+     "min_value": "10TACLE Studios",
+     "max_value": "responDESIGN",
+     "examples": [
+      "10TACLE Studios",
+      "1C Company",
+      "20th Century Fox Video Games",
+      "2D Boy",
+      "3DO"
+     ],
+     "top_values": [],
+     "description": "the name of the publisher",
+     "value_description": "commonsense evidence:\nThe publisher is the company or organization that finances, produces, and distributes the game. The publisher can influence the development of the game by providing resources, guidance, and support to the game's development team. The publisher can also affect the marketing and distribution of the game, as they are responsible for promoting the game and making it available to players.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "publisher_name": "10TACLE Studios"
+    },
+    {
+     "id": 2,
+     "publisher_name": "1C Company"
+    },
+    {
+     "id": 3,
+     "publisher_name": "20th Century Fox Video Games"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "region",
+   "row_count": 4,
+   "stats_rows": 4,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the unique identifier of the region",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "region_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": "Europe",
+     "max_value": "Other",
+     "examples": [
+      "North America",
+      "Europe",
+      "Japan",
+      "Other"
+     ],
+     "top_values": [
+      [
+       "Other",
+       1
+      ],
+      [
+       "North America",
+       1
+      ],
+      [
+       "Japan",
+       1
+      ],
+      [
+       "Europe",
+       1
+      ]
+     ],
+     "description": "the region name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "region_name": "North America"
+    },
+    {
+     "id": 2,
+     "region_name": "Europe"
+    },
+    {
+     "id": 3,
+     "region_name": "Japan"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "region_sales",
+   "row_count": 65320,
+   "stats_rows": 65320,
+   "columns": [
+    {
+     "name": "region_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       4,
+       16330
+      ],
+      [
+       3,
+       16330
+      ],
+      [
+       2,
+       16330
+      ],
+      [
+       1,
+       16330
+      ]
+     ],
+     "description": "the id of the region",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "game_platform_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 16326,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 16326,
+     "examples": [
+      50,
+      51,
+      52,
+      53,
+      54
+     ],
+     "top_values": [],
+     "description": "game platform id. the id of the game platform",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "num_sales",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 494,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 41.49,
+     "examples": [
+      3.5,
+      1.43,
+      0.51,
+      0.27,
+      0.48
+     ],
+     "top_values": [],
+     "description": "number sales. the number of sales in this region",
+     "value_description": "commonsense evidence:\nThe number of games sold in the region = num_sales * 100000.\nThe game platform with higher num_sales is more popular in the region.",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "region_id": 1,
+     "game_platform_id": 50,
+     "num_sales": 3.5
+    },
+    {
+     "region_id": 1,
+     "game_platform_id": 51,
+     "num_sales": 1.43
+    },
+    {
+     "region_id": 1,
+     "game_platform_id": 52,
+     "num_sales": 0.51
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "game",
+   "from_column": "genre_id",
+   "to_table": "genre",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "game_platform",
+   "from_column": "platform_id",
+   "to_table": "platform",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "game_platform",
+   "from_column": "game_publisher_id",
+   "to_table": "game_publisher",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "game_publisher",
+   "from_column": "publisher_id",
+   "to_table": "publisher",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "game_publisher",
+   "from_column": "game_id",
+   "to_table": "game",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "region_sales",
+   "from_column": "region_id",
+   "to_table": "region",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "region_sales",
+   "from_column": "game_platform_id",
+   "to_table": "game_platform",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

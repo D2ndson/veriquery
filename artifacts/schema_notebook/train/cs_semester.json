@@ -1,0 +1,2489 @@
+{
+ "db_id": "cs_semester",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/cs_semester/cs_semester.sqlite",
+ "fingerprint": "36864-1793993033342597590-v1.0",
+ "created_at": "2026-11-06T19:24:51+00:00",
+ "profile_seconds": 0.007,
+ "tables": [
+  {
+   "name": "RA",
+   "row_count": 35,
+   "stats_rows": 35,
+   "columns": [
+    {
+     "name": "student_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 38,
+     "examples": [
+      16,
+      23,
+      20,
+      31,
+      36
+     ],
+     "top_values": [
+      [
+       31,
+       4
+      ],
+      [
+       36,
+       3
+      ],
+      [
+       23,
+       3
+      ],
+      [
+       16,
+       3
+      ],
+      [
+       30,
+       2
+      ],
+      [
+       24,
+       2
+      ],
+      [
+       21,
+       2
+      ],
+      [
+       17,
+       2
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       38,
+       1
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       2,
+       1
+      ]
+     ],
+     "description": "student id. the id numbe representing each student",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "capability",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 5,
+     "examples": [
+      2,
+      5,
+      4,
+      3
+     ],
+     "top_values": [
+      [
+       3,
+       12
+      ],
+      [
+       5,
+       9
+      ],
+      [
+       4,
+       7
+      ],
+      [
+       2,
+       7
+      ]
+     ],
+     "description": "the capability of student on research\n(Evaluated by the professor)",
+     "value_description": "higher --> higher research ability / capability",
+     "notes": []
+    },
+    {
+     "name": "prof_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 13,
+     "examples": [
+      11,
+      6,
+      10,
+      9,
+      1
+     ],
+     "top_values": [
+      [
+       11,
+       5
+      ],
+      [
+       5,
+       4
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       10,
+       3
+      ],
+      [
+       9,
+       3
+      ],
+      [
+       6,
+       3
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       13,
+       2
+      ],
+      [
+       8,
+       2
+      ],
+      [
+       7,
+       2
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "professor id. professor who advises this student",
+     "value_description": "this value may be repetitive since one professor may advise many students in this semester\ncommonsense evidence:\nif a professor advise > 2 students in this semester, it means this professor's research work is heavy\nor: this professor's popularity on research is higher",
+     "notes": []
+    },
+    {
+     "name": "salary",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "free",
+     "max_value": "med",
+     "examples": [
+      "med",
+      "high",
+      "low",
+      "free"
+     ],
+     "top_values": [
+      [
+       "high",
+       13
+      ],
+      [
+       "med",
+       9
+      ],
+      [
+       "low",
+       7
+      ],
+      [
+       "free",
+       6
+      ]
+     ],
+     "description": "the salary of this student.",
+     "value_description": "med: average salary\nhigh: higher salary than others\nlow: lower salary\nfree: unpaid RA",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "student_id",
+    "prof_id"
+   ],
+   "sample_rows": [
+    {
+     "student_id": 16,
+     "capability": 2,
+     "prof_id": 11,
+     "salary": "med"
+    },
+    {
+     "student_id": 23,
+     "capability": 5,
+     "prof_id": 6,
+     "salary": "high"
+    },
+    {
+     "student_id": 23,
+     "capability": 4,
+     "prof_id": 11,
+     "salary": "high"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "course",
+   "row_count": 13,
+   "stats_rows": 13,
+   "columns": [
+    {
+     "name": "course_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 13,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "course id. unique id representing the course",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": true,
+     "min_value": "Advanced Database Systems",
+     "max_value": "Statistical learning",
+     "examples": [
+      "Machine Learning Theory",
+      "Intro to Database 1",
+      "Intro to Database 2",
+      "Natural Language Processing",
+      "Intro to BlockChain"
+     ],
+     "top_values": [
+      [
+       "Statistical learning",
+       1
+      ],
+      [
+       "Natural Language Processing",
+       1
+      ],
+      [
+       "Machine Learning Theory",
+       1
+      ],
+      [
+       "Intro to Database 2",
+       1
+      ],
+      [
+       "Intro to Database 1",
+       1
+      ],
+      [
+       "Intro to BlockChain",
+       1
+      ],
+      [
+       "Data Structure and Algorithms",
+       1
+      ],
+      [
+       "Computer Vision",
+       1
+      ],
+      [
+       "Computer Network",
+       1
+      ],
+      [
+       "C for Programmers",
+       1
+      ],
+      [
+       "Applied Deep Learning ",
+       1
+      ],
+      [
+       "Advanced Operating System",
+       1
+      ],
+      [
+       "Advanced Database Systems",
+       1
+      ]
+     ],
+     "description": "name of the course",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "credit",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 3,
+     "examples": [
+      3,
+      2
+     ],
+     "top_values": [
+      [
+       3,
+       7
+      ],
+      [
+       2,
+       6
+      ]
+     ],
+     "description": "credit of the course",
+     "value_description": "commonsense evidence:\r\nhigher means more important",
+     "notes": []
+    },
+    {
+     "name": "diff",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 5,
+     "examples": [
+      3,
+      4,
+      1,
+      5,
+      2
+     ],
+     "top_values": [
+      [
+       4,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "description": "difficulty of the course",
+     "value_description": "commonsense evidence:\r\nhigher --> more difficult\r\nsmaller --> less difficult",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "course_id"
+   ],
+   "sample_rows": [
+    {
+     "course_id": 1,
+     "name": "Machine Learning Theory",
+     "credit": 3,
+     "diff": 3
+    },
+    {
+     "course_id": 2,
+     "name": "Intro to Database 1",
+     "credit": 2,
+     "diff": 4
+    },
+    {
+     "course_id": 3,
+     "name": "Intro to Database 2",
+     "credit": 2,
+     "diff": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "prof",
+   "row_count": 10,
+   "stats_rows": 10,
+   "columns": [
+    {
+     "name": "prof_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 10,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "professor id. unique id for professors",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "Female",
+     "max_value": "Male",
+     "examples": [
+      "Male",
+      "Female"
+     ],
+     "top_values": [
+      [
+       "Male",
+       7
+      ],
+      [
+       "Female",
+       3
+      ]
+     ],
+     "description": "gender of the professor",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "first_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": "Bernhard",
+     "max_value": "Zhihua",
+     "examples": [
+      "Nathaniel",
+      "Zhihua",
+      "Ogdon",
+      "Merwyn",
+      "Bernhard"
+     ],
+     "top_values": [
+      [
+       "Zhihua",
+       1
+      ],
+      [
+       "Sauveur",
+       1
+      ],
+      [
+       "Rosamond",
+       1
+      ],
+      [
+       "Ogdon",
+       1
+      ],
+      [
+       "Nathaniel",
+       1
+      ],
+      [
+       "Millie",
+       1
+      ],
+      [
+       "Merwyn",
+       1
+      ],
+      [
+       "Mateo",
+       1
+      ],
+      [
+       "Hattie",
+       1
+      ],
+      [
+       "Bernhard",
+       1
+      ]
+     ],
+     "description": "the first name of the professor",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": "Conkay",
+     "max_value": "Zywicki",
+     "examples": [
+      "Pigford",
+      "Zhou",
+      "Zywicki",
+      "Conkay",
+      "Molen"
+     ],
+     "top_values": [
+      [
+       "Zywicki",
+       1
+      ],
+      [
+       "Zhou",
+       1
+      ],
+      [
+       "Smythin",
+       1
+      ],
+      [
+       "Skyme",
+       1
+      ],
+      [
+       "Pigford",
+       1
+      ],
+      [
+       "Molen",
+       1
+      ],
+      [
+       "Medmore",
+       1
+      ],
+      [
+       "Ewenson",
+       1
+      ],
+      [
+       "Cunningham",
+       1
+      ],
+      [
+       "Conkay",
+       1
+      ]
+     ],
+     "description": "the last name of the professor",
+     "value_description": "commonsense evidence:\r\nfull name: first name, last name",
+     "notes": []
+    },
+    {
+     "name": "email",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": "bmolen4@hku.hk",
+     "max_value": "zzhihua@hku.hk",
+     "examples": [
+      "npigford0@hku.hk",
+      "zzhihua@hku.hk",
+      "ozywicki2@hku.hk",
+      "mconkay3@ucla.edu",
+      "bmolen4@hku.hk"
+     ],
+     "top_values": [
+      [
+       "zzhihua@hku.hk",
+       1
+      ],
+      [
+       "sskyme5@columbia.edu",
+       1
+      ],
+      [
+       "rewenson7@hku.hk",
+       1
+      ],
+      [
+       "ozywicki2@hku.hk",
+       1
+      ],
+      [
+       "npigford0@hku.hk",
+       1
+      ],
+      [
+       "mmedmore8@hku.hk",
+       1
+      ],
+      [
+       "mcunningham6@stanford.edu",
+       1
+      ],
+      [
+       "mconkay3@ucla.edu",
+       1
+      ],
+      [
+       "hsmythin9@hku.hk",
+       1
+      ],
+      [
+       "bmolen4@hku.hk",
+       1
+      ]
+     ],
+     "description": "email of the professor",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "popularity",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 3,
+     "examples": [
+      3,
+      2
+     ],
+     "top_values": [
+      [
+       3,
+       5
+      ],
+      [
+       2,
+       5
+      ]
+     ],
+     "description": "popularity of the professor",
+     "value_description": "commonsense evidence:\r\nhigher --> more popular",
+     "notes": []
+    },
+    {
+     "name": "teachingability",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 5,
+     "examples": [
+      5,
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       5,
+       4
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ]
+     ],
+     "description": "the teaching ability of the professor",
+     "value_description": "commonsense evidence:\r\nhigher --> more teaching ability, his / her lectures may have better quality",
+     "notes": []
+    },
+    {
+     "name": "graduate_from",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": "Beijing Polytechnic University",
+     "max_value": "University of Washington",
+     "examples": [
+      "University of Washington",
+      "Beijing Polytechnic University",
+      "University of Boston",
+      "Carnegie Mellon University",
+      "Princeton University"
+     ],
+     "top_values": [
+      [
+       "University of Washington",
+       1
+      ],
+      [
+       "University of Pennsylvania",
+       1
+      ],
+      [
+       "University of Boston",
+       1
+      ],
+      [
+       "Princeton University",
+       1
+      ],
+      [
+       "Mount Aloysius College",
+       1
+      ],
+      [
+       "Miyazaki Municipal University",
+       1
+      ],
+      [
+       "Massachusetts Institute of Technology",
+       1
+      ],
+      [
+       "ETH Zurich",
+       1
+      ],
+      [
+       "Carnegie Mellon University",
+       1
+      ],
+      [
+       "Beijing Polytechnic University",
+       1
+      ]
+     ],
+     "description": "graduate from. the school where the professor graduated from",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "prof_id"
+   ],
+   "sample_rows": [
+    {
+     "prof_id": 1,
+     "gender": "Male",
+     "first_name": "Nathaniel",
+     "last_name": "Pigford",
+     "email": "npigford0@hku.hk",
+     "popularity": 3,
+     "teachingability": 5,
+     "graduate_from": "University of Washington"
+    },
+    {
+     "prof_id": 2,
+     "gender": "Male",
+     "first_name": "Zhihua",
+     "last_name": "Zhou",
+     "email": "zzhihua@hku.hk",
+     "popularity": 2,
+     "teachingability": 1,
+     "graduate_from": "Beijing Polytechnic University"
+    },
+    {
+     "prof_id": 3,
+     "gender": "Male",
+     "first_name": "Ogdon",
+     "last_name": "Zywicki",
+     "email": "ozywicki2@hku.hk",
+     "popularity": 2,
+     "teachingability": 2,
+     "graduate_from": "University of Boston"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "registration",
+   "row_count": 101,
+   "stats_rows": 101,
+   "columns": [
+    {
+     "name": "course_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 13,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       12,
+       12
+      ],
+      [
+       11,
+       10
+      ],
+      [
+       8,
+       10
+      ],
+      [
+       13,
+       9
+      ],
+      [
+       6,
+       9
+      ],
+      [
+       10,
+       8
+      ],
+      [
+       9,
+       8
+      ],
+      [
+       7,
+       7
+      ],
+      [
+       4,
+       7
+      ],
+      [
+       1,
+       7
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       2,
+       5
+      ],
+      [
+       5,
+       3
+      ]
+     ],
+     "description": "course id. the id of courses",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "student_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 36,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 38,
+     "examples": [
+      7,
+      3,
+      2,
+      31,
+      12
+     ],
+     "top_values": [
+      [
+       23,
+       6
+      ],
+      [
+       7,
+       6
+      ],
+      [
+       21,
+       5
+      ],
+      [
+       6,
+       5
+      ],
+      [
+       31,
+       4
+      ],
+      [
+       22,
+       4
+      ],
+      [
+       20,
+       4
+      ],
+      [
+       19,
+       4
+      ],
+      [
+       17,
+       4
+      ],
+      [
+       14,
+       4
+      ],
+      [
+       11,
+       4
+      ],
+      [
+       10,
+       4
+      ],
+      [
+       37,
+       3
+      ],
+      [
+       33,
+       3
+      ],
+      [
+       30,
+       3
+      ],
+      [
+       9,
+       3
+      ],
+      [
+       8,
+       3
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       38,
+       2
+      ],
+      [
+       36,
+       2
+      ],
+      [
+       32,
+       2
+      ],
+      [
+       28,
+       2
+      ],
+      [
+       26,
+       2
+      ],
+      [
+       16,
+       2
+      ],
+      [
+       15,
+       2
+      ],
+      [
+       13,
+       2
+      ],
+      [
+       12,
+       2
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       34,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       2,
+       1
+      ]
+     ],
+     "description": "student id. the id of students",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "grade",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0495,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "D",
+     "examples": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "top_values": [
+      [
+       "A",
+       37
+      ],
+      [
+       "B",
+       28
+      ],
+      [
+       "C",
+       22
+      ],
+      [
+       "D",
+       9
+      ]
+     ],
+     "description": "the grades that the students acquire in this course",
+     "value_description": "commonsense evidence:\n A: excellent -- 4\n B: good -- 3\n C: fair -- 2\n D: poorly pass -- 1\n null or empty: this student fails to pass this course\n gpa of students for this semester = sum (credits x grade) / sum (credits)",
+     "notes": []
+    },
+    {
+     "name": "sat",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 5,
+     "examples": [
+      5,
+      4,
+      3,
+      2,
+      1
+     ],
+     "top_values": [
+      [
+       5,
+       27
+      ],
+      [
+       4,
+       25
+      ],
+      [
+       2,
+       19
+      ],
+      [
+       3,
+       15
+      ],
+      [
+       1,
+       15
+      ]
+     ],
+     "description": "satisfying degree. student satisfaction with the course",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "course_id",
+    "student_id"
+   ],
+   "sample_rows": [
+    {
+     "course_id": 1,
+     "student_id": 7,
+     "grade": "A",
+     "sat": 5
+    },
+    {
+     "course_id": 1,
+     "student_id": 3,
+     "grade": "B",
+     "sat": 4
+    },
+    {
+     "course_id": 1,
+     "student_id": 2,
+     "grade": "B",
+     "sat": 4
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "student",
+   "row_count": 38,
+   "stats_rows": 38,
+   "columns": [
+    {
+     "name": "student_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 38,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 38,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       38,
+       1
+      ],
+      [
+       37,
+       1
+      ],
+      [
+       36,
+       1
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       34,
+       1
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       32,
+       1
+      ],
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "student id. the unique id to identify students",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "f_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 38,
+     "is_unique": true,
+     "min_value": "Ahmed",
+     "max_value": "Willie",
+     "examples": [
+      "Kerry",
+      "Chrysa",
+      "Elsy",
+      "Dougie",
+      "Ahmed"
+     ],
+     "top_values": [
+      [
+       "Willie",
+       1
+      ],
+      [
+       "Silvano",
+       1
+      ],
+      [
+       "Robenia",
+       1
+      ],
+      [
+       "Rik",
+       1
+      ],
+      [
+       "Phil",
+       1
+      ],
+      [
+       "Pembroke",
+       1
+      ],
+      [
+       "Pablo",
+       1
+      ],
+      [
+       "Orsola",
+       1
+      ],
+      [
+       "Oliy",
+       1
+      ],
+      [
+       "Olia",
+       1
+      ],
+      [
+       "Nial",
+       1
+      ],
+      [
+       "Moyna",
+       1
+      ],
+      [
+       "Mireielle",
+       1
+      ],
+      [
+       "Logan",
+       1
+      ],
+      [
+       "Linc",
+       1
+      ],
+      [
+       "Laughton",
+       1
+      ],
+      [
+       "Kerry",
+       1
+      ],
+      [
+       "Janet",
+       1
+      ],
+      [
+       "Ingar",
+       1
+      ],
+      [
+       "Harrietta",
+       1
+      ],
+      [
+       "Hadley",
+       1
+      ],
+      [
+       "Grover",
+       1
+      ],
+      [
+       "Flor",
+       1
+      ],
+      [
+       "Faina",
+       1
+      ],
+      [
+       "Elsy",
+       1
+      ],
+      [
+       "Eba",
+       1
+      ],
+      [
+       "Dougie",
+       1
+      ],
+      [
+       "Donall",
+       1
+      ],
+      [
+       "Dawn",
+       1
+      ],
+      [
+       "Darcy",
+       1
+      ],
+      [
+       "Crichton",
+       1
+      ],
+      [
+       "Corey",
+       1
+      ],
+      [
+       "Chrysa",
+       1
+      ],
+      [
+       "Betsy",
+       1
+      ],
+      [
+       "Andris",
+       1
+      ],
+      [
+       "Amerigo",
+       1
+      ],
+      [
+       "Alvera",
+       1
+      ],
+      [
+       "Ahmed",
+       1
+      ]
+     ],
+     "description": "the first name of the student",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "l_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 37,
+     "is_unique": false,
+     "min_value": "Antonio",
+     "max_value": "Wolton",
+     "examples": [
+      "Pryor",
+      "Dine-Hart",
+      "Shiril",
+      "Happel",
+      "Sukbhans"
+     ],
+     "top_values": [
+      [
+       "Mallinar",
+       2
+      ],
+      [
+       "Wolton",
+       1
+      ],
+      [
+       "Wellings",
+       1
+      ],
+      [
+       "Waltho",
+       1
+      ],
+      [
+       "Unsworth",
+       1
+      ],
+      [
+       "Sukbhans",
+       1
+      ],
+      [
+       "Stading",
+       1
+      ],
+      [
+       "Spratling",
+       1
+      ],
+      [
+       "Shiril",
+       1
+      ],
+      [
+       "Rosell",
+       1
+      ],
+      [
+       "Rhucroft",
+       1
+      ],
+      [
+       "Rechert",
+       1
+      ],
+      [
+       "Rawles",
+       1
+      ],
+      [
+       "Rabier",
+       1
+      ],
+      [
+       "Pryor",
+       1
+      ],
+      [
+       "Paolillo",
+       1
+      ],
+      [
+       "Olerenshaw",
+       1
+      ],
+      [
+       "Mollene",
+       1
+      ],
+      [
+       "Menguy",
+       1
+      ],
+      [
+       "McQuillin",
+       1
+      ],
+      [
+       "McJarrow",
+       1
+      ],
+      [
+       "Lydford",
+       1
+      ],
+      [
+       "Hinrich",
+       1
+      ],
+      [
+       "Hardey",
+       1
+      ],
+      [
+       "Happel",
+       1
+      ],
+      [
+       "Hanshaw",
+       1
+      ],
+      [
+       "Gayforth",
+       1
+      ],
+      [
+       "Francescuccio",
+       1
+      ],
+      [
+       "Fourman",
+       1
+      ],
+      [
+       "Endley",
+       1
+      ],
+      [
+       "Dine-Hart",
+       1
+      ],
+      [
+       "Daly",
+       1
+      ],
+      [
+       "Czaja",
+       1
+      ],
+      [
+       "Cornhill",
+       1
+      ],
+      [
+       "Bew",
+       1
+      ],
+      [
+       "Benkhe",
+       1
+      ],
+      [
+       "Antonio",
+       1
+      ]
+     ],
+     "description": "the last name of the student",
+     "value_description": "commonsense evidence:\nfull name: f_name, l_name",
+     "notes": []
+    },
+    {
+     "name": "phone_number",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 38,
+     "is_unique": true,
+     "min_value": "(146) 4601553",
+     "max_value": "(996) 8465427",
+     "examples": [
+      "(243) 6836472",
+      "(672) 9245255",
+      "(521) 7680522",
+      "(192) 6371744",
+      "(805) 4273942"
+     ],
+     "top_values": [
+      [
+       "(996) 8465427",
+       1
+      ],
+      [
+       "(918) 8721602",
+       1
+      ],
+      [
+       "(909) 5089490",
+       1
+      ],
+      [
+       "(893) 5102637",
+       1
+      ],
+      [
+       "(891) 6340598",
+       1
+      ],
+      [
+       "(889) 5579484",
+       1
+      ],
+      [
+       "(840) 1326790",
+       1
+      ],
+      [
+       "(805) 4273942",
+       1
+      ],
+      [
+       "(801) 9473727",
+       1
+      ],
+      [
+       "(781) 2506820",
+       1
+      ],
+      [
+       "(780) 7855001",
+       1
+      ],
+      [
+       "(694) 8062777",
+       1
+      ],
+      [
+       "(672) 9245255",
+       1
+      ],
+      [
+       "(642) 4850405",
+       1
+      ],
+      [
+       "(637) 3049165",
+       1
+      ],
+      [
+       "(624) 2501637",
+       1
+      ],
+      [
+       "(577) 7176296",
+       1
+      ],
+      [
+       "(551) 9911975",
+       1
+      ],
+      [
+       "(521) 7680522",
+       1
+      ],
+      [
+       "(514) 4353967",
+       1
+      ],
+      [
+       "(494) 1496852",
+       1
+      ],
+      [
+       "(483) 5375329",
+       1
+      ],
+      [
+       "(465) 4712581",
+       1
+      ],
+      [
+       "(407) 7992976",
+       1
+      ],
+      [
+       "(381) 8710616",
+       1
+      ],
+      [
+       "(326) 3015233",
+       1
+      ],
+      [
+       "(308) 9646371",
+       1
+      ],
+      [
+       "(296) 8386115",
+       1
+      ],
+      [
+       "(293) 3560250",
+       1
+      ],
+      [
+       "(279) 1216435",
+       1
+      ],
+      [
+       "(243) 6836472",
+       1
+      ],
+      [
+       "(239) 3271770",
+       1
+      ],
+      [
+       "(211) 6721090",
+       1
+      ],
+      [
+       "(193) 3058490",
+       1
+      ],
+      [
+       "(192) 6371744",
+       1
+      ],
+      [
+       "(191) 4249685",
+       1
+      ],
+      [
+       "(163) 8749918",
+       1
+      ],
+      [
+       "(146) 4601553",
+       1
+      ]
+     ],
+     "description": "phone number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "email",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 38,
+     "is_unique": true,
+     "min_value": "agayforths@hku.hk",
+     "max_value": "wrechert5@columbia.edu",
+     "examples": [
+      "kpryor0@hku.hk",
+      "cdinehart1@hku.hk",
+      "eshiril2@hku.hk",
+      "dhappel3@hku.hk",
+      "asukbhans4@cuhk.edu.hk"
+     ],
+     "top_values": [
+      [
+       "wrechert5@columbia.edu",
+       1
+      ],
+      [
+       "sdaly10@hku.hk",
+       1
+      ],
+      [
+       "runsworthi@cuhk.edu.com",
+       1
+      ],
+      [
+       "rfourmano@hku.hk",
+       1
+      ],
+      [
+       "pwellingsh@hku.hk",
+       1
+      ],
+      [
+       "prawlesa@cs.hku.hk",
+       1
+      ],
+      [
+       "phardeyx@hku.hk",
+       1
+      ],
+      [
+       "ospratlingf@outlook.com",
+       1
+      ],
+      [
+       "orabiern@umich.edu",
+       1
+      ],
+      [
+       "ohinrichz@hku.hk",
+       1
+      ],
+      [
+       "nwalthow@hku.hk",
+       1
+      ],
+      [
+       "mstadingt@hku.hk",
+       1
+      ],
+      [
+       "mcornhillj@hku.hk",
+       1
+      ],
+      [
+       "lmollenek@hku.hk",
+       1
+      ],
+      [
+       "lmcjarrow7@cs.hku.hk",
+       1
+      ],
+      [
+       "lantonio6@hku.hk",
+       1
+      ],
+      [
+       "kpryor0@hku.hk",
+       1
+      ],
+      [
+       "jbewv@hku.hk",
+       1
+      ],
+      [
+       "ihanshawm@hku.hk",
+       1
+      ],
+      [
+       "hlydfordc@hku.hk",
+       1
+      ],
+      [
+       "hczaja8@hku.hk",
+       1
+      ],
+      [
+       "grosellg@hku.hk",
+       1
+      ],
+      [
+       "fmallinaru@hku.hk",
+       1
+      ],
+      [
+       "fbenkhee@hku.hk",
+       1
+      ],
+      [
+       "eshiril2@hku.hk",
+       1
+      ],
+      [
+       "emallinary@hku.hk",
+       1
+      ],
+      [
+       "dwoltonp@hku.hk",
+       1
+      ],
+      [
+       "dpaolillol@hku.hk",
+       1
+      ],
+      [
+       "dmenguy11@gmail.com",
+       1
+      ],
+      [
+       "dhappel3@hku.hk",
+       1
+      ],
+      [
+       "cfrancescucciob@gmail.com",
+       1
+      ],
+      [
+       "cendley9@hku.hk",
+       1
+      ],
+      [
+       "cdinehart1@hku.hk",
+       1
+      ],
+      [
+       "brhucroftr@gmail.com",
+       1
+      ],
+      [
+       "asukbhans4@cuhk.edu.hk",
+       1
+      ],
+      [
+       "aolerenshawq@hku.hk",
+       1
+      ],
+      [
+       "amcquillind@cs.ubc.ca",
+       1
+      ],
+      [
+       "agayforths@hku.hk",
+       1
+      ]
+     ],
+     "description": "email",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "intelligence",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 5,
+     "examples": [
+      5,
+      2,
+      1,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       5,
+       10
+      ],
+      [
+       2,
+       10
+      ],
+      [
+       3,
+       9
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       4,
+       3
+      ]
+     ],
+     "description": "intelligence of the student",
+     "value_description": "higher --> more intelligent",
+     "notes": []
+    },
+    {
+     "name": "gpa",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": 2.0,
+     "max_value": 3.9,
+     "examples": [
+      2.4,
+      2.7,
+      3.5,
+      2.8,
+      3.9
+     ],
+     "top_values": [
+      [
+       3.2,
+       5
+      ],
+      [
+       3.7,
+       4
+      ],
+      [
+       3.5,
+       4
+      ],
+      [
+       2.4,
+       4
+      ],
+      [
+       3.4,
+       3
+      ],
+      [
+       2.8,
+       3
+      ],
+      [
+       3.8,
+       2
+      ],
+      [
+       3.1,
+       2
+      ],
+      [
+       2.9,
+       2
+      ],
+      [
+       2.7,
+       2
+      ],
+      [
+       2.3,
+       2
+      ],
+      [
+       3.9,
+       1
+      ],
+      [
+       3.0,
+       1
+      ],
+      [
+       2.6,
+       1
+      ],
+      [
+       2.1,
+       1
+      ],
+      [
+       2.0,
+       1
+      ]
+     ],
+     "description": "graduate point average. gpa",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "RPG",
+     "max_value": "UG",
+     "examples": [
+      "RPG",
+      "TPG",
+      "UG"
+     ],
+     "top_values": [
+      [
+       "TPG",
+       15
+      ],
+      [
+       "UG",
+       12
+      ],
+      [
+       "RPG",
+       11
+      ]
+     ],
+     "description": "type of the student",
+     "value_description": " TPG: taught postgraduate student(master)\n RPG: research postgraduate student (master)\n UG: undergraduate student(bachelor)\ncommonsense evidence:\nboth TPG and RPG are students pursuing a masters degree; UG are students pursuing the bachelor degree",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "student_id"
+   ],
+   "sample_rows": [
+    {
+     "student_id": 1,
+     "f_name": "Kerry",
+     "l_name": "Pryor",
+     "phone_number": "(243) 6836472",
+     "email": "kpryor0@hku.hk",
+     "intelligence": 5,
+     "gpa": 2.4,
+     "type": "RPG"
+    },
+    {
+     "student_id": 2,
+     "f_name": "Chrysa",
+     "l_name": "Dine-Hart",
+     "phone_number": "(672) 9245255",
+     "email": "cdinehart1@hku.hk",
+     "intelligence": 2,
+     "gpa": 2.7,
+     "type": "TPG"
+    },
+    {
+     "student_id": 3,
+     "f_name": "Elsy",
+     "l_name": "Shiril",
+     "phone_number": "(521) 7680522",
+     "email": "eshiril2@hku.hk",
+     "intelligence": 1,
+     "gpa": 3.5,
+     "type": "TPG"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "RA",
+   "from_column": "student_id",
+   "to_table": "student",
+   "to_column": "student_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "RA",
+   "from_column": "prof_id",
+   "to_table": "prof",
+   "to_column": "prof_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "registration",
+   "from_column": "student_id",
+   "to_table": "student",
+   "to_column": "student_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "registration",
+   "from_column": "course_id",
+   "to_table": "course",
+   "to_column": "course_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "RA",
+   "from_column": "student_id",
+   "to_table": "registration",
+   "to_column": "student_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

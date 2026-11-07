@@ -1,0 +1,5100 @@
+{
+ "db_id": "card_games",
+ "schema_version": "1.0",
+ "db_path": "data/bird_dev/dev_databases/card_games/card_games.sqlite",
+ "fingerprint": "261820416-1792490206640181100-v1.0",
+ "created_at": "2026-10-20T09:58:25+00:00",
+ "profile_seconds": 12.928,
+ "tables": [
+  {
+   "name": "cards",
+   "row_count": 56822,
+   "stats_rows": 56822,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 56822,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 56832,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique id number identifying the cards",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "artist",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0001,
+     "distinct_count": 991,
+     "is_unique": false,
+     "min_value": "Aaron Boyd",
+     "max_value": "羽山晃平",
+     "examples": [
+      "Pete Venters",
+      "Volkan Baǵa",
+      "Justin Sweet",
+      "Matthew D. Wilson",
+      "Rebecca Guay"
+     ],
+     "top_values": [],
+     "description": "The name of the artist that illustrated the card art.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "asciiName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9988,
+     "distinct_count": 26,
+     "is_unique": false,
+     "min_value": "Bosium Strip",
+     "max_value": "The Ultimate Nightmare of Wizards of the Coast Customer Serv...",
+     "examples": [],
+     "top_values": [
+      [
+       "El-Hajjaj",
+       7
+      ],
+      [
+       "Junun Efreet",
+       6
+      ],
+      [
+       "Ghazban Ogre",
+       6
+      ],
+      [
+       "Lim-Dul's High Guard",
+       5
+      ],
+      [
+       "Dandan",
+       5
+      ],
+      [
+       "Jotun Grunt",
+       4
+      ],
+      [
+       "Lim-Dul's Vault",
+       3
+      ],
+      [
+       "Khabal Ghoul",
+       3
+      ],
+      [
+       "Ifh-Biff Efreet",
+       3
+      ],
+      [
+       "Seance",
+       2
+      ],
+      [
+       "Ring of Ma'ruf",
+       2
+      ],
+      [
+       "Marton Stromgald",
+       2
+      ],
+      [
+       "Lim-Dul's Cohort",
+       2
+      ],
+      [
+       "Legions of Lim-Dul",
+       2
+      ],
+      [
+       "Juzam Djinn",
+       2
+      ],
+      [
+       "Deja Vu",
+       2
+      ],
+      [
+       "Chicken a la King",
+       2
+      ],
+      [
+       "The Ultimate Nightmare of Wizards of the Coast Customer Serv...",
+       1
+      ],
+      [
+       "Saute",
+       1
+      ],
+      [
+       "Oath of Lim-Dul",
+       1
+      ],
+      [
+       "Lim-Dul's Paladin",
+       1
+      ],
+      [
+       "Lim-Dul's Hex",
+       1
+      ],
+      [
+       "Lim-Dul the Necromancer",
+       1
+      ],
+      [
+       "Jotun Owl Keeper",
+       1
+      ],
+      [
+       "Ghazban Ogress",
+       1
+      ],
+      [
+       "Bosium Strip",
+       1
+      ]
+     ],
+     "description": "ascii Name. The ASCII(opens new window) (Basic/128) code formatted card name with no special unicode characters",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "availability",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": "arena",
+     "max_value": "shandalar",
+     "examples": [
+      "mtgo,paper"
+     ],
+     "top_values": [
+      [
+       "mtgo,paper",
+       25459
+      ],
+      [
+       "paper",
+       21531
+      ],
+      [
+       "arena,mtgo,paper",
+       4609
+      ],
+      [
+       "mtgo",
+       3697
+      ],
+      [
+       "arena",
+       999
+      ],
+      [
+       "arena,paper",
+       490
+      ],
+      [
+       "arena,mtgo",
+       14
+      ],
+      [
+       "shandalar",
+       12
+      ],
+      [
+       "dreamcast",
+       10
+      ]
+     ],
+     "description": "A list of the card's available printing types.",
+     "value_description": "\"arena\", \"dreamcast\", \"mtgo\", \"paper\", \"shandalar\"",
+     "notes": []
+    },
+    {
+     "name": "borderColor",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "black",
+     "max_value": "white",
+     "examples": [
+      "black"
+     ],
+     "top_values": [
+      [
+       "black",
+       49729
+      ],
+      [
+       "white",
+       5017
+      ],
+      [
+       "gold",
+       1244
+      ],
+      [
+       "silver",
+       591
+      ],
+      [
+       "borderless",
+       241
+      ]
+     ],
+     "description": "border Color. The color of the card border",
+     "value_description": "\"black\", \"borderless\", \"gold\", \"silver\", \"white\"",
+     "notes": []
+    },
+    {
+     "name": "cardKingdomFoilId",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.4912,
+     "distinct_count": 28912,
+     "is_unique": true,
+     "min_value": "110299",
+     "max_value": "73290",
+     "examples": [
+      "123094",
+      "123095",
+      "123096",
+      "123097",
+      "123098"
+     ],
+     "top_values": [],
+     "description": "card Kingdom Foil Id",
+     "value_description": "commonsense evidence:\ncardKingdomFoilId, when paired with cardKingdomId that is not Null, is incredibly powerful.",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "cardKingdomId",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.2397,
+     "distinct_count": 43200,
+     "is_unique": true,
+     "min_value": "10000",
+     "max_value": "72285",
+     "examples": [
+      "122719",
+      "122720",
+      "122725",
+      "122726",
+      "122727"
+     ],
+     "top_values": [],
+     "description": "card Kingdom Id",
+     "value_description": "A list of all the colors in the color indicator",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "colorIdentity",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.1095,
+     "distinct_count": 31,
+     "is_unique": false,
+     "min_value": "B",
+     "max_value": "W",
+     "examples": [
+      "W",
+      "B",
+      "U",
+      "R",
+      "G"
+     ],
+     "top_values": [
+      [
+       "G",
+       8802
+      ],
+      [
+       "B",
+       8565
+      ],
+      [
+       "R",
+       8485
+      ],
+      [
+       "U",
+       8375
+      ],
+      [
+       "W",
+       8327
+      ],
+      [
+       "G,W",
+       784
+      ],
+      [
+       "G,R",
+       752
+      ],
+      [
+       "B,R",
+       733
+      ],
+      [
+       "B,U",
+       724
+      ],
+      [
+       "U,W",
+       722
+      ],
+      [
+       "B,G",
+       649
+      ],
+      [
+       "R,U",
+       590
+      ],
+      [
+       "R,W",
+       583
+      ],
+      [
+       "G,U",
+       572
+      ],
+      [
+       "B,W",
+       556
+      ],
+      [
+       "B,R,U",
+       167
+      ],
+      [
+       "B,G,R,U,W",
+       162
+      ],
+      [
+       "G,R,W",
+       135
+      ],
+      [
+       "G,U,W",
+       130
+      ],
+      [
+       "B,G,R",
+       129
+      ],
+      [
+       "B,U,W",
+       119
+      ],
+      [
+       "B,G,U",
+       111
+      ],
+      [
+       "B,R,W",
+       108
+      ],
+      [
+       "B,G,W",
+       102
+      ],
+      [
+       "R,U,W",
+       92
+      ],
+      [
+       "G,R,U",
+       90
+      ],
+      [
+       "G,R,U,W",
+       8
+      ],
+      [
+       "B,G,U,W",
+       8
+      ],
+      [
+       "B,R,U,W",
+       7
+      ],
+      [
+       "B,G,R,W",
+       6
+      ],
+      [
+       "B,G,R,U",
+       5
+      ]
+     ],
+     "description": "color Identity. A list of all the colors found in manaCost, colorIndicator, and text",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "colorIndicator",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9971,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": "B",
+     "max_value": "W",
+     "examples": [],
+     "top_values": [
+      [
+       "R",
+       41
+      ],
+      [
+       "G",
+       36
+      ],
+      [
+       "U",
+       34
+      ],
+      [
+       "B",
+       29
+      ],
+      [
+       "W",
+       14
+      ],
+      [
+       "G,R",
+       7
+      ],
+      [
+       "B,R,U",
+       3
+      ],
+      [
+       "B,G",
+       2
+      ],
+      [
+       "G,R,W",
+       1
+      ]
+     ],
+     "description": "A list of all the colors in the color indicator (The symbol prefixed to a card's types).",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "colors",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.2207,
+     "distinct_count": 39,
+     "is_unique": false,
+     "min_value": "B",
+     "max_value": "W,U",
+     "examples": [
+      "W",
+      "B",
+      "U",
+      "R",
+      "G"
+     ],
+     "top_values": [
+      [
+       "G",
+       8066
+      ],
+      [
+       "B",
+       7807
+      ],
+      [
+       "R",
+       7793
+      ],
+      [
+       "W",
+       7681
+      ],
+      [
+       "U",
+       7630
+      ],
+      [
+       "G,W",
+       505
+      ],
+      [
+       "G,R",
+       492
+      ],
+      [
+       "U,W",
+       471
+      ],
+      [
+       "B,R",
+       468
+      ],
+      [
+       "B,U",
+       458
+      ],
+      [
+       "B,G",
+       424
+      ],
+      [
+       "G,U",
+       387
+      ],
+      [
+       "R,U",
+       374
+      ],
+      [
+       "B,W",
+       360
+      ],
+      [
+       "R,W",
+       357
+      ],
+      [
+       "B,R,U",
+       120
+      ],
+      [
+       "G,R,W",
+       92
+      ],
+      [
+       "B,U,W",
+       87
+      ],
+      [
+       "B,G,R",
+       87
+      ],
+      [
+       "G,U,W",
+       83
+      ],
+      [
+       "B,R,W",
+       75
+      ],
+      [
+       "B,G,R,U,W",
+       75
+      ],
+      [
+       "B,G,U",
+       74
+      ],
+      [
+       "B,G,W",
+       69
+      ],
+      [
+       "R,U,W",
+       63
+      ],
+      [
+       "G,R,U",
+       63
+      ],
+      [
+       "W,G",
+       17
+      ],
+      [
+       "U,B",
+       13
+      ],
+      [
+       "W,R",
+       12
+      ],
+      [
+       "U,R",
+       12
+      ],
+      [
+       "W,U",
+       11
+      ],
+      [
+       "U,G",
+       8
+      ],
+      [
+       "G,R,U,W",
+       8
+      ],
+      [
+       "B,G,U,W",
+       8
+      ],
+      [
+       "W,B",
+       7
+      ],
+      [
+       "R,G",
+       7
+      ],
+      [
+       "B,R,U,W",
+       7
+      ],
+      [
+       "B,G,R,W",
+       6
+      ],
+      [
+       "B,G,R,U",
+       5
+      ]
+     ],
+     "description": "A list of all the colors in manaCost and colorIndicator.",
+     "value_description": "Some cards may not have values, such as cards with \"Devoid\" in its text.",
+     "notes": []
+    },
+    {
+     "name": "convertedManaCost",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 19,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 1000000.0,
+     "examples": [
+      7.0,
+      5.0,
+      4.0,
+      1.0,
+      6.0
+     ],
+     "top_values": [
+      [
+       3.0,
+       11776
+      ],
+      [
+       2.0,
+       10760
+      ],
+      [
+       4.0,
+       9174
+      ],
+      [
+       0.0,
+       7327
+      ],
+      [
+       1.0,
+       6223
+      ],
+      [
+       5.0,
+       5674
+      ],
+      [
+       6.0,
+       3431
+      ],
+      [
+       7.0,
+       1515
+      ],
+      [
+       8.0,
+       555
+      ],
+      [
+       9.0,
+       203
+      ],
+      [
+       10.0,
+       89
+      ],
+      [
+       11.0,
+       34
+      ],
+      [
+       12.0,
+       28
+      ],
+      [
+       15.0,
+       14
+      ],
+      [
+       13.0,
+       12
+      ],
+      [
+       16.0,
+       3
+      ],
+      [
+       1000000.0,
+       2
+      ],
+      [
+       14.0,
+       1
+      ],
+      [
+       0.5,
+       1
+      ]
+     ],
+     "description": "The converted mana cost of the card. Use the manaValue property.",
+     "value_description": "if value is higher, it means that this card cost more converted mana",
+     "notes": []
+    },
+    {
+     "name": "duelDeck",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.9719,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "a",
+     "max_value": "b",
+     "examples": [],
+     "top_values": [
+      [
+       "a",
+       804
+      ],
+      [
+       "b",
+       790
+      ]
+     ],
+     "description": "The indicator for which duel deck the card is in.",
+     "value_description": "",
+     "notes": [
+      "97% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "edhrecRank",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0838,
+     "distinct_count": 20660,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 20900,
+     "examples": [
+      15650,
+      12702,
+      11081,
+      12901,
+      3988
+     ],
+     "top_values": [],
+     "description": "rec Rank in edh. The card rank on EDHRec",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "faceConvertedManaCost",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9832,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 7.0,
+     "examples": [],
+     "top_values": [
+      [
+       2.0,
+       239
+      ],
+      [
+       3.0,
+       189
+      ],
+      [
+       0.0,
+       182
+      ],
+      [
+       4.0,
+       132
+      ],
+      [
+       1.0,
+       110
+      ],
+      [
+       5.0,
+       50
+      ],
+      [
+       6.0,
+       31
+      ],
+      [
+       7.0,
+       22
+      ]
+     ],
+     "description": "face Converted Mana Cost. The converted mana cost or mana value for the face for either half or part of the card",
+     "value_description": "if value is higher, it means that this card cost more converted mana for the face",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "faceName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9759,
+     "distinct_count": 607,
+     "is_unique": false,
+     "min_value": "Aberrant Researcher",
+     "max_value": "Zof Consumption",
+     "examples": [],
+     "top_values": [],
+     "description": "face Name. The name on the face of the card",
+     "value_description": "",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "flavorName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9996,
+     "distinct_count": 21,
+     "is_unique": true,
+     "min_value": "Anguirus, Armored Killer",
+     "max_value": "Spacegodzilla, Void Invader",
+     "examples": [],
+     "top_values": [
+      [
+       "Spacegodzilla, Void Invader",
+       1
+      ],
+      [
+       "Spacegodzilla, Death Corona",
+       1
+      ],
+      [
+       "Rodan, Titan of Winged Fury",
+       1
+      ],
+      [
+       "Mothra, Supersonic Queen",
+       1
+      ],
+      [
+       "Mothra's Great Cocoon",
+       1
+      ],
+      [
+       "Mechagodzilla, the Weapon",
+       1
+      ],
+      [
+       "Mechagodzilla, Battle Fortress",
+       1
+      ],
+      [
+       "King Caesar, Awoken Titan",
+       1
+      ],
+      [
+       "King Caesar, Ancient Guardian",
+       1
+      ],
+      [
+       "Godzilla, Primeval Champion",
+       1
+      ],
+      [
+       "Godzilla, King of the Monsters",
+       1
+      ],
+      [
+       "Godzilla, Doom Inevitable",
+       1
+      ],
+      [
+       "Gigan, Cyberclaw Terror",
+       1
+      ],
+      [
+       "Ghidorah, King of the Cosmos",
+       1
+      ],
+      [
+       "Dorat, the Perfect Pet",
+       1
+      ],
+      [
+       "Destoroyah, Perfect Lifeform",
+       1
+      ],
+      [
+       "Biollante, Plant Beast Form",
+       1
+      ],
+      [
+       "Bio-Quartz Spacegodzilla",
+       1
+      ],
+      [
+       "Battra, Dark Destroyer",
+       1
+      ],
+      [
+       "Babygodzilla, Ruin Reborn",
+       1
+      ],
+      [
+       "Anguirus, Armored Killer",
+       1
+      ]
+     ],
+     "description": "flavor Name. The promotional card name printed above the true card name on special cards that has no game function",
+     "value_description": "The promotional card name printed above the true card name on special cards that has no game function.",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "flavorText",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.4579,
+     "distinct_count": 17295,
+     "is_unique": false,
+     "min_value": "\" . . . And the third little boar built his house out of roo...",
+     "max_value": "天使は過去の自分を夢のように思い出していた。自分の歌が牧草地を支えたこと。自分の刃が闇を追い返したこと。自分の翼がずっと...",
+     "examples": [
+      "Every tear shed is a drop of immortality.",
+      "The perfect antidote for a tightly packed formation.",
+      "Life is measured in inches. To a healer, every one of those ...",
+      "The cave floods with light. A thousand rays shine forth and ...",
+      "\"We called them 'armored lightning.'\"\n—Gerrard of the *Weath..."
+     ],
+     "top_values": [],
+     "description": "flavor Text. The italicized text found below the rules text that has no game function",
+     "value_description": "The italicized text found below the rules text that has no game function.",
+     "notes": []
+    },
+    {
+     "name": "frameEffects",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9479,
+     "distinct_count": 36,
+     "is_unique": false,
+     "min_value": "colorshifted",
+     "max_value": "tombstone",
+     "examples": [],
+     "top_values": [
+      [
+       "legendary",
+       1102
+      ],
+      [
+       "extendedart",
+       383
+      ],
+      [
+       "nyxtouched",
+       193
+      ],
+      [
+       "sunmoondfc",
+       188
+      ],
+      [
+       "showcase",
+       154
+      ],
+      [
+       "devoid",
+       134
+      ],
+      [
+       "tombstone",
+       111
+      ],
+      [
+       "compasslanddfc",
+       90
+      ],
+      [
+       "legendary,etched",
+       68
+      ],
+      [
+       "legendary,extendedart",
+       64
+      ],
+      [
+       "showcase,legendary",
+       53
+      ],
+      [
+       "nyxtouched,legendary",
+       49
+      ],
+      [
+       "inverted",
+       48
+      ],
+      [
+       "colorshifted",
+       48
+      ],
+      [
+       "snow",
+       41
+      ],
+      [
+       "originpwdfc",
+       40
+      ],
+      [
+       "etched,legendary",
+       33
+      ],
+      [
+       "mooneldrazidfc",
+       32
+      ],
+      [
+       "miracle",
+       28
+      ],
+      [
+       "draft",
+       27
+      ],
+      [
+       "nyxtouched,showcase,legendary",
+       13
+      ],
+      [
+       "extendedart,legendary",
+       12
+      ],
+      [
+       "companion,legendary",
+       11
+      ],
+      [
+       "companion,legendary,extendedart",
+       10
+      ],
+      [
+       "legendary,snow",
+       5
+      ],
+      [
+       "originpwdfc,legendary",
+       4
+      ],
+      [
+       "extendedart,nyxtouched",
+       4
+      ],
+      [
+       "nyxtouched,legendary,extendedart",
+       2
+      ],
+      [
+       "nyxborn,extendedart,nyxtouched",
+       2
+      ],
+      [
+       "legendary,waxingandwaningmoondfc",
+       2
+      ],
+      [
+       "fullart",
+       2
+      ],
+      [
+       "nyxtouched,inverted",
+       1
+      ],
+      [
+       "legendary,showcase",
+       1
+      ],
+      [
+       "legendary,nyxtouched",
+       1
+      ],
+      [
+       "legendary,inverted",
+       1
+      ],
+      [
+       "legendary,fullart",
+       1
+      ]
+     ],
+     "description": "The visual frame effects.",
+     "value_description": "\"colorshifted\", \"companion\", \"compasslanddfc\", \"devoid\", \"draft\", \"etched\", \"extendedart\", \"fullart\", \"inverted\", \"legendary\", \"lesson\", \"miracle\", \"mooneldrazidfc\", \"nyxtouched\", \"originpwdfc\", \"showcase\", \"snow\", \"sunmoondfc\", \"textless\", \"tombstone\", \"waxingandwaningmoondfc\"",
+     "notes": [
+      "95% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "frameVersion",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "1993",
+     "max_value": "future",
+     "examples": [
+      "2003"
+     ],
+     "top_values": [
+      [
+       "2015",
+       25500
+      ],
+      [
+       "2003",
+       16462
+      ],
+      [
+       "1997",
+       9257
+      ],
+      [
+       "1993",
+       5510
+      ],
+      [
+       "future",
+       93
+      ]
+     ],
+     "description": "frame Version. The version of the card frame style",
+     "value_description": "\"1993\", \"1997\", \"2003\", \"2015\", \"future\"",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "hand",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9979,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": "-1",
+     "max_value": "3",
+     "examples": [],
+     "top_values": [
+      [
+       "0",
+       45
+      ],
+      [
+       "1",
+       29
+      ],
+      [
+       "-1",
+       23
+      ],
+      [
+       "-2",
+       8
+      ],
+      [
+       "2",
+       7
+      ],
+      [
+       "3",
+       4
+      ],
+      [
+       "-4",
+       1
+      ],
+      [
+       "-3",
+       1
+      ]
+     ],
+     "description": "The starting maximum hand size total modifier.",
+     "value_description": "A + or - character precedes an integer. \ncommonsense evidence:\npositive maximum hand size: +1, +2, ....\nnegative maximum hand size: -1, ....\nneural maximum hand size: 0....",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "hasAlternativeDeckLimit",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       56810
+      ],
+      [
+       1,
+       12
+      ]
+     ],
+     "description": "has Alternative Deck Limit. If the card allows a value other than 4 copies in a deck",
+     "value_description": "0: disallow 1: allow",
+     "notes": []
+    },
+    {
+     "name": "hasContentWarning",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       56793
+      ],
+      [
+       1,
+       29
+      ]
+     ],
+     "description": "has Content Warning. If the card marked by Wizards of the Coast (opens new window) for having sensitive content. See this official article (opens new window) for more information",
+     "value_description": "0: doesn't have 1: has sensitve content or Wizards of the Coast\ncommonsense evidence:\nCards with this property may have missing or degraded properties and values.",
+     "notes": []
+    },
+    {
+     "name": "hasFoil",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       34618
+      ],
+      [
+       0,
+       22204
+      ]
+     ],
+     "description": "has Foil. If the card can be found in foil",
+     "value_description": "0: cannot be found 1: can be found",
+     "notes": []
+    },
+    {
+     "name": "hasNonFoil",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      1,
+      0
+     ],
+     "top_values": [
+      [
+       1,
+       51413
+      ],
+      [
+       0,
+       5409
+      ]
+     ],
+     "description": "has Non Foil. If the card can be found in non-foil",
+     "value_description": "0: cannot be found 1: can be found",
+     "notes": []
+    },
+    {
+     "name": "isAlternative",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       56534
+      ],
+      [
+       1,
+       288
+      ]
+     ],
+     "description": "is Alternative. If the card is an alternate variation to an original printing",
+     "value_description": "0: is not 1: is",
+     "notes": []
+    },
+    {
+     "name": "isFullArt",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       56336
+      ],
+      [
+       1,
+       486
+      ]
+     ],
+     "description": "is Full Art. If the card has full artwork",
+     "value_description": "0: doesn't have, 1: has full artwork",
+     "notes": []
+    },
+    {
+     "name": "isOnlineOnly",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       52089
+      ],
+      [
+       1,
+       4733
+      ]
+     ],
+     "description": "is Online Only. If the card is only available in online game variations",
+     "value_description": "0: is not 1: is",
+     "notes": []
+    },
+    {
+     "name": "isOversized",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       56420
+      ],
+      [
+       1,
+       402
+      ]
+     ],
+     "description": "If the card is oversized.",
+     "value_description": "0: is not 1: is",
+     "notes": []
+    },
+    {
+     "name": "isPromo",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       51234
+      ],
+      [
+       1,
+       5588
+      ]
+     ],
+     "description": "is Promotion. If the card is a promotional printing",
+     "value_description": "0: is not 1: is",
+     "notes": []
+    },
+    {
+     "name": "isReprint",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       33657
+      ],
+      [
+       0,
+       23165
+      ]
+     ],
+     "description": "is Reprint. If the card has been reprinted",
+     "value_description": "0: has not 1: has not been",
+     "notes": []
+    },
+    {
+     "name": "isReserved",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       55489
+      ],
+      [
+       1,
+       1333
+      ]
+     ],
+     "description": "is Reserved. If the card is on the Magic: The Gathering Reserved List (opens new window)",
+     "value_description": "If the card is on the Magic, it will appear in The Gathering Reserved List",
+     "notes": []
+    },
+    {
+     "name": "isStarter",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       40865
+      ],
+      [
+       1,
+       15957
+      ]
+     ],
+     "description": "is Starter. If the card is found in a starter deck such as Planeswalker/Brawl decks",
+     "value_description": "0: is not 1: is",
+     "notes": []
+    },
+    {
+     "name": "isStorySpotlight",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       56718
+      ],
+      [
+       1,
+       104
+      ]
+     ],
+     "description": "is Story Spotlight. If the card is a Story Spotlight card",
+     "value_description": "0: is not 1: is",
+     "notes": []
+    },
+    {
+     "name": "isTextless",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       56707
+      ],
+      [
+       1,
+       115
+      ]
+     ],
+     "description": "is Text less. If the card does not have a text box",
+     "value_description": "commonsense evidence:\n0: has a text box;\n1: doesn't have a text box;",
+     "notes": []
+    },
+    {
+     "name": "isTimeshifted",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       56607
+      ],
+      [
+       1,
+       215
+      ]
+     ],
+     "description": "If the card is time shifted",
+     "value_description": "commonsense evidence:\nIf the card is \"timeshifted\", a feature of certain sets where a card will have a different frameVersion.",
+     "notes": []
+    },
+    {
+     "name": "keywords",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.6368,
+     "distinct_count": 1157,
+     "is_unique": false,
+     "min_value": "Adamant",
+     "max_value": "Wither",
+     "examples": [
+      "First strike",
+      "Flying",
+      "First strike,Flash",
+      "Enchant",
+      "Mill"
+     ],
+     "top_values": [],
+     "description": "A list of keywords found on the card.",
+     "value_description": "",
+     "notes": [
+      "64% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "layout",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 15,
+     "is_unique": false,
+     "min_value": "adventure",
+     "max_value": "vanguard",
+     "examples": [
+      "normal"
+     ],
+     "top_values": [
+      [
+       "normal",
+       54906
+      ],
+      [
+       "transform",
+       360
+      ],
+      [
+       "modal_dfc",
+       322
+      ],
+      [
+       "adventure",
+       228
+      ],
+      [
+       "split",
+       221
+      ],
+      [
+       "planar",
+       178
+      ],
+      [
+       "aftermath",
+       146
+      ],
+      [
+       "vanguard",
+       118
+      ],
+      [
+       "saga",
+       92
+      ],
+      [
+       "flip",
+       72
+      ],
+      [
+       "scheme",
+       70
+      ],
+      [
+       "leveler",
+       47
+      ],
+      [
+       "host",
+       28
+      ],
+      [
+       "meld",
+       18
+      ],
+      [
+       "augment",
+       16
+      ]
+     ],
+     "description": "The type of card layout. For a token card, this will be \"token\"",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "leadershipSkills",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.934,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "{'brawl': False, 'commander': False, 'oathbreaker': True}",
+     "max_value": "{'brawl': True, 'commander': True, 'oathbreaker': False}",
+     "examples": [
+      "{'brawl': False, 'commander': True, 'oathbreaker': False}"
+     ],
+     "top_values": [
+      [
+       "{'brawl': False, 'commander': True, 'oathbreaker': False}",
+       2660
+      ],
+      [
+       "{'brawl': False, 'commander': False, 'oathbreaker': True}",
+       724
+      ],
+      [
+       "{'brawl': True, 'commander': True, 'oathbreaker': False}",
+       255
+      ],
+      [
+       "{'brawl': True, 'commander': False, 'oathbreaker': True}",
+       66
+      ],
+      [
+       "{'brawl': False, 'commander': True, 'oathbreaker': True}",
+       45
+      ]
+     ],
+     "description": "leadership Skills. A list of formats the card is legal to be a commander in",
+     "value_description": "",
+     "notes": [
+      "93% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "life",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9979,
+     "distinct_count": 23,
+     "is_unique": false,
+     "min_value": "-1",
+     "max_value": "9",
+     "examples": [],
+     "top_values": [
+      [
+       "-3",
+       14
+      ],
+      [
+       "-2",
+       14
+      ],
+      [
+       "-5",
+       9
+      ],
+      [
+       "4",
+       8
+      ],
+      [
+       "3",
+       8
+      ],
+      [
+       "-4",
+       8
+      ],
+      [
+       "5",
+       7
+      ],
+      [
+       "2",
+       7
+      ],
+      [
+       "1",
+       6
+      ],
+      [
+       "0",
+       6
+      ],
+      [
+       "6",
+       5
+      ],
+      [
+       "-1",
+       5
+      ],
+      [
+       "7",
+       4
+      ],
+      [
+       "9",
+       3
+      ],
+      [
+       "12",
+       3
+      ],
+      [
+       "8",
+       2
+      ],
+      [
+       "-8",
+       2
+      ],
+      [
+       "-6",
+       2
+      ],
+      [
+       "30",
+       1
+      ],
+      [
+       "18",
+       1
+      ],
+      [
+       "15",
+       1
+      ],
+      [
+       "10",
+       1
+      ],
+      [
+       "-7",
+       1
+      ]
+     ],
+     "description": "The starting life total modifier. A plus or minus character precedes an integer.",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "loyalty",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9854,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": "*",
+     "max_value": "X",
+     "examples": [],
+     "top_values": [
+      [
+       "5",
+       265
+      ],
+      [
+       "4",
+       253
+      ],
+      [
+       "3",
+       205
+      ],
+      [
+       "7",
+       42
+      ],
+      [
+       "6",
+       42
+      ],
+      [
+       "2",
+       12
+      ],
+      [
+       "X",
+       5
+      ],
+      [
+       "0",
+       2
+      ],
+      [
+       "*",
+       2
+      ],
+      [
+       "20",
+       1
+      ],
+      [
+       "1d4+1",
+       1
+      ]
+     ],
+     "description": "The starting loyalty value of the card.",
+     "value_description": "Used only on cards with \"Planeswalker\" in its types. empty means unkown",
+     "notes": [
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "manaCost",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1289,
+     "distinct_count": 696,
+     "is_unique": false,
+     "min_value": "{0}",
+     "max_value": "{X}{Y}{Z}{R}{R}",
+     "examples": [
+      "{5}{W}{W}",
+      "{4}{W}",
+      "{3}{W}",
+      "{W}",
+      "{5}{W}"
+     ],
+     "top_values": [],
+     "description": "The mana cost of the card wrapped in brackets for each value.",
+     "value_description": "commonsense evidence:\nmanaCost is unconverted mana cost",
+     "notes": []
+    },
+    {
+     "name": "mcmId",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.1412,
+     "distinct_count": 47971,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "9999",
+     "examples": [
+      "16165",
+      "16166",
+      "16171",
+      "16172",
+      "16173"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "NOT USEFUL",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "mcmMetaId",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.3151,
+     "distinct_count": 20902,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "9999",
+     "examples": [
+      "156",
+      "176",
+      "368",
+      "423",
+      "432"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "NOT USEFUL",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "mtgArenaId",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.8971,
+     "distinct_count": 5654,
+     "is_unique": false,
+     "min_value": "13491",
+     "max_value": "9135",
+     "examples": [],
+     "top_values": [],
+     "description": "",
+     "value_description": "NOT USEFUL",
+     "notes": [
+      "90% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "mtgjsonV4Id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 56822,
+     "is_unique": true,
+     "min_value": "000031ff-f095-52c5-98a1-35bdb5e18a5b",
+     "max_value": "fffcc2f5-28c7-5ba2-bb78-a4c4d3adc9f9",
+     "examples": [
+      "ad41be73-582f-58ed-abd4-a88c1f616ac3",
+      "9eb2e54c-a12b-5e88-a9c0-d8c84c52d59c",
+      "c0de6fd8-367a-50fb-b2f4-2b8fa5aeb7d9",
+      "bfbb65b1-f1bb-5355-9495-fb094f9b0782",
+      "a634f6df-fd74-54d9-a56c-3fdd2ad3e9bf"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "NOT USEFUL",
+     "notes": []
+    },
+    {
+     "name": "mtgoFoilId",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.5713,
+     "distinct_count": 24242,
+     "is_unique": false,
+     "min_value": "10000",
+     "max_value": "9998",
+     "examples": [
+      "27501",
+      "26993",
+      "27473",
+      "27327",
+      "27095"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "NOT USEFUL",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison",
+      "57% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "mtgoId",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.4344,
+     "distinct_count": 31811,
+     "is_unique": false,
+     "min_value": "10",
+     "max_value": "9999",
+     "examples": [
+      "27500",
+      "26992",
+      "27472",
+      "27326",
+      "27094"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "NOT USEFUL",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "multiverseId",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.2596,
+     "distinct_count": 41871,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "999",
+     "examples": [
+      "130550",
+      "129465",
+      "129470",
+      "129477",
+      "132106"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "NOT USEFUL",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21738,
+     "is_unique": false,
+     "min_value": "\"Ach! Hans, Run!\"",
+     "max_value": "capital offense",
+     "examples": [
+      "Ancestor's Chosen",
+      "Angel of Mercy",
+      "Aven Cloudchaser",
+      "Ballista Squad",
+      "Bandage"
+     ],
+     "top_values": [],
+     "description": "The name of the card.",
+     "value_description": "Cards with multiple faces, like \"Split\" and \"Meld\" cards are given a delimiter.",
+     "notes": []
+    },
+    {
+     "name": "number",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6621,
+     "is_unique": false,
+     "min_value": "*112",
+     "max_value": "we97",
+     "examples": [
+      "1",
+      "2",
+      "7",
+      "8",
+      "9"
+     ],
+     "top_values": [],
+     "description": "The number of the card",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "originalReleaseDate",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9637,
+     "distinct_count": 383,
+     "is_unique": false,
+     "min_value": "1993/11/1",
+     "max_value": "2021/3/5",
+     "examples": [],
+     "top_values": [],
+     "description": "original Release Date",
+     "value_description": "The original release date in ISO 8601(opens new window) format for a promotional card printed outside of a cycle window, such as Secret Lair Drop promotions.",
+     "notes": [
+      "96% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "originalText",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.2748,
+     "distinct_count": 27607,
+     "is_unique": false,
+     "min_value": "\"Until end of turn\" and \"this turn\" effects don't end.",
+     "max_value": "−1: Up to two target creatures you control each get +2/+1 un...",
+     "examples": [
+      "First strike (This creature deals combat damage before creat...",
+      "Flying (This creature can't be blocked except by creatures w...",
+      "{X}{W}, {T}: Ballista Squad deals X damage to target attacki...",
+      "Prevent the next 1 damage that would be dealt to target crea...",
+      "Double target player's life total. Shuffle Beacon of Immorta..."
+     ],
+     "top_values": [],
+     "description": "original Text",
+     "value_description": "The text on the card as originally printed.",
+     "notes": []
+    },
+    {
+     "name": "originalType",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.2599,
+     "distinct_count": 2992,
+     "is_unique": false,
+     "min_value": "(none)",
+     "max_value": "基本 土地 — 沼",
+     "examples": [
+      "Creature - Human Cleric",
+      "Creature - Angel",
+      "Creature - Bird Soldier",
+      "Creature - Human Rebel",
+      "Instant"
+     ],
+     "top_values": [],
+     "description": "original Type",
+     "value_description": "The type of the card as originally printed. Includes any supertypes and subtypes.",
+     "notes": []
+    },
+    {
+     "name": "otherFaceIds",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9759,
+     "distinct_count": 1361,
+     "is_unique": false,
+     "min_value": "000a85b2-d96c-5a74-81de-5d0a3a0357b3",
+     "max_value": "ff9c45c0-c955-50f0-bfbe-ab4164676c37",
+     "examples": [],
+     "top_values": [],
+     "description": "other Face Ids",
+     "value_description": "A list of card UUID's to this card's counterparts, such as transformed or melded faces.",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "power",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.5389,
+     "distinct_count": 28,
+     "is_unique": false,
+     "min_value": "*",
+     "max_value": "∞",
+     "examples": [
+      "4",
+      "3",
+      "2",
+      "1",
+      "0"
+     ],
+     "top_values": [
+      [
+       "2",
+       7815
+      ],
+      [
+       "1",
+       5579
+      ],
+      [
+       "3",
+       4414
+      ],
+      [
+       "4",
+       2855
+      ],
+      [
+       "5",
+       1744
+      ],
+      [
+       "0",
+       1442
+      ],
+      [
+       "6",
+       1083
+      ],
+      [
+       "*",
+       429
+      ],
+      [
+       "7",
+       384
+      ],
+      [
+       "8",
+       190
+      ],
+      [
+       "10",
+       77
+      ],
+      [
+       "9",
+       73
+      ],
+      [
+       "12",
+       26
+      ],
+      [
+       "11",
+       20
+      ],
+      [
+       "1+*",
+       16
+      ],
+      [
+       "13",
+       12
+      ],
+      [
+       "15",
+       10
+      ],
+      [
+       "2+*",
+       8
+      ],
+      [
+       "3.5",
+       4
+      ],
+      [
+       "-1",
+       4
+      ],
+      [
+       "2.5",
+       3
+      ],
+      [
+       "∞",
+       2
+      ],
+      [
+       "?",
+       2
+      ],
+      [
+       "1.5",
+       2
+      ],
+      [
+       "99",
+       1
+      ],
+      [
+       "16",
+       1
+      ],
+      [
+       "0.5",
+       1
+      ],
+      [
+       "*²",
+       1
+      ]
+     ],
+     "description": "The power of the card.",
+     "value_description": "commonsense evidence:\n∞ means infinite power\nnull or * refers to unknown power",
+     "notes": [
+      "54% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "printings",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6231,
+     "is_unique": false,
+     "min_value": "10E,2ED,2XM,3ED,4BB,4ED,5ED,6ED,7ED,8ED,9ED,AKH,AKR,ALA,ANA,...",
+     "max_value": "ZNR",
+     "examples": [
+      "10E,JUD,UMA",
+      "10E,8ED,9ED,DDC,DVD,IMA,INV,JMP,MB1,P02,PS11,PSAL,S99",
+      "10E,8ED,9ED,ODY",
+      "10E,9ED,MMQ",
+      "10E,STH,TPR"
+     ],
+     "top_values": [],
+     "description": "A list of set printing codes the card was printed in, formatted in uppercase.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "promoTypes",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.892,
+     "distinct_count": 64,
+     "is_unique": false,
+     "min_value": "arenaleague",
+     "max_value": "wizardsplaynetwork",
+     "examples": [],
+     "top_values": [],
+     "description": "promo Types. A list of promotional types for a card",
+     "value_description": "\"arenaleague\", \"boosterfun\", \"boxtopper\", \"brawldeck\", \"bundle\", \"buyabox\", \"convention\", \"datestamped\", \"draculaseries\", \"draftweekend\", \"duels\", \"event\", \"fnm\", \"gameday\", \"gateway\", \"giftbox\", \"gilded\", \"godzillaseries\", \"instore\", \"intropack\", \"jpwalker\", \"judgegift\", \"league\", \"mediainsert\", \"neonink\", \"openhouse\", \"planeswalkerstamped\", \"playerrewards\", \"playpromo\", \"premiereshop\", \"prerelease\", \"promopack\", \"release\", \"setpromo\", \"stamped\", \"textured\", \"themepack\", \"thick\", \"tourney\", \"wizardsplaynetwork\"",
+     "notes": [
+      "89% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "purchaseUrls",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1121,
+     "distinct_count": 50451,
+     "is_unique": true,
+     "min_value": "{'cardKingdom': 'https://mtgjson.com/links/000088042e46f4b8'...",
+     "max_value": "{'tcgplayer': 'https://mtgjson.com/links/fff8c4b4a52dab67'}",
+     "examples": [
+      "{'cardKingdom': 'https://mtgjson.com/links/9fb51af0ad6f0736'...",
+      "{'cardKingdom': 'https://mtgjson.com/links/027095d094e58f5b'...",
+      "{'cardKingdom': 'https://mtgjson.com/links/9246105d88032a9f'...",
+      "{'cardKingdom': 'https://mtgjson.com/links/d702da7661073a13'...",
+      "{'cardKingdom': 'https://mtgjson.com/links/a072a876146b29bc'..."
+     ],
+     "top_values": [],
+     "description": "purchase Urls. Links that navigate to websites where the card can be purchased",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "rarity",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "common",
+     "max_value": "uncommon",
+     "examples": [
+      "uncommon",
+      "common",
+      "rare"
+     ],
+     "top_values": [
+      [
+       "common",
+       20745
+      ],
+      [
+       "rare",
+       17626
+      ],
+      [
+       "uncommon",
+       15251
+      ],
+      [
+       "mythic",
+       3200
+      ]
+     ],
+     "description": "The card printing rarity.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "scryfallId",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 56144,
+     "is_unique": false,
+     "min_value": "0000579f-7b35-4ed3-b44c-db2a538066fe",
+     "max_value": "fffe7b2b-22c3-4e6a-9b1b-c6d7b29b9f86",
+     "examples": [
+      "7a5cd03c-4227-4551-aa4b-7d119f0468b5",
+      "8f7980d4-da43-4d6d-ad16-14b8a34ae91d",
+      "407110e9-19af-4ff5-97b2-c03225031a73",
+      "a4d17394-b9c4-43f6-9a6d-2c7c7ecb1d74",
+      "c9c17e3b-4d7f-4472-afe1-8e9358b82f2c"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "NOT USEFUL",
+     "notes": []
+    },
+    {
+     "name": "scryfallIllustrationId",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 27250,
+     "is_unique": false,
+     "min_value": "000098db-2a02-4926-b0af-d76d12167e2a",
+     "max_value": "ffff24c5-05b4-48e7-88d9-534efede500f",
+     "examples": [
+      "be2f7173-c8b7-4172-a388-9b2c6b3c16e5",
+      "e4d6c53f-e936-4be8-8b70-47c2be863b20",
+      "2eb663cd-020a-46d8-a6d9-bb63d4b5c848",
+      "8464353d-099c-47ba-a0eb-e08b7b76b464",
+      "af3d1d9e-8a04-4ba5-aa96-9ea678daaa2b"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "NOT USEFUL",
+     "notes": []
+    },
+    {
+     "name": "scryfallOracleId",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21769,
+     "is_unique": false,
+     "min_value": "0004ebd0-dfd6-4276-b4a6-de0003e94237",
+     "max_value": "ffff90c3-63c4-4dee-a21d-6b2b113f4f80",
+     "examples": [
+      "fc2ccab7-cab1-4463-b73d-898070136d74",
+      "a2daaf32-dbfe-4618-892e-0da24f63a44a",
+      "48bda7dd-d023-41e8-8c28-e0cfda0d07ca",
+      "5973725c-6e1f-4d7e-bcef-3d867ea4c244",
+      "c664df64-0103-462b-a0f8-c483b152974a"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "NOT USEFUL",
+     "notes": []
+    },
+    {
+     "name": "setCode",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 536,
+     "is_unique": false,
+     "min_value": "10E",
+     "max_value": "ZNR",
+     "examples": [
+      "10E"
+     ],
+     "top_values": [],
+     "description": "Set Code. The set printing code that the card is from",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "side",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9759,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "a",
+     "max_value": "e",
+     "examples": [],
+     "top_values": [
+      [
+       "a",
+       683
+      ],
+      [
+       "b",
+       677
+      ],
+      [
+       "c",
+       3
+      ],
+      [
+       "e",
+       2
+      ],
+      [
+       "d",
+       2
+      ]
+     ],
+     "description": "The identifier of the card side.",
+     "value_description": "Used on cards with multiple faces on the same card.\ncommonsense evidence:\nif this value is empty, then it means this card doesn't have multiple faces on the same card.",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "subtypes",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.3912,
+     "distinct_count": 1505,
+     "is_unique": false,
+     "min_value": "Abian",
+     "max_value": "Zubera,Spirit",
+     "examples": [
+      "Human,Cleric",
+      "Angel",
+      "Bird,Soldier",
+      "Human,Rebel",
+      "Human,Knight"
+     ],
+     "top_values": [],
+     "description": "A list of card subtypes found after em-dash.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "supertypes",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.862,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": "Basic",
+     "max_value": "World",
+     "examples": [
+      "Legendary"
+     ],
+     "top_values": [
+      [
+       "Legendary",
+       4286
+      ],
+      [
+       "Basic",
+       3269
+      ],
+      [
+       "Snow",
+       142
+      ],
+      [
+       "World",
+       47
+      ],
+      [
+       "Basic,Snow",
+       35
+      ],
+      [
+       "Host",
+       28
+      ],
+      [
+       "Legendary,Snow",
+       21
+      ],
+      [
+       "Ongoing",
+       12
+      ]
+     ],
+     "description": "super types. A list of card supertypes found before em-dash",
+     "value_description": "commonsense evidence:\nlist of all types should be the union of subtypes and supertypes",
+     "notes": [
+      "86% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "tcgplayerProductId",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.1162,
+     "distinct_count": 49470,
+     "is_unique": false,
+     "min_value": "100",
+     "max_value": "99958",
+     "examples": [
+      "15032",
+      "15033",
+      "15045",
+      "15048",
+      "15049"
+     ],
+     "top_values": [],
+     "description": "tcg player ProductId",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "text",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0168,
+     "distinct_count": 20592,
+     "is_unique": false,
+     "min_value": "\"Until end of turn\" and \"this turn\" effects don't end.",
+     "max_value": "{X}{X}{R}, {T}, Sacrifice Orcish Settlers: Destroy X target ...",
+     "examples": [
+      "First strike (This creature deals combat damage before creat...",
+      "Flying\nWhen Angel of Mercy enters the battlefield, you gain ...",
+      "Flying (This creature can't be blocked except by creatures w...",
+      "{X}{W}, {T}: Ballista Squad deals X damage to target attacki...",
+      "Prevent the next 1 damage that would be dealt to any target ..."
+     ],
+     "top_values": [],
+     "description": "The rules text of the card.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "toughness",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.5389,
+     "distinct_count": 32,
+     "is_unique": false,
+     "min_value": "*",
+     "max_value": "?",
+     "examples": [
+      "4",
+      "3",
+      "2",
+      "1",
+      "6"
+     ],
+     "top_values": [
+      [
+       "2",
+       6453
+      ],
+      [
+       "1",
+       6134
+      ],
+      [
+       "3",
+       4937
+      ],
+      [
+       "4",
+       3688
+      ],
+      [
+       "5",
+       2017
+      ],
+      [
+       "6",
+       1169
+      ],
+      [
+       "0",
+       481
+      ],
+      [
+       "7",
+       451
+      ],
+      [
+       "*",
+       362
+      ],
+      [
+       "8",
+       215
+      ],
+      [
+       "9",
+       84
+      ],
+      [
+       "10",
+       67
+      ],
+      [
+       "1+*",
+       27
+      ],
+      [
+       "12",
+       26
+      ],
+      [
+       "11",
+       26
+      ],
+      [
+       "13",
+       16
+      ],
+      [
+       "15",
+       10
+      ],
+      [
+       "2+*",
+       8
+      ],
+      [
+       "7-*",
+       7
+      ],
+      [
+       "17",
+       5
+      ],
+      [
+       "3.5",
+       3
+      ],
+      [
+       "?",
+       2
+      ],
+      [
+       "99",
+       1
+      ],
+      [
+       "20",
+       1
+      ],
+      [
+       "2.5",
+       1
+      ],
+      [
+       "16",
+       1
+      ],
+      [
+       "14",
+       1
+      ],
+      [
+       "1.5",
+       1
+      ],
+      [
+       "0.5",
+       1
+      ],
+      [
+       "-1",
+       1
+      ],
+      [
+       "*²",
+       1
+      ],
+      [
+       "*+1",
+       1
+      ]
+     ],
+     "description": "The toughness of the card.",
+     "value_description": "",
+     "notes": [
+      "54% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "type",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2022,
+     "is_unique": false,
+     "min_value": "Artifact",
+     "max_value": "instant",
+     "examples": [
+      "Creature — Human Cleric",
+      "Creature — Angel",
+      "Creature — Bird Soldier",
+      "Creature — Human Rebel",
+      "Instant"
+     ],
+     "top_values": [],
+     "description": "The type of the card as visible, including any supertypes and subtypes.",
+     "value_description": "\"Artifact\", \"Card\", \"Conspiracy\", \"Creature\", \"Dragon\", \"Dungeon\", \"Eaturecray\", \"Elemental\", \"Elite\", \"Emblem\", \"Enchantment\", \"Ever\", \"Goblin\", \"Hero\", \"Instant\", \"Jaguar\", \"Knights\", \"Land\", \"Phenomenon\", \"Plane\", \"Planeswalker\", \"Scariest\", \"Scheme\", \"See\", \"Sorcery\", \"Sticker\", \"Summon\", \"Token\", \"Tribal\", \"Vanguard\", \"Wolf\", \"You’ll\", \"instant\"",
+     "notes": []
+    },
+    {
+     "name": "types",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 37,
+     "is_unique": false,
+     "min_value": "Artifact",
+     "max_value": "instant",
+     "examples": [
+      "Creature",
+      "Instant",
+      "Enchantment",
+      "Sorcery"
+     ],
+     "top_values": [
+      [
+       "Creature",
+       24229
+      ],
+      [
+       "Instant",
+       6739
+      ],
+      [
+       "Land",
+       6573
+      ],
+      [
+       "Sorcery",
+       6328
+      ],
+      [
+       "Enchantment",
+       5652
+      ],
+      [
+       "Artifact",
+       3986
+      ],
+      [
+       "Artifact,Creature",
+       1617
+      ],
+      [
+       "Planeswalker",
+       835
+      ],
+      [
+       "Enchantment,Creature",
+       256
+      ],
+      [
+       "Plane",
+       162
+      ],
+      [
+       "Vanguard",
+       118
+      ],
+      [
+       "Scheme",
+       70
+      ],
+      [
+       "Tribal,Instant",
+       45
+      ],
+      [
+       "Artifact,Land",
+       43
+      ],
+      [
+       "Tribal,Sorcery",
+       32
+      ],
+      [
+       "Tribal,Enchantment",
+       30
+      ],
+      [
+       "Conspiracy",
+       26
+      ],
+      [
+       "Phenomenon",
+       16
+      ],
+      [
+       "Hero",
+       16
+      ],
+      [
+       "Enchantment,Artifact",
+       13
+      ],
+      [
+       "Tribal,Artifact",
+       6
+      ],
+      [
+       "Summon",
+       5
+      ],
+      [
+       "Hero,Artifact",
+       5
+      ],
+      [
+       "Land,Creature",
+       4
+      ],
+      [
+       "Summon,Jaguar",
+       2
+      ],
+      [
+       "Summon,Dragon",
+       2
+      ],
+      [
+       "Instant,Creature",
+       2
+      ],
+      [
+       "instant",
+       1
+      ],
+      [
+       "Summon,Wolf",
+       1
+      ],
+      [
+       "Summon,Specter",
+       1
+      ],
+      [
+       "Summon,Knights",
+       1
+      ],
+      [
+       "Summon,Goblin",
+       1
+      ],
+      [
+       "Scariest,Creature,You’ll,Ever,See",
+       1
+      ],
+      [
+       "Enchantment,Land",
+       1
+      ],
+      [
+       "Elemental,Instant",
+       1
+      ],
+      [
+       "Eaturecray",
+       1
+      ],
+      [
+       "Autobot,Character",
+       1
+      ]
+     ],
+     "description": "A list of all card types of the card, including Un‑sets and gameplay variants.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "uuid",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 56822,
+     "is_unique": true,
+     "min_value": "00010d56-fe38-5e35-8aed-518019aa36a5",
+     "max_value": "fffdd333-3789-5104-a8be-37be199a2cb1",
+     "examples": [
+      "5f8287b1-5bb6-5f4c-ad17-316a40d5bb0c",
+      "57aaebc1-850c-503d-9f6e-bb8d00d8bf7c",
+      "8ac972b5-9f6e-5cc8-91c3-b9a40a98232e",
+      "a69b404f-144a-5317-b10e-7d9dce135b24",
+      "6d268c95-c176-5766-9a46-c14f739aba1c"
+     ],
+     "top_values": [],
+     "description": "The universal unique identifier (v5) generated by MTGJSON. Each entry is unique.",
+     "value_description": "NOT USEFUL",
+     "notes": []
+    },
+    {
+     "name": "variations",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.848,
+     "distinct_count": 8256,
+     "is_unique": false,
+     "min_value": "000e097b-ff5f-5a34-b4fc-a1c76e899e4f",
+     "max_value": "fffa9242-6444-567c-a45b-da2b45249232",
+     "examples": [
+      "b7c19924-b4bf-56fc-aa73-f586e940bd42",
+      "8fd4e2eb-3eb4-50ea-856b-ef638fa47f8a",
+      "6adaf14d-43e3-521a-adf1-960c808e5b1a",
+      "0d2a4e1d-cc12-5675-8044-9a7bc7d60050",
+      "62365fbb-af07-5c2a-976d-e3092bdfc317"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "85% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "watermark",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9217,
+     "distinct_count": 161,
+     "is_unique": false,
+     "min_value": "abzan",
+     "max_value": "wpn",
+     "examples": [],
+     "top_values": [],
+     "description": "The name of the watermark on the card.",
+     "value_description": "",
+     "notes": [
+      "92% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "artist": "Pete Venters",
+     "asciiName": null,
+     "availability": "mtgo,paper",
+     "borderColor": "black",
+     "cardKingdomFoilId": null,
+     "cardKingdomId": "122719",
+     "colorIdentity": "W",
+     "colorIndicator": null,
+     "colors": "W",
+     "convertedManaCost": 7.0,
+     "duelDeck": null,
+     "edhrecRank": 15650,
+     "faceConvertedManaCost": null,
+     "faceName": null,
+     "flavorName": null,
+     "flavorText": null,
+     "frameEffects": null,
+     "frameVersion": "2003",
+     "hand": null,
+     "hasAlternativeDeckLimit": 0,
+     "hasContentWarning": 0,
+     "hasFoil": 0,
+     "hasNonFoil": 1,
+     "isAlternative": 0,
+     "isFullArt": 0,
+     "isOnlineOnly": 0,
+     "isOversized": 0,
+     "isPromo": 0,
+     "isReprint": 1,
+     "isReserved": 0,
+     "isStarter": 0,
+     "isStorySpotlight": 0,
+     "isTextless": 0,
+     "isTimeshifted": 0,
+     "keywords": "First strike",
+     "layout": "normal",
+     "leadershipSkills": null,
+     "life": null,
+     "loyalty": null,
+     "manaCost": "{5}{W}{W}",
+     "mcmId": "16165",
+     "mcmMetaId": "156",
+     "mtgArenaId": null,
+     "mtgjsonV4Id": "ad41be73-582f-58ed-abd4-a88c1f616ac3",
+     "mtgoFoilId": "27501",
+     "mtgoId": "27500",
+     "multiverseId": "130550",
+     "name": "Ancestor's Chosen",
+     "number": "1",
+     "originalReleaseDate": null,
+     "originalText": "First strike (This creature deals combat damage before creat...",
+     "originalType": "Creature - Human Cleric",
+     "otherFaceIds": null,
+     "power": "4",
+     "printings": "10E,JUD,UMA",
+     "promoTypes": null,
+     "purchaseUrls": "{'cardKingdom': 'https://mtgjson.com/links/9fb51af0ad6f0736'...",
+     "rarity": "uncommon",
+     "scryfallId": "7a5cd03c-4227-4551-aa4b-7d119f0468b5",
+     "scryfallIllustrationId": "be2f7173-c8b7-4172-a388-9b2c6b3c16e5",
+     "scryfallOracleId": "fc2ccab7-cab1-4463-b73d-898070136d74",
+     "setCode": "10E",
+     "side": null,
+     "subtypes": "Human,Cleric",
+     "supertypes": null,
+     "tcgplayerProductId": "15032",
+     "text": "First strike (This creature deals combat damage before creat...",
+     "toughness": "4",
+     "type": "Creature — Human Cleric",
+     "types": "Creature",
+     "uuid": "5f8287b1-5bb6-5f4c-ad17-316a40d5bb0c",
+     "variations": "b7c19924-b4bf-56fc-aa73-f586e940bd42",
+     "watermark": null
+    },
+    {
+     "id": 2,
+     "artist": "Volkan Baǵa",
+     "asciiName": null,
+     "availability": "mtgo,paper",
+     "borderColor": "black",
+     "cardKingdomFoilId": null,
+     "cardKingdomId": "122720",
+     "colorIdentity": "W",
+     "colorIndicator": null,
+     "colors": "W",
+     "convertedManaCost": 5.0,
+     "duelDeck": null,
+     "edhrecRank": 12702,
+     "faceConvertedManaCost": null,
+     "faceName": null,
+     "flavorName": null,
+     "flavorText": "Every tear shed is a drop of immortality.",
+     "frameEffects": null,
+     "frameVersion": "2003",
+     "hand": null,
+     "hasAlternativeDeckLimit": 0,
+     "hasContentWarning": 0,
+     "hasFoil": 0,
+     "hasNonFoil": 1,
+     "isAlternative": 0,
+     "isFullArt": 0,
+     "isOnlineOnly": 0,
+     "isOversized": 0,
+     "isPromo": 0,
+     "isReprint": 1,
+     "isReserved": 0,
+     "isStarter": 0,
+     "isStorySpotlight": 0,
+     "isTextless": 0,
+     "isTimeshifted": 0,
+     "keywords": "Flying",
+     "layout": "normal",
+     "leadershipSkills": null,
+     "life": null,
+     "loyalty": null,
+     "manaCost": "{4}{W}",
+     "mcmId": "16166",
+     "mcmMetaId": "176",
+     "mtgArenaId": null,
+     "mtgjsonV4Id": "9eb2e54c-a12b-5e88-a9c0-d8c84c52d59c",
+     "mtgoFoilId": "26993",
+     "mtgoId": "26992",
+     "multiverseId": "129465",
+     "name": "Angel of Mercy",
+     "number": "2",
+     "originalReleaseDate": null,
+     "originalText": "Flying (This creature can't be blocked except by creatures w...",
+     "originalType": "Creature - Angel",
+     "otherFaceIds": null,
+     "power": "3",
+     "printings": "10E,8ED,9ED,DDC,DVD,IMA,INV,JMP,MB1,P02,PS11,PSAL,S99",
+     "promoTypes": null,
+     "purchaseUrls": "{'cardKingdom': 'https://mtgjson.com/links/027095d094e58f5b'...",
+     "rarity": "uncommon",
+     "scryfallId": "8f7980d4-da43-4d6d-ad16-14b8a34ae91d",
+     "scryfallIllustrationId": "e4d6c53f-e936-4be8-8b70-47c2be863b20",
+     "scryfallOracleId": "a2daaf32-dbfe-4618-892e-0da24f63a44a",
+     "setCode": "10E",
+     "side": null,
+     "subtypes": "Angel",
+     "supertypes": null,
+     "tcgplayerProductId": "15033",
+     "text": "Flying\nWhen Angel of Mercy enters the battlefield, you gain ...",
+     "toughness": "3",
+     "type": "Creature — Angel",
+     "types": "Creature",
+     "uuid": "57aaebc1-850c-503d-9f6e-bb8d00d8bf7c",
+     "variations": "8fd4e2eb-3eb4-50ea-856b-ef638fa47f8a",
+     "watermark": null
+    },
+    {
+     "id": 3,
+     "artist": "Justin Sweet",
+     "asciiName": null,
+     "availability": "mtgo,paper",
+     "borderColor": "black",
+     "cardKingdomFoilId": null,
+     "cardKingdomId": "122725",
+     "colorIdentity": "W",
+     "colorIndicator": null,
+     "colors": "W",
+     "convertedManaCost": 4.0,
+     "duelDeck": null,
+     "edhrecRank": 11081,
+     "faceConvertedManaCost": null,
+     "faceName": null,
+     "flavorName": null,
+     "flavorText": null,
+     "frameEffects": null,
+     "frameVersion": "2003",
+     "hand": null,
+     "hasAlternativeDeckLimit": 0,
+     "hasContentWarning": 0,
+     "hasFoil": 0,
+     "hasNonFoil": 1,
+     "isAlternative": 0,
+     "isFullArt": 0,
+     "isOnlineOnly": 0,
+     "isOversized": 0,
+     "isPromo": 0,
+     "isReprint": 1,
+     "isReserved": 0,
+     "isStarter": 0,
+     "isStorySpotlight": 0,
+     "isTextless": 0,
+     "isTimeshifted": 0,
+     "keywords": "Flying",
+     "layout": "normal",
+     "leadershipSkills": null,
+     "life": null,
+     "loyalty": null,
+     "manaCost": "{3}{W}",
+     "mcmId": "16171",
+     "mcmMetaId": "368",
+     "mtgArenaId": null,
+     "mtgjsonV4Id": "c0de6fd8-367a-50fb-b2f4-2b8fa5aeb7d9",
+     "mtgoFoilId": "27473",
+     "mtgoId": "27472",
+     "multiverseId": "129470",
+     "name": "Aven Cloudchaser",
+     "number": "7",
+     "originalReleaseDate": null,
+     "originalText": "Flying (This creature can't be blocked except by creatures w...",
+     "originalType": "Creature - Bird Soldier",
+     "otherFaceIds": null,
+     "power": "2",
+     "printings": "10E,8ED,9ED,ODY",
+     "promoTypes": null,
+     "purchaseUrls": "{'cardKingdom': 'https://mtgjson.com/links/9246105d88032a9f'...",
+     "rarity": "common",
+     "scryfallId": "407110e9-19af-4ff5-97b2-c03225031a73",
+     "scryfallIllustrationId": "2eb663cd-020a-46d8-a6d9-bb63d4b5c848",
+     "scryfallOracleId": "48bda7dd-d023-41e8-8c28-e0cfda0d07ca",
+     "setCode": "10E",
+     "side": null,
+     "subtypes": "Bird,Soldier",
+     "supertypes": null,
+     "tcgplayerProductId": "15045",
+     "text": "Flying (This creature can't be blocked except by creatures w...",
+     "toughness": "2",
+     "type": "Creature — Bird Soldier",
+     "types": "Creature",
+     "uuid": "8ac972b5-9f6e-5cc8-91c3-b9a40a98232e",
+     "variations": "6adaf14d-43e3-521a-adf1-960c808e5b1a",
+     "watermark": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "foreign_data",
+   "row_count": 229186,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 200019,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique id number identifying this row of data",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "flavorText",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 99748,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "５柱の神々。１つの目的。",
+     "examples": [
+      "„Es ist der Wille aller, und meine Hand, die ihn ausführt.\"",
+      "\"La voluntad de todos, realizada por mi mano.\"",
+      "« La volonté de tous passe par ma main. »",
+      "\"La volontà di tutti, eseguita per mano mia.\"",
+      "すべての意思を、この手で成そう。"
+     ],
+     "top_values": [],
+     "description": "The foreign flavor text of the card.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "language",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": "Ancient Greek",
+     "max_value": "Spanish",
+     "examples": [
+      "German",
+      "Spanish",
+      "French",
+      "Italian",
+      "Japanese"
+     ],
+     "top_values": [
+      [
+       "Japanese",
+       27252
+      ],
+      [
+       "French",
+       25617
+      ],
+      [
+       "German",
+       25204
+      ],
+      [
+       "Italian",
+       25070
+      ],
+      [
+       "Spanish",
+       25012
+      ],
+      [
+       "Portuguese (Brazil)",
+       22017
+      ],
+      [
+       "Chinese Simplified",
+       17904
+      ],
+      [
+       "Russian",
+       13676
+      ],
+      [
+       "Chinese Traditional",
+       9833
+      ],
+      [
+       "Korean",
+       8407
+      ],
+      [
+       "Phyrexian",
+       3
+      ],
+      [
+       "Sanskrit",
+       1
+      ],
+      [
+       "Latin",
+       1
+      ],
+      [
+       "Hebrew",
+       1
+      ],
+      [
+       "Arabic",
+       1
+      ],
+      [
+       "Ancient Greek",
+       1
+      ]
+     ],
+     "description": "The foreign language of card.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "multiverseid",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.1528,
+     "distinct_count": 167611,
+     "is_unique": false,
+     "min_value": 73246,
+     "max_value": 507640,
+     "examples": [
+      148411,
+      150317,
+      149934,
+      148794,
+      148028
+     ],
+     "top_values": [],
+     "description": "The foreign multiverse identifier of the card.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 141093,
+     "is_unique": false,
+     "min_value": "100.000 Pfeile borgen",
+     "max_value": "힘찬 도약",
+     "examples": [
+      "Ausgewählter der Ahnfrau",
+      "Elegido de la Antepasada",
+      "Élu de l'Ancêtre",
+      "Prescelto dell'Antenata",
+      "祖神に選ばれし者"
+     ],
+     "top_values": [],
+     "description": "The foreign name of the card.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "text",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 143220,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Ｘは黒マナでしか支払えない。\nクリーチャー１体かプレイヤー１人を対象とする。魂の消耗はそれにＸ点のダメージを与える。 あ...",
+     "examples": [
+      "Erstschlag (Diese Kreatur fügt Kampfschaden vor Kreaturen oh...",
+      "Daña primero. (Esta criatura hace daño de combate antes que ...",
+      "Initiative (Cette créature inflige des blessures de combat a...",
+      "Attacco improvviso (Questa creatura infligge danno da combat...",
+      "先制攻撃 （このクリーチャーは先制攻撃を持たないクリーチャーよりも先に戦闘ダメージを与える。）\n祖神に選ばれし者が場に出..."
+     ],
+     "top_values": [],
+     "description": "The foreign text ruling of the card.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "type",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 15268,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "플레인즈워커 — 테제렛",
+     "examples": [
+      "Kreatur — Mensch, Kleriker",
+      "Criatura — Clérigo humano",
+      "Créature : humain et clerc",
+      "Creatura — Chierico Umano",
+      "クリーチャー — 人間・クレリック"
+     ],
+     "top_values": [],
+     "description": "The foreign type of the card. Includes any supertypes and subtypes.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "uuid",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 30078,
+     "is_unique": false,
+     "min_value": "0001e0d0-2dcd-5640-aadc-a84765cf5fc9",
+     "max_value": "fffb659e-b3fa-5cd8-9423-fe5ac74248b5",
+     "examples": [
+      "5f8287b1-5bb6-5f4c-ad17-316a40d5bb0c",
+      "57aaebc1-850c-503d-9f6e-bb8d00d8bf7c",
+      "8ac972b5-9f6e-5cc8-91c3-b9a40a98232e",
+      "a69b404f-144a-5317-b10e-7d9dce135b24",
+      "6d268c95-c176-5766-9a46-c14f739aba1c"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "flavorText": "„Es ist der Wille aller, und meine Hand, die ihn ausführt.\"",
+     "language": "German",
+     "multiverseid": 148411,
+     "name": "Ausgewählter der Ahnfrau",
+     "text": "Erstschlag (Diese Kreatur fügt Kampfschaden vor Kreaturen oh...",
+     "type": "Kreatur — Mensch, Kleriker",
+     "uuid": "5f8287b1-5bb6-5f4c-ad17-316a40d5bb0c"
+    },
+    {
+     "id": 2,
+     "flavorText": "\"La voluntad de todos, realizada por mi mano.\"",
+     "language": "Spanish",
+     "multiverseid": 150317,
+     "name": "Elegido de la Antepasada",
+     "text": "Daña primero. (Esta criatura hace daño de combate antes que ...",
+     "type": "Criatura — Clérigo humano",
+     "uuid": "5f8287b1-5bb6-5f4c-ad17-316a40d5bb0c"
+    },
+    {
+     "id": 3,
+     "flavorText": "« La volonté de tous passe par ma main. »",
+     "language": "French",
+     "multiverseid": 149934,
+     "name": "Élu de l'Ancêtre",
+     "text": "Initiative (Cette créature inflige des blessures de combat a...",
+     "type": "Créature : humain et clerc",
+     "uuid": "5f8287b1-5bb6-5f4c-ad17-316a40d5bb0c"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 229,186 rows"
+   ]
+  },
+  {
+   "name": "legalities",
+   "row_count": 427907,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 200000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique id identifying this legality",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "format",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 15,
+     "is_unique": false,
+     "min_value": "brawl",
+     "max_value": "vintage",
+     "examples": [
+      "commander",
+      "duel",
+      "legacy",
+      "modern",
+      "penny"
+     ],
+     "top_values": [
+      [
+       "commander",
+       26280
+      ],
+      [
+       "vintage",
+       26279
+      ],
+      [
+       "legacy",
+       26279
+      ],
+      [
+       "duel",
+       26255
+      ],
+      [
+       "modern",
+       19441
+      ],
+      [
+       "penny",
+       17957
+      ],
+      [
+       "pauper",
+       11014
+      ],
+      [
+       "pioneer",
+       9899
+      ],
+      [
+       "premodern",
+       9844
+      ],
+      [
+       "historic",
+       7238
+      ],
+      [
+       "gladiator",
+       7238
+      ],
+      [
+       "standard",
+       3094
+      ],
+      [
+       "future",
+       3094
+      ],
+      [
+       "brawl",
+       3094
+      ],
+      [
+       "oldschool",
+       2994
+      ]
+     ],
+     "description": "format of play",
+     "value_description": "each value refers to different rules to play",
+     "notes": []
+    },
+    {
+     "name": "status",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Banned",
+     "max_value": "Restricted",
+     "examples": [
+      "Legal"
+     ],
+     "top_values": [
+      [
+       "Legal",
+       198678
+      ],
+      [
+       "Banned",
+       1021
+      ],
+      [
+       "Restricted",
+       301
+      ]
+     ],
+     "description": "",
+     "value_description": "• legal\n• banned\n• restricted",
+     "notes": []
+    },
+    {
+     "name": "uuid",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 26298,
+     "is_unique": false,
+     "min_value": "0001e0d0-2dcd-5640-aadc-a84765cf5fc9",
+     "max_value": "fffc1305-a118-559b-9504-3d7b56ca0bde",
+     "examples": [
+      "5f8287b1-5bb6-5f4c-ad17-316a40d5bb0c",
+      "57aaebc1-850c-503d-9f6e-bb8d00d8bf7c",
+      "8ac972b5-9f6e-5cc8-91c3-b9a40a98232e",
+      "a69b404f-144a-5317-b10e-7d9dce135b24",
+      "6d268c95-c176-5766-9a46-c14f739aba1c"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "format": "commander",
+     "status": "Legal",
+     "uuid": "5f8287b1-5bb6-5f4c-ad17-316a40d5bb0c"
+    },
+    {
+     "id": 2,
+     "format": "duel",
+     "status": "Legal",
+     "uuid": "5f8287b1-5bb6-5f4c-ad17-316a40d5bb0c"
+    },
+    {
+     "id": 3,
+     "format": "legacy",
+     "status": "Legal",
+     "uuid": "5f8287b1-5bb6-5f4c-ad17-316a40d5bb0c"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 427,907 rows"
+   ]
+  },
+  {
+   "name": "rulings",
+   "row_count": 87769,
+   "stats_rows": 87769,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 87769,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 87769,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique id identifying this ruling",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 109,
+     "is_unique": false,
+     "min_value": "2004-10-04",
+     "max_value": "2021-02-05",
+     "examples": [
+      "2007-07-15",
+      "2007-02-01",
+      "2010-08-15",
+      "2008-08-01",
+      "2005-06-01"
+     ],
+     "top_values": [],
+     "description": "date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "text",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 19593,
+     "is_unique": false,
+     "min_value": "+1/+1 counters on The Ozolith have no effect unless it becom...",
+     "max_value": "“You” refers to the controller of Curiosity, which may be di...",
+     "examples": [
+      "You draw the card when Bandage resolves, not when the damage...",
+      "If you double a negative life total, you do the real math. A...",
+      "Beacon of Immortality’s effect counts as life gain (or life ...",
+      "If a Beacon is countered or doesn’t resolve, it’s put into i...",
+      "The affected creature’s last known existence on the battlefi..."
+     ],
+     "top_values": [],
+     "description": "description about this ruling",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "uuid",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 26141,
+     "is_unique": false,
+     "min_value": "00010d56-fe38-5e35-8aed-518019aa36a5",
+     "max_value": "fffbc95a-c4d1-56aa-8653-8a7c71fe19ce",
+     "examples": [
+      "6d268c95-c176-5766-9a46-c14f739aba1c",
+      "56f4935b-f6c5-59b9-88bf-9bcce20247ce",
+      "7fef665c-36a1-5f7a-9299-cf8938708710",
+      "f39b4446-0ca6-5446-8507-4b1ba37bb3e7",
+      "c19bcfc2-fc10-5040-8239-1c193098df47"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "date": "2007-07-15",
+     "text": "You draw the card when Bandage resolves, not when the damage...",
+     "uuid": "6d268c95-c176-5766-9a46-c14f739aba1c"
+    },
+    {
+     "id": 2,
+     "date": "2007-02-01",
+     "text": "If you double a negative life total, you do the real math. A...",
+     "uuid": "56f4935b-f6c5-59b9-88bf-9bcce20247ce"
+    },
+    {
+     "id": 3,
+     "date": "2007-07-15",
+     "text": "Beacon of Immortality’s effect counts as life gain (or life ...",
+     "uuid": "56f4935b-f6c5-59b9-88bf-9bcce20247ce"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "set_translations",
+   "row_count": 1210,
+   "stats_rows": 1210,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1210,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 1210,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique id identifying this set",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "language",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": "Chinese Simplified",
+     "max_value": "Spanish",
+     "examples": [
+      "Chinese Simplified",
+      "Chinese Traditional",
+      "French",
+      "German",
+      "Italian"
+     ],
+     "top_values": [
+      [
+       "Spanish",
+       121
+      ],
+      [
+       "Russian",
+       121
+      ],
+      [
+       "Portuguese (Brazil)",
+       121
+      ],
+      [
+       "Korean",
+       121
+      ],
+      [
+       "Japanese",
+       121
+      ],
+      [
+       "Italian",
+       121
+      ],
+      [
+       "German",
+       121
+      ],
+      [
+       "French",
+       121
+      ],
+      [
+       "Chinese Traditional",
+       121
+      ],
+      [
+       "Chinese Simplified",
+       121
+      ]
+     ],
+     "description": "language of this card set",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "setCode",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 121,
+     "is_unique": false,
+     "min_value": "10E",
+     "max_value": "WTH",
+     "examples": [
+      "10E",
+      "4ED",
+      "5DN",
+      "5ED",
+      "6ED"
+     ],
+     "top_values": [],
+     "description": "the set code for this set",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "translation",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1909,
+     "distinct_count": 504,
+     "is_unique": false,
+     "min_value": "2010 Hauptset",
+     "max_value": "합일",
+     "examples": [
+      "核心系列第十版",
+      "Dixième édition",
+      "Hauptset Zehnte Edition",
+      "Set Base Decima Edizione",
+      "第10版基本セット"
+     ],
+     "top_values": [],
+     "description": "translation of this card set",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "language": "Chinese Simplified",
+     "setCode": "10E",
+     "translation": "核心系列第十版"
+    },
+    {
+     "id": 2,
+     "language": "Chinese Traditional",
+     "setCode": "10E",
+     "translation": "核心系列第十版"
+    },
+    {
+     "id": 3,
+     "language": "French",
+     "setCode": "10E",
+     "translation": "Dixième édition"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "sets",
+   "row_count": 551,
+   "stats_rows": 551,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 551,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 551,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique id identifying this set",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "baseSetSize",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 166,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1694,
+     "examples": [
+      383,
+      302,
+      332,
+      306,
+      378
+     ],
+     "top_values": [],
+     "description": "base Set Size. The number of cards in the set",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "block",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.5064,
+     "distinct_count": 33,
+     "is_unique": false,
+     "min_value": "Alara",
+     "max_value": "Zendikar",
+     "examples": [
+      "Core Set",
+      "Mirrodin",
+      "Kaladesh",
+      "Amonkhet",
+      "Alara"
+     ],
+     "top_values": [
+      [
+       "Core Set",
+       26
+      ],
+      [
+       "Judge Gift Cards",
+       23
+      ],
+      [
+       "Commander",
+       23
+      ],
+      [
+       "Friday Night Magic",
+       19
+      ],
+      [
+       "Theros",
+       12
+      ],
+      [
+       "Magic Player Rewards",
+       11
+      ],
+      [
+       "Khans of Tarkir",
+       9
+      ],
+      [
+       "Arena League",
+       9
+      ],
+      [
+       "Time Spiral",
+       7
+      ],
+      [
+       "Guilds of Ravnica",
+       7
+      ],
+      [
+       "Zendikar",
+       6
+      ],
+      [
+       "Urza",
+       6
+      ],
+      [
+       "Tempest",
+       6
+      ],
+      [
+       "Scars of Mirrodin",
+       6
+      ],
+      [
+       "Return to Ravnica",
+       6
+      ],
+      [
+       "Ravnica",
+       6
+      ],
+      [
+       "Onslaught",
+       6
+      ],
+      [
+       "Odyssey",
+       6
+      ],
+      [
+       "Mirrodin",
+       6
+      ],
+      [
+       "Masques",
+       6
+      ],
+      [
+       "Kamigawa",
+       6
+      ],
+      [
+       "Ixalan",
+       6
+      ],
+      [
+       "Invasion",
+       6
+      ],
+      [
+       "Innistrad",
+       6
+      ],
+      [
+       "Battle for Zendikar",
+       6
+      ],
+      [
+       "Alara",
+       6
+      ],
+      [
+       "Kaladesh",
+       5
+      ],
+      [
+       "Ice Age",
+       5
+      ],
+      [
+       "Amonkhet",
+       5
+      ],
+      [
+       "Shadows over Innistrad",
+       4
+      ],
+      [
+       "Shadowmoor",
+       4
+      ],
+      [
+       "Lorwyn",
+       4
+      ],
+      [
+       "Mirage",
+       3
+      ]
+     ],
+     "description": "The block name the set was in.",
+     "value_description": "",
+     "notes": [
+      "51% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "booster",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.7495,
+     "distinct_count": 85,
+     "is_unique": false,
+     "min_value": "{'arena': {'boosters': [{'contents': {'basicOrCommonLand': 1...",
+     "max_value": "{'default': {'boosters': [{'contents': {'pcCommon': 8, 'pcCs...",
+     "examples": [
+      "{'default': {'boosters': [{'contents': {'basic': 1, 'common'...",
+      "{'default': {'boosters': [{'contents': {'common': 11, 'rare'...",
+      "{'default': {'boosters': [{'contents': {'common': 8, 'dedica...",
+      "{'default': {'boosters': [{'contents': {'common': 10, 'dedic...",
+      "{'default': {'boosters': [{'contents': {'common': 11, 'rareM..."
+     ],
+     "top_values": [],
+     "description": "A breakdown of possibilities and weights of cards in a booster pack.",
+     "value_description": "",
+     "notes": [
+      "75% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "code",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 551,
+     "is_unique": true,
+     "min_value": "10E",
+     "max_value": "ZNR",
+     "examples": [
+      "10E",
+      "2ED",
+      "2XM",
+      "3ED",
+      "4BB"
+     ],
+     "top_values": [],
+     "description": "The set code for the set.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "isFoilOnly",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       384
+      ],
+      [
+       1,
+       167
+      ]
+     ],
+     "description": "is Foil Only. If the set is only available in foil",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "isForeignOnly",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       535
+      ],
+      [
+       1,
+       16
+      ]
+     ],
+     "description": "is Foreign Only. If the set is available only outside the United States of America",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "isNonFoilOnly",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       445
+      ],
+      [
+       1,
+       106
+      ]
+     ],
+     "description": "is Non Foil Only. If the set is only available in non-foil",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "isOnlineOnly",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       525
+      ],
+      [
+       1,
+       26
+      ]
+     ],
+     "description": "is Online Only. If the set is only available in online game variations",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "isPartialPreview",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       550
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "is Partial Preview. If the set is still in preview (spoiled). Preview sets do not have complete data",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "keyruneCode",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 249,
+     "is_unique": false,
+     "min_value": "10E",
+     "max_value": "ZNR",
+     "examples": [
+      "10E",
+      "2ED",
+      "2XM",
+      "3ED",
+      "4ED"
+     ],
+     "top_values": [],
+     "description": "The matching Keyrune code for set image icons.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "mcmId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.6352,
+     "distinct_count": 201,
+     "is_unique": true,
+     "min_value": 4,
+     "max_value": 3660,
+     "examples": [
+      74,
+      3204,
+      10,
+      47,
+      23
+     ],
+     "top_values": [],
+     "description": "magic card market id. The Magic Card Marketset identifier",
+     "value_description": "",
+     "notes": [
+      "64% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "mcmIdExtras",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9819,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": 2371,
+     "max_value": 3680,
+     "examples": [
+      3209,
+      3459,
+      2587,
+      2371,
+      3113
+     ],
+     "top_values": [
+      [
+       3680,
+       1
+      ],
+      [
+       3474,
+       1
+      ],
+      [
+       3459,
+       1
+      ],
+      [
+       3209,
+       1
+      ],
+      [
+       3113,
+       1
+      ],
+      [
+       2961,
+       1
+      ],
+      [
+       2587,
+       1
+      ],
+      [
+       2451,
+       1
+      ],
+      [
+       2419,
+       1
+      ],
+      [
+       2371,
+       1
+      ]
+     ],
+     "description": "magic card market ID Extras. The split Magic Card Market set identifier if a set is printed in two sets. This identifier represents the second set's identifier",
+     "value_description": "",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "mcmName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.6352,
+     "distinct_count": 201,
+     "is_unique": true,
+     "min_value": "Aether Revolt",
+     "max_value": "Zendikar Rising Expeditions",
+     "examples": [
+      "Tenth Edition",
+      "Double Masters",
+      "Fourth Edition",
+      "Fifth Dawn",
+      "Fifth Edition"
+     ],
+     "top_values": [],
+     "description": "magic card market name",
+     "value_description": "",
+     "notes": [
+      "64% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "mtgoCode",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.7096,
+     "distinct_count": 160,
+     "is_unique": true,
+     "min_value": "10E",
+     "max_value": "ZNR",
+     "examples": [
+      "10E",
+      "2XM",
+      "5DN",
+      "7E",
+      "8ED"
+     ],
+     "top_values": [],
+     "description": "magic the gathering online code. The set code for the set as it appears on Magic: The Gathering Online",
+     "value_description": "commonsense evidence:\nif the value is null or empty, then it doesn't appear on Magic: The Gathering Online",
+     "notes": [
+      "71% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 551,
+     "is_unique": true,
+     "min_value": "15th Anniversary Cards",
+     "max_value": "Zendikar Rising Substitute Cards",
+     "examples": [
+      "Tenth Edition",
+      "Unlimited Edition",
+      "Double Masters",
+      "Revised Edition",
+      "Fourth Edition Foreign Black Border"
+     ],
+     "top_values": [],
+     "description": "The name of the set.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "parentCode",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.7205,
+     "distinct_count": 117,
+     "is_unique": false,
+     "min_value": "10E",
+     "max_value": "ZNR",
+     "examples": [
+      "JMP",
+      "MH1",
+      "ZNR",
+      "MB1",
+      "M15"
+     ],
+     "top_values": [],
+     "description": "parent Code. The parent set code for set variations like promotions, guild kits, etc",
+     "value_description": "",
+     "notes": [
+      "72% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "releaseDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 342,
+     "is_unique": false,
+     "min_value": "1993-08-05",
+     "max_value": "2021-03-19",
+     "examples": [
+      "2007-07-13",
+      "1993-12-01",
+      "2020-08-07",
+      "1994-04-01",
+      "1995-04-01"
+     ],
+     "top_values": [],
+     "description": "The release date in ISO 8601 format for the set.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "tcgplayerGroupId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.5281,
+     "distinct_count": 238,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2778,
+     "examples": [
+      1,
+      115,
+      2655,
+      97,
+      46
+     ],
+     "top_values": [],
+     "description": "tcg player Group Id. The group identifier of the set on TCGplayer",
+     "value_description": "",
+     "notes": [
+      "53% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "totalSetSize",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 181,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1694,
+     "examples": [
+      508,
+      302,
+      384,
+      306,
+      378
+     ],
+     "top_values": [],
+     "description": "total Set Size. The total number of cards in the set, including promotional and related supplemental products but excluding Alchemy modifications - however those cards are included in the set itself",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": "archenemy",
+     "max_value": "vanguard",
+     "examples": [
+      "core",
+      "masters",
+      "expansion",
+      "starter",
+      "memorabilia"
+     ],
+     "top_values": [
+      [
+       "promo",
+       234
+      ],
+      [
+       "expansion",
+       87
+      ],
+      [
+       "memorabilia",
+       34
+      ],
+      [
+       "duel_deck",
+       27
+      ],
+      [
+       "box",
+       27
+      ],
+      [
+       "core",
+       24
+      ],
+      [
+       "masters",
+       23
+      ],
+      [
+       "starter",
+       16
+      ],
+      [
+       "commander",
+       14
+      ],
+      [
+       "funny",
+       11
+      ],
+      [
+       "from_the_vault",
+       11
+      ],
+      [
+       "token",
+       10
+      ],
+      [
+       "planechase",
+       6
+      ],
+      [
+       "masterpiece",
+       6
+      ],
+      [
+       "draft_innovation",
+       6
+      ],
+      [
+       "archenemy",
+       5
+      ],
+      [
+       "spellbook",
+       3
+      ],
+      [
+       "premium_deck",
+       3
+      ],
+      [
+       "vanguard",
+       2
+      ],
+      [
+       "treasure_chest",
+       2
+      ]
+     ],
+     "description": "The expansion type of the set.",
+     "value_description": "\"alchemy\", \"archenemy\", \"arsenal\", \"box\", \"commander\", \"core\", \"draft_innovation\", \"duel_deck\", \"expansion\", \"from_the_vault\", \"funny\", \"masterpiece\", \"masters\", \"memorabilia\", \"planechase\", \"premium_deck\", \"promo\", \"spellbook\", \"starter\", \"token\", \"treasure_chest\", \"vanguard\"",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "baseSetSize": 383,
+     "block": "Core Set",
+     "booster": "{'default': {'boosters': [{'contents': {'basic': 1, 'common'...",
+     "code": "10E",
+     "isFoilOnly": 0,
+     "isForeignOnly": 0,
+     "isNonFoilOnly": 0,
+     "isOnlineOnly": 0,
+     "isPartialPreview": 0,
+     "keyruneCode": "10E",
+     "mcmId": 74,
+     "mcmIdExtras": null,
+     "mcmName": "Tenth Edition",
+     "mtgoCode": "10E",
+     "name": "Tenth Edition",
+     "parentCode": null,
+     "releaseDate": "2007-07-13",
+     "tcgplayerGroupId": 1,
+     "totalSetSize": 508,
+     "type": "core"
+    },
+    {
+     "id": 2,
+     "baseSetSize": 302,
+     "block": "Core Set",
+     "booster": "{'default': {'boosters': [{'contents': {'common': 11, 'rare'...",
+     "code": "2ED",
+     "isFoilOnly": 0,
+     "isForeignOnly": 0,
+     "isNonFoilOnly": 1,
+     "isOnlineOnly": 0,
+     "isPartialPreview": 0,
+     "keyruneCode": "2ED",
+     "mcmId": null,
+     "mcmIdExtras": null,
+     "mcmName": null,
+     "mtgoCode": null,
+     "name": "Unlimited Edition",
+     "parentCode": null,
+     "releaseDate": "1993-12-01",
+     "tcgplayerGroupId": 115,
+     "totalSetSize": 302,
+     "type": "core"
+    },
+    {
+     "id": 3,
+     "baseSetSize": 332,
+     "block": null,
+     "booster": "{'default': {'boosters': [{'contents': {'common': 8, 'dedica...",
+     "code": "2XM",
+     "isFoilOnly": 0,
+     "isForeignOnly": 0,
+     "isNonFoilOnly": 0,
+     "isOnlineOnly": 0,
+     "isPartialPreview": 0,
+     "keyruneCode": "2XM",
+     "mcmId": 3204,
+     "mcmIdExtras": 3209,
+     "mcmName": "Double Masters",
+     "mtgoCode": "2XM",
+     "name": "Double Masters",
+     "parentCode": null,
+     "releaseDate": "2020-08-07",
+     "tcgplayerGroupId": 2655,
+     "totalSetSize": 384,
+     "type": "masters"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "foreign_data",
+   "from_column": "uuid",
+   "to_table": "cards",
+   "to_column": "uuid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "legalities",
+   "from_column": "uuid",
+   "to_table": "cards",
+   "to_column": "uuid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "rulings",
+   "from_column": "uuid",
+   "to_table": "cards",
+   "to_column": "uuid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "set_translations",
+   "from_column": "setCode",
+   "to_table": "sets",
+   "to_column": "code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

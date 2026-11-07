@@ -1,0 +1,1352 @@
+{
+ "db_id": "sales_in_weather",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/sales_in_weather/sales_in_weather.sqlite",
+ "fingerprint": "464236544-1793993015089216088-v1.0",
+ "created_at": "2026-11-06T19:25:18+00:00",
+ "profile_seconds": 8.71,
+ "tables": [
+  {
+   "name": "relation",
+   "row_count": 45,
+   "stats_rows": 45,
+   "columns": [
+    {
+     "name": "store_nbr",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 45,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 45,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       45,
+       1
+      ],
+      [
+       44,
+       1
+      ],
+      [
+       43,
+       1
+      ],
+      [
+       42,
+       1
+      ],
+      [
+       41,
+       1
+      ],
+      [
+       40,
+       1
+      ],
+      [
+       39,
+       1
+      ],
+      [
+       38,
+       1
+      ],
+      [
+       37,
+       1
+      ],
+      [
+       36,
+       1
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       34,
+       1
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       32,
+       1
+      ],
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "store number. the id of stores",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "station_nbr",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 20,
+     "examples": [
+      1,
+      14,
+      7,
+      9,
+      12
+     ],
+     "top_values": [
+      [
+       17,
+       6
+      ],
+      [
+       13,
+       5
+      ],
+      [
+       14,
+       4
+      ],
+      [
+       12,
+       4
+      ],
+      [
+       10,
+       3
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       16,
+       2
+      ],
+      [
+       11,
+       2
+      ],
+      [
+       9,
+       2
+      ],
+      [
+       6,
+       2
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "station number. the id of weather stations",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "store_nbr"
+   ],
+   "sample_rows": [
+    {
+     "store_nbr": 1,
+     "station_nbr": 1
+    },
+    {
+     "store_nbr": 2,
+     "station_nbr": 14
+    },
+    {
+     "store_nbr": 3,
+     "station_nbr": 7
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "sales_in_weather",
+   "row_count": 4617600,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1005,
+     "is_unique": false,
+     "min_value": "2012-01-01",
+     "max_value": "2014-10-31",
+     "examples": [
+      "2012-01-01",
+      "2012-01-02"
+     ],
+     "top_values": [],
+     "description": "the date of sales",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "store_nbr",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       103119
+      ],
+      [
+       2,
+       96881
+      ]
+     ],
+     "description": "store number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "item_nbr",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 111,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 111,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "item number. item / product number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "units",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 239,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 343,
+     "examples": [
+      0,
+      29,
+      2,
+      1,
+      60
+     ],
+     "top_values": [],
+     "description": "the quantity sold of an item on a given day",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "store_nbr",
+    "date",
+    "item_nbr"
+   ],
+   "sample_rows": [
+    {
+     "date": "2012-01-01",
+     "store_nbr": 1,
+     "item_nbr": 1,
+     "units": 0
+    },
+    {
+     "date": "2012-01-01",
+     "store_nbr": 1,
+     "item_nbr": 2,
+     "units": 0
+    },
+    {
+     "date": "2012-01-01",
+     "store_nbr": 1,
+     "item_nbr": 3,
+     "units": 0
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 4,617,600 rows"
+   ]
+  },
+  {
+   "name": "weather",
+   "row_count": 20517,
+   "stats_rows": 20517,
+   "columns": [
+    {
+     "name": "station_nbr",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 20,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       20,
+       1035
+      ],
+      [
+       19,
+       1035
+      ],
+      [
+       18,
+       1035
+      ],
+      [
+       17,
+       1035
+      ],
+      [
+       16,
+       1035
+      ],
+      [
+       15,
+       1035
+      ],
+      [
+       14,
+       1035
+      ],
+      [
+       13,
+       1035
+      ],
+      [
+       12,
+       1035
+      ],
+      [
+       11,
+       1035
+      ],
+      [
+       10,
+       1035
+      ],
+      [
+       9,
+       1035
+      ],
+      [
+       8,
+       1035
+      ],
+      [
+       7,
+       1035
+      ],
+      [
+       6,
+       1035
+      ],
+      [
+       4,
+       1035
+      ],
+      [
+       3,
+       1035
+      ],
+      [
+       2,
+       1035
+      ],
+      [
+       1,
+       1035
+      ],
+      [
+       5,
+       852
+      ]
+     ],
+     "description": "station number. the id of weather stations",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1035,
+     "is_unique": false,
+     "min_value": "2012-01-01",
+     "max_value": "2014-10-31",
+     "examples": [
+      "2012-01-01",
+      "2012-01-02",
+      "2012-01-03",
+      "2012-01-04",
+      "2012-01-05"
+     ],
+     "top_values": [],
+     "description": "date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "tmax",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0442,
+     "distinct_count": 120,
+     "is_unique": false,
+     "min_value": -11,
+     "max_value": 114,
+     "examples": [
+      52,
+      50,
+      32,
+      28,
+      38
+     ],
+     "top_values": [],
+     "description": "temperature max. max temperature",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "tmin",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0443,
+     "distinct_count": 107,
+     "is_unique": false,
+     "min_value": -21,
+     "max_value": 88,
+     "examples": [
+      31,
+      11,
+      9,
+      25,
+      28
+     ],
+     "top_values": [],
+     "description": "temperature min. min temperature",
+     "value_description": "commonsense evidence:\ntemperature range / difference = tmax - tmin",
+     "notes": []
+    },
+    {
+     "name": "tavg",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0716,
+     "distinct_count": 111,
+     "is_unique": false,
+     "min_value": -16,
+     "max_value": 100,
+     "examples": [
+      42,
+      41,
+      22,
+      19,
+      32
+     ],
+     "top_values": [],
+     "description": "temperature average. average temperature",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "depart",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.561,
+     "distinct_count": 65,
+     "is_unique": false,
+     "min_value": -35,
+     "max_value": 33,
+     "examples": [],
+     "top_values": [],
+     "description": "departure from normal",
+     "value_description": "Temperature departure from the normal indicates if the dekadal average temperatures were above or below the 30-year normal.\ncommonsense evidence:\nâ¢ if null: the temperature is 30-year normal\nâ¢ if the value is positive: the temperature is above the 30-year normal, \nâ¢ if the value is negative: the temperature is below the 30-year normal,",
+     "notes": [
+      "56% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "dewpoint",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0325,
+     "distinct_count": 98,
+     "is_unique": false,
+     "min_value": -24,
+     "max_value": 77,
+     "examples": [
+      36,
+      26,
+      4,
+      -1,
+      13
+     ],
+     "top_values": [],
+     "description": "dew point",
+     "value_description": "commonsense evidence:\nThe dew point is the temperature to which air must be cooled to become saturated with water vapor, assuming constant air pressure and water content.",
+     "notes": []
+    },
+    {
+     "name": "wetbulb",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.061,
+     "distinct_count": 92,
+     "is_unique": false,
+     "min_value": -15,
+     "max_value": 80,
+     "examples": [
+      40,
+      35,
+      18,
+      14,
+      25
+     ],
+     "top_values": [],
+     "description": "wet bulb",
+     "value_description": "commonsense evidence:\nâ¢ The wet-bulb temperature (WBT) is the temperature read by a thermometer covered in water-soaked (water at ambient temperature) cloth (a wet-bulb thermometer) over which air is passed.\nâ¢ At 100% relative humidity, the wet-bulb temperature is equal to the air temperature (dry-bulb temperature); \nâ¢ at lower humidity the wet-bulb temperature is lower than dry-bulb temperature because of evaporative cooling.",
+     "notes": []
+    },
+    {
+     "name": "heat",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0716,
+     "distinct_count": 76,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 81,
+     "examples": [
+      23,
+      24,
+      43,
+      46,
+      33
+     ],
+     "top_values": [],
+     "description": "calculated heating degree",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "cool",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0716,
+     "distinct_count": 36,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 35,
+     "examples": [
+      0,
+      5,
+      6,
+      2,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       9833
+      ],
+      [
+       18,
+       469
+      ],
+      [
+       16,
+       429
+      ],
+      [
+       17,
+       421
+      ],
+      [
+       14,
+       418
+      ],
+      [
+       8,
+       413
+      ],
+      [
+       7,
+       411
+      ],
+      [
+       15,
+       404
+      ],
+      [
+       4,
+       404
+      ],
+      [
+       6,
+       402
+      ],
+      [
+       3,
+       402
+      ],
+      [
+       5,
+       399
+      ],
+      [
+       10,
+       398
+      ],
+      [
+       2,
+       393
+      ],
+      [
+       9,
+       390
+      ],
+      [
+       19,
+       389
+      ],
+      [
+       1,
+       380
+      ],
+      [
+       13,
+       369
+      ],
+      [
+       11,
+       364
+      ],
+      [
+       12,
+       361
+      ],
+      [
+       20,
+       340
+      ],
+      [
+       21,
+       298
+      ],
+      [
+       22,
+       253
+      ],
+      [
+       23,
+       215
+      ],
+      [
+       24,
+       163
+      ],
+      [
+       25,
+       124
+      ],
+      [
+       26,
+       73
+      ],
+      [
+       27,
+       51
+      ],
+      [
+       28,
+       31
+      ],
+      [
+       29,
+       26
+      ],
+      [
+       30,
+       9
+      ],
+      [
+       31,
+       5
+      ],
+      [
+       34,
+       4
+      ],
+      [
+       33,
+       3
+      ],
+      [
+       32,
+       3
+      ],
+      [
+       35,
+       1
+      ]
+     ],
+     "description": "calculated cooling degree",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "sunrise",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.4706,
+     "distinct_count": 215,
+     "is_unique": false,
+     "min_value": "04:06:00",
+     "max_value": "07:40:00",
+     "examples": [],
+     "top_values": [],
+     "description": "calculated sunrise",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "sunset",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.4706,
+     "distinct_count": 219,
+     "is_unique": false,
+     "min_value": "16:11:00",
+     "max_value": "19:49:00",
+     "examples": [],
+     "top_values": [],
+     "description": "calculated sunset",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "codesum",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 449,
+     "is_unique": false,
+     "min_value": " ",
+     "max_value": "VCTS",
+     "examples": [
+      "RA FZFG BR",
+      " ",
+      "SN",
+      "RA SN BR",
+      "RA FZRA FG+ FG BR UP"
+     ],
+     "top_values": [],
+     "description": "code summarization for the weather",
+     "value_description": "â¢ PY SPRAY \nâ¢ SQ SQUALL \nâ¢ DR LOW DRIFTING \nâ¢ SH SHOWER \nâ¢ FZ FREEZING \nâ¢ MI SHALLOW \nâ¢ PR PARTIAL \nâ¢ BC PATCHES \nâ¢ BL BLOWING \nâ¢ VC VICINITY \nâ¢ - LIGHT \nâ¢ + HEAVY \nâ¢ \"NO SIGN\" MODERATE",
+     "notes": []
+    },
+    {
+     "name": "snowfall",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.3521,
+     "distinct_count": 76,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 16.2,
+     "examples": [],
+     "top_values": [],
+     "description": "snowfall",
+     "value_description": "snowfall (inches AND tenths)",
+     "notes": []
+    },
+    {
+     "name": "preciptotal",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0419,
+     "distinct_count": 283,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 7.36,
+     "examples": [
+      0.05,
+      0.01,
+      0.0,
+      0.69,
+      0.02
+     ],
+     "top_values": [],
+     "description": "precipitation total",
+     "value_description": "inches (240hr period ending at indicated local standard time)",
+     "notes": []
+    },
+    {
+     "name": "stnpressure",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0453,
+     "distinct_count": 321,
+     "is_unique": false,
+     "min_value": 23.72,
+     "max_value": 30.61,
+     "examples": [
+      29.78,
+      29.44,
+      29.67,
+      29.86,
+      29.68
+     ],
+     "top_values": [],
+     "description": "station pressure",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "sealevel",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.084,
+     "distinct_count": 152,
+     "is_unique": false,
+     "min_value": 29.16,
+     "max_value": 30.8,
+     "examples": [
+      29.92,
+      29.62,
+      29.87,
+      30.03,
+      29.84
+     ],
+     "top_values": [],
+     "description": "sea level",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "resultspeed",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0287,
+     "distinct_count": 247,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 28.4,
+     "examples": [
+      3.6,
+      9.8,
+      10.8,
+      6.3,
+      6.9
+     ],
+     "top_values": [],
+     "description": "resultant speed. resultant wind speed",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "resultdir",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0287,
+     "distinct_count": 36,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 36,
+     "examples": [
+      20,
+      24,
+      31,
+      27,
+      25
+     ],
+     "top_values": [
+      [
+       17,
+       1493
+      ],
+      [
+       18,
+       1288
+      ],
+      [
+       16,
+       1210
+      ],
+      [
+       15,
+       899
+      ],
+      [
+       19,
+       853
+      ],
+      [
+       14,
+       661
+      ],
+      [
+       1,
+       637
+      ],
+      [
+       36,
+       627
+      ],
+      [
+       20,
+       610
+      ],
+      [
+       2,
+       595
+      ],
+      [
+       21,
+       559
+      ],
+      [
+       35,
+       551
+      ],
+      [
+       31,
+       546
+      ],
+      [
+       13,
+       510
+      ],
+      [
+       32,
+       505
+      ],
+      [
+       30,
+       503
+      ],
+      [
+       22,
+       491
+      ],
+      [
+       28,
+       481
+      ],
+      [
+       3,
+       472
+      ],
+      [
+       33,
+       464
+      ],
+      [
+       23,
+       462
+      ],
+      [
+       29,
+       448
+      ],
+      [
+       34,
+       446
+      ],
+      [
+       12,
+       413
+      ],
+      [
+       27,
+       409
+      ],
+      [
+       24,
+       402
+      ],
+      [
+       5,
+       401
+      ],
+      [
+       4,
+       397
+      ],
+      [
+       25,
+       390
+      ],
+      [
+       26,
+       364
+      ],
+      [
+       11,
+       360
+      ],
+      [
+       7,
+       328
+      ],
+      [
+       6,
+       317
+      ],
+      [
+       10,
+       300
+      ],
+      [
+       9,
+       270
+      ],
+      [
+       8,
+       266
+      ]
+     ],
+     "description": "resultant direction. resultant wind direction",
+     "value_description": "who degree",
+     "notes": []
+    },
+    {
+     "name": "avgspeed",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0426,
+     "distinct_count": 253,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 28.7,
+     "examples": [
+      4.6,
+      10.3,
+      11.6,
+      8.3,
+      7.8
+     ],
+     "top_values": [],
+     "description": "average speed. average wind speed",
+     "value_description": "commonsense evidence:\nif avgspeed is larger: much more wind",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "station_nbr",
+    "date"
+   ],
+   "sample_rows": [
+    {
+     "station_nbr": 1,
+     "date": "2012-01-01",
+     "tmax": 52,
+     "tmin": 31,
+     "tavg": 42,
+     "depart": null,
+     "dewpoint": 36,
+     "wetbulb": 40,
+     "heat": 23,
+     "cool": 0,
+     "sunrise": null,
+     "sunset": null,
+     "codesum": "RA FZFG BR",
+     "snowfall": null,
+     "preciptotal": 0.05,
+     "stnpressure": 29.78,
+     "sealevel": 29.92,
+     "resultspeed": 3.6,
+     "resultdir": 20,
+     "avgspeed": 4.6
+    },
+    {
+     "station_nbr": 1,
+     "date": "2012-01-02",
+     "tmax": 50,
+     "tmin": 31,
+     "tavg": 41,
+     "depart": null,
+     "dewpoint": 26,
+     "wetbulb": 35,
+     "heat": 24,
+     "cool": 0,
+     "sunrise": null,
+     "sunset": null,
+     "codesum": " ",
+     "snowfall": null,
+     "preciptotal": 0.01,
+     "stnpressure": 29.44,
+     "sealevel": 29.62,
+     "resultspeed": 9.8,
+     "resultdir": 24,
+     "avgspeed": 10.3
+    },
+    {
+     "station_nbr": 1,
+     "date": "2012-01-03",
+     "tmax": 32,
+     "tmin": 11,
+     "tavg": 22,
+     "depart": null,
+     "dewpoint": 4,
+     "wetbulb": 18,
+     "heat": 43,
+     "cool": 0,
+     "sunrise": null,
+     "sunset": null,
+     "codesum": " ",
+     "snowfall": null,
+     "preciptotal": 0.0,
+     "stnpressure": 29.67,
+     "sealevel": 29.87,
+     "resultspeed": 10.8,
+     "resultdir": 31,
+     "avgspeed": 11.6
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "relation",
+   "from_column": "station_nbr",
+   "to_table": "weather",
+   "to_column": "station_nbr",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "relation",
+   "from_column": "store_nbr",
+   "to_table": "sales_in_weather",
+   "to_column": "store_nbr",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

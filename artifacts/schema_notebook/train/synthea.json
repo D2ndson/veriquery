@@ -1,0 +1,3983 @@
+{
+ "db_id": "synthea",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/synthea/synthea.sqlite",
+ "fingerprint": "38637568-1793993051400948411-v1.0",
+ "created_at": "2026-11-06T19:25:20+00:00",
+ "profile_seconds": 2.089,
+ "tables": [
+  {
+   "name": "all_prevalences",
+   "row_count": 244,
+   "stats_rows": 244,
+   "columns": [
+    {
+     "name": "ITEM",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 244,
+     "is_unique": true,
+     "min_value": "0.3 Ml Epinephrine 0.5 Mg/Ml Auto Injector",
+     "max_value": "Yaz 28 Day Pack",
+     "examples": [
+      "Viral Sinusitis (Disorder)",
+      "Streptococcal Sore Throat (Disorder)",
+      "Laceration Of Thigh",
+      "Acute Viral Pharyngitis (Disorder)",
+      "Acute Bronchitis (Disorder)"
+     ],
+     "top_values": [],
+     "description": "the prevalent disease",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "POPULATION TYPE",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "LIVING",
+     "max_value": "LIVING",
+     "examples": [
+      "LIVING"
+     ],
+     "top_values": [
+      [
+       "LIVING",
+       244
+      ]
+     ],
+     "description": "the population type - LIVING",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "OCCURRENCES",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 110,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 868,
+     "examples": [
+      868,
+      487,
+      117,
+      772,
+      749
+     ],
+     "top_values": [],
+     "description": "the number of occurrences",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "POPULATION COUNT",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 1000,
+     "max_value": 1000,
+     "examples": [
+      1000
+     ],
+     "top_values": [
+      [
+       1000,
+       244
+      ]
+     ],
+     "description": "the number of the counted populations",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "PREVALENCE RATE",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 110,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 0.868,
+     "examples": [
+      0.868,
+      0.487,
+      0.117,
+      0.772,
+      0.749
+     ],
+     "top_values": [],
+     "description": "the prevalence rate",
+     "value_description": "commonsense evidence: prevalence rate = occurrences / population_count",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "PREVALENCE PERCENTAGE",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 110,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 86.8,
+     "examples": [
+      86.8,
+      48.7,
+      11.7,
+      77.2,
+      74.9
+     ],
+     "top_values": [],
+     "description": "the prevalence percentage",
+     "value_description": "commonsense evidence: prevalence rate = occurrences / population_count * 100",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    }
+   ],
+   "primary_key": [
+    "ITEM"
+   ],
+   "sample_rows": [
+    {
+     "ITEM": "Viral Sinusitis (Disorder)",
+     "POPULATION TYPE": "LIVING",
+     "OCCURRENCES": 868,
+     "POPULATION COUNT": 1000,
+     "PREVALENCE RATE": 0.868,
+     "PREVALENCE PERCENTAGE": 86.8
+    },
+    {
+     "ITEM": "Streptococcal Sore Throat (Disorder)",
+     "POPULATION TYPE": "LIVING",
+     "OCCURRENCES": 487,
+     "POPULATION COUNT": 1000,
+     "PREVALENCE RATE": 0.487,
+     "PREVALENCE PERCENTAGE": 48.7
+    },
+    {
+     "ITEM": "Laceration Of Thigh",
+     "POPULATION TYPE": "LIVING",
+     "OCCURRENCES": 117,
+     "POPULATION COUNT": 1000,
+     "PREVALENCE RATE": 0.117,
+     "PREVALENCE PERCENTAGE": 11.7
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "allergies",
+   "row_count": 572,
+   "stats_rows": 572,
+   "columns": [
+    {
+     "name": "START",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 157,
+     "is_unique": false,
+     "min_value": "1/1/93",
+     "max_value": "9/9/71",
+     "examples": [
+      "3/11/95",
+      "6/15/58",
+      "11/14/12",
+      "2/5/31",
+      "11/4/11"
+     ],
+     "top_values": [],
+     "description": "the start date of the allergy",
+     "value_description": "mm/dd/yy",
+     "notes": []
+    },
+    {
+     "name": "STOP",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.972,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": "10/15/11",
+     "max_value": "8/31/14",
+     "examples": [
+      "12/22/14",
+      "4/21/10",
+      "10/15/11",
+      "3/17/10",
+      "5/26/08"
+     ],
+     "top_values": [
+      [
+       "3/17/10",
+       3
+      ],
+      [
+       "12/22/14",
+       3
+      ],
+      [
+       "12/7/14",
+       2
+      ],
+      [
+       "8/31/14",
+       1
+      ],
+      [
+       "7/18/14",
+       1
+      ],
+      [
+       "5/26/08",
+       1
+      ],
+      [
+       "5/1/13",
+       1
+      ],
+      [
+       "4/5/13",
+       1
+      ],
+      [
+       "4/21/10",
+       1
+      ],
+      [
+       "11/6/08",
+       1
+      ],
+      [
+       "10/15/11",
+       1
+      ]
+     ],
+     "description": "the stop date of the allergy",
+     "value_description": "mm/dd/yy\r\ncommonsense evidence: allergy period = stop - start",
+     "notes": [
+      "97% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "PATIENT",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 157,
+     "is_unique": false,
+     "min_value": "00341a88-1cc1-4b39-b0f9-05b0531991a0",
+     "max_value": "fda71445-46ff-4ae8-9b51-48e5006b781d",
+     "examples": [
+      "ab6d8296-d3c7-4fef-9215-40b156db67ac",
+      "629b8fc9-0eb7-4576-b296-088e9b271941",
+      "10fd692e-fdef-4aa6-b010-8a95005b59f1",
+      "5f615f2b-efb7-4032-8c88-dea2dc2eacbb",
+      "9fb519d6-fd96-4dc2-8444-803c6677c7e3"
+     ],
+     "top_values": [],
+     "description": "the patient id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ENCOUNTER",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 157,
+     "is_unique": false,
+     "min_value": "002c4e2d-f9ff-4502-8818-fedaef3f02c3",
+     "max_value": "ff93f6e3-f381-42e0-8183-c23dcd24bfe5",
+     "examples": [
+      "9d87c22d-a777-426b-b020-cfa469229f82",
+      "baddd467-ebd9-4ebc-bed4-31303ba21553",
+      "ff93f6e3-f381-42e0-8183-c23dcd24bfe5",
+      "adfcd316-7421-4e5c-a3c5-515b5c16d35b",
+      "b44d5fca-05e1-44e7-9a54-a555fb5d5d6c"
+     ],
+     "top_values": [],
+     "description": "the medical encounter id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CODE",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 15,
+     "is_unique": false,
+     "min_value": 91930004,
+     "max_value": 714035009,
+     "examples": [
+      425525006,
+      419263009,
+      418689008,
+      232347008,
+      232350006
+     ],
+     "top_values": [
+      [
+       419474003,
+       85
+      ],
+      [
+       232347008,
+       79
+      ],
+      [
+       232350006,
+       63
+      ],
+      [
+       418689008,
+       61
+      ],
+      [
+       419263009,
+       54
+      ],
+      [
+       300913006,
+       43
+      ],
+      [
+       424213003,
+       32
+      ],
+      [
+       417532002,
+       27
+      ],
+      [
+       91935009,
+       24
+      ],
+      [
+       91934008,
+       24
+      ],
+      [
+       91930004,
+       21
+      ],
+      [
+       420174000,
+       20
+      ],
+      [
+       425525006,
+       18
+      ],
+      [
+       300916003,
+       13
+      ],
+      [
+       714035009,
+       8
+      ]
+     ],
+     "description": "the code of the allergy",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DESCRIPTION",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 15,
+     "is_unique": false,
+     "min_value": "Allergy to bee venom",
+     "max_value": "Shellfish allergy",
+     "examples": [
+      "Allergy to dairy product",
+      "Allergy to tree pollen",
+      "Allergy to grass pollen",
+      "Dander (animal) allergy",
+      "House dust mite allergy"
+     ],
+     "top_values": [
+      [
+       "Allergy to mould",
+       85
+      ],
+      [
+       "Dander (animal) allergy",
+       79
+      ],
+      [
+       "House dust mite allergy",
+       63
+      ],
+      [
+       "Allergy to grass pollen",
+       61
+      ],
+      [
+       "Allergy to tree pollen",
+       54
+      ],
+      [
+       "Shellfish allergy",
+       43
+      ],
+      [
+       "Allergy to bee venom",
+       32
+      ],
+      [
+       "Allergy to fish",
+       27
+      ],
+      [
+       "Allergy to peanuts",
+       24
+      ],
+      [
+       "Allergy to nut",
+       24
+      ],
+      [
+       "Allergy to eggs",
+       21
+      ],
+      [
+       "Allergy to wheat",
+       20
+      ],
+      [
+       "Allergy to dairy product",
+       18
+      ],
+      [
+       "Latex allergy",
+       13
+      ],
+      [
+       "Allergy to soya",
+       8
+      ]
+     ],
+     "description": "the description of the allergy",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "PATIENT",
+    "ENCOUNTER",
+    "CODE"
+   ],
+   "sample_rows": [
+    {
+     "START": "3/11/95",
+     "STOP": null,
+     "PATIENT": "ab6d8296-d3c7-4fef-9215-40b156db67ac",
+     "ENCOUNTER": "9d87c22d-a777-426b-b020-cfa469229f82",
+     "CODE": 425525006,
+     "DESCRIPTION": "Allergy to dairy product"
+    },
+    {
+     "START": "3/11/95",
+     "STOP": null,
+     "PATIENT": "ab6d8296-d3c7-4fef-9215-40b156db67ac",
+     "ENCOUNTER": "9d87c22d-a777-426b-b020-cfa469229f82",
+     "CODE": 419263009,
+     "DESCRIPTION": "Allergy to tree pollen"
+    },
+    {
+     "START": "3/11/95",
+     "STOP": null,
+     "PATIENT": "ab6d8296-d3c7-4fef-9215-40b156db67ac",
+     "ENCOUNTER": "9d87c22d-a777-426b-b020-cfa469229f82",
+     "CODE": 418689008,
+     "DESCRIPTION": "Allergy to grass pollen"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "careplans",
+   "row_count": 12125,
+   "stats_rows": 12125,
+   "columns": [
+    {
+     "name": "ID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3673,
+     "is_unique": false,
+     "min_value": "0029abf6-03ff-4587-a727-3e16021c19fa",
+     "max_value": "ffffeef5-1cf5-4976-9a7e-d0e5ef04b71d",
+     "examples": [
+      "e031962d-d13d-4ede-a449-040417d5e4fb",
+      "26b879b7-0066-4bd6-b59c-099909720155",
+      "1f581c09-aab1-46dc-94cc-4b4295514d2b",
+      "1cac346e-109c-4b69-af3e-d1730bbb496b",
+      "56ee4bb5-bb70-4b95-b2be-2751cf4d5924"
+     ],
+     "top_values": [],
+     "description": "the unique id of the care plan",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "START",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3186,
+     "is_unique": false,
+     "min_value": "1917-08-21",
+     "max_value": "2017-10-27",
+     "examples": [
+      "2009-01-11",
+      "2010-10-16",
+      "2013-02-09",
+      "2013-10-19",
+      "2017-01-19"
+     ],
+     "top_values": [],
+     "description": "the start date of the care plan",
+     "value_description": "yyyy-mm-dd",
+     "notes": []
+    },
+    {
+     "name": "STOP",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.4595,
+     "distinct_count": 1664,
+     "is_unique": false,
+     "min_value": "1920-06-16",
+     "max_value": "2017-10-29",
+     "examples": [
+      "2009-04-07",
+      "2010-10-23",
+      "2015-05-03",
+      "2014-05-17",
+      "2017-02-02"
+     ],
+     "top_values": [],
+     "description": "the stop date of the care plan",
+     "value_description": "yyyy-mm-dd\ncommonsense evidence: care plan period:\nstop - start",
+     "notes": []
+    },
+    {
+     "name": "PATIENT",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1222,
+     "is_unique": false,
+     "min_value": "00341a88-1cc1-4b39-b0f9-05b0531991a0",
+     "max_value": "fff429dc-1604-461c-9af0-25c2c9350759",
+     "examples": [
+      "71949668-1c2e-43ae-ab0a-64654608defb",
+      "c2caaace-9119-4b2d-a2c3-4040f5a9cf32",
+      "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+      "de43eb48-496c-46d4-8c5b-be6125a38c15",
+      "79266ca2-b4e3-45e5-af65-7914bd4511a0"
+     ],
+     "top_values": [],
+     "description": "the patient id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ENCOUNTER",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2475,
+     "is_unique": false,
+     "min_value": "001bd1c7-96fe-4410-af52-5afe5f869087",
+     "max_value": "ffe6efd7-25c9-4665-8f06-09106ac45847",
+     "examples": [
+      "4d451e22-a354-40c9-8b33-b6126158666d",
+      "bed7ecff-b41c-422b-beac-ea00c8b02837",
+      "6f2e3935-b203-493e-a9c0-f23e847b9798",
+      "da4fd626-e74e-4930-91be-7fb3da7ea098",
+      "1c93058f-eeb2-4659-a712-74e183877e9a"
+     ],
+     "top_values": [],
+     "description": "the medical encounter id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CODE",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 75,
+     "is_unique": false,
+     "min_value": 409002.0,
+     "max_value": 872781000000100.0,
+     "examples": [
+      53950000.0,
+      304510005.0,
+      371605008.0,
+      869761000000107.0,
+      223472008.0
+     ],
+     "top_values": [],
+     "description": "the code of the care plan",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DESCRIPTION",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 76,
+     "is_unique": false,
+     "min_value": "Administration of intravenous fluids",
+     "max_value": "Wound care",
+     "examples": [
+      "Respiratory therapy",
+      "Recommendation to avoid exercise",
+      "Deep breathing and coughing exercises",
+      "Urinary tract infection care",
+      "Discussion about hygiene"
+     ],
+     "top_values": [],
+     "description": "the description of the care plan",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "REASONCODE",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0915,
+     "distinct_count": 58,
+     "is_unique": false,
+     "min_value": 10509002,
+     "max_value": 67841000119103,
+     "examples": [
+      10509002,
+      38822007,
+      72892002,
+      301011002,
+      423121009
+     ],
+     "top_values": [],
+     "description": "the reason code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "REASONDESCRIPTION",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0915,
+     "distinct_count": 58,
+     "is_unique": false,
+     "min_value": "Acute bronchitis (disorder)",
+     "max_value": "Whiplash injury to neck",
+     "examples": [
+      "Acute bronchitis (disorder)",
+      "Cystitis",
+      "Normal pregnancy",
+      "Escherichia coli urinary tract infection",
+      "Non-small cell carcinoma of lung  TNM stage 4 (disorder)"
+     ],
+     "top_values": [],
+     "description": "reason description. the description of the reason why the patient needs the care plan",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "ID": "e031962d-d13d-4ede-a449-040417d5e4fb",
+     "START": "2009-01-11",
+     "STOP": "2009-04-07",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "4d451e22-a354-40c9-8b33-b6126158666d",
+     "CODE": 53950000.0,
+     "DESCRIPTION": "Respiratory therapy",
+     "REASONCODE": 10509002,
+     "REASONDESCRIPTION": "Acute bronchitis (disorder)"
+    },
+    {
+     "ID": "e031962d-d13d-4ede-a449-040417d5e4fb",
+     "START": "2009-01-11",
+     "STOP": "2009-04-07",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "4d451e22-a354-40c9-8b33-b6126158666d",
+     "CODE": 304510005.0,
+     "DESCRIPTION": "Recommendation to avoid exercise",
+     "REASONCODE": 10509002,
+     "REASONDESCRIPTION": "Acute bronchitis (disorder)"
+    },
+    {
+     "ID": "e031962d-d13d-4ede-a449-040417d5e4fb",
+     "START": "2009-01-11",
+     "STOP": "2009-04-07",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "4d451e22-a354-40c9-8b33-b6126158666d",
+     "CODE": 371605008.0,
+     "DESCRIPTION": "Deep breathing and coughing exercises",
+     "REASONCODE": 10509002,
+     "REASONDESCRIPTION": "Acute bronchitis (disorder)"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "claims",
+   "row_count": 20523,
+   "stats_rows": 20523,
+   "columns": [
+    {
+     "name": "ID",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 20523,
+     "is_unique": true,
+     "min_value": "0004caaf-fd7a-4f64-bda6-dce5ebd1196c",
+     "max_value": "fffe29ae-885a-44c4-8126-9366baa34d6d",
+     "examples": [
+      "1a9e880e-27a1-4465-8adc-222b1996a14a",
+      "46c0f5f1-a926-4837-84d8-0603fad8a46f",
+      "b532157d-4056-436b-963d-6445523ed9b3",
+      "8bf9cfff-00e5-4714-9d71-927752c71f08",
+      "5ef9ef1b-6ec5-4cb8-a125-2dcc310bc654"
+     ],
+     "top_values": [],
+     "description": "the unique id of the claim",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "PATIENT",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1461,
+     "is_unique": false,
+     "min_value": "00269bb7-e3ab-43a9-9cdf-cdf9b6e3b2b3",
+     "max_value": "fff429dc-1604-461c-9af0-25c2c9350759",
+     "examples": [
+      "71949668-1c2e-43ae-ab0a-64654608defb",
+      "c2caaace-9119-4b2d-a2c3-4040f5a9cf32",
+      "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+      "de43eb48-496c-46d4-8c5b-be6125a38c15",
+      "79266ca2-b4e3-45e5-af65-7914bd4511a0"
+     ],
+     "top_values": [],
+     "description": "the patient id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "BILLABLEPERIOD",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3953,
+     "is_unique": false,
+     "min_value": "1920-02-19",
+     "max_value": "2017-11-01",
+     "examples": [
+      "2008-03-11",
+      "2009-01-11",
+      "2009-04-07",
+      "2010-06-04",
+      "2010-10-16"
+     ],
+     "top_values": [],
+     "description": "billable period. the start date of the billable",
+     "value_description": "yyyy-mm-dd",
+     "notes": []
+    },
+    {
+     "name": "ORGANIZATION",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "temp organization",
+     "max_value": "temp organization",
+     "examples": [
+      "temp organization"
+     ],
+     "top_values": [
+      [
+       "temp organization",
+       20523
+      ]
+     ],
+     "description": "the claim organization",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ENCOUNTER",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1461,
+     "is_unique": false,
+     "min_value": "00269bb7-e3ab-43a9-9cdf-cdf9b6e3b2b3",
+     "max_value": "fff429dc-1604-461c-9af0-25c2c9350759",
+     "examples": [
+      "71949668-1c2e-43ae-ab0a-64654608defb",
+      "c2caaace-9119-4b2d-a2c3-4040f5a9cf32",
+      "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+      "de43eb48-496c-46d4-8c5b-be6125a38c15",
+      "79266ca2-b4e3-45e5-af65-7914bd4511a0"
+     ],
+     "top_values": [],
+     "description": "the medical encounter id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DIAGNOSIS",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "the diagnosis",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "TOTAL",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 100,
+     "max_value": 100,
+     "examples": [
+      100
+     ],
+     "top_values": [
+      [
+       100,
+       20523
+      ]
+     ],
+     "description": "the length of the billable period",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "ID"
+   ],
+   "sample_rows": [
+    {
+     "ID": "1a9e880e-27a1-4465-8adc-222b1996a14a",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "BILLABLEPERIOD": "2008-03-11",
+     "ORGANIZATION": "temp organization",
+     "ENCOUNTER": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "DIAGNOSIS": null,
+     "TOTAL": 100
+    },
+    {
+     "ID": "46c0f5f1-a926-4837-84d8-0603fad8a46f",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "BILLABLEPERIOD": "2009-01-11",
+     "ORGANIZATION": "temp organization",
+     "ENCOUNTER": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "DIAGNOSIS": null,
+     "TOTAL": 100
+    },
+    {
+     "ID": "b532157d-4056-436b-963d-6445523ed9b3",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "BILLABLEPERIOD": "2009-04-07",
+     "ORGANIZATION": "temp organization",
+     "ENCOUNTER": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "DIAGNOSIS": null,
+     "TOTAL": 100
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "conditions",
+   "row_count": 7040,
+   "stats_rows": 7040,
+   "columns": [
+    {
+     "name": "START",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4710,
+     "is_unique": false,
+     "min_value": "1919-01-25",
+     "max_value": "2017-10-29",
+     "examples": [
+      "2009-01-08",
+      "2010-10-16",
+      "2013-02-07",
+      "2013-10-19",
+      "2014-01-28"
+     ],
+     "top_values": [],
+     "description": "the start date of the allergy",
+     "value_description": "mm/dd/yy",
+     "notes": []
+    },
+    {
+     "name": "STOP",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.4376,
+     "distinct_count": 2449,
+     "is_unique": false,
+     "min_value": "1919-02-13",
+     "max_value": "2017-10-29",
+     "examples": [
+      "2009-01-21",
+      "2010-10-23",
+      "2013-02-27",
+      "2014-05-17",
+      "2014-02-10"
+     ],
+     "top_values": [],
+     "description": "the stop date of the allergy",
+     "value_description": "mm/dd/yy",
+     "notes": []
+    },
+    {
+     "name": "PATIENT",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1404,
+     "is_unique": false,
+     "min_value": "00269bb7-e3ab-43a9-9cdf-cdf9b6e3b2b3",
+     "max_value": "fff429dc-1604-461c-9af0-25c2c9350759",
+     "examples": [
+      "71949668-1c2e-43ae-ab0a-64654608defb",
+      "c2caaace-9119-4b2d-a2c3-4040f5a9cf32",
+      "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+      "de43eb48-496c-46d4-8c5b-be6125a38c15",
+      "79266ca2-b4e3-45e5-af65-7914bd4511a0"
+     ],
+     "top_values": [],
+     "description": "the patient id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ENCOUNTER",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4993,
+     "is_unique": false,
+     "min_value": "001bd1c7-96fe-4410-af52-5afe5f869087",
+     "max_value": "fff346b1-b059-4170-98cc-353e2946b658",
+     "examples": [
+      "4d451e22-a354-40c9-8b33-b6126158666d",
+      "bed7ecff-b41c-422b-beac-ea00c8b02837",
+      "6f2e3935-b203-493e-a9c0-f23e847b9798",
+      "da4fd626-e74e-4930-91be-7fb3da7ea098",
+      "b2e12445-b771-4738-944b-95cf6bbe76eb"
+     ],
+     "top_values": [],
+     "description": "the medical encounter id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CODE",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 118,
+     "is_unique": false,
+     "min_value": 6072007,
+     "max_value": 368581000119106,
+     "examples": [
+      10509002,
+      38822007,
+      72892002,
+      195662009,
+      301011002
+     ],
+     "top_values": [],
+     "description": "the code of the condition",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DESCRIPTION",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 118,
+     "is_unique": false,
+     "min_value": "Acute allergic reaction",
+     "max_value": "Whiplash injury to neck",
+     "examples": [
+      "Acute bronchitis (disorder)",
+      "Cystitis",
+      "Normal pregnancy",
+      "Acute viral pharyngitis (disorder)",
+      "Escherichia coli urinary tract infection"
+     ],
+     "top_values": [],
+     "description": "the description of the patient condition",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "START": "2009-01-08",
+     "STOP": "2009-01-21",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "4d451e22-a354-40c9-8b33-b6126158666d",
+     "CODE": 10509002,
+     "DESCRIPTION": "Acute bronchitis (disorder)"
+    },
+    {
+     "START": "2010-10-16",
+     "STOP": "2010-10-23",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "bed7ecff-b41c-422b-beac-ea00c8b02837",
+     "CODE": 38822007,
+     "DESCRIPTION": "Cystitis"
+    },
+    {
+     "START": "2013-02-07",
+     "STOP": "2013-02-27",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "6f2e3935-b203-493e-a9c0-f23e847b9798",
+     "CODE": 10509002,
+     "DESCRIPTION": "Acute bronchitis (disorder)"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "encounters",
+   "row_count": 20524,
+   "stats_rows": 20524,
+   "columns": [
+    {
+     "name": "ID",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 20524,
+     "is_unique": true,
+     "min_value": "000c20ea-5c3d-43a3-9608-bd37c22f13c8",
+     "max_value": "fffb3c7b-6214-4cab-b2a7-992b17b50e01",
+     "examples": [
+      "5114a5b4-64b8-47b2-82a6-0ce24aae0943",
+      "4d451e22-a354-40c9-8b33-b6126158666d",
+      "bdb926b8-5b6d-4366-bbe9-76fe3f3fbc4f",
+      "f45c623f-a5e7-47a0-8cce-cfe19d16c47a",
+      "bed7ecff-b41c-422b-beac-ea00c8b02837"
+     ],
+     "top_values": [],
+     "description": "the unique id of the encounter",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DATE",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3953,
+     "is_unique": false,
+     "min_value": "1920-02-19",
+     "max_value": "2017-11-01",
+     "examples": [
+      "2008-03-11",
+      "2009-01-11",
+      "2009-04-07",
+      "2010-06-04",
+      "2010-10-16"
+     ],
+     "top_values": [],
+     "description": "the date of the encounter",
+     "value_description": "yyyy-mm-dd",
+     "notes": []
+    },
+    {
+     "name": "PATIENT",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1461,
+     "is_unique": false,
+     "min_value": "00269bb7-e3ab-43a9-9cdf-cdf9b6e3b2b3",
+     "max_value": "fff429dc-1604-461c-9af0-25c2c9350759",
+     "examples": [
+      "71949668-1c2e-43ae-ab0a-64654608defb",
+      "c2caaace-9119-4b2d-a2c3-4040f5a9cf32",
+      "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+      "de43eb48-496c-46d4-8c5b-be6125a38c15",
+      "79266ca2-b4e3-45e5-af65-7914bd4511a0"
+     ],
+     "top_values": [],
+     "description": "the patient id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CODE",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 28,
+     "is_unique": false,
+     "min_value": 32485007,
+     "max_value": 698314001,
+     "examples": [
+      185349003,
+      185345009,
+      698314001,
+      424441002,
+      424619006
+     ],
+     "top_values": [
+      [
+       185349003,
+       5587
+      ],
+      [
+       170258001,
+       3793
+      ],
+      [
+       185345009,
+       2852
+      ],
+      [
+       308335008,
+       1524
+      ],
+      [
+       424619006,
+       1383
+      ],
+      [
+       371883000,
+       1281
+      ],
+      [
+       698314001,
+       899
+      ],
+      [
+       50849002,
+       805
+      ],
+      [
+       185347001,
+       615
+      ],
+      [
+       308646001,
+       461
+      ],
+      [
+       424441002,
+       287
+      ],
+      [
+       266707007,
+       216
+      ],
+      [
+       183460006,
+       195
+      ],
+      [
+       394701000,
+       161
+      ],
+      [
+       210098006,
+       155
+      ],
+      [
+       270427003,
+       56
+      ],
+      [
+       316744009,
+       49
+      ],
+      [
+       183478001,
+       30
+      ],
+      [
+       170837001,
+       28
+      ],
+      [
+       305408004,
+       23
+      ],
+      [
+       183452005,
+       22
+      ],
+      [
+       170838006,
+       22
+      ],
+      [
+       183495009,
+       21
+      ],
+      [
+       32485007,
+       20
+      ],
+      [
+       56876005,
+       19
+      ],
+      [
+       184347001,
+       13
+      ],
+      [
+       34285007,
+       6
+      ],
+      [
+       305411003,
+       1
+      ]
+     ],
+     "description": "the code of the care plan",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DESCRIPTION",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 28,
+     "is_unique": false,
+     "min_value": "Admission to surgical department",
+     "max_value": "Prenatal visit",
+     "examples": [
+      "Outpatient Encounter",
+      "Encounter for symptom",
+      "Consultation for treatment",
+      "Prenatal initial visit",
+      "Prenatal visit"
+     ],
+     "top_values": [
+      [
+       "Outpatient Encounter",
+       8629
+      ],
+      [
+       "Encounter for symptom",
+       2852
+      ],
+      [
+       "Patient encounter procedure",
+       1524
+      ],
+      [
+       "Prenatal visit",
+       1383
+      ],
+      [
+       "Outpatient procedure",
+       1281
+      ],
+      [
+       "Consultation for treatment",
+       899
+      ],
+      [
+       "Encounter for 'check-up'",
+       751
+      ],
+      [
+       "Emergency room admission",
+       694
+      ],
+      [
+       "Encounter for problem",
+       628
+      ],
+      [
+       "Death Certification",
+       461
+      ],
+      [
+       "Prenatal initial visit",
+       287
+      ],
+      [
+       "Drug addiction therapy",
+       216
+      ],
+      [
+       "Obstetric emergency hospital admission",
+       195
+      ],
+      [
+       "Asthma follow-up",
+       161
+      ],
+      [
+       "Domiciliary or rest home patient evaluation and management",
+       155
+      ],
+      [
+       "Emergency Room Admission",
+       62
+      ],
+      [
+       "Patient-initiated encounter",
+       56
+      ],
+      [
+       "Office Visit",
+       49
+      ],
+      [
+       "Emergency Encounter",
+       49
+      ],
+      [
+       "Emergency hospital admission for asthma",
+       30
+      ],
+      [
+       "Allergic disorder initial assessment",
+       28
+      ],
+      [
+       "Hospital admission",
+       26
+      ],
+      [
+       "Admission to surgical department",
+       23
+      ],
+      [
+       "Encounter Inpatient",
+       22
+      ],
+      [
+       "Allergic disorder follow-up assessment",
+       22
+      ],
+      [
+       "Non-urgent orthopedic admission",
+       21
+      ],
+      [
+       "Drug rehabilitation and detoxification",
+       19
+      ],
+      [
+       "Admission to thoracic surgery department",
+       1
+      ]
+     ],
+     "description": "the description of the care plan",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "REASONCODE",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.718,
+     "distinct_count": 67,
+     "is_unique": false,
+     "min_value": 6072007,
+     "max_value": 67841000119103,
+     "examples": [
+      10509002,
+      38822007,
+      72892002,
+      195662009,
+      301011002
+     ],
+     "top_values": [],
+     "description": "the reason code",
+     "value_description": "",
+     "notes": [
+      "72% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "REASONDESCRIPTION",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.718,
+     "distinct_count": 67,
+     "is_unique": false,
+     "min_value": "Acute bacterial sinusitis (disorder)",
+     "max_value": "Viral sinusitis (disorder)",
+     "examples": [
+      "Acute bronchitis (disorder)",
+      "Cystitis",
+      "Normal pregnancy",
+      "Acute viral pharyngitis (disorder)",
+      "Escherichia coli urinary tract infection"
+     ],
+     "top_values": [],
+     "description": "reason description. the description of the reason why the patient needs the care plan",
+     "value_description": "",
+     "notes": [
+      "72% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "ID"
+   ],
+   "sample_rows": [
+    {
+     "ID": "5114a5b4-64b8-47b2-82a6-0ce24aae0943",
+     "DATE": "2008-03-11",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "CODE": 185349003,
+     "DESCRIPTION": "Outpatient Encounter",
+     "REASONCODE": null,
+     "REASONDESCRIPTION": null
+    },
+    {
+     "ID": "4d451e22-a354-40c9-8b33-b6126158666d",
+     "DATE": "2009-01-11",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "CODE": 185345009,
+     "DESCRIPTION": "Encounter for symptom",
+     "REASONCODE": 10509002,
+     "REASONDESCRIPTION": "Acute bronchitis (disorder)"
+    },
+    {
+     "ID": "bdb926b8-5b6d-4366-bbe9-76fe3f3fbc4f",
+     "DATE": "2009-04-07",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "CODE": 185349003,
+     "DESCRIPTION": "Outpatient Encounter",
+     "REASONCODE": null,
+     "REASONDESCRIPTION": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "immunizations",
+   "row_count": 13189,
+   "stats_rows": 13189,
+   "columns": [
+    {
+     "name": "DATE",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3291,
+     "is_unique": false,
+     "min_value": "2007-11-02",
+     "max_value": "2017-11-01",
+     "examples": [
+      "2008-03-11",
+      "2009-04-07",
+      "2012-07-02",
+      "2015-05-03",
+      "2008-06-02"
+     ],
+     "top_values": [],
+     "description": "the date of the immunization",
+     "value_description": "yyyy-mm-dd",
+     "notes": []
+    },
+    {
+     "name": "PATIENT",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1140,
+     "is_unique": false,
+     "min_value": "00341a88-1cc1-4b39-b0f9-05b0531991a0",
+     "max_value": "fff429dc-1604-461c-9af0-25c2c9350759",
+     "examples": [
+      "71949668-1c2e-43ae-ab0a-64654608defb",
+      "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+      "79266ca2-b4e3-45e5-af65-7914bd4511a0",
+      "31410948-38be-4990-be5e-a47ab44f33a1",
+      "b1943aad-500b-4b22-8da8-b4d9c667c763"
+     ],
+     "top_values": [],
+     "description": "the patient id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ENCOUNTER",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 8213,
+     "is_unique": false,
+     "min_value": "0013c51f-c315-4112-ad5e-466b604a05ed",
+     "max_value": "fff44705-f30d-4e94-a89b-b85e8312f3d8",
+     "examples": [
+      "5114a5b4-64b8-47b2-82a6-0ce24aae0943",
+      "bdb926b8-5b6d-4366-bbe9-76fe3f3fbc4f",
+      "36796523-2672-4680-84c5-2d9a2b080ddb",
+      "323e1478-fdbf-4904-80a6-2b7e4526fc22",
+      "4e7beaee-50c2-4609-8a2b-b32fb3dc5a3b"
+     ],
+     "top_values": [],
+     "description": "the medical encounter id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CODE",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": 3,
+     "max_value": 140,
+     "examples": [
+      140,
+      113,
+      114,
+      115,
+      62
+     ],
+     "top_values": [
+      [
+       140,
+       7247
+      ],
+      [
+       113,
+       758
+      ],
+      [
+       20,
+       742
+      ],
+      [
+       133,
+       694
+      ],
+      [
+       10,
+       593
+      ],
+      [
+       8,
+       458
+      ],
+      [
+       62,
+       454
+      ],
+      [
+       49,
+       447
+      ],
+      [
+       119,
+       299
+      ],
+      [
+       83,
+       296
+      ],
+      [
+       21,
+       292
+      ],
+      [
+       3,
+       292
+      ],
+      [
+       114,
+       288
+      ],
+      [
+       115,
+       146
+      ],
+      [
+       121,
+       101
+      ],
+      [
+       33,
+       82
+      ]
+     ],
+     "description": "the code of the immunization",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DESCRIPTION",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": "DTaP",
+     "max_value": "zoster",
+     "examples": [
+      "Influenza  seasonal  injectable  preservative free",
+      "Td (adult) preservative free",
+      "meningococcal MCV4P",
+      "Tdap",
+      "HPV  quadrivalent"
+     ],
+     "top_values": [
+      [
+       "Influenza  seasonal  injectable  preservative free",
+       7247
+      ],
+      [
+       "Td (adult) preservative free",
+       758
+      ],
+      [
+       "DTaP",
+       742
+      ],
+      [
+       "Pneumococcal conjugate PCV 13",
+       694
+      ],
+      [
+       "IPV",
+       593
+      ],
+      [
+       "Hep B  adolescent or pediatric",
+       458
+      ],
+      [
+       "HPV  quadrivalent",
+       454
+      ],
+      [
+       "Hib (PRP-OMP)",
+       447
+      ],
+      [
+       "rotavirus  monovalent",
+       299
+      ],
+      [
+       "Hep A  ped/adol  2 dose",
+       296
+      ],
+      [
+       "varicella",
+       292
+      ],
+      [
+       "MMR",
+       292
+      ],
+      [
+       "meningococcal MCV4P",
+       288
+      ],
+      [
+       "Tdap",
+       146
+      ],
+      [
+       "zoster",
+       101
+      ],
+      [
+       "pneumococcal polysaccharide vaccine  23 valent",
+       82
+      ]
+     ],
+     "description": "the description of the immunization",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "DATE",
+    "PATIENT",
+    "ENCOUNTER",
+    "CODE"
+   ],
+   "sample_rows": [
+    {
+     "DATE": "2008-03-11",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "5114a5b4-64b8-47b2-82a6-0ce24aae0943",
+     "CODE": 140,
+     "DESCRIPTION": "Influenza  seasonal  injectable  preservative free"
+    },
+    {
+     "DATE": "2009-04-07",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "bdb926b8-5b6d-4366-bbe9-76fe3f3fbc4f",
+     "CODE": 140,
+     "DESCRIPTION": "Influenza  seasonal  injectable  preservative free"
+    },
+    {
+     "DATE": "2012-07-02",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "36796523-2672-4680-84c5-2d9a2b080ddb",
+     "CODE": 140,
+     "DESCRIPTION": "Influenza  seasonal  injectable  preservative free"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "medications",
+   "row_count": 6048,
+   "stats_rows": 6048,
+   "columns": [
+    {
+     "name": "START",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3967,
+     "is_unique": false,
+     "min_value": "1918-04-17",
+     "max_value": "2017-10-28",
+     "examples": [
+      "1988-09-05",
+      "2007-06-04",
+      "2009-01-11",
+      "2010-06-04",
+      "2010-10-16"
+     ],
+     "top_values": [],
+     "description": "the start date of the care plan",
+     "value_description": "yyyy-mm-dd",
+     "notes": []
+    },
+    {
+     "name": "STOP",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.4441,
+     "distinct_count": 2053,
+     "is_unique": false,
+     "min_value": "1925-02-04",
+     "max_value": "2017-10-30",
+     "examples": [
+      "2008-06-04",
+      "2009-01-21",
+      "2011-06-04",
+      "2010-10-23",
+      "2013-02-27"
+     ],
+     "top_values": [],
+     "description": "the stop date of the care plan",
+     "value_description": "yyyy-mm-dd\ncommonsense evidence: Time of taking medicine",
+     "notes": []
+    },
+    {
+     "name": "PATIENT",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1318,
+     "is_unique": false,
+     "min_value": "00341a88-1cc1-4b39-b0f9-05b0531991a0",
+     "max_value": "fff429dc-1604-461c-9af0-25c2c9350759",
+     "examples": [
+      "71949668-1c2e-43ae-ab0a-64654608defb",
+      "c2caaace-9119-4b2d-a2c3-4040f5a9cf32",
+      "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+      "de43eb48-496c-46d4-8c5b-be6125a38c15",
+      "79266ca2-b4e3-45e5-af65-7914bd4511a0"
+     ],
+     "top_values": [],
+     "description": "the patient id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ENCOUNTER",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3716,
+     "is_unique": false,
+     "min_value": "0026e99a-ca36-4303-8328-ae8a2c0b6302",
+     "max_value": "fff06c0d-4c8f-42e1-b20f-58705407b67d",
+     "examples": [
+      "5114a5b4-64b8-47b2-82a6-0ce24aae0943",
+      "4d451e22-a354-40c9-8b33-b6126158666d",
+      "f45c623f-a5e7-47a0-8cce-cfe19d16c47a",
+      "bed7ecff-b41c-422b-beac-ea00c8b02837",
+      "6f2e3935-b203-493e-a9c0-f23e847b9798"
+     ],
+     "top_values": [],
+     "description": "the medical encounter id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CODE",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 96,
+     "is_unique": false,
+     "min_value": 106258,
+     "max_value": 1856546,
+     "examples": [
+      834060,
+      1367439,
+      608680,
+      748879,
+      568530
+     ],
+     "top_values": [],
+     "description": "the code of the medication",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DESCRIPTION",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 97,
+     "is_unique": false,
+     "min_value": " Amoxicillin 250 MG / Clavulanate 125 MG [Augmentin]",
+     "max_value": "pregabalin 100 MG [Lyrica]",
+     "examples": [
+      "Penicillin V Potassium 250 MG",
+      "NuvaRing 0.12/0.015 MG per 24HR 21 Day Vaginal Ring",
+      "Acetaminophen 160 MG",
+      "Levora 0.15/30 28 Day Pack",
+      "Nitrofurantoin 5 MG/ML [Furadantin]"
+     ],
+     "top_values": [],
+     "description": "the description of the medication",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "REASONCODE",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.4061,
+     "distinct_count": 36,
+     "is_unique": false,
+     "min_value": 10509002,
+     "max_value": 67841000119103,
+     "examples": [
+      43878008,
+      10509002,
+      38822007,
+      301011002,
+      44054006
+     ],
+     "top_values": [
+      [
+       43878008,
+       1074
+      ],
+      [
+       10509002,
+       508
+      ],
+      [
+       53741008,
+       320
+      ],
+      [
+       444814009,
+       209
+      ],
+      [
+       44054006,
+       161
+      ],
+      [
+       363406005,
+       132
+      ],
+      [
+       233678006,
+       100
+      ],
+      [
+       424132000,
+       78
+      ],
+      [
+       423121009,
+       78
+      ],
+      [
+       22298006,
+       74
+      ],
+      [
+       26929004,
+       71
+      ],
+      [
+       67841000119103,
+       66
+      ],
+      [
+       109838007,
+       60
+      ],
+      [
+       230690007,
+       59
+      ],
+      [
+       239873007,
+       54
+      ],
+      [
+       301011002,
+       50
+      ],
+      [
+       185086009,
+       50
+      ],
+      [
+       422968005,
+       46
+      ],
+      [
+       87433001,
+       41
+      ],
+      [
+       38822007,
+       40
+      ],
+      [
+       410429000,
+       39
+      ],
+      [
+       67821000119109,
+       38
+      ],
+      [
+       40275004,
+       34
+      ],
+      [
+       425048006,
+       32
+      ],
+      [
+       95417003,
+       30
+      ],
+      [
+       239872002,
+       28
+      ],
+      [
+       94260004,
+       24
+      ],
+      [
+       201834006,
+       23
+      ],
+      [
+       36971009,
+       21
+      ],
+      [
+       75498004,
+       13
+      ],
+      [
+       195662009,
+       8
+      ],
+      [
+       230265002,
+       7
+      ],
+      [
+       192127007,
+       7
+      ],
+      [
+       69896004,
+       7
+      ],
+      [
+       90560007,
+       6
+      ],
+      [
+       195967001,
+       4
+      ]
+     ],
+     "description": "the reason code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "REASONDESCRIPTION",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.4061,
+     "distinct_count": 36,
+     "is_unique": false,
+     "min_value": "Acute bacterial sinusitis (disorder)",
+     "max_value": "Viral sinusitis (disorder)",
+     "examples": [
+      "Streptococcal sore throat (disorder)",
+      "Acute bronchitis (disorder)",
+      "Cystitis",
+      "Escherichia coli urinary tract infection",
+      "Diabetes"
+     ],
+     "top_values": [
+      [
+       "Streptococcal sore throat (disorder)",
+       1074
+      ],
+      [
+       "Acute bronchitis (disorder)",
+       508
+      ],
+      [
+       "Coronary Heart Disease",
+       320
+      ],
+      [
+       "Viral sinusitis (disorder)",
+       209
+      ],
+      [
+       "Diabetes",
+       161
+      ],
+      [
+       "Malignant tumor of colon",
+       132
+      ],
+      [
+       "Childhood asthma",
+       100
+      ],
+      [
+       "Non-small cell carcinoma of lung  TNM stage 4 (disorder)",
+       78
+      ],
+      [
+       "Non-small cell carcinoma of lung  TNM stage 1 (disorder)",
+       78
+      ],
+      [
+       "Myocardial Infarction",
+       74
+      ],
+      [
+       "Alzheimer's disease (disorder)",
+       71
+      ],
+      [
+       "Primary small cell malignant neoplasm of lung  TNM stage 4 (...",
+       66
+      ],
+      [
+       "Overlapping malignant neoplasm of colon",
+       60
+      ],
+      [
+       "Stroke",
+       59
+      ],
+      [
+       "Osteoarthritis of knee",
+       54
+      ],
+      [
+       "Escherichia coli urinary tract infection",
+       50
+      ],
+      [
+       "Chronic obstructive bronchitis (disorder)",
+       50
+      ],
+      [
+       "Non-small cell carcinoma of lung  TNM stage 3 (disorder)",
+       46
+      ],
+      [
+       "Pulmonary emphysema (disorder)",
+       41
+      ],
+      [
+       "Cystitis",
+       40
+      ],
+      [
+       "Cardiac Arrest",
+       39
+      ],
+      [
+       "Primary small cell malignant neoplasm of lung  TNM stage 2 (...",
+       38
+      ],
+      [
+       "Contact dermatitis",
+       34
+      ],
+      [
+       "Non-small cell carcinoma of lung  TNM stage 2 (disorder)",
+       32
+      ],
+      [
+       "Primary fibromyalgia syndrome",
+       30
+      ],
+      [
+       "Osteoarthritis of hip",
+       28
+      ],
+      [
+       "Secondary malignant neoplasm of colon",
+       24
+      ],
+      [
+       "Localized  primary osteoarthritis of the hand",
+       23
+      ],
+      [
+       "Sinusitis (disorder)",
+       21
+      ],
+      [
+       "Acute bacterial sinusitis (disorder)",
+       13
+      ],
+      [
+       "Acute viral pharyngitis (disorder)",
+       8
+      ],
+      [
+       "Rheumatoid arthritis",
+       7
+      ],
+      [
+       "Familial Alzheimer's disease of early onset (disorder)",
+       7
+      ],
+      [
+       "Child attention deficit disorder",
+       7
+      ],
+      [
+       "Gout",
+       6
+      ],
+      [
+       "Asthma",
+       4
+      ]
+     ],
+     "description": "reason description. the description of the reason why the patient take the medication",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "START",
+    "PATIENT",
+    "ENCOUNTER",
+    "CODE"
+   ],
+   "sample_rows": [
+    {
+     "START": "1988-09-05",
+     "STOP": null,
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "5114a5b4-64b8-47b2-82a6-0ce24aae0943",
+     "CODE": 834060,
+     "DESCRIPTION": "Penicillin V Potassium 250 MG",
+     "REASONCODE": 43878008,
+     "REASONDESCRIPTION": "Streptococcal sore throat (disorder)"
+    },
+    {
+     "START": "2007-06-04",
+     "STOP": "2008-06-04",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "5114a5b4-64b8-47b2-82a6-0ce24aae0943",
+     "CODE": 1367439,
+     "DESCRIPTION": "NuvaRing 0.12/0.015 MG per 24HR 21 Day Vaginal Ring",
+     "REASONCODE": null,
+     "REASONDESCRIPTION": null
+    },
+    {
+     "START": "2009-01-11",
+     "STOP": "2009-01-21",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "4d451e22-a354-40c9-8b33-b6126158666d",
+     "CODE": 608680,
+     "DESCRIPTION": "Acetaminophen 160 MG",
+     "REASONCODE": 10509002,
+     "REASONDESCRIPTION": "Acute bronchitis (disorder)"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "observations",
+   "row_count": 78899,
+   "stats_rows": 78899,
+   "columns": [
+    {
+     "name": "DATE",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3710,
+     "is_unique": false,
+     "min_value": "1920-02-19",
+     "max_value": "2017-11-01",
+     "examples": [
+      "2008-03-11",
+      "2009-04-07",
+      "2012-07-02",
+      "2014-02-01",
+      "2015-05-03"
+     ],
+     "top_values": [],
+     "description": "the date of the observation",
+     "value_description": "yyyy-mm-dd",
+     "notes": []
+    },
+    {
+     "name": "PATIENT",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1462,
+     "is_unique": false,
+     "min_value": "00269bb7-e3ab-43a9-9cdf-cdf9b6e3b2b3",
+     "max_value": "fff429dc-1604-461c-9af0-25c2c9350759",
+     "examples": [
+      "71949668-1c2e-43ae-ab0a-64654608defb",
+      "c2caaace-9119-4b2d-a2c3-4040f5a9cf32",
+      "96b24072-e1fe-49cd-a22a-6dfb92c3994c"
+     ],
+     "top_values": [],
+     "description": "the patient id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ENCOUNTER",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0371,
+     "distinct_count": 9908,
+     "is_unique": false,
+     "min_value": "0013c51f-c315-4112-ad5e-466b604a05ed",
+     "max_value": "fff44705-f30d-4e94-a89b-b85e8312f3d8",
+     "examples": [
+      "5114a5b4-64b8-47b2-82a6-0ce24aae0943",
+      "bdb926b8-5b6d-4366-bbe9-76fe3f3fbc4f",
+      "36796523-2672-4680-84c5-2d9a2b080ddb",
+      "b2e12445-b771-4738-944b-95cf6bbe76eb",
+      "323e1478-fdbf-4904-80a6-2b7e4526fc22"
+     ],
+     "top_values": [],
+     "description": "the medical encounter id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CODE",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 68,
+     "is_unique": false,
+     "min_value": "109838007",
+     "max_value": "9855000",
+     "examples": [
+      "8302-2",
+      "29463-7",
+      "39156-5",
+      "8480-6",
+      "8462-4"
+     ],
+     "top_values": [],
+     "description": "the code of the observation type",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DESCRIPTION",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 68,
+     "is_unique": false,
+     "min_value": "Alzheimer's disease (disorder)",
+     "max_value": "White oak IgE Ab in Serum",
+     "examples": [
+      "Body Height",
+      "Body Weight",
+      "Body Mass Index",
+      "Systolic Blood Pressure",
+      "Diastolic Blood Pressure"
+     ],
+     "top_values": [],
+     "description": "the description of the observation",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "VALUE",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0058,
+     "distinct_count": 12674,
+     "is_unique": false,
+     "min_value": -3.79,
+     "max_value": 595.0,
+     "examples": [
+      166.03,
+      54.42,
+      19.74,
+      139.0,
+      89.0
+     ],
+     "top_values": [],
+     "description": "the observation value",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "UNITS",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0058,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": "%",
+     "max_value": "{count}",
+     "examples": [
+      "cm",
+      "kg",
+      "kg/m2",
+      "mmHg",
+      "Cel"
+     ],
+     "top_values": [
+      [
+       "mmHg",
+       16946
+      ],
+      [
+       "mg/dL",
+       16236
+      ],
+      [
+       "mmol/L",
+       8688
+      ],
+      [
+       "kg",
+       8473
+      ],
+      [
+       "cm",
+       8473
+      ],
+      [
+       "kg/m2",
+       7296
+      ],
+      [
+       "%",
+       4659
+      ],
+      [
+       "years",
+       2924
+      ],
+      [
+       "mL/min/{1.73_m2}",
+       1898
+      ],
+      [
+       "kU/L",
+       1245
+      ],
+      [
+       "Cel",
+       739
+      ],
+      [
+       "mg/g",
+       438
+      ],
+      [
+       "{count}",
+       155
+      ],
+      [
+       "{T-score}",
+       90
+      ],
+      [
+       "(score)",
+       68
+      ],
+      [
+       "ng/mL",
+       58
+      ],
+      [
+       "mm",
+       58
+      ]
+     ],
+     "description": "the units of the observation value",
+     "value_description": "commonsense evidence: DESCRIPTION + VALUE + UNITS could be a fact:\ne.g.: body height of patient xxx is 166.03 cm:\nbody height is in DESCRIPTION \n166.03 is in VALUE \ncm is in UNITS",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "DATE": "2008-03-11",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "5114a5b4-64b8-47b2-82a6-0ce24aae0943",
+     "CODE": "8302-2",
+     "DESCRIPTION": "Body Height",
+     "VALUE": 166.03,
+     "UNITS": "cm"
+    },
+    {
+     "DATE": "2008-03-11",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "5114a5b4-64b8-47b2-82a6-0ce24aae0943",
+     "CODE": "29463-7",
+     "DESCRIPTION": "Body Weight",
+     "VALUE": 54.42,
+     "UNITS": "kg"
+    },
+    {
+     "DATE": "2008-03-11",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "5114a5b4-64b8-47b2-82a6-0ce24aae0943",
+     "CODE": "39156-5",
+     "DESCRIPTION": "Body Mass Index",
+     "VALUE": 19.74,
+     "UNITS": "kg/m2"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "patients",
+   "row_count": 1462,
+   "stats_rows": 1462,
+   "columns": [
+    {
+     "name": "patient",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1462,
+     "is_unique": true,
+     "min_value": "00269bb7-e3ab-43a9-9cdf-cdf9b6e3b2b3",
+     "max_value": "fff429dc-1604-461c-9af0-25c2c9350759",
+     "examples": [
+      "4ee2c837-e60f-4c54-9fdf-8686bc70760b",
+      "efaf74f9-3de3-45dd-a5d5-26d08e8a3190",
+      "aaa4c718-2f48-4c13-9ad0-d287cf280824",
+      "a1851c06-804e-4f31-9d8f-388cd52d4ad0",
+      "48074b70-4db4-4ab0-b9e8-361bd2ba6216"
+     ],
+     "top_values": [],
+     "description": "the unique id for the patient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "birthdate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1431,
+     "is_unique": false,
+     "min_value": "1916-11-09",
+     "max_value": "2017-11-07",
+     "examples": [
+      "1929-04-08",
+      "2016-12-15",
+      "1943-11-28",
+      "1954-10-22",
+      "1935-04-08"
+     ],
+     "top_values": [],
+     "description": "the birth date of the patient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "deathdate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.6874,
+     "distinct_count": 448,
+     "is_unique": false,
+     "min_value": "1932-12-22",
+     "max_value": "2029-11-11",
+     "examples": [
+      "2029-11-11",
+      "2020-02-19",
+      "2017-10-22",
+      "2017-10-13",
+      "2017-09-06"
+     ],
+     "top_values": [],
+     "description": "the death date of the patient",
+     "value_description": "commonsense evidence: \n the age of the patient = death year - birth year \n if null, it means this patient is still alive",
+     "notes": [
+      "69% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "ssn",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1460,
+     "is_unique": false,
+     "min_value": "999-10-1009",
+     "max_value": "999-99-9565",
+     "examples": [
+      "999-78-5976",
+      "999-59-9186",
+      "999-43-3780",
+      "999-53-5542",
+      "999-34-8549"
+     ],
+     "top_values": [],
+     "description": "the social security number of the patient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "drivers",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1819,
+     "distinct_count": 1189,
+     "is_unique": false,
+     "min_value": "S99910052",
+     "max_value": "S99999923",
+     "examples": [
+      "S99992928",
+      "S99975961",
+      "S99997003",
+      "S99969847",
+      "S99992575"
+     ],
+     "top_values": [],
+     "description": "the driver number of the patient",
+     "value_description": "commonsense evidence: if not, this patient doesn't have driving license",
+     "notes": []
+    },
+    {
+     "name": "passport",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.2319,
+     "distinct_count": 560,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "X99970706X",
+     "examples": [
+      "FALSE",
+      "X98167138X",
+      "X65866752X",
+      "X69163281X",
+      "X33467772X"
+     ],
+     "top_values": [],
+     "description": "the passport number",
+     "value_description": "commonsense evidence: if not, this patient cannot go abroad, vice versa",
+     "notes": []
+    },
+    {
+     "name": "prefix",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.2025,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Mr.",
+     "max_value": "Ms.",
+     "examples": [
+      "Mr.",
+      "Mrs.",
+      "Ms."
+     ],
+     "top_values": [
+      [
+       "Mr.",
+       597
+      ],
+      [
+       "Mrs.",
+       403
+      ],
+      [
+       "Ms.",
+       166
+      ]
+     ],
+     "description": "the prefix",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "first",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1202,
+     "is_unique": false,
+     "min_value": "/1/1",
+     "max_value": "Zofia",
+     "examples": [
+      "Rosamaria",
+      "Loan",
+      "Angelo",
+      "Cami",
+      "Giovanni"
+     ],
+     "top_values": [],
+     "description": "the first name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 453,
+     "is_unique": false,
+     "min_value": "Abbott",
+     "max_value": "Zulauf",
+     "examples": [
+      "Pfannerstill",
+      "Bashirian",
+      "Buckridge",
+      "Terry",
+      "Russel"
+     ],
+     "top_values": [],
+     "description": "the last name",
+     "value_description": "commonsense evidence: full name = first + last",
+     "notes": []
+    },
+    {
+     "name": "suffix",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9692,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "JD",
+     "max_value": "PhD",
+     "examples": [
+      "PhD",
+      "JD",
+      "MD"
+     ],
+     "top_values": [
+      [
+       "PhD",
+       16
+      ],
+      [
+       "MD",
+       15
+      ],
+      [
+       "JD",
+       14
+      ]
+     ],
+     "description": "the suffix of the patient",
+     "value_description": "commonsense evidence: if suffix = PhD, JD, MD, it means this patient has doctoral degree. Otherwise, this patient is not.",
+     "notes": [
+      "97% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "maiden",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.7244,
+     "distinct_count": 271,
+     "is_unique": false,
+     "min_value": "Abbott",
+     "max_value": "Zulauf",
+     "examples": [
+      "Schuster",
+      "Schaden",
+      "Brekke",
+      "Murazik",
+      "Waelchi"
+     ],
+     "top_values": [],
+     "description": "the maiden name of the patient",
+     "value_description": "commonsense evidence: Only married women have the maiden name",
+     "notes": [
+      "72% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "marital",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.2934,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "M",
+     "max_value": "S",
+     "examples": [
+      "S",
+      "M"
+     ],
+     "top_values": [
+      [
+       "M",
+       822
+      ],
+      [
+       "S",
+       211
+      ]
+     ],
+     "description": "the marital status of the patient",
+     "value_description": "commonsense evidence: \n M: married \n S: single",
+     "notes": []
+    },
+    {
+     "name": "race",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "asian",
+     "max_value": "white",
+     "examples": [
+      "black",
+      "white",
+      "hispanic",
+      "asian"
+     ],
+     "top_values": [
+      [
+       "white",
+       1085
+      ],
+      [
+       "hispanic",
+       155
+      ],
+      [
+       "black",
+       129
+      ],
+      [
+       "asian",
+       93
+      ]
+     ],
+     "description": "the race of the patient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ethnicity",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": "african",
+     "max_value": "west_indian",
+     "examples": [
+      "dominican",
+      "american",
+      "african",
+      "english",
+      "puerto_rican"
+     ],
+     "top_values": [
+      [
+       "irish",
+       306
+      ],
+      [
+       "italian",
+       164
+      ],
+      [
+       "english",
+       146
+      ],
+      [
+       "puerto_rican",
+       116
+      ],
+      [
+       "german",
+       80
+      ],
+      [
+       "french",
+       79
+      ],
+      [
+       "polish",
+       65
+      ],
+      [
+       "chinese",
+       56
+      ],
+      [
+       "portuguese",
+       55
+      ],
+      [
+       "african",
+       55
+      ],
+      [
+       "american",
+       53
+      ],
+      [
+       "french_canadian",
+       51
+      ],
+      [
+       "dominican",
+       51
+      ],
+      [
+       "asian_indian",
+       37
+      ],
+      [
+       "russian",
+       33
+      ],
+      [
+       "scottish",
+       27
+      ],
+      [
+       "swedish",
+       26
+      ],
+      [
+       "west_indian",
+       23
+      ],
+      [
+       "central_american",
+       22
+      ],
+      [
+       "mexican",
+       17
+      ]
+     ],
+     "description": "the ethnicity of the patient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "M",
+     "examples": [
+      "F",
+      "M"
+     ],
+     "top_values": [
+      [
+       "M",
+       741
+      ],
+      [
+       "F",
+       721
+      ]
+     ],
+     "description": "the gender of the patient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "birthplace",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 265,
+     "is_unique": false,
+     "min_value": "Abington MA US",
+     "max_value": "Yarmouth MA US",
+     "examples": [
+      "Pittsfield MA US",
+      "Medford MA US",
+      "Framingham MA US",
+      "Hudson MA US",
+      "Westfield MA US"
+     ],
+     "top_values": [],
+     "description": "the birth place",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "address",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1462,
+     "is_unique": true,
+     "min_value": "10214 Monahan Terrace Apt. 774 Saugus MA 01906 US",
+     "max_value": "998 Ondricka Centers Chicopee MA 01021 US",
+     "examples": [
+      "18797 Karson Burgs Suite 444 Palmer Town MA 01069 US",
+      "301 Eula Radial Suite 298 Brockton MA 02305 US",
+      "8693 Fred Crossroad New Bedford MA 02746 US",
+      "344 Olson Road Apt. 936 Attleboro MA 02703 US",
+      "5780 Corwin Trafficway Dartmouth MA 02714 US"
+     ],
+     "top_values": [],
+     "description": "the specific address",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "patient"
+   ],
+   "sample_rows": [
+    {
+     "patient": "4ee2c837-e60f-4c54-9fdf-8686bc70760b",
+     "birthdate": "1929-04-08",
+     "deathdate": "2029-11-11",
+     "ssn": "999-78-5976",
+     "drivers": null,
+     "passport": null,
+     "prefix": null,
+     "first": "Rosamaria",
+     "last": "Pfannerstill",
+     "suffix": null,
+     "maiden": null,
+     "marital": null,
+     "race": "black",
+     "ethnicity": "dominican",
+     "gender": "F",
+     "birthplace": "Pittsfield MA US",
+     "address": "18797 Karson Burgs Suite 444 Palmer Town MA 01069 US"
+    },
+    {
+     "patient": "efaf74f9-3de3-45dd-a5d5-26d08e8a3190",
+     "birthdate": "2016-12-15",
+     "deathdate": "2020-02-19",
+     "ssn": "999-59-9186",
+     "drivers": null,
+     "passport": null,
+     "prefix": null,
+     "first": "Loan",
+     "last": "Bashirian",
+     "suffix": null,
+     "maiden": null,
+     "marital": null,
+     "race": "white",
+     "ethnicity": "american",
+     "gender": "F",
+     "birthplace": "Medford MA US",
+     "address": "301 Eula Radial Suite 298 Brockton MA 02305 US"
+    },
+    {
+     "patient": "aaa4c718-2f48-4c13-9ad0-d287cf280824",
+     "birthdate": "1943-11-28",
+     "deathdate": "2017-10-22",
+     "ssn": "999-43-3780",
+     "drivers": "S99992928",
+     "passport": "FALSE",
+     "prefix": "Mr.",
+     "first": "Angelo",
+     "last": "Buckridge",
+     "suffix": null,
+     "maiden": null,
+     "marital": "S",
+     "race": "black",
+     "ethnicity": "african",
+     "gender": "M",
+     "birthplace": "Framingham MA US",
+     "address": "8693 Fred Crossroad New Bedford MA 02746 US"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "procedures",
+   "row_count": 10184,
+   "stats_rows": 10184,
+   "columns": [
+    {
+     "name": "DATE",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3371,
+     "is_unique": false,
+     "min_value": "2007-11-02",
+     "max_value": "2017-11-01",
+     "examples": [
+      "2013-02-09",
+      "2013-10-19",
+      "2014-05-17",
+      "2016-06-04",
+      "2009-05-15"
+     ],
+     "top_values": [],
+     "description": "the date of the procedure",
+     "value_description": "yyyy-mm-dd",
+     "notes": []
+    },
+    {
+     "name": "PATIENT",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1122,
+     "is_unique": false,
+     "min_value": "00341a88-1cc1-4b39-b0f9-05b0531991a0",
+     "max_value": "fff429dc-1604-461c-9af0-25c2c9350759",
+     "examples": [
+      "71949668-1c2e-43ae-ab0a-64654608defb",
+      "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+      "79266ca2-b4e3-45e5-af65-7914bd4511a0",
+      "31410948-38be-4990-be5e-a47ab44f33a1",
+      "b1943aad-500b-4b22-8da8-b4d9c667c763"
+     ],
+     "top_values": [],
+     "description": "the patient id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ENCOUNTER",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9195,
+     "is_unique": false,
+     "min_value": "0026aae8-4ab9-459d-87eb-6514a90c795f",
+     "max_value": "fff8ea0a-d91f-4f51-98c3-f615e6537679",
+     "examples": [
+      "6f2e3935-b203-493e-a9c0-f23e847b9798",
+      "da4fd626-e74e-4930-91be-7fb3da7ea098",
+      "988f02a3-bf7e-485a-8d26-3378ddc9524c",
+      "8ae1f76d-fdf1-40b7-9c9d-66b530701d9d",
+      "cac10621-ec28-427c-bb64-366874c07579"
+     ],
+     "top_values": [],
+     "description": "the medical encounter id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CODE",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 65,
+     "is_unique": false,
+     "min_value": 11466000,
+     "max_value": 1015401000000102,
+     "examples": [
+      23426006,
+      252160004,
+      237001001,
+      11466000,
+      169553002
+     ],
+     "top_values": [],
+     "description": "the code of the procedure",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DESCRIPTION",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 65,
+     "is_unique": false,
+     "min_value": "Admission to burn unit",
+     "max_value": "Vasectomy",
+     "examples": [
+      "Measurement of respiratory function (procedure)",
+      "Standard pregnancy test",
+      "Augmentation of labor",
+      "Cesarean section",
+      "Insertion of subcutaneous contraceptive"
+     ],
+     "top_values": [],
+     "description": "the description of the procedure",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "REASONCODE",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.749,
+     "distinct_count": 39,
+     "is_unique": false,
+     "min_value": 10509002,
+     "max_value": 67841000119103,
+     "examples": [
+      10509002,
+      72892002,
+      33737001,
+      284549007,
+      65966004
+     ],
+     "top_values": [
+      [
+       72892002,
+       693
+      ],
+      [
+       10509002,
+       372
+      ],
+      [
+       185086009,
+       217
+      ],
+      [
+       192127007,
+       190
+      ],
+      [
+       68496003,
+       127
+      ],
+      [
+       87433001,
+       98
+      ],
+      [
+       195662009,
+       72
+      ],
+      [
+       43878008,
+       66
+      ],
+      [
+       58150001,
+       50
+      ],
+      [
+       65966004,
+       48
+      ],
+      [
+       263102004,
+       47
+      ],
+      [
+       370247008,
+       46
+      ],
+      [
+       423121009,
+       43
+      ],
+      [
+       283371005,
+       43
+      ],
+      [
+       283385000,
+       41
+      ],
+      [
+       424132000,
+       40
+      ],
+      [
+       284549007,
+       38
+      ],
+      [
+       67841000119103,
+       36
+      ],
+      [
+       162573006,
+       36
+      ],
+      [
+       16114001,
+       36
+      ],
+      [
+       284551006,
+       32
+      ],
+      [
+       422968005,
+       25
+      ],
+      [
+       33737001,
+       23
+      ],
+      [
+       363406005,
+       21
+      ],
+      [
+       67821000119109,
+       20
+      ],
+      [
+       425048006,
+       17
+      ],
+      [
+       74400008,
+       14
+      ],
+      [
+       359817006,
+       12
+      ],
+      [
+       713197008,
+       11
+      ],
+      [
+       233678006,
+       9
+      ],
+      [
+       444448004,
+       7
+      ],
+      [
+       444470001,
+       6
+      ],
+      [
+       109838007,
+       6
+      ],
+      [
+       30832001,
+       5
+      ],
+      [
+       403192003,
+       2
+      ],
+      [
+       307731004,
+       2
+      ],
+      [
+       93761005,
+       2
+      ],
+      [
+       79586000,
+       2
+      ],
+      [
+       195967001,
+       1
+      ]
+     ],
+     "description": "reason code. the code of the reason",
+     "value_description": "",
+     "notes": [
+      "75% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "REASONDESCRIPTION",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.749,
+     "distinct_count": 39,
+     "is_unique": false,
+     "min_value": "Acute bronchitis (disorder)",
+     "max_value": "Tubal pregnancy",
+     "examples": [
+      "Acute bronchitis (disorder)",
+      "Normal pregnancy",
+      "Fracture of rib",
+      "Laceration of hand",
+      "Fracture of forearm"
+     ],
+     "top_values": [
+      [
+       "Normal pregnancy",
+       693
+      ],
+      [
+       "Acute bronchitis (disorder)",
+       372
+      ],
+      [
+       "Chronic obstructive bronchitis (disorder)",
+       217
+      ],
+      [
+       "Child attention deficit disorder",
+       190
+      ],
+      [
+       "Polyp of colon",
+       127
+      ],
+      [
+       "Pulmonary emphysema (disorder)",
+       98
+      ],
+      [
+       "Acute viral pharyngitis (disorder)",
+       72
+      ],
+      [
+       "Streptococcal sore throat (disorder)",
+       66
+      ],
+      [
+       "Fracture of clavicle",
+       50
+      ],
+      [
+       "Fracture of forearm",
+       48
+      ],
+      [
+       "Fracture subluxation of wrist",
+       47
+      ],
+      [
+       "Facial laceration",
+       46
+      ],
+      [
+       "Non-small cell carcinoma of lung  TNM stage 4 (disorder)",
+       43
+      ],
+      [
+       "Laceration of forearm",
+       43
+      ],
+      [
+       "Laceration of thigh",
+       41
+      ],
+      [
+       "Non-small cell carcinoma of lung  TNM stage 1 (disorder)",
+       40
+      ],
+      [
+       "Laceration of hand",
+       38
+      ],
+      [
+       "Suspected lung cancer (situation)",
+       36
+      ],
+      [
+       "Primary small cell malignant neoplasm of lung  TNM stage 4 (...",
+       36
+      ],
+      [
+       "Fracture of ankle",
+       36
+      ],
+      [
+       "Laceration of foot",
+       32
+      ],
+      [
+       "Non-small cell carcinoma of lung  TNM stage 3 (disorder)",
+       25
+      ],
+      [
+       "Fracture of rib",
+       23
+      ],
+      [
+       "Malignant tumor of colon",
+       21
+      ],
+      [
+       "Primary small cell malignant neoplasm of lung  TNM stage 2 (...",
+       20
+      ],
+      [
+       "Non-small cell carcinoma of lung  TNM stage 2 (disorder)",
+       17
+      ],
+      [
+       "Appendicitis",
+       14
+      ],
+      [
+       "Closed fracture of hip",
+       12
+      ],
+      [
+       "Recurrent rectal polyp",
+       11
+      ],
+      [
+       "Childhood asthma",
+       9
+      ],
+      [
+       "Injury of medial collateral ligament of knee",
+       7
+      ],
+      [
+       "Overlapping malignant neoplasm of colon",
+       6
+      ],
+      [
+       "Injury of anterior cruciate ligament",
+       6
+      ],
+      [
+       "Rupture of patellar tendon",
+       5
+      ],
+      [
+       "Tubal pregnancy",
+       2
+      ],
+      [
+       "Third degree burn",
+       2
+      ],
+      [
+       "Primary malignant neoplasm of colon",
+       2
+      ],
+      [
+       "Injury of tendon of the rotator cuff of shoulder",
+       2
+      ],
+      [
+       "Asthma",
+       1
+      ]
+     ],
+     "description": "reason description. the description of the reason why the patient take the procedure",
+     "value_description": "",
+     "notes": [
+      "75% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "DATE": "2013-02-09",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "6f2e3935-b203-493e-a9c0-f23e847b9798",
+     "CODE": 23426006,
+     "DESCRIPTION": "Measurement of respiratory function (procedure)",
+     "REASONCODE": 10509002,
+     "REASONDESCRIPTION": "Acute bronchitis (disorder)"
+    },
+    {
+     "DATE": "2013-10-19",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "da4fd626-e74e-4930-91be-7fb3da7ea098",
+     "CODE": 252160004,
+     "DESCRIPTION": "Standard pregnancy test",
+     "REASONCODE": 72892002,
+     "REASONDESCRIPTION": "Normal pregnancy"
+    },
+    {
+     "DATE": "2014-05-17",
+     "PATIENT": "71949668-1c2e-43ae-ab0a-64654608defb",
+     "ENCOUNTER": "988f02a3-bf7e-485a-8d26-3378ddc9524c",
+     "CODE": 237001001,
+     "DESCRIPTION": "Augmentation of labor",
+     "REASONCODE": 72892002,
+     "REASONDESCRIPTION": "Normal pregnancy"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "allergies",
+   "from_column": "PATIENT",
+   "to_table": "patients",
+   "to_column": "patient",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "allergies",
+   "from_column": "ENCOUNTER",
+   "to_table": "encounters",
+   "to_column": "ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "careplans",
+   "from_column": "PATIENT",
+   "to_table": "patients",
+   "to_column": "patient",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "careplans",
+   "from_column": "ENCOUNTER",
+   "to_table": "encounters",
+   "to_column": "ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "claims",
+   "from_column": "ENCOUNTER",
+   "to_table": "encounters",
+   "to_column": "ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "claims",
+   "from_column": "PATIENT",
+   "to_table": "patients",
+   "to_column": "patient",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "conditions",
+   "from_column": "DESCRIPTION",
+   "to_table": "all_prevalences",
+   "to_column": "ITEM",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "conditions",
+   "from_column": "PATIENT",
+   "to_table": "patients",
+   "to_column": "patient",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "conditions",
+   "from_column": "ENCOUNTER",
+   "to_table": "encounters",
+   "to_column": "ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "encounters",
+   "from_column": "PATIENT",
+   "to_table": "patients",
+   "to_column": "patient",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "immunizations",
+   "from_column": "PATIENT",
+   "to_table": "patients",
+   "to_column": "patient",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "immunizations",
+   "from_column": "ENCOUNTER",
+   "to_table": "encounters",
+   "to_column": "ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "medications",
+   "from_column": "PATIENT",
+   "to_table": "patients",
+   "to_column": "patient",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "medications",
+   "from_column": "ENCOUNTER",
+   "to_table": "encounters",
+   "to_column": "ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "observations",
+   "from_column": "PATIENT",
+   "to_table": "patients",
+   "to_column": "patient",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "observations",
+   "from_column": "ENCOUNTER",
+   "to_table": "encounters",
+   "to_column": "ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "procedures",
+   "from_column": "PATIENT",
+   "to_table": "patients",
+   "to_column": "patient",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "procedures",
+   "from_column": "ENCOUNTER",
+   "to_table": "encounters",
+   "to_column": "ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "allergies",
+   "from_column": "PATIENT",
+   "to_table": "immunizations",
+   "to_column": "PATIENT",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.834
+  },
+  {
+   "from_table": "allergies",
+   "from_column": "PATIENT",
+   "to_table": "medications",
+   "to_column": "PATIENT",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.962
+  },
+  {
+   "from_table": "allergies",
+   "from_column": "ENCOUNTER",
+   "to_table": "medications",
+   "to_column": "ENCOUNTER",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.955
+  },
+  {
+   "from_table": "careplans",
+   "from_column": "PATIENT",
+   "to_table": "immunizations",
+   "to_column": "PATIENT",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.813
+  },
+  {
+   "from_table": "careplans",
+   "from_column": "PATIENT",
+   "to_table": "medications",
+   "to_column": "PATIENT",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.95
+  },
+  {
+   "from_table": "claims",
+   "from_column": "PATIENT",
+   "to_table": "medications",
+   "to_column": "PATIENT",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.903
+  },
+  {
+   "from_table": "conditions",
+   "from_column": "PATIENT",
+   "to_table": "immunizations",
+   "to_column": "PATIENT",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.81
+  },
+  {
+   "from_table": "conditions",
+   "from_column": "PATIENT",
+   "to_table": "medications",
+   "to_column": "PATIENT",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.933
+  },
+  {
+   "from_table": "encounters",
+   "from_column": "PATIENT",
+   "to_table": "medications",
+   "to_column": "PATIENT",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.903
+  },
+  {
+   "from_table": "immunizations",
+   "from_column": "PATIENT",
+   "to_table": "medications",
+   "to_column": "PATIENT",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.943
+  },
+  {
+   "from_table": "observations",
+   "from_column": "PATIENT",
+   "to_table": "medications",
+   "to_column": "PATIENT",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.903
+  },
+  {
+   "from_table": "procedures",
+   "from_column": "PATIENT",
+   "to_table": "immunizations",
+   "to_column": "PATIENT",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.997
+  },
+  {
+   "from_table": "procedures",
+   "from_column": "PATIENT",
+   "to_table": "medications",
+   "to_column": "PATIENT",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.943
+  }
+ ],
+ "notes": []
+}

@@ -1,0 +1,1863 @@
+{
+ "db_id": "cookbook",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/cookbook/cookbook.sqlite",
+ "fingerprint": "1220608-1793993033354584199-v1.0",
+ "created_at": "2026-11-06T19:24:51+00:00",
+ "profile_seconds": 0.066,
+ "tables": [
+  {
+   "name": "Ingredient",
+   "row_count": 3346,
+   "stats_rows": 3346,
+   "columns": [
+    {
+     "name": "ingredient_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3346,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 4644,
+     "examples": [
+      1,
+      6,
+      10,
+      11,
+      12
+     ],
+     "top_values": [],
+     "description": "ingredient id. the unique identifier for the ingredient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "category",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 69,
+     "is_unique": false,
+     "min_value": "Kosher products",
+     "max_value": "vinegars",
+     "examples": [
+      "dairy",
+      "Mexican products",
+      "cereals",
+      "breads",
+      "fresh vegetables"
+     ],
+     "top_values": [],
+     "description": "the category of the ingredient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3346,
+     "is_unique": true,
+     "min_value": "1% lowfat chocolate milk",
+     "max_value": "zucchini squash",
+     "examples": [
+      "1% lowfat cottage cheese",
+      "1% lowfat milk",
+      "10-inch flour tortilla",
+      "100% bran cereal",
+      "2% lowfat milk"
+     ],
+     "top_values": [],
+     "description": "the name of the ingredient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "plural",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.7821,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "#NAME?",
+     "max_value": "s",
+     "examples": [
+      "s",
+      "#NAME?",
+      "es"
+     ],
+     "top_values": [
+      [
+       "s",
+       628
+      ],
+      [
+       "es",
+       56
+      ],
+      [
+       "#NAME?",
+       45
+      ]
+     ],
+     "description": "the plural suffix of the ingredient",
+     "value_description": "",
+     "notes": [
+      "78% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "ingredient_id"
+   ],
+   "sample_rows": [
+    {
+     "ingredient_id": 1,
+     "category": "dairy",
+     "name": "1% lowfat cottage cheese",
+     "plural": null
+    },
+    {
+     "ingredient_id": 6,
+     "category": "dairy",
+     "name": "1% lowfat milk",
+     "plural": null
+    },
+    {
+     "ingredient_id": 10,
+     "category": "Mexican products",
+     "name": "10-inch flour tortilla",
+     "plural": "s"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Nutrition",
+   "row_count": 878,
+   "stats_rows": 878,
+   "columns": [
+    {
+     "name": "recipe_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 878,
+     "is_unique": true,
+     "min_value": 214,
+     "max_value": 1436,
+     "examples": [
+      214,
+      215,
+      216,
+      217,
+      218
+     ],
+     "top_values": [],
+     "description": "recipe id. the id of the recipe",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "protein",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 708,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 105.65,
+     "examples": [
+      5.47,
+      5.7,
+      4.9,
+      1.77,
+      1.38
+     ],
+     "top_values": [],
+     "description": "the protein content in the recipe",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "carbo",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 815,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 116.78,
+     "examples": [
+      41.29,
+      23.75,
+      26.88,
+      18.17,
+      36.63
+     ],
+     "top_values": [],
+     "description": "the carbo content in the recipe",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "alcohol",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 51,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 14.63,
+     "examples": [
+      0.0,
+      1.93,
+      2.7,
+      1.95,
+      5.8
+     ],
+     "top_values": [],
+     "description": "the alcohol content in the recipe",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "total_fat",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 614,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 53.23,
+     "examples": [
+      11.53,
+      1.08,
+      1.1,
+      0.21,
+      5.47
+     ],
+     "top_values": [],
+     "description": "the total fat content in the recipe",
+     "value_description": "commonsense evidence: higher --> higher possibility to gain weight",
+     "notes": []
+    },
+    {
+     "name": "sat_fat",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 395,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 24.49,
+     "examples": [
+      2.21,
+      0.58,
+      0.06,
+      3.46,
+      0.01
+     ],
+     "top_values": [],
+     "description": "the saturated fat content in the recipe",
+     "value_description": "commonsense evidence: unsaturated fat = total_fat - saturated fat",
+     "notes": []
+    },
+    {
+     "name": "cholestrl",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 444,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 443.04,
+     "examples": [
+      1.39,
+      3.48,
+      3.46,
+      0.0,
+      10.36
+     ],
+     "top_values": [],
+     "description": "the cholesterol content in the recipe",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "sodium",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 827,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 12092.6,
+     "examples": [
+      260.78,
+      46.17,
+      41.79,
+      14.01,
+      50.22
+     ],
+     "top_values": [],
+     "description": "the sodium content in the recipe",
+     "value_description": "commonsense evidence:\nSalt/Sodium-Free - Less than 5 mg of sodium per serving\nVery Low Sodium - 35 mg of sodium or less per serving\nLow Sodium -140 mg of sodium or less per serving\nReduced Sodium - At least 25% less sodium than the regular product\nLight in Sodium or Lightly Salted - At least 50% less sodium than the regular product\nNo-Salt-Added or Unsalted - No salt is added during processing - but these products may not be salt/sodium-free unless stated",
+     "notes": []
+    },
+    {
+     "name": "iron",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 405,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 30.96,
+     "examples": [
+      0.81,
+      0.57,
+      0.37,
+      0.19,
+      0.66
+     ],
+     "top_values": [],
+     "description": "the iron content in the recipe",
+     "value_description": "commonsense evidence: if iron > 20mg, it will lead to  \n constipation \n feeling sick \n being sick \n stomach pain \nquestion could mention any of functions listed before.",
+     "notes": []
+    },
+    {
+     "name": "vitamin_c",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 716,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 204.48,
+     "examples": [
+      8.89,
+      13.02,
+      6.13,
+      8.79,
+      0.16
+     ],
+     "top_values": [],
+     "description": "the vitamin c content in the recipe",
+     "value_description": "commonsense evidence: Vitamin C, also known as ascorbic acid, if the VC is higher, it will:\n helping to protect cells and keeping them healthy \n maintaining healthy skin, blood vessels, bones and cartilage \n helping with wound healing \nquestion could mention any of functions listed before.",
+     "notes": []
+    },
+    {
+     "name": "vitamin_a",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 785,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 34745.57,
+     "examples": [
+      586.2,
+      2738.24,
+      1521.1,
+      478.09,
+      229.16
+     ],
+     "top_values": [],
+     "description": "the vitamin a content in the recipe",
+     "value_description": "commonsense evidence:\nhigher --> beneficial to \n helping your body's natural defense against illness and infection (the immune system) work properly \n helping vision in dim light \n keeping skin and the lining of some parts of the body, such as the nose, healthy \nquestion could mention any of functions listed before.",
+     "notes": []
+    },
+    {
+     "name": "fiber",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 299,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 8.7,
+     "examples": [
+      0.87,
+      0.62,
+      0.34,
+      0.69,
+      1.05
+     ],
+     "top_values": [],
+     "description": "the fiber a content in the recipe",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "pcnt_cal_carb",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 830,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 100.0,
+     "examples": [
+      56.8,
+      67.38,
+      78.45,
+      88.98,
+      72.81
+     ],
+     "top_values": [],
+     "description": "percentage calculation carbo. percentage of carbo in total nutrient composition",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "pcnt_cal_fat",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 800,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 100.0,
+     "examples": [
+      35.68,
+      6.89,
+      7.24,
+      2.35,
+      24.46
+     ],
+     "top_values": [],
+     "description": "percentage calculation fat. percentage of fat in total nutrient composition",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "pcnt_cal_prot",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 775,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 90.24,
+     "examples": [
+      7.53,
+      16.17,
+      14.3,
+      8.67,
+      2.73
+     ],
+     "top_values": [],
+     "description": "percentage calculation protein. percentage of protein in total nutrient composition",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "calories",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 864,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 892.04,
+     "examples": [
+      290.79,
+      141.01,
+      137.06,
+      81.7,
+      201.23
+     ],
+     "top_values": [],
+     "description": "the calories of the recipe",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "recipe_id"
+   ],
+   "sample_rows": [
+    {
+     "recipe_id": 214,
+     "protein": 5.47,
+     "carbo": 41.29,
+     "alcohol": 0.0,
+     "total_fat": 11.53,
+     "sat_fat": 2.21,
+     "cholestrl": 1.39,
+     "sodium": 260.78,
+     "iron": 0.81,
+     "vitamin_c": 8.89,
+     "vitamin_a": 586.2,
+     "fiber": 0.87,
+     "pcnt_cal_carb": 56.8,
+     "pcnt_cal_fat": 35.68,
+     "pcnt_cal_prot": 7.53,
+     "calories": 290.79
+    },
+    {
+     "recipe_id": 215,
+     "protein": 5.7,
+     "carbo": 23.75,
+     "alcohol": 1.93,
+     "total_fat": 1.08,
+     "sat_fat": 0.58,
+     "cholestrl": 3.48,
+     "sodium": 46.17,
+     "iron": 0.57,
+     "vitamin_c": 13.02,
+     "vitamin_a": 2738.24,
+     "fiber": 0.62,
+     "pcnt_cal_carb": 67.38,
+     "pcnt_cal_fat": 6.89,
+     "pcnt_cal_prot": 16.17,
+     "calories": 141.01
+    },
+    {
+     "recipe_id": 216,
+     "protein": 4.9,
+     "carbo": 26.88,
+     "alcohol": 0.0,
+     "total_fat": 1.1,
+     "sat_fat": 0.58,
+     "cholestrl": 3.46,
+     "sodium": 41.79,
+     "iron": 0.37,
+     "vitamin_c": 6.13,
+     "vitamin_a": 1521.1,
+     "fiber": 0.34,
+     "pcnt_cal_carb": 78.45,
+     "pcnt_cal_fat": 7.24,
+     "pcnt_cal_prot": 14.3,
+     "calories": 137.06
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Quantity",
+   "row_count": 5116,
+   "stats_rows": 5116,
+   "columns": [
+    {
+     "name": "quantity_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5116,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 6380,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "quantity id. the unique identifier for the quantity",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "recipe_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0047,
+     "distinct_count": 843,
+     "is_unique": false,
+     "min_value": 214,
+     "max_value": 1436,
+     "examples": [
+      214,
+      215,
+      216,
+      217,
+      218
+     ],
+     "top_values": [],
+     "description": "recipe id. the id of the recipe",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ingredient_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0047,
+     "distinct_count": 1103,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4502,
+     "examples": [
+      1613,
+      3334,
+      2222,
+      2797,
+      3567
+     ],
+     "top_values": [],
+     "description": "ingredient id. the id of the ingredient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "max_qty",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0047,
+     "distinct_count": 62,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 750.0,
+     "examples": [
+      2.0,
+      0.25,
+      0.5,
+      3.0,
+      0.67
+     ],
+     "top_values": [],
+     "description": "maximum quantity. the max quantity of the ingredient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "min_qty",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0047,
+     "distinct_count": 62,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 750.0,
+     "examples": [
+      2.0,
+      0.25,
+      0.5,
+      3.0,
+      0.67
+     ],
+     "top_values": [],
+     "description": "minimum quantity. the min quantity of the ingredient",
+     "value_description": "commonsense evidence: If max_qty equals to min_qty, it means that the ingredient must be rationed.",
+     "notes": []
+    },
+    {
+     "name": "unit",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0047,
+     "distinct_count": 46,
+     "is_unique": false,
+     "min_value": "10 oz. can(s)",
+     "max_value": "whole",
+     "examples": [
+      "cup(s)",
+      "teaspoon(s)",
+      "14 oz. can(s)",
+      "envelope(s)",
+      "tablespoon(s)"
+     ],
+     "top_values": [
+      [
+       "cup(s)",
+       1943
+      ],
+      [
+       "teaspoon(s)",
+       1227
+      ],
+      [
+       "tablespoon(s)",
+       930
+      ],
+      [
+       "pound(s)",
+       349
+      ],
+      [
+       "ounce(s)",
+       286
+      ],
+      [
+       "dash(es)",
+       48
+      ],
+      [
+       "clove(s)",
+       42
+      ],
+      [
+       "fl. ounce(s)",
+       37
+      ],
+      [
+       "10 oz. package(s)",
+       25
+      ],
+      [
+       "envelope(s)",
+       18
+      ],
+      [
+       "16 oz. can(s)",
+       16
+      ],
+      [
+       "8 oz. can(s)",
+       15
+      ],
+      [
+       "whole",
+       14
+      ],
+      [
+       "slice(s)",
+       14
+      ],
+      [
+       "quart(s)",
+       13
+      ],
+      [
+       "pint(s)",
+       10
+      ],
+      [
+       "pinch(es)",
+       10
+      ],
+      [
+       "head(s)",
+       9
+      ],
+      [
+       "packet(s)",
+       7
+      ],
+      [
+       "bunch(es)",
+       7
+      ],
+      [
+       "8 oz. package(s)",
+       7
+      ],
+      [
+       "package(s)",
+       5
+      ],
+      [
+       "28 oz. can(s)",
+       5
+      ],
+      [
+       "12 oz. can(s)",
+       5
+      ],
+      [
+       "drop(s)",
+       4
+      ],
+      [
+       "4 oz. can(s)",
+       4
+      ],
+      [
+       "16 oz. package(s)",
+       4
+      ],
+      [
+       "sprig(s)",
+       3
+      ],
+      [
+       "scoop(s)",
+       3
+      ],
+      [
+       "loaf",
+       3
+      ],
+      [
+       "6 oz. jar(s)",
+       3
+      ],
+      [
+       "6 oz. can(s)",
+       3
+      ],
+      [
+       "21 oz. can(s)",
+       3
+      ],
+      [
+       "piece(s)",
+       2
+      ],
+      [
+       "milliliter(s)",
+       2
+      ],
+      [
+       "9 oz. package(s)",
+       2
+      ],
+      [
+       "6 oz. package(s)",
+       2
+      ],
+      [
+       "3 oz. package(s)",
+       2
+      ],
+      [
+       "14 oz. can(s)",
+       2
+      ],
+      [
+       "12 oz. package(s)",
+       2
+      ],
+      [
+       "stick(s)",
+       1
+      ],
+      [
+       "stalk(s)",
+       1
+      ],
+      [
+       "gram(s)",
+       1
+      ],
+      [
+       "6 ounce(s)",
+       1
+      ],
+      [
+       "16 oz. jar(s)",
+       1
+      ],
+      [
+       "10 oz. can(s)",
+       1
+      ]
+     ],
+     "description": "the unit of the ingredient",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "preparation",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.6282,
+     "distinct_count": 567,
+     "is_unique": false,
+     "min_value": "(1), scored",
+     "max_value": "yam-type, peeled, sliced 1/4-inch thick",
+     "examples": [
+      "melted",
+      "or water",
+      "divided",
+      "crushed",
+      "sliced"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "commonsense evidence: 'No data' means the ingredient doesn't need preprocessing.",
+     "notes": [
+      "63% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "optional",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0047,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "TRUE",
+     "examples": [
+      "FALSE"
+     ],
+     "top_values": [
+      [
+       "FALSE",
+       5046
+      ],
+      [
+       "TRUE",
+       46
+      ]
+     ],
+     "description": "whether the ingredient is optional",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "quantity_id"
+   ],
+   "sample_rows": [
+    {
+     "quantity_id": 1,
+     "recipe_id": 214,
+     "ingredient_id": 1613,
+     "max_qty": 2.0,
+     "min_qty": 2.0,
+     "unit": "cup(s)",
+     "preparation": null,
+     "optional": "FALSE"
+    },
+    {
+     "quantity_id": 2,
+     "recipe_id": 214,
+     "ingredient_id": 3334,
+     "max_qty": 0.25,
+     "min_qty": 0.25,
+     "unit": "cup(s)",
+     "preparation": null,
+     "optional": "FALSE"
+    },
+    {
+     "quantity_id": 3,
+     "recipe_id": 214,
+     "ingredient_id": 2222,
+     "max_qty": 0.5,
+     "min_qty": 0.5,
+     "unit": "cup(s)",
+     "preparation": "melted",
+     "optional": "FALSE"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Recipe",
+   "row_count": 1031,
+   "stats_rows": 1031,
+   "columns": [
+    {
+     "name": "recipe_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1031,
+     "is_unique": true,
+     "min_value": 214,
+     "max_value": 1589,
+     "examples": [
+      214,
+      215,
+      216,
+      217,
+      218
+     ],
+     "top_values": [],
+     "description": "recipe id. the unique identifier for the recipe",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1484,
+     "distinct_count": 878,
+     "is_unique": true,
+     "min_value": " -Dried, Unsalted Pecan Halves- ",
+     "max_value": "Zucchini",
+     "examples": [
+      "Raspberry Chiffon Pie",
+      "Apricot Yogurt Parfaits",
+      "Fresh Apricot Bavarian",
+      "Fresh Peaches",
+      "Canned Cherry Crisp"
+     ],
+     "top_values": [],
+     "description": "the title of the recipe",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "subtitle",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9661,
+     "distinct_count": 35,
+     "is_unique": true,
+     "min_value": "(Dinner Party Bake or Barbecue)",
+     "max_value": "with Zinfandel Sauce",
+     "examples": [
+      "with Banana Cream Whip",
+      "a La Creme",
+      "with Raspberry Yogurt Mint Sauce",
+      "with Apricot Sauce",
+      "with Orange Custard Sauce"
+     ],
+     "top_values": [
+      [
+       "with Zinfandel Sauce",
+       1
+      ],
+      [
+       "with Yogurt Herb Sauce",
+       1
+      ],
+      [
+       "with Yogurt",
+       1
+      ],
+      [
+       "with Savory Carrots and Prunes",
+       1
+      ],
+      [
+       "with Salmon or Tuna",
+       1
+      ],
+      [
+       "with Root Vegetables and Sherry",
+       1
+      ],
+      [
+       "with Raspberry Yogurt Sauce",
+       1
+      ],
+      [
+       "with Raspberry Yogurt Mint Sauce",
+       1
+      ],
+      [
+       "with Pine Nuts",
+       1
+      ],
+      [
+       "with Pecans",
+       1
+      ],
+      [
+       "with Pears",
+       1
+      ],
+      [
+       "with Parsley and Garlic",
+       1
+      ],
+      [
+       "with Parma Ham and Porcini",
+       1
+      ],
+      [
+       "with Orange Sauce",
+       1
+      ],
+      [
+       "with Orange Custard Sauce",
+       1
+      ],
+      [
+       "with Mango Basil Relish",
+       1
+      ],
+      [
+       "with Lemon and Parmesan",
+       1
+      ],
+      [
+       "with Honey-Lime Marinade",
+       1
+      ],
+      [
+       "with Flour Tortillas",
+       1
+      ],
+      [
+       "with Creamy Mustard Sauce and Tomatoes",
+       1
+      ],
+      [
+       "with California Avocado",
+       1
+      ],
+      [
+       "with Banana Cream Whip",
+       1
+      ],
+      [
+       "with Artichoke Hearts",
+       1
+      ],
+      [
+       "with Apricot Sauce",
+       1
+      ],
+      [
+       "and Orange-Honey Sauce",
+       1
+      ],
+      [
+       "a La Creme",
+       1
+      ],
+      [
+       "Vegetarian Chili",
+       1
+      ],
+      [
+       "Sotsuppe (Scandinavian)",
+       1
+      ],
+      [
+       "Oriental Ginger-Walnut Dressing",
+       1
+      ],
+      [
+       "Mix-In-The-Pan Chocolate Snack Cake",
+       1
+      ],
+      [
+       "Kahlua Fantasy Chocolate Cheesecake",
+       1
+      ],
+      [
+       "Herbs and Orange Grilled Chicken",
+       1
+      ],
+      [
+       "Chicken Pasta Salad",
+       1
+      ],
+      [
+       "Braised Beef Rump Roast",
+       1
+      ],
+      [
+       "(Dinner Party Bake or Barbecue)",
+       1
+      ]
+     ],
+     "description": "the subtitle of the recipe",
+     "value_description": "",
+     "notes": [
+      "97% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "servings",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1484,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 102,
+     "examples": [
+      10,
+      4,
+      8,
+      6,
+      12
+     ],
+     "top_values": [
+      [
+       4,
+       460
+      ],
+      [
+       6,
+       185
+      ],
+      [
+       8,
+       103
+      ],
+      [
+       2,
+       27
+      ],
+      [
+       12,
+       23
+      ],
+      [
+       10,
+       14
+      ],
+      [
+       1,
+       13
+      ],
+      [
+       3,
+       9
+      ],
+      [
+       16,
+       8
+      ],
+      [
+       14,
+       5
+      ],
+      [
+       36,
+       4
+      ],
+      [
+       20,
+       4
+      ],
+      [
+       5,
+       4
+      ],
+      [
+       32,
+       3
+      ],
+      [
+       18,
+       3
+      ],
+      [
+       15,
+       3
+      ],
+      [
+       9,
+       3
+      ],
+      [
+       48,
+       2
+      ],
+      [
+       24,
+       2
+      ],
+      [
+       102,
+       1
+      ],
+      [
+       96,
+       1
+      ],
+      [
+       7,
+       1
+      ]
+     ],
+     "description": "the number of people the recipe can serve",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "yield_unit",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.8846,
+     "distinct_count": 57,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "ounce",
+     "examples": [
+      "1 pie",
+      "8 tarts",
+      "2 quarts",
+      "10 popsicles",
+      "1 cake"
+     ],
+     "top_values": [],
+     "description": "yield unit. the unit of the yield for the recipe",
+     "value_description": "",
+     "notes": [
+      "88% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "prep_min",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1484,
+     "distinct_count": 42,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1455,
+     "examples": [
+      20,
+      5,
+      10,
+      6,
+      15
+     ],
+     "top_values": [
+      [
+       10,
+       201
+      ],
+      [
+       15,
+       194
+      ],
+      [
+       20,
+       132
+      ],
+      [
+       5,
+       87
+      ],
+      [
+       3,
+       82
+      ],
+      [
+       2,
+       38
+      ],
+      [
+       30,
+       31
+      ],
+      [
+       0,
+       20
+      ],
+      [
+       25,
+       19
+      ],
+      [
+       240,
+       15
+      ],
+      [
+       40,
+       7
+      ],
+      [
+       140,
+       4
+      ],
+      [
+       60,
+       4
+      ],
+      [
+       720,
+       3
+      ],
+      [
+       135,
+       3
+      ],
+      [
+       90,
+       3
+      ],
+      [
+       35,
+       3
+      ],
+      [
+       370,
+       2
+      ],
+      [
+       255,
+       2
+      ],
+      [
+       250,
+       2
+      ],
+      [
+       150,
+       2
+      ],
+      [
+       75,
+       2
+      ],
+      [
+       50,
+       2
+      ],
+      [
+       45,
+       2
+      ],
+      [
+       1455,
+       1
+      ],
+      [
+       1440,
+       1
+      ],
+      [
+       783,
+       1
+      ],
+      [
+       735,
+       1
+      ],
+      [
+       380,
+       1
+      ],
+      [
+       367,
+       1
+      ],
+      [
+       155,
+       1
+      ],
+      [
+       130,
+       1
+      ],
+      [
+       120,
+       1
+      ],
+      [
+       105,
+       1
+      ],
+      [
+       85,
+       1
+      ],
+      [
+       80,
+       1
+      ],
+      [
+       70,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the preparation minute of the recipe",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "cook_min",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1484,
+     "distinct_count": 62,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 900,
+     "examples": [
+      8,
+      2,
+      13,
+      0,
+      5
+     ],
+     "top_values": [],
+     "description": "the cooked minute of the recipe",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "stnd_min",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1484,
+     "distinct_count": 38,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 2880,
+     "examples": [
+      305,
+      65,
+      0,
+      60,
+      240
+     ],
+     "top_values": [
+      [
+       0,
+       692
+      ],
+      [
+       60,
+       39
+      ],
+      [
+       120,
+       25
+      ],
+      [
+       30,
+       19
+      ],
+      [
+       5,
+       14
+      ],
+      [
+       10,
+       12
+      ],
+      [
+       240,
+       11
+      ],
+      [
+       180,
+       11
+      ],
+      [
+       20,
+       6
+      ],
+      [
+       15,
+       6
+      ],
+      [
+       90,
+       5
+      ],
+      [
+       720,
+       4
+      ],
+      [
+       270,
+       3
+      ],
+      [
+       80,
+       3
+      ],
+      [
+       480,
+       2
+      ],
+      [
+       105,
+       2
+      ],
+      [
+       45,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       2880,
+       1
+      ],
+      [
+       2100,
+       1
+      ],
+      [
+       1440,
+       1
+      ],
+      [
+       420,
+       1
+      ],
+      [
+       360,
+       1
+      ],
+      [
+       335,
+       1
+      ],
+      [
+       305,
+       1
+      ],
+      [
+       300,
+       1
+      ],
+      [
+       285,
+       1
+      ],
+      [
+       275,
+       1
+      ],
+      [
+       255,
+       1
+      ],
+      [
+       210,
+       1
+      ],
+      [
+       205,
+       1
+      ],
+      [
+       155,
+       1
+      ],
+      [
+       145,
+       1
+      ],
+      [
+       135,
+       1
+      ],
+      [
+       65,
+       1
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       2,
+       1
+      ]
+     ],
+     "description": "the stand minute of the price",
+     "value_description": "commonsense evidence: The stand minute stands for the time to take the dish away from the heat source. \nthe total time of the recipe = prep_min + cook_min + stnd_min",
+     "notes": []
+    },
+    {
+     "name": "source",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.3802,
+     "distinct_count": 109,
+     "is_unique": false,
+     "min_value": " General Mills, Inc. ",
+     "max_value": "Wisconsin Milk Marketing Board",
+     "examples": [
+      "The California Tree Fruit Agreement",
+      "Produce for Better Health Foundation and 5 a Day",
+      "The California Apricot Advisory Board",
+      "The Cherry Marketing Institute",
+      "North American Blueberry Council"
+     ],
+     "top_values": [],
+     "description": "the source of the recipe",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "intro",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.6819,
+     "distinct_count": 328,
+     "is_unique": true,
+     "min_value": "A Southern side dish that's always delicious.",
+     "max_value": "Your microwave turns a can of cherry pie filling into a quic...",
+     "examples": [
+      "Serve in stemmed glasses and top with sliced apricots for el...",
+      "For a quick, low-cal dessert, serve this on other sliced fru...",
+      "Your microwave turns a can of cherry pie filling into a quic...",
+      "No one could ever guess that these tasty tarts are low in ca...",
+      "Cholesterol-free, lowfat and refreshing."
+     ],
+     "top_values": [],
+     "description": "the introduction of the recipe",
+     "value_description": "",
+     "notes": [
+      "68% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "directions",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.2105,
+     "distinct_count": 776,
+     "is_unique": false,
+     "min_value": "Alternate fish and pear cubes on skewers. In small saucepan,...",
+     "max_value": "You may use any variety of cooked or canned (one 16 ounce ca...",
+     "examples": [
+      "For crust, preheat oven to 375 degrees F.\nIn lightly greased...",
+      "Drain canned apricots, pour 1/4 cup of the juice into saucep...",
+      "Drop apricots into boiling water to cover. Return to boil an...",
+      "In a small bowl, beat egg white until foamy. Add banana, sug...",
+      "Pour cherry pie filling into an 8-inch, round microwave-safe..."
+     ],
+     "top_values": [],
+     "description": "the directions of the recipe",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "recipe_id"
+   ],
+   "sample_rows": [
+    {
+     "recipe_id": 214,
+     "title": "Raspberry Chiffon Pie",
+     "subtitle": null,
+     "servings": 10,
+     "yield_unit": "1 pie",
+     "prep_min": 20,
+     "cook_min": 8,
+     "stnd_min": 305,
+     "source": "The California Tree Fruit Agreement",
+     "intro": null,
+     "directions": "For crust, preheat oven to 375 degrees F.\nIn lightly greased..."
+    },
+    {
+     "recipe_id": 215,
+     "title": "Apricot Yogurt Parfaits",
+     "subtitle": null,
+     "servings": 4,
+     "yield_unit": null,
+     "prep_min": 5,
+     "cook_min": 2,
+     "stnd_min": 65,
+     "source": "Produce for Better Health Foundation and 5 a Day",
+     "intro": null,
+     "directions": "Drain canned apricots, pour 1/4 cup of the juice into saucep..."
+    },
+    {
+     "recipe_id": 216,
+     "title": "Fresh Apricot Bavarian",
+     "subtitle": null,
+     "servings": 8,
+     "yield_unit": null,
+     "prep_min": 5,
+     "cook_min": 13,
+     "stnd_min": 0,
+     "source": "The California Apricot Advisory Board",
+     "intro": "Serve in stemmed glasses and top with sliced apricots for el...",
+     "directions": "Drop apricots into boiling water to cover. Return to boil an..."
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "Nutrition",
+   "from_column": "recipe_id",
+   "to_table": "Recipe",
+   "to_column": "recipe_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Quantity",
+   "from_column": "recipe_id",
+   "to_table": "Nutrition",
+   "to_column": "recipe_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Quantity",
+   "from_column": "ingredient_id",
+   "to_table": "Ingredient",
+   "to_column": "ingredient_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Quantity",
+   "from_column": "recipe_id",
+   "to_table": "Recipe",
+   "to_column": "recipe_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

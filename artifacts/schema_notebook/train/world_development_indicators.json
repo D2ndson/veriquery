@@ -1,0 +1,3116 @@
+{
+ "db_id": "world_development_indicators",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/world_development_indicators/world_development_indicators.sqlite",
+ "fingerprint": "2451682304-1793993071541355468-v1.0",
+ "created_at": "2026-11-06T19:25:54+00:00",
+ "profile_seconds": 28.386,
+ "tables": [
+  {
+   "name": "Country",
+   "row_count": 247,
+   "stats_rows": 247,
+   "columns": [
+    {
+     "name": "CountryCode",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 247,
+     "is_unique": true,
+     "min_value": "ABW",
+     "max_value": "ZWE",
+     "examples": [
+      "AFG",
+      "ALB",
+      "DZA",
+      "ASM",
+      "ADO"
+     ],
+     "top_values": [],
+     "description": "Country Code. unique code identifying countries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ShortName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 247,
+     "is_unique": true,
+     "min_value": "Afghanistan",
+     "max_value": "Zimbabwe",
+     "examples": [
+      "Afghanistan",
+      "Albania",
+      "Algeria",
+      "American Samoa",
+      "Andorra"
+     ],
+     "top_values": [],
+     "description": "Short names of countries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "TableName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 247,
+     "is_unique": true,
+     "min_value": "Afghanistan",
+     "max_value": "Zimbabwe",
+     "examples": [
+      "Afghanistan",
+      "Albania",
+      "Algeria",
+      "American Samoa",
+      "Andorra"
+     ],
+     "top_values": [],
+     "description": "table names of countries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LongName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 247,
+     "is_unique": true,
+     "min_value": "American Samoa",
+     "max_value": "World",
+     "examples": [
+      "Islamic State of Afghanistan",
+      "Republic of Albania",
+      "People's Democratic Republic of Algeria",
+      "American Samoa",
+      "Principality of Andorra"
+     ],
+     "top_values": [],
+     "description": "Long Name. long or full name of countries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Alpha2Code",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 245,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "ZW",
+     "examples": [
+      "AF",
+      "AL",
+      "DZ",
+      "AS",
+      "AD"
+     ],
+     "top_values": [],
+     "description": "Alpha to Code. 2 digit code of countries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CurrencyUnit",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 150,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Yemeni rial",
+     "examples": [
+      "Afghan afghani",
+      "Albanian lek",
+      "Algerian dinar",
+      "U.S. dollar",
+      "Euro"
+     ],
+     "top_values": [],
+     "description": "Currency Unit used in this country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "SpecialNotes",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 150,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "World aggregate.",
+     "examples": [
+      "Fiscal year end: March 20; reporting period for national acc...",
+      "",
+      "April 2013 database update: Based on IMF data, national acco...",
+      "April 2012 database update: Based on official government sta...",
+      "Arab World aggregate. Arab World is composed of members of t..."
+     ],
+     "top_values": [],
+     "description": "Special Notes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Sub-Saharan Africa",
+     "examples": [
+      "South Asia",
+      "Europe & Central Asia",
+      "Middle East & North Africa",
+      "East Asia & Pacific",
+      "Sub-Saharan Africa"
+     ],
+     "top_values": [
+      [
+       "Europe & Central Asia",
+       57
+      ],
+      [
+       "Sub-Saharan Africa",
+       48
+      ],
+      [
+       "Latin America & Caribbean",
+       41
+      ],
+      [
+       "East Asia & Pacific",
+       36
+      ],
+      [
+       "",
+       33
+      ],
+      [
+       "Middle East & North Africa",
+       21
+      ],
+      [
+       "South Asia",
+       8
+      ],
+      [
+       "North America",
+       3
+      ]
+     ],
+     "description": "region that country belongs to",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "IncomeGroup",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Upper middle income",
+     "examples": [
+      "Low income",
+      "Upper middle income",
+      "High income: nonOECD",
+      "",
+      "Lower middle income"
+     ],
+     "top_values": [
+      [
+       "Upper middle income",
+       53
+      ],
+      [
+       "Lower middle income",
+       51
+      ],
+      [
+       "High income: nonOECD",
+       47
+      ],
+      [
+       "",
+       33
+      ],
+      [
+       "High income: OECD",
+       32
+      ],
+      [
+       "Low income",
+       31
+      ]
+     ],
+     "description": "Income Group. income level of countries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Wb2Code",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 247,
+     "is_unique": true,
+     "min_value": "",
+     "max_value": "ZW",
+     "examples": [
+      "AF",
+      "AL",
+      "DZ",
+      "AS",
+      "AD"
+     ],
+     "top_values": [],
+     "description": "world bank to code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "NationalAccountsBaseYear",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 42,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Original chained constant price data are rescaled.",
+     "examples": [
+      "2002/03",
+      "Original chained constant price data are rescaled.",
+      "1980",
+      "",
+      "2000"
+     ],
+     "top_values": [
+      [
+       "Original chained constant price data are rescaled.",
+       49
+      ],
+      [
+       "",
+       42
+      ],
+      [
+       "2006",
+       19
+      ],
+      [
+       "2000",
+       19
+      ],
+      [
+       "2010",
+       16
+      ],
+      [
+       "2007",
+       14
+      ],
+      [
+       "2005",
+       11
+      ],
+      [
+       "1990",
+       10
+      ],
+      [
+       "2009",
+       6
+      ],
+      [
+       "2004",
+       6
+      ],
+      [
+       "2003",
+       5
+      ],
+      [
+       "2002",
+       4
+      ],
+      [
+       "2008",
+       3
+      ],
+      [
+       "2005/06",
+       3
+      ],
+      [
+       "2001",
+       3
+      ],
+      [
+       "1997",
+       3
+      ],
+      [
+       "2011",
+       2
+      ],
+      [
+       "2010/11",
+       2
+      ],
+      [
+       "2004/05",
+       2
+      ],
+      [
+       "2003/04",
+       2
+      ],
+      [
+       "1999",
+       2
+      ],
+      [
+       "1998",
+       2
+      ],
+      [
+       "1995",
+       2
+      ],
+      [
+       "1994",
+       2
+      ],
+      [
+       "2013",
+       1
+      ],
+      [
+       "2012",
+       1
+      ],
+      [
+       "2011/12",
+       1
+      ],
+      [
+       "2009/10",
+       1
+      ],
+      [
+       "2008/09",
+       1
+      ],
+      [
+       "2002/03",
+       1
+      ],
+      [
+       "2001/02",
+       1
+      ],
+      [
+       "2000/01",
+       1
+      ],
+      [
+       "1991",
+       1
+      ],
+      [
+       "1987",
+       1
+      ],
+      [
+       "1986/87",
+       1
+      ],
+      [
+       "1985",
+       1
+      ],
+      [
+       "1984",
+       1
+      ],
+      [
+       "1982",
+       1
+      ],
+      [
+       "1981/82. Reporting period switch from fiscal year to calenda...",
+       1
+      ],
+      [
+       "1980",
+       1
+      ],
+      [
+       "1974",
+       1
+      ],
+      [
+       "1953/54",
+       1
+      ]
+     ],
+     "description": "National Accounts Base Year. the year used as the base period for constant price calculations in the country's national accounts",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "NationalAccountsReferenceYear",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "2013/14",
+     "examples": [
+      "",
+      "1996",
+      "2013/14",
+      "2010",
+      "2000"
+     ],
+     "top_values": [
+      [
+       "",
+       193
+      ],
+      [
+       "2010",
+       34
+      ],
+      [
+       "2005",
+       5
+      ],
+      [
+       "1996",
+       5
+      ],
+      [
+       "2000",
+       4
+      ],
+      [
+       "2013/14",
+       1
+      ],
+      [
+       "2013",
+       1
+      ],
+      [
+       "2007",
+       1
+      ],
+      [
+       "2003",
+       1
+      ],
+      [
+       "1997",
+       1
+      ],
+      [
+       "1995",
+       1
+      ]
+     ],
+     "description": "National Accounts Reference Year",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "SnaPriceValuation",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Value added at producer prices (VAP)",
+     "examples": [
+      "Value added at basic prices (VAB)",
+      "",
+      "Value added at producer prices (VAP)"
+     ],
+     "top_values": [
+      [
+       "Value added at basic prices (VAB)",
+       169
+      ],
+      [
+       "",
+       49
+      ],
+      [
+       "Value added at producer prices (VAP)",
+       29
+      ]
+     ],
+     "description": "SNA Price Valuation",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LendingCategory",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "IDA",
+     "examples": [
+      "IDA",
+      "IBRD",
+      "",
+      "Blend"
+     ],
+     "top_values": [
+      [
+       "",
+       103
+      ],
+      [
+       "IBRD",
+       67
+      ],
+      [
+       "IDA",
+       59
+      ],
+      [
+       "Blend",
+       18
+      ]
+     ],
+     "description": "Lending category",
+     "value_description": "• IDA: International Development Associations: (IDA) is the part of the World Bank that helps the world's poorest countries.\n• IBRD: The International Bank for Reconstruction and Development (IBRD) is a global development cooperative owned by 189 member countries.\n• Blend: Blend is the cloud banking infrastructure powering billions of dollars in financial transactions every day.",
+     "notes": []
+    },
+    {
+     "name": "OtherGroups",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "HIPC",
+     "examples": [
+      "HIPC",
+      "",
+      "Euro area"
+     ],
+     "top_values": [
+      [
+       "",
+       188
+      ],
+      [
+       "HIPC",
+       40
+      ],
+      [
+       "Euro area",
+       19
+      ]
+     ],
+     "description": "other groups",
+     "value_description": "• HIPC: Heavily Indebted Poor Countries\n• Euro Area: The euro area consists of those Member States of the European Union that have adopted the euro as their currency.",
+     "notes": []
+    },
+    {
+     "name": "SystemOfNationalAccounts",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Country uses the 2008 System of National Accounts methodolog...",
+     "examples": [
+      "Country uses the 1993 System of National Accounts methodolog...",
+      "Country uses the 1968 System of National Accounts methodolog...",
+      "",
+      "Country uses the 2008 System of National Accounts methodolog..."
+     ],
+     "top_values": [
+      [
+       "Country uses the 1993 System of National Accounts methodolog...",
+       130
+      ],
+      [
+       "Country uses the 2008 System of National Accounts methodolog...",
+       45
+      ],
+      [
+       "Country uses the 1968 System of National Accounts methodolog...",
+       39
+      ],
+      [
+       "",
+       33
+      ]
+     ],
+     "description": "System Of National Accounts",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "AlternativeConversionFactor",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 33,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "19992001",
+     "examples": [
+      "",
+      "199196",
+      "197184",
+      "199095",
+      "199295"
+     ],
+     "top_values": [
+      [
+       "",
+       200
+      ],
+      [
+       "199095",
+       8
+      ],
+      [
+       "198795",
+       5
+      ],
+      [
+       "1993",
+       3
+      ],
+      [
+       "199295",
+       2
+      ],
+      [
+       "1991",
+       2
+      ],
+      [
+       "19992001",
+       1
+      ],
+      [
+       "1997, 2004",
+       1
+      ],
+      [
+       "1994",
+       1
+      ],
+      [
+       "199294",
+       1
+      ],
+      [
+       "199293",
+       1
+      ],
+      [
+       "1992",
+       1
+      ],
+      [
+       "199196",
+       1
+      ],
+      [
+       "1991, 1998",
+       1
+      ],
+      [
+       "199096",
+       1
+      ],
+      [
+       "199092",
+       1
+      ],
+      [
+       "1989",
+       1
+      ],
+      [
+       "198889",
+       1
+      ],
+      [
+       "198795, 19972007",
+       1
+      ],
+      [
+       "198789, 1992",
+       1
+      ],
+      [
+       "1986",
+       1
+      ],
+      [
+       "198590",
+       1
+      ],
+      [
+       "19802002",
+       1
+      ],
+      [
+       "197893",
+       1
+      ],
+      [
+       "197889, 199192",
+       1
+      ],
+      [
+       "197790",
+       1
+      ],
+      [
+       "197387",
+       1
+      ],
+      [
+       "197198",
+       1
+      ],
+      [
+       "197184",
+       1
+      ],
+      [
+       "19702010",
+       1
+      ],
+      [
+       "196595",
+       1
+      ],
+      [
+       "196584",
+       1
+      ],
+      [
+       "196085",
+       1
+      ]
+     ],
+     "description": "Alternative conversion factor is the underlying annual exchange rate used for the World Bank Atlas method",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "PppSurveyYear",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Rolling",
+     "examples": [
+      "",
+      "Rolling",
+      "2011",
+      "2011 (household consumption only)."
+     ],
+     "top_values": [
+      [
+       "2011",
+       139
+      ],
+      [
+       "",
+       56
+      ],
+      [
+       "Rolling",
+       37
+      ],
+      [
+       "2011 (household consumption only).",
+       15
+      ]
+     ],
+     "description": "purchasing power parity survey year",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "BalanceOfPaymentsManualInUse",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "IMF Balance of Payments Manual, 6th edition.",
+     "examples": [
+      "",
+      "IMF Balance of Payments Manual, 6th edition."
+     ],
+     "top_values": [
+      [
+       "IMF Balance of Payments Manual, 6th edition.",
+       181
+      ],
+      [
+       "",
+       66
+      ]
+     ],
+     "description": "Balance Of Payments Manual In Use",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ExternalDebtReportingStatus",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Preliminary",
+     "examples": [
+      "Actual",
+      "",
+      "Preliminary",
+      "Estimate"
+     ],
+     "top_values": [
+      [
+       "",
+       123
+      ],
+      [
+       "Actual",
+       106
+      ],
+      [
+       "Estimate",
+       13
+      ],
+      [
+       "Preliminary",
+       5
+      ]
+     ],
+     "description": "External Debt Reporting Status",
+     "value_description": "• Actual\n• Preliminary\n• Estimate\ncommonsense reasoning:\nIf ExternalDebtReportingStatus='Actual', it means this external debt reporting is real and actual, and finished\nif 'Estimate', it means external debt reporting is finished by estimation.\nif 'preliminary', it means this external debt reporting is not finished",
+     "notes": []
+    },
+    {
+     "name": "SystemOfTrade",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Special trade system",
+     "examples": [
+      "General trade system",
+      "Special trade system",
+      ""
+     ],
+     "top_values": [
+      [
+       "General trade system",
+       106
+      ],
+      [
+       "Special trade system",
+       94
+      ],
+      [
+       "",
+       47
+      ]
+     ],
+     "description": "System Of Trade",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "GovernmentAccountingConcept",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Consolidated central government",
+     "examples": [
+      "Consolidated central government",
+      "Budgetary central government",
+      ""
+     ],
+     "top_values": [
+      [
+       "Consolidated central government",
+       95
+      ],
+      [
+       "",
+       86
+      ],
+      [
+       "Budgetary central government",
+       66
+      ]
+     ],
+     "description": "Government Accounting Concept",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ImfDataDisseminationStandard",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Special Data Dissemination Standard (SDDS)",
+     "examples": [
+      "General Data Dissemination System (GDDS)",
+      "",
+      "Special Data Dissemination Standard (SDDS)"
+     ],
+     "top_values": [
+      [
+       "General Data Dissemination System (GDDS)",
+       112
+      ],
+      [
+       "Special Data Dissemination Standard (SDDS)",
+       71
+      ],
+      [
+       "",
+       64
+      ]
+     ],
+     "description": "International Monetory Fund Data Dissemination Standard. IMF Standards for Data Dissemination",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LatestPopulationCensus",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 26,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Guernsey: 2009; Jersey: 2011.",
+     "examples": [
+      "1979",
+      "2011",
+      "2008",
+      "2010",
+      "2011. Population data compiled from administrative registers..."
+     ],
+     "top_values": [
+      [
+       "2011",
+       61
+      ],
+      [
+       "2010",
+       49
+      ],
+      [
+       "",
+       34
+      ],
+      [
+       "2012",
+       17
+      ],
+      [
+       "2009",
+       14
+      ],
+      [
+       "2014",
+       9
+      ],
+      [
+       "2008",
+       9
+      ],
+      [
+       "2007",
+       9
+      ],
+      [
+       "2013",
+       8
+      ],
+      [
+       "2006",
+       7
+      ],
+      [
+       "2005",
+       4
+      ],
+      [
+       "2004",
+       4
+      ],
+      [
+       "2002",
+       4
+      ],
+      [
+       "2011. Population data compiled from administrative registers...",
+       3
+      ],
+      [
+       "2003",
+       3
+      ],
+      [
+       "1984",
+       2
+      ],
+      [
+       "Guernsey: 2009; Jersey: 2011.",
+       1
+      ],
+      [
+       "2006. Rolling census based on continuous sample survey.",
+       1
+      ],
+      [
+       "2001",
+       1
+      ],
+      [
+       "1998",
+       1
+      ],
+      [
+       "1997",
+       1
+      ],
+      [
+       "1993",
+       1
+      ],
+      [
+       "1989",
+       1
+      ],
+      [
+       "1987",
+       1
+      ],
+      [
+       "1979",
+       1
+      ],
+      [
+       "1943",
+       1
+      ]
+     ],
+     "description": "Latest Population Census",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LatestHouseholdSurvey",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 65,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "World Health Survey (WHS), 2003",
+     "examples": [
+      "Multiple Indicator Cluster Survey (MICS), 2010/11",
+      "Demographic and Health Survey (DHS), 2008/09",
+      "Multiple Indicator Cluster Survey (MICS), 2012",
+      "",
+      "Malaria Indicator Survey (MIS), 2011"
+     ],
+     "top_values": [],
+     "description": "Latest Household Survey",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "SourceOfMostRecentIncomeAndExpenditureData",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 65,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Priority survey (PS), 2011",
+     "examples": [
+      "Integrated household survey (IHS), 2008",
+      "Living Standards Measurement Study Survey (LSMS), 2011/12",
+      "Integrated household survey (IHS), 1995",
+      "",
+      "Integrated household survey (IHS), 2008/09"
+     ],
+     "top_values": [],
+     "description": "Source Of Most Recent Income And Expenditure Data",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "VitalRegistrationComplete",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Yes. Vital registration for Guernsey and Jersey.",
+     "examples": [
+      "",
+      "Yes",
+      "Yes. Vital registration for Guernsey and Jersey."
+     ],
+     "top_values": [
+      [
+       "",
+       135
+      ],
+      [
+       "Yes",
+       111
+      ],
+      [
+       "Yes. Vital registration for Guernsey and Jersey.",
+       1
+      ]
+     ],
+     "description": "Vital Registration Complete",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LatestAgriculturalCensus",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 36,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "2015",
+     "examples": [
+      "2013/14",
+      "2012",
+      "",
+      "2007",
+      "2015"
+     ],
+     "top_values": [
+      [
+       "",
+       105
+      ],
+      [
+       "2010",
+       36
+      ],
+      [
+       "2007",
+       16
+      ],
+      [
+       "2013",
+       13
+      ],
+      [
+       "2012",
+       10
+      ],
+      [
+       "2011",
+       9
+      ],
+      [
+       "2014",
+       7
+      ],
+      [
+       "2009",
+       5
+      ],
+      [
+       "2008",
+       5
+      ],
+      [
+       "2013/ 2014",
+       4
+      ],
+      [
+       "2015",
+       3
+      ],
+      [
+       "2010. Population and Housing Census.",
+       3
+      ],
+      [
+       "2013/14",
+       2
+      ],
+      [
+       "2012/13",
+       2
+      ],
+      [
+       "2011/2012",
+       2
+      ],
+      [
+       "2011/12",
+       2
+      ],
+      [
+       "2011/ 2012",
+       2
+      ],
+      [
+       "2011. Population and Housing Census.",
+       2
+      ],
+      [
+       "2008/ 2009",
+       2
+      ],
+      [
+       "2014/ 2015",
+       1
+      ],
+      [
+       "2013/2014",
+       1
+      ],
+      [
+       "2013/15",
+       1
+      ],
+      [
+       "2012/ 2013",
+       1
+      ],
+      [
+       "2012 /2013",
+       1
+      ],
+      [
+       "2010/11",
+       1
+      ],
+      [
+       "2010/ 2011",
+       1
+      ],
+      [
+       "2009/2010",
+       1
+      ],
+      [
+       "2009/ 2010",
+       1
+      ],
+      [
+       "2009. Population and Housing Census.",
+       1
+      ],
+      [
+       "2008. Population and Housing Census.",
+       1
+      ],
+      [
+       "2007/2008",
+       1
+      ],
+      [
+       "2007/08",
+       1
+      ],
+      [
+       "2007. Population and Housing Census.",
+       1
+      ],
+      [
+       "2006/ 2007",
+       1
+      ],
+      [
+       "2006",
+       1
+      ],
+      [
+       "2004-2008",
+       1
+      ]
+     ],
+     "description": "Latest Agricultural Census",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LatestIndustrialData",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.5425,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": 2001,
+     "max_value": 2011,
+     "examples": [
+      2011,
+      2010,
+      2002,
+      2008,
+      2007
+     ],
+     "top_values": [
+      [
+       2010,
+       45
+      ],
+      [
+       2011,
+       34
+      ],
+      [
+       2009,
+       7
+      ],
+      [
+       2008,
+       6
+      ],
+      [
+       2006,
+       6
+      ],
+      [
+       2007,
+       3
+      ],
+      [
+       2004,
+       3
+      ],
+      [
+       2002,
+       3
+      ],
+      [
+       2001,
+       3
+      ],
+      [
+       2005,
+       2
+      ],
+      [
+       2003,
+       1
+      ]
+     ],
+     "description": "Latest Industrial Data",
+     "value_description": "",
+     "notes": [
+      "54% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "LatestTradeData",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.247,
+     "distinct_count": 14,
+     "is_unique": false,
+     "min_value": 1995,
+     "max_value": 2013,
+     "examples": [
+      2013,
+      2006,
+      2012,
+      2011,
+      2007
+     ],
+     "top_values": [
+      [
+       2013,
+       131
+      ],
+      [
+       2012,
+       19
+      ],
+      [
+       2011,
+       10
+      ],
+      [
+       2009,
+       6
+      ],
+      [
+       2010,
+       5
+      ],
+      [
+       2008,
+       4
+      ],
+      [
+       2007,
+       2
+      ],
+      [
+       2006,
+       2
+      ],
+      [
+       2000,
+       2
+      ],
+      [
+       2005,
+       1
+      ],
+      [
+       2003,
+       1
+      ],
+      [
+       2002,
+       1
+      ],
+      [
+       1997,
+       1
+      ],
+      [
+       1995,
+       1
+      ]
+     ],
+     "description": "Latest Trade Data",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LatestWaterWithdrawalData",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2713,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": 1975,
+     "max_value": 2013,
+     "examples": [
+      2000,
+      2006,
+      2001,
+      2005,
+      2011
+     ],
+     "top_values": [
+      [
+       2005,
+       40
+      ],
+      [
+       2000,
+       32
+      ],
+      [
+       2002,
+       16
+      ],
+      [
+       2007,
+       15
+      ],
+      [
+       2006,
+       11
+      ],
+      [
+       2009,
+       10
+      ],
+      [
+       2008,
+       9
+      ],
+      [
+       2001,
+       8
+      ],
+      [
+       2010,
+       7
+      ],
+      [
+       2003,
+       7
+      ],
+      [
+       2004,
+       6
+      ],
+      [
+       2011,
+       5
+      ],
+      [
+       2012,
+       4
+      ],
+      [
+       1999,
+       2
+      ],
+      [
+       1993,
+       2
+      ],
+      [
+       2013,
+       1
+      ],
+      [
+       1995,
+       1
+      ],
+      [
+       1994,
+       1
+      ],
+      [
+       1986,
+       1
+      ],
+      [
+       1979,
+       1
+      ],
+      [
+       1975,
+       1
+      ]
+     ],
+     "description": "Latest Water Withdrawal Data",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "CountryCode"
+   ],
+   "sample_rows": [
+    {
+     "CountryCode": "AFG",
+     "ShortName": "Afghanistan",
+     "TableName": "Afghanistan",
+     "LongName": "Islamic State of Afghanistan",
+     "Alpha2Code": "AF",
+     "CurrencyUnit": "Afghan afghani",
+     "SpecialNotes": "Fiscal year end: March 20; reporting period for national acc...",
+     "Region": "South Asia",
+     "IncomeGroup": "Low income",
+     "Wb2Code": "AF",
+     "NationalAccountsBaseYear": "2002/03",
+     "NationalAccountsReferenceYear": "",
+     "SnaPriceValuation": "Value added at basic prices (VAB)",
+     "LendingCategory": "IDA",
+     "OtherGroups": "HIPC",
+     "SystemOfNationalAccounts": "Country uses the 1993 System of National Accounts methodolog...",
+     "AlternativeConversionFactor": "",
+     "PppSurveyYear": "",
+     "BalanceOfPaymentsManualInUse": "",
+     "ExternalDebtReportingStatus": "Actual",
+     "SystemOfTrade": "General trade system",
+     "GovernmentAccountingConcept": "Consolidated central government",
+     "ImfDataDisseminationStandard": "General Data Dissemination System (GDDS)",
+     "LatestPopulationCensus": "1979",
+     "LatestHouseholdSurvey": "Multiple Indicator Cluster Survey (MICS), 2010/11",
+     "SourceOfMostRecentIncomeAndExpenditureData": "Integrated household survey (IHS), 2008",
+     "VitalRegistrationComplete": "",
+     "LatestAgriculturalCensus": "2013/14",
+     "LatestIndustrialData": null,
+     "LatestTradeData": 2013,
+     "LatestWaterWithdrawalData": 2000
+    },
+    {
+     "CountryCode": "ALB",
+     "ShortName": "Albania",
+     "TableName": "Albania",
+     "LongName": "Republic of Albania",
+     "Alpha2Code": "AL",
+     "CurrencyUnit": "Albanian lek",
+     "SpecialNotes": "",
+     "Region": "Europe & Central Asia",
+     "IncomeGroup": "Upper middle income",
+     "Wb2Code": "AL",
+     "NationalAccountsBaseYear": "Original chained constant price data are rescaled.",
+     "NationalAccountsReferenceYear": "1996",
+     "SnaPriceValuation": "Value added at basic prices (VAB)",
+     "LendingCategory": "IBRD",
+     "OtherGroups": "",
+     "SystemOfNationalAccounts": "Country uses the 1993 System of National Accounts methodolog...",
+     "AlternativeConversionFactor": "",
+     "PppSurveyYear": "Rolling",
+     "BalanceOfPaymentsManualInUse": "IMF Balance of Payments Manual, 6th edition.",
+     "ExternalDebtReportingStatus": "Actual",
+     "SystemOfTrade": "General trade system",
+     "GovernmentAccountingConcept": "Budgetary central government",
+     "ImfDataDisseminationStandard": "General Data Dissemination System (GDDS)",
+     "LatestPopulationCensus": "2011",
+     "LatestHouseholdSurvey": "Demographic and Health Survey (DHS), 2008/09",
+     "SourceOfMostRecentIncomeAndExpenditureData": "Living Standards Measurement Study Survey (LSMS), 2011/12",
+     "VitalRegistrationComplete": "Yes",
+     "LatestAgriculturalCensus": "2012",
+     "LatestIndustrialData": 2011,
+     "LatestTradeData": 2013,
+     "LatestWaterWithdrawalData": 2006
+    },
+    {
+     "CountryCode": "DZA",
+     "ShortName": "Algeria",
+     "TableName": "Algeria",
+     "LongName": "People's Democratic Republic of Algeria",
+     "Alpha2Code": "DZ",
+     "CurrencyUnit": "Algerian dinar",
+     "SpecialNotes": "",
+     "Region": "Middle East & North Africa",
+     "IncomeGroup": "Upper middle income",
+     "Wb2Code": "DZ",
+     "NationalAccountsBaseYear": "1980",
+     "NationalAccountsReferenceYear": "",
+     "SnaPriceValuation": "Value added at basic prices (VAB)",
+     "LendingCategory": "IBRD",
+     "OtherGroups": "",
+     "SystemOfNationalAccounts": "Country uses the 1968 System of National Accounts methodolog...",
+     "AlternativeConversionFactor": "",
+     "PppSurveyYear": "2011",
+     "BalanceOfPaymentsManualInUse": "IMF Balance of Payments Manual, 6th edition.",
+     "ExternalDebtReportingStatus": "Actual",
+     "SystemOfTrade": "Special trade system",
+     "GovernmentAccountingConcept": "Budgetary central government",
+     "ImfDataDisseminationStandard": "General Data Dissemination System (GDDS)",
+     "LatestPopulationCensus": "2008",
+     "LatestHouseholdSurvey": "Multiple Indicator Cluster Survey (MICS), 2012",
+     "SourceOfMostRecentIncomeAndExpenditureData": "Integrated household survey (IHS), 1995",
+     "VitalRegistrationComplete": "",
+     "LatestAgriculturalCensus": "",
+     "LatestIndustrialData": 2010,
+     "LatestTradeData": 2013,
+     "LatestWaterWithdrawalData": 2001
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "CountryNotes",
+   "row_count": 4857,
+   "stats_rows": 4857,
+   "columns": [
+    {
+     "name": "Countrycode",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 215,
+     "is_unique": false,
+     "min_value": "ABW",
+     "max_value": "mdg",
+     "examples": [
+      "ABW",
+      "ADO",
+      "AFG",
+      "AGO",
+      "ALB"
+     ],
+     "top_values": [],
+     "description": "Country code. code identifying unique countries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Seriescode",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 259,
+     "is_unique": false,
+     "min_value": "BX.KLT.DINV.CD.WD",
+     "max_value": "VC.IHR.PSRC.P5",
+     "examples": [
+      "EG.EGY.PRIM.PP.KD",
+      "EG.ELC.RNEW.ZS",
+      "EG.FEC.RNEW.ZS",
+      "SM.POP.NETM",
+      "SM.POP.TOTL"
+     ],
+     "top_values": [],
+     "description": "Series code of countries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Description",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 414,
+     "is_unique": false,
+     "min_value": "About 30% of the expenditure in residential facilities for c...",
+     "max_value": "UNHCR estimates based on the arrival of refugees and asylum-...",
+     "examples": [
+      "Sources: Estimated based on UN Energy Statistics (2014); Wor...",
+      "Sources: UN Energy Statistics (2014)",
+      "Data sources : United Nations World Population Prospects",
+      "Estimates are derived from data on foreign-born population.",
+      "Data source : United Nations World Population Prospects"
+     ],
+     "top_values": [],
+     "description": "description",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Countrycode",
+    "Seriescode"
+   ],
+   "sample_rows": [
+    {
+     "Countrycode": "ABW",
+     "Seriescode": "EG.EGY.PRIM.PP.KD",
+     "Description": "Sources: Estimated based on UN Energy Statistics (2014); Wor..."
+    },
+    {
+     "Countrycode": "ABW",
+     "Seriescode": "EG.ELC.RNEW.ZS",
+     "Description": "Sources: UN Energy Statistics (2014)"
+    },
+    {
+     "Countrycode": "ABW",
+     "Seriescode": "EG.FEC.RNEW.ZS",
+     "Description": "Sources: UN Energy Statistics (2014)"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Footnotes",
+   "row_count": 532415,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "Countrycode",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 109,
+     "is_unique": false,
+     "min_value": "ABW",
+     "max_value": "hnd",
+     "examples": [
+      "ABW"
+     ],
+     "top_values": [],
+     "description": "Country code. code identifying unique countries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Seriescode",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 480,
+     "is_unique": false,
+     "min_value": "AG.LND.CREL.HA",
+     "max_value": "sp.DTH.REPT.ZS",
+     "examples": [
+      "AG.LND.FRST.K2",
+      "BX.KLT.DINV.CD.WD",
+      "DC.DAC.AUSL.CD",
+      "DC.DAC.AUTL.CD",
+      "DC.DAC.BELL.CD"
+     ],
+     "top_values": [],
+     "description": "Series code of countries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Year",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": false,
+     "min_value": "YR1960",
+     "max_value": "yr2012",
+     "examples": [
+      "YR1990",
+      "YR2000",
+      "YR2005",
+      "YR1987",
+      "YR1988"
+     ],
+     "top_values": [],
+     "description": "Year",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Description",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 33998,
+     "is_unique": false,
+     "min_value": "  The national poverty line is absolute. Data are produced b...",
+     "max_value": "temporary data; refers only to the part of the country under...",
+     "examples": [
+      "Not specified",
+      "Source: United Nations Conference on Trade and Development, ...",
+      "Data are classified as official aid.",
+      "Source: Estimate",
+      "Source:Estimate"
+     ],
+     "top_values": [],
+     "description": "Description of country footnotes",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Countrycode",
+    "Seriescode",
+    "Year"
+   ],
+   "sample_rows": [
+    {
+     "Countrycode": "ABW",
+     "Seriescode": "AG.LND.FRST.K2",
+     "Year": "YR1990",
+     "Description": "Not specified"
+    },
+    {
+     "Countrycode": "ABW",
+     "Seriescode": "AG.LND.FRST.K2",
+     "Year": "YR2000",
+     "Description": "Not specified"
+    },
+    {
+     "Countrycode": "ABW",
+     "Seriescode": "AG.LND.FRST.K2",
+     "Year": "YR2005",
+     "Description": "Not specified"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 532,415 rows"
+   ]
+  },
+  {
+   "name": "Indicators",
+   "row_count": 5656458,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "CountryName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 247,
+     "is_unique": false,
+     "min_value": "Afghanistan",
+     "max_value": "Zimbabwe",
+     "examples": [
+      "Arab World",
+      "Caribbean small states",
+      "Central Europe and the Baltics"
+     ],
+     "top_values": [],
+     "description": "Country code. code identifying unique countries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CountryCode",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 247,
+     "is_unique": false,
+     "min_value": "ABW",
+     "max_value": "ZWE",
+     "examples": [
+      "ARB",
+      "CSS",
+      "CEB"
+     ],
+     "top_values": [],
+     "description": "Series code of countries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "IndicatorName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 331,
+     "is_unique": false,
+     "min_value": "Adjusted savings: gross savings (% of GNI)",
+     "max_value": "Wholesale price index (2010 = 100)",
+     "examples": [
+      "Adolescent fertility rate (births per 1,000 women ages 15-19...",
+      "Age dependency ratio (% of working-age population)",
+      "Age dependency ratio, old (% of working-age population)",
+      "Age dependency ratio, young (% of working-age population)",
+      "Arms exports (SIPRI trend indicator values)"
+     ],
+     "top_values": [],
+     "description": "indicator name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "IndicatorCode",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 331,
+     "is_unique": false,
+     "min_value": "AG.AGR.TRAC.NO",
+     "max_value": "TX.VAL.MRCH.WR.ZS",
+     "examples": [
+      "SP.ADO.TFRT",
+      "SP.POP.DPND",
+      "SP.POP.DPND.OL",
+      "SP.POP.DPND.YG",
+      "MS.MIL.XPRT.KD"
+     ],
+     "top_values": [],
+     "description": "indicator code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Year",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": 1960,
+     "max_value": 1967,
+     "examples": [
+      1960
+     ],
+     "top_values": [
+      [
+       1965,
+       32035
+      ],
+      [
+       1966,
+       31337
+      ],
+      [
+       1964,
+       29128
+      ],
+      [
+       1963,
+       28625
+      ],
+      [
+       1962,
+       28439
+      ],
+      [
+       1961,
+       26617
+      ],
+      [
+       1960,
+       23188
+      ],
+      [
+       1967,
+       631
+      ]
+     ],
+     "description": "year",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Value",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 62972,
+     "is_unique": false,
+     "min_value": -177870597775239,
+     "max_value": 524666085409439,
+     "examples": [
+      133,
+      87,
+      6,
+      81,
+      3000000
+     ],
+     "top_values": [],
+     "description": "value",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "CountryCode",
+    "IndicatorCode",
+    "Year"
+   ],
+   "sample_rows": [
+    {
+     "CountryName": "Arab World",
+     "CountryCode": "ARB",
+     "IndicatorName": "Adolescent fertility rate (births per 1,000 women ages 15-19...",
+     "IndicatorCode": "SP.ADO.TFRT",
+     "Year": 1960,
+     "Value": 133
+    },
+    {
+     "CountryName": "Arab World",
+     "CountryCode": "ARB",
+     "IndicatorName": "Age dependency ratio (% of working-age population)",
+     "IndicatorCode": "SP.POP.DPND",
+     "Year": 1960,
+     "Value": 87
+    },
+    {
+     "CountryName": "Arab World",
+     "CountryCode": "ARB",
+     "IndicatorName": "Age dependency ratio, old (% of working-age population)",
+     "IndicatorCode": "SP.POP.DPND.OL",
+     "Year": 1960,
+     "Value": 6
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 5,656,458 rows"
+   ]
+  },
+  {
+   "name": "Series",
+   "row_count": 1345,
+   "stats_rows": 1345,
+   "columns": [
+    {
+     "name": "SeriesCode",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1345,
+     "is_unique": true,
+     "min_value": "AG.AGR.TRAC.NO",
+     "max_value": "per_si_allsi.cov_pop_tot",
+     "examples": [
+      "BN.KLT.DINV.CD",
+      "BX.KLT.DINV.WD.GD.ZS",
+      "BX.KLT.DINV.CD.WD",
+      "BM.KLT.DINV.GD.ZS",
+      "BN.TRF.KOGT.CD"
+     ],
+     "top_values": [],
+     "description": "Series Code. unique code identifying series",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Topic",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 91,
+     "is_unique": false,
+     "min_value": "Economic Policy & Debt: Balance of payments: Capital & finan...",
+     "max_value": "Social Protection & Labor: Unemployment",
+     "examples": [
+      "Economic Policy & Debt: Balance of payments: Capital & finan...",
+      "Economic Policy & Debt: Balance of payments: Current account...",
+      "Economic Policy & Debt: Balance of payments: Reserves & othe...",
+      "Economic Policy & Debt: External debt: Amortization",
+      "Economic Policy & Debt: External debt: Arrears, rescheduling..."
+     ],
+     "top_values": [],
+     "description": "topic of series",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "IndicatorName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1345,
+     "is_unique": true,
+     "min_value": "2005 PPP conversion factor, GDP (LCU per international $)",
+     "max_value": "Women's share of population ages 15+ living with HIV (%)",
+     "examples": [
+      "Foreign direct investment, net (BoP, current US$)",
+      "Foreign direct investment, net inflows (% of GDP)",
+      "Foreign direct investment, net inflows (BoP, current US$)",
+      "Foreign direct investment, net outflows (% of GDP)",
+      "Net capital account (BoP, current US$)"
+     ],
+     "top_values": [],
+     "description": "Indicator Name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ShortDefinition",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 99,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Weighted mean most favored nations tariff is the average of ...",
+     "examples": [
+      "",
+      "Total external debt is debt owed to nonresidents repayable i...",
+      "Debt service is the sum of principle repayments and interest...",
+      "Total external debt stocks to gross national income.",
+      "Multilateral debt service is the repayment of principal and ..."
+     ],
+     "top_values": [],
+     "description": "Short Definition of series",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LongDefinition",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 892,
+     "is_unique": false,
+     "min_value": "A maternal death refers to the death of a woman while pregna...",
+     "max_value": "Youth unemployment refers to the share of the labor force ag...",
+     "examples": [
+      "Foreign direct investment are the net inflows of investment ...",
+      "Foreign direct investment refers to direct investment equity...",
+      "Net capital account records acquisitions and disposals of no...",
+      "Net errors and omissions constitute a residual category need...",
+      "The net financial account shows net acquisition and disposal..."
+     ],
+     "top_values": [],
+     "description": "Long Definition of series",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "UnitOfMeasure",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "`",
+     "examples": [
+      ""
+     ],
+     "top_values": [
+      [
+       "",
+       1338
+      ],
+      [
+       "2011 PPP $",
+       2
+      ],
+      [
+       "2005 PPP $",
+       2
+      ],
+      [
+       "%",
+       2
+      ],
+      [
+       "`",
+       1
+      ]
+     ],
+     "description": "Unit Of Measure",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Periodicity",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "Annual",
+     "max_value": "Annual",
+     "examples": [
+      "Annual"
+     ],
+     "top_values": [
+      [
+       "Annual",
+       1345
+      ]
+     ],
+     "description": "Periodicity",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "BasePeriod",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "varies by country",
+     "examples": [
+      ""
+     ],
+     "top_values": [
+      [
+       "",
+       1268
+      ],
+      [
+       "varies by country",
+       28
+      ],
+      [
+       "2005",
+       26
+      ],
+      [
+       "2011",
+       9
+      ],
+      [
+       "2000",
+       5
+      ],
+      [
+       "2010",
+       3
+      ],
+      [
+       "2004-06",
+       3
+      ],
+      [
+       "1990",
+       3
+      ]
+     ],
+     "description": "Base Period. a period of business or economic activity used as a basis or reference point especially for indexing, calculating, estimating, or adjudicating prices, taxes, compensation, income, and production",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "OtherNotes",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "Other Notes",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "AggregationMethod",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Weighted average",
+     "examples": [
+      "",
+      "Weighted average",
+      "Sum",
+      "Gap-filled total"
+     ],
+     "top_values": [
+      [
+       "Weighted average",
+       546
+      ],
+      [
+       "Sum",
+       310
+      ],
+      [
+       "",
+       287
+      ],
+      [
+       "Gap-filled total",
+       72
+      ],
+      [
+       "Unweighted average",
+       67
+      ],
+      [
+       "Median",
+       48
+      ],
+      [
+       "Linear mixed-effect model estimates",
+       15
+      ]
+     ],
+     "description": "Aggregation Method",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LimitationsAndExceptions",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 187,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Vital registers are the preferred source for these data, but...",
+     "examples": [
+      "",
+      "FDI data do not give a complete picture of international inv...",
+      "Portfolio investors typically have less of a role in the dec...",
+      "Discrepancies may arise in the balance of payments because t...",
+      "Remittance transactions have grown in importance over the pa..."
+     ],
+     "top_values": [],
+     "description": "Limitations And Exceptions",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "NotesFromOriginalSource",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "The 2007-2011 refugee population category also includes peop...",
+     "examples": [
+      ""
+     ],
+     "top_values": [
+      [
+       "",
+       1307
+      ],
+      [
+       "All surveys were administered using the Enterprise Surveys m...",
+       19
+      ],
+      [
+       "All the indicators refer to expenditures by financing agent ...",
+       7
+      ],
+      [
+       "The 2007-2011 refugee population category also includes peop...",
+       2
+      ],
+      [
+       "SIPRI statistical data on arms transfers relates to actual d...",
+       2
+      ],
+      [
+       "In some cases, the sum of public and private expenditures on...",
+       2
+      ],
+      [
+       "Estimates are presented with uncertainty intervals (see foot...",
+       2
+      ],
+      [
+       "PPP series resulting from the 2005 International comparison ...",
+       1
+      ],
+      [
+       "Most surveys were administered using the Enterprise Surveys ...",
+       1
+      ],
+      [
+       "Estimates of maternal mortality are presented along with upp...",
+       1
+      ],
+      [
+       "Depending on the source and means of monitoring, data may no...",
+       1
+      ]
+     ],
+     "description": "Notes From Original Source",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "GeneralComments",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 69,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "When NEET rates are available for more than two age groups i...",
+     "examples": [
+      "Note: Data are based on the sixth edition of the IMF's Balan...",
+      "Note: Data starting from 2005 are based on the sixth edition...",
+      ""
+     ],
+     "top_values": [],
+     "description": "General Comments",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Source",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 152,
+     "is_unique": false,
+     "min_value": "(1) United Nations Population Division. World Population Pro...",
+     "max_value": "© OECD/IEA and World Bank, based on IEA data in IEA World En...",
+     "examples": [
+      "International Monetary Fund, Balance of Payments Statistics ...",
+      "International Monetary Fund, International Financial Statist...",
+      "International Monetary Fund, Balance of Payments database, s...",
+      "International Monetary Fund, Balance of Payments database, a...",
+      "World Bank, International Debt Statistics."
+     ],
+     "top_values": [],
+     "description": "source of this data",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "StatisticalConceptAndMethodology",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 303,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "World Bank concessional lending is done by the International...",
+     "examples": [
+      "",
+      "Data on equity flows are based on balance of payments data r...",
+      "The balance of payments (BoP) is a double-entry accounting s...",
+      "The two main components of personal remittances, \"personal t...",
+      "Grants are transfers made in cash, goods or services for whi..."
+     ],
+     "top_values": [],
+     "description": "Statistical Concept And Methodology",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DevelopmentRelevance",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 165,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Youth unemployment is an important policy issue for many eco...",
+     "examples": [
+      "",
+      "Private financial flows - equity and debt - account for the ...",
+      "The balance of payments records an economys transactions wi...",
+      "Movement of people, most often through migration, is a signi...",
+      "DAC exists to help its members coordinate their development ..."
+     ],
+     "top_values": [],
+     "description": "Development Relevance",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "RelatedSourceLinks",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "World Bank, PovcalNet: an online poverty analysis tool, http...",
+     "examples": [
+      ""
+     ],
+     "top_values": [
+      [
+       "",
+       1339
+      ],
+      [
+       "World Bank, PovcalNet: an online poverty analysis tool, http...",
+       6
+      ]
+     ],
+     "description": "Related Source Links",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "OtherWebLinks",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "Other Web Links",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "RelatedIndicators",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "Related Indicators",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "LicenseType",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "Open",
+     "max_value": "Restricted",
+     "examples": [
+      "Open"
+     ],
+     "top_values": [
+      [
+       "Open",
+       1319
+      ],
+      [
+       "Restricted",
+       26
+      ]
+     ],
+     "description": "License Type",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "SeriesCode"
+   ],
+   "sample_rows": [
+    {
+     "SeriesCode": "BN.KLT.DINV.CD",
+     "Topic": "Economic Policy & Debt: Balance of payments: Capital & finan...",
+     "IndicatorName": "Foreign direct investment, net (BoP, current US$)",
+     "ShortDefinition": "",
+     "LongDefinition": "Foreign direct investment are the net inflows of investment ...",
+     "UnitOfMeasure": "",
+     "Periodicity": "Annual",
+     "BasePeriod": "",
+     "OtherNotes": null,
+     "AggregationMethod": "",
+     "LimitationsAndExceptions": "",
+     "NotesFromOriginalSource": "",
+     "GeneralComments": "Note: Data are based on the sixth edition of the IMF's Balan...",
+     "Source": "International Monetary Fund, Balance of Payments Statistics ...",
+     "StatisticalConceptAndMethodology": "",
+     "DevelopmentRelevance": "",
+     "RelatedSourceLinks": "",
+     "OtherWebLinks": null,
+     "RelatedIndicators": null,
+     "LicenseType": "Open"
+    },
+    {
+     "SeriesCode": "BX.KLT.DINV.WD.GD.ZS",
+     "Topic": "Economic Policy & Debt: Balance of payments: Capital & finan...",
+     "IndicatorName": "Foreign direct investment, net inflows (% of GDP)",
+     "ShortDefinition": "",
+     "LongDefinition": "Foreign direct investment are the net inflows of investment ...",
+     "UnitOfMeasure": "",
+     "Periodicity": "Annual",
+     "BasePeriod": "",
+     "OtherNotes": null,
+     "AggregationMethod": "Weighted average",
+     "LimitationsAndExceptions": "FDI data do not give a complete picture of international inv...",
+     "NotesFromOriginalSource": "",
+     "GeneralComments": "Note: Data starting from 2005 are based on the sixth edition...",
+     "Source": "International Monetary Fund, International Financial Statist...",
+     "StatisticalConceptAndMethodology": "Data on equity flows are based on balance of payments data r...",
+     "DevelopmentRelevance": "Private financial flows - equity and debt - account for the ...",
+     "RelatedSourceLinks": "",
+     "OtherWebLinks": null,
+     "RelatedIndicators": null,
+     "LicenseType": "Open"
+    },
+    {
+     "SeriesCode": "BX.KLT.DINV.CD.WD",
+     "Topic": "Economic Policy & Debt: Balance of payments: Capital & finan...",
+     "IndicatorName": "Foreign direct investment, net inflows (BoP, current US$)",
+     "ShortDefinition": "",
+     "LongDefinition": "Foreign direct investment refers to direct investment equity...",
+     "UnitOfMeasure": "",
+     "Periodicity": "Annual",
+     "BasePeriod": "",
+     "OtherNotes": null,
+     "AggregationMethod": "Sum",
+     "LimitationsAndExceptions": "FDI data do not give a complete picture of international inv...",
+     "NotesFromOriginalSource": "",
+     "GeneralComments": "Note: Data starting from 2005 are based on the sixth edition...",
+     "Source": "International Monetary Fund, Balance of Payments database, s...",
+     "StatisticalConceptAndMethodology": "Data on equity flows are based on balance of payments data r...",
+     "DevelopmentRelevance": "Private financial flows - equity and debt - account for the ...",
+     "RelatedSourceLinks": "",
+     "OtherWebLinks": null,
+     "RelatedIndicators": null,
+     "LicenseType": "Open"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "SeriesNotes",
+   "row_count": 369,
+   "stats_rows": 369,
+   "columns": [
+    {
+     "name": "Seriescode",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 25,
+     "is_unique": false,
+     "min_value": "DT.DOD.PVLX.CD",
+     "max_value": "SP.DYN.TO65.MA.ZS",
+     "examples": [
+      "SP.ADO.TFRT",
+      "SP.DYN.AMRT.FE",
+      "SP.DYN.AMRT.MA",
+      "SP.DYN.TO65.FE.ZS",
+      "SP.DYN.TO65.MA.ZS"
+     ],
+     "top_values": [
+      [
+       "SP.ADO.TFRT",
+       55
+      ],
+      [
+       "SP.DYN.TO65.MA.ZS",
+       54
+      ],
+      [
+       "SP.DYN.TO65.FE.ZS",
+       54
+      ],
+      [
+       "SP.DYN.AMRT.MA",
+       54
+      ],
+      [
+       "SP.DYN.AMRT.FE",
+       54
+      ],
+      [
+       "SM.POP.NETM",
+       11
+      ],
+      [
+       "IC.TAX.METG",
+       6
+      ],
+      [
+       "IC.GOV.DURS.ZS",
+       6
+      ],
+      [
+       "IC.FRM.TRNG.ZS",
+       6
+      ],
+      [
+       "IC.FRM.OUTG.ZS",
+       6
+      ],
+      [
+       "IC.FRM.ISOC.ZS",
+       6
+      ],
+      [
+       "IC.FRM.FREG.ZS",
+       6
+      ],
+      [
+       "IC.FRM.FEMO.ZS",
+       6
+      ],
+      [
+       "IC.FRM.DURS",
+       6
+      ],
+      [
+       "IC.FRM.CRIM.ZS",
+       6
+      ],
+      [
+       "IC.FRM.CORR.ZS",
+       6
+      ],
+      [
+       "IC.FRM.BNKS.ZS",
+       6
+      ],
+      [
+       "IC.CUS.DURS.EX",
+       6
+      ],
+      [
+       "SN.ITK.VITA.ZS",
+       3
+      ],
+      [
+       "NY.ADJ.SVNG.GN.ZS",
+       3
+      ],
+      [
+       "IQ.WEF.PORT.XQ",
+       3
+      ],
+      [
+       "IQ.WEF.CUST.XQ",
+       3
+      ],
+      [
+       "SM.POP.REFG.OR",
+       1
+      ],
+      [
+       "SM.POP.REFG",
+       1
+      ],
+      [
+       "DT.DOD.PVLX.CD",
+       1
+      ]
+     ],
+     "description": "Series code. code identifying the series",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Year",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 55,
+     "is_unique": false,
+     "min_value": "YR1960",
+     "max_value": "YR2014",
+     "examples": [
+      "YR1960",
+      "YR1961",
+      "YR1962",
+      "YR1963",
+      "YR1964"
+     ],
+     "top_values": [],
+     "description": "year",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Description",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 68,
+     "is_unique": false,
+     "min_value": "2014 data are provisional and subject to change",
+     "max_value": "The sample was drawn from the manufacturing sector only.",
+     "examples": [
+      "Interpolated using data for 1957 and 1962.",
+      "Interpolated using data for 1957 and 1962, if the data sourc...",
+      "The data refer to 1960-1965.",
+      "The data refer to 1960-1965, if the data source is United Na...",
+      "The data refer to five-year periods running from 1 July, 196..."
+     ],
+     "top_values": [],
+     "description": "Description of series",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Seriescode",
+    "Year"
+   ],
+   "sample_rows": [
+    {
+     "Seriescode": "SP.ADO.TFRT",
+     "Year": "YR1960",
+     "Description": "Interpolated using data for 1957 and 1962."
+    },
+    {
+     "Seriescode": "SP.DYN.AMRT.FE",
+     "Year": "YR1960",
+     "Description": "Interpolated using data for 1957 and 1962, if the data sourc..."
+    },
+    {
+     "Seriescode": "SP.DYN.AMRT.MA",
+     "Year": "YR1960",
+     "Description": "Interpolated using data for 1957 and 1962, if the data sourc..."
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "CountryNotes",
+   "from_column": "Countrycode",
+   "to_table": "Country",
+   "to_column": "CountryCode",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "CountryNotes",
+   "from_column": "Seriescode",
+   "to_table": "Series",
+   "to_column": "SeriesCode",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Footnotes",
+   "from_column": "Countrycode",
+   "to_table": "Country",
+   "to_column": "CountryCode",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Footnotes",
+   "from_column": "Seriescode",
+   "to_table": "Series",
+   "to_column": "SeriesCode",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Indicators",
+   "from_column": "CountryCode",
+   "to_table": "Country",
+   "to_column": "CountryCode",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "SeriesNotes",
+   "from_column": "Seriescode",
+   "to_table": "Series",
+   "to_column": "SeriesCode",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "CountryNotes",
+   "from_column": "Countrycode",
+   "to_table": "Footnotes",
+   "to_column": "Countrycode",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "CountryNotes",
+   "from_column": "Countrycode",
+   "to_table": "Indicators",
+   "to_column": "CountryCode",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.995
+  },
+  {
+   "from_table": "Footnotes",
+   "from_column": "Countrycode",
+   "to_table": "Indicators",
+   "to_column": "CountryCode",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Indicators",
+   "from_column": "IndicatorName",
+   "to_table": "Series",
+   "to_column": "IndicatorName",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.981
+  }
+ ],
+ "notes": []
+}

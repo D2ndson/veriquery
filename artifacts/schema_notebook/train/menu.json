@@ -1,0 +1,1735 @@
+{
+ "db_id": "menu",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/menu/menu.sqlite",
+ "fingerprint": "272371712-1793993051303946452-v1.0",
+ "created_at": "2026-11-06T19:25:08+00:00",
+ "profile_seconds": 11.178,
+ "tables": [
+  {
+   "name": "Dish",
+   "row_count": 426713,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 254825,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique id number indicating the dishes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 199979,
+     "is_unique": false,
+     "min_value": "               Assorted Sausage",
+     "max_value": "„Reichshoftopf” - 3 Steaks mit Bratkartoffeln, Champignons u...",
+     "examples": [
+      "Consomme printaniere royal",
+      "Chicken gumbo",
+      "Tomato aux croutons",
+      "Onion au gratin",
+      "St. Emilion"
+     ],
+     "top_values": [],
+     "description": "the name of the dish",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "description",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "",
+     "examples": [],
+     "top_values": [
+      [
+       "",
+       7
+      ]
+     ],
+     "description": "description of the dish",
+     "value_description": "(no value)",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "menus_appeared",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 536,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 7747,
+     "examples": [
+      8,
+      111,
+      14,
+      41,
+      66
+     ],
+     "top_values": [],
+     "description": "menus appeared. how many menus have this dish",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "times_appeared",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 545,
+     "is_unique": false,
+     "min_value": -2,
+     "max_value": 8495,
+     "examples": [
+      8,
+      117,
+      14,
+      41,
+      68
+     ],
+     "top_values": [],
+     "description": "times appeared. how many times this dish appears in the menu",
+     "value_description": "commonsense evidence:\nif times_appeared > menus_appeard: this dish appeared in a menu more than once",
+     "notes": []
+    },
+    {
+     "name": "first_appeared",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 140,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 2012,
+     "examples": [
+      1897,
+      1895,
+      1893,
+      1900,
+      1881
+     ],
+     "top_values": [],
+     "description": "first appeared. the year that this dish appears first",
+     "value_description": "commonsense evidence:\n1.\tthe year outside of [1851, 2012], it means this data is not correct \n2.\tif this dish lasts longer (last_appeared - first_appeard), it means its history is long or historical / classical",
+     "notes": []
+    },
+    {
+     "name": "last_appeared",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 141,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 2928,
+     "examples": [
+      1927,
+      1960,
+      1917,
+      1971,
+      1981
+     ],
+     "top_values": [],
+     "description": "last appeared. the year that this dish appears the last time",
+     "value_description": "commonsense evidence:\n1.\tthe year outside of [1851, 2012], it means this data is not correct\n2.\tif this dish lasts longer (last_appeared - first_appeard), it means its history is long or historical / classical",
+     "notes": []
+    },
+    {
+     "name": "lowest_price",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0171,
+     "distinct_count": 468,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 1035.0,
+     "examples": [
+      0.2,
+      0.1,
+      0.25,
+      0.0,
+      0.15
+     ],
+     "top_values": [],
+     "description": "the lowest price of the dish",
+     "value_description": "commonsense evidence:\n0: for free",
+     "notes": []
+    },
+    {
+     "name": "highest_price",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0171,
+     "distinct_count": 515,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 3050.0,
+     "examples": [
+      0.4,
+      0.8,
+      1.0,
+      18.0,
+      25.0
+     ],
+     "top_values": [],
+     "description": "the highest price of the dish",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "name": "Consomme printaniere royal",
+     "description": null,
+     "menus_appeared": 8,
+     "times_appeared": 8,
+     "first_appeared": 1897,
+     "last_appeared": 1927,
+     "lowest_price": 0.2,
+     "highest_price": 0.4
+    },
+    {
+     "id": 2,
+     "name": "Chicken gumbo",
+     "description": null,
+     "menus_appeared": 111,
+     "times_appeared": 117,
+     "first_appeared": 1895,
+     "last_appeared": 1960,
+     "lowest_price": 0.1,
+     "highest_price": 0.8
+    },
+    {
+     "id": 3,
+     "name": "Tomato aux croutons",
+     "description": null,
+     "menus_appeared": 14,
+     "times_appeared": 14,
+     "first_appeared": 1893,
+     "last_appeared": 1917,
+     "lowest_price": 0.25,
+     "highest_price": 0.4
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 426,713 rows"
+   ]
+  },
+  {
+   "name": "Menu",
+   "row_count": 17527,
+   "stats_rows": 17527,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 17527,
+     "is_unique": true,
+     "min_value": 12463,
+     "max_value": 35526,
+     "examples": [
+      12463,
+      12464,
+      12465,
+      12466,
+      12467
+     ],
+     "top_values": [],
+     "description": "the unique number identifying the menu",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.3572,
+     "distinct_count": 798,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "private residence of Mayor Jas. H. Preston",
+     "examples": [
+      ""
+     ],
+     "top_values": [],
+     "description": "the name of the menu",
+     "value_description": "commonsense evidence:\n\nif the value is not null or empty, it means this menu has special dishes.\n\notherwise, this menu is general and nothing special",
+     "notes": []
+    },
+    {
+     "name": "sponsor",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0891,
+     "distinct_count": 6361,
+     "is_unique": false,
+     "min_value": " South Ferry Hotel",
+     "max_value": "xtYE TWILIGHT CLUB",
+     "examples": [
+      "HOTEL EASTMAN",
+      "REPUBLICAN HOUSE",
+      "NORDDEUTSCHER LLOYD BREMEN",
+      "CANADIAN PACIFIC RAILWAY COMPANY",
+      "HOTEL NETHERLAND"
+     ],
+     "top_values": [],
+     "description": "the sponsor of this menu",
+     "value_description": "commonsense evidence:\n\nif the value is null or empyt, it means this meanu is DIY by the restaurant.",
+     "notes": []
+    },
+    {
+     "name": "event",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.5074,
+     "distinct_count": 1762,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "wine list",
+     "examples": [
+      "BREAKFAST",
+      "[DINNER]",
+      "FRUHSTUCK/BREAKFAST;",
+      "LUNCH;",
+      "DINNER;"
+     ],
+     "top_values": [],
+     "description": "the event that the menu was created for",
+     "value_description": "",
+     "notes": [
+      "51% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "venue",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.5175,
+     "distinct_count": 235,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "[SOC];",
+     "examples": [
+      "COMMERCIAL",
+      "",
+      "SOC;",
+      "EDUC;",
+      "MIL;"
+     ],
+     "top_values": [],
+     "description": "the venue that the menu was created for",
+     "value_description": "",
+     "notes": [
+      "52% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "place",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.5175,
+     "distinct_count": 3704,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "unknown",
+     "examples": [
+      "HOT SPRINGS, AR",
+      "MILWAUKEE, [WI];",
+      "DAMPFER KAISER WILHELM DER GROSSE;",
+      "R.M.S. EMPRESS OF CHINA",
+      "NEW YORK, [NY];"
+     ],
+     "top_values": [],
+     "description": "the location that the menu was used",
+     "value_description": "the location that the menu was used",
+     "notes": [
+      "52% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "physical_description",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0929,
+     "distinct_count": 6260,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "trifolder; 6.625 x 11.25 inches",
+     "examples": [
+      "CARD; 4.75X7.5;",
+      "CARD; ILLUS; COL; 7.0X9.0;",
+      "CARD; ILLU; COL; 5.5X8.0;",
+      "FOLDER; ILLU; COL; 5.5X7.5;",
+      "CARD; ILLUS; COL; 4.75X7.25;"
+     ],
+     "top_values": [],
+     "description": "physical description of the menu",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "occasion",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.5175,
+     "distinct_count": 422,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "[TRIP]",
+     "examples": [
+      "EASTER;",
+      "",
+      "ANNIVERSARY;",
+      "DAILY;",
+      "DAILY"
+     ],
+     "top_values": [],
+     "description": "occasion of the menu",
+     "value_description": "",
+     "notes": [
+      "52% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "notes",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0929,
+     "distinct_count": 6958,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "wine list in Swedish; Arthur H. Rumpf Menu Collection",
+     "examples": [
+      "",
+      "WEDGEWOOD BLUE CARD; WHITE EMBOSSED GREEK KEY BORDER; \"EASTE...",
+      "MENU IN GERMAN AND ENGLISH; ILLUS, STEAMSHIP AND SAILING VES...",
+      "MENU IN GERMAN AND ENGLISH; ILLUS, HARBOR SCENE WITH SAILING...",
+      "MENU IN GERMAN AND ENGLISH; ILLUS, HARBOR SCENE WITH ROCKS A..."
+     ],
+     "top_values": [],
+     "description": "notes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "call_number",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0891,
+     "distinct_count": 15920,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "wotm",
+     "examples": [
+      "1900-2822",
+      "1900-2825",
+      "1900-2827",
+      "1900-2828",
+      "1900-2829"
+     ],
+     "top_values": [],
+     "description": "call number",
+     "value_description": "commonsense evidence:\nif null: not support for taking out or booking in advance",
+     "notes": []
+    },
+    {
+     "name": "keywords",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "keywords",
+     "value_description": "not useful",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "language",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "language",
+     "value_description": "not useful",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0334,
+     "distinct_count": 6593,
+     "is_unique": false,
+     "min_value": "0001-01-01",
+     "max_value": "2928-03-26",
+     "examples": [
+      "1900-04-15",
+      "1900-04-16",
+      "1900-04-17",
+      "1900-04-18",
+      "1900-04-19"
+     ],
+     "top_values": [],
+     "description": "the date that this menu was created",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "location",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6274,
+     "is_unique": false,
+     "min_value": " South Ferry Hotel",
+     "max_value": "private residence of Mayor Jas. H. Preston",
+     "examples": [
+      "Hotel Eastman",
+      "Republican House",
+      "Norddeutscher Lloyd Bremen",
+      "Canadian Pacific Railway Company",
+      "Hotel Netherland"
+     ],
+     "top_values": [],
+     "description": "the location that the menu was used",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "location_type",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "",
+     "value_description": "not useful",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "currency",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.6318,
+     "distinct_count": 42,
+     "is_unique": false,
+     "min_value": "Argentine peso",
+     "max_value": "Złoty",
+     "examples": [
+      "Dollars",
+      "Cents",
+      "Francs",
+      "Belgian Francs",
+      "Shillings"
+     ],
+     "top_values": [
+      [
+       "Dollars",
+       5548
+      ],
+      [
+       "Deutsche Marks",
+       293
+      ],
+      [
+       "Francs",
+       162
+      ],
+      [
+       "Canadian Dollars",
+       98
+      ],
+      [
+       "Swiss Francs",
+       47
+      ],
+      [
+       "Shillings",
+       40
+      ],
+      [
+       "Swedish kronor (SEK/kr)",
+       39
+      ],
+      [
+       "Italian Lire",
+       28
+      ],
+      [
+       "Cents",
+       23
+      ],
+      [
+       "UK Pounds",
+       22
+      ],
+      [
+       "Belgian Francs",
+       20
+      ],
+      [
+       "Mexican pesos",
+       19
+      ],
+      [
+       "Dutch Guilders",
+       17
+      ],
+      [
+       "Austrian Schillings",
+       15
+      ],
+      [
+       "Danish kroner",
+       14
+      ],
+      [
+       "Yen",
+       9
+      ],
+      [
+       "Pesetas",
+       7
+      ],
+      [
+       "Euros",
+       7
+      ],
+      [
+       "Escudos",
+       5
+      ],
+      [
+       "Austro-Hungarian Kronen",
+       5
+      ],
+      [
+       "Hungarian forint",
+       4
+      ],
+      [
+       "Drachmas",
+       4
+      ],
+      [
+       "Norwegian kroner",
+       3
+      ],
+      [
+       "Israeli lirot (1948-1980)",
+       3
+      ],
+      [
+       "Icelandic Krónur",
+       3
+      ],
+      [
+       "Quetzales",
+       2
+      ],
+      [
+       "Argentine peso",
+       2
+      ],
+      [
+       "Złoty",
+       1
+      ],
+      [
+       "Uruguayan pesos",
+       1
+      ],
+      [
+       "Straits dollar (1904-1939)",
+       1
+      ],
+      [
+       "Sol",
+       1
+      ],
+      [
+       "Qatari riyal",
+       1
+      ],
+      [
+       "Pence",
+       1
+      ],
+      [
+       "New Taiwan Dollar",
+       1
+      ],
+      [
+       "Moroccan Dirham",
+       1
+      ],
+      [
+       "Monégasque francs",
+       1
+      ],
+      [
+       "Lats",
+       1
+      ],
+      [
+       "Finnish markka",
+       1
+      ],
+      [
+       "Cuban pesos",
+       1
+      ],
+      [
+       "Brazilian Cruzeiros",
+       1
+      ],
+      [
+       "Bermudian dollars",
+       1
+      ],
+      [
+       "Australian Dollars",
+       1
+      ]
+     ],
+     "description": "the currency that the menu was used",
+     "value_description": "",
+     "notes": [
+      "63% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "currency_symbol",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.6318,
+     "distinct_count": 34,
+     "is_unique": false,
+     "min_value": " Ft",
+     "max_value": "€",
+     "examples": [
+      "$",
+      "c",
+      "FF",
+      "BEF",
+      "s"
+     ],
+     "top_values": [
+      [
+       "$",
+       5578
+      ],
+      [
+       "DM",
+       293
+      ],
+      [
+       "FF",
+       162
+      ],
+      [
+       "C$",
+       98
+      ],
+      [
+       "Fr",
+       47
+      ],
+      [
+       "s",
+       40
+      ],
+      [
+       "SEK",
+       39
+      ],
+      [
+       "L",
+       28
+      ],
+      [
+       "c",
+       23
+      ],
+      [
+       "£",
+       22
+      ],
+      [
+       "BEF",
+       20
+      ],
+      [
+       "kr.",
+       17
+      ],
+      [
+       "f",
+       17
+      ],
+      [
+       "S",
+       15
+      ],
+      [
+       "¥",
+       9
+      ],
+      [
+       "€",
+       7
+      ],
+      [
+       "Pt",
+       7
+      ],
+      [
+       "K",
+       5
+      ],
+      [
+       "Drs.",
+       4
+      ],
+      [
+       " Ft",
+       4
+      ],
+      [
+       "Kr.",
+       3
+      ],
+      [
+       "I£",
+       3
+      ],
+      [
+       "Q",
+       2
+      ],
+      [
+       "zł.",
+       1
+      ],
+      [
+       "p",
+       1
+      ],
+      [
+       "mk",
+       1
+      ],
+      [
+       "S/.",
+       1
+      ],
+      [
+       "QR",
+       1
+      ],
+      [
+       "NT$",
+       1
+      ],
+      [
+       "Ls",
+       1
+      ],
+      [
+       "F",
+       1
+      ],
+      [
+       "Dh",
+       1
+      ],
+      [
+       "Cr.",
+       1
+      ],
+      [
+       "$U",
+       1
+      ]
+     ],
+     "description": "the currency symbol",
+     "value_description": "",
+     "notes": [
+      "63% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "status",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "complete",
+     "max_value": "complete",
+     "examples": [
+      "complete"
+     ],
+     "top_values": [
+      [
+       "complete",
+       17527
+      ]
+     ],
+     "description": "status of the menu",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "page_count",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 46,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 74,
+     "examples": [
+      2,
+      4,
+      12,
+      6,
+      10
+     ],
+     "top_values": [
+      [
+       2,
+       7467
+      ],
+      [
+       4,
+       3992
+      ],
+      [
+       1,
+       1748
+      ],
+      [
+       3,
+       1727
+      ],
+      [
+       8,
+       642
+      ],
+      [
+       5,
+       547
+      ],
+      [
+       6,
+       449
+      ],
+      [
+       12,
+       203
+      ],
+      [
+       7,
+       189
+      ],
+      [
+       10,
+       103
+      ],
+      [
+       9,
+       98
+      ],
+      [
+       16,
+       75
+      ],
+      [
+       11,
+       42
+      ],
+      [
+       14,
+       38
+      ],
+      [
+       20,
+       26
+      ],
+      [
+       13,
+       25
+      ],
+      [
+       15,
+       19
+      ],
+      [
+       18,
+       18
+      ],
+      [
+       17,
+       18
+      ],
+      [
+       24,
+       14
+      ],
+      [
+       19,
+       10
+      ],
+      [
+       22,
+       9
+      ],
+      [
+       21,
+       8
+      ],
+      [
+       32,
+       5
+      ],
+      [
+       28,
+       5
+      ],
+      [
+       27,
+       5
+      ],
+      [
+       50,
+       4
+      ],
+      [
+       30,
+       4
+      ],
+      [
+       26,
+       4
+      ],
+      [
+       25,
+       4
+      ],
+      [
+       56,
+       3
+      ],
+      [
+       36,
+       3
+      ],
+      [
+       33,
+       3
+      ],
+      [
+       29,
+       3
+      ],
+      [
+       23,
+       3
+      ],
+      [
+       40,
+       2
+      ],
+      [
+       34,
+       2
+      ],
+      [
+       31,
+       2
+      ],
+      [
+       74,
+       1
+      ],
+      [
+       64,
+       1
+      ],
+      [
+       62,
+       1
+      ],
+      [
+       57,
+       1
+      ],
+      [
+       46,
+       1
+      ],
+      [
+       41,
+       1
+      ],
+      [
+       38,
+       1
+      ],
+      [
+       35,
+       1
+      ]
+     ],
+     "description": "page count. the number of pages of this menu",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "dish_count",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 555,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 4053,
+     "examples": [
+      67,
+      34,
+      84,
+      63,
+      33
+     ],
+     "top_values": [],
+     "description": "dish count. the number of dishes of this menu",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 12463,
+     "name": null,
+     "sponsor": "HOTEL EASTMAN",
+     "event": "BREAKFAST",
+     "venue": "COMMERCIAL",
+     "place": "HOT SPRINGS, AR",
+     "physical_description": "CARD; 4.75X7.5;",
+     "occasion": "EASTER;",
+     "notes": "",
+     "call_number": "1900-2822",
+     "keywords": null,
+     "language": null,
+     "date": "1900-04-15",
+     "location": "Hotel Eastman",
+     "location_type": null,
+     "currency": null,
+     "currency_symbol": null,
+     "status": "complete",
+     "page_count": 2,
+     "dish_count": 67
+    },
+    {
+     "id": 12464,
+     "name": "",
+     "sponsor": "REPUBLICAN HOUSE",
+     "event": "[DINNER]",
+     "venue": "COMMERCIAL",
+     "place": "MILWAUKEE, [WI];",
+     "physical_description": "CARD; ILLUS; COL; 7.0X9.0;",
+     "occasion": "EASTER;",
+     "notes": "WEDGEWOOD BLUE CARD; WHITE EMBOSSED GREEK KEY BORDER; \"EASTE...",
+     "call_number": "1900-2825",
+     "keywords": null,
+     "language": null,
+     "date": "1900-04-15",
+     "location": "Republican House",
+     "location_type": null,
+     "currency": null,
+     "currency_symbol": null,
+     "status": "complete",
+     "page_count": 2,
+     "dish_count": 34
+    },
+    {
+     "id": 12465,
+     "name": null,
+     "sponsor": "NORDDEUTSCHER LLOYD BREMEN",
+     "event": "FRUHSTUCK/BREAKFAST;",
+     "venue": "COMMERCIAL",
+     "place": "DAMPFER KAISER WILHELM DER GROSSE;",
+     "physical_description": "CARD; ILLU; COL; 5.5X8.0;",
+     "occasion": "",
+     "notes": "MENU IN GERMAN AND ENGLISH; ILLUS, STEAMSHIP AND SAILING VES...",
+     "call_number": "1900-2827",
+     "keywords": null,
+     "language": null,
+     "date": "1900-04-16",
+     "location": "Norddeutscher Lloyd Bremen",
+     "location_type": null,
+     "currency": null,
+     "currency_symbol": null,
+     "status": "complete",
+     "page_count": 2,
+     "dish_count": 84
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "MenuItem",
+   "row_count": 1334410,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 212717,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique id representing the menu item",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "menu_page_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4759,
+     "is_unique": false,
+     "min_value": 130,
+     "max_value": 24245,
+     "examples": [
+      1389,
+      3079,
+      1388,
+      12947,
+      130
+     ],
+     "top_values": [],
+     "description": "the id of menu page",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "price",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.4715,
+     "distinct_count": 141,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 1000.0,
+     "examples": [
+      0.4,
+      0.6,
+      0.5,
+      0.1,
+      0.25
+     ],
+     "top_values": [],
+     "description": "the price of this dish (menu item)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "high_price",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.9054,
+     "distinct_count": 134,
+     "is_unique": false,
+     "min_value": 0.025,
+     "max_value": 2050.0,
+     "examples": [
+      1.0,
+      3.0,
+      1.5,
+      4.0
+     ],
+     "top_values": [],
+     "description": "high price of this dish",
+     "value_description": "",
+     "notes": [
+      "91% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "dish_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 51252,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 519034,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the id of the dish",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "created_at",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 182692,
+     "is_unique": false,
+     "min_value": "2011-03-28 15:00:44 UTC",
+     "max_value": "2011-05-10 18:59:08 UTC",
+     "examples": [
+      "2011-03-28 15:00:44 UTC",
+      "2011-03-28 15:01:13 UTC",
+      "2011-03-28 15:01:40 UTC",
+      "2011-03-28 15:01:51 UTC",
+      "2011-03-28 15:21:26 UTC"
+     ],
+     "top_values": [],
+     "description": "created at. the dates when the item was created",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "updated_at",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 185849,
+     "is_unique": false,
+     "min_value": "2011-03-28 21:02:39 UTC",
+     "max_value": "2019-10-27 20:33:18 UTC",
+     "examples": [
+      "2011-04-19 04:33:15 UTC",
+      "2011-04-19 15:00:54 UTC",
+      "2011-04-19 19:10:05 UTC",
+      "2011-04-19 19:07:01 UTC",
+      "2011-04-13 15:25:27 UTC"
+     ],
+     "top_values": [],
+     "description": "updated at. the dates when the item was updated",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "xpos",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 620,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 0.978571,
+     "examples": [
+      0.111429,
+      0.438571,
+      0.14,
+      0.377143,
+      0.105714
+     ],
+     "top_values": [],
+     "description": "x position. x-axis position of the dish in this menu page",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ypos",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 150008,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 0.98064,
+     "examples": [
+      0.254735,
+      0.261922,
+      0.26272,
+      0.313178,
+      0.30105
+     ],
+     "top_values": [],
+     "description": "y position. y-axis position of the dish in this menu page",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "menu_page_id": 1389,
+     "price": 0.4,
+     "high_price": null,
+     "dish_id": 1,
+     "created_at": "2011-03-28 15:00:44 UTC",
+     "updated_at": "2011-04-19 04:33:15 UTC",
+     "xpos": 0.111429,
+     "ypos": 0.254735
+    },
+    {
+     "id": 2,
+     "menu_page_id": 1389,
+     "price": 0.6,
+     "high_price": null,
+     "dish_id": 2,
+     "created_at": "2011-03-28 15:01:13 UTC",
+     "updated_at": "2011-04-19 15:00:54 UTC",
+     "xpos": 0.438571,
+     "ypos": 0.254735
+    },
+    {
+     "id": 3,
+     "menu_page_id": 1389,
+     "price": 0.4,
+     "high_price": null,
+     "dish_id": 3,
+     "created_at": "2011-03-28 15:01:40 UTC",
+     "updated_at": "2011-04-19 19:10:05 UTC",
+     "xpos": 0.14,
+     "ypos": 0.261922
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 1,334,410 rows"
+   ]
+  },
+  {
+   "name": "MenuPage",
+   "row_count": 66937,
+   "stats_rows": 66937,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 66937,
+     "is_unique": true,
+     "min_value": 119,
+     "max_value": 77431,
+     "examples": [
+      119,
+      120,
+      121,
+      122,
+      123
+     ],
+     "top_values": [],
+     "description": "the unique id number indentifying the menupage",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "menu_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 19816,
+     "is_unique": false,
+     "min_value": 12460,
+     "max_value": 35526,
+     "examples": [
+      12460,
+      12461,
+      12462,
+      12463,
+      12464
+     ],
+     "top_values": [],
+     "description": "menu id. the id of the menu",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "page_number",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.018,
+     "distinct_count": 74,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 74,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the page number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "image_id",
+     "declared_type": "REAL",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 63223,
+     "is_unique": false,
+     "min_value": 447280.0,
+     "max_value": 4000022668.0,
+     "examples": [
+      1603595.0,
+      1603596.0,
+      1603597.0,
+      1603598.0,
+      1603591.0
+     ],
+     "top_values": [],
+     "description": "image id. the id of the image",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "full_height",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0049,
+     "distinct_count": 5612,
+     "is_unique": false,
+     "min_value": 616,
+     "max_value": 12044,
+     "examples": [
+      7230,
+      5428,
+      3074,
+      3049,
+      3690
+     ],
+     "top_values": [],
+     "description": "full height of the menu page",
+     "value_description": "(mm)",
+     "notes": []
+    },
+    {
+     "name": "full_width",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0049,
+     "distinct_count": 5041,
+     "is_unique": false,
+     "min_value": 558,
+     "max_value": 9175,
+     "examples": [
+      5428,
+      7230,
+      2046,
+      2004,
+      2888
+     ],
+     "top_values": [],
+     "description": "full width of the menu page",
+     "value_description": "(mm)",
+     "notes": []
+    },
+    {
+     "name": "uuid",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 63041,
+     "is_unique": false,
+     "min_value": "000b9940-5169-0132-ef55-58d385a7b928",
+     "max_value": "fff6dec0-5168-0132-81d8-58d385a7b928",
+     "examples": [
+      "510d47e4-2955-a3d9-e040-e00a18064a99",
+      "510d47e4-2956-a3d9-e040-e00a18064a99",
+      "510d47e4-2957-a3d9-e040-e00a18064a99",
+      "510d47e4-2958-a3d9-e040-e00a18064a99",
+      "510d47e4-2959-a3d9-e040-e00a18064a99"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 119,
+     "menu_id": 12460,
+     "page_number": 1,
+     "image_id": 1603595.0,
+     "full_height": 7230,
+     "full_width": 5428,
+     "uuid": "510d47e4-2955-a3d9-e040-e00a18064a99"
+    },
+    {
+     "id": 120,
+     "menu_id": 12460,
+     "page_number": 2,
+     "image_id": 1603596.0,
+     "full_height": 5428,
+     "full_width": 7230,
+     "uuid": "510d47e4-2956-a3d9-e040-e00a18064a99"
+    },
+    {
+     "id": 121,
+     "menu_id": 12460,
+     "page_number": 3,
+     "image_id": 1603597.0,
+     "full_height": 7230,
+     "full_width": 5428,
+     "uuid": "510d47e4-2957-a3d9-e040-e00a18064a99"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "MenuItem",
+   "from_column": "menu_page_id",
+   "to_table": "MenuPage",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "MenuItem",
+   "from_column": "dish_id",
+   "to_table": "Dish",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "MenuPage",
+   "from_column": "menu_id",
+   "to_table": "Menu",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

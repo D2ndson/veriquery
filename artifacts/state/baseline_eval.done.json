@@ -1,0 +1,23 @@
+{
+ "stage": "baseline_eval",
+ "seconds": 1414.8,
+ "finished": "2026-11-06 19:49:54",
+ "info": {
+  "once": {
+   "accuracy": 0.39436619718309857,
+   "n": 497
+  },
+  "final": {
+   "accuracy": 0.42424242424242425,
+   "n": 99
+  },
+  "original": {
+   "accuracy": 0.43434343434343436,
+   "n": 99
+  },
+  "shop": {
+   "accuracy": 0.525,
+   "n": 40
+  }
+ }
+}

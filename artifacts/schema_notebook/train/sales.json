@@ -1,0 +1,1024 @@
+{
+ "db_id": "sales",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/sales/sales.sqlite",
+ "fingerprint": "130338816-1793993021759350452-v1.0",
+ "created_at": "2026-11-06T19:25:09+00:00",
+ "profile_seconds": 0.34,
+ "tables": [
+  {
+   "name": "Customers",
+   "row_count": 19759,
+   "stats_rows": 19759,
+   "columns": [
+    {
+     "name": "CustomerID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 19759,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 19759,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "Customer ID. the unique id of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "FirstName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1011,
+     "is_unique": false,
+     "min_value": "Aaron",
+     "max_value": "Zoe",
+     "examples": [
+      "Aaron",
+      "Abby",
+      "Abe",
+      "Abhijit",
+      "Abigail"
+     ],
+     "top_values": [],
+     "description": "the customer's first name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "MiddleInitial",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.4217,
+     "distinct_count": 27,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "l",
+     "examples": [
+      "A",
+      "B",
+      "C",
+      "E",
+      "J"
+     ],
+     "top_values": [
+      [
+       "A",
+       1358
+      ],
+      [
+       "L",
+       1309
+      ],
+      [
+       "M",
+       1219
+      ],
+      [
+       "J",
+       1128
+      ],
+      [
+       "C",
+       939
+      ],
+      [
+       "E",
+       766
+      ],
+      [
+       "R",
+       760
+      ],
+      [
+       "D",
+       576
+      ],
+      [
+       "S",
+       495
+      ],
+      [
+       "K",
+       382
+      ],
+      [
+       "B",
+       335
+      ],
+      [
+       "W",
+       334
+      ],
+      [
+       "T",
+       284
+      ],
+      [
+       "G",
+       274
+      ],
+      [
+       "H",
+       267
+      ],
+      [
+       "P",
+       263
+      ],
+      [
+       "F",
+       244
+      ],
+      [
+       "N",
+       142
+      ],
+      [
+       "V",
+       132
+      ],
+      [
+       "I",
+       97
+      ],
+      [
+       "O",
+       64
+      ],
+      [
+       "Y",
+       21
+      ],
+      [
+       "Z",
+       16
+      ],
+      [
+       "Q",
+       9
+      ],
+      [
+       "l",
+       5
+      ],
+      [
+       "U",
+       5
+      ],
+      [
+       "X",
+       2
+      ]
+     ],
+     "description": "the customer's middle initial",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LastName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1202,
+     "is_unique": false,
+     "min_value": "Abbas",
+     "max_value": "Zwilling",
+     "examples": [
+      "Alexander",
+      "Bryant",
+      "Butler",
+      "Chen",
+      "Coleman"
+     ],
+     "top_values": [],
+     "description": "the customer's last name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "CustomerID"
+   ],
+   "sample_rows": [
+    {
+     "CustomerID": 1,
+     "FirstName": "Aaron",
+     "MiddleInitial": null,
+     "LastName": "Alexander"
+    },
+    {
+     "CustomerID": 2,
+     "FirstName": "Aaron",
+     "MiddleInitial": null,
+     "LastName": "Bryant"
+    },
+    {
+     "CustomerID": 3,
+     "FirstName": "Aaron",
+     "MiddleInitial": null,
+     "LastName": "Butler"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Employees",
+   "row_count": 22,
+   "stats_rows": 22,
+   "columns": [
+    {
+     "name": "EmployeeID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 23,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "Employee ID. the unique id of the employee",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "FirstName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": true,
+     "min_value": "Abraham",
+     "max_value": "Sylvia",
+     "examples": [
+      "Abraham",
+      "Reginald",
+      "Cheryl",
+      "Michel",
+      "Innes"
+     ],
+     "top_values": [
+      [
+       "Sylvia",
+       1
+      ],
+      [
+       "Stearns",
+       1
+      ],
+      [
+       "Sheryl",
+       1
+      ],
+      [
+       "Reginald",
+       1
+      ],
+      [
+       "Morningstar",
+       1
+      ],
+      [
+       "Michel",
+       1
+      ],
+      [
+       "Meander",
+       1
+      ],
+      [
+       "Marjorie",
+       1
+      ],
+      [
+       "Livia",
+       1
+      ],
+      [
+       "Johnson",
+       1
+      ],
+      [
+       "Innes",
+       1
+      ],
+      [
+       "Heather",
+       1
+      ],
+      [
+       "Dirk",
+       1
+      ],
+      [
+       "Dean",
+       1
+      ],
+      [
+       "Cheryl",
+       1
+      ],
+      [
+       "Charlene",
+       1
+      ],
+      [
+       "Burt",
+       1
+      ],
+      [
+       "Anne",
+       1
+      ],
+      [
+       "Ann",
+       1
+      ],
+      [
+       "Albert",
+       1
+      ],
+      [
+       "Akiko",
+       1
+      ],
+      [
+       "Abraham",
+       1
+      ]
+     ],
+     "description": "the employee's first name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "MiddleInitial",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": "a",
+     "max_value": "u",
+     "examples": [
+      "e",
+      "l",
+      "a",
+      "u",
+      "r"
+     ],
+     "top_values": [
+      [
+       "a",
+       4
+      ],
+      [
+       "r",
+       3
+      ],
+      [
+       "e",
+       3
+      ],
+      [
+       "u",
+       2
+      ],
+      [
+       "t",
+       2
+      ],
+      [
+       "o",
+       2
+      ],
+      [
+       "i",
+       2
+      ],
+      [
+       "m",
+       1
+      ],
+      [
+       "l",
+       1
+      ],
+      [
+       "h",
+       1
+      ],
+      [
+       "c",
+       1
+      ]
+     ],
+     "description": "the employee's middle initial",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LastName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": "Bennet",
+     "max_value": "del Castillo",
+     "examples": [
+      "Bennet",
+      "Blotchet-Halls",
+      "Carson",
+      "DeFrance",
+      "del Castillo"
+     ],
+     "top_values": [
+      [
+       "Ringer",
+       2
+      ],
+      [
+       "del Castillo",
+       1
+      ],
+      [
+       "Yokomoto",
+       1
+      ],
+      [
+       "White",
+       1
+      ],
+      [
+       "Stringer",
+       1
+      ],
+      [
+       "Straight",
+       1
+      ],
+      [
+       "Smith",
+       1
+      ],
+      [
+       "Panteley",
+       1
+      ],
+      [
+       "McBadden",
+       1
+      ],
+      [
+       "MacFeather",
+       1
+      ],
+      [
+       "Locksley",
+       1
+      ],
+      [
+       "Karsen",
+       1
+      ],
+      [
+       "Hunter",
+       1
+      ],
+      [
+       "Gringlesby",
+       1
+      ],
+      [
+       "Greene",
+       1
+      ],
+      [
+       "Green",
+       1
+      ],
+      [
+       "Dull",
+       1
+      ],
+      [
+       "DeFrance",
+       1
+      ],
+      [
+       "Carson",
+       1
+      ],
+      [
+       "Blotchet-Halls",
+       1
+      ],
+      [
+       "Bennet",
+       1
+      ]
+     ],
+     "description": "the employee's last name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "EmployeeID"
+   ],
+   "sample_rows": [
+    {
+     "EmployeeID": 1,
+     "FirstName": "Abraham",
+     "MiddleInitial": "e",
+     "LastName": "Bennet"
+    },
+    {
+     "EmployeeID": 2,
+     "FirstName": "Reginald",
+     "MiddleInitial": "l",
+     "LastName": "Blotchet-Halls"
+    },
+    {
+     "EmployeeID": 3,
+     "FirstName": "Cheryl",
+     "MiddleInitial": "a",
+     "LastName": "Carson"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Products",
+   "row_count": 504,
+   "stats_rows": 504,
+   "columns": [
+    {
+     "name": "ProductID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 504,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 504,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "Product ID. the unique id of the product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 504,
+     "is_unique": true,
+     "min_value": "AWC Logo Cap",
+     "max_value": "Women's Tights, S",
+     "examples": [
+      "Adjustable Race",
+      "Bearing Ball",
+      "BB Ball Bearing",
+      "Headset Ball Bearings",
+      "Blade"
+     ],
+     "top_values": [],
+     "description": "the product name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Price",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 254,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 3578.27,
+     "examples": [
+      1.6,
+      0.8,
+      2.4,
+      0.0,
+      189.6
+     ],
+     "top_values": [],
+     "description": "the price of the product",
+     "value_description": "unit price\ncommonsense evidence:\nif the price = 0.0, it means this product is free or a gift",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "ProductID"
+   ],
+   "sample_rows": [
+    {
+     "ProductID": 1,
+     "Name": "Adjustable Race",
+     "Price": 1.6
+    },
+    {
+     "ProductID": 2,
+     "Name": "Bearing Ball",
+     "Price": 0.8
+    },
+    {
+     "ProductID": 3,
+     "Name": "BB Ball Bearing",
+     "Price": 2.4
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Sales",
+   "row_count": 6715221,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "SalesID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 200000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "Sales ID. the unique id of the sales",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "SalesPersonID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 22,
+     "examples": [
+      17,
+      5,
+      8,
+      1,
+      14
+     ],
+     "top_values": [
+      [
+       1,
+       20016
+      ],
+      [
+       7,
+       12532
+      ],
+      [
+       15,
+       11893
+      ],
+      [
+       8,
+       10003
+      ],
+      [
+       22,
+       10001
+      ],
+      [
+       6,
+       9405
+      ],
+      [
+       17,
+       9393
+      ],
+      [
+       4,
+       9372
+      ],
+      [
+       10,
+       9371
+      ],
+      [
+       12,
+       9358
+      ],
+      [
+       9,
+       9352
+      ],
+      [
+       5,
+       9344
+      ],
+      [
+       21,
+       8755
+      ],
+      [
+       20,
+       8741
+      ],
+      [
+       2,
+       8732
+      ],
+      [
+       3,
+       8068
+      ],
+      [
+       13,
+       7541
+      ],
+      [
+       14,
+       7525
+      ],
+      [
+       16,
+       6846
+      ],
+      [
+       18,
+       5619
+      ],
+      [
+       11,
+       4380
+      ],
+      [
+       19,
+       3753
+      ]
+     ],
+     "description": "SalesPerson ID. the unique id of the sale person",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CustomerID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 230,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 19640,
+     "examples": [
+      10482,
+      1964,
+      12300,
+      4182,
+      15723
+     ],
+     "top_values": [],
+     "description": "Customer ID. the unique id of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ProductID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 80,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 500,
+     "examples": [
+      500,
+      306,
+      123,
+      437,
+      246
+     ],
+     "top_values": [],
+     "description": "Product ID. the unique id of the product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Quantity",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 88,
+     "is_unique": false,
+     "min_value": 10,
+     "max_value": 997,
+     "examples": [
+      500,
+      810,
+      123,
+      437,
+      750
+     ],
+     "top_values": [],
+     "description": "trading quantity",
+     "value_description": "commonsense evidence:\ntotal price = quantity x Products' Price",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "SalesID"
+   ],
+   "sample_rows": [
+    {
+     "SalesID": 1,
+     "SalesPersonID": 17,
+     "CustomerID": 10482,
+     "ProductID": 500,
+     "Quantity": 500
+    },
+    {
+     "SalesID": 2,
+     "SalesPersonID": 5,
+     "CustomerID": 1964,
+     "ProductID": 306,
+     "Quantity": 810
+    },
+    {
+     "SalesID": 3,
+     "SalesPersonID": 8,
+     "CustomerID": 12300,
+     "ProductID": 123,
+     "Quantity": 123
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 6,715,221 rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "Sales",
+   "from_column": "ProductID",
+   "to_table": "Products",
+   "to_column": "ProductID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Sales",
+   "from_column": "CustomerID",
+   "to_table": "Customers",
+   "to_column": "CustomerID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Sales",
+   "from_column": "SalesPersonID",
+   "to_table": "Employees",
+   "to_column": "EmployeeID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

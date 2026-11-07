@@ -1,0 +1,13 @@
+{
+ "stage": "pref_data",
+ "seconds": 0.1,
+ "finished": "2026-11-06 20:55:34",
+ "info": {
+  "pairs_gold": 260,
+  "pairs_labelfree": 232,
+  "repair_sft": 42,
+  "labelfree_pairs_where_chosen_correct_and_rejected_wrong": 110,
+  "labelfree_pairs_where_preference_contradicts_gold": 18,
+  "labelfree_agreement_with_gold": 0.859375
+ }
+}

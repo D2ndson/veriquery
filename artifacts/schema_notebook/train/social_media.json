@@ -1,0 +1,1018 @@
+{
+ "db_id": "social_media",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/social_media/social_media.sqlite",
+ "fingerprint": "69132288-1793993025027416311-v1.0",
+ "created_at": "2026-11-06T19:25:16+00:00",
+ "profile_seconds": 3.245,
+ "tables": [
+  {
+   "name": "location",
+   "row_count": 6211,
+   "stats_rows": 6211,
+   "columns": [
+    {
+     "name": "LocationID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6211,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 6290,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "location id. unique id of the location",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0002,
+     "distinct_count": 174,
+     "is_unique": false,
+     "min_value": "Albania",
+     "max_value": "Zimbabwe",
+     "examples": [
+      "Albania",
+      "Algeria",
+      "Andorra",
+      "Angola",
+      "Anguilla"
+     ],
+     "top_values": [],
+     "description": "the country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "State",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0185,
+     "distinct_count": 1216,
+     "is_unique": false,
+     "min_value": "Aargau",
+     "max_value": "Zurich",
+     "examples": [
+      "Elbasan",
+      "Tirane",
+      "Souk Ahras",
+      "Alger",
+      "Constantine"
+     ],
+     "top_values": [],
+     "description": "the state",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "StateCode",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0174,
+     "distinct_count": 386,
+     "is_unique": false,
+     "min_value": "AD",
+     "max_value": "ZW",
+     "examples": [
+      "AL",
+      "DZ",
+      "AD",
+      "AO",
+      "AI"
+     ],
+     "top_values": [],
+     "description": "state code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "City",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0253,
+     "distinct_count": 5444,
+     "is_unique": false,
+     "min_value": "A Corua",
+     "max_value": "zmit",
+     "examples": [
+      "Elbasan",
+      "Tirana",
+      "Souk Ahras",
+      "Algiers",
+      "Constantine"
+     ],
+     "top_values": [],
+     "description": "the city",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "LocationID"
+   ],
+   "sample_rows": [
+    {
+     "LocationID": 1,
+     "Country": "Albania",
+     "State": "Elbasan",
+     "StateCode": "AL",
+     "City": "Elbasan"
+    },
+    {
+     "LocationID": 2,
+     "Country": "Albania",
+     "State": "Tirane",
+     "StateCode": "AL",
+     "City": "Tirana"
+    },
+    {
+     "LocationID": 3,
+     "Country": "Algeria",
+     "State": "Souk Ahras",
+     "StateCode": "DZ",
+     "City": "Souk Ahras"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "twitter",
+   "row_count": 99901,
+   "stats_rows": 99901,
+   "columns": [
+    {
+     "name": "TweetID",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 99900,
+     "is_unique": true,
+     "min_value": "tw-682712873332805633",
+     "max_value": "tw-716352771209887744",
+     "examples": [
+      "tw-682712873332805633",
+      "tw-682713045357998080",
+      "tw-682713219375476736",
+      "tw-682713436967579648",
+      "tw-682714048199311366"
+     ],
+     "top_values": [],
+     "description": "tweet id. the unique id of the tweet",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Weekday",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "Friday",
+     "max_value": "Wednesday",
+     "examples": [
+      "Thursday",
+      "Friday"
+     ],
+     "top_values": [
+      [
+       "Tuesday",
+       18462
+      ],
+      [
+       "Thursday",
+       18415
+      ],
+      [
+       "Wednesday",
+       18199
+      ],
+      [
+       "Monday",
+       15416
+      ],
+      [
+       "Friday",
+       15003
+      ],
+      [
+       "Saturday",
+       7417
+      ],
+      [
+       "Sunday",
+       6988
+      ]
+     ],
+     "description": "the weekday that the tweet has been posted",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Hour",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 23,
+     "examples": [
+      17,
+      18,
+      19,
+      20,
+      21
+     ],
+     "top_values": [
+      [
+       11,
+       6180
+      ],
+      [
+       10,
+       6166
+      ],
+      [
+       9,
+       5935
+      ],
+      [
+       12,
+       5806
+      ],
+      [
+       13,
+       5340
+      ],
+      [
+       8,
+       5304
+      ],
+      [
+       14,
+       5232
+      ],
+      [
+       15,
+       5095
+      ],
+      [
+       7,
+       4883
+      ],
+      [
+       16,
+       4696
+      ],
+      [
+       17,
+       4325
+      ],
+      [
+       6,
+       4228
+      ],
+      [
+       18,
+       3624
+      ],
+      [
+       5,
+       3490
+      ],
+      [
+       19,
+       3397
+      ],
+      [
+       2,
+       3136
+      ],
+      [
+       4,
+       3101
+      ],
+      [
+       1,
+       3055
+      ],
+      [
+       20,
+       3018
+      ],
+      [
+       21,
+       2944
+      ],
+      [
+       3,
+       2929
+      ],
+      [
+       0,
+       2762
+      ],
+      [
+       22,
+       2700
+      ],
+      [
+       23,
+       2554
+      ]
+     ],
+     "description": "the hour that the tweet has been posted",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Day",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 31,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 31,
+     "examples": [
+      31,
+      1
+     ],
+     "top_values": [
+      [
+       15,
+       4517
+      ],
+      [
+       22,
+       4403
+      ],
+      [
+       14,
+       4219
+      ],
+      [
+       9,
+       4175
+      ],
+      [
+       17,
+       4084
+      ],
+      [
+       16,
+       3915
+      ],
+      [
+       12,
+       3849
+      ],
+      [
+       10,
+       3848
+      ],
+      [
+       23,
+       3825
+      ],
+      [
+       1,
+       3641
+      ],
+      [
+       11,
+       3590
+      ],
+      [
+       13,
+       3589
+      ],
+      [
+       25,
+       3565
+      ],
+      [
+       21,
+       3512
+      ],
+      [
+       18,
+       3433
+      ],
+      [
+       29,
+       3325
+      ],
+      [
+       24,
+       3119
+      ],
+      [
+       8,
+       3052
+      ],
+      [
+       28,
+       2931
+      ],
+      [
+       19,
+       2844
+      ],
+      [
+       2,
+       2829
+      ],
+      [
+       26,
+       2789
+      ],
+      [
+       4,
+       2551
+      ],
+      [
+       5,
+       2499
+      ],
+      [
+       31,
+       2461
+      ],
+      [
+       7,
+       2450
+      ],
+      [
+       3,
+       2420
+      ],
+      [
+       27,
+       2327
+      ],
+      [
+       20,
+       2252
+      ],
+      [
+       6,
+       2098
+      ],
+      [
+       30,
+       1788
+      ]
+     ],
+     "description": "the day that the tweet has been posted",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Lang",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 36,
+     "is_unique": false,
+     "min_value": "_u",
+     "max_value": "zh",
+     "examples": [
+      "en",
+      "_u"
+     ],
+     "top_values": [
+      [
+       "en",
+       91788
+      ],
+      [
+       "es",
+       1700
+      ],
+      [
+       "fr",
+       1085
+      ],
+      [
+       "tr",
+       877
+      ],
+      [
+       "_u",
+       860
+      ],
+      [
+       "ja",
+       671
+      ],
+      [
+       "de",
+       563
+      ],
+      [
+       "in",
+       415
+      ],
+      [
+       "tl",
+       370
+      ],
+      [
+       "ko",
+       330
+      ],
+      [
+       "pt",
+       222
+      ],
+      [
+       "nl",
+       172
+      ],
+      [
+       "it",
+       135
+      ],
+      [
+       "zh",
+       110
+      ],
+      [
+       "th",
+       81
+      ],
+      [
+       "pl",
+       77
+      ],
+      [
+       "cs",
+       74
+      ],
+      [
+       "ru",
+       56
+      ],
+      [
+       "fi",
+       52
+      ],
+      [
+       "et",
+       42
+      ],
+      [
+       "ro",
+       33
+      ],
+      [
+       "ht",
+       28
+      ],
+      [
+       "sv",
+       27
+      ],
+      [
+       "da",
+       27
+      ],
+      [
+       "cy",
+       27
+      ],
+      [
+       "ar",
+       22
+      ],
+      [
+       "hu",
+       19
+      ],
+      [
+       "no",
+       13
+      ],
+      [
+       "lt",
+       8
+      ],
+      [
+       "lv",
+       5
+      ],
+      [
+       "hi",
+       3
+      ],
+      [
+       "uk",
+       2
+      ],
+      [
+       "sl",
+       2
+      ],
+      [
+       "iw",
+       2
+      ],
+      [
+       "km",
+       1
+      ],
+      [
+       "eu",
+       1
+      ]
+     ],
+     "description": "the language of the tweet",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "IsReshare",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "TRUE",
+     "examples": [
+      "FALSE",
+      "TRUE"
+     ],
+     "top_values": [
+      [
+       "FALSE",
+       64450
+      ],
+      [
+       "TRUE",
+       35450
+      ]
+     ],
+     "description": "whether the tweet is reshared",
+     "value_description": "commonsense evidence:\r\nA reshared tweet is when someone reshares or forwards a post to their own Twitter \r\n\ttrue: the tweet is reshared\r\n\tfalse: the tweet isn't reshared",
+     "notes": []
+    },
+    {
+     "name": "Reach",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12457,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 10342452,
+     "examples": [
+      44,
+      1810,
+      282,
+      2087,
+      953
+     ],
+     "top_values": [],
+     "description": "the reach of the tweet",
+     "value_description": "commonsense evidence:\r\nreach counts the number of unique users who have seen your tweet",
+     "notes": []
+    },
+    {
+     "name": "RetweetCount",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 478,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 26127,
+     "examples": [
+      0,
+      5,
+      4,
+      1,
+      6
+     ],
+     "top_values": [],
+     "description": "the retweet count",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Likes",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 87,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 133,
+     "examples": [
+      0
+     ],
+     "top_values": [],
+     "description": "the number of likes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Klout",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 84,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 99,
+     "examples": [
+      35,
+      53,
+      47,
+      31,
+      49
+     ],
+     "top_values": [],
+     "description": "the klout of the tweet",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Sentiment",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 318,
+     "is_unique": false,
+     "min_value": -6.0,
+     "max_value": 7.333333492,
+     "examples": [
+      0.0,
+      2.0,
+      -1.0,
+      -2.0,
+      1.0
+     ],
+     "top_values": [],
+     "description": "the sentiment of the tweet",
+     "value_description": "commonsense evidence:\r\n\t>0: the sentiment of the tweet is positive. \r\n\t=0: the sentiment of the tweet is neutral.\r\n\t<0: the sentiment of the tweet is negative.",
+     "notes": []
+    },
+    {
+     "name": "text",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 70198,
+     "is_unique": false,
+     "min_value": "! �qwiklabs �31 ���amazon aws ! ! ! :-)",
+     "max_value": "�����������HP Microserver. AWS �VPS �.",
+     "examples": [
+      "We are hiring: Senior Software Engineer - Proto http://www.r...",
+      "RT @CodeMineStatus: This is true Amazon Web Services https:/...",
+      "Devops Engineer Aws Ansible Cassandra Mysql Ubuntu Ruby On R...",
+      "Happy New Year to all those AWS instances of ours!",
+      "Amazon is hiring! #Sr. #International Tax Manager - AWS in #..."
+     ],
+     "top_values": [],
+     "description": "the text of the tweet",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LocationID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4307,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 6289,
+     "examples": [
+      3751,
+      3989,
+      3741,
+      3753,
+      3744
+     ],
+     "top_values": [],
+     "description": "the location id of the poster",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "UserID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 33185,
+     "is_unique": false,
+     "min_value": "tw-10000632",
+     "max_value": "tw-99993643",
+     "examples": [
+      "tw-40932430",
+      "tw-3179389829",
+      "tw-4624808414",
+      "tw-356447127",
+      "tw-3172686669"
+     ],
+     "top_values": [],
+     "description": "the user id of the poster",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "TweetID"
+   ],
+   "sample_rows": [
+    {
+     "TweetID": "tw-682712873332805633",
+     "Weekday": "Thursday",
+     "Hour": 17,
+     "Day": 31,
+     "Lang": "en",
+     "IsReshare": "FALSE",
+     "Reach": 44,
+     "RetweetCount": 0,
+     "Likes": 0,
+     "Klout": 35,
+     "Sentiment": 0.0,
+     "text": "We are hiring: Senior Software Engineer - Proto http://www.r...",
+     "LocationID": 3751,
+     "UserID": "tw-40932430"
+    },
+    {
+     "TweetID": "tw-682713045357998080",
+     "Weekday": "Thursday",
+     "Hour": 17,
+     "Day": 31,
+     "Lang": "en",
+     "IsReshare": "TRUE",
+     "Reach": 1810,
+     "RetweetCount": 5,
+     "Likes": 0,
+     "Klout": 53,
+     "Sentiment": 2.0,
+     "text": "RT @CodeMineStatus: This is true Amazon Web Services https:/...",
+     "LocationID": 3989,
+     "UserID": "tw-3179389829"
+    },
+    {
+     "TweetID": "tw-682713219375476736",
+     "Weekday": "Thursday",
+     "Hour": 17,
+     "Day": 31,
+     "Lang": "en",
+     "IsReshare": "FALSE",
+     "Reach": 282,
+     "RetweetCount": 0,
+     "Likes": 0,
+     "Klout": 47,
+     "Sentiment": 0.0,
+     "text": "Devops Engineer Aws Ansible Cassandra Mysql Ubuntu Ruby On R...",
+     "LocationID": 3741,
+     "UserID": "tw-4624808414"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "user",
+   "row_count": 99260,
+   "stats_rows": 99260,
+   "columns": [
+    {
+     "name": "UserID",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 99260,
+     "is_unique": true,
+     "min_value": "\u001anknow531394",
+     "max_value": "tw-99993643",
+     "examples": [
+      "tw-1267804344",
+      "tw-27229880",
+      "tw-199664730",
+      "tw-99958381",
+      "tw-126745533"
+     ],
+     "top_values": [],
+     "description": "user id. the unique id of the user",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "Female",
+     "max_value": "Unknown",
+     "examples": [
+      "Unknown",
+      "Male",
+      "Unisex",
+      "Female"
+     ],
+     "top_values": [
+      [
+       "Male",
+       46378
+      ],
+      [
+       "Unknown",
+       27955
+      ],
+      [
+       "Female",
+       15187
+      ],
+      [
+       "Unisex",
+       9740
+      ]
+     ],
+     "description": "user's gender",
+     "value_description": "Male / Female / Unknown",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "UserID"
+   ],
+   "sample_rows": [
+    {
+     "UserID": "tw-1267804344",
+     "Gender": "Unknown"
+    },
+    {
+     "UserID": "tw-27229880",
+     "Gender": "Male"
+    },
+    {
+     "UserID": "tw-199664730",
+     "Gender": "Male"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "twitter",
+   "from_column": "UserID",
+   "to_table": "user",
+   "to_column": "UserID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "twitter",
+   "from_column": "LocationID",
+   "to_table": "location",
+   "to_column": "LocationID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

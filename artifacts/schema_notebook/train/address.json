@@ -1,0 +1,2518 @@
+{
+ "db_id": "address",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/address/address.sqlite",
+ "fingerprint": "26550272-1793993050738935042-v1.0",
+ "created_at": "2026-11-06T19:24:50+00:00",
+ "profile_seconds": 1.809,
+ "tables": [
+  {
+   "name": "CBSA",
+   "row_count": 465,
+   "stats_rows": 465,
+   "columns": [
+    {
+     "name": "CBSA",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 465,
+     "is_unique": true,
+     "min_value": 10300,
+     "max_value": 49780,
+     "examples": [
+      10300,
+      10380,
+      10420,
+      10500,
+      10580
+     ],
+     "top_values": [],
+     "description": "the code of the cbsa officer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CBSA_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 465,
+     "is_unique": true,
+     "min_value": "Adrian, MI",
+     "max_value": "Zanesville, OH",
+     "examples": [
+      "Adrian, MI",
+      "Aguadilla-Isabela, PR",
+      "Akron, OH",
+      "Albany, GA",
+      "Albany-Schenectady-Troy, NY"
+     ],
+     "top_values": [],
+     "description": "cbsa name. the name and the position of the cbsa officer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CBSA_type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "Metro",
+     "max_value": "Micro",
+     "examples": [
+      "Micro",
+      "Metro"
+     ],
+     "top_values": [
+      [
+       "Micro",
+       256
+      ],
+      [
+       "Metro",
+       209
+      ]
+     ],
+     "description": "cbsa type. the office type of the officer",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "CBSA"
+   ],
+   "sample_rows": [
+    {
+     "CBSA": 10300,
+     "CBSA_name": "Adrian, MI",
+     "CBSA_type": "Micro"
+    },
+    {
+     "CBSA": 10380,
+     "CBSA_name": "Aguadilla-Isabela, PR",
+     "CBSA_type": "Metro"
+    },
+    {
+     "CBSA": 10420,
+     "CBSA_name": "Akron, OH",
+     "CBSA_type": "Metro"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "alias",
+   "row_count": 41701,
+   "stats_rows": 41701,
+   "columns": [
+    {
+     "name": "zip_code",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 41701,
+     "is_unique": true,
+     "min_value": 501,
+     "max_value": 99950,
+     "examples": [
+      501,
+      544,
+      601,
+      602,
+      603
+     ],
+     "top_values": [],
+     "description": "the zip code of the alias",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "alias",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 18667,
+     "is_unique": false,
+     "min_value": "APO",
+     "max_value": "Zwolle",
+     "examples": [
+      "Holtsville",
+      "Adjuntas",
+      "Aguada",
+      "Aguadilla",
+      "Maricao"
+     ],
+     "top_values": [],
+     "description": "the alias of the city",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "zip_code"
+   ],
+   "sample_rows": [
+    {
+     "zip_code": 501,
+     "alias": "Holtsville"
+    },
+    {
+     "zip_code": 544,
+     "alias": "Holtsville"
+    },
+    {
+     "zip_code": 601,
+     "alias": "Adjuntas"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "area_code",
+   "row_count": 53796,
+   "stats_rows": 53796,
+   "columns": [
+    {
+     "name": "zip_code",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 41698,
+     "is_unique": false,
+     "min_value": 501,
+     "max_value": 99950,
+     "examples": [
+      501,
+      544,
+      601,
+      602,
+      603
+     ],
+     "top_values": [],
+     "description": "the zip code of the area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "area_code",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 331,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 989,
+     "examples": [
+      631,
+      787,
+      939,
+      340
+     ],
+     "top_values": [],
+     "description": "area code. the code of the area",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "zip_code",
+    "area_code"
+   ],
+   "sample_rows": [
+    {
+     "zip_code": 501,
+     "area_code": 631
+    },
+    {
+     "zip_code": 544,
+     "area_code": 631
+    },
+    {
+     "zip_code": 601,
+     "area_code": 787
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "avoid",
+   "row_count": 24114,
+   "stats_rows": 24114,
+   "columns": [
+    {
+     "name": "zip_code",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 11228,
+     "is_unique": false,
+     "min_value": 501,
+     "max_value": 99812,
+     "examples": [
+      501,
+      544,
+      601,
+      602,
+      603
+     ],
+     "top_values": [],
+     "description": "the zip code of the bad alias",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "bad_alias",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 18262,
+     "is_unique": false,
+     "min_value": "100 Palms",
+     "max_value": "Zylks",
+     "examples": [
+      "Internal Revenue Service",
+      "Colinas Del Gigante",
+      "Jard De Adjuntas",
+      "URB San Joaquin",
+      "Alts De Aguada"
+     ],
+     "top_values": [],
+     "description": "the bad alias",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "zip_code",
+    "bad_alias"
+   ],
+   "sample_rows": [
+    {
+     "zip_code": 501,
+     "bad_alias": "Internal Revenue Service"
+    },
+    {
+     "zip_code": 544,
+     "bad_alias": "Internal Revenue Service"
+    },
+    {
+     "zip_code": 601,
+     "bad_alias": "Colinas Del Gigante"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "congress",
+   "row_count": 540,
+   "stats_rows": 540,
+   "columns": [
+    {
+     "name": "cognress_rep_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 540,
+     "is_unique": true,
+     "min_value": "AK",
+     "max_value": "WY-S2",
+     "examples": [
+      "AK",
+      "AK-S1",
+      "AK-S2",
+      "AL-1",
+      "AL-2"
+     ],
+     "top_values": [],
+     "description": "congress representative id. the representative id of congress representatives",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "first_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 488,
+     "is_unique": false,
+     "min_value": "Adams",
+     "max_value": "Young",
+     "examples": [
+      "Young",
+      "Begich",
+      "Murkowski",
+      "Byrne",
+      "Roby"
+     ],
+     "top_values": [],
+     "description": "the first name of the congress representative",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 319,
+     "is_unique": false,
+     "min_value": "Aaron",
+     "max_value": "Zoe",
+     "examples": [
+      "Don",
+      "Mark",
+      "Lisa",
+      "Bradley",
+      "Martha"
+     ],
+     "top_values": [],
+     "description": "the last name of the congress representative",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CID",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 540,
+     "is_unique": true,
+     "min_value": "N00000078",
+     "max_value": "N00036154",
+     "examples": [
+      "N00008091",
+      "N00009585",
+      "N00033101",
+      "N00031938",
+      "N00031177"
+     ],
+     "top_values": [],
+     "description": "the unique identifier for the congress representative",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "party",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Democrat",
+     "max_value": "Republican",
+     "examples": [
+      "Republican",
+      "Democrat"
+     ],
+     "top_values": [
+      [
+       "Republican",
+       279
+      ],
+      [
+       "Democrat",
+       259
+      ],
+      [
+       "Independent",
+       2
+      ]
+     ],
+     "description": "the party of the representative",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 55,
+     "is_unique": false,
+     "min_value": "Alabama",
+     "max_value": "Wyoming",
+     "examples": [
+      "Alaska",
+      "Alabama",
+      "Arkansas",
+      "American Samoa",
+      "Arizona"
+     ],
+     "top_values": [],
+     "description": "the state that the representative is from",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "abbreviation",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 55,
+     "is_unique": false,
+     "min_value": "AK",
+     "max_value": "WY",
+     "examples": [
+      "AK",
+      "AL",
+      "AR",
+      "AS",
+      "AZ"
+     ],
+     "top_values": [],
+     "description": "the abbreviation of the state",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "House",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "House of Repsentatives",
+     "max_value": "Senate",
+     "examples": [
+      "House of Repsentatives",
+      "Senate"
+     ],
+     "top_values": [
+      [
+       "House of Repsentatives",
+       440
+      ],
+      [
+       "Senate",
+       100
+      ]
+     ],
+     "description": "the house that the representative is from",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "District",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2019,
+     "distinct_count": 53,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 53,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the id of the district that the representative represents",
+     "value_description": "commonsense evidence: The state is divided into different districts. The districts under the same state will be numbered uniformly. \r\n'NA' means that the state is not divided into districts.",
+     "notes": []
+    },
+    {
+     "name": "land_area",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 480,
+     "is_unique": false,
+     "min_value": 10.25,
+     "max_value": 571951.26,
+     "examples": [
+      571951.26,
+      570641.0,
+      6066.83,
+      10141.63,
+      7543.86
+     ],
+     "top_values": [],
+     "description": "the land area of the district",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "cognress_rep_id"
+   ],
+   "sample_rows": [
+    {
+     "cognress_rep_id": "AK",
+     "first_name": "Young",
+     "last_name": "Don",
+     "CID": "N00008091",
+     "party": "Republican",
+     "state": "Alaska",
+     "abbreviation": "AK",
+     "House": "House of Repsentatives",
+     "District": null,
+     "land_area": 571951.26
+    },
+    {
+     "cognress_rep_id": "AK-S1",
+     "first_name": "Begich",
+     "last_name": "Mark",
+     "CID": "N00009585",
+     "party": "Democrat",
+     "state": "Alaska",
+     "abbreviation": "AK",
+     "House": "Senate",
+     "District": null,
+     "land_area": 570641.0
+    },
+    {
+     "cognress_rep_id": "AK-S2",
+     "first_name": "Murkowski",
+     "last_name": "Lisa",
+     "CID": "N00033101",
+     "party": "Republican",
+     "state": "Alaska",
+     "abbreviation": "AK",
+     "House": "Senate",
+     "District": null,
+     "land_area": 570641.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "country",
+   "row_count": 51001,
+   "stats_rows": 51001,
+   "columns": [
+    {
+     "name": "zip_code",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 40361,
+     "is_unique": false,
+     "min_value": 501,
+     "max_value": 99950,
+     "examples": [
+      501,
+      544,
+      601,
+      602,
+      603
+     ],
+     "top_values": [],
+     "description": "the zip code of the state in the country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "county",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2159,
+     "is_unique": false,
+     "min_value": "ABBEVILLE",
+     "max_value": "ZIEBACH",
+     "examples": [
+      "SUFFOLK",
+      "ADJUNTAS",
+      "AGUADA",
+      "AGUADILLA",
+      "MARICAO"
+     ],
+     "top_values": [],
+     "description": "the country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0075,
+     "distinct_count": 57,
+     "is_unique": false,
+     "min_value": "AL",
+     "max_value": "WY",
+     "examples": [
+      "NY",
+      "PR",
+      "VI"
+     ],
+     "top_values": [],
+     "description": "the state of the country",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "zip_code",
+    "county"
+   ],
+   "sample_rows": [
+    {
+     "zip_code": 501,
+     "county": "SUFFOLK",
+     "state": "NY"
+    },
+    {
+     "zip_code": 544,
+     "county": "SUFFOLK",
+     "state": "NY"
+    },
+    {
+     "zip_code": 601,
+     "county": "ADJUNTAS",
+     "state": "PR"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "state",
+   "row_count": 62,
+   "stats_rows": 62,
+   "columns": [
+    {
+     "name": "abbreviation",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 62,
+     "is_unique": true,
+     "min_value": "AA",
+     "max_value": "WY",
+     "examples": [
+      "AA",
+      "AE",
+      "AK",
+      "AL",
+      "AP"
+     ],
+     "top_values": [],
+     "description": "the abbreviation of the state name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 62,
+     "is_unique": true,
+     "min_value": "Alabama",
+     "max_value": "Wyoming",
+     "examples": [
+      "Armed Forces Americas",
+      "Armed Forces Europe",
+      "Alaska",
+      "Alabama",
+      "Armed Forces Pacific"
+     ],
+     "top_values": [],
+     "description": "the state name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "abbreviation"
+   ],
+   "sample_rows": [
+    {
+     "abbreviation": "AA",
+     "name": "Armed Forces Americas"
+    },
+    {
+     "abbreviation": "AE",
+     "name": "Armed Forces Europe"
+    },
+    {
+     "abbreviation": "AK",
+     "name": "Alaska"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "zip_congress",
+   "row_count": 45231,
+   "stats_rows": 45231,
+   "columns": [
+    {
+     "name": "zip_code",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 39232,
+     "is_unique": false,
+     "min_value": 501,
+     "max_value": 99674,
+     "examples": [
+      501,
+      601,
+      602,
+      603,
+      604
+     ],
+     "top_values": [],
+     "description": "the zip code of the district",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "district",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 439,
+     "is_unique": false,
+     "min_value": "AK",
+     "max_value": "WY-1",
+     "examples": [
+      "NY-1",
+      "PR",
+      "VI",
+      "MA-1",
+      "MA-2"
+     ],
+     "top_values": [],
+     "description": "the district",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "zip_code",
+    "district"
+   ],
+   "sample_rows": [
+    {
+     "zip_code": 501,
+     "district": "NY-1"
+    },
+    {
+     "zip_code": 601,
+     "district": "PR"
+    },
+    {
+     "zip_code": 602,
+     "district": "PR"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "zip_data",
+   "row_count": 41563,
+   "stats_rows": 41563,
+   "columns": [
+    {
+     "name": "zip_code",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 41563,
+     "is_unique": true,
+     "min_value": 501,
+     "max_value": 99674,
+     "examples": [
+      501,
+      544,
+      601,
+      602,
+      603
+     ],
+     "top_values": [],
+     "description": "the zip code of the postal point",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 18577,
+     "is_unique": false,
+     "min_value": "APO",
+     "max_value": "Zwolle",
+     "examples": [
+      "Holtsville",
+      "Adjuntas",
+      "Aguada",
+      "Aguadilla",
+      "Maricao"
+     ],
+     "top_values": [],
+     "description": "the city where the postal point locates",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 62,
+     "is_unique": false,
+     "min_value": "AA",
+     "max_value": "WY",
+     "examples": [
+      "NY",
+      "PR",
+      "VI",
+      "MA"
+     ],
+     "top_values": [],
+     "description": "the state of the city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "multi_county",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "No",
+     "max_value": "Yes",
+     "examples": [
+      "No",
+      "Yes"
+     ],
+     "top_values": [
+      [
+       "No",
+       33097
+      ],
+      [
+       "Yes",
+       8466
+      ]
+     ],
+     "description": "multi country. whether the country that the city belongs to is multi_country",
+     "value_description": "commonsense evidence: The meaning of multi_country is consisting of or involving multiple countries.",
+     "notes": []
+    },
+    {
+     "name": "type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": "APO/FPO Military",
+     "max_value": "Unique Post Office",
+     "examples": [
+      "Unique Post Office",
+      "Post Office",
+      "P.O. Box Only",
+      "Branch",
+      "Non Postal Community Name"
+     ],
+     "top_values": [
+      [
+       "Post Office",
+       27230
+      ],
+      [
+       "P.O. Box Only",
+       9080
+      ],
+      [
+       "Unique Post Office",
+       2011
+      ],
+      [
+       "Non Postal Community Name",
+       1728
+      ],
+      [
+       "Branch",
+       654
+      ],
+      [
+       "APO/FPO Military",
+       621
+      ],
+      [
+       "Community Post Office ",
+       162
+      ],
+      [
+       "Non Postal Community Name-Unique",
+       50
+      ],
+      [
+       "Branch-Unique",
+       27
+      ]
+     ],
+     "description": "the type of the postal point",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "organization",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9516,
+     "distinct_count": 1675,
+     "is_unique": false,
+     "min_value": "1st National Bank Of Omaha",
+     "max_value": "ort Chaffee",
+     "examples": [
+      "I R S Service Center",
+      "Irs Service Center",
+      "Centro Medico Metropolitano",
+      "Unique Brm",
+      "Bureau Of Census"
+     ],
+     "top_values": [],
+     "description": "the organization to which the postal point belongs",
+     "value_description": "commonsense evidence: 'No data' means the postal point is not affiliated with any organization",
+     "notes": [
+      "95% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "time_zone",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0146,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": "Alaska",
+     "max_value": "Palau",
+     "examples": [
+      "Eastern",
+      "Atlantic"
+     ],
+     "top_values": [
+      [
+       "Eastern",
+       18604
+      ],
+      [
+       "Central",
+       14613
+      ],
+      [
+       "Pacific",
+       4114
+      ],
+      [
+       "Mountain",
+       3134
+      ],
+      [
+       "Atlantic",
+       192
+      ],
+      [
+       "Hawaii-Aleutian Islands",
+       137
+      ],
+      [
+       "Alaska",
+       135
+      ],
+      [
+       "Guam",
+       16
+      ],
+      [
+       "Micronesia",
+       4
+      ],
+      [
+       "Marshall Islands",
+       3
+      ],
+      [
+       "Palau",
+       2
+      ],
+      [
+       "American Samoa",
+       1
+      ]
+     ],
+     "description": "the time zone of the postal point location",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "daylight_savings",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "No",
+     "max_value": "Yes",
+     "examples": [
+      "Yes",
+      "No"
+     ],
+     "top_values": [
+      [
+       "Yes",
+       40711
+      ],
+      [
+       "No",
+       852
+      ]
+     ],
+     "description": "whether the location implements daylight savings",
+     "value_description": "commonsense evidence: Daylight saving is the practice of advancing clocks (typically by one hour) during warmer months so that darkness falls at a later clock time. As a result, there is one 23-hour day in late winter or early spring and one 25-hour day in autumn.",
+     "notes": []
+    },
+    {
+     "name": "latitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 37413,
+     "is_unique": false,
+     "min_value": -14.273095,
+     "max_value": 64.072829,
+     "examples": [
+      40.817923,
+      40.788827,
+      18.196747,
+      18.352927,
+      18.458585
+     ],
+     "top_values": [],
+     "description": "the latitude of the postal point location",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "longitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 37493,
+     "is_unique": false,
+     "min_value": -177.088812,
+     "max_value": 145.751125,
+     "examples": [
+      -73.045317,
+      -73.039405,
+      -66.736735,
+      -67.177532,
+      -67.129867
+     ],
+     "top_values": [],
+     "description": "the longitude of the postal point location",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "elevation",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 1730,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 10190,
+     "examples": [
+      25,
+      0,
+      70,
+      140,
+      475
+     ],
+     "top_values": [],
+     "description": "the elevation of the postal point location",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state_fips",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 59,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 78,
+     "examples": [
+      36,
+      72,
+      78,
+      25
+     ],
+     "top_values": [],
+     "description": "state fips. state-level FIPS code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "county_fips",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 319,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 840,
+     "examples": [
+      103,
+      1,
+      3,
+      5,
+      93
+     ],
+     "top_values": [],
+     "description": "country fips. country-level FIPS code",
+     "value_description": "commonsense evidence: FIPS codes are numbers that uniquely identify geographic areas. The number of digits in FIPS codes varies depending on the level of geography.",
+     "notes": []
+    },
+    {
+     "name": "region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0202,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "Midwest",
+     "max_value": "West",
+     "examples": [
+      "Northeast"
+     ],
+     "top_values": [
+      [
+       "South",
+       14946
+      ],
+      [
+       "Midwest",
+       11305
+      ],
+      [
+       "Northeast",
+       7311
+      ],
+      [
+       "West",
+       7163
+      ]
+     ],
+     "description": "the region where the postal point locates",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "division",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0202,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": "East North Central",
+     "max_value": "West South Central",
+     "examples": [
+      "Middle Atlantic",
+      "New England"
+     ],
+     "top_values": [
+      [
+       "South Atlantic",
+       7090
+      ],
+      [
+       "East North Central",
+       5978
+      ],
+      [
+       "West North Central",
+       5327
+      ],
+      [
+       "Middle Atlantic",
+       5041
+      ],
+      [
+       "West South Central",
+       4785
+      ],
+      [
+       "Pacific",
+       4055
+      ],
+      [
+       "Mountain",
+       3108
+      ],
+      [
+       "East South Central",
+       3071
+      ],
+      [
+       "New England",
+       2270
+      ]
+     ],
+     "description": "the division of the organization",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "population_2020",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 15389,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 130796,
+     "examples": [
+      0,
+      11737,
+      24263,
+      40361,
+      3454
+     ],
+     "top_values": [],
+     "description": "population 2020. the population of the residential area in 2020",
+     "value_description": "commonsense evidence: 'No data' means that the postal point is not affiliated with any organization. Or the organization has no division.",
+     "notes": []
+    },
+    {
+     "name": "population_2010",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 15416,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 113916,
+     "examples": [
+      0,
+      18570,
+      41520,
+      54689,
+      6615
+     ],
+     "top_values": [],
+     "description": "population 2010. the population of the residential area in 2010",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "households",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 10536,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 44432,
+     "examples": [
+      0,
+      6525,
+      15002,
+      21161,
+      2404
+     ],
+     "top_values": [],
+     "description": "the number of the households in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "avg_house_value",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 5485,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 2000000,
+     "examples": [
+      0,
+      86200,
+      86300,
+      122400,
+      91600
+     ],
+     "top_values": [],
+     "description": "the average house value in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "avg_income_per_household",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 19776,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 250000,
+     "examples": [
+      0,
+      13092,
+      16358,
+      16603,
+      12832
+     ],
+     "top_values": [],
+     "description": "the average income per household in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "persons_per_household",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 379,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 18.5,
+     "examples": [
+      0.0,
+      2.84,
+      2.76,
+      2.53,
+      2.75
+     ],
+     "top_values": [],
+     "description": "the number of persons per household residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "white_population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 14124,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 93876,
+     "examples": [
+      0,
+      17479,
+      36828,
+      46501,
+      5979
+     ],
+     "top_values": [],
+     "description": "white population. the population of white people in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "black_population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 5591,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 81382,
+     "examples": [
+      0,
+      663,
+      2860,
+      5042,
+      371
+     ],
+     "top_values": [],
+     "description": "black population. the population of black people in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "hispanic_population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 5726,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 107512,
+     "examples": [
+      0,
+      18486,
+      41265,
+      53877,
+      6575
+     ],
+     "top_values": [],
+     "description": "Hispanic population. the population of Hispanic people in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "asian_population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 3516,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 62423,
+     "examples": [
+      0,
+      7,
+      42,
+      135,
+      3
+     ],
+     "top_values": [],
+     "description": "Asian population. the population of Asian people in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "american_indian_population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 1640,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 13193,
+     "examples": [
+      0,
+      113,
+      291,
+      313,
+      35
+     ],
+     "top_values": [],
+     "description": "American Indian population. the population of American Indian people in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "hawaiian_population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 716,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 32448,
+     "examples": [
+      0,
+      10,
+      32,
+      35,
+      9
+     ],
+     "top_values": [],
+     "description": "Hawaiian population. the population of Hawaiian people in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "other_population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 3988,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 56625,
+     "examples": [
+      0,
+      558,
+      2634,
+      4177,
+      323
+     ],
+     "top_values": [],
+     "description": "other population. the population of other races in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "male_population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 11759,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 58421,
+     "examples": [
+      0,
+      9078,
+      20396,
+      26597,
+      3268
+     ],
+     "top_values": [],
+     "description": "male population. the population of males in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "female_population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 11953,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 58657,
+     "examples": [
+      0,
+      9492,
+      21124,
+      28092,
+      3347
+     ],
+     "top_values": [],
+     "description": "female population. the population of females in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "median_age",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 546,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 86.7,
+     "examples": [
+      0.0,
+      35.9,
+      37.5,
+      38.2,
+      36.2
+     ],
+     "top_values": [],
+     "description": "the median age of the residential area",
+     "value_description": "commonsense evidence: gender ratio in the residential area = male_population / female_population if female_population != 0",
+     "notes": []
+    },
+    {
+     "name": "male_median_age",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 539,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 85.4,
+     "examples": [
+      0.0,
+      34.5,
+      36.6,
+      35.7,
+      36.3
+     ],
+     "top_values": [],
+     "description": "the male median age in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "female_median_age",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 552,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 87.4,
+     "examples": [
+      0.0,
+      37.1,
+      38.5,
+      39.8,
+      36.6
+     ],
+     "top_values": [],
+     "description": "the female median age in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "residential_mailboxes",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 10919,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 44311,
+     "examples": [
+      0,
+      4133,
+      8791,
+      15953,
+      1256
+     ],
+     "top_values": [],
+     "description": "the number of residential mailboxes in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "business_mailboxes",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 2120,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 6672,
+     "examples": [
+      1,
+      0,
+      221,
+      519,
+      764
+     ],
+     "top_values": [],
+     "description": "the number of business mailboxes in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "total_delivery_receptacles",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 12322,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 52951,
+     "examples": [
+      1,
+      0,
+      5173,
+      11302,
+      19186
+     ],
+     "top_values": [],
+     "description": "total delivery receptacles. the total number of delivery receptacles",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "businesses",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 1929,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 7296,
+     "examples": [
+      2,
+      0,
+      472,
+      564,
+      21
+     ],
+     "top_values": [],
+     "description": "the number of businesses in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "1st_quarter_payroll",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 18397,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 8179150000,
+     "examples": [
+      0,
+      88685000,
+      109167000,
+      2371000,
+      1335000
+     ],
+     "top_values": [],
+     "description": "the total wages reported in the 1st quarter payroll report of the residential area",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "annual_payroll",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 24757,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 23065864000,
+     "examples": [
+      0,
+      376492000,
+      472633000,
+      10461000,
+      5915000
+     ],
+     "top_values": [],
+     "description": "the total wages reported in the annual payroll report of the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "employees",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 9739,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 164531,
+     "examples": [
+      0,
+      9127,
+      18894,
+      288,
+      193
+     ],
+     "top_values": [],
+     "description": "the number of employees in the residential area",
+     "value_description": "commonsense evidence: Employers must submit periodic payroll reports to the Internal Revenue Service and state taxing authority. The report is used by employers to report wage information.",
+     "notes": []
+    },
+    {
+     "name": "water_area",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 5978,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 647.725,
+     "examples": [
+      0.0,
+      0.309,
+      1.71,
+      0.07,
+      0.005
+     ],
+     "top_values": [],
+     "description": "the water area of the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "land_area",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 27704,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 13467.651,
+     "examples": [
+      0.0,
+      64.348,
+      30.621,
+      31.617,
+      42.309
+     ],
+     "top_values": [],
+     "description": "the land area of the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "single_family_delivery_units",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 9026,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 27334,
+     "examples": [
+      0,
+      2419,
+      5473,
+      9621,
+      948
+     ],
+     "top_values": [],
+     "description": "the number of single-family delivery units in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "multi_family_delivery_units",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0149,
+     "distinct_count": 4347,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 44015,
+     "examples": [
+      0,
+      1264,
+      827,
+      2947,
+      97
+     ],
+     "top_values": [],
+     "description": "multi-family delivery units. the number of single-family delivery units in the residential area",
+     "value_description": "commonsense evidence: A single-family unit can be described as a single unit that accommodates only one family or tenant at a time on rent.",
+     "notes": []
+    },
+    {
+     "name": "total_beneficiaries",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.019,
+     "distinct_count": 2191,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 40690,
+     "examples": [
+      0
+     ],
+     "top_values": [],
+     "description": "total beneficiaries. the total number of beneficiaries of the postal service",
+     "value_description": "commonsense evidence: multi-family units are usually under a greater surface area with the capacity to accommodate more than one tenant or multiple families on rent at the same time",
+     "notes": []
+    },
+    {
+     "name": "retired_workers",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.019,
+     "distinct_count": 1659,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 37440,
+     "examples": [
+      0
+     ],
+     "top_values": [],
+     "description": "the number of retired workers in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "disabled_workers",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.019,
+     "distinct_count": 467,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 3195,
+     "examples": [
+      0
+     ],
+     "top_values": [],
+     "description": "disable workers. the number of disabled workers in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "parents_and_widowed",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.019,
+     "distinct_count": 222,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1405,
+     "examples": [
+      0
+     ],
+     "top_values": [],
+     "description": "the number of parents and widowed in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "spouses",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.019,
+     "distinct_count": 182,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1290,
+     "examples": [
+      0
+     ],
+     "top_values": [],
+     "description": "the number of spouses in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "children",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.019,
+     "distinct_count": 255,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1825,
+     "examples": [
+      0
+     ],
+     "top_values": [],
+     "description": "the number of children in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "over_65",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.019,
+     "distinct_count": 1758,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 38455,
+     "examples": [
+      0
+     ],
+     "top_values": [],
+     "description": "the number of people whose age is over 65 in the residential area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "monthly_benefits_all",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.019,
+     "distinct_count": 8155,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 62481000,
+     "examples": [
+      0
+     ],
+     "top_values": [],
+     "description": "monthly benefits all. all benefit payments by month",
+     "value_description": "commonsense evidence: no. of over_65 can refer to elders. Higher means more elders\r\nif the ratio: over_65 / children is higher: the aging is more serious.",
+     "notes": []
+    },
+    {
+     "name": "monthly_benefits_retired_workers",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.019,
+     "distinct_count": 6906,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 58263000,
+     "examples": [
+      0
+     ],
+     "top_values": [],
+     "description": "monthly benefits retired workers. monthly benefit payments for retired workers",
+     "value_description": "usd",
+     "notes": []
+    },
+    {
+     "name": "monthly_benefits_widowed",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.019,
+     "distinct_count": 1109,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1986000,
+     "examples": [
+      0
+     ],
+     "top_values": [],
+     "description": "monthly benefits widowed. monthly benefit payments for retired workers",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CBSA",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.576,
+     "distinct_count": 465,
+     "is_unique": false,
+     "min_value": 10300,
+     "max_value": 49780,
+     "examples": [
+      35620,
+      38660,
+      10380,
+      11640,
+      41980
+     ],
+     "top_values": [],
+     "description": "the code of the cbsa officer",
+     "value_description": "",
+     "notes": [
+      "58% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "zip_code"
+   ],
+   "sample_rows": [
+    {
+     "zip_code": 501,
+     "city": "Holtsville",
+     "state": "NY",
+     "multi_county": "No",
+     "type": "Unique Post Office",
+     "organization": "I R S Service Center",
+     "time_zone": "Eastern",
+     "daylight_savings": "Yes",
+     "latitude": 40.817923,
+     "longitude": -73.045317,
+     "elevation": 25,
+     "state_fips": 36,
+     "county_fips": 103,
+     "region": "Northeast",
+     "division": "Middle Atlantic",
+     "population_2020": 0,
+     "population_2010": 0,
+     "households": 0,
+     "avg_house_value": 0,
+     "avg_income_per_household": 0,
+     "persons_per_household": 0.0,
+     "white_population": 0,
+     "black_population": 0,
+     "hispanic_population": 0,
+     "asian_population": 0,
+     "american_indian_population": 0,
+     "hawaiian_population": 0,
+     "other_population": 0,
+     "male_population": 0,
+     "female_population": 0,
+     "median_age": 0.0,
+     "male_median_age": 0.0,
+     "female_median_age": 0.0,
+     "residential_mailboxes": 0,
+     "business_mailboxes": 1,
+     "total_delivery_receptacles": 1,
+     "businesses": 2,
+     "1st_quarter_payroll": 0,
+     "annual_payroll": 0,
+     "employees": 0,
+     "water_area": 0.0,
+     "land_area": 0.0,
+     "single_family_delivery_units": 0,
+     "multi_family_delivery_units": 0,
+     "total_beneficiaries": 0,
+     "retired_workers": 0,
+     "disabled_workers": 0,
+     "parents_and_widowed": 0,
+     "spouses": 0,
+     "children": 0,
+     "over_65": 0,
+     "monthly_benefits_all": 0,
+     "monthly_benefits_retired_workers": 0,
+     "monthly_benefits_widowed": 0,
+     "CBSA": 35620
+    },
+    {
+     "zip_code": 544,
+     "city": "Holtsville",
+     "state": "NY",
+     "multi_county": "No",
+     "type": "Unique Post Office",
+     "organization": "Irs Service Center",
+     "time_zone": "Eastern",
+     "daylight_savings": "Yes",
+     "latitude": 40.788827,
+     "longitude": -73.039405,
+     "elevation": 25,
+     "state_fips": 36,
+     "county_fips": 103,
+     "region": "Northeast",
+     "division": "Middle Atlantic",
+     "population_2020": 0,
+     "population_2010": 0,
+     "households": 0,
+     "avg_house_value": 0,
+     "avg_income_per_household": 0,
+     "persons_per_household": 0.0,
+     "white_population": 0,
+     "black_population": 0,
+     "hispanic_population": 0,
+     "asian_population": 0,
+     "american_indian_population": 0,
+     "hawaiian_population": 0,
+     "other_population": 0,
+     "male_population": 0,
+     "female_population": 0,
+     "median_age": 0.0,
+     "male_median_age": 0.0,
+     "female_median_age": 0.0,
+     "residential_mailboxes": 0,
+     "business_mailboxes": 0,
+     "total_delivery_receptacles": 0,
+     "businesses": 0,
+     "1st_quarter_payroll": 0,
+     "annual_payroll": 0,
+     "employees": 0,
+     "water_area": 0.0,
+     "land_area": 0.0,
+     "single_family_delivery_units": 0,
+     "multi_family_delivery_units": 0,
+     "total_beneficiaries": 0,
+     "retired_workers": 0,
+     "disabled_workers": 0,
+     "parents_and_widowed": 0,
+     "spouses": 0,
+     "children": 0,
+     "over_65": 0,
+     "monthly_benefits_all": 0,
+     "monthly_benefits_retired_workers": 0,
+     "monthly_benefits_widowed": 0,
+     "CBSA": 35620
+    },
+    {
+     "zip_code": 601,
+     "city": "Adjuntas",
+     "state": "PR",
+     "multi_county": "No",
+     "type": "Post Office",
+     "organization": null,
+     "time_zone": "Atlantic",
+     "daylight_savings": "No",
+     "latitude": 18.196747,
+     "longitude": -66.736735,
+     "elevation": 0,
+     "state_fips": 72,
+     "county_fips": 1,
+     "region": null,
+     "division": null,
+     "population_2020": 11737,
+     "population_2010": 18570,
+     "households": 6525,
+     "avg_house_value": 86200,
+     "avg_income_per_household": 13092,
+     "persons_per_household": 2.84,
+     "white_population": 17479,
+     "black_population": 663,
+     "hispanic_population": 18486,
+     "asian_population": 7,
+     "american_indian_population": 113,
+     "hawaiian_population": 10,
+     "other_population": 558,
+     "male_population": 9078,
+     "female_population": 9492,
+     "median_age": 35.9,
+     "male_median_age": 34.5,
+     "female_median_age": 37.1,
+     "residential_mailboxes": 4133,
+     "business_mailboxes": 221,
+     "total_delivery_receptacles": 5173,
+     "businesses": 0,
+     "1st_quarter_payroll": 0,
+     "annual_payroll": 0,
+     "employees": 0,
+     "water_area": 0.309,
+     "land_area": 64.348,
+     "single_family_delivery_units": 2419,
+     "multi_family_delivery_units": 1264,
+     "total_beneficiaries": 0,
+     "retired_workers": 0,
+     "disabled_workers": 0,
+     "parents_and_widowed": 0,
+     "spouses": 0,
+     "children": 0,
+     "over_65": 0,
+     "monthly_benefits_all": 0,
+     "monthly_benefits_retired_workers": 0,
+     "monthly_benefits_widowed": 0,
+     "CBSA": 38660
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "alias",
+   "from_column": "zip_code",
+   "to_table": "zip_data",
+   "to_column": "zip_code",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "area_code",
+   "from_column": "zip_code",
+   "to_table": "zip_data",
+   "to_column": "zip_code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "avoid",
+   "from_column": "zip_code",
+   "to_table": "zip_data",
+   "to_column": "zip_code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "congress",
+   "from_column": "abbreviation",
+   "to_table": "state",
+   "to_column": "abbreviation",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "country",
+   "from_column": "state",
+   "to_table": "state",
+   "to_column": "abbreviation",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "country",
+   "from_column": "zip_code",
+   "to_table": "zip_data",
+   "to_column": "zip_code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "zip_congress",
+   "from_column": "zip_code",
+   "to_table": "zip_data",
+   "to_column": "zip_code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "zip_congress",
+   "from_column": "district",
+   "to_table": "congress",
+   "to_column": "cognress_rep_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "zip_data",
+   "from_column": "CBSA",
+   "to_table": "CBSA",
+   "to_column": "CBSA",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "zip_data",
+   "from_column": "state",
+   "to_table": "state",
+   "to_column": "abbreviation",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "alias",
+   "from_column": "zip_code",
+   "to_table": "area_code",
+   "to_column": "zip_code",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "alias",
+   "from_column": "zip_code",
+   "to_table": "country",
+   "to_column": "zip_code",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "alias",
+   "from_column": "zip_code",
+   "to_table": "zip_congress",
+   "to_column": "zip_code",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 0.997
+  },
+  {
+   "from_table": "area_code",
+   "from_column": "zip_code",
+   "to_table": "country",
+   "to_column": "zip_code",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "area_code",
+   "from_column": "zip_code",
+   "to_table": "zip_congress",
+   "to_column": "zip_code",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.997
+  },
+  {
+   "from_table": "avoid",
+   "from_column": "zip_code",
+   "to_table": "alias",
+   "to_column": "zip_code",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "avoid",
+   "from_column": "zip_code",
+   "to_table": "area_code",
+   "to_column": "zip_code",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "avoid",
+   "from_column": "zip_code",
+   "to_table": "country",
+   "to_column": "zip_code",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "avoid",
+   "from_column": "zip_code",
+   "to_table": "zip_congress",
+   "to_column": "zip_code",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.993
+  },
+  {
+   "from_table": "country",
+   "from_column": "zip_code",
+   "to_table": "zip_congress",
+   "to_column": "zip_code",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.997
+  }
+ ],
+ "notes": []
+}

@@ -1,0 +1,9010 @@
+{
+ "db_id": "mondial_geo",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/mondial_geo/mondial_geo.sqlite",
+ "fingerprint": "2113536-1793993058499091802-v1.0",
+ "created_at": "2026-11-06T19:24:57+00:00",
+ "profile_seconds": 0.222,
+ "tables": [
+  {
+   "name": "borders",
+   "row_count": 320,
+   "stats_rows": 320,
+   "columns": [
+    {
+     "name": "Country1",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 121,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "Z",
+     "examples": [
+      "A",
+      "AFG",
+      "AL",
+      "AND",
+      "ANG"
+     ],
+     "top_values": [],
+     "description": "a country code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country2",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 122,
+     "is_unique": false,
+     "min_value": "AZ",
+     "max_value": "ZW",
+     "examples": [
+      "CH",
+      "CZ",
+      "D",
+      "FL",
+      "H"
+     ],
+     "top_values": [],
+     "description": "a country code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Length",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 277,
+     "is_unique": false,
+     "min_value": 0.34,
+     "max_value": 8893.0,
+     "examples": [
+      164.0,
+      362.0,
+      784.0,
+      37.0,
+      366.0
+     ],
+     "top_values": [],
+     "description": "length of the border between country1 and country2",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Country1",
+    "Country2"
+   ],
+   "sample_rows": [
+    {
+     "Country1": "A",
+     "Country2": "CH",
+     "Length": 164.0
+    },
+    {
+     "Country1": "A",
+     "Country2": "CZ",
+     "Length": 362.0
+    },
+    {
+     "Country1": "A",
+     "Country2": "D",
+     "Length": 784.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "city",
+   "row_count": 3111,
+   "stats_rows": 3111,
+   "columns": [
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3044,
+     "is_unique": false,
+     "min_value": "Aachen",
+     "max_value": "s Hertogenbosch",
+     "examples": [
+      "Aachen",
+      "Aalborg",
+      "Aarau",
+      "Aarhus",
+      "Aarri"
+     ],
+     "top_values": [],
+     "description": "name of city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 238,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "ZW",
+     "examples": [
+      "D",
+      "DK",
+      "CH",
+      "WAN",
+      "BR"
+     ],
+     "top_values": [],
+     "description": "the code of the country where it belongs to",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Province",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1414,
+     "is_unique": false,
+     "min_value": "AG",
+     "max_value": "ash Sharqiyah",
+     "examples": [
+      "Nordrhein Westfalen",
+      "Denmark",
+      "AG",
+      "Nigeria",
+      "Para"
+     ],
+     "top_values": [],
+     "description": "the name of the province where it belongs to",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1495,
+     "distinct_count": 2384,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 10229262,
+     "examples": [
+      247113,
+      113865,
+      194345,
+      111000,
+      264000
+     ],
+     "top_values": [],
+     "description": "population of the city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Longitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.7425,
+     "distinct_count": 706,
+     "is_unique": false,
+     "min_value": -175.2,
+     "max_value": 178.0,
+     "examples": [
+      10.0,
+      10.1,
+      -4.0,
+      -99.6833,
+      54.36
+     ],
+     "top_values": [],
+     "description": "geographic longitude",
+     "value_description": "",
+     "notes": [
+      "74% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Latitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.7425,
+     "distinct_count": 631,
+     "is_unique": false,
+     "min_value": -54.5,
+     "max_value": 78.13,
+     "examples": [
+      57.0,
+      56.1,
+      5.3,
+      32.4167,
+      24.27
+     ],
+     "top_values": [],
+     "description": "geographic latitude",
+     "value_description": "",
+     "notes": [
+      "74% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "Name",
+    "Province"
+   ],
+   "sample_rows": [
+    {
+     "Name": "Aachen",
+     "Country": "D",
+     "Province": "Nordrhein Westfalen",
+     "Population": 247113,
+     "Longitude": null,
+     "Latitude": null
+    },
+    {
+     "Name": "Aalborg",
+     "Country": "DK",
+     "Province": "Denmark",
+     "Population": 113865,
+     "Longitude": 10.0,
+     "Latitude": 57.0
+    },
+    {
+     "Name": "Aarau",
+     "Country": "CH",
+     "Province": "AG",
+     "Population": null,
+     "Longitude": null,
+     "Latitude": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "continent",
+   "row_count": 5,
+   "stats_rows": 5,
+   "columns": [
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": true,
+     "min_value": "Africa",
+     "max_value": "Europe",
+     "examples": [
+      "Africa",
+      "America",
+      "Asia",
+      "Australia/Oceania",
+      "Europe"
+     ],
+     "top_values": [
+      [
+       "Europe",
+       1
+      ],
+      [
+       "Australia/Oceania",
+       1
+      ],
+      [
+       "Asia",
+       1
+      ],
+      [
+       "America",
+       1
+      ],
+      [
+       "Africa",
+       1
+      ]
+     ],
+     "description": "name of the continent",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Area",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": true,
+     "min_value": 8503470.0,
+     "max_value": 45095300.0,
+     "examples": [
+      30254700.0,
+      39872000.0,
+      45095300.0,
+      8503470.0,
+      9562490.0
+     ],
+     "top_values": [
+      [
+       45095300.0,
+       1
+      ],
+      [
+       39872000.0,
+       1
+      ],
+      [
+       30254700.0,
+       1
+      ],
+      [
+       9562490.0,
+       1
+      ],
+      [
+       8503470.0,
+       1
+      ]
+     ],
+     "description": "total area of the continent.",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Name"
+   ],
+   "sample_rows": [
+    {
+     "Name": "Africa",
+     "Area": 30254700.0
+    },
+    {
+     "Name": "America",
+     "Area": 39872000.0
+    },
+    {
+     "Name": "Asia",
+     "Area": 45095300.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "country",
+   "row_count": 238,
+   "stats_rows": 238,
+   "columns": [
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 238,
+     "is_unique": true,
+     "min_value": "Afghanistan",
+     "max_value": "Zimbabwe",
+     "examples": [
+      "Austria",
+      "Afghanistan",
+      "Antigua and Barbuda",
+      "Albania",
+      "American Samoa"
+     ],
+     "top_values": [],
+     "description": "the country name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Code",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 238,
+     "is_unique": true,
+     "min_value": "A",
+     "max_value": "ZW",
+     "examples": [
+      "A",
+      "AFG",
+      "AG",
+      "AL",
+      "AMSA"
+     ],
+     "top_values": [],
+     "description": "country code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Capital",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0084,
+     "distinct_count": 235,
+     "is_unique": false,
+     "min_value": "Abu Dhabi",
+     "max_value": "Zagreb",
+     "examples": [
+      "Vienna",
+      "Kabul",
+      "Saint Johns",
+      "Tirane",
+      "Pago Pago"
+     ],
+     "top_values": [],
+     "description": "the name of the capital,",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Province",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0084,
+     "distinct_count": 233,
+     "is_unique": false,
+     "min_value": "Abu Dhabi",
+     "max_value": "al Khartum",
+     "examples": [
+      "Vienna",
+      "Afghanistan",
+      "Antigua and Barbuda",
+      "Albania",
+      "American Samoa"
+     ],
+     "top_values": [],
+     "description": "the province where the capital belongs to,",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Area",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 235,
+     "is_unique": false,
+     "min_value": 0.44,
+     "max_value": 17075200.0,
+     "examples": [
+      83850.0,
+      647500.0,
+      442.0,
+      28750.0,
+      199.0
+     ],
+     "top_values": [],
+     "description": "the total area,",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 238,
+     "is_unique": true,
+     "min_value": 48,
+     "max_value": 1210004956,
+     "examples": [
+      8023244,
+      22664136,
+      65647,
+      3249136,
+      65628
+     ],
+     "top_values": [],
+     "description": "the population number.",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Code"
+   ],
+   "sample_rows": [
+    {
+     "Name": "Austria",
+     "Code": "A",
+     "Capital": "Vienna",
+     "Province": "Vienna",
+     "Area": 83850.0,
+     "Population": 8023244
+    },
+    {
+     "Name": "Afghanistan",
+     "Code": "AFG",
+     "Capital": "Kabul",
+     "Province": "Afghanistan",
+     "Area": 647500.0,
+     "Population": 22664136
+    },
+    {
+     "Name": "Antigua and Barbuda",
+     "Code": "AG",
+     "Capital": "Saint Johns",
+     "Province": "Antigua and Barbuda",
+     "Area": 442.0,
+     "Population": 65647
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "desert",
+   "row_count": 63,
+   "stats_rows": 63,
+   "columns": [
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 63,
+     "is_unique": true,
+     "min_value": "Arabian Desert",
+     "max_value": "Ust Urt",
+     "examples": [
+      "Arabian Desert",
+      "Atacama",
+      "Azaouad",
+      "Baja California Desert",
+      "Chihuahua"
+     ],
+     "top_values": [],
+     "description": "the name of the desert",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Area",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 45,
+     "is_unique": false,
+     "min_value": 10000.0,
+     "max_value": 1200000.0,
+     "examples": [
+      50000.0,
+      181300.0,
+      80000.0,
+      30000.0,
+      360000.0
+     ],
+     "top_values": [
+      [
+       200000.0,
+       4
+      ],
+      [
+       80000.0,
+       4
+      ],
+      [
+       300000.0,
+       3
+      ],
+      [
+       50000.0,
+       3
+      ],
+      [
+       1000000.0,
+       2
+      ],
+      [
+       360000.0,
+       2
+      ],
+      [
+       180000.0,
+       2
+      ],
+      [
+       150000.0,
+       2
+      ],
+      [
+       100000.0,
+       2
+      ],
+      [
+       40000.0,
+       2
+      ],
+      [
+       37500.0,
+       2
+      ],
+      [
+       25000.0,
+       2
+      ],
+      [
+       1200000.0,
+       1
+      ],
+      [
+       1100000.0,
+       1
+      ],
+      [
+       780000.0,
+       1
+      ],
+      [
+       600000.0,
+       1
+      ],
+      [
+       518000.0,
+       1
+      ],
+      [
+       500000.0,
+       1
+      ],
+      [
+       424400.0,
+       1
+      ],
+      [
+       400000.0,
+       1
+      ],
+      [
+       337000.0,
+       1
+      ],
+      [
+       320000.0,
+       1
+      ],
+      [
+       310800.0,
+       1
+      ],
+      [
+       240000.0,
+       1
+      ],
+      [
+       181300.0,
+       1
+      ],
+      [
+       176500.0,
+       1
+      ],
+      [
+       166000.0,
+       1
+      ],
+      [
+       160000.0,
+       1
+      ],
+      [
+       120000.0,
+       1
+      ],
+      [
+       95000.0,
+       1
+      ],
+      [
+       90000.0,
+       1
+      ],
+      [
+       84000.0,
+       1
+      ],
+      [
+       78000.0,
+       1
+      ],
+      [
+       77600.0,
+       1
+      ],
+      [
+       70000.0,
+       1
+      ],
+      [
+       57000.0,
+       1
+      ],
+      [
+       48800.0,
+       1
+      ],
+      [
+       36000.0,
+       1
+      ],
+      [
+       35000.0,
+       1
+      ],
+      [
+       30000.0,
+       1
+      ],
+      [
+       22000.0,
+       1
+      ],
+      [
+       13000.0,
+       1
+      ],
+      [
+       12000.0,
+       1
+      ],
+      [
+       10360.0,
+       1
+      ],
+      [
+       10000.0,
+       1
+      ]
+     ],
+     "description": "the total area of the desert",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Longitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0317,
+     "distinct_count": 52,
+     "is_unique": false,
+     "min_value": -117.0,
+     "max_value": 141.0,
+     "examples": [
+      26.0,
+      -69.25,
+      0.0,
+      -116.0,
+      -105.0
+     ],
+     "top_values": [],
+     "description": "Longitude",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Latitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0317,
+     "distinct_count": 37,
+     "is_unique": false,
+     "min_value": -31.0,
+     "max_value": 48.0,
+     "examples": [
+      33.0,
+      -24.5,
+      20.0,
+      31.0,
+      36.0
+     ],
+     "top_values": [
+      [
+       31.0,
+       4
+      ],
+      [
+       38.0,
+       3
+      ],
+      [
+       30.0,
+       3
+      ],
+      [
+       18.0,
+       3
+      ],
+      [
+       44.0,
+       2
+      ],
+      [
+       41.0,
+       2
+      ],
+      [
+       40.0,
+       2
+      ],
+      [
+       33.0,
+       2
+      ],
+      [
+       32.5,
+       2
+      ],
+      [
+       32.0,
+       2
+      ],
+      [
+       28.0,
+       2
+      ],
+      [
+       27.0,
+       2
+      ],
+      [
+       23.0,
+       2
+      ],
+      [
+       21.0,
+       2
+      ],
+      [
+       17.0,
+       2
+      ],
+      [
+       15.0,
+       2
+      ],
+      [
+       -20.0,
+       2
+      ],
+      [
+       -25.0,
+       2
+      ],
+      [
+       -29.0,
+       2
+      ],
+      [
+       48.0,
+       1
+      ],
+      [
+       45.0,
+       1
+      ],
+      [
+       43.0,
+       1
+      ],
+      [
+       42.0,
+       1
+      ],
+      [
+       37.5,
+       1
+      ],
+      [
+       36.2,
+       1
+      ],
+      [
+       36.0,
+       1
+      ],
+      [
+       30.5,
+       1
+      ],
+      [
+       27.5,
+       1
+      ],
+      [
+       26.0,
+       1
+      ],
+      [
+       25.0,
+       1
+      ],
+      [
+       22.0,
+       1
+      ],
+      [
+       20.0,
+       1
+      ],
+      [
+       -22.0,
+       1
+      ],
+      [
+       -23.0,
+       1
+      ],
+      [
+       -24.5,
+       1
+      ],
+      [
+       -26.0,
+       1
+      ],
+      [
+       -31.0,
+       1
+      ]
+     ],
+     "description": "Latitude",
+     "value_description": "commonsense evidence:\r\n\r\ncoordinate: (Longitude, Latitude)",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Name"
+   ],
+   "sample_rows": [
+    {
+     "Name": "Arabian Desert",
+     "Area": 50000.0,
+     "Longitude": 26.0,
+     "Latitude": 33.0
+    },
+    {
+     "Name": "Atacama",
+     "Area": 181300.0,
+     "Longitude": -69.25,
+     "Latitude": -24.5
+    },
+    {
+     "Name": "Azaouad",
+     "Area": 80000.0,
+     "Longitude": 0.0,
+     "Latitude": 20.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "economy",
+   "row_count": 238,
+   "stats_rows": 238,
+   "columns": [
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 238,
+     "is_unique": true,
+     "min_value": "A",
+     "max_value": "ZW",
+     "examples": [
+      "A",
+      "AFG",
+      "AG",
+      "AL",
+      "AMSA"
+     ],
+     "top_values": [],
+     "description": "the country code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "GDP",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.042,
+     "distinct_count": 204,
+     "is_unique": false,
+     "min_value": 7.8,
+     "max_value": 7247700.0,
+     "examples": [
+      152000.0,
+      12800.0,
+      425.0,
+      4100.0,
+      462.2
+     ],
+     "top_values": [],
+     "description": "gross domestic product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Agriculture",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.3067,
+     "distinct_count": 101,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 70.4,
+     "examples": [
+      2.0,
+      65.0,
+      3.5,
+      55.0,
+      12.0
+     ],
+     "top_values": [],
+     "description": "percentage of agriculture of the GDP",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Service",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.3277,
+     "distinct_count": 108,
+     "is_unique": false,
+     "min_value": 2.8,
+     "max_value": 60.0,
+     "examples": [
+      34.0,
+      15.0,
+      19.3,
+      56.0,
+      36.0
+     ],
+     "top_values": [],
+     "description": "percentage of services of the GDP,",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Industry",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.3277,
+     "distinct_count": 111,
+     "is_unique": false,
+     "min_value": 7.0,
+     "max_value": 97.1,
+     "examples": [
+      64.0,
+      20.0,
+      77.2,
+      32.0,
+      7.0
+     ],
+     "top_values": [],
+     "description": "percentage of industry of the GDP",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Inflation",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1218,
+     "distinct_count": 121,
+     "is_unique": false,
+     "min_value": -3.6,
+     "max_value": 244.0,
+     "examples": [
+      2.3,
+      3.5,
+      16.0,
+      20.0,
+      32.2
+     ],
+     "top_values": [],
+     "description": "inflation rate (per annum),",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Country"
+   ],
+   "sample_rows": [
+    {
+     "Country": "A",
+     "GDP": 152000.0,
+     "Agriculture": 2.0,
+     "Service": 34.0,
+     "Industry": 64.0,
+     "Inflation": 2.3
+    },
+    {
+     "Country": "AFG",
+     "GDP": 12800.0,
+     "Agriculture": 65.0,
+     "Service": 15.0,
+     "Industry": 20.0,
+     "Inflation": null
+    },
+    {
+     "Country": "AG",
+     "GDP": 425.0,
+     "Agriculture": 3.5,
+     "Service": 19.3,
+     "Industry": 77.2,
+     "Inflation": 3.5
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "encompasses",
+   "row_count": 242,
+   "stats_rows": 242,
+   "columns": [
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 238,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "ZW",
+     "examples": [
+      "A",
+      "AFG",
+      "AG",
+      "AL",
+      "AMSA"
+     ],
+     "top_values": [],
+     "description": "a country code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Continent",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "Africa",
+     "max_value": "Europe",
+     "examples": [
+      "Europe",
+      "Asia",
+      "America",
+      "Australia/Oceania",
+      "Africa"
+     ],
+     "top_values": [
+      [
+       "Africa",
+       55
+      ],
+      [
+       "Europe",
+       53
+      ],
+      [
+       "Asia",
+       53
+      ],
+      [
+       "America",
+       52
+      ],
+      [
+       "Australia/Oceania",
+       29
+      ]
+     ],
+     "description": "the continent name.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Percentage",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": 5.0,
+     "max_value": 100.0,
+     "examples": [
+      100.0,
+      90.0,
+      10.0,
+      80.0,
+      20.0
+     ],
+     "top_values": [
+      [
+       100.0,
+       234
+      ],
+      [
+       80.0,
+       2
+      ],
+      [
+       20.0,
+       2
+      ],
+      [
+       95.0,
+       1
+      ],
+      [
+       90.0,
+       1
+      ],
+      [
+       10.0,
+       1
+      ],
+      [
+       5.0,
+       1
+      ]
+     ],
+     "description": "how much of the area of a country belongs to the continent",
+     "value_description": "%",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Country",
+    "Continent"
+   ],
+   "sample_rows": [
+    {
+     "Country": "A",
+     "Continent": "Europe",
+     "Percentage": 100.0
+    },
+    {
+     "Country": "AFG",
+     "Continent": "Asia",
+     "Percentage": 100.0
+    },
+    {
+     "Country": "AG",
+     "Continent": "America",
+     "Percentage": 100.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "ethnicGroup",
+   "row_count": 540,
+   "stats_rows": 540,
+   "columns": [
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 189,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "ZW",
+     "examples": [
+      "GE",
+      "EAU",
+      "DJI",
+      "ER",
+      "ETH"
+     ],
+     "top_values": [],
+     "description": "the country code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 262,
+     "is_unique": false,
+     "min_value": "Abkhaz",
+     "max_value": "foreign-born first-generation",
+     "examples": [
+      "Abkhaz",
+      "Acholi",
+      "Afar",
+      "African",
+      "African descent"
+     ],
+     "top_values": [],
+     "description": "name of the language",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Percentage",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 191,
+     "is_unique": false,
+     "min_value": 0.06,
+     "max_value": 100.0,
+     "examples": [
+      1.8,
+      4.0,
+      35.0,
+      80.0,
+      99.0
+     ],
+     "top_values": [],
+     "description": "percentage of the language in this country.",
+     "value_description": "%",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Name",
+    "Country"
+   ],
+   "sample_rows": [
+    {
+     "Country": "GE",
+     "Name": "Abkhaz",
+     "Percentage": 1.8
+    },
+    {
+     "Country": "EAU",
+     "Name": "Acholi",
+     "Percentage": 4.0
+    },
+    {
+     "Country": "DJI",
+     "Name": "Afar",
+     "Percentage": 35.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "geo_desert",
+   "row_count": 155,
+   "stats_rows": 155,
+   "columns": [
+    {
+     "name": "Desert",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 64,
+     "is_unique": false,
+     "min_value": "Arabian Desert",
+     "max_value": "Ust Urt",
+     "examples": [
+      "Desert",
+      "Rub Al Chali",
+      "Dascht-e-Margoh",
+      "Rigestan",
+      "Karakum"
+     ],
+     "top_values": [],
+     "description": "the name of the desert",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 40,
+     "is_unique": false,
+     "min_value": "AFG",
+     "max_value": "Z",
+     "examples": [
+      "Coun",
+      "UAE",
+      "AFG",
+      "TM",
+      "IRQ"
+     ],
+     "top_values": [
+      [
+       "USA",
+       20
+      ],
+      [
+       "AUS",
+       16
+      ],
+      [
+       "TJ",
+       10
+      ],
+      [
+       "IR",
+       10
+      ],
+      [
+       "DZ",
+       8
+      ],
+      [
+       "KAZ",
+       7
+      ],
+      [
+       "UZB",
+       6
+      ],
+      [
+       "UAE",
+       6
+      ],
+      [
+       "ET",
+       6
+      ],
+      [
+       "TM",
+       5
+      ],
+      [
+       "SUD",
+       4
+      ],
+      [
+       "RMM",
+       4
+      ],
+      [
+       "RIM",
+       4
+      ],
+      [
+       "LAR",
+       4
+      ],
+      [
+       "IND",
+       4
+      ],
+      [
+       "TCH",
+       3
+      ],
+      [
+       "SN",
+       3
+      ],
+      [
+       "SA",
+       3
+      ],
+      [
+       "RN",
+       3
+      ],
+      [
+       "MEX",
+       3
+      ],
+      [
+       "Z",
+       2
+      ],
+      [
+       "R",
+       2
+      ],
+      [
+       "PK",
+       2
+      ],
+      [
+       "NAM",
+       2
+      ],
+      [
+       "ANG",
+       2
+      ],
+      [
+       "AFG",
+       2
+      ],
+      [
+       "YE",
+       1
+      ],
+      [
+       "WSA",
+       1
+      ],
+      [
+       "TN",
+       1
+      ],
+      [
+       "SYR",
+       1
+      ],
+      [
+       "RSA",
+       1
+      ],
+      [
+       "RCH",
+       1
+      ],
+      [
+       "RB",
+       1
+      ],
+      [
+       "OM",
+       1
+      ],
+      [
+       "MNG",
+       1
+      ],
+      [
+       "MA",
+       1
+      ],
+      [
+       "JOR",
+       1
+      ],
+      [
+       "IRQ",
+       1
+      ],
+      [
+       "IL",
+       1
+      ],
+      [
+       "Coun",
+       1
+      ]
+     ],
+     "description": "the country code where it is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Province",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 96,
+     "is_unique": false,
+     "min_value": "Abu Dhabi",
+     "max_value": "ash Sharqiyah",
+     "examples": [
+      "Province",
+      "Abu Dhabi",
+      "Afghanistan",
+      "Ahal",
+      "Al Anbar"
+     ],
+     "top_values": [],
+     "description": "the province of this country",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Province",
+    "Country",
+    "Desert"
+   ],
+   "sample_rows": [
+    {
+     "Desert": "Desert",
+     "Country": "Coun",
+     "Province": "Province"
+    },
+    {
+     "Desert": "Rub Al Chali",
+     "Country": "UAE",
+     "Province": "Abu Dhabi"
+    },
+    {
+     "Desert": "Dascht-e-Margoh",
+     "Country": "AFG",
+     "Province": "Afghanistan"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "geo_estuary",
+   "row_count": 266,
+   "stats_rows": 266,
+   "columns": [
+    {
+     "name": "River",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 217,
+     "is_unique": false,
+     "min_value": "Aare",
+     "max_value": "Zambezi",
+     "examples": [
+      "River",
+      "Bahr el-Djebel/Albert-Nil",
+      "Bahr el-Ghasal",
+      "Sobat",
+      "Pjandsh"
+     ],
+     "top_values": [],
+     "description": "the name of the river",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "ZRE",
+     "examples": [
+      "Coun",
+      "SUD",
+      "AFG",
+      "CH",
+      "N"
+     ],
+     "top_values": [],
+     "description": "the country code where it is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Province",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 183,
+     "is_unique": false,
+     "min_value": "AG",
+     "max_value": "ash Shamaliyah",
+     "examples": [
+      "Province",
+      "Aali an Nil",
+      "Afghanistan",
+      "AG",
+      "Akershus"
+     ],
+     "top_values": [],
+     "description": "the province of this country",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Province",
+    "Country",
+    "River"
+   ],
+   "sample_rows": [
+    {
+     "River": "River",
+     "Country": "Coun",
+     "Province": "Province"
+    },
+    {
+     "River": "Bahr el-Djebel/Albert-Nil",
+     "Country": "SUD",
+     "Province": "Aali an Nil"
+    },
+    {
+     "River": "Bahr el-Ghasal",
+     "Country": "SUD",
+     "Province": "Aali an Nil"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "geo_island",
+   "row_count": 202,
+   "stats_rows": 202,
+   "columns": [
+    {
+     "name": "Island",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 202,
+     "is_unique": true,
+     "min_value": "Aland",
+     "max_value": "Zakinthos",
+     "examples": [
+      "Aland",
+      "Alicudi",
+      "Ambon",
+      "Ameland",
+      "Amrum"
+     ],
+     "top_values": [],
+     "description": "the name of the island",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 59,
+     "is_unique": false,
+     "min_value": "Alan",
+     "max_value": "West",
+     "examples": [
+      "Alan",
+      "Lipa",
+      "Molu",
+      "West",
+      "Nord"
+     ],
+     "top_values": [],
+     "description": "the country code where it is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Province",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 192,
+     "is_unique": false,
+     "min_value": "101",
+     "max_value": "991",
+     "examples": [
+      "650",
+      "5.2",
+      "775",
+      "57.6",
+      "20.5"
+     ],
+     "top_values": [],
+     "description": "the province of this country",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    }
+   ],
+   "primary_key": [
+    "Province",
+    "Country",
+    "Island"
+   ],
+   "sample_rows": [
+    {
+     "Island": "Aland",
+     "Country": "Alan",
+     "Province": "650"
+    },
+    {
+     "Island": "Alicudi",
+     "Country": "Lipa",
+     "Province": "5.2"
+    },
+    {
+     "Island": "Ambon",
+     "Country": "Molu",
+     "Province": "775"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "geo_lake",
+   "row_count": 254,
+   "stats_rows": 254,
+   "columns": [
+    {
+     "name": "Lake",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 131,
+     "is_unique": false,
+     "min_value": "Ammersee",
+     "max_value": "Zurichsee",
+     "examples": [
+      "Lake",
+      "Barrage de Mbakaou",
+      "Lake Nicaragua",
+      "Lake Ohrid",
+      "Lake Prespa"
+     ],
+     "top_values": [],
+     "description": "the name of the lake",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 64,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "ZW",
+     "examples": [
+      "Coun",
+      "CAM",
+      "CR",
+      "AL",
+      "KAZ"
+     ],
+     "top_values": [],
+     "description": "the country code where it is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Province",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 194,
+     "is_unique": false,
+     "min_value": "Adamaoua",
+     "max_value": "ash Shamaliyah",
+     "examples": [
+      "Province",
+      "Adamaoua",
+      "Alajuela",
+      "Albania",
+      "Almaty (munic.)"
+     ],
+     "top_values": [],
+     "description": "the province of this country",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Province",
+    "Country",
+    "Lake"
+   ],
+   "sample_rows": [
+    {
+     "Lake": "Lake",
+     "Country": "Coun",
+     "Province": "Province"
+    },
+    {
+     "Lake": "Barrage de Mbakaou",
+     "Country": "CAM",
+     "Province": "Adamaoua"
+    },
+    {
+     "Lake": "Lake Nicaragua",
+     "Country": "CR",
+     "Province": "Alajuela"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "geo_mountain",
+   "row_count": 296,
+   "stats_rows": 296,
+   "columns": [
+    {
+     "name": "Mountain",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 239,
+     "is_unique": false,
+     "min_value": "Aconcagua",
+     "max_value": "Zugspitze",
+     "examples": [
+      "Mountain",
+      "Gran Sasso",
+      "Tirich Mir",
+      "Ararat",
+      "Mt Blackburn"
+     ],
+     "top_values": [],
+     "description": "the name of the mountain",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 95,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "ZRE",
+     "examples": [
+      "Coun",
+      "I",
+      "AFG",
+      "TR",
+      "USA"
+     ],
+     "top_values": [],
+     "description": "the country code where it is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Province",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 190,
+     "is_unique": false,
+     "min_value": "Abruzzo",
+     "max_value": "Yukon Territory",
+     "examples": [
+      "Province",
+      "Abruzzo",
+      "Afghanistan",
+      "Agri",
+      "Alaska"
+     ],
+     "top_values": [],
+     "description": "the province of this country",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Province",
+    "Country",
+    "Mountain"
+   ],
+   "sample_rows": [
+    {
+     "Mountain": "Mountain",
+     "Country": "Coun",
+     "Province": "Province"
+    },
+    {
+     "Mountain": "Gran Sasso",
+     "Country": "I",
+     "Province": "Abruzzo"
+    },
+    {
+     "Mountain": "Tirich Mir",
+     "Country": "AFG",
+     "Province": "Afghanistan"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "geo_river",
+   "row_count": 852,
+   "stats_rows": 852,
+   "columns": [
+    {
+     "name": "River",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 219,
+     "is_unique": false,
+     "min_value": "Aare",
+     "max_value": "Zambezi",
+     "examples": [
+      "River",
+      "Bahr el-Djebel/Albert-Nil",
+      "Bahr el-Ghasal",
+      "Pibor",
+      "Sobat"
+     ],
+     "top_values": [],
+     "description": "the name of the river",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 108,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "ZW",
+     "examples": [
+      "Coun",
+      "SUD",
+      "IRQ",
+      "TR",
+      "AFG"
+     ],
+     "top_values": [],
+     "description": "the country code where it is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Province",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 586,
+     "is_unique": false,
+     "min_value": "AG",
+     "max_value": "ash Sharqiyah",
+     "examples": [
+      "Province",
+      "Aali an Nil",
+      "Ad Tamim",
+      "Adiyaman",
+      "Afghanistan"
+     ],
+     "top_values": [],
+     "description": "the province of this country",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Province",
+    "Country",
+    "River"
+   ],
+   "sample_rows": [
+    {
+     "River": "River",
+     "Country": "Coun",
+     "Province": "Province"
+    },
+    {
+     "River": "Bahr el-Djebel/Albert-Nil",
+     "Country": "SUD",
+     "Province": "Aali an Nil"
+    },
+    {
+     "River": "Bahr el-Ghasal",
+     "Country": "SUD",
+     "Province": "Aali an Nil"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "geo_sea",
+   "row_count": 736,
+   "stats_rows": 736,
+   "columns": [
+    {
+     "name": "Sea",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 35,
+     "is_unique": false,
+     "min_value": "Andaman Sea",
+     "max_value": "Yellow Sea",
+     "examples": [
+      "Sea",
+      "Mediterranean Sea",
+      "Persian Gulf",
+      "Pacific Ocean",
+      "Skagerrak"
+     ],
+     "top_values": [
+      [
+       "Atlantic Ocean",
+       151
+      ],
+      [
+       "Pacific Ocean",
+       100
+      ],
+      [
+       "Mediterranean Sea",
+       73
+      ],
+      [
+       "Caribbean Sea",
+       63
+      ],
+      [
+       "Indian Ocean",
+       46
+      ],
+      [
+       "Baltic Sea",
+       34
+      ],
+      [
+       "North Sea",
+       30
+      ],
+      [
+       "Black Sea",
+       23
+      ],
+      [
+       "Sea of Japan",
+       20
+      ],
+      [
+       "South China Sea",
+       19
+      ],
+      [
+       "Persian Gulf",
+       15
+      ],
+      [
+       "The Channel",
+       13
+      ],
+      [
+       "Gulf of Mexico",
+       13
+      ],
+      [
+       "Norwegian Sea",
+       12
+      ],
+      [
+       "Malakka Strait",
+       11
+      ],
+      [
+       "Red Sea",
+       10
+      ],
+      [
+       "East China Sea",
+       10
+      ],
+      [
+       "Skagerrak",
+       9
+      ],
+      [
+       "Arabian Sea",
+       9
+      ],
+      [
+       "Irish Sea",
+       8
+      ],
+      [
+       "Gulf of Bengal",
+       8
+      ],
+      [
+       "Andaman Sea",
+       7
+      ],
+      [
+       "Yellow Sea",
+       6
+      ],
+      [
+       "Sea of Azov",
+       6
+      ],
+      [
+       "Arctic Ocean",
+       6
+      ],
+      [
+       "Sibirian Sea",
+       5
+      ],
+      [
+       "Kattegat",
+       5
+      ],
+      [
+       "Gulf of Oman",
+       5
+      ],
+      [
+       "Barents Sea",
+       4
+      ],
+      [
+       "Sulawesi Sea",
+       3
+      ],
+      [
+       "Sea of Okhotsk",
+       3
+      ],
+      [
+       "Gulf of Aden",
+       3
+      ],
+      [
+       "Bering Sea",
+       3
+      ],
+      [
+       "Sunda Sea",
+       2
+      ],
+      [
+       "Sea",
+       1
+      ]
+     ],
+     "description": "the name of the sea",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 194,
+     "is_unique": false,
+     "min_value": "AG",
+     "max_value": "ZRE",
+     "examples": [
+      "Coun",
+      "I",
+      "UAE",
+      "TR",
+      "J"
+     ],
+     "top_values": [],
+     "description": "the country code where it is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Province",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 609,
+     "is_unique": false,
+     "min_value": "Abruzzo",
+     "max_value": "ash Sharqiyah",
+     "examples": [
+      "Province",
+      "Abruzzo",
+      "Abu Dhabi",
+      "Adana",
+      "Aichi"
+     ],
+     "top_values": [],
+     "description": "the province of this country",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Province",
+    "Country",
+    "Sea"
+   ],
+   "sample_rows": [
+    {
+     "Sea": "Sea",
+     "Country": "Coun",
+     "Province": "Province"
+    },
+    {
+     "Sea": "Mediterranean Sea",
+     "Country": "I",
+     "Province": "Abruzzo"
+    },
+    {
+     "Sea": "Persian Gulf",
+     "Country": "UAE",
+     "Province": "Abu Dhabi"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "geo_source",
+   "row_count": 220,
+   "stats_rows": 220,
+   "columns": [
+    {
+     "name": "River",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 212,
+     "is_unique": false,
+     "min_value": "Aare",
+     "max_value": "Zambezi",
+     "examples": [
+      "River",
+      "White Nile",
+      "Amudarja",
+      "Pjandsh",
+      "Murat"
+     ],
+     "top_values": [],
+     "description": "the name of the river",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 58,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "ZRE",
+     "examples": [
+      "Coun",
+      "SUD",
+      "AFG",
+      "TR",
+      "IRQ"
+     ],
+     "top_values": [],
+     "description": "the country code where it is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Province",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 151,
+     "is_unique": false,
+     "min_value": "Aali an Nil",
+     "max_value": "al Khartum",
+     "examples": [
+      "Province",
+      "Aali an Nil",
+      "Afghanistan",
+      "Agri",
+      "Al Anbar"
+     ],
+     "top_values": [],
+     "description": "the province of this country",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Province",
+    "Country",
+    "River"
+   ],
+   "sample_rows": [
+    {
+     "River": "River",
+     "Country": "Coun",
+     "Province": "Province"
+    },
+    {
+     "River": "White Nile",
+     "Country": "SUD",
+     "Province": "Aali an Nil"
+    },
+    {
+     "River": "Amudarja",
+     "Country": "AFG",
+     "Province": "Afghanistan"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "isMember",
+   "row_count": 8009,
+   "stats_rows": 8009,
+   "columns": [
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 226,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "ZW",
+     "examples": [
+      "Coun",
+      "A",
+      "AFG",
+      "AG",
+      "AL"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Organization",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 154,
+     "is_unique": false,
+     "min_value": "ABEDA",
+     "max_value": "ZC",
+     "examples": [
+      "Organization",
+      "AfDB",
+      "AG",
+      "ANC",
+      "AsDB"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": "Category I",
+     "max_value": "subscriber member",
+     "examples": [
+      "Type",
+      "nonregional member",
+      "observer",
+      "member",
+      "National Society"
+     ],
+     "top_values": [
+      [
+       "member",
+       6824
+      ],
+      [
+       "National Olympic Committee",
+       196
+      ],
+      [
+       "National Society",
+       163
+      ],
+      [
+       "observer",
+       159
+      ],
+      [
+       "Part II",
+       136
+      ],
+      [
+       "Category III",
+       126
+      ],
+      [
+       "regional member",
+       109
+      ],
+      [
+       "nonregional member",
+       50
+      ],
+      [
+       "nonsignatory user",
+       46
+      ],
+      [
+       "associate member",
+       39
+      ],
+      [
+       "applicant",
+       28
+      ],
+      [
+       "guest",
+       25
+      ],
+      [
+       "Part I",
+       24
+      ],
+      [
+       "Category I",
+       21
+      ],
+      [
+       "correspondent member",
+       20
+      ],
+      [
+       "Category II",
+       12
+      ],
+      [
+       "subbureau",
+       9
+      ],
+      [
+       "associate partner",
+       9
+      ],
+      [
+       "subscriber member",
+       4
+      ],
+      [
+       "membership applicant",
+       3
+      ],
+      [
+       "special member",
+       2
+      ],
+      [
+       "associated",
+       2
+      ],
+      [
+       "cooperating state",
+       1
+      ],
+      [
+       "Type",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Country",
+    "Organization"
+   ],
+   "sample_rows": [
+    {
+     "Country": "Coun",
+     "Organization": "Organization",
+     "Type": "Type"
+    },
+    {
+     "Country": "A",
+     "Organization": "AfDB",
+     "Type": "nonregional member"
+    },
+    {
+     "Country": "A",
+     "Organization": "AG",
+     "Type": "observer"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "island",
+   "row_count": 276,
+   "stats_rows": 276,
+   "columns": [
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 276,
+     "is_unique": true,
+     "min_value": "Aland",
+     "max_value": "Zakinthos",
+     "examples": [
+      "Aland",
+      "Alicudi",
+      "Ambon",
+      "Ameland",
+      "Amrum"
+     ],
+     "top_values": [],
+     "description": "the name of the island",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Islands",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.25,
+     "distinct_count": 63,
+     "is_unique": false,
+     "min_value": "Aland Islands",
+     "max_value": "Westfriesische Inseln",
+     "examples": [
+      "Aland Islands",
+      "Lipari Islands",
+      "Moluccan Islands",
+      "Westfriesische Inseln",
+      "Nordfriesische Inseln"
+     ],
+     "top_values": [],
+     "description": "the group of islands where it belongs to",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Area",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0181,
+     "distinct_count": 254,
+     "is_unique": false,
+     "min_value": 1.7,
+     "max_value": 2175600.0,
+     "examples": [
+      650.0,
+      5.2,
+      775.0,
+      57.6,
+      20.5
+     ],
+     "top_values": [],
+     "description": "the area of the island",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Height",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2935,
+     "distinct_count": 183,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 4884.0,
+     "examples": [
+      675.0,
+      1225.0,
+      32.0,
+      65.0,
+      400.0
+     ],
+     "top_values": [],
+     "description": "the maximal elevation of the island",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.6703,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "atoll",
+     "max_value": "volcanic",
+     "examples": [
+      "volcanic",
+      "lime",
+      "coral",
+      "atoll"
+     ],
+     "top_values": [
+      [
+       "volcanic",
+       79
+      ],
+      [
+       "coral",
+       6
+      ],
+      [
+       "atoll",
+       5
+      ],
+      [
+       "lime",
+       1
+      ]
+     ],
+     "description": "the type of the island",
+     "value_description": "",
+     "notes": [
+      "67% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Longitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0036,
+     "distinct_count": 246,
+     "is_unique": false,
+     "min_value": -178.1,
+     "max_value": 179.25,
+     "examples": [
+      20.0,
+      14.4,
+      128.2,
+      5.75,
+      8.3
+     ],
+     "top_values": [],
+     "description": "Longitude",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Latitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0036,
+     "distinct_count": 229,
+     "is_unique": false,
+     "min_value": -51.8,
+     "max_value": 79.25,
+     "examples": [
+      60.1,
+      38.6,
+      -3.7,
+      53.5,
+      54.65
+     ],
+     "top_values": [],
+     "description": "Latitude",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Name"
+   ],
+   "sample_rows": [
+    {
+     "Name": "Aland",
+     "Islands": "Aland Islands",
+     "Area": 650.0,
+     "Height": null,
+     "Type": null,
+     "Longitude": 20.0,
+     "Latitude": 60.1
+    },
+    {
+     "Name": "Alicudi",
+     "Islands": "Lipari Islands",
+     "Area": 5.2,
+     "Height": 675.0,
+     "Type": "volcanic",
+     "Longitude": 14.4,
+     "Latitude": 38.6
+    },
+    {
+     "Name": "Ambon",
+     "Islands": "Moluccan Islands",
+     "Area": 775.0,
+     "Height": 1225.0,
+     "Type": null,
+     "Longitude": 128.2,
+     "Latitude": -3.7
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "islandIn",
+   "row_count": 350,
+   "stats_rows": 350,
+   "columns": [
+    {
+     "name": "Island",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 277,
+     "is_unique": false,
+     "min_value": "Aland",
+     "max_value": "Zakinthos",
+     "examples": [
+      "Island",
+      "Svalbard",
+      "Greenland",
+      "Iceland",
+      "Aust-Vagoey"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Sea",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0143,
+     "distinct_count": 28,
+     "is_unique": false,
+     "min_value": "Andaman Sea",
+     "max_value": "The Channel",
+     "examples": [
+      "Sea",
+      "Norwegian Sea",
+      "Barents Sea",
+      "Arctic Ocean",
+      "Atlantic Ocean"
+     ],
+     "top_values": [
+      [
+       "Atlantic Ocean",
+       80
+      ],
+      [
+       "Pacific Ocean",
+       58
+      ],
+      [
+       "Mediterranean Sea",
+       30
+      ],
+      [
+       "Caribbean Sea",
+       28
+      ],
+      [
+       "North Sea",
+       25
+      ],
+      [
+       "Indian Ocean",
+       25
+      ],
+      [
+       "Sunda Sea",
+       13
+      ],
+      [
+       "Baltic Sea",
+       12
+      ],
+      [
+       "Sulawesi Sea",
+       10
+      ],
+      [
+       "South China Sea",
+       10
+      ],
+      [
+       "Arctic Ocean",
+       9
+      ],
+      [
+       "Norwegian Sea",
+       6
+      ],
+      [
+       "The Channel",
+       4
+      ],
+      [
+       "Sea of Japan",
+       4
+      ],
+      [
+       "Persian Gulf",
+       4
+      ],
+      [
+       "Irish Sea",
+       4
+      ],
+      [
+       "East China Sea",
+       4
+      ],
+      [
+       "Arabian Sea",
+       4
+      ],
+      [
+       "Sea of Okhotsk",
+       3
+      ],
+      [
+       "Kattegat",
+       2
+      ],
+      [
+       "Gulf of Bengal",
+       2
+      ],
+      [
+       "Andaman Sea",
+       2
+      ],
+      [
+       "Sibirian Sea",
+       1
+      ],
+      [
+       "Sea",
+       1
+      ],
+      [
+       "Malakka Strait",
+       1
+      ],
+      [
+       "Gulf of Mexico",
+       1
+      ],
+      [
+       "Gulf of Aden",
+       1
+      ],
+      [
+       "Barents Sea",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Lake",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9829,
+     "distinct_count": 6,
+     "is_unique": true,
+     "min_value": "Lake",
+     "max_value": "Ozero Baikal",
+     "examples": [
+      "Lake"
+     ],
+     "top_values": [
+      [
+       "Ozero Baikal",
+       1
+      ],
+      [
+       "Lake Toba",
+       1
+      ],
+      [
+       "Lake Nicaragua",
+       1
+      ],
+      [
+       "Lake Manicouagan",
+       1
+      ],
+      [
+       "Lake Huron",
+       1
+      ],
+      [
+       "Lake",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "River",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9971,
+     "distinct_count": 1,
+     "is_unique": true,
+     "min_value": "River",
+     "max_value": "River",
+     "examples": [
+      "River"
+     ],
+     "top_values": [
+      [
+       "River",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "Island": "Island",
+     "Sea": "Sea",
+     "Lake": "Lake",
+     "River": "River"
+    },
+    {
+     "Island": "Svalbard",
+     "Sea": "Norwegian Sea",
+     "Lake": null,
+     "River": null
+    },
+    {
+     "Island": "Svalbard",
+     "Sea": "Barents Sea",
+     "Lake": null,
+     "River": null
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "lake",
+   "row_count": 130,
+   "stats_rows": 130,
+   "columns": [
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 130,
+     "is_unique": true,
+     "min_value": "Ammersee",
+     "max_value": "Zurichsee",
+     "examples": [
+      "Ammersee",
+      "Arresoe",
+      "Atlin Lake",
+      "Balaton",
+      "Barrage de Mbakaou"
+     ],
+     "top_values": [],
+     "description": "the name of the lake",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Area",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0154,
+     "distinct_count": 124,
+     "is_unique": false,
+     "min_value": 0.005,
+     "max_value": 386400.0,
+     "examples": [
+      46.6,
+      40.2,
+      798.0,
+      594.0,
+      538.5
+     ],
+     "top_values": [],
+     "description": "the total area of the lake",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Depth",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1615,
+     "distinct_count": 90,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 1637.0,
+     "examples": [
+      81.1,
+      5.6,
+      283.0,
+      12.5,
+      254.0
+     ],
+     "top_values": [],
+     "description": "the depth of the lake",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Altitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1615,
+     "distinct_count": 101,
+     "is_unique": false,
+     "min_value": -422.0,
+     "max_value": 5600.0,
+     "examples": [
+      533.0,
+      668.0,
+      104.0,
+      395.0,
+      564.0
+     ],
+     "top_values": [],
+     "description": "the altitude (above sea level) of the lake",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.5692,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "acid",
+     "max_value": "salt",
+     "examples": [
+      "artificial",
+      "salt",
+      "caldera",
+      "impact",
+      "acid"
+     ],
+     "top_values": [
+      [
+       "salt",
+       30
+      ],
+      [
+       "artificial",
+       14
+      ],
+      [
+       "caldera",
+       7
+      ],
+      [
+       "impact",
+       3
+      ],
+      [
+       "crater",
+       1
+      ],
+      [
+       "acid",
+       1
+      ]
+     ],
+     "description": "the type of the lake",
+     "value_description": "",
+     "notes": [
+      "57% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "River",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.4615,
+     "distinct_count": 61,
+     "is_unique": false,
+     "min_value": "Aare",
+     "max_value": "Zambezi",
+     "examples": [
+      "Ammer",
+      "Yukon River",
+      "Sanaga",
+      "Rhein",
+      "Aare"
+     ],
+     "top_values": [],
+     "description": "the river that flows out of the lake",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Longitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 126,
+     "is_unique": false,
+     "min_value": -133.75,
+     "max_value": 149.1,
+     "examples": [
+      11.6,
+      12.1,
+      -133.75,
+      17.6,
+      12.75
+     ],
+     "top_values": [],
+     "description": "longitude of lake",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Latitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 126,
+     "is_unique": false,
+     "min_value": -36.1,
+     "max_value": 74.5,
+     "examples": [
+      48.0,
+      56.0,
+      59.5,
+      46.8,
+      6.4
+     ],
+     "top_values": [],
+     "description": "latitude of lake",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Name"
+   ],
+   "sample_rows": [
+    {
+     "Name": "Ammersee",
+     "Area": 46.6,
+     "Depth": 81.1,
+     "Altitude": 533.0,
+     "Type": null,
+     "River": "Ammer",
+     "Longitude": 11.6,
+     "Latitude": 48.0
+    },
+    {
+     "Name": "Arresoe",
+     "Area": 40.2,
+     "Depth": 5.6,
+     "Altitude": null,
+     "Type": null,
+     "River": null,
+     "Longitude": 12.1,
+     "Latitude": 56.0
+    },
+    {
+     "Name": "Atlin Lake",
+     "Area": 798.0,
+     "Depth": 283.0,
+     "Altitude": 668.0,
+     "Type": null,
+     "River": "Yukon River",
+     "Longitude": -133.75,
+     "Latitude": 59.5
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "language",
+   "row_count": 144,
+   "stats_rows": 144,
+   "columns": [
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 80,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "YE",
+     "examples": [
+      "AFG",
+      "NAM",
+      "MK",
+      "MNE",
+      "IR"
+     ],
+     "top_values": [],
+     "description": "the country code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 74,
+     "is_unique": false,
+     "min_value": "Afghan Persian",
+     "max_value": "Wallisian",
+     "examples": [
+      "Afghan Persian",
+      "Afrikaans",
+      "Albanian",
+      "Arabic",
+      "Armenian"
+     ],
+     "top_values": [],
+     "description": "name of the language",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Percentage",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 74,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 100.0,
+     "examples": [
+      50.0,
+      60.0,
+      21.0,
+      5.3,
+      1.0
+     ],
+     "top_values": [],
+     "description": "percentage of the language in this country",
+     "value_description": "%",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Name",
+    "Country"
+   ],
+   "sample_rows": [
+    {
+     "Country": "AFG",
+     "Name": "Afghan Persian",
+     "Percentage": 50.0
+    },
+    {
+     "Country": "NAM",
+     "Name": "Afrikaans",
+     "Percentage": 60.0
+    },
+    {
+     "Country": "MK",
+     "Name": "Albanian",
+     "Percentage": 21.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "located",
+   "row_count": 858,
+   "stats_rows": 858,
+   "columns": [
+    {
+     "name": "City",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 831,
+     "is_unique": false,
+     "min_value": "Aarau",
+     "max_value": "ad Damir",
+     "examples": [
+      "City",
+      "Shkoder",
+      "Durres",
+      "Vlore",
+      "Kavalla"
+     ],
+     "top_values": [],
+     "description": "the name of the city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Province",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 575,
+     "is_unique": false,
+     "min_value": "AG",
+     "max_value": "ash Sharqiyah",
+     "examples": [
+      "Province",
+      "Albania",
+      "Anatoliki Makedhonia kai Thraki",
+      "Attiki",
+      "Dhytiki Ellas"
+     ],
+     "top_values": [],
+     "description": "the province where the city belongs to",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 187,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "ZRE",
+     "examples": [
+      "Coun",
+      "AL",
+      "GR",
+      "SRB",
+      "F"
+     ],
+     "top_values": [],
+     "description": "the country code where the city belongs to",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "River",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.5653,
+     "distinct_count": 134,
+     "is_unique": false,
+     "min_value": "Aare",
+     "max_value": "Zaire",
+     "examples": [
+      "River",
+      "Donau",
+      "Save",
+      "Rhein",
+      "Garonne"
+     ],
+     "top_values": [],
+     "description": "the river where it is located at",
+     "value_description": "",
+     "notes": [
+      "57% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Lake",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9417,
+     "distinct_count": 28,
+     "is_unique": false,
+     "min_value": "Bodensee",
+     "max_value": "Zurichsee",
+     "examples": [
+      "Lake",
+      "Lake Skutari",
+      "Bodensee",
+      "Lac Leman",
+      "Vierwaldstattersee"
+     ],
+     "top_values": [
+      [
+       "Lake Ontario",
+       5
+      ],
+      [
+       "Lake Erie",
+       4
+      ],
+      [
+       "Vaenern",
+       3
+      ],
+      [
+       "Lake Tanganjika",
+       3
+      ],
+      [
+       "Lake Michigan",
+       3
+      ],
+      [
+       "Caspian Sea",
+       3
+      ],
+      [
+       "Saimaa",
+       2
+      ],
+      [
+       "Paeijaenne",
+       2
+      ],
+      [
+       "Mjoesa-See",
+       2
+      ],
+      [
+       "Maelaren",
+       2
+      ],
+      [
+       "Lake Oahe",
+       2
+      ],
+      [
+       "Lake Kivu",
+       2
+      ],
+      [
+       "Lac Leman",
+       2
+      ],
+      [
+       "Zurichsee",
+       1
+      ],
+      [
+       "Vierwaldstattersee",
+       1
+      ],
+      [
+       "Vaettern",
+       1
+      ],
+      [
+       "Lake Victoria",
+       1
+      ],
+      [
+       "Lake Superior",
+       1
+      ],
+      [
+       "Lake Skutari",
+       1
+      ],
+      [
+       "Lake Nicaragua",
+       1
+      ],
+      [
+       "Lake Maracaibo",
+       1
+      ],
+      [
+       "Lake Managua",
+       1
+      ],
+      [
+       "Lake Burley Griffin",
+       1
+      ],
+      [
+       "Lake",
+       1
+      ],
+      [
+       "Kallavesi",
+       1
+      ],
+      [
+       "Great Slave Lake",
+       1
+      ],
+      [
+       "Great Salt Lake",
+       1
+      ],
+      [
+       "Bodensee",
+       1
+      ]
+     ],
+     "description": "the lake where it is located at",
+     "value_description": "",
+     "notes": [
+      "94% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Sea",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.4569,
+     "distinct_count": 30,
+     "is_unique": false,
+     "min_value": "Andaman Sea",
+     "max_value": "Yellow Sea",
+     "examples": [
+      "Sea",
+      "Mediterranean Sea",
+      "Atlantic Ocean",
+      "The Channel",
+      "North Sea"
+     ],
+     "top_values": [
+      [
+       "Atlantic Ocean",
+       103
+      ],
+      [
+       "Pacific Ocean",
+       67
+      ],
+      [
+       "Mediterranean Sea",
+       66
+      ],
+      [
+       "Caribbean Sea",
+       26
+      ],
+      [
+       "Indian Ocean",
+       25
+      ],
+      [
+       "Baltic Sea",
+       25
+      ],
+      [
+       "Sea of Japan",
+       22
+      ],
+      [
+       "Sunda Sea",
+       13
+      ],
+      [
+       "Yellow Sea",
+       12
+      ],
+      [
+       "The Channel",
+       12
+      ],
+      [
+       "Norwegian Sea",
+       10
+      ],
+      [
+       "South China Sea",
+       9
+      ],
+      [
+       "North Sea",
+       9
+      ],
+      [
+       "Gulf of Mexico",
+       9
+      ],
+      [
+       "East China Sea",
+       7
+      ],
+      [
+       "Arabian Sea",
+       6
+      ],
+      [
+       "Sulawesi Sea",
+       5
+      ],
+      [
+       "Persian Gulf",
+       5
+      ],
+      [
+       "Irish Sea",
+       5
+      ],
+      [
+       "Barents Sea",
+       5
+      ],
+      [
+       "Skagerrak",
+       4
+      ],
+      [
+       "Malakka Strait",
+       4
+      ],
+      [
+       "Red Sea",
+       3
+      ],
+      [
+       "Kattegat",
+       3
+      ],
+      [
+       "Andaman Sea",
+       3
+      ],
+      [
+       "Sea of Okhotsk",
+       2
+      ],
+      [
+       "Gulf of Bengal",
+       2
+      ],
+      [
+       "Gulf of Aden",
+       2
+      ],
+      [
+       "Sea",
+       1
+      ],
+      [
+       "Gulf of Oman",
+       1
+      ]
+     ],
+     "description": "the sea where it is located at",
+     "value_description": "Note that for a given city, there can be several lakes/seas/rivers where it is located at.",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "City": "City",
+     "Province": "Province",
+     "Country": "Coun",
+     "River": "River",
+     "Lake": "Lake",
+     "Sea": "Sea"
+    },
+    {
+     "City": "Shkoder",
+     "Province": "Albania",
+     "Country": "AL",
+     "River": null,
+     "Lake": "Lake Skutari",
+     "Sea": null
+    },
+    {
+     "City": "Durres",
+     "Province": "Albania",
+     "Country": "AL",
+     "River": null,
+     "Lake": null,
+     "Sea": "Mediterranean Sea"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "locatedOn",
+   "row_count": 435,
+   "stats_rows": 435,
+   "columns": [
+    {
+     "name": "City",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 429,
+     "is_unique": false,
+     "min_value": "Aberdeen",
+     "max_value": "Zamboanga",
+     "examples": [
+      "City",
+      "Aberdeen",
+      "Aberystwyth",
+      "Adamstown",
+      "Agana"
+     ],
+     "top_values": [],
+     "description": "the name of the city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Province",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 246,
+     "is_unique": false,
+     "min_value": "Aberconwy and Colwyn",
+     "max_value": "Yamanashi",
+     "examples": [
+      "Province",
+      "Grampian",
+      "Ceredigion",
+      "Pitcairn Islands",
+      "Guam"
+     ],
+     "top_values": [],
+     "description": "the province where the city belongs to",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 97,
+     "is_unique": false,
+     "min_value": "AG",
+     "max_value": "XMAS",
+     "examples": [
+      "Coun",
+      "GB",
+      "PITC",
+      "GUAM",
+      "F"
+     ],
+     "top_values": [],
+     "description": "the country code where the city belongs to",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Island",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 121,
+     "is_unique": false,
+     "min_value": "Ambon",
+     "max_value": "Viti Levu",
+     "examples": [
+      "Island",
+      "Great Britain",
+      "Pitcairn",
+      "Guam",
+      "Corse"
+     ],
+     "top_values": [],
+     "description": "the island it is (maybe only partially) located on",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "City",
+    "Province",
+    "Country",
+    "Island"
+   ],
+   "sample_rows": [
+    {
+     "City": "City",
+     "Province": "Province",
+     "Country": "Coun",
+     "Island": "Island"
+    },
+    {
+     "City": "Aberdeen",
+     "Province": "Grampian",
+     "Country": "GB",
+     "Island": "Great Britain"
+    },
+    {
+     "City": "Aberystwyth",
+     "Province": "Ceredigion",
+     "Country": "GB",
+     "Island": "Great Britain"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "mergesWith",
+   "row_count": 55,
+   "stats_rows": 55,
+   "columns": [
+    {
+     "name": "Sea1",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": "Andaman Sea",
+     "max_value": "Sulawesi Sea",
+     "examples": [
+      "Sea1",
+      "Andaman Sea",
+      "Arabian Sea",
+      "Arctic Ocean",
+      "Atlantic Ocean"
+     ],
+     "top_values": [
+      [
+       "Atlantic Ocean",
+       9
+      ],
+      [
+       "Pacific Ocean",
+       5
+      ],
+      [
+       "Arctic Ocean",
+       5
+      ],
+      [
+       "East China Sea",
+       4
+      ],
+      [
+       "North Sea",
+       3
+      ],
+      [
+       "Arabian Sea",
+       3
+      ],
+      [
+       "Andaman Sea",
+       3
+      ],
+      [
+       "South China Sea",
+       2
+      ],
+      [
+       "Sea of Japan",
+       2
+      ],
+      [
+       "Indian Ocean",
+       2
+      ],
+      [
+       "Gulf of Oman",
+       2
+      ],
+      [
+       "Gulf of Bengal",
+       2
+      ],
+      [
+       "Gulf of Aden",
+       2
+      ],
+      [
+       "Black Sea",
+       2
+      ],
+      [
+       "Barents Sea",
+       2
+      ],
+      [
+       "Sulawesi Sea",
+       1
+      ],
+      [
+       "Sea1",
+       1
+      ],
+      [
+       "Malakka Strait",
+       1
+      ],
+      [
+       "Kattegat",
+       1
+      ],
+      [
+       "Caribbean Sea",
+       1
+      ],
+      [
+       "Bering Sea",
+       1
+      ],
+      [
+       "Baltic Sea",
+       1
+      ]
+     ],
+     "description": "the name of the mountain",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Sea2",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 28,
+     "is_unique": false,
+     "min_value": "Atlantic Ocean",
+     "max_value": "Yellow Sea",
+     "examples": [
+      "Sea2",
+      "Gulf of Bengal",
+      "Indian Ocean",
+      "Malakka Strait",
+      "Gulf of Aden"
+     ],
+     "top_values": [
+      [
+       "Sunda Sea",
+       5
+      ],
+      [
+       "Pacific Ocean",
+       5
+      ],
+      [
+       "Indian Ocean",
+       5
+      ],
+      [
+       "Norwegian Sea",
+       4
+      ],
+      [
+       "South China Sea",
+       3
+      ],
+      [
+       "Yellow Sea",
+       2
+      ],
+      [
+       "The Channel",
+       2
+      ],
+      [
+       "Sulawesi Sea",
+       2
+      ],
+      [
+       "Skagerrak",
+       2
+      ],
+      [
+       "Sibirian Sea",
+       2
+      ],
+      [
+       "Sea of Okhotsk",
+       2
+      ],
+      [
+       "Sea of Japan",
+       2
+      ],
+      [
+       "North Sea",
+       2
+      ],
+      [
+       "Mediterranean Sea",
+       2
+      ],
+      [
+       "Gulf of Mexico",
+       2
+      ],
+      [
+       "Sea2",
+       1
+      ],
+      [
+       "Sea of Azov",
+       1
+      ],
+      [
+       "Red Sea",
+       1
+      ],
+      [
+       "Persian Gulf",
+       1
+      ],
+      [
+       "Malakka Strait",
+       1
+      ],
+      [
+       "Irish Sea",
+       1
+      ],
+      [
+       "Gulf of Oman",
+       1
+      ],
+      [
+       "Gulf of Bengal",
+       1
+      ],
+      [
+       "Gulf of Aden",
+       1
+      ],
+      [
+       "Caribbean Sea",
+       1
+      ],
+      [
+       "Bering Sea",
+       1
+      ],
+      [
+       "Barents Sea",
+       1
+      ],
+      [
+       "Atlantic Ocean",
+       1
+      ]
+     ],
+     "description": "the country code where it is located",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Sea1",
+    "Sea2"
+   ],
+   "sample_rows": [
+    {
+     "Sea1": "Sea1",
+     "Sea2": "Sea2"
+    },
+    {
+     "Sea1": "Andaman Sea",
+     "Sea2": "Gulf of Bengal"
+    },
+    {
+     "Sea1": "Andaman Sea",
+     "Sea2": "Indian Ocean"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "mountain",
+   "row_count": 0,
+   "stats_rows": 0,
+   "columns": [
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "the name of the mountain",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Mountains",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "the mountains where it belongs to",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Height",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "the maximal elevation of the summit of the mountain",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Type",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "the sea where it finally flows to",
+     "value_description": "(note that at most one out of {river,lake,sea} can be non-null",
+     "notes": []
+    },
+    {
+     "name": "Longitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "the length of the river",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Latitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "the longitude of its source",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Name"
+   ],
+   "sample_rows": [],
+   "notes": []
+  },
+  {
+   "name": "mountainOnIsland",
+   "row_count": 68,
+   "stats_rows": 68,
+   "columns": [
+    {
+     "name": "Mountain",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 68,
+     "is_unique": true,
+     "min_value": "Andringitra",
+     "max_value": "Zhima",
+     "examples": [
+      "Mountain",
+      "Andringitra",
+      "Asahi-Dake",
+      "Barbeau Peak",
+      "Ben Nevis"
+     ],
+     "top_values": [],
+     "description": "the name of the mountain",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Island",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 58,
+     "is_unique": false,
+     "min_value": "Baffin Island",
+     "max_value": "Viti Levu",
+     "examples": [
+      "Island",
+      "Madagaskar",
+      "Hokkaido",
+      "Ellesmere Island",
+      "Great Britain"
+     ],
+     "top_values": [],
+     "description": "the name of the island",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Mountain",
+    "Island"
+   ],
+   "sample_rows": [
+    {
+     "Mountain": "Mountain",
+     "Island": "Island"
+    },
+    {
+     "Mountain": "Andringitra",
+     "Island": "Madagaskar"
+    },
+    {
+     "Mountain": "Asahi-Dake",
+     "Island": "Hokkaido"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "organization",
+   "row_count": 154,
+   "stats_rows": 154,
+   "columns": [
+    {
+     "name": "Abbreviation",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 154,
+     "is_unique": true,
+     "min_value": "ABEDA",
+     "max_value": "ZC",
+     "examples": [
+      "Abbreviation",
+      "ABEDA",
+      "ACC",
+      "ACCT",
+      "ACP"
+     ],
+     "top_values": [],
+     "description": "its abbreviation",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 154,
+     "is_unique": true,
+     "min_value": "ASEAN-Mekong Basin Development Group",
+     "max_value": "Zangger Committee",
+     "examples": [
+      "Name",
+      "Arab Bank for Economic Development in Africa",
+      "Arab Cooperation Council",
+      "Agency for Cultural and Technical Cooperation",
+      "African, Caribbean, and Pacific Countries"
+     ],
+     "top_values": [],
+     "description": "the full name of the organization",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "City",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1883,
+     "distinct_count": 62,
+     "is_unique": false,
+     "min_value": "Abidjan",
+     "max_value": "Washington",
+     "examples": [
+      "City",
+      "Khartoum",
+      "Paris",
+      "Brussels",
+      "Abidjan"
+     ],
+     "top_values": [],
+     "description": "the city where the headquarters are located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1883,
+     "distinct_count": 55,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "YV",
+     "examples": [
+      "Coun",
+      "SUD",
+      "F",
+      "B",
+      "CI"
+     ],
+     "top_values": [],
+     "description": "the code of the country where the headquarters are located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Province",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1883,
+     "distinct_count": 59,
+     "is_unique": false,
+     "min_value": "Abu Dhabi",
+     "max_value": "al Khartum",
+     "examples": [
+      "Province",
+      "al Khartum",
+      "Ile de France",
+      "Brabant",
+      "Cote dIvoire"
+     ],
+     "top_values": [],
+     "description": "the name of the province where the headquarters are located,",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Established",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.039,
+     "distinct_count": 142,
+     "is_unique": false,
+     "min_value": "1874-10-09",
+     "max_value": "Established",
+     "examples": [
+      "Established",
+      "1974-02-18",
+      "1989-02-16",
+      "1970-03-21",
+      "1976-04-01"
+     ],
+     "top_values": [],
+     "description": "date of establishment",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Abbreviation"
+   ],
+   "sample_rows": [
+    {
+     "Abbreviation": "Abbreviation",
+     "Name": "Name",
+     "City": "City",
+     "Country": "Coun",
+     "Province": "Province",
+     "Established": "Established"
+    },
+    {
+     "Abbreviation": "ABEDA",
+     "Name": "Arab Bank for Economic Development in Africa",
+     "City": "Khartoum",
+     "Country": "SUD",
+     "Province": "al Khartum",
+     "Established": "1974-02-18"
+    },
+    {
+     "Abbreviation": "ACC",
+     "Name": "Arab Cooperation Council",
+     "City": null,
+     "Country": null,
+     "Province": null,
+     "Established": "1989-02-16"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "politics",
+   "row_count": 239,
+   "stats_rows": 239,
+   "columns": [
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 239,
+     "is_unique": true,
+     "min_value": "A",
+     "max_value": "ZW",
+     "examples": [
+      "Coun",
+      "A",
+      "AFG",
+      "AG",
+      "AL"
+     ],
+     "top_values": [],
+     "description": "the country code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Independence",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.2301,
+     "distinct_count": 174,
+     "is_unique": false,
+     "min_value": "0301-01-01",
+     "max_value": "Independence",
+     "examples": [
+      "Independence",
+      "1918-11-12",
+      "1919-08-19",
+      "1981-11-01",
+      "1912-11-28"
+     ],
+     "top_values": [],
+     "description": "date of independence",
+     "value_description": "Commonsense evidence:\r\n\r\nif the value is null or empty, it means this country is not independent",
+     "notes": []
+    },
+    {
+     "name": "Dependent",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.8368,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": "AUS",
+     "max_value": "USA",
+     "examples": [
+      "Depe",
+      "USA",
+      "NL",
+      "GB",
+      "AUS"
+     ],
+     "top_values": [
+      [
+       "GB",
+       13
+      ],
+      [
+       "F",
+       10
+      ],
+      [
+       "USA",
+       4
+      ],
+      [
+       "AUS",
+       3
+      ],
+      [
+       "TJ",
+       2
+      ],
+      [
+       "NL",
+       2
+      ],
+      [
+       "DK",
+       2
+      ],
+      [
+       "NZ",
+       1
+      ],
+      [
+       "N",
+       1
+      ],
+      [
+       "Depe",
+       1
+      ]
+     ],
+     "description": "the country code where the area belongs to",
+     "value_description": "",
+     "notes": [
+      "84% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Government",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0084,
+     "distinct_count": 74,
+     "is_unique": false,
+     "min_value": "British Overseas Territories",
+     "max_value": "unitary republic",
+     "examples": [
+      "Government",
+      "federal republic",
+      "transitional government",
+      "parliamentary democracy",
+      "emerging democracy"
+     ],
+     "top_values": [],
+     "description": "type of government",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Country"
+   ],
+   "sample_rows": [
+    {
+     "Country": "Coun",
+     "Independence": "Independence",
+     "Dependent": "Depe",
+     "Government": "Government"
+    },
+    {
+     "Country": "A",
+     "Independence": "1918-11-12",
+     "Dependent": null,
+     "Government": "federal republic"
+    },
+    {
+     "Country": "AFG",
+     "Independence": "1919-08-19",
+     "Dependent": null,
+     "Government": "transitional government"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "population",
+   "row_count": 238,
+   "stats_rows": 238,
+   "columns": [
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 238,
+     "is_unique": true,
+     "min_value": "A",
+     "max_value": "ZW",
+     "examples": [
+      "A",
+      "AFG",
+      "AG",
+      "AL",
+      "AMSA"
+     ],
+     "top_values": [],
+     "description": "the country code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Population_Growth",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0378,
+     "distinct_count": 183,
+     "is_unique": false,
+     "min_value": -3.3,
+     "max_value": 16.49,
+     "examples": [
+      0.41,
+      4.78,
+      0.76,
+      1.34,
+      1.22
+     ],
+     "top_values": [],
+     "description": "population growth rate",
+     "value_description": "per annum",
+     "notes": []
+    },
+    {
+     "name": "Infant_Mortality",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0462,
+     "distinct_count": 200,
+     "is_unique": false,
+     "min_value": 2.2,
+     "max_value": 149.7,
+     "examples": [
+      6.2,
+      149.7,
+      17.2,
+      49.2,
+      10.18
+     ],
+     "top_values": [],
+     "description": "infant mortality",
+     "value_description": "per thousand",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Country"
+   ],
+   "sample_rows": [
+    {
+     "Country": "A",
+     "Population_Growth": 0.41,
+     "Infant_Mortality": 6.2
+    },
+    {
+     "Country": "AFG",
+     "Population_Growth": 4.78,
+     "Infant_Mortality": 149.7
+    },
+    {
+     "Country": "AG",
+     "Population_Growth": 0.76,
+     "Infant_Mortality": 17.2
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "province",
+   "row_count": 1450,
+   "stats_rows": 1450,
+   "columns": [
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1430,
+     "is_unique": false,
+     "min_value": "AG",
+     "max_value": "ash Sharqiyah",
+     "examples": [
+      "Aali an Nil",
+      "Aberconwy and Colwyn",
+      "Abruzzo",
+      "Abu Dhabi",
+      "Acre"
+     ],
+     "top_values": [],
+     "description": "the name of the administrative division",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 238,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "ZW",
+     "examples": [
+      "SUD",
+      "GB",
+      "I",
+      "UAE",
+      "BR"
+     ],
+     "top_values": [],
+     "description": "the country code where it belongs to",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1434,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 206611600,
+     "examples": [
+      1599605,
+      110700,
+      1263000,
+      670000,
+      483483
+     ],
+     "top_values": [],
+     "description": "the population of the province",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Area",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1448,
+     "distinct_count": 1213,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 3379680.0,
+     "examples": [
+      238792.0,
+      1130.0,
+      10794.0,
+      67350.0,
+      153149.0
+     ],
+     "top_values": [],
+     "description": "the total area of the province,",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Capital",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0062,
+     "distinct_count": 1405,
+     "is_unique": false,
+     "min_value": "Aarau",
+     "max_value": "s Hertogenbosch",
+     "examples": [
+      "Malakal",
+      "Colwyn Bay",
+      "LAquila",
+      "Rio Branco",
+      "Kirkuk"
+     ],
+     "top_values": [],
+     "description": "the name of the capital",
+     "value_description": "if null, doesn't have capital",
+     "notes": []
+    },
+    {
+     "name": "CapProv",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0062,
+     "distinct_count": 1404,
+     "is_unique": false,
+     "min_value": "AG",
+     "max_value": "ash Sharqiyah",
+     "examples": [
+      "Aali an Nil",
+      "Aberconwy and Colwyn",
+      "Abruzzo",
+      "Acre",
+      "Ad Tamim"
+     ],
+     "top_values": [],
+     "description": "capital province. the name of the province where the capital belongs to",
+     "value_description": "commonsense evidence:\r\n\r\nnote that capprov is not necessarily equal to name",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Name",
+    "Country"
+   ],
+   "sample_rows": [
+    {
+     "Name": "Aali an Nil",
+     "Country": "SUD",
+     "Population": 1599605,
+     "Area": 238792.0,
+     "Capital": "Malakal",
+     "CapProv": "Aali an Nil"
+    },
+    {
+     "Name": "Aberconwy and Colwyn",
+     "Country": "GB",
+     "Population": 110700,
+     "Area": 1130.0,
+     "Capital": "Colwyn Bay",
+     "CapProv": "Aberconwy and Colwyn"
+    },
+    {
+     "Name": "Abruzzo",
+     "Country": "I",
+     "Population": 1263000,
+     "Area": 10794.0,
+     "Capital": "LAquila",
+     "CapProv": "Abruzzo"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "religion",
+   "row_count": 454,
+   "stats_rows": 454,
+   "columns": [
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 206,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "ZW",
+     "examples": [
+      "BERM",
+      "AUS",
+      "AXA",
+      "BS",
+      "CAYM"
+     ],
+     "top_values": [],
+     "description": "the country code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 37,
+     "is_unique": false,
+     "min_value": "African Methodist Episcopal",
+     "max_value": "Uniting Church Australia",
+     "examples": [
+      "African Methodist Episcopal",
+      "Anglican",
+      "Armenian Apostolic",
+      "Bahai",
+      "Baptist"
+     ],
+     "top_values": [
+      [
+       "Roman Catholic",
+       104
+      ],
+      [
+       "Muslim",
+       98
+      ],
+      [
+       "Protestant",
+       67
+      ],
+      [
+       "Christian",
+       57
+      ],
+      [
+       "Christian Orthodox",
+       22
+      ],
+      [
+       "Anglican",
+       16
+      ],
+      [
+       "Buddhist",
+       15
+      ],
+      [
+       "Hindu",
+       14
+      ],
+      [
+       "Jewish",
+       13
+      ],
+      [
+       "Seventh-Day Adventist",
+       7
+      ],
+      [
+       "Baptist",
+       5
+      ],
+      [
+       "Methodist",
+       4
+      ],
+      [
+       "Presbyterian",
+       3
+      ],
+      [
+       "Church of God",
+       3
+      ],
+      [
+       "United Church",
+       2
+      ],
+      [
+       "Mormon",
+       2
+      ],
+      [
+       "Bahai",
+       2
+      ],
+      [
+       "Uniting Church Australia",
+       1
+      ],
+      [
+       "United",
+       1
+      ],
+      [
+       "Taoist",
+       1
+      ],
+      [
+       "Sikh",
+       1
+      ],
+      [
+       "Pentecostal",
+       1
+      ],
+      [
+       "Kimbanguist",
+       1
+      ],
+      [
+       "Judaism",
+       1
+      ],
+      [
+       "Jains",
+       1
+      ],
+      [
+       "Evangelical Alliance",
+       1
+      ],
+      [
+       "Episcopalian",
+       1
+      ],
+      [
+       "Ekalesia Niue",
+       1
+      ],
+      [
+       "Druze",
+       1
+      ],
+      [
+       "Coptic Christian",
+       1
+      ],
+      [
+       "Confucianism",
+       1
+      ],
+      [
+       "Church Tuvalu",
+       1
+      ],
+      [
+       "Church Christ",
+       1
+      ],
+      [
+       "Christian Congregationalist",
+       1
+      ],
+      [
+       "Chondogyo",
+       1
+      ],
+      [
+       "Armenian Apostolic",
+       1
+      ],
+      [
+       "African Methodist Episcopal",
+       1
+      ]
+     ],
+     "description": "name of the religion",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Percentage",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 147,
+     "is_unique": false,
+     "min_value": 0.1,
+     "max_value": 100.0,
+     "examples": [
+      11.0,
+      26.1,
+      29.0,
+      23.0,
+      20.0
+     ],
+     "top_values": [],
+     "description": "percentage of the language in this country",
+     "value_description": "%",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Name",
+    "Country"
+   ],
+   "sample_rows": [
+    {
+     "Country": "BERM",
+     "Name": "African Methodist Episcopal",
+     "Percentage": 11.0
+    },
+    {
+     "Country": "AUS",
+     "Name": "Anglican",
+     "Percentage": 26.1
+    },
+    {
+     "Country": "AXA",
+     "Name": "Anglican",
+     "Percentage": 29.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "river",
+   "row_count": 218,
+   "stats_rows": 218,
+   "columns": [
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 218,
+     "is_unique": true,
+     "min_value": "Aare",
+     "max_value": "Zambezi",
+     "examples": [
+      "Aare",
+      "Adda",
+      "Akagera",
+      "Allegheny River",
+      "Aller"
+     ],
+     "top_values": [],
+     "description": "the name of the river",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "River",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.5092,
+     "distinct_count": 50,
+     "is_unique": false,
+     "min_value": "Aare",
+     "max_value": "Zambezi",
+     "examples": [
+      "Rhein",
+      "Po",
+      "Ohio River",
+      "Weser",
+      "Inn"
+     ],
+     "top_values": [
+      [
+       "Donau",
+       16
+      ],
+      [
+       "Zaire",
+       7
+      ],
+      [
+       "Kwa",
+       5
+      ],
+      [
+       "Rhein",
+       4
+      ],
+      [
+       "White Nile",
+       3
+      ],
+      [
+       "Weser",
+       3
+      ],
+      [
+       "Schatt al Arab",
+       3
+      ],
+      [
+       "Po",
+       3
+      ],
+      [
+       "Ob",
+       3
+      ],
+      [
+       "Nile",
+       3
+      ],
+      [
+       "Mississippi",
+       3
+      ],
+      [
+       "Ubangi",
+       2
+      ],
+      [
+       "Sobat",
+       2
+      ],
+      [
+       "Saint Lawrence River",
+       2
+      ],
+      [
+       "Rhone",
+       2
+      ],
+      [
+       "Ohio River",
+       2
+      ],
+      [
+       "Niger",
+       2
+      ],
+      [
+       "Murray River",
+       2
+      ],
+      [
+       "Morava",
+       2
+      ],
+      [
+       "Lualaba",
+       2
+      ],
+      [
+       "Inn",
+       2
+      ],
+      [
+       "Drin",
+       2
+      ],
+      [
+       "Dalaelv",
+       2
+      ],
+      [
+       "Amur",
+       2
+      ],
+      [
+       "Amazonas",
+       2
+      ],
+      [
+       "Aare",
+       2
+      ],
+      [
+       "Zambezi",
+       1
+      ],
+      [
+       "Volga",
+       1
+      ],
+      [
+       "Syrdarja",
+       1
+      ],
+      [
+       "Seine",
+       1
+      ],
+      [
+       "Saone",
+       1
+      ],
+      [
+       "Ruki",
+       1
+      ],
+      [
+       "Rio Madeira",
+       1
+      ],
+      [
+       "Parana",
+       1
+      ],
+      [
+       "Oranje",
+       1
+      ],
+      [
+       "Northern Dwina",
+       1
+      ],
+      [
+       "Mosel",
+       1
+      ],
+      [
+       "Kemijoki",
+       1
+      ],
+      [
+       "Jubba",
+       1
+      ],
+      [
+       "Jenissej",
+       1
+      ],
+      [
+       "Isar",
+       1
+      ],
+      [
+       "Irtysch",
+       1
+      ],
+      [
+       "Glomma",
+       1
+      ],
+      [
+       "Fimi",
+       1
+      ],
+      [
+       "Elbe",
+       1
+      ],
+      [
+       "Drau",
+       1
+      ],
+      [
+       "Busira",
+       1
+      ],
+      [
+       "Amudarja",
+       1
+      ],
+      [
+       "Ammer",
+       1
+      ],
+      [
+       "Aller",
+       1
+      ]
+     ],
+     "description": "the river where it finally flows to",
+     "value_description": "",
+     "notes": [
+      "51% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Lake",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.7752,
+     "distinct_count": 43,
+     "is_unique": false,
+     "min_value": "Ammersee",
+     "max_value": "Vierwaldstattersee",
+     "examples": [
+      "Brienzersee",
+      "Lago di Como",
+      "Lake Victoria",
+      "Chiemsee",
+      "Ammersee"
+     ],
+     "top_values": [
+      [
+       "Caspian Sea",
+       3
+      ],
+      [
+       "Ozero Ladoga",
+       2
+      ],
+      [
+       "Ozero Aral",
+       2
+      ],
+      [
+       "Lake Sese Seko/Albertsee",
+       2
+      ],
+      [
+       "Lake Keban",
+       2
+      ],
+      [
+       "Vierwaldstattersee",
+       1
+      ],
+      [
+       "Vaenern",
+       1
+      ],
+      [
+       "Storuman",
+       1
+      ],
+      [
+       "Starnberger See",
+       1
+      ],
+      [
+       "Siljan",
+       1
+      ],
+      [
+       "Pyramid Lake",
+       1
+      ],
+      [
+       "Poopo",
+       1
+      ],
+      [
+       "Ozero Baikal",
+       1
+      ],
+      [
+       "Mjoesa-See",
+       1
+      ],
+      [
+       "Lake Winnipeg",
+       1
+      ],
+      [
+       "Lake Volta",
+       1
+      ],
+      [
+       "Lake Victoria",
+       1
+      ],
+      [
+       "Lake Tanganjika",
+       1
+      ],
+      [
+       "Lake Powell",
+       1
+      ],
+      [
+       "Lake Ontario",
+       1
+      ],
+      [
+       "Lake Nasser",
+       1
+      ],
+      [
+       "Lake Mweru",
+       1
+      ],
+      [
+       "Lake Managua",
+       1
+      ],
+      [
+       "Lake Kariba",
+       1
+      ],
+      [
+       "Lake Kainji",
+       1
+      ],
+      [
+       "Lake Hume",
+       1
+      ],
+      [
+       "Lake Erie",
+       1
+      ],
+      [
+       "Lake Burley Griffin",
+       1
+      ],
+      [
+       "Lago di Como",
+       1
+      ],
+      [
+       "Lago de Sobradinho",
+       1
+      ],
+      [
+       "Lago de Chapala",
+       1
+      ],
+      [
+       "Lago Maggiore",
+       1
+      ],
+      [
+       "Lac Leman",
+       1
+      ],
+      [
+       "Franklin. D. Roosevelt Lake",
+       1
+      ],
+      [
+       "Fort Peck Lake",
+       1
+      ],
+      [
+       "Dead Sea",
+       1
+      ],
+      [
+       "Chiemsee",
+       1
+      ],
+      [
+       "Chickamauga Lake",
+       1
+      ],
+      [
+       "Chad Lake",
+       1
+      ],
+      [
+       "Brienzersee",
+       1
+      ],
+      [
+       "Bodensee",
+       1
+      ],
+      [
+       "Barrage de Mbakaou",
+       1
+      ],
+      [
+       "Ammersee",
+       1
+      ]
+     ],
+     "description": "the lake where it finally flows to",
+     "value_description": "",
+     "notes": [
+      "78% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Sea",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.5917,
+     "distinct_count": 28,
+     "is_unique": false,
+     "min_value": "Andaman Sea",
+     "max_value": "Yellow Sea",
+     "examples": [
+      "Atlantic Ocean",
+      "Sea of Okhotsk",
+      "Mediterranean Sea",
+      "Malakka Strait",
+      "Ganges"
+     ],
+     "top_values": [
+      [
+       "Atlantic Ocean",
+       24
+      ],
+      [
+       "Baltic Sea",
+       11
+      ],
+      [
+       "Mediterranean Sea",
+       8
+      ],
+      [
+       "Sibirian Sea",
+       5
+      ],
+      [
+       "North Sea",
+       5
+      ],
+      [
+       "Indian Ocean",
+       4
+      ],
+      [
+       "Pacific Ocean",
+       3
+      ],
+      [
+       "Black Sea",
+       3
+      ],
+      [
+       "Barents Sea",
+       3
+      ],
+      [
+       "Gulf of Mexico",
+       2
+      ],
+      [
+       "Caribbean Sea",
+       2
+      ],
+      [
+       "Arctic Ocean",
+       2
+      ],
+      [
+       "Andaman Sea",
+       2
+      ],
+      [
+       "Yellow Sea",
+       1
+      ],
+      [
+       "The Channel",
+       1
+      ],
+      [
+       "South China Sea",
+       1
+      ],
+      [
+       "Skagerrak",
+       1
+      ],
+      [
+       "Sea of Okhotsk",
+       1
+      ],
+      [
+       "Sea of Azov",
+       1
+      ],
+      [
+       "Persian Gulf",
+       1
+      ],
+      [
+       "Norwegian Sea",
+       1
+      ],
+      [
+       "Malakka Strait",
+       1
+      ],
+      [
+       "Kattegat",
+       1
+      ],
+      [
+       "Gulf of Bengal",
+       1
+      ],
+      [
+       "Ganges",
+       1
+      ],
+      [
+       "East China Sea",
+       1
+      ],
+      [
+       "Bering Sea",
+       1
+      ],
+      [
+       "Arabian Sea",
+       1
+      ]
+     ],
+     "description": "the sea where it finally flows to",
+     "value_description": "(note that at most one out of {river,lake,sea} can be non-null",
+     "notes": [
+      "59% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Length",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0321,
+     "distinct_count": 191,
+     "is_unique": false,
+     "min_value": 35.0,
+     "max_value": 6448.0,
+     "examples": [
+      288.0,
+      313.0,
+      275.0,
+      523.0,
+      211.0
+     ],
+     "top_values": [],
+     "description": "the length of the river",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "SourceLongitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0321,
+     "distinct_count": 191,
+     "is_unique": false,
+     "min_value": -134.5,
+     "max_value": 152.0,
+     "examples": [
+      8.2,
+      10.3,
+      29.3,
+      -77.9,
+      11.23
+     ],
+     "top_values": [],
+     "description": "the longitude of its source",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "SourceLatitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0321,
+     "distinct_count": 187,
+     "is_unique": false,
+     "min_value": -38.0,
+     "max_value": 68.95,
+     "examples": [
+      46.55,
+      -2.5,
+      41.9,
+      52.1,
+      47.3
+     ],
+     "top_values": [],
+     "description": "the latitude of its source",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Mountains",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.5734,
+     "distinct_count": 35,
+     "is_unique": false,
+     "min_value": "Adirondacks",
+     "max_value": "Zagros",
+     "examples": [
+      "Alps",
+      "East African Rift",
+      "Appalachian Mountains",
+      "Andes",
+      "Apennin"
+     ],
+     "top_values": [
+      [
+       "Alps",
+       22
+      ],
+      [
+       "East African Rift",
+       10
+      ],
+      [
+       "Andes",
+       5
+      ],
+      [
+       "Karpaten",
+       4
+      ],
+      [
+       "Waldai Hills",
+       3
+      ],
+      [
+       "Vogesen",
+       3
+      ],
+      [
+       "Ural",
+       3
+      ],
+      [
+       "Sudety Mountains",
+       3
+      ],
+      [
+       "Kurdistan",
+       3
+      ],
+      [
+       "Cordillera Iberica",
+       3
+      ],
+      [
+       "Black Forest",
+       3
+      ],
+      [
+       "Snowy Mountains",
+       2
+      ],
+      [
+       "Ethiopian Highlands",
+       2
+      ],
+      [
+       "Drakensberge",
+       2
+      ],
+      [
+       "Beskides",
+       2
+      ],
+      [
+       "Appalachian Mountains",
+       2
+      ],
+      [
+       "Apennin",
+       2
+      ],
+      [
+       "Altai",
+       2
+      ],
+      [
+       "Zagros",
+       1
+      ],
+      [
+       "Tien Shan",
+       1
+      ],
+      [
+       "Thueringer Wald",
+       1
+      ],
+      [
+       "Sierra Parima",
+       1
+      ],
+      [
+       "Rhoen",
+       1
+      ],
+      [
+       "Pyrenees",
+       1
+      ],
+      [
+       "Pamir",
+       1
+      ],
+      [
+       "Jura",
+       1
+      ],
+      [
+       "Jabal Lubnan",
+       1
+      ],
+      [
+       "Great Dividing Range",
+       1
+      ],
+      [
+       "Fichtelgebirge",
+       1
+      ],
+      [
+       "Cordillera Cantabrica",
+       1
+      ],
+      [
+       "Cordillera Betica",
+       1
+      ],
+      [
+       "Cevennes",
+       1
+      ],
+      [
+       "Bohemian Mountains",
+       1
+      ],
+      [
+       "Antitaurus",
+       1
+      ],
+      [
+       "Adirondacks",
+       1
+      ]
+     ],
+     "description": "the mountains where its source is located",
+     "value_description": "",
+     "notes": [
+      "57% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "SourceAltitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.3761,
+     "distinct_count": 125,
+     "is_unique": false,
+     "min_value": 1.16,
+     "max_value": 6000.0,
+     "examples": [
+      2310.0,
+      2235.0,
+      2700.0,
+      759.0,
+      130.0
+     ],
+     "top_values": [],
+     "description": "the elevation (above sea level) of its source",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "EstuaryLongitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0092,
+     "distinct_count": 192,
+     "is_unique": false,
+     "min_value": -163.98,
+     "max_value": 161.49,
+     "examples": [
+      8.22,
+      9.88,
+      33.0,
+      -80.0,
+      9.18
+     ],
+     "top_values": [],
+     "description": "the coordinates of its estuary",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "EstuaryLatitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0092,
+     "distinct_count": 181,
+     "is_unique": false,
+     "min_value": -35.55,
+     "max_value": 73.0,
+     "examples": [
+      47.61,
+      45.13,
+      -1.0,
+      40.42,
+      52.94
+     ],
+     "top_values": [],
+     "description": "the latitude of its estuary",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Name"
+   ],
+   "sample_rows": [
+    {
+     "Name": "Aare",
+     "River": "Rhein",
+     "Lake": "Brienzersee",
+     "Sea": null,
+     "Length": 288.0,
+     "SourceLongitude": 8.2,
+     "SourceLatitude": 46.55,
+     "Mountains": "Alps",
+     "SourceAltitude": 2310.0,
+     "EstuaryLongitude": 8.22,
+     "EstuaryLatitude": 47.61
+    },
+    {
+     "Name": "Adda",
+     "River": "Po",
+     "Lake": "Lago di Como",
+     "Sea": null,
+     "Length": 313.0,
+     "SourceLongitude": 10.3,
+     "SourceLatitude": 46.55,
+     "Mountains": "Alps",
+     "SourceAltitude": 2235.0,
+     "EstuaryLongitude": 9.88,
+     "EstuaryLatitude": 45.13
+    },
+    {
+     "Name": "Akagera",
+     "River": null,
+     "Lake": "Lake Victoria",
+     "Sea": null,
+     "Length": 275.0,
+     "SourceLongitude": 29.3,
+     "SourceLatitude": -2.5,
+     "Mountains": "East African Rift",
+     "SourceAltitude": 2700.0,
+     "EstuaryLongitude": 33.0,
+     "EstuaryLatitude": -1.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "sea",
+   "row_count": 35,
+   "stats_rows": 35,
+   "columns": [
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 35,
+     "is_unique": true,
+     "min_value": "Andaman Sea",
+     "max_value": "Yellow Sea",
+     "examples": [
+      "Andaman Sea",
+      "Arabian Sea",
+      "Arctic Ocean",
+      "Atlantic Ocean",
+      "Baltic Sea"
+     ],
+     "top_values": [
+      [
+       "Yellow Sea",
+       1
+      ],
+      [
+       "The Channel",
+       1
+      ],
+      [
+       "Sunda Sea",
+       1
+      ],
+      [
+       "Sulawesi Sea",
+       1
+      ],
+      [
+       "South China Sea",
+       1
+      ],
+      [
+       "Skagerrak",
+       1
+      ],
+      [
+       "Sibirian Sea",
+       1
+      ],
+      [
+       "Sea of Okhotsk",
+       1
+      ],
+      [
+       "Sea of Japan",
+       1
+      ],
+      [
+       "Sea of Azov",
+       1
+      ],
+      [
+       "Red Sea",
+       1
+      ],
+      [
+       "Persian Gulf",
+       1
+      ],
+      [
+       "Pacific Ocean",
+       1
+      ],
+      [
+       "Norwegian Sea",
+       1
+      ],
+      [
+       "North Sea",
+       1
+      ],
+      [
+       "Mediterranean Sea",
+       1
+      ],
+      [
+       "Malakka Strait",
+       1
+      ],
+      [
+       "Kattegat",
+       1
+      ],
+      [
+       "Irish Sea",
+       1
+      ],
+      [
+       "Indian Ocean",
+       1
+      ],
+      [
+       "Gulf of Oman",
+       1
+      ],
+      [
+       "Gulf of Mexico",
+       1
+      ],
+      [
+       "Gulf of Bengal",
+       1
+      ],
+      [
+       "Gulf of Aden",
+       1
+      ],
+      [
+       "East China Sea",
+       1
+      ],
+      [
+       "Caribbean Sea",
+       1
+      ],
+      [
+       "Black Sea",
+       1
+      ],
+      [
+       "Bering Sea",
+       1
+      ],
+      [
+       "Bay of Bengal",
+       1
+      ],
+      [
+       "Barents Sea",
+       1
+      ],
+      [
+       "Baltic Sea",
+       1
+      ],
+      [
+       "Atlantic Ocean",
+       1
+      ],
+      [
+       "Arctic Ocean",
+       1
+      ],
+      [
+       "Arabian Sea",
+       1
+      ],
+      [
+       "Andaman Sea",
+       1
+      ]
+     ],
+     "description": "the name of the sea",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Depth",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 34,
+     "is_unique": false,
+     "min_value": 32.0,
+     "max_value": 11034.0,
+     "examples": [
+      3113.0,
+      5203.0,
+      5608.0,
+      9219.0,
+      459.0
+     ],
+     "top_values": [
+      [
+       200.0,
+       2
+      ],
+      [
+       11034.0,
+       1
+      ],
+      [
+       9219.0,
+       1
+      ],
+      [
+       7440.0,
+       1
+      ],
+      [
+       7240.0,
+       1
+      ],
+      [
+       6400.0,
+       1
+      ],
+      [
+       6218.0,
+       1
+      ],
+      [
+       5608.0,
+       1
+      ],
+      [
+       5420.0,
+       1
+      ],
+      [
+       5203.0,
+       1
+      ],
+      [
+       5143.0,
+       1
+      ],
+      [
+       5121.0,
+       1
+      ],
+      [
+       4694.0,
+       1
+      ],
+      [
+       4375.0,
+       1
+      ],
+      [
+       4096.0,
+       1
+      ],
+      [
+       4045.0,
+       1
+      ],
+      [
+       4036.0,
+       1
+      ],
+      [
+       3860.0,
+       1
+      ],
+      [
+       3372.0,
+       1
+      ],
+      [
+       3350.0,
+       1
+      ],
+      [
+       3113.0,
+       1
+      ],
+      [
+       2635.0,
+       1
+      ],
+      [
+       2370.0,
+       1
+      ],
+      [
+       2211.0,
+       1
+      ],
+      [
+       725.0,
+       1
+      ],
+      [
+       540.0,
+       1
+      ],
+      [
+       459.0,
+       1
+      ],
+      [
+       272.0,
+       1
+      ],
+      [
+       175.0,
+       1
+      ],
+      [
+       104.0,
+       1
+      ],
+      [
+       102.0,
+       1
+      ],
+      [
+       100.0,
+       1
+      ],
+      [
+       94.0,
+       1
+      ],
+      [
+       32.0,
+       1
+      ]
+     ],
+     "description": "the maximal depth of the sea",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Name"
+   ],
+   "sample_rows": [
+    {
+     "Name": "Andaman Sea",
+     "Depth": 3113.0
+    },
+    {
+     "Name": "Arabian Sea",
+     "Depth": 5203.0
+    },
+    {
+     "Name": "Arctic Ocean",
+     "Depth": 5608.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "target",
+   "row_count": 205,
+   "stats_rows": 205,
+   "columns": [
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 205,
+     "is_unique": true,
+     "min_value": "A",
+     "max_value": "ZW",
+     "examples": [
+      "Coun",
+      "A",
+      "AFG",
+      "AL",
+      "AMSA"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Target",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Christian",
+     "max_value": "non-Christian",
+     "examples": [
+      "Target",
+      "Christian",
+      "non-Christian"
+     ],
+     "top_values": [
+      [
+       "Christian",
+       130
+      ],
+      [
+       "non-Christian",
+       74
+      ],
+      [
+       "Target",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Country"
+   ],
+   "sample_rows": [
+    {
+     "Country": "Coun",
+     "Target": "Target"
+    },
+    {
+     "Country": "A",
+     "Target": "Christian"
+    },
+    {
+     "Country": "AFG",
+     "Target": "non-Christian"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "borders",
+   "from_column": "Country2",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "borders",
+   "from_column": "Country1",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "city",
+   "from_column": "Province",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "city",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "city",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "economy",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "encompasses",
+   "from_column": "Continent",
+   "to_table": "continent",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "encompasses",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "ethnicGroup",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_desert",
+   "from_column": "Province",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_desert",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_desert",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_desert",
+   "from_column": "Desert",
+   "to_table": "desert",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Province",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "River",
+   "to_table": "river",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_island",
+   "from_column": "Province",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_island",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_island",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_island",
+   "from_column": "Island",
+   "to_table": "island",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Province",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Lake",
+   "to_table": "lake",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_mountain",
+   "from_column": "Province",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_mountain",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_mountain",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_mountain",
+   "from_column": "Mountain",
+   "to_table": "mountain",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "Province",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "River",
+   "to_table": "river",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_sea",
+   "from_column": "Province",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_sea",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_sea",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_sea",
+   "from_column": "Sea",
+   "to_table": "sea",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Province",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "River",
+   "to_table": "river",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "isMember",
+   "from_column": "Organization",
+   "to_table": "organization",
+   "to_column": "Abbreviation",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "isMember",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "islandIn",
+   "from_column": "River",
+   "to_table": "river",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "islandIn",
+   "from_column": "Lake",
+   "to_table": "lake",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "islandIn",
+   "from_column": "Sea",
+   "to_table": "sea",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "islandIn",
+   "from_column": "Island",
+   "to_table": "island",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "language",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "located",
+   "from_column": "Province",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "located",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "located",
+   "from_column": "City",
+   "to_table": "city",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "located",
+   "from_column": "Province",
+   "to_table": "city",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "located",
+   "from_column": "Sea",
+   "to_table": "sea",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "located",
+   "from_column": "Lake",
+   "to_table": "lake",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "located",
+   "from_column": "River",
+   "to_table": "river",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "located",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "locatedOn",
+   "from_column": "Province",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "locatedOn",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "locatedOn",
+   "from_column": "City",
+   "to_table": "city",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "locatedOn",
+   "from_column": "Province",
+   "to_table": "city",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "locatedOn",
+   "from_column": "Island",
+   "to_table": "island",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "locatedOn",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "mergesWith",
+   "from_column": "Sea2",
+   "to_table": "sea",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "mergesWith",
+   "from_column": "Sea1",
+   "to_table": "sea",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "mountainOnIsland",
+   "from_column": "Island",
+   "to_table": "island",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "mountainOnIsland",
+   "from_column": "Mountain",
+   "to_table": "mountain",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Province",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "organization",
+   "from_column": "City",
+   "to_table": "city",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Province",
+   "to_table": "city",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "politics",
+   "from_column": "Dependent",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "politics",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "population",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "province",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "religion",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "river",
+   "from_column": "Lake",
+   "to_table": "lake",
+   "to_column": "Name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "target",
+   "from_column": "Country",
+   "to_table": "country",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "city",
+   "from_column": "Country",
+   "to_table": "economy",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "city",
+   "from_column": "Country",
+   "to_table": "encompasses",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "city",
+   "from_column": "Country",
+   "to_table": "geo_sea",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.811
+  },
+  {
+   "from_table": "city",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.945
+  },
+  {
+   "from_table": "city",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "city",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "city",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "city",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.866
+  },
+  {
+   "from_table": "city",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.857
+  },
+  {
+   "from_table": "country",
+   "from_column": "Province",
+   "to_table": "city",
+   "to_column": "Province",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "economy",
+   "from_column": "Country",
+   "to_table": "encompasses",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "economy",
+   "from_column": "Country",
+   "to_table": "geo_sea",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 0.811
+  },
+  {
+   "from_table": "economy",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 0.945
+  },
+  {
+   "from_table": "economy",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "economy",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "economy",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "economy",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 0.866
+  },
+  {
+   "from_table": "economy",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 0.857
+  },
+  {
+   "from_table": "encompasses",
+   "from_column": "Country",
+   "to_table": "geo_sea",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.811
+  },
+  {
+   "from_table": "encompasses",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.945
+  },
+  {
+   "from_table": "encompasses",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "encompasses",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "encompasses",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "encompasses",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.866
+  },
+  {
+   "from_table": "encompasses",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.857
+  },
+  {
+   "from_table": "ethnicGroup",
+   "from_column": "Country",
+   "to_table": "economy",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "ethnicGroup",
+   "from_column": "Country",
+   "to_table": "encompasses",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "ethnicGroup",
+   "from_column": "Country",
+   "to_table": "geo_sea",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.804
+  },
+  {
+   "from_table": "ethnicGroup",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.947
+  },
+  {
+   "from_table": "ethnicGroup",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "ethnicGroup",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "ethnicGroup",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "ethnicGroup",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.878
+  },
+  {
+   "from_table": "ethnicGroup",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.868
+  },
+  {
+   "from_table": "geo_desert",
+   "from_column": "Province",
+   "to_table": "city",
+   "to_column": "Province",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.948
+  },
+  {
+   "from_table": "geo_desert",
+   "from_column": "Country",
+   "to_table": "economy",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.975
+  },
+  {
+   "from_table": "geo_desert",
+   "from_column": "Country",
+   "to_table": "encompasses",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.975
+  },
+  {
+   "from_table": "geo_desert",
+   "from_column": "Country",
+   "to_table": "ethnicGroup",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.825
+  },
+  {
+   "from_table": "geo_desert",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.975
+  },
+  {
+   "from_table": "geo_desert",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "geo_desert",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.975
+  },
+  {
+   "from_table": "geo_desert",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.975
+  },
+  {
+   "from_table": "geo_desert",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.925
+  },
+  {
+   "from_table": "geo_desert",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.95
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Province",
+   "to_table": "city",
+   "to_column": "Province",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.984
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Country",
+   "to_table": "economy",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.987
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Country",
+   "to_table": "encompasses",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.987
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Country",
+   "to_table": "ethnicGroup",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.818
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "River",
+   "to_table": "geo_river",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Country",
+   "to_table": "geo_river",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Province",
+   "to_table": "geo_river",
+   "to_column": "Province",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.995
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "River",
+   "to_table": "geo_source",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.977
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.987
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.987
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.987
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.909
+  },
+  {
+   "from_table": "geo_estuary",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.896
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Province",
+   "to_table": "city",
+   "to_column": "Province",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.99
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Country",
+   "to_table": "economy",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.984
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Country",
+   "to_table": "encompasses",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.984
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Country",
+   "to_table": "ethnicGroup",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.812
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Country",
+   "to_table": "geo_river",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.906
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.984
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.984
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.984
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.906
+  },
+  {
+   "from_table": "geo_lake",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.906
+  },
+  {
+   "from_table": "geo_mountain",
+   "from_column": "Province",
+   "to_table": "city",
+   "to_column": "Province",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.995
+  },
+  {
+   "from_table": "geo_mountain",
+   "from_column": "Country",
+   "to_table": "economy",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.989
+  },
+  {
+   "from_table": "geo_mountain",
+   "from_column": "Country",
+   "to_table": "encompasses",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.989
+  },
+  {
+   "from_table": "geo_mountain",
+   "from_column": "Country",
+   "to_table": "geo_sea",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.821
+  },
+  {
+   "from_table": "geo_mountain",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "geo_mountain",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "geo_mountain",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.989
+  },
+  {
+   "from_table": "geo_mountain",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.989
+  },
+  {
+   "from_table": "geo_mountain",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.863
+  },
+  {
+   "from_table": "geo_mountain",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.863
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "Province",
+   "to_table": "city",
+   "to_column": "Province",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.98
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "Country",
+   "to_table": "economy",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.991
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "Country",
+   "to_table": "encompasses",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.991
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "Country",
+   "to_table": "ethnicGroup",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.852
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "River",
+   "to_table": "geo_source",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.968
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.981
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.991
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.991
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.907
+  },
+  {
+   "from_table": "geo_river",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.898
+  },
+  {
+   "from_table": "geo_sea",
+   "from_column": "Province",
+   "to_table": "city",
+   "to_column": "Province",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.983
+  },
+  {
+   "from_table": "geo_sea",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.943
+  },
+  {
+   "from_table": "geo_sea",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "geo_sea",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.995
+  },
+  {
+   "from_table": "geo_sea",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.995
+  },
+  {
+   "from_table": "geo_sea",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.84
+  },
+  {
+   "from_table": "geo_sea",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.845
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Province",
+   "to_table": "city",
+   "to_column": "Province",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.993
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Country",
+   "to_table": "economy",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.983
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Country",
+   "to_table": "encompasses",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.983
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Country",
+   "to_table": "ethnicGroup",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.879
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Country",
+   "to_table": "geo_river",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Province",
+   "to_table": "geo_river",
+   "to_column": "Province",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.983
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.983
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.983
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.897
+  },
+  {
+   "from_table": "geo_source",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.879
+  },
+  {
+   "from_table": "isMember",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "isMember",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.996
+  },
+  {
+   "from_table": "isMember",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.996
+  },
+  {
+   "from_table": "isMember",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.876
+  },
+  {
+   "from_table": "isMember",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.872
+  },
+  {
+   "from_table": "islandIn",
+   "from_column": "River",
+   "to_table": "geo_estuary",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "islandIn",
+   "from_column": "Lake",
+   "to_table": "geo_lake",
+   "to_column": "Lake",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "islandIn",
+   "from_column": "River",
+   "to_table": "geo_river",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "islandIn",
+   "from_column": "Sea",
+   "to_table": "geo_sea",
+   "to_column": "Sea",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "islandIn",
+   "from_column": "River",
+   "to_table": "geo_source",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "lake",
+   "from_column": "River",
+   "to_table": "geo_estuary",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "lake",
+   "from_column": "River",
+   "to_table": "geo_river",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "lake",
+   "from_column": "River",
+   "to_table": "geo_source",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.984
+  },
+  {
+   "from_table": "language",
+   "from_column": "Country",
+   "to_table": "economy",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "language",
+   "from_column": "Country",
+   "to_table": "encompasses",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "language",
+   "from_column": "Country",
+   "to_table": "ethnicGroup",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.812
+  },
+  {
+   "from_table": "language",
+   "from_column": "Country",
+   "to_table": "geo_sea",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.812
+  },
+  {
+   "from_table": "language",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "language",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "language",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "language",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "language",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.85
+  },
+  {
+   "from_table": "language",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.85
+  },
+  {
+   "from_table": "located",
+   "from_column": "Province",
+   "to_table": "city",
+   "to_column": "Province",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.997
+  },
+  {
+   "from_table": "located",
+   "from_column": "Country",
+   "to_table": "economy",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.995
+  },
+  {
+   "from_table": "located",
+   "from_column": "Country",
+   "to_table": "encompasses",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.995
+  },
+  {
+   "from_table": "located",
+   "from_column": "River",
+   "to_table": "geo_estuary",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "located",
+   "from_column": "Lake",
+   "to_table": "geo_lake",
+   "to_column": "Lake",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "located",
+   "from_column": "River",
+   "to_table": "geo_river",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "located",
+   "from_column": "Country",
+   "to_table": "geo_sea",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.904
+  },
+  {
+   "from_table": "located",
+   "from_column": "Sea",
+   "to_table": "geo_sea",
+   "to_column": "Sea",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "located",
+   "from_column": "River",
+   "to_table": "geo_source",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "located",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.947
+  },
+  {
+   "from_table": "located",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "located",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.995
+  },
+  {
+   "from_table": "located",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.995
+  },
+  {
+   "from_table": "located",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.85
+  },
+  {
+   "from_table": "located",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.845
+  },
+  {
+   "from_table": "locatedOn",
+   "from_column": "Province",
+   "to_table": "city",
+   "to_column": "Province",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.996
+  },
+  {
+   "from_table": "locatedOn",
+   "from_column": "Country",
+   "to_table": "economy",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.99
+  },
+  {
+   "from_table": "locatedOn",
+   "from_column": "Country",
+   "to_table": "encompasses",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.99
+  },
+  {
+   "from_table": "locatedOn",
+   "from_column": "Country",
+   "to_table": "geo_sea",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "locatedOn",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.907
+  },
+  {
+   "from_table": "locatedOn",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "locatedOn",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.99
+  },
+  {
+   "from_table": "locatedOn",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.99
+  },
+  {
+   "from_table": "mountainOnIsland",
+   "from_column": "Mountain",
+   "to_table": "geo_mountain",
+   "to_column": "Mountain",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Province",
+   "to_table": "city",
+   "to_column": "Province",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.983
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Country",
+   "to_table": "economy",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.982
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Country",
+   "to_table": "encompasses",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.982
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Country",
+   "to_table": "ethnicGroup",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.818
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Country",
+   "to_table": "geo_sea",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.8
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Country",
+   "to_table": "isMember",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Country",
+   "to_table": "politics",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.982
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.982
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.927
+  },
+  {
+   "from_table": "organization",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.909
+  },
+  {
+   "from_table": "politics",
+   "from_column": "Country",
+   "to_table": "population",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 0.996
+  },
+  {
+   "from_table": "politics",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 0.996
+  },
+  {
+   "from_table": "politics",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 0.862
+  },
+  {
+   "from_table": "politics",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 0.858
+  },
+  {
+   "from_table": "population",
+   "from_column": "Country",
+   "to_table": "province",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "population",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 0.866
+  },
+  {
+   "from_table": "population",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 0.857
+  },
+  {
+   "from_table": "province",
+   "from_column": "Country",
+   "to_table": "religion",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.866
+  },
+  {
+   "from_table": "province",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.857
+  },
+  {
+   "from_table": "religion",
+   "from_column": "Country",
+   "to_table": "target",
+   "to_column": "Country",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.99
+  },
+  {
+   "from_table": "river",
+   "from_column": "River",
+   "to_table": "geo_estuary",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "river",
+   "from_column": "Lake",
+   "to_table": "geo_lake",
+   "to_column": "Lake",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "river",
+   "from_column": "River",
+   "to_table": "geo_river",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "river",
+   "from_column": "Sea",
+   "to_table": "geo_sea",
+   "to_column": "Sea",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.964
+  },
+  {
+   "from_table": "river",
+   "from_column": "River",
+   "to_table": "geo_source",
+   "to_column": "River",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.96
+  }
+ ],
+ "notes": []
+}

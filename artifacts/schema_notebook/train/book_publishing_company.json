@@ -1,0 +1,5311 @@
+{
+ "db_id": "book_publishing_company",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/book_publishing_company/book_publishing_company.sqlite",
+ "fingerprint": "184320-1793993045451088387-v1.0",
+ "created_at": "2026-11-06T19:24:48+00:00",
+ "profile_seconds": 0.013,
+ "tables": [
+  {
+   "name": "authors",
+   "row_count": 23,
+   "stats_rows": 23,
+   "columns": [
+    {
+     "name": "au_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 23,
+     "is_unique": true,
+     "min_value": "172-32-1176",
+     "max_value": "998-72-3567",
+     "examples": [
+      "172-32-1176",
+      "213-46-8915",
+      "238-95-7766",
+      "267-41-2394",
+      "274-80-9391"
+     ],
+     "top_values": [
+      [
+       "998-72-3567",
+       1
+      ],
+      [
+       "899-46-2035",
+       1
+      ],
+      [
+       "893-72-1158",
+       1
+      ],
+      [
+       "846-92-7186",
+       1
+      ],
+      [
+       "807-91-6654",
+       1
+      ],
+      [
+       "756-30-7391",
+       1
+      ],
+      [
+       "724-80-9391",
+       1
+      ],
+      [
+       "724-08-9931",
+       1
+      ],
+      [
+       "722-51-5454",
+       1
+      ],
+      [
+       "712-45-1867",
+       1
+      ],
+      [
+       "672-71-3249",
+       1
+      ],
+      [
+       "648-92-1872",
+       1
+      ],
+      [
+       "527-72-3246",
+       1
+      ],
+      [
+       "486-29-1786",
+       1
+      ],
+      [
+       "472-27-2349",
+       1
+      ],
+      [
+       "427-17-2319",
+       1
+      ],
+      [
+       "409-56-7008",
+       1
+      ],
+      [
+       "341-22-1782",
+       1
+      ],
+      [
+       "274-80-9391",
+       1
+      ],
+      [
+       "267-41-2394",
+       1
+      ],
+      [
+       "238-95-7766",
+       1
+      ],
+      [
+       "213-46-8915",
+       1
+      ],
+      [
+       "172-32-1176",
+       1
+      ]
+     ],
+     "description": "author id. unique number identifying authors",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "au_lname",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": "Bennet",
+     "max_value": "del Castillo",
+     "examples": [
+      "White",
+      "Green",
+      "Carson",
+      "O'Leary",
+      "Straight"
+     ],
+     "top_values": [
+      [
+       "Ringer",
+       2
+      ],
+      [
+       "del Castillo",
+       1
+      ],
+      [
+       "Yokomoto",
+       1
+      ],
+      [
+       "White",
+       1
+      ],
+      [
+       "Stringer",
+       1
+      ],
+      [
+       "Straight",
+       1
+      ],
+      [
+       "Smith",
+       1
+      ],
+      [
+       "Panteley",
+       1
+      ],
+      [
+       "O'Leary",
+       1
+      ],
+      [
+       "McBadden",
+       1
+      ],
+      [
+       "MacFeather",
+       1
+      ],
+      [
+       "Locksley",
+       1
+      ],
+      [
+       "Karsen",
+       1
+      ],
+      [
+       "Hunter",
+       1
+      ],
+      [
+       "Gringlesby",
+       1
+      ],
+      [
+       "Greene",
+       1
+      ],
+      [
+       "Green",
+       1
+      ],
+      [
+       "Dull",
+       1
+      ],
+      [
+       "DeFrance",
+       1
+      ],
+      [
+       "Carson",
+       1
+      ],
+      [
+       "Blotchet-Halls",
+       1
+      ],
+      [
+       "Bennet",
+       1
+      ]
+     ],
+     "description": "author last name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "au_fname",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 23,
+     "is_unique": true,
+     "min_value": "Abraham",
+     "max_value": "Sylvia",
+     "examples": [
+      "Johnson",
+      "Marjorie",
+      "Cheryl",
+      "Michael",
+      "Dean"
+     ],
+     "top_values": [
+      [
+       "Sylvia",
+       1
+      ],
+      [
+       "Stearns",
+       1
+      ],
+      [
+       "Sheryl",
+       1
+      ],
+      [
+       "Reginald",
+       1
+      ],
+      [
+       "Morningstar",
+       1
+      ],
+      [
+       "Michel",
+       1
+      ],
+      [
+       "Michael",
+       1
+      ],
+      [
+       "Meander",
+       1
+      ],
+      [
+       "Marjorie",
+       1
+      ],
+      [
+       "Livia",
+       1
+      ],
+      [
+       "Johnson",
+       1
+      ],
+      [
+       "Innes",
+       1
+      ],
+      [
+       "Heather",
+       1
+      ],
+      [
+       "Dirk",
+       1
+      ],
+      [
+       "Dean",
+       1
+      ],
+      [
+       "Cheryl",
+       1
+      ],
+      [
+       "Charlene",
+       1
+      ],
+      [
+       "Burt",
+       1
+      ],
+      [
+       "Anne",
+       1
+      ],
+      [
+       "Ann",
+       1
+      ],
+      [
+       "Albert",
+       1
+      ],
+      [
+       "Akiko",
+       1
+      ],
+      [
+       "Abraham",
+       1
+      ]
+     ],
+     "description": "author first name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "phone",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": "219 547-9982",
+     "max_value": "913 843-0462",
+     "examples": [
+      "408 496-7223",
+      "415 986-7020",
+      "415 548-7723",
+      "408 286-2428",
+      "415 834-2919"
+     ],
+     "top_values": [
+      [
+       "801 826-0752",
+       2
+      ],
+      [
+       "415 836-7128",
+       2
+      ],
+      [
+       "913 843-0462",
+       1
+      ],
+      [
+       "707 938-6445",
+       1
+      ],
+      [
+       "707 448-4982",
+       1
+      ],
+      [
+       "615 996-8275",
+       1
+      ],
+      [
+       "615 297-2723",
+       1
+      ],
+      [
+       "503 745-6402",
+       1
+      ],
+      [
+       "415 986-7020",
+       1
+      ],
+      [
+       "415 935-4228",
+       1
+      ],
+      [
+       "415 843-2991",
+       1
+      ],
+      [
+       "415 834-2919",
+       1
+      ],
+      [
+       "415 658-9932",
+       1
+      ],
+      [
+       "415 585-4620",
+       1
+      ],
+      [
+       "415 548-7723",
+       1
+      ],
+      [
+       "415 534-9219",
+       1
+      ],
+      [
+       "415 354-7128",
+       1
+      ],
+      [
+       "408 496-7223",
+       1
+      ],
+      [
+       "408 286-2428",
+       1
+      ],
+      [
+       "301 946-8853",
+       1
+      ],
+      [
+       "219 547-9982",
+       1
+      ]
+     ],
+     "description": "phone number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "address",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": "10 Mississippi Dr.",
+     "max_value": "PO Box 792",
+     "examples": [
+      "10932 Bigge Rd.",
+      "309 63rd St. #411",
+      "589 Darwin Ln.",
+      "22 Cleveland Av. #14",
+      "5420 College Av."
+     ],
+     "top_values": [
+      [
+       "67 Seventh Av.",
+       2
+      ],
+      [
+       "3410 Blonde St.",
+       2
+      ],
+      [
+       "PO Box 792",
+       1
+      ],
+      [
+       "6223 Bateman St.",
+       1
+      ],
+      [
+       "589 Darwin Ln.",
+       1
+      ],
+      [
+       "5720 McAuley St.",
+       1
+      ],
+      [
+       "55 Hillsdale Bl.",
+       1
+      ],
+      [
+       "5420 Telegraph Av.",
+       1
+      ],
+      [
+       "5420 College Av.",
+       1
+      ],
+      [
+       "44 Upland Hts.",
+       1
+      ],
+      [
+       "309 63rd St. #411",
+       1
+      ],
+      [
+       "301 Putnam",
+       1
+      ],
+      [
+       "3 Silver Ct.",
+       1
+      ],
+      [
+       "3 Balding Pl.",
+       1
+      ],
+      [
+       "2286 Cram Pl. #86",
+       1
+      ],
+      [
+       "22 Graybar House Rd.",
+       1
+      ],
+      [
+       "22 Cleveland Av. #14",
+       1
+      ],
+      [
+       "1956 Arlington Pl.",
+       1
+      ],
+      [
+       "18 Broadway Av.",
+       1
+      ],
+      [
+       "10932 Bigge Rd.",
+       1
+      ],
+      [
+       "10 Mississippi Dr.",
+       1
+      ]
+     ],
+     "description": "address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": "Ann Arbor",
+     "max_value": "Walnut Creek",
+     "examples": [
+      "Menlo Park",
+      "Oakland",
+      "Berkeley",
+      "San Jose",
+      "Lawrence"
+     ],
+     "top_values": [
+      [
+       "Oakland",
+       5
+      ],
+      [
+       "Salt Lake City",
+       2
+      ],
+      [
+       "Palo Alto",
+       2
+      ],
+      [
+       "Berkeley",
+       2
+      ],
+      [
+       "Walnut Creek",
+       1
+      ],
+      [
+       "Vacaville",
+       1
+      ],
+      [
+       "San Jose",
+       1
+      ],
+      [
+       "San Francisco",
+       1
+      ],
+      [
+       "Rockville",
+       1
+      ],
+      [
+       "Nashville",
+       1
+      ],
+      [
+       "Menlo Park",
+       1
+      ],
+      [
+       "Lawrence",
+       1
+      ],
+      [
+       "Gary",
+       1
+      ],
+      [
+       "Covelo",
+       1
+      ],
+      [
+       "Corvallis",
+       1
+      ],
+      [
+       "Ann Arbor",
+       1
+      ]
+     ],
+     "description": "city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": "CA",
+     "max_value": "UT",
+     "examples": [
+      "CA",
+      "KS",
+      "TN",
+      "OR",
+      "MI"
+     ],
+     "top_values": [
+      [
+       "CA",
+       15
+      ],
+      [
+       "UT",
+       2
+      ],
+      [
+       "TN",
+       1
+      ],
+      [
+       "OR",
+       1
+      ],
+      [
+       "MI",
+       1
+      ],
+      [
+       "MD",
+       1
+      ],
+      [
+       "KS",
+       1
+      ],
+      [
+       "IN",
+       1
+      ]
+     ],
+     "description": "state",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "zip",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 18,
+     "is_unique": false,
+     "min_value": "20853",
+     "max_value": "97330",
+     "examples": [
+      "94025",
+      "94618",
+      "94705",
+      "95128",
+      "94609"
+     ],
+     "top_values": [
+      [
+       "94609",
+       3
+      ],
+      [
+       "94705",
+       2
+      ],
+      [
+       "94301",
+       2
+      ],
+      [
+       "84152",
+       2
+      ],
+      [
+       "97330",
+       1
+      ],
+      [
+       "95688",
+       1
+      ],
+      [
+       "95428",
+       1
+      ],
+      [
+       "95128",
+       1
+      ],
+      [
+       "94618",
+       1
+      ],
+      [
+       "94612",
+       1
+      ],
+      [
+       "94595",
+       1
+      ],
+      [
+       "94130",
+       1
+      ],
+      [
+       "94025",
+       1
+      ],
+      [
+       "66044",
+       1
+      ],
+      [
+       "48105",
+       1
+      ],
+      [
+       "46403",
+       1
+      ],
+      [
+       "37215",
+       1
+      ],
+      [
+       "20853",
+       1
+      ]
+     ],
+     "description": "zip code",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "contract",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "0",
+     "examples": [
+      "0"
+     ],
+     "top_values": [
+      [
+       "0",
+       23
+      ]
+     ],
+     "description": "contract status",
+     "value_description": "commonsense evidence:\n0: not on the contract\n1: on the contract",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    }
+   ],
+   "primary_key": [
+    "au_id"
+   ],
+   "sample_rows": [
+    {
+     "au_id": "172-32-1176",
+     "au_lname": "White",
+     "au_fname": "Johnson",
+     "phone": "408 496-7223",
+     "address": "10932 Bigge Rd.",
+     "city": "Menlo Park",
+     "state": "CA",
+     "zip": "94025",
+     "contract": "0"
+    },
+    {
+     "au_id": "213-46-8915",
+     "au_lname": "Green",
+     "au_fname": "Marjorie",
+     "phone": "415 986-7020",
+     "address": "309 63rd St. #411",
+     "city": "Oakland",
+     "state": "CA",
+     "zip": "94618",
+     "contract": "0"
+    },
+    {
+     "au_id": "238-95-7766",
+     "au_lname": "Carson",
+     "au_fname": "Cheryl",
+     "phone": "415 548-7723",
+     "address": "589 Darwin Ln.",
+     "city": "Berkeley",
+     "state": "CA",
+     "zip": "94705",
+     "contract": "0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "discounts",
+   "row_count": 3,
+   "stats_rows": 3,
+   "columns": [
+    {
+     "name": "discounttype",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": "Customer Discount",
+     "max_value": "Volume Discount",
+     "examples": [
+      "Initial Customer",
+      "Volume Discount",
+      "Customer Discount"
+     ],
+     "top_values": [
+      [
+       "Volume Discount",
+       1
+      ],
+      [
+       "Initial Customer",
+       1
+      ],
+      [
+       "Customer Discount",
+       1
+      ]
+     ],
+     "description": "discount type",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "stor_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.6667,
+     "distinct_count": 1,
+     "is_unique": true,
+     "min_value": "8042",
+     "max_value": "8042",
+     "examples": [
+      "8042"
+     ],
+     "top_values": [
+      [
+       "8042",
+       1
+      ]
+     ],
+     "description": "store id",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison",
+      "67% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "lowqty",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.6667,
+     "distinct_count": 1,
+     "is_unique": true,
+     "min_value": 100,
+     "max_value": 100,
+     "examples": [
+      100
+     ],
+     "top_values": [
+      [
+       100,
+       1
+      ]
+     ],
+     "description": "low quantity (quantity floor)",
+     "value_description": "commonsense evidence: \nThe minimum quantity to enjoy the discount",
+     "notes": [
+      "67% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "highqty",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.6667,
+     "distinct_count": 1,
+     "is_unique": true,
+     "min_value": 1000,
+     "max_value": 1000,
+     "examples": [
+      1000
+     ],
+     "top_values": [
+      [
+       1000,
+       1
+      ]
+     ],
+     "description": "high quantity (max quantity)",
+     "value_description": "commonsense evidence: \nThe maximum quantity to enjoy the discount",
+     "notes": [
+      "67% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "discount",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": 5.0,
+     "max_value": 10.5,
+     "examples": [
+      10.5,
+      6.7,
+      5.0
+     ],
+     "top_values": [
+      [
+       10.5,
+       1
+      ],
+      [
+       6.7,
+       1
+      ],
+      [
+       5.0,
+       1
+      ]
+     ],
+     "description": "discount",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "discounttype": "Initial Customer",
+     "stor_id": null,
+     "lowqty": null,
+     "highqty": null,
+     "discount": 10.5
+    },
+    {
+     "discounttype": "Volume Discount",
+     "stor_id": null,
+     "lowqty": 100,
+     "highqty": 1000,
+     "discount": 6.7
+    },
+    {
+     "discounttype": "Customer Discount",
+     "stor_id": "8042",
+     "lowqty": null,
+     "highqty": null,
+     "discount": 5.0
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "employee",
+   "row_count": 43,
+   "stats_rows": 43,
+   "columns": [
+    {
+     "name": "emp_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 43,
+     "is_unique": true,
+     "min_value": "A-C71970F",
+     "max_value": "Y-L77953M",
+     "examples": [
+      "A-C71970F",
+      "A-R89858F",
+      "AMD15433F",
+      "ARD36773F",
+      "CFH28514M"
+     ],
+     "top_values": [
+      [
+       "Y-L77953M",
+       1
+      ],
+      [
+       "VPA30890F",
+       1
+      ],
+      [
+       "TPO55093M",
+       1
+      ],
+      [
+       "SKO22412M",
+       1
+      ],
+      [
+       "RBM23061F",
+       1
+      ],
+      [
+       "R-M53550M",
+       1
+      ],
+      [
+       "PXH22250M",
+       1
+      ],
+      [
+       "PTC11962M",
+       1
+      ],
+      [
+       "PSP68661F",
+       1
+      ],
+      [
+       "PSA89086M",
+       1
+      ],
+      [
+       "POK93028M",
+       1
+      ],
+      [
+       "PMA42628M",
+       1
+      ],
+      [
+       "PHF38899M",
+       1
+      ],
+      [
+       "PDI47470M",
+       1
+      ],
+      [
+       "PCM98509F",
+       1
+      ],
+      [
+       "MMS49649F",
+       1
+      ],
+      [
+       "MJP25939M",
+       1
+      ],
+      [
+       "MGK44605M",
+       1
+      ],
+      [
+       "MFS52347M",
+       1
+      ],
+      [
+       "MAS70474F",
+       1
+      ],
+      [
+       "MAP77183M",
+       1
+      ],
+      [
+       "M-R38834F",
+       1
+      ],
+      [
+       "M-P91209M",
+       1
+      ],
+      [
+       "M-L67958F",
+       1
+      ],
+      [
+       "LAL21447M",
+       1
+      ],
+      [
+       "L-B31947F",
+       1
+      ],
+      [
+       "KJJ92907F",
+       1
+      ],
+      [
+       "KFJ64308F",
+       1
+      ],
+      [
+       "JYL26161F",
+       1
+      ],
+      [
+       "HAS54740M",
+       1
+      ],
+      [
+       "HAN90777M",
+       1
+      ],
+      [
+       "H-B39728F",
+       1
+      ],
+      [
+       "GHT50241M",
+       1
+      ],
+      [
+       "F-C16315M",
+       1
+      ],
+      [
+       "ENL44273F",
+       1
+      ],
+      [
+       "DWR65030M",
+       1
+      ],
+      [
+       "DBT39435M",
+       1
+      ],
+      [
+       "CGS88322F",
+       1
+      ],
+      [
+       "CFH28514M",
+       1
+      ],
+      [
+       "ARD36773F",
+       1
+      ],
+      [
+       "AMD15433F",
+       1
+      ],
+      [
+       "A-R89858F",
+       1
+      ],
+      [
+       "A-C71970F",
+       1
+      ]
+     ],
+     "description": "employee id. unique number identifying employees",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "fname",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 42,
+     "is_unique": false,
+     "min_value": "Anabela",
+     "max_value": "Yoshi",
+     "examples": [
+      "Aria",
+      "Annette",
+      "Ann",
+      "Anabela",
+      "Carlos"
+     ],
+     "top_values": [
+      [
+       "Maria",
+       2
+      ],
+      [
+       "Yoshi",
+       1
+      ],
+      [
+       "Victoria",
+       1
+      ],
+      [
+       "Timothy",
+       1
+      ],
+      [
+       "Sven",
+       1
+      ],
+      [
+       "Roland",
+       1
+      ],
+      [
+       "Rita",
+       1
+      ],
+      [
+       "Pirkko",
+       1
+      ],
+      [
+       "Philip",
+       1
+      ],
+      [
+       "Peter",
+       1
+      ],
+      [
+       "Pedro",
+       1
+      ],
+      [
+       "Paula",
+       1
+      ],
+      [
+       "Paul",
+       1
+      ],
+      [
+       "Patricia",
+       1
+      ],
+      [
+       "Paolo",
+       1
+      ],
+      [
+       "Palle",
+       1
+      ],
+      [
+       "Miguel",
+       1
+      ],
+      [
+       "Matti",
+       1
+      ],
+      [
+       "Mary",
+       1
+      ],
+      [
+       "Martine",
+       1
+      ],
+      [
+       "Martin",
+       1
+      ],
+      [
+       "Margaret",
+       1
+      ],
+      [
+       "Manuel",
+       1
+      ],
+      [
+       "Lesley",
+       1
+      ],
+      [
+       "Laurence",
+       1
+      ],
+      [
+       "Karla",
+       1
+      ],
+      [
+       "Karin",
+       1
+      ],
+      [
+       "Janine",
+       1
+      ],
+      [
+       "Howard",
+       1
+      ],
+      [
+       "Helvetius",
+       1
+      ],
+      [
+       "Helen",
+       1
+      ],
+      [
+       "Gary",
+       1
+      ],
+      [
+       "Francisco",
+       1
+      ],
+      [
+       "Elizabeth",
+       1
+      ],
+      [
+       "Diego",
+       1
+      ],
+      [
+       "Daniel",
+       1
+      ],
+      [
+       "Carlos",
+       1
+      ],
+      [
+       "Carine",
+       1
+      ],
+      [
+       "Aria",
+       1
+      ],
+      [
+       "Annette",
+       1
+      ],
+      [
+       "Ann",
+       1
+      ],
+      [
+       "Anabela",
+       1
+      ]
+     ],
+     "description": "first name of employees",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "minit",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Y",
+     "examples": [
+      "",
+      "M",
+      "R",
+      "F",
+      "G"
+     ],
+     "top_values": [
+      [
+       "",
+       10
+      ],
+      [
+       "A",
+       5
+      ],
+      [
+       "M",
+       3
+      ],
+      [
+       "F",
+       3
+      ],
+      [
+       "S",
+       2
+      ],
+      [
+       "P",
+       2
+      ],
+      [
+       "J",
+       2
+      ],
+      [
+       "H",
+       2
+      ],
+      [
+       "G",
+       2
+      ],
+      [
+       "B",
+       2
+      ],
+      [
+       "Y",
+       1
+      ],
+      [
+       "X",
+       1
+      ],
+      [
+       "W",
+       1
+      ],
+      [
+       "T",
+       1
+      ],
+      [
+       "R",
+       1
+      ],
+      [
+       "O",
+       1
+      ],
+      [
+       "N",
+       1
+      ],
+      [
+       "K",
+       1
+      ],
+      [
+       "D",
+       1
+      ],
+      [
+       "C",
+       1
+      ]
+     ],
+     "description": "middle name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lname",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 43,
+     "is_unique": true,
+     "min_value": "Accorti",
+     "max_value": "Tonini",
+     "examples": [
+      "Cruz",
+      "Roulet",
+      "Devon",
+      "Domingues",
+      "Hernadez"
+     ],
+     "top_values": [
+      [
+       "Tonini",
+       1
+      ],
+      [
+       "Thomas",
+       1
+      ],
+      [
+       "Sommer",
+       1
+      ],
+      [
+       "Snyder",
+       1
+      ],
+      [
+       "Smith",
+       1
+      ],
+      [
+       "Schmitt",
+       1
+      ],
+      [
+       "Saveley",
+       1
+      ],
+      [
+       "Roulet",
+       1
+      ],
+      [
+       "Roel",
+       1
+      ],
+      [
+       "Rance",
+       1
+      ],
+      [
+       "Pontes",
+       1
+      ],
+      [
+       "Pereira",
+       1
+      ],
+      [
+       "Parente",
+       1
+      ],
+      [
+       "Paolino",
+       1
+      ],
+      [
+       "Ottlieb",
+       1
+      ],
+      [
+       "O'Rourke",
+       1
+      ],
+      [
+       "Nagy",
+       1
+      ],
+      [
+       "Muller",
+       1
+      ],
+      [
+       "Mendel",
+       1
+      ],
+      [
+       "McKenna",
+       1
+      ],
+      [
+       "Lincoln",
+       1
+      ],
+      [
+       "Lebihan",
+       1
+      ],
+      [
+       "Latimer",
+       1
+      ],
+      [
+       "Larsson",
+       1
+      ],
+      [
+       "Labrune",
+       1
+      ],
+      [
+       "Koskitalo",
+       1
+      ],
+      [
+       "Karttunen",
+       1
+      ],
+      [
+       "Josephs",
+       1
+      ],
+      [
+       "Jablonski",
+       1
+      ],
+      [
+       "Ibsen",
+       1
+      ],
+      [
+       "Hernadez",
+       1
+      ],
+      [
+       "Henriot",
+       1
+      ],
+      [
+       "Franken",
+       1
+      ],
+      [
+       "Domingues",
+       1
+      ],
+      [
+       "Devon",
+       1
+      ],
+      [
+       "Cruz",
+       1
+      ],
+      [
+       "Cramer",
+       1
+      ],
+      [
+       "Chang",
+       1
+      ],
+      [
+       "Brown",
+       1
+      ],
+      [
+       "Bennett",
+       1
+      ],
+      [
+       "Ashworth",
+       1
+      ],
+      [
+       "Afonso",
+       1
+      ],
+      [
+       "Accorti",
+       1
+      ]
+     ],
+     "description": "last name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "job_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 14,
+     "examples": [
+      10,
+      6,
+      3,
+      8,
+      5
+     ],
+     "top_values": [
+      [
+       5,
+       7
+      ],
+      [
+       11,
+       4
+      ],
+      [
+       10,
+       4
+      ],
+      [
+       9,
+       4
+      ],
+      [
+       8,
+       4
+      ],
+      [
+       7,
+       4
+      ],
+      [
+       6,
+       4
+      ],
+      [
+       14,
+       3
+      ],
+      [
+       13,
+       3
+      ],
+      [
+       12,
+       3
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ]
+     ],
+     "description": "job id. number identifying jobs",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "job_lvl",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 31,
+     "is_unique": false,
+     "min_value": 32,
+     "max_value": 246,
+     "examples": [
+      87,
+      152,
+      200,
+      100,
+      211
+     ],
+     "top_values": [
+      [
+       100,
+       4
+      ],
+      [
+       150,
+       3
+      ],
+      [
+       75,
+       3
+      ],
+      [
+       35,
+       3
+      ],
+      [
+       175,
+       2
+      ],
+      [
+       170,
+       2
+      ],
+      [
+       120,
+       2
+      ],
+      [
+       246,
+       1
+      ],
+      [
+       227,
+       1
+      ],
+      [
+       220,
+       1
+      ],
+      [
+       215,
+       1
+      ],
+      [
+       211,
+       1
+      ],
+      [
+       200,
+       1
+      ],
+      [
+       198,
+       1
+      ],
+      [
+       195,
+       1
+      ],
+      [
+       192,
+       1
+      ],
+      [
+       172,
+       1
+      ],
+      [
+       165,
+       1
+      ],
+      [
+       159,
+       1
+      ],
+      [
+       152,
+       1
+      ],
+      [
+       140,
+       1
+      ],
+      [
+       135,
+       1
+      ],
+      [
+       125,
+       1
+      ],
+      [
+       112,
+       1
+      ],
+      [
+       101,
+       1
+      ],
+      [
+       89,
+       1
+      ],
+      [
+       87,
+       1
+      ],
+      [
+       80,
+       1
+      ],
+      [
+       78,
+       1
+      ],
+      [
+       64,
+       1
+      ],
+      [
+       32,
+       1
+      ]
+     ],
+     "description": "job level",
+     "value_description": "commonsense evidence:\nhigher value means job level is higher",
+     "notes": []
+    },
+    {
+     "name": "pub_id",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": "0736",
+     "max_value": "9999",
+     "examples": [
+      "1389",
+      "9999",
+      "9952",
+      "0877",
+      "0736"
+     ],
+     "top_values": [
+      [
+       "1389",
+       10
+      ],
+      [
+       "0877",
+       10
+      ],
+      [
+       "0736",
+       10
+      ],
+      [
+       "9999",
+       7
+      ],
+      [
+       "9952",
+       3
+      ],
+      [
+       "9901",
+       1
+      ],
+      [
+       "1756",
+       1
+      ],
+      [
+       "1622",
+       1
+      ]
+     ],
+     "description": "publisher id. id number identifying publishers",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "hire_date",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 43,
+     "is_unique": true,
+     "min_value": "1988-06-19 00:00:00.0",
+     "max_value": "1994-05-01 00:00:00.0",
+     "examples": [
+      "1991-10-26 00:00:00.0",
+      "1990-02-21 00:00:00.0",
+      "1991-07-16 00:00:00.0",
+      "1993-01-27 00:00:00.0",
+      "1989-04-21 00:00:00.0"
+     ],
+     "top_values": [
+      [
+       "1994-05-01 00:00:00.0",
+       1
+      ],
+      [
+       "1994-03-11 00:00:00.0",
+       1
+      ],
+      [
+       "1994-01-19 00:00:00.0",
+       1
+      ],
+      [
+       "1993-11-29 00:00:00.0",
+       1
+      ],
+      [
+       "1993-10-09 00:00:00.0",
+       1
+      ],
+      [
+       "1993-08-19 00:00:00.0",
+       1
+      ],
+      [
+       "1993-06-29 00:00:00.0",
+       1
+      ],
+      [
+       "1993-05-09 00:00:00.0",
+       1
+      ],
+      [
+       "1993-03-19 00:00:00.0",
+       1
+      ],
+      [
+       "1993-01-27 00:00:00.0",
+       1
+      ],
+      [
+       "1992-12-07 00:00:00.0",
+       1
+      ],
+      [
+       "1992-10-17 00:00:00.0",
+       1
+      ],
+      [
+       "1992-08-27 00:00:00.0",
+       1
+      ],
+      [
+       "1992-07-07 00:00:00.0",
+       1
+      ],
+      [
+       "1992-05-17 00:00:00.0",
+       1
+      ],
+      [
+       "1992-03-27 00:00:00.0",
+       1
+      ],
+      [
+       "1992-02-05 00:00:00.0",
+       1
+      ],
+      [
+       "1991-12-16 00:00:00.0",
+       1
+      ],
+      [
+       "1991-10-26 00:00:00.0",
+       1
+      ],
+      [
+       "1991-09-05 00:00:00.0",
+       1
+      ],
+      [
+       "1991-07-16 00:00:00.0",
+       1
+      ],
+      [
+       "1991-05-26 00:00:00.0",
+       1
+      ],
+      [
+       "1991-04-05 00:00:00.0",
+       1
+      ],
+      [
+       "1991-02-13 00:00:00.0",
+       1
+      ],
+      [
+       "1990-12-24 00:00:00.0",
+       1
+      ],
+      [
+       "1990-11-03 00:00:00.0",
+       1
+      ],
+      [
+       "1990-09-13 00:00:00.0",
+       1
+      ],
+      [
+       "1990-07-24 00:00:00.0",
+       1
+      ],
+      [
+       "1990-06-03 00:00:00.0",
+       1
+      ],
+      [
+       "1990-04-13 00:00:00.0",
+       1
+      ],
+      [
+       "1990-02-21 00:00:00.0",
+       1
+      ],
+      [
+       "1990-01-01 00:00:00.0",
+       1
+      ],
+      [
+       "1989-11-11 00:00:00.0",
+       1
+      ],
+      [
+       "1989-09-21 00:00:00.0",
+       1
+      ],
+      [
+       "1989-08-01 00:00:00.0",
+       1
+      ],
+      [
+       "1989-06-11 00:00:00.0",
+       1
+      ],
+      [
+       "1989-04-21 00:00:00.0",
+       1
+      ],
+      [
+       "1989-03-01 00:00:00.0",
+       1
+      ],
+      [
+       "1989-01-09 00:00:00.0",
+       1
+      ],
+      [
+       "1988-11-19 00:00:00.0",
+       1
+      ],
+      [
+       "1988-09-29 00:00:00.0",
+       1
+      ],
+      [
+       "1988-08-09 00:00:00.0",
+       1
+      ],
+      [
+       "1988-06-19 00:00:00.0",
+       1
+      ]
+     ],
+     "description": "hire date",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "emp_id"
+   ],
+   "sample_rows": [
+    {
+     "emp_id": "A-C71970F",
+     "fname": "Aria",
+     "minit": "",
+     "lname": "Cruz",
+     "job_id": 10,
+     "job_lvl": 87,
+     "pub_id": "1389",
+     "hire_date": "1991-10-26 00:00:00.0"
+    },
+    {
+     "emp_id": "A-R89858F",
+     "fname": "Annette",
+     "minit": "",
+     "lname": "Roulet",
+     "job_id": 6,
+     "job_lvl": 152,
+     "pub_id": "9999",
+     "hire_date": "1990-02-21 00:00:00.0"
+    },
+    {
+     "emp_id": "AMD15433F",
+     "fname": "Ann",
+     "minit": "M",
+     "lname": "Devon",
+     "job_id": 3,
+     "job_lvl": 200,
+     "pub_id": "9952",
+     "hire_date": "1991-07-16 00:00:00.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "jobs",
+   "row_count": 14,
+   "stats_rows": 14,
+   "columns": [
+    {
+     "name": "job_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 14,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 14,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "job id. unique id number identifying the jobs",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "job_desc",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 14,
+     "is_unique": true,
+     "min_value": "Acquisitions Manager",
+     "max_value": "Sales Representative",
+     "examples": [
+      "New Hire - Job not specified",
+      "Chief Executive Officer",
+      "Business Operations Manager",
+      "Chief Financial Officier",
+      "Publisher"
+     ],
+     "top_values": [
+      [
+       "Sales Representative",
+       1
+      ],
+      [
+       "Publisher",
+       1
+      ],
+      [
+       "Public Relations Manager",
+       1
+      ],
+      [
+       "Productions Manager",
+       1
+      ],
+      [
+       "Operations Manager",
+       1
+      ],
+      [
+       "New Hire - Job not specified",
+       1
+      ],
+      [
+       "Marketing Manager",
+       1
+      ],
+      [
+       "Managing Editor",
+       1
+      ],
+      [
+       "Editor",
+       1
+      ],
+      [
+       "Designer",
+       1
+      ],
+      [
+       "Chief Financial Officier",
+       1
+      ],
+      [
+       "Chief Executive Officer",
+       1
+      ],
+      [
+       "Business Operations Manager",
+       1
+      ],
+      [
+       "Acquisitions Manager",
+       1
+      ]
+     ],
+     "description": "job description",
+     "value_description": "commonsense evidence:\nstaff should be mentioned",
+     "notes": []
+    },
+    {
+     "name": "min_lvl",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 10,
+     "max_value": 200,
+     "examples": [
+      10,
+      200,
+      175,
+      150,
+      140
+     ],
+     "top_values": [
+      [
+       75,
+       3
+      ],
+      [
+       25,
+       3
+      ],
+      [
+       175,
+       2
+      ],
+      [
+       200,
+       1
+      ],
+      [
+       150,
+       1
+      ],
+      [
+       140,
+       1
+      ],
+      [
+       120,
+       1
+      ],
+      [
+       100,
+       1
+      ],
+      [
+       10,
+       1
+      ]
+     ],
+     "description": "min level. min job level",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "max_lvl",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": 10,
+     "max_value": 250,
+     "examples": [
+      10,
+      250,
+      225,
+      200,
+      175
+     ],
+     "top_values": [
+      [
+       250,
+       3
+      ],
+      [
+       100,
+       3
+      ],
+      [
+       225,
+       2
+      ],
+      [
+       175,
+       2
+      ],
+      [
+       200,
+       1
+      ],
+      [
+       165,
+       1
+      ],
+      [
+       150,
+       1
+      ],
+      [
+       10,
+       1
+      ]
+     ],
+     "description": "max level. max job level",
+     "value_description": "commonsense evidence:\nlevel range for jobs mentioned in job_desc is (min_lvl, max_lvl)",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "job_id"
+   ],
+   "sample_rows": [
+    {
+     "job_id": 1,
+     "job_desc": "New Hire - Job not specified",
+     "min_lvl": 10,
+     "max_lvl": 10
+    },
+    {
+     "job_id": 2,
+     "job_desc": "Chief Executive Officer",
+     "min_lvl": 200,
+     "max_lvl": 250
+    },
+    {
+     "job_id": 3,
+     "job_desc": "Business Operations Manager",
+     "min_lvl": 175,
+     "max_lvl": 225
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "pub_info",
+   "row_count": 7,
+   "stats_rows": 7,
+   "columns": [
+    {
+     "name": "pub_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": true,
+     "min_value": "0877",
+     "max_value": "9999",
+     "examples": [
+      "0877",
+      "1389",
+      "1622",
+      "1756",
+      "9901"
+     ],
+     "top_values": [
+      [
+       "9999",
+       1
+      ],
+      [
+       "9952",
+       1
+      ],
+      [
+       "9901",
+       1
+      ],
+      [
+       "1756",
+       1
+      ],
+      [
+       "1622",
+       1
+      ],
+      [
+       "1389",
+       1
+      ],
+      [
+       "0877",
+       1
+      ]
+     ],
+     "description": "publication id. unique id number identifying publications",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "logo",
+     "declared_type": "BLOB",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": true,
+     "min_value": "0x47494638396107012800B30F0000000080000000800080800000008080...",
+     "max_value": "0x474946383961F5003400B30F0000000080000000800080800000008080...",
+     "examples": [
+      "0x4749463839618B002F00B30F0000000080000000800080800000008080...",
+      "0x474946383961C2001D00B30F0000000080000000800080800000008080...",
+      "0x474946383961F5003400B30F0000000080000000800080800000008080...",
+      "0x474946383961E3002500B30F0000000080000000800080800000008080...",
+      "0x4749463839615D002200B30F0000000080000000800080800000008080..."
+     ],
+     "top_values": [
+      [
+       "0x474946383961F5003400B30F0000000080000000800080800000008080...",
+       1
+      ],
+      [
+       "0x474946383961E3002500B30F0000000080000000800080800000008080...",
+       1
+      ],
+      [
+       "0x474946383961C2001D00B30F0000000080000000800080800000008080...",
+       1
+      ],
+      [
+       "0x474946383961A9002400B30F0000000080000000800080800000008080...",
+       1
+      ],
+      [
+       "0x4749463839618B002F00B30F0000000080000000800080800000008080...",
+       1
+      ],
+      [
+       "0x4749463839615D002200B30F0000000080000000800080800000008080...",
+       1
+      ],
+      [
+       "0x47494638396107012800B30F0000000080000000800080800000008080...",
+       1
+      ]
+     ],
+     "description": "logo of publications",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "pr_info",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": true,
+     "min_value": "This is sample text data for Algodata Infosystems, publisher...",
+     "max_value": "This is sample text data for Scootney Books, publisher 9952 ...",
+     "examples": [
+      "This is sample text data for Binnet & Hardley, publisher 087...",
+      "This is sample text data for Algodata Infosystems, publisher...",
+      "This is sample text data for Five Lakes Publishing, publishe...",
+      "This is sample text data for Ramona Publishers, publisher 17...",
+      "This is sample text data for GGG&G, publisher 9901 in the pu..."
+     ],
+     "top_values": [
+      [
+       "This is sample text data for Scootney Books, publisher 9952 ...",
+       1
+      ],
+      [
+       "This is sample text data for Ramona Publishers, publisher 17...",
+       1
+      ],
+      [
+       "This is sample text data for Lucerne Publishing, publisher 9...",
+       1
+      ],
+      [
+       "This is sample text data for GGG&G, publisher 9901 in the pu...",
+       1
+      ],
+      [
+       "This is sample text data for Five Lakes Publishing, publishe...",
+       1
+      ],
+      [
+       "This is sample text data for Binnet & Hardley, publisher 087...",
+       1
+      ],
+      [
+       "This is sample text data for Algodata Infosystems, publisher...",
+       1
+      ]
+     ],
+     "description": "publisher's information",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "pub_id"
+   ],
+   "sample_rows": [
+    {
+     "pub_id": "0877",
+     "logo": "0x4749463839618B002F00B30F0000000080000000800080800000008080...",
+     "pr_info": "This is sample text data for Binnet & Hardley, publisher 087..."
+    },
+    {
+     "pub_id": "1389",
+     "logo": "0x474946383961C2001D00B30F0000000080000000800080800000008080...",
+     "pr_info": "This is sample text data for Algodata Infosystems, publisher..."
+    },
+    {
+     "pub_id": "1622",
+     "logo": "0x474946383961F5003400B30F0000000080000000800080800000008080...",
+     "pr_info": "This is sample text data for Five Lakes Publishing, publishe..."
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "publishers",
+   "row_count": 8,
+   "stats_rows": 8,
+   "columns": [
+    {
+     "name": "pub_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": true,
+     "min_value": "0736",
+     "max_value": "9999",
+     "examples": [
+      "0736",
+      "0877",
+      "1389",
+      "1622",
+      "1756"
+     ],
+     "top_values": [
+      [
+       "9999",
+       1
+      ],
+      [
+       "9952",
+       1
+      ],
+      [
+       "9901",
+       1
+      ],
+      [
+       "1756",
+       1
+      ],
+      [
+       "1622",
+       1
+      ],
+      [
+       "1389",
+       1
+      ],
+      [
+       "0877",
+       1
+      ],
+      [
+       "0736",
+       1
+      ]
+     ],
+     "description": "publisher id. unique id number identifying publisher",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "pub_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": true,
+     "min_value": "Algodata Infosystems",
+     "max_value": "Scootney Books",
+     "examples": [
+      "New Moon Books",
+      "Binnet & Hardley",
+      "Algodata Infosystems",
+      "Five Lakes Publishing",
+      "Ramona Publishers"
+     ],
+     "top_values": [
+      [
+       "Scootney Books",
+       1
+      ],
+      [
+       "Ramona Publishers",
+       1
+      ],
+      [
+       "New Moon Books",
+       1
+      ],
+      [
+       "Lucerne Publishing",
+       1
+      ],
+      [
+       "GGG&G",
+       1
+      ],
+      [
+       "Five Lakes Publishing",
+       1
+      ],
+      [
+       "Binnet & Hardley",
+       1
+      ],
+      [
+       "Algodata Infosystems",
+       1
+      ]
+     ],
+     "description": "publisher name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": true,
+     "min_value": "Berkeley",
+     "max_value": "Washington",
+     "examples": [
+      "Boston",
+      "Washington",
+      "Berkeley",
+      "Chicago",
+      "Dallas"
+     ],
+     "top_values": [
+      [
+       "Washington",
+       1
+      ],
+      [
+       "Paris",
+       1
+      ],
+      [
+       "New York",
+       1
+      ],
+      [
+       "Mnchen",
+       1
+      ],
+      [
+       "Dallas",
+       1
+      ],
+      [
+       "Chicago",
+       1
+      ],
+      [
+       "Boston",
+       1
+      ],
+      [
+       "Berkeley",
+       1
+      ]
+     ],
+     "description": "city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.25,
+     "distinct_count": 6,
+     "is_unique": true,
+     "min_value": "CA",
+     "max_value": "TX",
+     "examples": [
+      "MA",
+      "DC",
+      "CA",
+      "IL",
+      "TX"
+     ],
+     "top_values": [
+      [
+       "TX",
+       1
+      ],
+      [
+       "NY",
+       1
+      ],
+      [
+       "MA",
+       1
+      ],
+      [
+       "IL",
+       1
+      ],
+      [
+       "DC",
+       1
+      ],
+      [
+       "CA",
+       1
+      ]
+     ],
+     "description": "state",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "country",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "France",
+     "max_value": "USA",
+     "examples": [
+      "USA",
+      "Germany",
+      "France"
+     ],
+     "top_values": [
+      [
+       "USA",
+       6
+      ],
+      [
+       "Germany",
+       1
+      ],
+      [
+       "France",
+       1
+      ]
+     ],
+     "description": "country",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "pub_id"
+   ],
+   "sample_rows": [
+    {
+     "pub_id": "0736",
+     "pub_name": "New Moon Books",
+     "city": "Boston",
+     "state": "MA",
+     "country": "USA"
+    },
+    {
+     "pub_id": "0877",
+     "pub_name": "Binnet & Hardley",
+     "city": "Washington",
+     "state": "DC",
+     "country": "USA"
+    },
+    {
+     "pub_id": "1389",
+     "pub_name": "Algodata Infosystems",
+     "city": "Berkeley",
+     "state": "CA",
+     "country": "USA"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "roysched",
+   "row_count": 86,
+   "stats_rows": 86,
+   "columns": [
+    {
+     "name": "title_id",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": "BU1032",
+     "max_value": "TC7777",
+     "examples": [
+      "BU1032",
+      "PC1035",
+      "BU2075",
+      "PS2091",
+      "PS2106"
+     ],
+     "top_values": [
+      [
+       "TC3218",
+       8
+      ],
+      [
+       "MC3021",
+       8
+      ],
+      [
+       "BU7832",
+       8
+      ],
+      [
+       "BU2075",
+       8
+      ],
+      [
+       "BU1111",
+       8
+      ],
+      [
+       "TC4203",
+       7
+      ],
+      [
+       "MC2222",
+       6
+      ],
+      [
+       "PS1372",
+       5
+      ],
+      [
+       "PC1035",
+       5
+      ],
+      [
+       "PS3333",
+       4
+      ],
+      [
+       "PS2106",
+       4
+      ],
+      [
+       "PS2091",
+       4
+      ],
+      [
+       "PC8888",
+       4
+      ],
+      [
+       "TC7777",
+       3
+      ],
+      [
+       "PS7777",
+       2
+      ],
+      [
+       "BU1032",
+       2
+      ]
+     ],
+     "description": "unique id number identifying title",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lorange",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 40001,
+     "examples": [
+      0,
+      5001,
+      2001,
+      3001,
+      4001
+     ],
+     "top_values": [
+      [
+       0,
+       16
+      ],
+      [
+       10001,
+       10
+      ],
+      [
+       5001,
+       9
+      ],
+      [
+       2001,
+       6
+      ],
+      [
+       12001,
+       5
+      ],
+      [
+       8001,
+       5
+      ],
+      [
+       4001,
+       5
+      ],
+      [
+       20001,
+       4
+      ],
+      [
+       15001,
+       4
+      ],
+      [
+       1001,
+       3
+      ],
+      [
+       40001,
+       2
+      ],
+      [
+       30001,
+       2
+      ],
+      [
+       24001,
+       2
+      ],
+      [
+       16001,
+       2
+      ],
+      [
+       14001,
+       2
+      ],
+      [
+       6001,
+       2
+      ],
+      [
+       3001,
+       2
+      ],
+      [
+       35001,
+       1
+      ],
+      [
+       32001,
+       1
+      ],
+      [
+       28001,
+       1
+      ],
+      [
+       25001,
+       1
+      ],
+      [
+       7001,
+       1
+      ]
+     ],
+     "description": "low range",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "hirange",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": 1000,
+     "max_value": 50000,
+     "examples": [
+      5000,
+      50000,
+      2000,
+      3000,
+      4000
+     ],
+     "top_values": [
+      [
+       50000,
+       16
+      ],
+      [
+       10000,
+       11
+      ],
+      [
+       5000,
+       9
+      ],
+      [
+       2000,
+       6
+      ],
+      [
+       8000,
+       5
+      ],
+      [
+       4000,
+       5
+      ],
+      [
+       20000,
+       4
+      ],
+      [
+       15000,
+       4
+      ],
+      [
+       12000,
+       4
+      ],
+      [
+       1000,
+       3
+      ],
+      [
+       40000,
+       2
+      ],
+      [
+       30000,
+       2
+      ],
+      [
+       24000,
+       2
+      ],
+      [
+       16000,
+       2
+      ],
+      [
+       14000,
+       2
+      ],
+      [
+       6000,
+       2
+      ],
+      [
+       3000,
+       2
+      ],
+      [
+       35000,
+       1
+      ],
+      [
+       32000,
+       1
+      ],
+      [
+       28000,
+       1
+      ],
+      [
+       25000,
+       1
+      ],
+      [
+       7000,
+       1
+      ]
+     ],
+     "description": "high range",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "royalty",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": 10,
+     "max_value": 24,
+     "examples": [
+      10,
+      12,
+      14,
+      16,
+      18
+     ],
+     "top_values": [
+      [
+       12,
+       16
+      ],
+      [
+       10,
+       16
+      ],
+      [
+       14,
+       14
+      ],
+      [
+       16,
+       13
+      ],
+      [
+       18,
+       9
+      ],
+      [
+       20,
+       7
+      ],
+      [
+       22,
+       6
+      ],
+      [
+       24,
+       5
+      ]
+     ],
+     "description": "royalty",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "title_id": "BU1032",
+     "lorange": 0,
+     "hirange": 5000,
+     "royalty": 10
+    },
+    {
+     "title_id": "BU1032",
+     "lorange": 5001,
+     "hirange": 50000,
+     "royalty": 12
+    },
+    {
+     "title_id": "PC1035",
+     "lorange": 0,
+     "hirange": 2000,
+     "royalty": 10
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "sales",
+   "row_count": 21,
+   "stats_rows": 21,
+   "columns": [
+    {
+     "name": "stor_id",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "6380",
+     "max_value": "8042",
+     "examples": [
+      "6380",
+      "7066",
+      "7067",
+      "7131",
+      "7896"
+     ],
+     "top_values": [
+      [
+       "7131",
+       6
+      ],
+      [
+       "8042",
+       4
+      ],
+      [
+       "7067",
+       4
+      ],
+      [
+       "7896",
+       3
+      ],
+      [
+       "7066",
+       2
+      ],
+      [
+       "6380",
+       2
+      ]
+     ],
+     "description": "store id. id number identifying stores",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "ord_num",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": "423LL922",
+     "max_value": "X999",
+     "examples": [
+      "6871",
+      "722a",
+      "A2976",
+      "QA7442.3",
+      "D4482"
+     ],
+     "top_values": [
+      [
+       "P3087a",
+       4
+      ],
+      [
+       "P2121",
+       3
+      ],
+      [
+       "X999",
+       1
+      ],
+      [
+       "TQ456",
+       1
+      ],
+      [
+       "QQ2299",
+       1
+      ],
+      [
+       "QA879.1",
+       1
+      ],
+      [
+       "QA7442.3",
+       1
+      ],
+      [
+       "P723",
+       1
+      ],
+      [
+       "N914014",
+       1
+      ],
+      [
+       "N914008",
+       1
+      ],
+      [
+       "D4482",
+       1
+      ],
+      [
+       "A2976",
+       1
+      ],
+      [
+       "722a",
+       1
+      ],
+      [
+       "6871",
+       1
+      ],
+      [
+       "423LL930",
+       1
+      ],
+      [
+       "423LL922",
+       1
+      ]
+     ],
+     "description": "order number. id number identifying the orders",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ord_date",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": "1992-06-15 00:00:00.0",
+     "max_value": "1994-09-14 00:00:00.0",
+     "examples": [
+      "1994-09-14 00:00:00.0",
+      "1994-09-13 00:00:00.0",
+      "1993-05-24 00:00:00.0",
+      "1992-06-15 00:00:00.0",
+      "1993-05-29 00:00:00.0"
+     ],
+     "top_values": [
+      [
+       "1994-09-14 00:00:00.0",
+       6
+      ],
+      [
+       "1993-05-29 00:00:00.0",
+       4
+      ],
+      [
+       "1992-06-15 00:00:00.0",
+       3
+      ],
+      [
+       "1994-09-13 00:00:00.0",
+       2
+      ],
+      [
+       "1993-12-12 00:00:00.0",
+       1
+      ],
+      [
+       "1993-10-28 00:00:00.0",
+       1
+      ],
+      [
+       "1993-05-24 00:00:00.0",
+       1
+      ],
+      [
+       "1993-05-22 00:00:00.0",
+       1
+      ],
+      [
+       "1993-03-11 00:00:00.0",
+       1
+      ],
+      [
+       "1993-02-21 00:00:00.0",
+       1
+      ]
+     ],
+     "description": "order date. the date of the order",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "qty",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": 3,
+     "max_value": 75,
+     "examples": [
+      5,
+      3,
+      50,
+      75,
+      10
+     ],
+     "top_values": [
+      [
+       25,
+       4
+      ],
+      [
+       20,
+       4
+      ],
+      [
+       15,
+       3
+      ],
+      [
+       10,
+       3
+      ],
+      [
+       75,
+       1
+      ],
+      [
+       50,
+       1
+      ],
+      [
+       40,
+       1
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       3,
+       1
+      ]
+     ],
+     "description": "quantity of sales",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "payterms",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Net 30",
+     "max_value": "ON invoice",
+     "examples": [
+      "Net 60",
+      "Net 30",
+      "ON invoice"
+     ],
+     "top_values": [
+      [
+       "Net 60",
+       9
+      ],
+      [
+       "Net 30",
+       8
+      ],
+      [
+       "ON invoice",
+       4
+      ]
+     ],
+     "description": "payments",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": "BU1032",
+     "max_value": "TC7777",
+     "examples": [
+      "BU1032",
+      "PS2091",
+      "PC8888",
+      "TC3218",
+      "TC4203"
+     ],
+     "top_values": [
+      [
+       "PS2091",
+       4
+      ],
+      [
+       "MC3021",
+       2
+      ],
+      [
+       "BU1032",
+       2
+      ],
+      [
+       "TC7777",
+       1
+      ],
+      [
+       "TC4203",
+       1
+      ],
+      [
+       "TC3218",
+       1
+      ],
+      [
+       "PS7777",
+       1
+      ],
+      [
+       "PS3333",
+       1
+      ],
+      [
+       "PS2106",
+       1
+      ],
+      [
+       "PS1372",
+       1
+      ],
+      [
+       "PC8888",
+       1
+      ],
+      [
+       "PC1035",
+       1
+      ],
+      [
+       "MC2222",
+       1
+      ],
+      [
+       "BU7832",
+       1
+      ],
+      [
+       "BU2075",
+       1
+      ],
+      [
+       "BU1111",
+       1
+      ]
+     ],
+     "description": "title id. id number identifying titles",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "stor_id",
+    "ord_num",
+    "title_id"
+   ],
+   "sample_rows": [
+    {
+     "stor_id": "6380",
+     "ord_num": "6871",
+     "ord_date": "1994-09-14 00:00:00.0",
+     "qty": 5,
+     "payterms": "Net 60",
+     "title_id": "BU1032"
+    },
+    {
+     "stor_id": "6380",
+     "ord_num": "722a",
+     "ord_date": "1994-09-13 00:00:00.0",
+     "qty": 3,
+     "payterms": "Net 60",
+     "title_id": "PS2091"
+    },
+    {
+     "stor_id": "7066",
+     "ord_num": "A2976",
+     "ord_date": "1993-05-24 00:00:00.0",
+     "qty": 50,
+     "payterms": "Net 30",
+     "title_id": "PC8888"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "stores",
+   "row_count": 6,
+   "stats_rows": 6,
+   "columns": [
+    {
+     "name": "stor_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": true,
+     "min_value": "6380",
+     "max_value": "8042",
+     "examples": [
+      "6380",
+      "7066",
+      "7067",
+      "7131",
+      "7896"
+     ],
+     "top_values": [
+      [
+       "8042",
+       1
+      ],
+      [
+       "7896",
+       1
+      ],
+      [
+       "7131",
+       1
+      ],
+      [
+       "7067",
+       1
+      ],
+      [
+       "7066",
+       1
+      ],
+      [
+       "6380",
+       1
+      ]
+     ],
+     "description": "store id. unique id number of stores",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "stor_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": true,
+     "min_value": "Barnum's",
+     "max_value": "News & Brews",
+     "examples": [
+      "Eric the Read Books",
+      "Barnum's",
+      "News & Brews",
+      "Doc-U-Mat: Quality Laundry and Books",
+      "Fricative Bookshop"
+     ],
+     "top_values": [
+      [
+       "News & Brews",
+       1
+      ],
+      [
+       "Fricative Bookshop",
+       1
+      ],
+      [
+       "Eric the Read Books",
+       1
+      ],
+      [
+       "Doc-U-Mat: Quality Laundry and Books",
+       1
+      ],
+      [
+       "Bookbeat",
+       1
+      ],
+      [
+       "Barnum's",
+       1
+      ]
+     ],
+     "description": "store name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "stor_address",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": true,
+     "min_value": "24-A Avogadro Way",
+     "max_value": "89 Madison St.",
+     "examples": [
+      "788 Catamaugus Ave.",
+      "567 Pasadena Ave.",
+      "577 First St.",
+      "24-A Avogadro Way",
+      "89 Madison St."
+     ],
+     "top_values": [
+      [
+       "89 Madison St.",
+       1
+      ],
+      [
+       "788 Catamaugus Ave.",
+       1
+      ],
+      [
+       "679 Carson St.",
+       1
+      ],
+      [
+       "577 First St.",
+       1
+      ],
+      [
+       "567 Pasadena Ave.",
+       1
+      ],
+      [
+       "24-A Avogadro Way",
+       1
+      ]
+     ],
+     "description": "store address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": true,
+     "min_value": "Fremont",
+     "max_value": "Tustin",
+     "examples": [
+      "Seattle",
+      "Tustin",
+      "Los Gatos",
+      "Remulade",
+      "Fremont"
+     ],
+     "top_values": [
+      [
+       "Tustin",
+       1
+      ],
+      [
+       "Seattle",
+       1
+      ],
+      [
+       "Remulade",
+       1
+      ],
+      [
+       "Portland",
+       1
+      ],
+      [
+       "Los Gatos",
+       1
+      ],
+      [
+       "Fremont",
+       1
+      ]
+     ],
+     "description": "city name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "CA",
+     "max_value": "WA",
+     "examples": [
+      "WA",
+      "CA",
+      "OR"
+     ],
+     "top_values": [
+      [
+       "CA",
+       3
+      ],
+      [
+       "WA",
+       2
+      ],
+      [
+       "OR",
+       1
+      ]
+     ],
+     "description": "state code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "zip",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": true,
+     "min_value": "89076",
+     "max_value": "98056",
+     "examples": [
+      "98056",
+      "92789",
+      "96745",
+      "98014",
+      "90019"
+     ],
+     "top_values": [
+      [
+       "98056",
+       1
+      ],
+      [
+       "98014",
+       1
+      ],
+      [
+       "96745",
+       1
+      ],
+      [
+       "92789",
+       1
+      ],
+      [
+       "90019",
+       1
+      ],
+      [
+       "89076",
+       1
+      ]
+     ],
+     "description": "zip code",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    }
+   ],
+   "primary_key": [
+    "stor_id"
+   ],
+   "sample_rows": [
+    {
+     "stor_id": "6380",
+     "stor_name": "Eric the Read Books",
+     "stor_address": "788 Catamaugus Ave.",
+     "city": "Seattle",
+     "state": "WA",
+     "zip": "98056"
+    },
+    {
+     "stor_id": "7066",
+     "stor_name": "Barnum's",
+     "stor_address": "567 Pasadena Ave.",
+     "city": "Tustin",
+     "state": "CA",
+     "zip": "92789"
+    },
+    {
+     "stor_id": "7067",
+     "stor_name": "News & Brews",
+     "stor_address": "577 First St.",
+     "city": "Los Gatos",
+     "state": "CA",
+     "zip": "96745"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "titleauthor",
+   "row_count": 25,
+   "stats_rows": 25,
+   "columns": [
+    {
+     "name": "au_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 19,
+     "is_unique": false,
+     "min_value": "172-32-1176",
+     "max_value": "998-72-3567",
+     "examples": [
+      "172-32-1176",
+      "213-46-8915",
+      "238-95-7766",
+      "267-41-2394",
+      "274-80-9391"
+     ],
+     "top_values": [
+      [
+       "998-72-3567",
+       2
+      ],
+      [
+       "899-46-2035",
+       2
+      ],
+      [
+       "724-80-9391",
+       2
+      ],
+      [
+       "486-29-1786",
+       2
+      ],
+      [
+       "267-41-2394",
+       2
+      ],
+      [
+       "213-46-8915",
+       2
+      ],
+      [
+       "846-92-7186",
+       1
+      ],
+      [
+       "807-91-6654",
+       1
+      ],
+      [
+       "756-30-7391",
+       1
+      ],
+      [
+       "722-51-5454",
+       1
+      ],
+      [
+       "712-45-1867",
+       1
+      ],
+      [
+       "672-71-3249",
+       1
+      ],
+      [
+       "648-92-1872",
+       1
+      ],
+      [
+       "472-27-2349",
+       1
+      ],
+      [
+       "427-17-2319",
+       1
+      ],
+      [
+       "409-56-7008",
+       1
+      ],
+      [
+       "274-80-9391",
+       1
+      ],
+      [
+       "238-95-7766",
+       1
+      ],
+      [
+       "172-32-1176",
+       1
+      ]
+     ],
+     "description": "author id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": "BU1032",
+     "max_value": "TC7777",
+     "examples": [
+      "PS3333",
+      "BU1032",
+      "BU2075",
+      "PC1035",
+      "BU1111"
+     ],
+     "top_values": [
+      [
+       "TC7777",
+       3
+      ],
+      [
+       "PS2091",
+       2
+      ],
+      [
+       "PS1372",
+       2
+      ],
+      [
+       "PC8888",
+       2
+      ],
+      [
+       "MC3021",
+       2
+      ],
+      [
+       "BU1111",
+       2
+      ],
+      [
+       "BU1032",
+       2
+      ],
+      [
+       "TC4203",
+       1
+      ],
+      [
+       "TC3218",
+       1
+      ],
+      [
+       "PS7777",
+       1
+      ],
+      [
+       "PS3333",
+       1
+      ],
+      [
+       "PS2106",
+       1
+      ],
+      [
+       "PC9999",
+       1
+      ],
+      [
+       "PC1035",
+       1
+      ],
+      [
+       "MC2222",
+       1
+      ],
+      [
+       "BU7832",
+       1
+      ],
+      [
+       "BU2075",
+       1
+      ]
+     ],
+     "description": "title id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "au_ord",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 3,
+     "examples": [
+      1,
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       1,
+       17
+      ],
+      [
+       2,
+       7
+      ],
+      [
+       3,
+       1
+      ]
+     ],
+     "description": "author ordering",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "royaltyper",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": 25,
+     "max_value": 100,
+     "examples": [
+      100,
+      40,
+      30,
+      60,
+      50
+     ],
+     "top_values": [
+      [
+       100,
+       10
+      ],
+      [
+       50,
+       4
+      ],
+      [
+       40,
+       3
+      ],
+      [
+       75,
+       2
+      ],
+      [
+       60,
+       2
+      ],
+      [
+       30,
+       2
+      ],
+      [
+       25,
+       2
+      ]
+     ],
+     "description": "royaltyper",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "au_id",
+    "title_id"
+   ],
+   "sample_rows": [
+    {
+     "au_id": "172-32-1176",
+     "title_id": "PS3333",
+     "au_ord": 1,
+     "royaltyper": 100
+    },
+    {
+     "au_id": "213-46-8915",
+     "title_id": "BU1032",
+     "au_ord": 2,
+     "royaltyper": 40
+    },
+    {
+     "au_id": "213-46-8915",
+     "title_id": "BU2075",
+     "au_ord": 1,
+     "royaltyper": 100
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "titles",
+   "row_count": 18,
+   "stats_rows": 18,
+   "columns": [
+    {
+     "name": "title_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 18,
+     "is_unique": true,
+     "min_value": "BU1032",
+     "max_value": "TC7777",
+     "examples": [
+      "BU1032",
+      "BU1111",
+      "BU2075",
+      "BU7832",
+      "MC2222"
+     ],
+     "top_values": [
+      [
+       "TC7777",
+       1
+      ],
+      [
+       "TC4203",
+       1
+      ],
+      [
+       "TC3218",
+       1
+      ],
+      [
+       "PS7777",
+       1
+      ],
+      [
+       "PS3333",
+       1
+      ],
+      [
+       "PS2106",
+       1
+      ],
+      [
+       "PS2091",
+       1
+      ],
+      [
+       "PS1372",
+       1
+      ],
+      [
+       "PC9999",
+       1
+      ],
+      [
+       "PC8888",
+       1
+      ],
+      [
+       "PC1035",
+       1
+      ],
+      [
+       "MC3026",
+       1
+      ],
+      [
+       "MC3021",
+       1
+      ],
+      [
+       "MC2222",
+       1
+      ],
+      [
+       "BU7832",
+       1
+      ],
+      [
+       "BU2075",
+       1
+      ],
+      [
+       "BU1111",
+       1
+      ],
+      [
+       "BU1032",
+       1
+      ]
+     ],
+     "description": "title id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 18,
+     "is_unique": true,
+     "min_value": "But Is It User Friendly?",
+     "max_value": "You Can Combat Computer Stress!",
+     "examples": [
+      "The Busy Executive's Database Guide",
+      "Cooking with Computers: Surreptitious Balance Sheets",
+      "You Can Combat Computer Stress!",
+      "Straight Talk About Computers",
+      "Silicon Valley Gastronomic Treats"
+     ],
+     "top_values": [
+      [
+       "You Can Combat Computer Stress!",
+       1
+      ],
+      [
+       "The Psychology of Computer Cooking",
+       1
+      ],
+      [
+       "The Gourmet Microwave",
+       1
+      ],
+      [
+       "The Busy Executive's Database Guide",
+       1
+      ],
+      [
+       "Sushi, Anyone?",
+       1
+      ],
+      [
+       "Straight Talk About Computers",
+       1
+      ],
+      [
+       "Silicon Valley Gastronomic Treats",
+       1
+      ],
+      [
+       "Secrets of Silicon Valley",
+       1
+      ],
+      [
+       "Prolonged Data Deprivation: Four Case Studies",
+       1
+      ],
+      [
+       "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterran...",
+       1
+      ],
+      [
+       "Net Etiquette",
+       1
+      ],
+      [
+       "Life Without Fear",
+       1
+      ],
+      [
+       "Is Anger the Enemy?",
+       1
+      ],
+      [
+       "Fifty Years in Buckingham Palace Kitchens",
+       1
+      ],
+      [
+       "Emotional Security: A New Algorithm",
+       1
+      ],
+      [
+       "Cooking with Computers: Surreptitious Balance Sheets",
+       1
+      ],
+      [
+       "Computer Phobic AND Non-Phobic Individuals: Behavior Variati...",
+       1
+      ],
+      [
+       "But Is It User Friendly?",
+       1
+      ]
+     ],
+     "description": "title",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "UNDECIDED",
+     "max_value": "trad_cook",
+     "examples": [
+      "business",
+      "mod_cook",
+      "UNDECIDED",
+      "popular_comp",
+      "psychology"
+     ],
+     "top_values": [
+      [
+       "psychology",
+       5
+      ],
+      [
+       "business",
+       4
+      ],
+      [
+       "trad_cook",
+       3
+      ],
+      [
+       "popular_comp",
+       3
+      ],
+      [
+       "mod_cook",
+       2
+      ],
+      [
+       "UNDECIDED",
+       1
+      ]
+     ],
+     "description": "type of titles",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "pub_id",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "0736",
+     "max_value": "1389",
+     "examples": [
+      "1389",
+      "0736",
+      "0877"
+     ],
+     "top_values": [
+      [
+       "0877",
+       7
+      ],
+      [
+       "1389",
+       6
+      ],
+      [
+       "0736",
+       5
+      ]
+     ],
+     "description": "publisher id",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "price",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1111,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": 2.99,
+     "max_value": 22.95,
+     "examples": [
+      19.99,
+      11.95,
+      2.99,
+      22.95,
+      20.0
+     ],
+     "top_values": [
+      [
+       19.99,
+       4
+      ],
+      [
+       11.95,
+       2
+      ],
+      [
+       2.99,
+       2
+      ],
+      [
+       22.95,
+       1
+      ],
+      [
+       21.59,
+       1
+      ],
+      [
+       20.95,
+       1
+      ],
+      [
+       20.0,
+       1
+      ],
+      [
+       14.99,
+       1
+      ],
+      [
+       10.95,
+       1
+      ],
+      [
+       7.99,
+       1
+      ],
+      [
+       7.0,
+       1
+      ]
+     ],
+     "description": "price",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "advance",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.1111,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 15000.0,
+     "examples": [
+      5000.0,
+      10125.0,
+      0.0,
+      15000.0,
+      7000.0
+     ],
+     "top_values": [
+      [
+       7000.0,
+       3
+      ],
+      [
+       5000.0,
+       3
+      ],
+      [
+       8000.0,
+       2
+      ],
+      [
+       4000.0,
+       2
+      ],
+      [
+       15000.0,
+       1
+      ],
+      [
+       10125.0,
+       1
+      ],
+      [
+       6000.0,
+       1
+      ],
+      [
+       2275.0,
+       1
+      ],
+      [
+       2000.0,
+       1
+      ],
+      [
+       0.0,
+       1
+      ]
+     ],
+     "description": "pre-paid amount",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "royalty",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.1111,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 10,
+     "max_value": 24,
+     "examples": [
+      10,
+      24,
+      12,
+      16,
+      14
+     ],
+     "top_values": [
+      [
+       10,
+       10
+      ],
+      [
+       24,
+       2
+      ],
+      [
+       12,
+       2
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       14,
+       1
+      ]
+     ],
+     "description": "royalty",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ytd_sales",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1111,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": 111,
+     "max_value": 22246,
+     "examples": [
+      4095,
+      3876,
+      18722,
+      2032,
+      22246
+     ],
+     "top_values": [
+      [
+       4095,
+       4
+      ],
+      [
+       375,
+       2
+      ],
+      [
+       22246,
+       1
+      ],
+      [
+       18722,
+       1
+      ],
+      [
+       15096,
+       1
+      ],
+      [
+       8780,
+       1
+      ],
+      [
+       4072,
+       1
+      ],
+      [
+       3876,
+       1
+      ],
+      [
+       3336,
+       1
+      ],
+      [
+       2045,
+       1
+      ],
+      [
+       2032,
+       1
+      ],
+      [
+       111,
+       1
+      ]
+     ],
+     "description": "year to date sales",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "notes",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0556,
+     "distinct_count": 17,
+     "is_unique": true,
+     "min_value": "A must for the specialist, this book examines the difference...",
+     "max_value": "What happens when the data runs dry?  Searching evaluations ...",
+     "examples": [
+      "An overview of available database systems with emphasis on c...",
+      "Helpful hints on how to use your electronic resources to the...",
+      "The latest medical and psychological techniques for living w...",
+      "Annotated analysis of what computers can do for you: a no-hy...",
+      "Favorite recipes for quick, easy, and elegant meals."
+     ],
+     "top_values": [
+      [
+       "What happens when the data runs dry?  Searching evaluations ...",
+       1
+      ],
+      [
+       "Traditional French gourmet recipes adapted for modern microw...",
+       1
+      ],
+      [
+       "The latest medical and psychological techniques for living w...",
+       1
+      ],
+      [
+       "Protecting yourself and your loved ones from undue emotional...",
+       1
+      ],
+      [
+       "Profusely illustrated in color, this makes a wonderful gift ...",
+       1
+      ],
+      [
+       "New exercise, meditation, and nutritional techniques that ca...",
+       1
+      ],
+      [
+       "Muckraking reporting on the world's largest computer hardwar...",
+       1
+      ],
+      [
+       "More anecdotes from the Queen's favorite cook describing lif...",
+       1
+      ],
+      [
+       "Helpful hints on how to use your electronic resources to the...",
+       1
+      ],
+      [
+       "Favorite recipes for quick, easy, and elegant meals.",
+       1
+      ],
+      [
+       "Detailed instructions on how to make authentic Japanese sush...",
+       1
+      ],
+      [
+       "Carefully researched study of the effects of strong emotions...",
+       1
+      ],
+      [
+       "Annotated analysis of what computers can do for you: a no-hy...",
+       1
+      ],
+      [
+       "An overview of available database systems with emphasis on c...",
+       1
+      ],
+      [
+       "A survey of software for the naive user, focusing on the 'fr...",
+       1
+      ],
+      [
+       "A must-read for computer conferencing.",
+       1
+      ],
+      [
+       "A must for the specialist, this book examines the difference...",
+       1
+      ]
+     ],
+     "description": "notes if any",
+     "value_description": "commonsense evidence:\nhad better understand notes contents and put some of them into questions if any",
+     "notes": []
+    },
+    {
+     "name": "pubdate",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": "1991-06-09 00:00:00.0",
+     "max_value": "2014-11-07 10:39:37.0",
+     "examples": [
+      "1991-06-12 00:00:00.0",
+      "1991-06-09 00:00:00.0",
+      "1991-06-30 00:00:00.0",
+      "1991-06-22 00:00:00.0",
+      "1991-06-18 00:00:00.0"
+     ],
+     "top_values": [
+      [
+       "1991-06-12 00:00:00.0",
+       5
+      ],
+      [
+       "2014-11-07 10:39:37.0",
+       2
+      ],
+      [
+       "1991-10-21 00:00:00.0",
+       2
+      ],
+      [
+       "1991-06-30 00:00:00.0",
+       2
+      ],
+      [
+       "1991-06-09 00:00:00.0",
+       2
+      ],
+      [
+       "1994-06-12 00:00:00.0",
+       1
+      ],
+      [
+       "1991-10-05 00:00:00.0",
+       1
+      ],
+      [
+       "1991-06-22 00:00:00.0",
+       1
+      ],
+      [
+       "1991-06-18 00:00:00.0",
+       1
+      ],
+      [
+       "1991-06-15 00:00:00.0",
+       1
+      ]
+     ],
+     "description": "publication date",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "title_id"
+   ],
+   "sample_rows": [
+    {
+     "title_id": "BU1032",
+     "title": "The Busy Executive's Database Guide",
+     "type": "business",
+     "pub_id": "1389",
+     "price": 19.99,
+     "advance": 5000.0,
+     "royalty": 10,
+     "ytd_sales": 4095,
+     "notes": "An overview of available database systems with emphasis on c...",
+     "pubdate": "1991-06-12 00:00:00.0"
+    },
+    {
+     "title_id": "BU1111",
+     "title": "Cooking with Computers: Surreptitious Balance Sheets",
+     "type": "business",
+     "pub_id": "1389",
+     "price": 11.95,
+     "advance": 5000.0,
+     "royalty": 10,
+     "ytd_sales": 3876,
+     "notes": "Helpful hints on how to use your electronic resources to the...",
+     "pubdate": "1991-06-09 00:00:00.0"
+    },
+    {
+     "title_id": "BU2075",
+     "title": "You Can Combat Computer Stress!",
+     "type": "business",
+     "pub_id": "0736",
+     "price": 2.99,
+     "advance": 10125.0,
+     "royalty": 24,
+     "ytd_sales": 18722,
+     "notes": "The latest medical and psychological techniques for living w...",
+     "pubdate": "1991-06-30 00:00:00.0"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "discounts",
+   "from_column": "stor_id",
+   "to_table": "stores",
+   "to_column": "stor_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "employee",
+   "from_column": "pub_id",
+   "to_table": "publishers",
+   "to_column": "pub_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "employee",
+   "from_column": "job_id",
+   "to_table": "jobs",
+   "to_column": "job_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "pub_info",
+   "from_column": "pub_id",
+   "to_table": "publishers",
+   "to_column": "pub_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "roysched",
+   "from_column": "title_id",
+   "to_table": "titles",
+   "to_column": "title_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "sales",
+   "from_column": "title_id",
+   "to_table": "titles",
+   "to_column": "title_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "sales",
+   "from_column": "stor_id",
+   "to_table": "stores",
+   "to_column": "stor_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "titleauthor",
+   "from_column": "title_id",
+   "to_table": "titles",
+   "to_column": "title_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "titleauthor",
+   "from_column": "au_id",
+   "to_table": "authors",
+   "to_column": "au_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "titles",
+   "from_column": "pub_id",
+   "to_table": "publishers",
+   "to_column": "pub_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "discounts",
+   "from_column": "stor_id",
+   "to_table": "sales",
+   "to_column": "stor_id",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "employee",
+   "from_column": "pub_id",
+   "to_table": "pub_info",
+   "to_column": "pub_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.875
+  },
+  {
+   "from_table": "roysched",
+   "from_column": "title_id",
+   "to_table": "sales",
+   "to_column": "title_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "roysched",
+   "from_column": "title_id",
+   "to_table": "titleauthor",
+   "to_column": "title_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "sales",
+   "from_column": "title_id",
+   "to_table": "titleauthor",
+   "to_column": "title_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

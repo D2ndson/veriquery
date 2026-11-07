@@ -1,0 +1,1821 @@
+{
+ "db_id": "olympics",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/olympics/olympics.sqlite",
+ "fingerprint": "18145280-1793993015197218263-v1.0",
+ "created_at": "2026-11-06T19:25:06+00:00",
+ "profile_seconds": 1.654,
+ "tables": [
+  {
+   "name": "city",
+   "row_count": 42,
+   "stats_rows": 42,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 42,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 42,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       42,
+       1
+      ],
+      [
+       41,
+       1
+      ],
+      [
+       40,
+       1
+      ],
+      [
+       39,
+       1
+      ],
+      [
+       38,
+       1
+      ],
+      [
+       37,
+       1
+      ],
+      [
+       36,
+       1
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       34,
+       1
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       32,
+       1
+      ],
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the unique identifier of the city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 42,
+     "is_unique": true,
+     "min_value": "Albertville",
+     "max_value": "Vancouver",
+     "examples": [
+      "Barcelona",
+      "London",
+      "Antwerpen",
+      "Paris",
+      "Calgary"
+     ],
+     "top_values": [
+      [
+       "Vancouver",
+       1
+      ],
+      [
+       "Torino",
+       1
+      ],
+      [
+       "Tokyo",
+       1
+      ],
+      [
+       "Sydney",
+       1
+      ],
+      [
+       "Stockholm",
+       1
+      ],
+      [
+       "St. Louis",
+       1
+      ],
+      [
+       "Squaw Valley",
+       1
+      ],
+      [
+       "Sochi",
+       1
+      ],
+      [
+       "Seoul",
+       1
+      ],
+      [
+       "Sarajevo",
+       1
+      ],
+      [
+       "Sapporo",
+       1
+      ],
+      [
+       "Sankt Moritz",
+       1
+      ],
+      [
+       "Salt Lake City",
+       1
+      ],
+      [
+       "Roma",
+       1
+      ],
+      [
+       "Rio de Janeiro",
+       1
+      ],
+      [
+       "Paris",
+       1
+      ],
+      [
+       "Oslo",
+       1
+      ],
+      [
+       "Nagano",
+       1
+      ],
+      [
+       "Munich",
+       1
+      ],
+      [
+       "Moskva",
+       1
+      ],
+      [
+       "Montreal",
+       1
+      ],
+      [
+       "Mexico City",
+       1
+      ],
+      [
+       "Melbourne",
+       1
+      ],
+      [
+       "Los Angeles",
+       1
+      ],
+      [
+       "London",
+       1
+      ],
+      [
+       "Lillehammer",
+       1
+      ],
+      [
+       "Lake Placid",
+       1
+      ],
+      [
+       "Innsbruck",
+       1
+      ],
+      [
+       "Helsinki",
+       1
+      ],
+      [
+       "Grenoble",
+       1
+      ],
+      [
+       "Garmisch-Partenkirchen",
+       1
+      ],
+      [
+       "Cortina d'Ampezzo",
+       1
+      ],
+      [
+       "Chamonix",
+       1
+      ],
+      [
+       "Calgary",
+       1
+      ],
+      [
+       "Berlin",
+       1
+      ],
+      [
+       "Beijing",
+       1
+      ],
+      [
+       "Barcelona",
+       1
+      ],
+      [
+       "Atlanta",
+       1
+      ],
+      [
+       "Athina",
+       1
+      ],
+      [
+       "Antwerpen",
+       1
+      ],
+      [
+       "Amsterdam",
+       1
+      ],
+      [
+       "Albertville",
+       1
+      ]
+     ],
+     "description": "city name. the name of the city",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "city_name": "Barcelona"
+    },
+    {
+     "id": 2,
+     "city_name": "London"
+    },
+    {
+     "id": 3,
+     "city_name": "Antwerpen"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "competitor_event",
+   "row_count": 260971,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "event_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 756,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 756,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "event id. the id of the event\nMaps to event(id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "competitor_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 138396,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 138396,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "competitor id. the id of the competitor\nMaps to games_competitor(id)",
+     "value_description": "commonsense evidence:\nThe number of competitors who participated in a specific event could be calculated by grouping by event_id.",
+     "notes": []
+    },
+    {
+     "name": "medal_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      4,
+      1,
+      3,
+      2
+     ],
+     "top_values": [
+      [
+       4,
+       170622
+      ],
+      [
+       1,
+       9897
+      ],
+      [
+       3,
+       9781
+      ],
+      [
+       2,
+       9700
+      ]
+     ],
+     "description": "medal id. the id of the medal\nMaps to medal(id)",
+     "value_description": "commonsense evidence:\nFor a specific event, the competitor whose medal_id = 1 is the champion, the competitor whose medal_id = 2 is the runner-up, and the competitor whose medal_id = 3 got third place.",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "event_id": 1,
+     "competitor_id": 1,
+     "medal_id": 4
+    },
+    {
+     "event_id": 2,
+     "competitor_id": 2,
+     "medal_id": 4
+    },
+    {
+     "event_id": 3,
+     "competitor_id": 3,
+     "medal_id": 4
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 260,971 rows",
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "event",
+   "row_count": 757,
+   "stats_rows": 757,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 757,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 757,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique identifier of the event",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "sport_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 66,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 66,
+     "examples": [
+      9,
+      33,
+      25,
+      62,
+      54
+     ],
+     "top_values": [],
+     "description": "sport id. the id of the sport\nMaps to sport(id)",
+     "value_description": "commonsense evidence:\nThere may be different events for the same sport in Olympics.",
+     "notes": []
+    },
+    {
+     "name": "event_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 757,
+     "is_unique": true,
+     "min_value": "Aeronautics Mixed Aeronautics",
+     "max_value": "Wrestling Women's Middleweight, Freestyle",
+     "examples": [
+      "Basketball Men's Basketball",
+      "Judo Men's Extra-Lightweight",
+      "Football Men's Football",
+      "Tug-Of-War Men's Tug-Of-War",
+      "Speed Skating Women's 500 metres"
+     ],
+     "top_values": [],
+     "description": "event name. the name of the event",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "sport_id": 9,
+     "event_name": "Basketball Men's Basketball"
+    },
+    {
+     "id": 2,
+     "sport_id": 33,
+     "event_name": "Judo Men's Extra-Lightweight"
+    },
+    {
+     "id": 3,
+     "sport_id": 25,
+     "event_name": "Football Men's Football"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "games",
+   "row_count": 51,
+   "stats_rows": 51,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 51,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 51,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique identifier of the game",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "games_year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 35,
+     "is_unique": false,
+     "min_value": 1896,
+     "max_value": 2016,
+     "examples": [
+      1992,
+      2012,
+      1920,
+      1900,
+      1988
+     ],
+     "top_values": [
+      [
+       1992,
+       2
+      ],
+      [
+       1988,
+       2
+      ],
+      [
+       1984,
+       2
+      ],
+      [
+       1980,
+       2
+      ],
+      [
+       1976,
+       2
+      ],
+      [
+       1972,
+       2
+      ],
+      [
+       1968,
+       2
+      ],
+      [
+       1964,
+       2
+      ],
+      [
+       1960,
+       2
+      ],
+      [
+       1956,
+       2
+      ],
+      [
+       1952,
+       2
+      ],
+      [
+       1948,
+       2
+      ],
+      [
+       1936,
+       2
+      ],
+      [
+       1932,
+       2
+      ],
+      [
+       1928,
+       2
+      ],
+      [
+       1924,
+       2
+      ],
+      [
+       2016,
+       1
+      ],
+      [
+       2014,
+       1
+      ],
+      [
+       2012,
+       1
+      ],
+      [
+       2010,
+       1
+      ],
+      [
+       2008,
+       1
+      ],
+      [
+       2006,
+       1
+      ],
+      [
+       2004,
+       1
+      ],
+      [
+       2002,
+       1
+      ],
+      [
+       2000,
+       1
+      ],
+      [
+       1998,
+       1
+      ],
+      [
+       1996,
+       1
+      ],
+      [
+       1994,
+       1
+      ],
+      [
+       1920,
+       1
+      ],
+      [
+       1912,
+       1
+      ],
+      [
+       1908,
+       1
+      ],
+      [
+       1906,
+       1
+      ],
+      [
+       1904,
+       1
+      ],
+      [
+       1900,
+       1
+      ],
+      [
+       1896,
+       1
+      ]
+     ],
+     "description": "games year. the year of the game",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "games_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 51,
+     "is_unique": true,
+     "min_value": "1896 Summer",
+     "max_value": "2016 Summer",
+     "examples": [
+      "1992 Summer",
+      "2012 Summer",
+      "1920 Summer",
+      "1900 Summer",
+      "1988 Winter"
+     ],
+     "top_values": [],
+     "description": "games name. the name of the game",
+     "value_description": "commonsense evidence:\ngames_name is 'games_year season'",
+     "notes": []
+    },
+    {
+     "name": "season",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "Summer",
+     "max_value": "Winter",
+     "examples": [
+      "Summer",
+      "Winter"
+     ],
+     "top_values": [
+      [
+       "Summer",
+       29
+      ],
+      [
+       "Winter",
+       22
+      ]
+     ],
+     "description": "the season of the game",
+     "value_description": "commonsense evidence:\nThe Olympics are held every four years and include both summer and winter games. The summer games include a wide range of sports, such as athletics, swimming, and gymnastics, while the winter games feature sports that are played on ice or snow, such as ice hockey, figure skating, and skiing.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "games_year": 1992,
+     "games_name": "1992 Summer",
+     "season": "Summer"
+    },
+    {
+     "id": 2,
+     "games_year": 2012,
+     "games_name": "2012 Summer",
+     "season": "Summer"
+    },
+    {
+     "id": 3,
+     "games_year": 1920,
+     "games_name": "1920 Summer",
+     "season": "Summer"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "games_city",
+   "row_count": 52,
+   "stats_rows": 52,
+   "columns": [
+    {
+     "name": "games_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 51,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 51,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "games id. the id of the game\nMaps to games(id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 42,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 42,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       20,
+       3
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       41,
+       2
+      ],
+      [
+       22,
+       2
+      ],
+      [
+       14,
+       2
+      ],
+      [
+       11,
+       2
+      ],
+      [
+       8,
+       2
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       42,
+       1
+      ],
+      [
+       40,
+       1
+      ],
+      [
+       39,
+       1
+      ],
+      [
+       38,
+       1
+      ],
+      [
+       37,
+       1
+      ],
+      [
+       36,
+       1
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       34,
+       1
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       32,
+       1
+      ],
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "city id. the id of the city that held the game\nMaps to city(id)",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "games_id": 1,
+     "city_id": 1
+    },
+    {
+     "games_id": 2,
+     "city_id": 2
+    },
+    {
+     "games_id": 3,
+     "city_id": 3
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "games_competitor",
+   "row_count": 180252,
+   "stats_rows": 180252,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 180252,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 180252,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique identifier of the record",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "games_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 51,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 51,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "games id. the id of the game\nMaps to games(id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "person_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 128854,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 135571,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "person id. the id of the person\nMaps to person(id)",
+     "value_description": "commonsense evidence:\nThe times a person participated in the Olympics games could be calculated by grouping by person_id.",
+     "notes": []
+    },
+    {
+     "name": "age",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 74,
+     "is_unique": false,
+     "min_value": 10,
+     "max_value": 97,
+     "examples": [
+      24,
+      23,
+      34,
+      21,
+      25
+     ],
+     "top_values": [],
+     "description": "the age of the person when he/she participated in the game",
+     "value_description": "commonsense evidence:\nIf person A's age was 22 when he participated in game A and his age was 24 when he participated in game B, it means that game A was held two years earlier than game B.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "games_id": 1,
+     "person_id": 1,
+     "age": 24
+    },
+    {
+     "id": 2,
+     "games_id": 2,
+     "person_id": 2,
+     "age": 23
+    },
+    {
+     "id": 3,
+     "games_id": 3,
+     "person_id": 3,
+     "age": 24
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "medal",
+   "row_count": 4,
+   "stats_rows": 4,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the unique identifier of the metal",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "medal_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": "Bronze",
+     "max_value": "Silver",
+     "examples": [
+      "Gold",
+      "Silver",
+      "Bronze",
+      "NA"
+     ],
+     "top_values": [
+      [
+       "Silver",
+       1
+      ],
+      [
+       "NA",
+       1
+      ],
+      [
+       "Gold",
+       1
+      ],
+      [
+       "Bronze",
+       1
+      ]
+     ],
+     "description": "medal name. the name of the medal",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "medal_name": "Gold"
+    },
+    {
+     "id": 2,
+     "medal_name": "Silver"
+    },
+    {
+     "id": 3,
+     "medal_name": "Bronze"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "noc_region",
+   "row_count": 231,
+   "stats_rows": 231,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 231,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 256,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique identifier of the noc region",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "noc",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 231,
+     "is_unique": true,
+     "min_value": "AFG",
+     "max_value": "ZIM",
+     "examples": [
+      "AFG",
+      "AHO",
+      "ALB",
+      "ALG",
+      "AND"
+     ],
+     "top_values": [],
+     "description": "the NOC code of the region",
+     "value_description": "commonsense evidence:\nA NOC code is a number used by the International Olympic Committee (IOC) to identify each of the national Olympic committees (NOCs) from around the world.",
+     "notes": []
+    },
+    {
+     "name": "region_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 230,
+     "is_unique": false,
+     "min_value": "Afghanistan",
+     "max_value": "Zimbabwe (Rhodesia)",
+     "examples": [
+      "Afghanistan",
+      "Netherlands Antilles",
+      "Albania",
+      "Algeria",
+      "Andorra"
+     ],
+     "top_values": [],
+     "description": "region name. the name of the region",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "noc": "AFG",
+     "region_name": "Afghanistan"
+    },
+    {
+     "id": 2,
+     "noc": "AHO",
+     "region_name": "Netherlands Antilles"
+    },
+    {
+     "id": 3,
+     "noc": "ALB",
+     "region_name": "Albania"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "person",
+   "row_count": 128854,
+   "stats_rows": 128854,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 128854,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 135571,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique identifier of the person",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "full_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 128081,
+     "is_unique": false,
+     "min_value": "A Dijiang",
+     "max_value": "zzet nce",
+     "examples": [
+      "A Dijiang",
+      "A Lamusi",
+      "Gunnar Nielsen Aaby",
+      "Edgar Lindenau Aabye",
+      "Christine Jacoba Aaftink"
+     ],
+     "top_values": [],
+     "description": "the full name of the person",
+     "value_description": "commonsense evidence:\nA person's full name is the complete name that they are known by, which typically includes their first name, middle name (if applicable), and last name.",
+     "notes": []
+    },
+    {
+     "name": "gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "M",
+     "examples": [
+      "M",
+      "F"
+     ],
+     "top_values": [
+      [
+       "M",
+       95225
+      ],
+      [
+       "F",
+       33629
+      ]
+     ],
+     "description": "the gender of the person",
+     "value_description": "commonsense evidence:\nM stands for male and F stands for female.",
+     "notes": []
+    },
+    {
+     "name": "height",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 95,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 226,
+     "examples": [
+      180,
+      170,
+      0,
+      185,
+      188
+     ],
+     "top_values": [],
+     "description": "the height of the person",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "weight",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 143,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 214,
+     "examples": [
+      80,
+      60,
+      0,
+      82,
+      75
+     ],
+     "top_values": [],
+     "description": "the weight of the person",
+     "value_description": "commonsense evidence:\nThe unit of height is cm, and the unit of weight is kg. If the height or the weight of the person is 0, it means his/her height or weight is missing.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "full_name": "A Dijiang",
+     "gender": "M",
+     "height": 180,
+     "weight": 80
+    },
+    {
+     "id": 2,
+     "full_name": "A Lamusi",
+     "gender": "M",
+     "height": 170,
+     "weight": 60
+    },
+    {
+     "id": 3,
+     "full_name": "Gunnar Nielsen Aaby",
+     "gender": "M",
+     "height": 0,
+     "weight": 0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "person_region",
+   "row_count": 130521,
+   "stats_rows": 130521,
+   "columns": [
+    {
+     "name": "person_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 128854,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 135571,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the id of the person\nMaps to person(id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "region_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 228,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 256,
+     "examples": [
+      42,
+      56,
+      146,
+      217,
+      69
+     ],
+     "top_values": [],
+     "description": "the id of the noc region\nMaps to noc_region(id)",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "person_id": 1,
+     "region_id": 42
+    },
+    {
+     "person_id": 2,
+     "region_id": 42
+    },
+    {
+     "person_id": 3,
+     "region_id": 56
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "sport",
+   "row_count": 66,
+   "stats_rows": 66,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 66,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 66,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique identifier of the sport",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "sport_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 66,
+     "is_unique": true,
+     "min_value": "Aeronautics",
+     "max_value": "Wrestling",
+     "examples": [
+      "Aeronautics",
+      "Alpine Skiing",
+      "Alpinism",
+      "Archery",
+      "Art Competitions"
+     ],
+     "top_values": [],
+     "description": "sport name. the name of the sport",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "sport_name": "Aeronautics"
+    },
+    {
+     "id": 2,
+     "sport_name": "Alpine Skiing"
+    },
+    {
+     "id": 3,
+     "sport_name": "Alpinism"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "competitor_event",
+   "from_column": "medal_id",
+   "to_table": "medal",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "competitor_event",
+   "from_column": "event_id",
+   "to_table": "event",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "competitor_event",
+   "from_column": "competitor_id",
+   "to_table": "games_competitor",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "event",
+   "from_column": "sport_id",
+   "to_table": "sport",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "games_city",
+   "from_column": "games_id",
+   "to_table": "games",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "games_city",
+   "from_column": "city_id",
+   "to_table": "city",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "games_competitor",
+   "from_column": "person_id",
+   "to_table": "person",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "games_competitor",
+   "from_column": "games_id",
+   "to_table": "games",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "person_region",
+   "from_column": "region_id",
+   "to_table": "noc_region",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "person_region",
+   "from_column": "person_id",
+   "to_table": "person",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

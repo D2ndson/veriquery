@@ -1,0 +1,6 @@
+services:
+  veriquery:
+    build: .
+    ports: ["8080:8080"]
+    env_file: .env
+    volumes: ["./data:/app/data", "./artifacts:/app/artifacts", "./results:/app/results"]

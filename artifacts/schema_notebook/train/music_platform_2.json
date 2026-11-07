@@ -1,0 +1,684 @@
+{
+ "db_id": "music_platform_2",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/music_platform_2/music_platform_2.sqlite",
+ "fingerprint": "1554345984-1793993050667933608-v1.0",
+ "created_at": "2026-11-06T19:25:08+00:00",
+ "profile_seconds": 6.437,
+ "tables": [
+  {
+   "name": "categories",
+   "row_count": 210329,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "podcast_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 102626,
+     "is_unique": false,
+     "min_value": "a00018b54eb342567c94dacfb2a3e504",
+     "max_value": "ffff923482740bc21a0fe184865ec2e2",
+     "examples": [
+      "c61aa81c9b929a66f0c1db6cbe5d8548",
+      "ad4f2bf69c72b8db75978423c25f379e",
+      "f2970432aad718a000ebac10e48ae6b0",
+      "f90b974d49b86b2d4d1769519fb478c0",
+      "d9122defb9898145688449f610c8943e"
+     ],
+     "top_values": [],
+     "description": "podcast id. The unique id of the podcast",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "category",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 110,
+     "is_unique": false,
+     "min_value": "arts",
+     "max_value": "tv-film-tv-reviews",
+     "examples": [
+      "arts",
+      "arts-performing-arts",
+      "music",
+      "arts-design",
+      "education"
+     ],
+     "top_values": [],
+     "description": "category of the podcast",
+     "value_description": "commonsense evidence: \nThis usually represents the topic of the podcast.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "podcast_id",
+    "category"
+   ],
+   "sample_rows": [
+    {
+     "podcast_id": "c61aa81c9b929a66f0c1db6cbe5d8548",
+     "category": "arts"
+    },
+    {
+     "podcast_id": "c61aa81c9b929a66f0c1db6cbe5d8548",
+     "category": "arts-performing-arts"
+    },
+    {
+     "podcast_id": "c61aa81c9b929a66f0c1db6cbe5d8548",
+     "category": "music"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 210,329 rows"
+   ]
+  },
+  {
+   "name": "podcasts",
+   "row_count": 108578,
+   "stats_rows": 108578,
+   "columns": [
+    {
+     "name": "podcast_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 108578,
+     "is_unique": true,
+     "min_value": "a00018b54eb342567c94dacfb2a3e504",
+     "max_value": "ffffbd44ec5f79d502f16ae372bf2d4f",
+     "examples": [
+      "a00018b54eb342567c94dacfb2a3e504",
+      "a00043d34e734b09246d17dc5d56f63c",
+      "a0004b1ef445af9dc84dad1e7821b1e3",
+      "a00071f9aaae9ac725c3a586701abf4d",
+      "a000aa69852b276565c4f5eb9cdd999b"
+     ],
+     "top_values": [],
+     "description": "podcast id. The unique id of the podcast",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "itunes_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 108578,
+     "is_unique": true,
+     "min_value": 73329271,
+     "max_value": 1643413534,
+     "examples": [
+      1313466221,
+      158973461,
+      139076942,
+      1332508972,
+      1342447811
+     ],
+     "top_values": [],
+     "description": "itunes id. The unique id of the itunes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "slug",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 107494,
+     "is_unique": false,
+     "min_value": "%C3%A7a-peut-vous-arriver",
+     "max_value": "zzzlist-radio",
+     "examples": [
+      "scaling-global",
+      "cornerstone-baptist-church-of-orlando",
+      "mystery-dancing-in-the-dark",
+      "kts-money-matters",
+      "speedway-soccer"
+     ],
+     "top_values": [],
+     "description": "The slug of the podcast.",
+     "value_description": "commonsense evidence: \nIt usually has the same name with the \"title\" column.",
+     "notes": []
+    },
+    {
+     "name": "itunes_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 108578,
+     "is_unique": true,
+     "min_value": "https://podcasts.apple.com/us/podcast/%C3%A7a-peut-vous-arri...",
+     "max_value": "https://podcasts.apple.com/us/podcast/zzzlist-radio/id290543...",
+     "examples": [
+      "https://podcasts.apple.com/us/podcast/scaling-global/id13134...",
+      "https://podcasts.apple.com/us/podcast/cornerstone-baptist-ch...",
+      "https://podcasts.apple.com/us/podcast/mystery-dancing-in-the...",
+      "https://podcasts.apple.com/us/podcast/kts-money-matters/id13...",
+      "https://podcasts.apple.com/us/podcast/speedway-soccer/id1342..."
+     ],
+     "top_values": [],
+     "description": "The iTunes url of the podcast.",
+     "value_description": "commonsense evidence: \nCan visit the webpage of the podcast by clicking the itunes_url.",
+     "notes": []
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 107845,
+     "is_unique": false,
+     "min_value": "! Weird Rap Podcast !",
+     "max_value": "𝑠𝑘𝑦 𝑜𝑓 𝑓𝑒𝑒𝑙𝑖𝑛𝑔𝑠 🧃",
+     "examples": [
+      "Scaling Global",
+      "Cornerstone Baptist Church of Orlando",
+      "Mystery: Dancing in the Dark",
+      "KTs Money Matters",
+      "Speedway Soccer"
+     ],
+     "top_values": [],
+     "description": "The title of the podcast.",
+     "value_description": "commonsense evidence: \nIt usually has a very similar name to the \"slug\" column.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "podcast_id"
+   ],
+   "sample_rows": [
+    {
+     "podcast_id": "a00018b54eb342567c94dacfb2a3e504",
+     "itunes_id": 1313466221,
+     "slug": "scaling-global",
+     "itunes_url": "https://podcasts.apple.com/us/podcast/scaling-global/id13134...",
+     "title": "Scaling Global"
+    },
+    {
+     "podcast_id": "a00043d34e734b09246d17dc5d56f63c",
+     "itunes_id": 158973461,
+     "slug": "cornerstone-baptist-church-of-orlando",
+     "itunes_url": "https://podcasts.apple.com/us/podcast/cornerstone-baptist-ch...",
+     "title": "Cornerstone Baptist Church of Orlando"
+    },
+    {
+     "podcast_id": "a0004b1ef445af9dc84dad1e7821b1e3",
+     "itunes_id": 139076942,
+     "slug": "mystery-dancing-in-the-dark",
+     "itunes_url": "https://podcasts.apple.com/us/podcast/mystery-dancing-in-the...",
+     "title": "Mystery: Dancing in the Dark"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "reviews",
+   "row_count": 1964856,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "podcast_id",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8587,
+     "is_unique": false,
+     "min_value": "a00071f9aaae9ac725c3a586701abf4d",
+     "max_value": "ffff923482740bc21a0fe184865ec2e2",
+     "examples": [
+      "c61aa81c9b929a66f0c1db6cbe5d8548",
+      "ad4f2bf69c72b8db75978423c25f379e",
+      "f2970432aad718a000ebac10e48ae6b0"
+     ],
+     "top_values": [],
+     "description": "podcast id. The unique id of the podcast",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 134599,
+     "is_unique": false,
+     "min_value": "!",
+     "max_value": "🧡",
+     "examples": [
+      "really interesting!",
+      "Must listen for anyone interested in the arts!!!",
+      "nauseatingly left",
+      "Diverse stories",
+      "👍👍👍👍"
+     ],
+     "top_values": [],
+     "description": "The title of the podcast review.",
+     "value_description": "commonsense evidence: \nThis usually is the abstract of the whole review.",
+     "notes": []
+    },
+    {
+     "name": "content",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 199199,
+     "is_unique": false,
+     "min_value": "!!!!!!!!!!!!!!!!!!!!",
+     "max_value": "🦋💕😘😎😋😋😎😴🦋🦋😉😋💕💕🦋😋😎😴❤️🦄🦄😘😋🌭🌭 love you guys keep it up!",
+     "examples": [
+      "Thanks for providing these insights.  Really enjoy the varie...",
+      "Super excited to see this podcast grow. So many fun topics t...",
+      "I'm a liberal myself, but its pretty obvious and annoying th...",
+      "I find Tedx talks very inspirational but I often don’t have ...",
+      "I love this podcast, it is so good."
+     ],
+     "top_values": [],
+     "description": "The content of the podcast review.",
+     "value_description": "commonsense evidence: \nThis usually is the detailed explanation of the podcast review title.",
+     "notes": []
+    },
+    {
+     "name": "rating",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 5,
+     "examples": [
+      5,
+      1,
+      3,
+      4,
+      2
+     ],
+     "top_values": [
+      [
+       5,
+       180077
+      ],
+      [
+       4,
+       6514
+      ],
+      [
+       1,
+       6341
+      ],
+      [
+       3,
+       3790
+      ],
+      [
+       2,
+       3278
+      ]
+     ],
+     "description": "The rating of the podcast review.",
+     "value_description": "commonsense evidence: \nAllowed values: 0 to 5. \nThis rating is highly related with \"title\" and \"content\".",
+     "notes": []
+    },
+    {
+     "name": "author_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 174410,
+     "is_unique": false,
+     "min_value": "00003B32F81A5B4",
+     "max_value": "FFFFF155B5F1FF2",
+     "examples": [
+      "F7E5A318989779D",
+      "F6BF5472689BD12",
+      "1AB95B8E6E1309E",
+      "11BB760AA5DEBD1",
+      "D86032C8E57D15A"
+     ],
+     "top_values": [],
+     "description": "The author id of the podcast review.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "created_at",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 199735,
+     "is_unique": false,
+     "min_value": "2005-12-10T09:19:30-07:00",
+     "max_value": "2019-07-12T03:38:00-07:00",
+     "examples": [
+      "2018-04-24T12:05:16-07:00",
+      "2018-05-09T18:14:32-07:00",
+      "2019-06-11T14:53:39-07:00",
+      "2018-05-31T13:08:09-07:00",
+      "2019-06-19T13:56:05-07:00"
+     ],
+     "top_values": [],
+     "description": "created at. The date and time of the podcast review creation",
+     "value_description": "In the format of \"Date time\". e.g., 2018-05-09T18:14:32-07:00",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "podcast_id": "c61aa81c9b929a66f0c1db6cbe5d8548",
+     "title": "really interesting!",
+     "content": "Thanks for providing these insights.  Really enjoy the varie...",
+     "rating": 5,
+     "author_id": "F7E5A318989779D",
+     "created_at": "2018-04-24T12:05:16-07:00"
+    },
+    {
+     "podcast_id": "c61aa81c9b929a66f0c1db6cbe5d8548",
+     "title": "Must listen for anyone interested in the arts!!!",
+     "content": "Super excited to see this podcast grow. So many fun topics t...",
+     "rating": 5,
+     "author_id": "F6BF5472689BD12",
+     "created_at": "2018-05-09T18:14:32-07:00"
+    },
+    {
+     "podcast_id": "ad4f2bf69c72b8db75978423c25f379e",
+     "title": "nauseatingly left",
+     "content": "I'm a liberal myself, but its pretty obvious and annoying th...",
+     "rating": 1,
+     "author_id": "1AB95B8E6E1309E",
+     "created_at": "2019-06-11T14:53:39-07:00"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 1,964,856 rows",
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "runs",
+   "row_count": 12,
+   "stats_rows": 12,
+   "columns": [
+    {
+     "name": "run_at",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": true,
+     "min_value": "2021-05-10 02:53:00",
+     "max_value": "2022-09-07 15:28:17",
+     "examples": [
+      "2021-05-10 02:53:00",
+      "2021-06-06 21:34:36",
+      "2021-07-02 18:04:55",
+      "2021-08-01 17:54:42",
+      "2021-09-02 18:00:30"
+     ],
+     "top_values": [
+      [
+       "2022-09-07 15:28:17",
+       1
+      ],
+      [
+       "2022-08-13 20:45:24",
+       1
+      ],
+      [
+       "2022-07-03 19:50:22",
+       1
+      ],
+      [
+       "2022-06-22 19:44:32",
+       1
+      ],
+      [
+       "2022-06-05 16:15:16",
+       1
+      ],
+      [
+       "2022-04-20 01:03:30",
+       1
+      ],
+      [
+       "2021-10-11 05:18:23",
+       1
+      ],
+      [
+       "2021-09-02 18:00:30",
+       1
+      ],
+      [
+       "2021-08-01 17:54:42",
+       1
+      ],
+      [
+       "2021-07-02 18:04:55",
+       1
+      ],
+      [
+       "2021-06-06 21:34:36",
+       1
+      ],
+      [
+       "2021-05-10 02:53:00",
+       1
+      ]
+     ],
+     "description": "run at. The date and time of the podcast review creation",
+     "value_description": "",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "max_rowid",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": 3266481,
+     "max_value": 5319820,
+     "examples": [
+      3266481,
+      3300773,
+      3329699,
+      3360315,
+      3390165
+     ],
+     "top_values": [
+      [
+       3855531,
+       2
+      ],
+      [
+       5319820,
+       1
+      ],
+      [
+       5277014,
+       1
+      ],
+      [
+       5149673,
+       1
+      ],
+      [
+       4479220,
+       1
+      ],
+      [
+       3428923,
+       1
+      ],
+      [
+       3390165,
+       1
+      ],
+      [
+       3360315,
+       1
+      ],
+      [
+       3329699,
+       1
+      ],
+      [
+       3300773,
+       1
+      ],
+      [
+       3266481,
+       1
+      ]
+     ],
+     "description": "max row id. The id of max row of this run",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "reviews_added",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": true,
+     "min_value": 0,
+     "max_value": 1215223,
+     "examples": [
+      1215223,
+      13139,
+      11561,
+      11855,
+      11714
+     ],
+     "top_values": [
+      [
+       1215223,
+       1
+      ],
+      [
+       559523,
+       1
+      ],
+      [
+       43525,
+       1
+      ],
+      [
+       36589,
+       1
+      ],
+      [
+       29146,
+       1
+      ],
+      [
+       16845,
+       1
+      ],
+      [
+       15736,
+       1
+      ],
+      [
+       13139,
+       1
+      ],
+      [
+       11855,
+       1
+      ],
+      [
+       11714,
+       1
+      ],
+      [
+       11561,
+       1
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "description": "The number of reviews added in this run.",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "run_at": "2021-05-10 02:53:00",
+     "max_rowid": 3266481,
+     "reviews_added": 1215223
+    },
+    {
+     "run_at": "2021-06-06 21:34:36",
+     "max_rowid": 3300773,
+     "reviews_added": 13139
+    },
+    {
+     "run_at": "2021-07-02 18:04:55",
+     "max_rowid": 3329699,
+     "reviews_added": 11561
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "categories",
+   "from_column": "podcast_id",
+   "to_table": "podcasts",
+   "to_column": "podcast_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "reviews",
+   "from_column": "podcast_id",
+   "to_table": "podcasts",
+   "to_column": "podcast_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "reviews",
+   "from_column": "podcast_id",
+   "to_table": "categories",
+   "to_column": "podcast_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.973
+  }
+ ],
+ "notes": []
+}

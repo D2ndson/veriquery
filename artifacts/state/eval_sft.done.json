@@ -1,0 +1,19 @@
+{
+ "stage": "eval_sft",
+ "seconds": 670.2,
+ "finished": "2026-11-06 20:46:36",
+ "info": {
+  "once": {
+   "accuracy": 0.5130784708249497,
+   "n": 497
+  },
+  "final": {
+   "accuracy": 0.5959595959595959,
+   "n": 99
+  },
+  "shop": {
+   "accuracy": 0.6,
+   "n": 40
+  }
+ }
+}

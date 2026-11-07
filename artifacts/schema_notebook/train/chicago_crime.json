@@ -1,0 +1,5154 @@
+{
+ "db_id": "chicago_crime",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/chicago_crime/chicago_crime.sqlite",
+ "fingerprint": "66723840-1793993058492091660-v1.0",
+ "created_at": "2026-11-06T19:24:50+00:00",
+ "profile_seconds": 1.838,
+ "tables": [
+  {
+   "name": "Community_Area",
+   "row_count": 77,
+   "stats_rows": 77,
+   "columns": [
+    {
+     "name": "community_area_no",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 77,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique community area number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "community_area_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": true,
+     "min_value": "Albany Park",
+     "max_value": "Woodlawn",
+     "examples": [
+      "Rogers Park",
+      "West Ridge",
+      "Uptown",
+      "Lincoln Square",
+      "North Center"
+     ],
+     "top_values": [],
+     "description": "community area name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "side",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": "Central",
+     "max_value": "West ",
+     "examples": [
+      "Far North ",
+      "North ",
+      "Central",
+      "Northwest ",
+      "West "
+     ],
+     "top_values": [
+      [
+       "Southwest ",
+       12
+      ],
+      [
+       "South ",
+       12
+      ],
+      [
+       "Far Southeast ",
+       12
+      ],
+      [
+       "Far North ",
+       12
+      ],
+      [
+       "West ",
+       9
+      ],
+      [
+       "Northwest ",
+       6
+      ],
+      [
+       "Far Southwest ",
+       6
+      ],
+      [
+       "North ",
+       5
+      ],
+      [
+       "Central",
+       3
+      ]
+     ],
+     "description": "district",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "population",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": true,
+     "min_value": "10,185",
+     "max_value": "98,514",
+     "examples": [
+      "54,991",
+      "71,942",
+      "56,362",
+      "39,493",
+      "31,867"
+     ],
+     "top_values": [],
+     "description": "population of the community",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "community_area_no"
+   ],
+   "sample_rows": [
+    {
+     "community_area_no": 1,
+     "community_area_name": "Rogers Park",
+     "side": "Far North ",
+     "population": "54,991"
+    },
+    {
+     "community_area_no": 2,
+     "community_area_name": "West Ridge",
+     "side": "Far North ",
+     "population": "71,942"
+    },
+    {
+     "community_area_no": 3,
+     "community_area_name": "Uptown",
+     "side": "Far North ",
+     "population": "56,362"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Crime",
+   "row_count": 268002,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "report_no",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 23757,
+     "max_value": 11464882,
+     "examples": [
+      23757,
+      23758,
+      23759,
+      23761,
+      23762
+     ],
+     "top_values": [],
+     "description": "report number. unique Numeric identifier of the crime report",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "case_number",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 199975,
+     "is_unique": false,
+     "min_value": ".JB299184",
+     "max_value": "XX357758",
+     "examples": [
+      "JB100159",
+      "JB100522",
+      "JB100839",
+      "JB101043",
+      "JB105277"
+     ],
+     "top_values": [],
+     "description": "Case number assigned to the reported crime.",
+     "value_description": "commonsense evidence: \n\nThere is usually one case number for any reported crime except in the case of multiple homicide where a single report will produce one case number for each victim\n\nif case_number appears > 1, it means this is a multiple homicide",
+     "notes": []
+    },
+    {
+     "name": "date",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 92501,
+     "is_unique": false,
+     "min_value": "1/1/2018 0:00",
+     "max_value": "9/9/2018 9:45",
+     "examples": [
+      "1/1/2018 2:46",
+      "1/1/2018 11:33",
+      "1/1/2018 18:27",
+      "1/1/2018 22:40",
+      "1/6/2018 12:54"
+     ],
+     "top_values": [],
+     "description": "Date of the occurrence of the incident being reported",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "block",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 26324,
+     "is_unique": false,
+     "min_value": "0000X E 100TH PL",
+     "max_value": "137XX S LEYDEN AVE",
+     "examples": [
+      "039XX W CORNELIA AVE",
+      "026XX N HAMPDEN CT",
+      "047XX S PRINCETON AVE",
+      "081XX S STONY ISLAND AVE",
+      "015XX E 62ND ST"
+     ],
+     "top_values": [],
+     "description": "A redacted address indicating in which city block the incident occurred",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "iucr_no",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 313,
+     "is_unique": false,
+     "min_value": "031A",
+     "max_value": "937",
+     "examples": [
+      "110"
+     ],
+     "top_values": [],
+     "description": "Illinois Uniform Crime Reporting number. Illinois Uniform Crime Reporting code: a four digit code used to classify criminal incidents when taking reports",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "location_description",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0023,
+     "distinct_count": 143,
+     "is_unique": false,
+     "min_value": "ABANDONED BUILDING",
+     "max_value": "YMCA",
+     "examples": [
+      "AUTO",
+      "APARTMENT",
+      "ALLEY",
+      "STREET",
+      "PARKING LOT"
+     ],
+     "top_values": [],
+     "description": "location description. A description of the kind of area where incident occurred",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "arrest",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "TRUE",
+     "examples": [
+      "FALSE",
+      "TRUE"
+     ],
+     "top_values": [
+      [
+       "FALSE",
+       159295
+      ],
+      [
+       "TRUE",
+       40705
+      ]
+     ],
+     "description": "A true/false value indicating if an arrest has been made",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "domestic",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "TRUE",
+     "examples": [
+      "FALSE",
+      "TRUE"
+     ],
+     "top_values": [
+      [
+       "FALSE",
+       166918
+      ],
+      [
+       "TRUE",
+       33082
+      ]
+     ],
+     "description": "A true/false value indicating if the incident is as case of domestic violence",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "beat",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 274,
+     "is_unique": false,
+     "min_value": 111,
+     "max_value": 2535,
+     "examples": [
+      1732,
+      1935,
+      935,
+      411,
+      314
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "district_no",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 23,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 31,
+     "examples": [
+      17,
+      19,
+      9,
+      4,
+      3
+     ],
+     "top_values": [
+      [
+       11,
+       14398
+      ],
+      [
+       8,
+       12240
+      ],
+      [
+       6,
+       12220
+      ],
+      [
+       18,
+       12025
+      ],
+      [
+       1,
+       11792
+      ],
+      [
+       7,
+       10870
+      ],
+      [
+       4,
+       10589
+      ],
+      [
+       25,
+       9985
+      ],
+      [
+       12,
+       9647
+      ],
+      [
+       10,
+       9354
+      ],
+      [
+       3,
+       9176
+      ],
+      [
+       5,
+       9061
+      ],
+      [
+       19,
+       9051
+      ],
+      [
+       2,
+       8923
+      ],
+      [
+       9,
+       8337
+      ],
+      [
+       15,
+       7646
+      ],
+      [
+       14,
+       6731
+      ],
+      [
+       22,
+       6468
+      ],
+      [
+       16,
+       6465
+      ],
+      [
+       24,
+       5740
+      ],
+      [
+       17,
+       5665
+      ],
+      [
+       20,
+       3612
+      ],
+      [
+       31,
+       5
+      ]
+     ],
+     "description": "district number. A number indicating the geographic subdivision of the police district where the incident occurred",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ward_no",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 50,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 50,
+     "examples": [
+      30,
+      43,
+      3,
+      8,
+      5
+     ],
+     "top_values": [
+      [
+       42,
+       13882
+      ],
+      [
+       24,
+       9714
+      ],
+      [
+       28,
+       8817
+      ],
+      [
+       2,
+       8503
+      ],
+      [
+       27,
+       7928
+      ],
+      [
+       17,
+       6650
+      ],
+      [
+       6,
+       6532
+      ],
+      [
+       21,
+       6184
+      ],
+      [
+       20,
+       5769
+      ],
+      [
+       9,
+       5408
+      ],
+      [
+       34,
+       5263
+      ],
+      [
+       3,
+       5183
+      ],
+      [
+       8,
+       5075
+      ],
+      [
+       7,
+       5048
+      ],
+      [
+       16,
+       4866
+      ],
+      [
+       37,
+       4831
+      ],
+      [
+       5,
+       4760
+      ],
+      [
+       15,
+       4697
+      ],
+      [
+       29,
+       4153
+      ],
+      [
+       4,
+       3844
+      ],
+      [
+       1,
+       3507
+      ],
+      [
+       43,
+       3230
+      ],
+      [
+       44,
+       3205
+      ],
+      [
+       32,
+       3173
+      ],
+      [
+       10,
+       3137
+      ],
+      [
+       18,
+       3105
+      ],
+      [
+       49,
+       2681
+      ],
+      [
+       25,
+       2632
+      ],
+      [
+       26,
+       2625
+      ],
+      [
+       23,
+       2482
+      ],
+      [
+       46,
+       2413
+      ],
+      [
+       22,
+       2402
+      ],
+      [
+       31,
+       2396
+      ],
+      [
+       35,
+       2376
+      ],
+      [
+       11,
+       2365
+      ],
+      [
+       14,
+       2327
+      ],
+      [
+       13,
+       2315
+      ],
+      [
+       30,
+       2297
+      ],
+      [
+       12,
+       2284
+      ],
+      [
+       41,
+       2218
+      ],
+      [
+       40,
+       2167
+      ],
+      [
+       48,
+       2093
+      ],
+      [
+       50,
+       2084
+      ],
+      [
+       45,
+       2026
+      ],
+      [
+       38,
+       2009
+      ],
+      [
+       33,
+       1987
+      ],
+      [
+       47,
+       1938
+      ],
+      [
+       36,
+       1872
+      ],
+      [
+       39,
+       1854
+      ],
+      [
+       19,
+       1691
+      ]
+     ],
+     "description": "ward number. A two digit number identifying the legislative district (ward) where the incident occurred",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "community_area_no",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 77,
+     "examples": [
+      21,
+      7,
+      37,
+      45,
+      42
+     ],
+     "top_values": [],
+     "description": "community area number. A number identifying one of 77 geographic areas where the incident occurred",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "fbi_code_no",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 26,
+     "is_unique": false,
+     "min_value": "01A",
+     "max_value": "9",
+     "examples": [
+      "01A"
+     ],
+     "top_values": [
+      [
+       "6",
+       48275
+      ],
+      [
+       "08B",
+       32147
+      ],
+      [
+       "14",
+       21074
+      ],
+      [
+       "26",
+       18554
+      ],
+      [
+       "11",
+       12175
+      ],
+      [
+       "08A",
+       11071
+      ],
+      [
+       "18",
+       10039
+      ],
+      [
+       "5",
+       8818
+      ],
+      [
+       "7",
+       7407
+      ],
+      [
+       "3",
+       7237
+      ],
+      [
+       "04B",
+       5942
+      ],
+      [
+       "04A",
+       4595
+      ],
+      [
+       "15",
+       4273
+      ],
+      [
+       "24",
+       1783
+      ],
+      [
+       "20",
+       1330
+      ],
+      [
+       "2",
+       1253
+      ],
+      [
+       "10",
+       1092
+      ],
+      [
+       "17",
+       1025
+      ],
+      [
+       "01A",
+       588
+      ],
+      [
+       "16",
+       545
+      ],
+      [
+       "9",
+       278
+      ],
+      [
+       "22",
+       214
+      ],
+      [
+       "19",
+       181
+      ],
+      [
+       "13",
+       77
+      ],
+      [
+       "12",
+       16
+      ],
+      [
+       "01B",
+       11
+      ]
+     ],
+     "description": "fbi code number. A code identifying the type of crime reported according to the classification scheme used by the FBI",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "latitude",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0048,
+     "distinct_count": 103324,
+     "is_unique": false,
+     "min_value": "41.64460043",
+     "max_value": "42.02267125",
+     "examples": [
+      "41.94456125",
+      "41.92972657",
+      "41.808168",
+      "41.74698404",
+      "41.78289015"
+     ],
+     "top_values": [],
+     "description": "The latitude where incident is reported to have occurred.",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "longitude",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0048,
+     "distinct_count": 103210,
+     "is_unique": false,
+     "min_value": "-87.52452938",
+     "max_value": "-87.93427269",
+     "examples": [
+      "-87.72668181",
+      "-87.64092074",
+      "-87.63333646",
+      "-87.5854287",
+      "-87.58877343"
+     ],
+     "top_values": [],
+     "description": "The longitude where incident is reported to have occurred.",
+     "value_description": "commonsense evidence: \n\nThe precise location / coordinate: combines the longitude and latitude for plotting purposes. (latitude, longitude)",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    }
+   ],
+   "primary_key": [
+    "report_no"
+   ],
+   "sample_rows": [
+    {
+     "report_no": 23757,
+     "case_number": "JB100159",
+     "date": "1/1/2018 2:46",
+     "block": "039XX W CORNELIA AVE",
+     "iucr_no": "110",
+     "location_description": "AUTO",
+     "arrest": "FALSE",
+     "domestic": "FALSE",
+     "beat": 1732,
+     "district_no": 17,
+     "ward_no": 30,
+     "community_area_no": 21,
+     "fbi_code_no": "01A",
+     "latitude": "41.94456125",
+     "longitude": "-87.72668181"
+    },
+    {
+     "report_no": 23758,
+     "case_number": "JB100522",
+     "date": "1/1/2018 11:33",
+     "block": "026XX N HAMPDEN CT",
+     "iucr_no": "110",
+     "location_description": "APARTMENT",
+     "arrest": "FALSE",
+     "domestic": "FALSE",
+     "beat": 1935,
+     "district_no": 19,
+     "ward_no": 43,
+     "community_area_no": 7,
+     "fbi_code_no": "01A",
+     "latitude": "41.92972657",
+     "longitude": "-87.64092074"
+    },
+    {
+     "report_no": 23759,
+     "case_number": "JB100839",
+     "date": "1/1/2018 18:27",
+     "block": "047XX S PRINCETON AVE",
+     "iucr_no": "110",
+     "location_description": "AUTO",
+     "arrest": "FALSE",
+     "domestic": "FALSE",
+     "beat": 935,
+     "district_no": 9,
+     "ward_no": 3,
+     "community_area_no": 37,
+     "fbi_code_no": "01A",
+     "latitude": "41.808168",
+     "longitude": "-87.63333646"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 268,002 rows"
+   ]
+  },
+  {
+   "name": "District",
+   "row_count": 22,
+   "stats_rows": 22,
+   "columns": [
+    {
+     "name": "district_no",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 25,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "district number. unique number identifying the district",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "district_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": true,
+     "min_value": "Albany Park",
+     "max_value": "Wentworth",
+     "examples": [
+      "Central",
+      "Wentworth",
+      "Grand Crossing",
+      "South Chicago",
+      "Calumet"
+     ],
+     "top_values": [
+      [
+       "Wentworth",
+       1
+      ],
+      [
+       "Town Hall",
+       1
+      ],
+      [
+       "South Chicago",
+       1
+      ],
+      [
+       "Shakespeare",
+       1
+      ],
+      [
+       "Rogers Park",
+       1
+      ],
+      [
+       "Ogden",
+       1
+      ],
+      [
+       "Near West",
+       1
+      ],
+      [
+       "Near North",
+       1
+      ],
+      [
+       "Morgan Park",
+       1
+      ],
+      [
+       "Lincoln",
+       1
+      ],
+      [
+       "Jefferson Park",
+       1
+      ],
+      [
+       "Harrison",
+       1
+      ],
+      [
+       "Gresham",
+       1
+      ],
+      [
+       "Grand Crossing",
+       1
+      ],
+      [
+       "Grand Central",
+       1
+      ],
+      [
+       "Englewood",
+       1
+      ],
+      [
+       "Deering",
+       1
+      ],
+      [
+       "Chicago Lawn",
+       1
+      ],
+      [
+       "Central",
+       1
+      ],
+      [
+       "Calumet",
+       1
+      ],
+      [
+       "Austin",
+       1
+      ],
+      [
+       "Albany Park",
+       1
+      ]
+     ],
+     "description": "district name. name of the district",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "address",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": true,
+     "min_value": "1160 North Larrabee Ave",
+     "max_value": "850 West Addison St.",
+     "examples": [
+      "1718 South State Street",
+      "5101 South Wentworh Avenue",
+      "7040 South Cottage Grove Ave",
+      "2255 East 103rd St",
+      "727 East 111th St"
+     ],
+     "top_values": [
+      [
+       "850 West Addison St.",
+       1
+      ],
+      [
+       "7808 South Halsted Street",
+       1
+      ],
+      [
+       "727 East 111th St",
+       1
+      ],
+      [
+       "7040 South Cottage Grove Ave",
+       1
+      ],
+      [
+       "6464 North Clark St",
+       1
+      ],
+      [
+       "5701 West Madison Ave",
+       1
+      ],
+      [
+       "5555 West Grand Ave",
+       1
+      ],
+      [
+       "5400 North Lincoln Avenue",
+       1
+      ],
+      [
+       "5151 North Milwaukee Ave",
+       1
+      ],
+      [
+       "5101 South Wentworh Avenue",
+       1
+      ],
+      [
+       "4650 North Pulaski Rd",
+       1
+      ],
+      [
+       "3420 West 63rd St",
+       1
+      ],
+      [
+       "3315 West Ogden Avenue",
+       1
+      ],
+      [
+       "3151 West Harrison St",
+       1
+      ],
+      [
+       "3120 S. Halsted St.",
+       1
+      ],
+      [
+       "2255 East 103rd St",
+       1
+      ],
+      [
+       "2150 North California Ave",
+       1
+      ],
+      [
+       "1900 West Monterey Ave",
+       1
+      ],
+      [
+       "1718 South State Street",
+       1
+      ],
+      [
+       "1438 W. 63rd Street",
+       1
+      ],
+      [
+       "1412 S. Blue Island",
+       1
+      ],
+      [
+       "1160 North Larrabee Ave",
+       1
+      ]
+     ],
+     "description": "Street address of the police district building",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "zip_code",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": 60608,
+     "max_value": 60647,
+     "examples": [
+      60616,
+      60609,
+      60637,
+      60617,
+      60628
+     ],
+     "top_values": [
+      [
+       60630,
+       2
+      ],
+      [
+       60608,
+       2
+      ],
+      [
+       60647,
+       1
+      ],
+      [
+       60644,
+       1
+      ],
+      [
+       60643,
+       1
+      ],
+      [
+       60639,
+       1
+      ],
+      [
+       60637,
+       1
+      ],
+      [
+       60636,
+       1
+      ],
+      [
+       60629,
+       1
+      ],
+      [
+       60628,
+       1
+      ],
+      [
+       60626,
+       1
+      ],
+      [
+       60625,
+       1
+      ],
+      [
+       60623,
+       1
+      ],
+      [
+       60620,
+       1
+      ],
+      [
+       60617,
+       1
+      ],
+      [
+       60616,
+       1
+      ],
+      [
+       60613,
+       1
+      ],
+      [
+       60612,
+       1
+      ],
+      [
+       60610,
+       1
+      ],
+      [
+       60609,
+       1
+      ]
+     ],
+     "description": "ZIP code of the police district building",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "commander",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": true,
+     "min_value": "Adnardo Gutierrez",
+     "max_value": "Yolanda Talley",
+     "examples": [
+      "Jake M. Alderden",
+      "Joshua Wallace",
+      "Eve T. Quarterman",
+      "Robert A. Rubio",
+      "Glenn White"
+     ],
+     "top_values": [
+      [
+       "Yolanda Talley",
+       1
+      ],
+      [
+       "Stephen C. Chung",
+       1
+      ],
+      [
+       "Sean Joyce",
+       1
+      ],
+      [
+       "Ronald A. Pontecore Jr.",
+       1
+      ],
+      [
+       "Robert A. Rubio",
+       1
+      ],
+      [
+       "Rahman S. Muhammad",
+       1
+      ],
+      [
+       "Michelle A. Rubino",
+       1
+      ],
+      [
+       "Melvin Roman",
+       1
+      ],
+      [
+       "Maureen C. Biggane",
+       1
+      ],
+      [
+       "Larry Snelling",
+       1
+      ],
+      [
+       "Joshua Wallace",
+       1
+      ],
+      [
+       "Jill M. Stevens",
+       1
+      ],
+      [
+       "Jake M. Alderden",
+       1
+      ],
+      [
+       "Glenn White",
+       1
+      ],
+      [
+       "Gilberto Calderon",
+       1
+      ],
+      [
+       "Eve T. Quarterman",
+       1
+      ],
+      [
+       "Don J. Jerome",
+       1
+      ],
+      [
+       "Darrell F. Spencer",
+       1
+      ],
+      [
+       "Chris Papaioannou",
+       1
+      ],
+      [
+       "Brian P. McDermott",
+       1
+      ],
+      [
+       "Brendan McCrudden",
+       1
+      ],
+      [
+       "Adnardo Gutierrez",
+       1
+      ]
+     ],
+     "description": "Name of the district's commanding officer",
+     "value_description": "commonsense evidence:\n\nthe person who should be responsible for the crime case.",
+     "notes": []
+    },
+    {
+     "name": "email",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": true,
+     "min_value": " CAPS.011District@chicagopolice.org",
+     "max_value": " caps.009district@chicagopolice.org",
+     "examples": [
+      " CAPS001District@chicagopolice.org",
+      " CAPS002District@chicagopolice.org",
+      " CAPS003District@chicagopolice.org",
+      " caps.004district@chicagopolice.org",
+      " CAPS005District@chicagopolice.org"
+     ],
+     "top_values": [
+      [
+       " caps.009district@chicagopolice.org",
+       1
+      ],
+      [
+       " caps.004district@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS025District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS022District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS020District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS019District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS018District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS016District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS015District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS012District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS010District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS008District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS007District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS006District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS005District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS003District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS002District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS001District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS.024District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS.017District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS.014District@chicagopolice.org",
+       1
+      ],
+      [
+       " CAPS.011District@chicagopolice.org",
+       1
+      ]
+     ],
+     "description": "Email address to contact district administrators",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "phone",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": true,
+     "min_value": "312-742-4410",
+     "max_value": "312-747-8730",
+     "examples": [
+      "312-745-4290",
+      "312-747-8366",
+      "312-747-8201",
+      "312-747-8205",
+      "312-747-8210"
+     ],
+     "top_values": [
+      [
+       "312-747-8730",
+       1
+      ],
+      [
+       "312-747-8366",
+       1
+      ],
+      [
+       "312-747-8227",
+       1
+      ],
+      [
+       "312-747-8220",
+       1
+      ],
+      [
+       "312-747-8210",
+       1
+      ],
+      [
+       "312-747-8205",
+       1
+      ],
+      [
+       "312-747-8201",
+       1
+      ],
+      [
+       "312-747-7511",
+       1
+      ],
+      [
+       "312-746-8605",
+       1
+      ],
+      [
+       "312-746-8396",
+       1
+      ],
+      [
+       "312-746-8386",
+       1
+      ],
+      [
+       "312-745-4290",
+       1
+      ],
+      [
+       "312-745-3610",
+       1
+      ],
+      [
+       "312-745-0570",
+       1
+      ],
+      [
+       "312-744-8320",
+       1
+      ],
+      [
+       "312-744-8290",
+       1
+      ],
+      [
+       "312-744-5907",
+       1
+      ],
+      [
+       "312-743-1440",
+       1
+      ],
+      [
+       "312-742-8714",
+       1
+      ],
+      [
+       "312-742-5870",
+       1
+      ],
+      [
+       "312-742-4480",
+       1
+      ],
+      [
+       "312-742-4410",
+       1
+      ]
+     ],
+     "description": "Main telephone number for the district",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "fax",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": true,
+     "min_value": "312-742-4421",
+     "max_value": "312-747-8545",
+     "examples": [
+      "312-745-3694",
+      "312-747-5396",
+      "312-747-5479",
+      "312-747-4559",
+      "312-747-5935"
+     ],
+     "top_values": [
+      [
+       "312-747-8545",
+       1
+      ],
+      [
+       "312-747-7429",
+       1
+      ],
+      [
+       "312-747-6558",
+       1
+      ],
+      [
+       "312-747-5935",
+       1
+      ],
+      [
+       "312-747-5479",
+       1
+      ],
+      [
+       "312-747-5396",
+       1
+      ],
+      [
+       "312-747-5329",
+       1
+      ],
+      [
+       "312-747-4559",
+       1
+      ],
+      [
+       "312-746-9480",
+       1
+      ],
+      [
+       "312-746-4353",
+       1
+      ],
+      [
+       "312-746-4281",
+       1
+      ],
+      [
+       "312-745-3694",
+       1
+      ],
+      [
+       "312-745-3649",
+       1
+      ],
+      [
+       "312-745-0814",
+       1
+      ],
+      [
+       "312-744-6928",
+       1
+      ],
+      [
+       "312-744-4481",
+       1
+      ],
+      [
+       "312-744-2422",
+       1
+      ],
+      [
+       "312-743-1366",
+       1
+      ],
+      [
+       "312-742-8803",
+       1
+      ],
+      [
+       "312-742-5771",
+       1
+      ],
+      [
+       "312-742-5411",
+       1
+      ],
+      [
+       "312-742-4421",
+       1
+      ]
+     ],
+     "description": "Fax number for the district",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "tty",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0455,
+     "distinct_count": 21,
+     "is_unique": true,
+     "min_value": "312-742-4423",
+     "max_value": "312-747-9172",
+     "examples": [
+      "312-745-3693",
+      "312-747-6656",
+      "312-747-9168",
+      "312-747-9169",
+      "312-747-9170"
+     ],
+     "top_values": [
+      [
+       "312-747-9172",
+       1
+      ],
+      [
+       "312-747-9170",
+       1
+      ],
+      [
+       "312-747-9169",
+       1
+      ],
+      [
+       "312-747-9168",
+       1
+      ],
+      [
+       "312-747-8116",
+       1
+      ],
+      [
+       "312-747-7471",
+       1
+      ],
+      [
+       "312-747-6656",
+       1
+      ],
+      [
+       "312-747-6652",
+       1
+      ],
+      [
+       "312-746-9868",
+       1
+      ],
+      [
+       "312-746-8383",
+       1
+      ],
+      [
+       "312-746-5151",
+       1
+      ],
+      [
+       "312-745-3693",
+       1
+      ],
+      [
+       "312-745-3639",
+       1
+      ],
+      [
+       "312-745-0569",
+       1
+      ],
+      [
+       "312-744-8011",
+       1
+      ],
+      [
+       "312-744-7603",
+       1
+      ],
+      [
+       "312-743-1485",
+       1
+      ],
+      [
+       "312-742-8841",
+       1
+      ],
+      [
+       "312-742-5773",
+       1
+      ],
+      [
+       "312-742-5451",
+       1
+      ],
+      [
+       "312-742-4423",
+       1
+      ]
+     ],
+     "description": "Number of the district teletype machine.",
+     "value_description": "A teletype machine is a device that lets people who are deaf, hard of hearing, or speech-impaired use the telephone to communicate, by allowing them to type text messages.",
+     "notes": []
+    },
+    {
+     "name": "twitter",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": true,
+     "min_value": " ChicagoCAPS01",
+     "max_value": " ChicagoCAPS25",
+     "examples": [
+      " ChicagoCAPS01",
+      " ChicagoCAPS02",
+      " ChicagoCAPS03",
+      " ChicagoCAPS04",
+      " ChicagoCAPS05"
+     ],
+     "top_values": [
+      [
+       " ChicagoCAPS25",
+       1
+      ],
+      [
+       " ChicagoCAPS24",
+       1
+      ],
+      [
+       " ChicagoCAPS22",
+       1
+      ],
+      [
+       " ChicagoCAPS20",
+       1
+      ],
+      [
+       " ChicagoCAPS19",
+       1
+      ],
+      [
+       " ChicagoCAPS18",
+       1
+      ],
+      [
+       " ChicagoCAPS17",
+       1
+      ],
+      [
+       " ChicagoCAPS16",
+       1
+      ],
+      [
+       " ChicagoCAPS15",
+       1
+      ],
+      [
+       " ChicagoCAPS14",
+       1
+      ],
+      [
+       " ChicagoCAPS12",
+       1
+      ],
+      [
+       " ChicagoCAPS11",
+       1
+      ],
+      [
+       " ChicagoCAPS10",
+       1
+      ],
+      [
+       " ChicagoCAPS09",
+       1
+      ],
+      [
+       " ChicagoCAPS08",
+       1
+      ],
+      [
+       " ChicagoCAPS07",
+       1
+      ],
+      [
+       " ChicagoCAPS06",
+       1
+      ],
+      [
+       " ChicagoCAPS05",
+       1
+      ],
+      [
+       " ChicagoCAPS04",
+       1
+      ],
+      [
+       " ChicagoCAPS03",
+       1
+      ],
+      [
+       " ChicagoCAPS02",
+       1
+      ],
+      [
+       " ChicagoCAPS01",
+       1
+      ]
+     ],
+     "description": "The district twitter handle.",
+     "value_description": "Twitter is a social networking service on which users post and interact with brief messages known as \"tweets\"",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "district_no"
+   ],
+   "sample_rows": [
+    {
+     "district_no": 1,
+     "district_name": "Central",
+     "address": "1718 South State Street",
+     "zip_code": 60616,
+     "commander": "Jake M. Alderden",
+     "email": " CAPS001District@chicagopolice.org",
+     "phone": "312-745-4290",
+     "fax": "312-745-3694",
+     "tty": "312-745-3693",
+     "twitter": " ChicagoCAPS01"
+    },
+    {
+     "district_no": 2,
+     "district_name": "Wentworth",
+     "address": "5101 South Wentworh Avenue",
+     "zip_code": 60609,
+     "commander": "Joshua Wallace",
+     "email": " CAPS002District@chicagopolice.org",
+     "phone": "312-747-8366",
+     "fax": "312-747-5396",
+     "tty": "312-747-6656",
+     "twitter": " ChicagoCAPS02"
+    },
+    {
+     "district_no": 3,
+     "district_name": "Grand Crossing",
+     "address": "7040 South Cottage Grove Ave",
+     "zip_code": 60637,
+     "commander": "Eve T. Quarterman",
+     "email": " CAPS003District@chicagopolice.org",
+     "phone": "312-747-8201",
+     "fax": "312-747-5479",
+     "tty": "312-747-9168",
+     "twitter": " ChicagoCAPS03"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "FBI_Code",
+   "row_count": 26,
+   "stats_rows": 26,
+   "columns": [
+    {
+     "name": "fbi_code_no",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 26,
+     "is_unique": true,
+     "min_value": "01A",
+     "max_value": "9",
+     "examples": [
+      "01A",
+      "01B",
+      "2",
+      "3",
+      "04A"
+     ],
+     "top_values": [
+      [
+       "9",
+       1
+      ],
+      [
+       "7",
+       1
+      ],
+      [
+       "6",
+       1
+      ],
+      [
+       "5",
+       1
+      ],
+      [
+       "3",
+       1
+      ],
+      [
+       "26",
+       1
+      ],
+      [
+       "24",
+       1
+      ],
+      [
+       "22",
+       1
+      ],
+      [
+       "20",
+       1
+      ],
+      [
+       "2",
+       1
+      ],
+      [
+       "19",
+       1
+      ],
+      [
+       "18",
+       1
+      ],
+      [
+       "17",
+       1
+      ],
+      [
+       "16",
+       1
+      ],
+      [
+       "15",
+       1
+      ],
+      [
+       "14",
+       1
+      ],
+      [
+       "13",
+       1
+      ],
+      [
+       "12",
+       1
+      ],
+      [
+       "11",
+       1
+      ],
+      [
+       "10",
+       1
+      ],
+      [
+       "08B",
+       1
+      ],
+      [
+       "08A",
+       1
+      ],
+      [
+       "04B",
+       1
+      ],
+      [
+       "04A",
+       1
+      ],
+      [
+       "01B",
+       1
+      ],
+      [
+       "01A",
+       1
+      ]
+     ],
+     "description": "fbi code number. unique code made by fbi to classify the crime cases",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 26,
+     "is_unique": true,
+     "min_value": "Aggravated Assault",
+     "max_value": "Weapons Violation",
+     "examples": [
+      "Homicide 1st & 2nd Degree",
+      "Involuntary Manslaughter",
+      "Criminal Sexual Assault",
+      "Robbery",
+      "Aggravated Assault"
+     ],
+     "top_values": [
+      [
+       "Weapons Violation",
+       1
+      ],
+      [
+       "Vandalism",
+       1
+      ],
+      [
+       "Stolen Property",
+       1
+      ],
+      [
+       "Simple Battery",
+       1
+      ],
+      [
+       "Simple Assault",
+       1
+      ],
+      [
+       "Robbery",
+       1
+      ],
+      [
+       "ProstitutionÂ ",
+       1
+      ],
+      [
+       "Offenses Against Family",
+       1
+      ],
+      [
+       "Motor Vehicle Theft",
+       1
+      ],
+      [
+       "Misc Non-Index Offense",
+       1
+      ],
+      [
+       "Liquor License",
+       1
+      ],
+      [
+       "Larceny",
+       1
+      ],
+      [
+       "Involuntary Manslaughter",
+       1
+      ],
+      [
+       "Homicide 1st & 2nd Degree",
+       1
+      ],
+      [
+       "Gambling",
+       1
+      ],
+      [
+       "Fraud",
+       1
+      ],
+      [
+       "Forgery & Counterfeiting",
+       1
+      ],
+      [
+       "Embezzlement",
+       1
+      ],
+      [
+       "Drug Abuse",
+       1
+      ],
+      [
+       "Disorderly Conduct",
+       1
+      ],
+      [
+       "Criminal Sexual Assault",
+       1
+      ],
+      [
+       "Criminal Sexual Abuse",
+       1
+      ],
+      [
+       "Burglary",
+       1
+      ],
+      [
+       "Arson",
+       1
+      ],
+      [
+       "Aggravated Battery",
+       1
+      ],
+      [
+       "Aggravated Assault",
+       1
+      ]
+     ],
+     "description": "Short description of the kind of crime",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "description",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 26,
+     "is_unique": true,
+     "min_value": "A person commits battery if he intentionally or knowingly wi...",
+     "max_value": "Unlawful, nonviolent acts by a family member (or legal guard...",
+     "examples": [
+      "The killing of one human being by another.",
+      "The killing of another person through negligence.",
+      "Any sexual act directed against another person, forcibly and...",
+      "The taking or attempting to take anything of value under con...",
+      "An unlawful attack by one person upon another wherein the of..."
+     ],
+     "top_values": [
+      [
+       "Unlawful, nonviolent acts by a family member (or legal guard...",
+       1
+      ],
+      [
+       "To willfully or maliciously destroy, damage, deface, or othe...",
+       1
+      ],
+      [
+       "To unlawfully engage in or promote sexual activities for pro...",
+       1
+      ],
+      [
+       "To unlawfully bet or wager money or something else of value;...",
+       1
+      ],
+      [
+       "To unlawfully and intentionally damage or attempt to damage ...",
+       1
+      ],
+      [
+       "The violation of miscellaneous laws or ordinances.",
+       1
+      ],
+      [
+       "The violation of laws prohibiting the production, distributi...",
+       1
+      ],
+      [
+       "The violation of laws prohibiting offenses against chastity,...",
+       1
+      ],
+      [
+       "The violation of laws or ordinances prohibiting the manufact...",
+       1
+      ],
+      [
+       "The violation of laws or ordinances prohibiting the manufact...",
+       1
+      ],
+      [
+       "The unlawful taking, carrying, leading, or riding away of pr...",
+       1
+      ],
+      [
+       "The unlawful misappropriation by an offender to his/her own ...",
+       1
+      ],
+      [
+       "The unlawful entry into a building or other structure with t...",
+       1
+      ],
+      [
+       "The theft of a motor vehicle.",
+       1
+      ],
+      [
+       "The taking or attempting to take anything of value under con...",
+       1
+      ],
+      [
+       "The killing of one human being by another.",
+       1
+      ],
+      [
+       "The killing of another person through negligence.",
+       1
+      ],
+      [
+       "The intentional perversion of the truth for the purpose of i...",
+       1
+      ],
+      [
+       "The altering, copying, or imitation of something, without au...",
+       1
+      ],
+      [
+       "Receiving, buying, selling, possessing, concealing, or trans...",
+       1
+      ],
+      [
+       "Any sexual act directed against another person, forcibly and...",
+       1
+      ],
+      [
+       "Any behavior that tends to disturb the public peace or decor...",
+       1
+      ],
+      [
+       "An unlawful physical attack by one person upon another where...",
+       1
+      ],
+      [
+       "An unlawful attack by one person upon another wherein the of...",
+       1
+      ],
+      [
+       "An unlawful attack by one person upon another wherein the of...",
+       1
+      ],
+      [
+       "A person commits battery if he intentionally or knowingly wi...",
+       1
+      ]
+     ],
+     "description": "Detailed description of the kind of crime",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "crime_against",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "Persons",
+     "max_value": "Society",
+     "examples": [
+      "Persons",
+      "Property",
+      "Society",
+      "Persons and Society"
+     ],
+     "top_values": [
+      [
+       "Property",
+       10
+      ],
+      [
+       "Society",
+       7
+      ],
+      [
+       "Persons",
+       7
+      ],
+      [
+       "Persons and Society",
+       2
+      ]
+     ],
+     "description": "crime against. States who the crime is against",
+     "value_description": "Values are Persons, Property, Society, or \"Persons and Society\"",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "fbi_code_no"
+   ],
+   "sample_rows": [
+    {
+     "fbi_code_no": "01A",
+     "title": "Homicide 1st & 2nd Degree",
+     "description": "The killing of one human being by another.",
+     "crime_against": "Persons"
+    },
+    {
+     "fbi_code_no": "01B",
+     "title": "Involuntary Manslaughter",
+     "description": "The killing of another person through negligence.",
+     "crime_against": "Persons"
+    },
+    {
+     "fbi_code_no": "2",
+     "title": "Criminal Sexual Assault",
+     "description": "Any sexual act directed against another person, forcibly and...",
+     "crime_against": "Persons"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "IUCR",
+   "row_count": 401,
+   "stats_rows": 401,
+   "columns": [
+    {
+     "name": "iucr_no",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 401,
+     "is_unique": true,
+     "min_value": "031A",
+     "max_value": "938",
+     "examples": [
+      "110",
+      "130",
+      "141",
+      "142",
+      "261"
+     ],
+     "top_values": [],
+     "description": "iucr number. Unique identifier for the incident classification",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "primary_description",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 33,
+     "is_unique": false,
+     "min_value": "ARSON",
+     "max_value": "WEAPONS VIOLATION",
+     "examples": [
+      "HOMICIDE",
+      "CRIM SEXUAL ASSAULT",
+      "BATTERY",
+      "PUBLIC PEACE VIOLATION",
+      "RITUALISM"
+     ],
+     "top_values": [
+      [
+       "NARCOTICS",
+       48
+      ],
+      [
+       "OTHER OFFENSE",
+       46
+      ],
+      [
+       "DECEPTIVE PRACTICE",
+       32
+      ],
+      [
+       "GAMBLING",
+       29
+      ],
+      [
+       "BATTERY",
+       29
+      ],
+      [
+       "WEAPONS VIOLATION",
+       16
+      ],
+      [
+       "OFFENSE INVOLVING CHILDREN",
+       16
+      ],
+      [
+       "SEX OFFENSE",
+       15
+      ],
+      [
+       "PROSTITUTION",
+       15
+      ],
+      [
+       "ASSAULT",
+       15
+      ],
+      [
+       "ROBBERY",
+       14
+      ],
+      [
+       "PUBLIC PEACE VIOLATION",
+       13
+      ],
+      [
+       "CRIM SEXUAL ASSAULT",
+       13
+      ],
+      [
+       "MOTOR VEHICLE THEFT",
+       12
+      ],
+      [
+       "INTERFERENCE WITH PUBLIC OFFICER",
+       12
+      ],
+      [
+       "THEFT",
+       9
+      ],
+      [
+       "CRIMINAL DAMAGE",
+       8
+      ],
+      [
+       "RITUALISM",
+       6
+      ],
+      [
+       "LIQUOR LAW VIOLATION",
+       6
+      ],
+      [
+       "KIDNAPPING",
+       6
+      ],
+      [
+       "ARSON",
+       6
+      ],
+      [
+       "INTIMIDATION",
+       5
+      ],
+      [
+       "CRIMINAL TRESPASS",
+       5
+      ],
+      [
+       "STALKING",
+       4
+      ],
+      [
+       "OBSCENITY",
+       4
+      ],
+      [
+       "HOMICIDE",
+       4
+      ],
+      [
+       "BURGLARY",
+       4
+      ],
+      [
+       "CONCEALED CARRY LICENSE VIOLATION",
+       3
+      ],
+      [
+       "HUMAN TRAFFICKING",
+       2
+      ],
+      [
+       "PUBLIC INDECENCY",
+       1
+      ],
+      [
+       "OTHER NARCOTIC VIOLATION",
+       1
+      ],
+      [
+       "NON-CRIMINAL",
+       1
+      ],
+      [
+       "CRIMINAL ABORTION",
+       1
+      ]
+     ],
+     "description": "primary description. The general description of the incident classification",
+     "value_description": "commonsense evidence:\n\nIt's the general description",
+     "notes": []
+    },
+    {
+     "name": "secondary_description",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 377,
+     "is_unique": false,
+     "min_value": "$500 AND UNDER",
+     "max_value": "WIREROOM/SPORTS",
+     "examples": [
+      "FIRST DEGREE MURDER",
+      "SECOND DEGREE MURDER",
+      "INVOLUNTARY MANSLAUGHTER",
+      "RECKLESS HOMICIDE",
+      "AGGRAVATED: HANDGUN"
+     ],
+     "top_values": [],
+     "description": "secondary description. The specific description of the incident classification",
+     "value_description": "commonsense evidence:\n\nIt's the specific description",
+     "notes": []
+    },
+    {
+     "name": "index_code",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "I",
+     "max_value": "N",
+     "examples": [
+      "I",
+      "N"
+     ],
+     "top_values": [
+      [
+       "N",
+       301
+      ],
+      [
+       "I",
+       100
+      ]
+     ],
+     "description": "index code. Uses values \"I\" and \"N\" to indicate crimes",
+     "value_description": "commonsense evidence:\n\nâ¢ \"Indexed\" (severe, such as murder, rape, arson, and robbery)\n\nâ¢ \"Non-Indexed\" (less severe, such as vandalism, weapons violations, and peace disturbance)",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "iucr_no"
+   ],
+   "sample_rows": [
+    {
+     "iucr_no": "110",
+     "primary_description": "HOMICIDE",
+     "secondary_description": "FIRST DEGREE MURDER",
+     "index_code": "I"
+    },
+    {
+     "iucr_no": "130",
+     "primary_description": "HOMICIDE",
+     "secondary_description": "SECOND DEGREE MURDER",
+     "index_code": "I"
+    },
+    {
+     "iucr_no": "141",
+     "primary_description": "HOMICIDE",
+     "secondary_description": "INVOLUNTARY MANSLAUGHTER",
+     "index_code": "N"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Neighborhood",
+   "row_count": 246,
+   "stats_rows": 246,
+   "columns": [
+    {
+     "name": "neighborhood_name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 246,
+     "is_unique": true,
+     "min_value": "Albany Park",
+     "max_value": "Wrigleyville",
+     "examples": [
+      "Albany Park",
+      "Altgeld Gardens",
+      "Andersonville",
+      "Archer Heights",
+      "Armour Square"
+     ],
+     "top_values": [],
+     "description": "The neighborhood name as used in everyday communication",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "community_area_no",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 77,
+     "examples": [
+      14,
+      54,
+      77,
+      57,
+      34
+     ],
+     "top_values": [],
+     "description": "community area number. The community area in which most of the neighborhood is located",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "neighborhood_name"
+   ],
+   "sample_rows": [
+    {
+     "neighborhood_name": "Albany Park",
+     "community_area_no": 14
+    },
+    {
+     "neighborhood_name": "Altgeld Gardens",
+     "community_area_no": 54
+    },
+    {
+     "neighborhood_name": "Andersonville",
+     "community_area_no": 77
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Ward",
+   "row_count": 50,
+   "stats_rows": 50,
+   "columns": [
+    {
+     "name": "ward_no",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 50,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 50,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       50,
+       1
+      ],
+      [
+       49,
+       1
+      ],
+      [
+       48,
+       1
+      ],
+      [
+       47,
+       1
+      ],
+      [
+       46,
+       1
+      ],
+      [
+       45,
+       1
+      ],
+      [
+       44,
+       1
+      ],
+      [
+       43,
+       1
+      ],
+      [
+       42,
+       1
+      ],
+      [
+       41,
+       1
+      ],
+      [
+       40,
+       1
+      ],
+      [
+       39,
+       1
+      ],
+      [
+       38,
+       1
+      ],
+      [
+       37,
+       1
+      ],
+      [
+       36,
+       1
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       34,
+       1
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       32,
+       1
+      ],
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "alderman_first_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 46,
+     "is_unique": false,
+     "min_value": "Andre",
+     "max_value": "Walter",
+     "examples": [
+      "Daniel",
+      "Brian",
+      "Pat",
+      "Sophia",
+      "Leslie"
+     ],
+     "top_values": [
+      [
+       "Michael",
+       2
+      ],
+      [
+       "Matthew",
+       2
+      ],
+      [
+       "James",
+       2
+      ],
+      [
+       "Anthony",
+       2
+      ],
+      [
+       "Walter",
+       1
+      ],
+      [
+       "Thomas",
+       1
+      ],
+      [
+       "Susan",
+       1
+      ],
+      [
+       "Stephanie",
+       1
+      ],
+      [
+       "Sophia",
+       1
+      ],
+      [
+       "Silvana",
+       1
+      ],
+      [
+       "Scott",
+       1
+      ],
+      [
+       "Samantha",
+       1
+      ],
+      [
+       "Rossana",
+       1
+      ],
+      [
+       "Roderick",
+       1
+      ],
+      [
+       "Roberto",
+       1
+      ],
+      [
+       "Raymond",
+       1
+      ],
+      [
+       "Patrick",
+       1
+      ],
+      [
+       "Pat",
+       1
+      ],
+      [
+       "Nicholas",
+       1
+      ],
+      [
+       "Michelle",
+       1
+      ],
+      [
+       "Michele",
+       1
+      ],
+      [
+       "Marty",
+       1
+      ],
+      [
+       "Maria",
+       1
+      ],
+      [
+       "Leslie",
+       1
+      ],
+      [
+       "Jeanette",
+       1
+      ],
+      [
+       "Jason",
+       1
+      ],
+      [
+       "Howard",
+       1
+      ],
+      [
+       "Harry",
+       1
+      ],
+      [
+       "Gregory",
+       1
+      ],
+      [
+       "Gilbert",
+       1
+      ],
+      [
+       "George",
+       1
+      ],
+      [
+       "Felix",
+       1
+      ],
+      [
+       "Emma",
+       1
+      ],
+      [
+       "Edward",
+       1
+      ],
+      [
+       "Derrick",
+       1
+      ],
+      [
+       "Debra",
+       1
+      ],
+      [
+       "David",
+       1
+      ],
+      [
+       "Daniel",
+       1
+      ],
+      [
+       "Christopher",
+       1
+      ],
+      [
+       "Carrie",
+       1
+      ],
+      [
+       "Carlos",
+       1
+      ],
+      [
+       "Byron",
+       1
+      ],
+      [
+       "Brian",
+       1
+      ],
+      [
+       "Brendan",
+       1
+      ],
+      [
+       "Ariel",
+       1
+      ],
+      [
+       "Andre",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "alderman_last_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 49,
+     "is_unique": false,
+     "min_value": "Austin",
+     "max_value": "Waguespack",
+     "examples": [
+      "La Spata",
+      "Hopkins",
+      "Dowell",
+      "King",
+      "Hairston"
+     ],
+     "top_values": [
+      [
+       "Lopez",
+       2
+      ],
+      [
+       "Waguespack",
+       1
+      ],
+      [
+       "Villegas",
+       1
+      ],
+      [
+       "Vasquez",
+       1
+      ],
+      [
+       "Tunney",
+       1
+      ],
+      [
+       "Thompson",
+       1
+      ],
+      [
+       "Taylor",
+       1
+      ],
+      [
+       "Taliaferro",
+       1
+      ],
+      [
+       "Tabares",
+       1
+      ],
+      [
+       "Sposato",
+       1
+      ],
+      [
+       "Smith",
+       1
+      ],
+      [
+       "Silverstein",
+       1
+      ],
+      [
+       "Scott",
+       1
+      ],
+      [
+       "Sawyer",
+       1
+      ],
+      [
+       "Rodriguez-Sanchez",
+       1
+      ],
+      [
+       "Rodriguez",
+       1
+      ],
+      [
+       "Reilly",
+       1
+      ],
+      [
+       "Reboyras",
+       1
+      ],
+      [
+       "Ramirez-Rosa",
+       1
+      ],
+      [
+       "Quinn",
+       1
+      ],
+      [
+       "Osterman",
+       1
+      ],
+      [
+       "O'Shea",
+       1
+      ],
+      [
+       "Nugent",
+       1
+      ],
+      [
+       "Napolitano",
+       1
+      ],
+      [
+       "Moore",
+       1
+      ],
+      [
+       "Mitts",
+       1
+      ],
+      [
+       "Mitchell",
+       1
+      ],
+      [
+       "Martin",
+       1
+      ],
+      [
+       "Maldonado",
+       1
+      ],
+      [
+       "La Spata",
+       1
+      ],
+      [
+       "King",
+       1
+      ],
+      [
+       "Hopkins",
+       1
+      ],
+      [
+       "Harris",
+       1
+      ],
+      [
+       "Hairston",
+       1
+      ],
+      [
+       "Hadden",
+       1
+      ],
+      [
+       "Garza",
+       1
+      ],
+      [
+       "Gardiner",
+       1
+      ],
+      [
+       "Ervin",
+       1
+      ],
+      [
+       "Dowell",
+       1
+      ],
+      [
+       "Curtis",
+       1
+      ],
+      [
+       "Coleman",
+       1
+      ],
+      [
+       "Cardona",
+       1
+      ],
+      [
+       "Cardenas",
+       1
+      ],
+      [
+       "Cappleman",
+       1
+      ],
+      [
+       "Burnett",
+       1
+      ],
+      [
+       "Burke",
+       1
+      ],
+      [
+       "Brookins",
+       1
+      ],
+      [
+       "Beale",
+       1
+      ],
+      [
+       "Austin",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "alderman_name_suffix",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "Jr.",
+     "max_value": "Jr.",
+     "examples": [
+      "Jr."
+     ],
+     "top_values": [
+      [
+       "Jr.",
+       5
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "90% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "ward_office_address",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.02,
+     "distinct_count": 49,
+     "is_unique": true,
+     "min_value": "10400 S. Western Ave.",
+     "max_value": "9011 S. Ashland, Unit B",
+     "examples": [
+      "1958 N. Milwaukee Ave.",
+      "1400 N. Ashland",
+      "5046 S. State St.",
+      "435 E. 35th Street",
+      "2325 E. 71st Street"
+     ],
+     "top_values": [
+      [
+       "9011 S. Ashland, Unit B",
+       1
+      ],
+      [
+       "8539 S. Cottage Grove Ave.",
+       1
+      ],
+      [
+       "8359 S. Pulaski  Rd.",
+       1
+      ],
+      [
+       "7442 N. Harlem Ave.",
+       1
+      ],
+      [
+       "700 E. 79th Street ",
+       1
+      ],
+      [
+       "6934 W. Diversey Ave.",
+       1
+      ],
+      [
+       "6500 S. Pulaski Rd.",
+       1
+      ],
+      [
+       "6412 S. Ashland Ave.",
+       1
+      ],
+      [
+       "6272 W. North Ave.",
+       1
+      ],
+      [
+       "6247 S. Archer Ave.",
+       1
+      ],
+      [
+       "5707 S. Wentworth",
+       1
+      ],
+      [
+       "5620 N. Western Ave.",
+       1
+      ],
+      [
+       "5533 N. Broadway Ave.",
+       1
+      ],
+      [
+       "5425 W. Lawrence Ave.",
+       1
+      ],
+      [
+       "5411 S. Ashland",
+       1
+      ],
+      [
+       "507 W. 111th St.",
+       1
+      ],
+      [
+       "5046 S. State St.",
+       1
+      ],
+      [
+       "4924 W. Chicago Ave.",
+       1
+      ],
+      [
+       "4606 W. Diversey Ave",
+       1
+      ],
+      [
+       "4544 N. Broadway",
+       1
+      ],
+      [
+       "4404 W. Lawrence Ave.",
+       1
+      ],
+      [
+       "435 E. 35th Street",
+       1
+      ],
+      [
+       "4243 N. Lincoln Ave.",
+       1
+      ],
+      [
+       "4 N. Western Ave.",
+       1
+      ],
+      [
+       "3821 N. Harlem Ave.",
+       1
+      ],
+      [
+       "3659 S. Halsted St.",
+       1
+      ],
+      [
+       "3559 N. Milwaukee Ave.",
+       1
+      ],
+      [
+       "3476 S. Archer",
+       1
+      ],
+      [
+       "34 East 112th Place",
+       1
+      ],
+      [
+       "3223 North Sheffield Ave.",
+       1
+      ],
+      [
+       "3001 W. Irving Park Road ",
+       1
+      ],
+      [
+       "2949 W. Devon Ave.",
+       1
+      ],
+      [
+       "2842 N. Milwaukee Ave.",
+       1
+      ],
+      [
+       "2657 N. Clybourn",
+       1
+      ],
+      [
+       "2650 W. 51st Street",
+       1
+      ],
+      [
+       "2622 W. Jackson Blvd.",
+       1
+      ],
+      [
+       "2523 N. Halsted St.",
+       1
+      ],
+      [
+       "2511 W. Division St.",
+       1
+      ],
+      [
+       "2500 S. St. Louis St.",
+       1
+      ],
+      [
+       "2325 E. 71st Street",
+       1
+      ],
+      [
+       "2249 East 95th St.",
+       1
+      ],
+      [
+       "1958 N. Milwaukee Ave.",
+       1
+      ],
+      [
+       "1645 S. Blue Island Ave.",
+       1
+      ],
+      [
+       "1447 W. Morse Ave.",
+       1
+      ],
+      [
+       "1400 N. Ashland",
+       1
+      ],
+      [
+       "1344 W. 79th St.",
+       1
+      ],
+      [
+       "1158 S. Keeler Ave.",
+       1
+      ],
+      [
+       "10500 S. Ewing Avenue",
+       1
+      ],
+      [
+       "10400 S. Western Ave.",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ward_office_zip",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.02,
+     "distinct_count": 33,
+     "is_unique": false,
+     "min_value": "60607",
+     "max_value": "60659",
+     "examples": [
+      "60647",
+      "60622",
+      "60609",
+      "60616",
+      "60649"
+     ],
+     "top_values": [
+      [
+       "60618",
+       3
+      ],
+      [
+       "60609",
+       3
+      ],
+      [
+       "60659",
+       2
+      ],
+      [
+       "60640",
+       2
+      ],
+      [
+       "60639",
+       2
+      ],
+      [
+       "60630",
+       2
+      ],
+      [
+       "60628",
+       2
+      ],
+      [
+       "60622",
+       2
+      ],
+      [
+       "60620",
+       2
+      ],
+      [
+       "60619",
+       2
+      ],
+      [
+       "60617",
+       2
+      ],
+      [
+       "60614",
+       2
+      ],
+      [
+       "60612",
+       2
+      ],
+      [
+       "60608",
+       2
+      ],
+      [
+       "60657",
+       1
+      ],
+      [
+       "60652",
+       1
+      ],
+      [
+       "60651",
+       1
+      ],
+      [
+       "60649",
+       1
+      ],
+      [
+       "60647",
+       1
+      ],
+      [
+       "60643",
+       1
+      ],
+      [
+       "60641",
+       1
+      ],
+      [
+       "60638",
+       1
+      ],
+      [
+       "60636 ",
+       1
+      ],
+      [
+       "60634",
+       1
+      ],
+      [
+       "60632",
+       1
+      ],
+      [
+       "60631",
+       1
+      ],
+      [
+       "60629",
+       1
+      ],
+      [
+       "60626",
+       1
+      ],
+      [
+       "60624",
+       1
+      ],
+      [
+       "60623",
+       1
+      ],
+      [
+       "60621",
+       1
+      ],
+      [
+       "60616",
+       1
+      ],
+      [
+       "60607",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "ward_email",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.1,
+     "distinct_count": 45,
+     "is_unique": true,
+     "min_value": "Office@49thWard.org",
+     "max_value": " ward22@cityofchicago.org",
+     "examples": [
+      "info@the1stward.com",
+      "ward02@cityofchicago.org",
+      "ward03@cityofchicago.org",
+      "ward04@cityofchicago.org",
+      "ward05@cityofchicago.org"
+     ],
+     "top_values": [
+      [
+       " ward22@cityofchicago.org",
+       1
+      ],
+      [
+       "ward50@cityofchicago.org",
+       1
+      ],
+      [
+       "ward48@cityofchicago.org",
+       1
+      ],
+      [
+       "ward46@cityofchicago.org",
+       1
+      ],
+      [
+       "ward45@cityofchicago.org",
+       1
+      ],
+      [
+       "ward44@cityofchicago.org",
+       1
+      ],
+      [
+       "ward42@cityofchicago.org",
+       1
+      ],
+      [
+       "ward41@cityofchicago.org",
+       1
+      ],
+      [
+       "ward37@cityofchicago.org",
+       1
+      ],
+      [
+       "ward36@cityofchicago.org",
+       1
+      ],
+      [
+       "ward35@cityofchicago.org",
+       1
+      ],
+      [
+       "ward34@cityofchicago.org",
+       1
+      ],
+      [
+       "ward30@cityofchicago.org",
+       1
+      ],
+      [
+       "ward29@cityofchicago.org",
+       1
+      ],
+      [
+       "ward28@cityofchicago.org",
+       1
+      ],
+      [
+       "ward27@cityofchicago.org",
+       1
+      ],
+      [
+       "ward26@cityofchicago.org",
+       1
+      ],
+      [
+       "ward24@cityofchicago.org",
+       1
+      ],
+      [
+       "ward23@cityofchicago.org",
+       1
+      ],
+      [
+       "ward21@cityofchicago.org",
+       1
+      ],
+      [
+       "ward19@cityofchicago.org",
+       1
+      ],
+      [
+       "ward18@cityofchicago.org",
+       1
+      ],
+      [
+       "ward17@cityofchicago.org",
+       1
+      ],
+      [
+       "ward16@cityofchicago.org",
+       1
+      ],
+      [
+       "ward15@cityofchicago.org",
+       1
+      ],
+      [
+       "ward14@cityofchicago.org",
+       1
+      ],
+      [
+       "ward13@cityofchicago.org",
+       1
+      ],
+      [
+       "ward12@cityofchicago.org",
+       1
+      ],
+      [
+       "ward11@cityofchicago.org",
+       1
+      ],
+      [
+       "ward10@cityofchicago.org",
+       1
+      ],
+      [
+       "ward09@cityofchicago.org",
+       1
+      ],
+      [
+       "ward08@cityofchicago.org",
+       1
+      ],
+      [
+       "ward07@cityofchicago.org",
+       1
+      ],
+      [
+       "ward06@cityofchicago.org",
+       1
+      ],
+      [
+       "ward05@cityofchicago.org",
+       1
+      ],
+      [
+       "ward04@cityofchicago.org",
+       1
+      ],
+      [
+       "ward03@cityofchicago.org",
+       1
+      ],
+      [
+       "ward02@cityofchicago.org",
+       1
+      ],
+      [
+       "info@ward32.org",
+       1
+      ],
+      [
+       "info@the1stward.com",
+       1
+      ],
+      [
+       "info@aldermansposato.com",
+       1
+      ],
+      [
+       "info@aldermanmartin.com ",
+       1
+      ],
+      [
+       "info@40thward.org",
+       1
+      ],
+      [
+       "Yourvoice@ward43.org",
+       1
+      ],
+      [
+       "Office@49thWard.org",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ward_office_phone",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.06,
+     "distinct_count": 47,
+     "is_unique": true,
+     "min_value": "312.432.1995",
+     "max_value": " 773.762.1771",
+     "examples": [
+      "872.206.2685",
+      "312.643.2299",
+      "773.373.9273",
+      "773.536.8103",
+      "773.324.5555"
+     ],
+     "top_values": [
+      [
+       " 773.762.1771",
+       1
+      ],
+      [
+       "872.206.2685",
+       1
+      ],
+      [
+       "773.966.5336",
+       1
+      ],
+      [
+       "773.928.6961",
+       1
+      ],
+      [
+       "773.887.3772",
+       1
+      ],
+      [
+       "773.881.9300",
+       1
+      ],
+      [
+       "773.878.4646",
+       1
+      ],
+      [
+       "773.874.3300",
+       1
+      ],
+      [
+       "773.853.0799",
+       1
+      ],
+      [
+       "773.824.2000",
+       1
+      ],
+      [
+       "773.794.3095",
+       1
+      ],
+      [
+       "773.785.1100",
+       1
+      ],
+      [
+       "773.784.5277",
+       1
+      ],
+      [
+       "773.783.3672",
+       1
+      ],
+      [
+       "773.768.8138",
+       1
+      ],
+      [
+       "773.745.4636",
+       1
+      ],
+      [
+       "773.731.7777",
+       1
+      ],
+      [
+       "773.654.1867",
+       1
+      ],
+      [
+       "773.635.0006",
+       1
+      ],
+      [
+       "773.631.2241",
+       1
+      ],
+      [
+       "773.582.4444",
+       1
+      ],
+      [
+       "773.581.8000",
+       1
+      ],
+      [
+       "773.536.8103",
+       1
+      ],
+      [
+       "773.533.2400",
+       1
+      ],
+      [
+       "773.533.0900",
+       1
+      ],
+      [
+       "773.525.6034",
+       1
+      ],
+      [
+       "773.523.8250",
+       1
+      ],
+      [
+       "773.471.1414",
+       1
+      ],
+      [
+       "773.395.0143",
+       1
+      ],
+      [
+       "773.379.0960",
+       1
+      ],
+      [
+       "773.373.9273",
+       1
+      ],
+      [
+       "773.348.9500",
+       1
+      ],
+      [
+       "773.324.5555",
+       1
+      ],
+      [
+       "773.306.1981",
+       1
+      ],
+      [
+       "773.306.0837",
+       1
+      ],
+      [
+       "773.284.5057",
+       1
+      ],
+      [
+       "773.283.3838",
+       1
+      ],
+      [
+       "773.262.1050",
+       1
+      ],
+      [
+       "773.254.6677",
+       1
+      ],
+      [
+       "773.248.1330",
+       1
+      ],
+      [
+       "773.238.8766",
+       1
+      ],
+      [
+       "773.237.6460",
+       1
+      ],
+      [
+       "773-868-4747",
+       1
+      ],
+      [
+       "773-338-5796",
+       1
+      ],
+      [
+       "312.643.2299",
+       1
+      ],
+      [
+       "312.642.4242",
+       1
+      ],
+      [
+       "312.432.1995",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ward_office_fax",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.56,
+     "distinct_count": 22,
+     "is_unique": true,
+     "min_value": "312.448.8829",
+     "max_value": " 773.762.1825",
+     "examples": [
+      "312.448.8829",
+      "773.536.7296",
+      "773.324.1585",
+      "773.224.2425",
+      "312.744.4096"
+     ],
+     "top_values": [
+      [
+       " 773.762.1825",
+       1
+      ],
+      [
+       "872-206-6826",
+       1
+      ],
+      [
+       "773.881.9383",
+       1
+      ],
+      [
+       "773.794.8576",
+       1
+      ],
+      [
+       "773.672.5133",
+       1
+      ],
+      [
+       "773.582.3332",
+       1
+      ],
+      [
+       "773.536.7296",
+       1
+      ],
+      [
+       "773.525.5058",
+       1
+      ],
+      [
+       "773.523.8440",
+       1
+      ],
+      [
+       "773.522.9842",
+       1
+      ],
+      [
+       "773.395.0146",
+       1
+      ],
+      [
+       "773.379.0966",
+       1
+      ],
+      [
+       "773.348.9594",
+       1
+      ],
+      [
+       "773.324.1585",
+       1
+      ],
+      [
+       "773.284.5956",
+       1
+      ],
+      [
+       "773.283.3235",
+       1
+      ],
+      [
+       "773.248.1360",
+       1
+      ],
+      [
+       "773.237.6418",
+       1
+      ],
+      [
+       "773.224.2425",
+       1
+      ],
+      [
+       "312.744.4096",
+       1
+      ],
+      [
+       "312.642.0420",
+       1
+      ],
+      [
+       "312.448.8829",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "56% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "city_hall_office_room",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 200,
+     "max_value": 305,
+     "examples": [
+      200,
+      305,
+      300,
+      302
+     ],
+     "top_values": [
+      [
+       300,
+       29
+      ],
+      [
+       200,
+       19
+      ],
+      [
+       305,
+       1
+      ],
+      [
+       302,
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city_hall_office_phone",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.24,
+     "distinct_count": 38,
+     "is_unique": true,
+     "min_value": "312.744.2690",
+     "max_value": " 312.744.6858",
+     "examples": [
+      "312.744.6836",
+      "312.744.8734",
+      "312.744.2690",
+      "312.744.6832",
+      "312.744.6868"
+     ],
+     "top_values": [
+      [
+       " 312.744.6858",
+       1
+      ],
+      [
+       "312.744.8805",
+       1
+      ],
+      [
+       "312.744.8734",
+       1
+      ],
+      [
+       "312.744.6868",
+       1
+      ],
+      [
+       "312.744.6857",
+       1
+      ],
+      [
+       "312.744.6856",
+       1
+      ],
+      [
+       "312.744.6855",
+       1
+      ],
+      [
+       "312.744.6853",
+       1
+      ],
+      [
+       "312.744.6839",
+       1
+      ],
+      [
+       "312.744.6838",
+       1
+      ],
+      [
+       "312.744.6836",
+       1
+      ],
+      [
+       "312.744.6835",
+       1
+      ],
+      [
+       "312.744.6834",
+       1
+      ],
+      [
+       "312.744.6833",
+       1
+      ],
+      [
+       "312.744.6832",
+       1
+      ],
+      [
+       "312.744.6831",
+       1
+      ],
+      [
+       "312.744.6828",
+       1
+      ],
+      [
+       "312.744.6820",
+       1
+      ],
+      [
+       "312.744.6567",
+       1
+      ],
+      [
+       "312.744.6124",
+       1
+      ],
+      [
+       "312.744.5685",
+       1
+      ],
+      [
+       "312.744.4810",
+       1
+      ],
+      [
+       "312.744.4324",
+       1
+      ],
+      [
+       "312.744.4321",
+       1
+      ],
+      [
+       "312.744.3942",
+       1
+      ],
+      [
+       "312.744.3435",
+       1
+      ],
+      [
+       "312.744.3380",
+       1
+      ],
+      [
+       "312.744.3304",
+       1
+      ],
+      [
+       "312.744.3180",
+       1
+      ],
+      [
+       "312.744.3078",
+       1
+      ],
+      [
+       "312.744.3075",
+       1
+      ],
+      [
+       "312.744.3073",
+       1
+      ],
+      [
+       "312.744.3072",
+       1
+      ],
+      [
+       "312.744.3068",
+       1
+      ],
+      [
+       "312.744.3066",
+       1
+      ],
+      [
+       "312.744.3062",
+       1
+      ],
+      [
+       "312.744.3058",
+       1
+      ],
+      [
+       "312.744.2690",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city_hall_office_fax",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.46,
+     "distinct_count": 27,
+     "is_unique": true,
+     "min_value": "312.744.0670",
+     "max_value": "312.744.9182",
+     "examples": [
+      "312.744.6712",
+      "312.744.7738",
+      "312.744.3195",
+      "312.744.0670",
+      "312.744.6825"
+     ],
+     "top_values": [
+      [
+       "312.744.9182",
+       1
+      ],
+      [
+       "312.744.8457",
+       1
+      ],
+      [
+       "312.744.7738",
+       1
+      ],
+      [
+       "312.744.6860",
+       1
+      ],
+      [
+       "312.744.6849",
+       1
+      ],
+      [
+       "312.744.6825",
+       1
+      ],
+      [
+       "312.744.6712",
+       1
+      ],
+      [
+       "312.744.6574",
+       1
+      ],
+      [
+       "312.744.6125",
+       1
+      ],
+      [
+       "312.744.5694",
+       1
+      ],
+      [
+       "312.744.5683",
+       1
+      ],
+      [
+       "312.744.5682",
+       1
+      ],
+      [
+       "312.744.5680",
+       1
+      ],
+      [
+       "312.744.4811",
+       1
+      ],
+      [
+       "312.744.4198",
+       1
+      ],
+      [
+       "312.744.4025 ",
+       1
+      ],
+      [
+       "312.744.3381",
+       1
+      ],
+      [
+       "312.744.3305",
+       1
+      ],
+      [
+       "312.744.3195",
+       1
+      ],
+      [
+       "312.744.3166",
+       1
+      ],
+      [
+       "312.744.3133",
+       1
+      ],
+      [
+       "312.744.3076",
+       1
+      ],
+      [
+       "312.744.3071",
+       1
+      ],
+      [
+       "312.744.3065",
+       1
+      ],
+      [
+       "312.744.3061",
+       1
+      ],
+      [
+       "312.744.1589",
+       1
+      ],
+      [
+       "312.744.0670",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 50,
+     "is_unique": true,
+     "min_value": 51455,
+     "max_value": 56170,
+     "examples": [
+      56149,
+      55805,
+      53039,
+      54589,
+      51455
+     ],
+     "top_values": [
+      [
+       56170,
+       1
+      ],
+      [
+       56149,
+       1
+      ],
+      [
+       56058,
+       1
+      ],
+      [
+       56001,
+       1
+      ],
+      [
+       55991,
+       1
+      ],
+      [
+       55967,
+       1
+      ],
+      [
+       55882,
+       1
+      ],
+      [
+       55870,
+       1
+      ],
+      [
+       55809,
+       1
+      ],
+      [
+       55805,
+       1
+      ],
+      [
+       55598,
+       1
+      ],
+      [
+       55560,
+       1
+      ],
+      [
+       55319,
+       1
+      ],
+      [
+       55281,
+       1
+      ],
+      [
+       55267,
+       1
+      ],
+      [
+       55199,
+       1
+      ],
+      [
+       55184,
+       1
+      ],
+      [
+       55074,
+       1
+      ],
+      [
+       55014,
+       1
+      ],
+      [
+       54909,
+       1
+      ],
+      [
+       54766,
+       1
+      ],
+      [
+       54633,
+       1
+      ],
+      [
+       54589,
+       1
+      ],
+      [
+       54539,
+       1
+      ],
+      [
+       54031,
+       1
+      ],
+      [
+       53784,
+       1
+      ],
+      [
+       53728,
+       1
+      ],
+      [
+       53724,
+       1
+      ],
+      [
+       53722,
+       1
+      ],
+      [
+       53516,
+       1
+      ],
+      [
+       53515,
+       1
+      ],
+      [
+       53039,
+       1
+      ],
+      [
+       52992,
+       1
+      ],
+      [
+       52939,
+       1
+      ],
+      [
+       52372,
+       1
+      ],
+      [
+       52341,
+       1
+      ],
+      [
+       52235,
+       1
+      ],
+      [
+       51954,
+       1
+      ],
+      [
+       51846,
+       1
+      ],
+      [
+       51687,
+       1
+      ],
+      [
+       51632,
+       1
+      ],
+      [
+       51599,
+       1
+      ],
+      [
+       51581,
+       1
+      ],
+      [
+       51538,
+       1
+      ],
+      [
+       51535,
+       1
+      ],
+      [
+       51525,
+       1
+      ],
+      [
+       51519,
+       1
+      ],
+      [
+       51501,
+       1
+      ],
+      [
+       51497,
+       1
+      ],
+      [
+       51455,
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "ward_no"
+   ],
+   "sample_rows": [
+    {
+     "ward_no": 1,
+     "alderman_first_name": "Daniel",
+     "alderman_last_name": "La Spata",
+     "alderman_name_suffix": null,
+     "ward_office_address": "1958 N. Milwaukee Ave.",
+     "ward_office_zip": "60647",
+     "ward_email": "info@the1stward.com",
+     "ward_office_phone": "872.206.2685",
+     "ward_office_fax": "312.448.8829",
+     "city_hall_office_room": 200,
+     "city_hall_office_phone": null,
+     "city_hall_office_fax": null,
+     "Population": 56149
+    },
+    {
+     "ward_no": 2,
+     "alderman_first_name": "Brian",
+     "alderman_last_name": "Hopkins",
+     "alderman_name_suffix": null,
+     "ward_office_address": "1400 N. Ashland",
+     "ward_office_zip": "60622",
+     "ward_email": "ward02@cityofchicago.org",
+     "ward_office_phone": "312.643.2299",
+     "ward_office_fax": null,
+     "city_hall_office_room": 200,
+     "city_hall_office_phone": "312.744.6836",
+     "city_hall_office_fax": null,
+     "Population": 55805
+    },
+    {
+     "ward_no": 3,
+     "alderman_first_name": "Pat",
+     "alderman_last_name": "Dowell",
+     "alderman_name_suffix": null,
+     "ward_office_address": "5046 S. State St.",
+     "ward_office_zip": "60609",
+     "ward_email": "ward03@cityofchicago.org",
+     "ward_office_phone": "773.373.9273",
+     "ward_office_fax": null,
+     "city_hall_office_room": 200,
+     "city_hall_office_phone": "312.744.8734",
+     "city_hall_office_fax": "312.744.6712",
+     "Population": 53039
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "Crime",
+   "from_column": "fbi_code_no",
+   "to_table": "FBI_Code",
+   "to_column": "fbi_code_no",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Crime",
+   "from_column": "community_area_no",
+   "to_table": "Community_Area",
+   "to_column": "community_area_no",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Crime",
+   "from_column": "district_no",
+   "to_table": "District",
+   "to_column": "district_no",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Crime",
+   "from_column": "iucr_no",
+   "to_table": "IUCR",
+   "to_column": "iucr_no",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Crime",
+   "from_column": "ward_no",
+   "to_table": "Ward",
+   "to_column": "ward_no",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Neighborhood",
+   "from_column": "community_area_no",
+   "to_table": "Community_Area",
+   "to_column": "community_area_no",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

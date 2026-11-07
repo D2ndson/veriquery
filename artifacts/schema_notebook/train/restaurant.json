@@ -1,0 +1,648 @@
+{
+ "db_id": "restaurant",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/restaurant/restaurant.sqlite",
+ "fingerprint": "806912-1793993015135217014-v1.0",
+ "created_at": "2026-11-06T19:25:08+00:00",
+ "profile_seconds": 0.037,
+ "tables": [
+  {
+   "name": "generalinfo",
+   "row_count": 9590,
+   "stats_rows": 9590,
+   "columns": [
+    {
+     "name": "id_restaurant",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9590,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 9590,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "id restaurant. the unique id for the restaurant",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7606,
+     "is_unique": false,
+     "min_value": "1 potato 2",
+     "max_value": "zza's trattoria",
+     "examples": [
+      "sparky's diner",
+      "kabul afghan cuisine",
+      "helmand restaurant",
+      "afghani house",
+      "kabul afghan cusine"
+     ],
+     "top_values": [],
+     "description": "the label of the restaurant",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "food_type",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 145,
+     "is_unique": false,
+     "min_value": "24 hour diner",
+     "max_value": "yogurt",
+     "examples": [
+      "24 hour diner",
+      "afghani",
+      "african",
+      "all ethnic",
+      "american"
+     ],
+     "top_values": [],
+     "description": "the food type",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 167,
+     "is_unique": false,
+     "min_value": "alameda",
+     "max_value": "yountville",
+     "examples": [
+      "san francisco",
+      "san carlos",
+      "sunnyvale",
+      "san rafael",
+      "san jose"
+     ],
+     "top_values": [],
+     "description": "the city where the restaurant is located in",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "review",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 33,
+     "is_unique": false,
+     "min_value": 1.3,
+     "max_value": 4.5,
+     "examples": [
+      2.3,
+      3.8,
+      4.0,
+      3.6,
+      3.7
+     ],
+     "top_values": [
+      [
+       2.0,
+       5839
+      ],
+      [
+       2.3,
+       668
+      ],
+      [
+       2.7,
+       660
+      ],
+      [
+       3.0,
+       577
+      ],
+      [
+       2.8,
+       307
+      ],
+      [
+       3.3,
+       201
+      ],
+      [
+       2.5,
+       176
+      ],
+      [
+       3.2,
+       146
+      ],
+      [
+       1.7,
+       135
+      ],
+      [
+       3.4,
+       123
+      ],
+      [
+       2.6,
+       106
+      ],
+      [
+       3.5,
+       88
+      ],
+      [
+       3.6,
+       86
+      ],
+      [
+       3.1,
+       60
+      ],
+      [
+       3.8,
+       58
+      ],
+      [
+       2.4,
+       57
+      ],
+      [
+       2.9,
+       51
+      ],
+      [
+       2.2,
+       46
+      ],
+      [
+       3.7,
+       45
+      ],
+      [
+       1.8,
+       35
+      ],
+      [
+       3.9,
+       33
+      ],
+      [
+       4.0,
+       25
+      ],
+      [
+       1.5,
+       12
+      ],
+      [
+       4.1,
+       9
+      ],
+      [
+       4.2,
+       8
+      ],
+      [
+       2.1,
+       7
+      ],
+      [
+       1.6,
+       7
+      ],
+      [
+       4.4,
+       6
+      ],
+      [
+       4.3,
+       5
+      ],
+      [
+       1.4,
+       5
+      ],
+      [
+       4.5,
+       4
+      ],
+      [
+       1.3,
+       4
+      ],
+      [
+       1.9,
+       1
+      ]
+     ],
+     "description": "the review of the restaurant",
+     "value_description": "commonsense evidence:\nthe review rating is from 0.0 to 5.0\nThe high review rating is positively correlated with the overall level of the restaurant. The restaurant with higher review rating is usually more popular among diners.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id_restaurant"
+   ],
+   "sample_rows": [
+    {
+     "id_restaurant": 1,
+     "label": "sparky's diner",
+     "food_type": "24 hour diner",
+     "city": "san francisco",
+     "review": 2.3
+    },
+    {
+     "id_restaurant": 2,
+     "label": "kabul afghan cuisine",
+     "food_type": "afghani",
+     "city": "san carlos",
+     "review": 3.8
+    },
+    {
+     "id_restaurant": 3,
+     "label": "helmand restaurant",
+     "food_type": "afghani",
+     "city": "san francisco",
+     "review": 4.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "geographic",
+   "row_count": 168,
+   "stats_rows": 168,
+   "columns": [
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 168,
+     "is_unique": true,
+     "min_value": "alameda",
+     "max_value": "yountville",
+     "examples": [
+      "alameda",
+      "alamo",
+      "albany",
+      "alviso",
+      "american canyon"
+     ],
+     "top_values": [],
+     "description": "the city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "county",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": "alameda county",
+     "max_value": "yolo county",
+     "examples": [
+      "alameda county",
+      "contra costa county",
+      "santa clara county",
+      "unknown",
+      "napa county"
+     ],
+     "top_values": [
+      [
+       "unknown",
+       27
+      ],
+      [
+       "san mateo county",
+       24
+      ],
+      [
+       "contra costa county",
+       21
+      ],
+      [
+       "alameda county",
+       16
+      ],
+      [
+       "santa clara county",
+       15
+      ],
+      [
+       "sonoma county",
+       13
+      ],
+      [
+       "monterey county",
+       9
+      ],
+      [
+       "marin county",
+       9
+      ],
+      [
+       "solano county",
+       7
+      ],
+      [
+       "napa county",
+       7
+      ],
+      [
+       "santa cruz county",
+       6
+      ],
+      [
+       "yolo county",
+       2
+      ],
+      [
+       "tuolumne county",
+       2
+      ],
+      [
+       "san benito county",
+       2
+      ],
+      [
+       "placer county",
+       2
+      ],
+      [
+       "mendocino county",
+       2
+      ],
+      [
+       "san joaquin county",
+       1
+      ],
+      [
+       "san francisco county",
+       1
+      ],
+      [
+       "los angeles county",
+       1
+      ],
+      [
+       "el dorado county",
+       1
+      ]
+     ],
+     "description": "the country the city belongs to",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": "bay area",
+     "max_value": "yosemite and mono lake area",
+     "examples": [
+      "bay area",
+      "napa valley",
+      "unknown",
+      "monterey",
+      "los angeles area"
+     ],
+     "top_values": [
+      [
+       "bay area",
+       122
+      ],
+      [
+       "unknown",
+       17
+      ],
+      [
+       "monterey",
+       9
+      ],
+      [
+       "napa valley",
+       7
+      ],
+      [
+       "northern california",
+       4
+      ],
+      [
+       "yosemite and mono lake area",
+       3
+      ],
+      [
+       "lake tahoe",
+       3
+      ],
+      [
+       "sacramento area",
+       2
+      ],
+      [
+       "los angeles area",
+       1
+      ]
+     ],
+     "description": "corresponding regions",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "city"
+   ],
+   "sample_rows": [
+    {
+     "city": "alameda",
+     "county": "alameda county",
+     "region": "bay area"
+    },
+    {
+     "city": "alamo",
+     "county": "contra costa county",
+     "region": "bay area"
+    },
+    {
+     "city": "albany",
+     "county": "alameda county",
+     "region": "bay area"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "location",
+   "row_count": 9539,
+   "stats_rows": 9539,
+   "columns": [
+    {
+     "name": "id_restaurant",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9539,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 9590,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "id restaurant. the unique id for the restaurant",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "street_num",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0479,
+     "distinct_count": 3966,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 415153,
+     "examples": [
+      242,
+      135,
+      430,
+      1103,
+      833
+     ],
+     "top_values": [],
+     "description": "the street number of the restaurant",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "street_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0256,
+     "distinct_count": 3675,
+     "is_unique": false,
+     "min_value": "#84",
+     "max_value": "zanker rd",
+     "examples": [
+      "church st",
+      "el camino real",
+      "broadway",
+      "e. el camino real",
+      "w. el camino real"
+     ],
+     "top_values": [],
+     "description": "the street name of the restaurant",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0236,
+     "distinct_count": 165,
+     "is_unique": false,
+     "min_value": "alameda",
+     "max_value": "yountville",
+     "examples": [
+      "san francisco",
+      "san carlos",
+      "sunnyvale",
+      "san jose",
+      "concord"
+     ],
+     "top_values": [],
+     "description": "the city where the restaurant is located in",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id_restaurant"
+   ],
+   "sample_rows": [
+    {
+     "id_restaurant": 1,
+     "street_num": 242,
+     "street_name": "church st",
+     "city": "san francisco"
+    },
+    {
+     "id_restaurant": 2,
+     "street_num": 135,
+     "street_name": "el camino real",
+     "city": "san carlos"
+    },
+    {
+     "id_restaurant": 3,
+     "street_num": 430,
+     "street_name": "broadway",
+     "city": "san francisco"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "generalinfo",
+   "from_column": "city",
+   "to_table": "geographic",
+   "to_column": "city",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "location",
+   "from_column": "id_restaurant",
+   "to_table": "generalinfo",
+   "to_column": "id_restaurant",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "location",
+   "from_column": "city",
+   "to_table": "geographic",
+   "to_column": "city",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

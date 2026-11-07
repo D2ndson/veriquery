@@ -1,0 +1,3303 @@
+{
+ "db_id": "law_episode",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/law_episode/law_episode.sqlite",
+ "fingerprint": "548864-1793993033341249790-v1.0",
+ "created_at": "2026-11-06T19:24:56+00:00",
+ "profile_seconds": 0.026,
+ "tables": [
+  {
+   "name": "Award",
+   "row_count": 22,
+   "stats_rows": 22,
+   "columns": [
+    {
+     "name": "award_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": true,
+     "min_value": 258,
+     "max_value": 349,
+     "examples": [
+      258,
+      259,
+      260,
+      261,
+      262
+     ],
+     "top_values": [
+      [
+       349,
+       1
+      ],
+      [
+       348,
+       1
+      ],
+      [
+       347,
+       1
+      ],
+      [
+       317,
+       1
+      ],
+      [
+       314,
+       1
+      ],
+      [
+       313,
+       1
+      ],
+      [
+       312,
+       1
+      ],
+      [
+       297,
+       1
+      ],
+      [
+       296,
+       1
+      ],
+      [
+       295,
+       1
+      ],
+      [
+       288,
+       1
+      ],
+      [
+       287,
+       1
+      ],
+      [
+       286,
+       1
+      ],
+      [
+       284,
+       1
+      ],
+      [
+       272,
+       1
+      ],
+      [
+       271,
+       1
+      ],
+      [
+       270,
+       1
+      ],
+      [
+       262,
+       1
+      ],
+      [
+       261,
+       1
+      ],
+      [
+       260,
+       1
+      ],
+      [
+       259,
+       1
+      ],
+      [
+       258,
+       1
+      ]
+     ],
+     "description": "award id. the unique identifier for the award nomination",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "organization",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "American Bar Association Silver Gavel Awards for Media and t...",
+     "max_value": "Primetime Emmy Awards",
+     "examples": [
+      "International Monitor Awards",
+      "Primetime Emmy Awards",
+      "American Bar Association Silver Gavel Awards for Media and t...",
+      "Edgar Allan Poe Awards"
+     ],
+     "top_values": [
+      [
+       "Primetime Emmy Awards",
+       7
+      ],
+      [
+       "American Bar Association Silver Gavel Awards for Media and t...",
+       6
+      ],
+      [
+       "International Monitor Awards",
+       5
+      ],
+      [
+       "Edgar Allan Poe Awards",
+       4
+      ]
+     ],
+     "description": "the name of the organization that grants the award",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 1999,
+     "max_value": 2000,
+     "examples": [
+      1999,
+      2000
+     ],
+     "top_values": [
+      [
+       1999,
+       15
+      ],
+      [
+       2000,
+       7
+      ]
+     ],
+     "description": "the year of the nomination for  the award",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "award_category",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "Edgar",
+     "max_value": "Silver Gavel Award",
+     "examples": [
+      "Monitor",
+      "Primetime Emmy",
+      "Silver Gavel Award",
+      "Edgar"
+     ],
+     "top_values": [
+      [
+       "Primetime Emmy",
+       7
+      ],
+      [
+       "Silver Gavel Award",
+       6
+      ],
+      [
+       "Monitor",
+       5
+      ],
+      [
+       "Edgar",
+       4
+      ]
+     ],
+     "description": "award category. the class of the award",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "award",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "Best Television Episode",
+     "max_value": "Television",
+     "examples": [
+      "Film Originated Television Series - Best Achievement",
+      "Outstanding Costume Design for a Series",
+      "Outstanding Directing for a Drama Series",
+      "Outstanding Guest Actress in a Drama Series",
+      "Outstanding Sound Mixing for a Drama Series"
+     ],
+     "top_values": [
+      [
+       "Television",
+       6
+      ],
+      [
+       "Film Originated Television Series - Best Achievement",
+       5
+      ],
+      [
+       "Best Television Episode",
+       4
+      ],
+      [
+       "Outstanding Sound Mixing for a Drama Series",
+       3
+      ],
+      [
+       "Outstanding Directing for a Drama Series",
+       2
+      ],
+      [
+       "Outstanding Guest Actress in a Drama Series",
+       1
+      ],
+      [
+       "Outstanding Costume Design for a Series",
+       1
+      ]
+     ],
+     "description": "the specific award",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "series",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "Law and Order",
+     "max_value": "Law and Order",
+     "examples": [
+      "Law and Order"
+     ],
+     "top_values": [
+      [
+       "Law and Order",
+       22
+      ]
+     ],
+     "description": "the name of the Law & Order series that has been nominated",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "episode_id",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "tt0629149",
+     "max_value": "tt0629422",
+     "examples": [
+      "tt0629149",
+      "tt0629398",
+      "tt0629248",
+      "tt0629422",
+      "tt0629228"
+     ],
+     "top_values": [
+      [
+       "tt0629248",
+       7
+      ],
+      [
+       "tt0629149",
+       5
+      ],
+      [
+       "tt0629291",
+       4
+      ],
+      [
+       "tt0629228",
+       3
+      ],
+      [
+       "tt0629422",
+       1
+      ],
+      [
+       "tt0629398",
+       1
+      ],
+      [
+       "tt0629397",
+       1
+      ]
+     ],
+     "description": "episode id. the id of the episode that has been nominated",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "person_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": "nm0000210",
+     "max_value": "nm0937725",
+     "examples": [
+      "nm0937725",
+      "nm0792309",
+      "nm0049569",
+      "nm0371065",
+      "nm0288886"
+     ],
+     "top_values": [
+      [
+       "nm0049569",
+       6
+      ],
+      [
+       "nm0538744",
+       4
+      ],
+      [
+       "nm0792309",
+       2
+      ],
+      [
+       "nm0937725",
+       1
+      ],
+      [
+       "nm0902683",
+       1
+      ],
+      [
+       "nm0686853",
+       1
+      ],
+      [
+       "nm0671992",
+       1
+      ],
+      [
+       "nm0657970",
+       1
+      ],
+      [
+       "nm0629779",
+       1
+      ],
+      [
+       "nm0578294",
+       1
+      ],
+      [
+       "nm0371065",
+       1
+      ],
+      [
+       "nm0288886",
+       1
+      ],
+      [
+       "nm0000210",
+       1
+      ]
+     ],
+     "description": "the id of the person that has been nominated",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "role",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.4545,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": "Katrina Ludlow",
+     "max_value": "writer",
+     "examples": [
+      "Katrina Ludlow",
+      "production mixer",
+      "re-recording mixer",
+      "writer",
+      "director"
+     ],
+     "top_values": [
+      [
+       "writer",
+       2
+      ],
+      [
+       "teleplay",
+       2
+      ],
+      [
+       "re-recording mixer",
+       2
+      ],
+      [
+       "director",
+       2
+      ],
+      [
+       "teleplay, story",
+       1
+      ],
+      [
+       "story",
+       1
+      ],
+      [
+       "production mixer",
+       1
+      ],
+      [
+       "Katrina Ludlow",
+       1
+      ]
+     ],
+     "description": "the role that has been nominated",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "result",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "Nominee",
+     "max_value": "Winner",
+     "examples": [
+      "Winner",
+      "Nominee"
+     ],
+     "top_values": [
+      [
+       "Winner",
+       12
+      ],
+      [
+       "Nominee",
+       10
+      ]
+     ],
+     "description": "the nomination result",
+     "value_description": "Nominee / Winner\ncommonsense evidence: 'Winner' means that the award was actually received.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "award_id"
+   ],
+   "sample_rows": [
+    {
+     "award_id": 258,
+     "organization": "International Monitor Awards",
+     "year": 1999,
+     "award_category": "Monitor",
+     "award": "Film Originated Television Series - Best Achievement",
+     "series": "Law and Order",
+     "episode_id": "tt0629149",
+     "person_id": "nm0937725",
+     "role": null,
+     "result": "Winner"
+    },
+    {
+     "award_id": 259,
+     "organization": "International Monitor Awards",
+     "year": 1999,
+     "award_category": "Monitor",
+     "award": "Film Originated Television Series - Best Achievement",
+     "series": "Law and Order",
+     "episode_id": "tt0629149",
+     "person_id": "nm0792309",
+     "role": null,
+     "result": "Winner"
+    },
+    {
+     "award_id": 260,
+     "organization": "International Monitor Awards",
+     "year": 1999,
+     "award_category": "Monitor",
+     "award": "Film Originated Television Series - Best Achievement",
+     "series": "Law and Order",
+     "episode_id": "tt0629149",
+     "person_id": "nm0049569",
+     "role": null,
+     "result": "Winner"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Credit",
+   "row_count": 2231,
+   "stats_rows": 2231,
+   "columns": [
+    {
+     "name": "episode_id",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": "tt0629146",
+     "max_value": "tt0629487",
+     "examples": [
+      "tt0629204",
+      "tt0629228",
+      "tt0629170",
+      "tt0629266",
+      "tt0629149"
+     ],
+     "top_values": [
+      [
+       "tt0629422",
+       117
+      ],
+      [
+       "tt0629228",
+       117
+      ],
+      [
+       "tt0629306",
+       115
+      ],
+      [
+       "tt0629170",
+       115
+      ],
+      [
+       "tt0629394",
+       114
+      ],
+      [
+       "tt0629420",
+       110
+      ],
+      [
+       "tt0629292",
+       108
+      ],
+      [
+       "tt0629204",
+       108
+      ],
+      [
+       "tt0629266",
+       106
+      ],
+      [
+       "tt0629391",
+       101
+      ],
+      [
+       "tt0629289",
+       98
+      ],
+      [
+       "tt0629146",
+       90
+      ],
+      [
+       "tt0629448",
+       88
+      ],
+      [
+       "tt0629153",
+       88
+      ],
+      [
+       "tt0629397",
+       85
+      ],
+      [
+       "tt0629398",
+       82
+      ],
+      [
+       "tt0629239",
+       81
+      ],
+      [
+       "tt0629409",
+       79
+      ],
+      [
+       "tt0629321",
+       75
+      ],
+      [
+       "tt0629149",
+       73
+      ],
+      [
+       "tt0629487",
+       72
+      ],
+      [
+       "tt0629291",
+       72
+      ],
+      [
+       "tt0629248",
+       70
+      ],
+      [
+       "tt0629477",
+       67
+      ]
+     ],
+     "description": "episode id. the id of the episode to which the credit information pertains",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "person_id",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 798,
+     "is_unique": false,
+     "min_value": "nm0000210",
+     "max_value": "nm8639197",
+     "examples": [
+      "nm0226352",
+      "nm0506974",
+      "nm4103116",
+      "nm0645048",
+      "nm5632505"
+     ],
+     "top_values": [],
+     "description": "person id. the id of the person to which the credit information pertains",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "category",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": "Additional Crew",
+     "max_value": "Writing Credits",
+     "examples": [
+      "Additional Crew"
+     ],
+     "top_values": [
+      [
+       "Cast",
+       876
+      ],
+      [
+       "Produced by",
+       220
+      ],
+      [
+       "Additional Crew",
+       201
+      ],
+      [
+       "General",
+       183
+      ],
+      [
+       "Art Department",
+       182
+      ],
+      [
+       "Camera and Electrical Department",
+       169
+      ],
+      [
+       "Sound Department",
+       77
+      ],
+      [
+       "Location Management",
+       50
+      ],
+      [
+       "Editorial Department",
+       40
+      ],
+      [
+       "Casting Department",
+       37
+      ],
+      [
+       "Script and Continuity Department",
+       35
+      ],
+      [
+       "Production Management",
+       34
+      ],
+      [
+       "Transportation Department",
+       26
+      ],
+      [
+       "Music Department",
+       26
+      ],
+      [
+       "Costume and Wardrobe Department",
+       21
+      ],
+      [
+       "Makeup Department",
+       20
+      ],
+      [
+       "Writing Credits",
+       17
+      ],
+      [
+       "Film Editing by",
+       8
+      ],
+      [
+       "Stunts",
+       6
+      ],
+      [
+       "Directed by",
+       3
+      ]
+     ],
+     "description": "the kind of credit being recognized",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "role",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 752,
+     "is_unique": false,
+     "min_value": "A.D.A. Abbie Carmichael",
+     "max_value": "writer",
+     "examples": [
+      "technical advisor",
+      "production accountant",
+      "president of NBC West Coast",
+      "executive assistant to executive producer",
+      "production coordinator"
+     ],
+     "top_values": [],
+     "description": "the role for which the person is being recognized",
+     "value_description": "If the credit is for an actor, this is the name of the character he or she portrayed (Dan Florek plays Donald Craven). Otherwise, this is the production role (producer, sound editor).",
+     "notes": []
+    },
+    {
+     "name": "credited",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "false",
+     "max_value": "true",
+     "examples": [
+      "true",
+      "false"
+     ],
+     "top_values": [
+      [
+       "true",
+       2061
+      ],
+      [
+       "false",
+       170
+      ]
+     ],
+     "description": "whether the credit was displayed in the credits at the end of the episode",
+     "value_description": "commonsense evidence: A person may fill a role in an episode, but not show up in the on-screen credits. In this case, the work is said to be \"uncredited.\"",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "episode_id",
+    "person_id"
+   ],
+   "sample_rows": [
+    {
+     "episode_id": "tt0629204",
+     "person_id": "nm0226352",
+     "category": "Additional Crew",
+     "role": "technical advisor",
+     "credited": "true"
+    },
+    {
+     "episode_id": "tt0629204",
+     "person_id": "nm0506974",
+     "category": "Additional Crew",
+     "role": "production accountant",
+     "credited": "true"
+    },
+    {
+     "episode_id": "tt0629204",
+     "person_id": "nm4103116",
+     "category": "Additional Crew",
+     "role": "production accountant",
+     "credited": "true"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Episode",
+   "row_count": 24,
+   "stats_rows": 24,
+   "columns": [
+    {
+     "name": "episode_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": true,
+     "min_value": "tt0629146",
+     "max_value": "tt0629487",
+     "examples": [
+      "tt0629204",
+      "tt0629228",
+      "tt0629170",
+      "tt0629266",
+      "tt0629149"
+     ],
+     "top_values": [
+      [
+       "tt0629487",
+       1
+      ],
+      [
+       "tt0629477",
+       1
+      ],
+      [
+       "tt0629448",
+       1
+      ],
+      [
+       "tt0629422",
+       1
+      ],
+      [
+       "tt0629420",
+       1
+      ],
+      [
+       "tt0629409",
+       1
+      ],
+      [
+       "tt0629398",
+       1
+      ],
+      [
+       "tt0629397",
+       1
+      ],
+      [
+       "tt0629394",
+       1
+      ],
+      [
+       "tt0629391",
+       1
+      ],
+      [
+       "tt0629321",
+       1
+      ],
+      [
+       "tt0629306",
+       1
+      ],
+      [
+       "tt0629292",
+       1
+      ],
+      [
+       "tt0629291",
+       1
+      ],
+      [
+       "tt0629289",
+       1
+      ],
+      [
+       "tt0629266",
+       1
+      ],
+      [
+       "tt0629248",
+       1
+      ],
+      [
+       "tt0629239",
+       1
+      ],
+      [
+       "tt0629228",
+       1
+      ],
+      [
+       "tt0629204",
+       1
+      ],
+      [
+       "tt0629170",
+       1
+      ],
+      [
+       "tt0629153",
+       1
+      ],
+      [
+       "tt0629149",
+       1
+      ],
+      [
+       "tt0629146",
+       1
+      ]
+     ],
+     "description": "episode id. the unique identifier of the episode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "series",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "Law and Order",
+     "max_value": "Law and Order",
+     "examples": [
+      "Law and Order"
+     ],
+     "top_values": [
+      [
+       "Law and Order",
+       24
+      ]
+     ],
+     "description": "the name of the series",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "season",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 9,
+     "max_value": 9,
+     "examples": [
+      9
+     ],
+     "top_values": [
+      [
+       9,
+       24
+      ]
+     ],
+     "description": "a number indicating the season of the episode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "episode",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 24,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the sequential number of the episode within a specific season",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "number_in_series",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": true,
+     "min_value": 182,
+     "max_value": 205,
+     "examples": [
+      182,
+      183,
+      184,
+      185,
+      186
+     ],
+     "top_values": [
+      [
+       205,
+       1
+      ],
+      [
+       204,
+       1
+      ],
+      [
+       203,
+       1
+      ],
+      [
+       202,
+       1
+      ],
+      [
+       201,
+       1
+      ],
+      [
+       200,
+       1
+      ],
+      [
+       199,
+       1
+      ],
+      [
+       198,
+       1
+      ],
+      [
+       197,
+       1
+      ],
+      [
+       196,
+       1
+      ],
+      [
+       195,
+       1
+      ],
+      [
+       194,
+       1
+      ],
+      [
+       193,
+       1
+      ],
+      [
+       192,
+       1
+      ],
+      [
+       191,
+       1
+      ],
+      [
+       190,
+       1
+      ],
+      [
+       189,
+       1
+      ],
+      [
+       188,
+       1
+      ],
+      [
+       187,
+       1
+      ],
+      [
+       186,
+       1
+      ],
+      [
+       185,
+       1
+      ],
+      [
+       184,
+       1
+      ],
+      [
+       183,
+       1
+      ],
+      [
+       182,
+       1
+      ]
+     ],
+     "description": "number in series. the overall sequence number of episode in the entire series",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": true,
+     "min_value": "Admissions",
+     "max_value": "Venom",
+     "examples": [
+      "Cherished",
+      "DWB",
+      "Bait",
+      "Flight",
+      "Agony"
+     ],
+     "top_values": [
+      [
+       "Venom",
+       1
+      ],
+      [
+       "True North",
+       1
+      ],
+      [
+       "Tabula Rasa",
+       1
+      ],
+      [
+       "Sideshow",
+       1
+      ],
+      [
+       "Shield",
+       1
+      ],
+      [
+       "Scrambled",
+       1
+      ],
+      [
+       "Refuge: Part 2",
+       1
+      ],
+      [
+       "Refuge: Part 1",
+       1
+      ],
+      [
+       "Ramparts",
+       1
+      ],
+      [
+       "Punk",
+       1
+      ],
+      [
+       "Juvenile",
+       1
+      ],
+      [
+       "Hunters",
+       1
+      ],
+      [
+       "Haven",
+       1
+      ],
+      [
+       "Hate",
+       1
+      ],
+      [
+       "Harm",
+       1
+      ],
+      [
+       "Flight",
+       1
+      ],
+      [
+       "Empire",
+       1
+      ],
+      [
+       "Disciple",
+       1
+      ],
+      [
+       "DWB",
+       1
+      ],
+      [
+       "Cherished",
+       1
+      ],
+      [
+       "Bait",
+       1
+      ],
+      [
+       "Ambitious",
+       1
+      ],
+      [
+       "Agony",
+       1
+      ],
+      [
+       "Admissions",
+       1
+      ]
+     ],
+     "description": "the title of the episode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "summary",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": true,
+     "min_value": "A brutal murder of a Russian man has ties to the Russian mob...",
+     "max_value": "White police officers are accused of beating and dragging an...",
+     "examples": [
+      "New assistant DA Abbie Carmichael aggressively investigates ...",
+      "White police officers are accused of beating and dragging an...",
+      "A teenager who was shot in a drug deal gone bad claims to ha...",
+      "Prosecutors have trouble making a case against a father accu...",
+      "After a woman is brutally attacked, the police believe they ..."
+     ],
+     "top_values": [
+      [
+       "White police officers are accused of beating and dragging an...",
+       1
+      ],
+      [
+       "When a teenage girl is found dead in a park, the detectives ...",
+       1
+      ],
+      [
+       "Two violent and overzealous bounty hunters working for a bai...",
+       1
+      ],
+      [
+       "The unlikely suspect in the murder of a community activist a...",
+       1
+      ],
+      [
+       "The son of an imprisoned crime boss and a couple of strip cl...",
+       1
+      ],
+      [
+       "The prime suspect in the murder of a college professor is a ...",
+       1
+      ],
+      [
+       "The discovery of a dead body inside a Volkswagen van dumped ...",
+       1
+      ],
+      [
+       "The death of a government official in New York leads Jack Mc...",
+       1
+      ],
+      [
+       "The Manhattan DA's office finds itself in the middle of a ba...",
+       1
+      ],
+      [
+       "Prosecutors have trouble making a case against a father accu...",
+       1
+      ],
+      [
+       "New assistant DA Abbie Carmichael aggressively investigates ...",
+       1
+      ],
+      [
+       "Hitmen reach the last witness in the Russian mob case, which...",
+       1
+      ],
+      [
+       "Carmichael aggressively pursues criminally negligent homicid...",
+       1
+      ],
+      [
+       "An investigative reporter is shot, and evidence indicates a ...",
+       1
+      ],
+      [
+       "An inmate accused of arranging a hit on a corrections office...",
+       1
+      ],
+      [
+       "An Hispanic mathematics professor is the prime suspect in th...",
+       1
+      ],
+      [
+       "After a woman is brutally attacked, the police believe they ...",
+       1
+      ],
+      [
+       "A teenager who was shot in a drug deal gone bad claims to ha...",
+       1
+      ],
+      [
+       "A rebellious child dies during an unsanctioned exorcism cere...",
+       1
+      ],
+      [
+       "A murder case leads detectives to a mother/son team of con a...",
+       1
+      ],
+      [
+       "A murder at a fertility clinic leads to a complicated, bitte...",
+       1
+      ],
+      [
+       "A female police officer is accused of killing a fellow polic...",
+       1
+      ],
+      [
+       "A businessman planning to build a new football stadium in Ne...",
+       1
+      ],
+      [
+       "A brutal murder of a Russian man has ties to the Russian mob...",
+       1
+      ]
+     ],
+     "description": "a brief description of what happens in the episode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "air_date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": "1998-09-23",
+     "max_value": "1999-05-26",
+     "examples": [
+      "1998-09-23",
+      "1998-10-07",
+      "1998-10-14",
+      "1998-10-21",
+      "1998-11-04"
+     ],
+     "top_values": [
+      [
+       "1999-05-26",
+       2
+      ],
+      [
+       "1999-02-10",
+       2
+      ],
+      [
+       "1999-05-19",
+       1
+      ],
+      [
+       "1999-05-12",
+       1
+      ],
+      [
+       "1999-05-05",
+       1
+      ],
+      [
+       "1999-04-20",
+       1
+      ],
+      [
+       "1999-04-14",
+       1
+      ],
+      [
+       "1999-03-24",
+       1
+      ],
+      [
+       "1999-03-03",
+       1
+      ],
+      [
+       "1999-02-24",
+       1
+      ],
+      [
+       "1999-02-17",
+       1
+      ],
+      [
+       "1999-01-13",
+       1
+      ],
+      [
+       "1999-01-06",
+       1
+      ],
+      [
+       "1998-12-09",
+       1
+      ],
+      [
+       "1998-11-25",
+       1
+      ],
+      [
+       "1998-11-18",
+       1
+      ],
+      [
+       "1998-11-11",
+       1
+      ],
+      [
+       "1998-11-04",
+       1
+      ],
+      [
+       "1998-10-21",
+       1
+      ],
+      [
+       "1998-10-14",
+       1
+      ],
+      [
+       "1998-10-07",
+       1
+      ],
+      [
+       "1998-09-23",
+       1
+      ]
+     ],
+     "description": "air date. the date the episode was initially broadcast in the United States",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "episode_image",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": true,
+     "min_value": "https://m.media-amazon.com/images/M/MV5BMDIwZDA2NzItOTNiZC00...",
+     "max_value": "https://m.media-amazon.com/images/M/MV5BZjQyN2ZkYjUtM2E4ZC00...",
+     "examples": [
+      "https://m.media-amazon.com/images/M/MV5BODFmZmI2YTgtN2Y2Mi00...",
+      "https://m.media-amazon.com/images/M/MV5BNWEyM2NkZjktN2YwOS00...",
+      "https://m.media-amazon.com/images/M/MV5BYzI5ZDU4NzUtYzE0My00...",
+      "https://m.media-amazon.com/images/M/MV5BMmVlZWZlOWEtYjQ0MC00...",
+      "https://m.media-amazon.com/images/M/MV5BMzQ2ZmI1OGEtMDhkMi00..."
+     ],
+     "top_values": [
+      [
+       "https://m.media-amazon.com/images/M/MV5BZjQyN2ZkYjUtM2E4ZC00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BYzI5ZDU4NzUtYzE0My00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BYmZiZDM4MjEtNWY3ZS00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BYmJiZGIyMzItZTUxMi00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BYjBhN2U3ZDUtYmY0My00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BY2YzZTU0OWMtMzMwZS00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BY2U3YmUzODMtYWMyMS00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BOTU5MWY2OGQtYzUxZS00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BOGQ1YTQ1NDktMzY4OS00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BODFmZmI2YTgtN2Y2Mi00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BNzg3Zjk4ZWQtNTJhZS00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BNzdkZjdiN2ItNDE2My00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BNzc5MjI0YmItZjM5Zi00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BNjI0YjM3ZDAtYzMzNC00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BNWY5ZWMwMTUtYjNhZS00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BNWMxN2RjMTQtMjQxYS00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BNWEyM2NkZjktN2YwOS00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BNGM2ZDlmMTctZjEyOS00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BNDAyOTRkMzgtMGU4My00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMzQ2ZmI1OGEtMDhkMi00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMmVlZWZlOWEtYjQ0MC00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMjRkYzY2OTctZDMzOC00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMDc5NzU1MjUtYzQ0ZS00...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMDIwZDA2NzItOTNiZC00...",
+       1
+      ]
+     ],
+     "description": "episode image. a link to an image from the episode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "rating",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": 7.4,
+     "max_value": 8.6,
+     "examples": [
+      7.9,
+      7.6,
+      8.2,
+      7.7,
+      7.8
+     ],
+     "top_values": [
+      [
+       7.8,
+       5
+      ],
+      [
+       7.6,
+       4
+      ],
+      [
+       7.9,
+       3
+      ],
+      [
+       8.2,
+       2
+      ],
+      [
+       8.0,
+       2
+      ],
+      [
+       7.7,
+       2
+      ],
+      [
+       7.5,
+       2
+      ],
+      [
+       8.6,
+       1
+      ],
+      [
+       8.5,
+       1
+      ],
+      [
+       8.1,
+       1
+      ],
+      [
+       7.4,
+       1
+      ]
+     ],
+     "description": "the weighted average of the votes received for the episode",
+     "value_description": "commonsense evidence: The higher rating means the episode has more positive viewer comments.",
+     "notes": []
+    },
+    {
+     "name": "votes",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": 153,
+     "max_value": 218,
+     "examples": [
+      203,
+      177,
+      159,
+      165,
+      187
+     ],
+     "top_values": [
+      [
+       203,
+       2
+      ],
+      [
+       160,
+       2
+      ],
+      [
+       218,
+       1
+      ],
+      [
+       204,
+       1
+      ],
+      [
+       199,
+       1
+      ],
+      [
+       190,
+       1
+      ],
+      [
+       187,
+       1
+      ],
+      [
+       186,
+       1
+      ],
+      [
+       183,
+       1
+      ],
+      [
+       181,
+       1
+      ],
+      [
+       177,
+       1
+      ],
+      [
+       176,
+       1
+      ],
+      [
+       174,
+       1
+      ],
+      [
+       166,
+       1
+      ],
+      [
+       165,
+       1
+      ],
+      [
+       164,
+       1
+      ],
+      [
+       162,
+       1
+      ],
+      [
+       159,
+       1
+      ],
+      [
+       158,
+       1
+      ],
+      [
+       157,
+       1
+      ],
+      [
+       156,
+       1
+      ],
+      [
+       153,
+       1
+      ]
+     ],
+     "description": "the total number of rating votes for the episode",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "episode_id"
+   ],
+   "sample_rows": [
+    {
+     "episode_id": "tt0629204",
+     "series": "Law and Order",
+     "season": 9,
+     "episode": 1,
+     "number_in_series": 182,
+     "title": "Cherished",
+     "summary": "New assistant DA Abbie Carmichael aggressively investigates ...",
+     "air_date": "1998-09-23",
+     "episode_image": "https://m.media-amazon.com/images/M/MV5BODFmZmI2YTgtN2Y2Mi00...",
+     "rating": 7.9,
+     "votes": 203
+    },
+    {
+     "episode_id": "tt0629228",
+     "series": "Law and Order",
+     "season": 9,
+     "episode": 2,
+     "number_in_series": 183,
+     "title": "DWB",
+     "summary": "White police officers are accused of beating and dragging an...",
+     "air_date": "1998-10-07",
+     "episode_image": "https://m.media-amazon.com/images/M/MV5BNWEyM2NkZjktN2YwOS00...",
+     "rating": 7.9,
+     "votes": 177
+    },
+    {
+     "episode_id": "tt0629170",
+     "series": "Law and Order",
+     "season": 9,
+     "episode": 3,
+     "number_in_series": 184,
+     "title": "Bait",
+     "summary": "A teenager who was shot in a drug deal gone bad claims to ha...",
+     "air_date": "1998-10-14",
+     "episode_image": "https://m.media-amazon.com/images/M/MV5BYzI5ZDU4NzUtYzE0My00...",
+     "rating": 7.6,
+     "votes": 159
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Keyword",
+   "row_count": 33,
+   "stats_rows": 33,
+   "columns": [
+    {
+     "name": "episode_id",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "tt0629239",
+     "max_value": "tt0629420",
+     "examples": [
+      "tt0629239",
+      "tt0629420",
+      "tt0629397"
+     ],
+     "top_values": [
+      [
+       "tt0629397",
+       28
+      ],
+      [
+       "tt0629420",
+       3
+      ],
+      [
+       "tt0629239",
+       2
+      ]
+     ],
+     "description": "episode id. the id of the episode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "keyword",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 33,
+     "is_unique": true,
+     "min_value": "bank",
+     "max_value": "witnessing",
+     "examples": [
+      "nun",
+      "priest",
+      "police officer",
+      "police officer killed",
+      "police officer shot"
+     ],
+     "top_values": [
+      [
+       "witnessing",
+       1
+      ],
+      [
+       "witness to murder",
+       1
+      ],
+      [
+       "witness to a crime",
+       1
+      ],
+      [
+       "witness tampering",
+       1
+      ],
+      [
+       "witness protection",
+       1
+      ],
+      [
+       "witness for the prosecution",
+       1
+      ],
+      [
+       "witness",
+       1
+      ],
+      [
+       "russian woman",
+       1
+      ],
+      [
+       "russian mob",
+       1
+      ],
+      [
+       "russian mafia",
+       1
+      ],
+      [
+       "russian girl",
+       1
+      ],
+      [
+       "russian gang",
+       1
+      ],
+      [
+       "russian",
+       1
+      ],
+      [
+       "protected witness",
+       1
+      ],
+      [
+       "professional hitman",
+       1
+      ],
+      [
+       "priest",
+       1
+      ],
+      [
+       "police officer shot",
+       1
+      ],
+      [
+       "police officer killed",
+       1
+      ],
+      [
+       "police officer",
+       1
+      ],
+      [
+       "nun",
+       1
+      ],
+      [
+       "murder witness",
+       1
+      ],
+      [
+       "murder of a witness",
+       1
+      ],
+      [
+       "mistress",
+       1
+      ],
+      [
+       "mafia",
+       1
+      ],
+      [
+       "laundering money",
+       1
+      ],
+      [
+       "kill witness",
+       1
+      ],
+      [
+       "hitman",
+       1
+      ],
+      [
+       "female hitman",
+       1
+      ],
+      [
+       "eyewitness",
+       1
+      ],
+      [
+       "columbian mafia",
+       1
+      ],
+      [
+       "child witness",
+       1
+      ],
+      [
+       "bank president",
+       1
+      ],
+      [
+       "bank",
+       1
+      ]
+     ],
+     "description": "the keyword that is relevant for the episode",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "episode_id",
+    "keyword"
+   ],
+   "sample_rows": [
+    {
+     "episode_id": "tt0629239",
+     "keyword": "nun"
+    },
+    {
+     "episode_id": "tt0629239",
+     "keyword": "priest"
+    },
+    {
+     "episode_id": "tt0629420",
+     "keyword": "police officer"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Person",
+   "row_count": 800,
+   "stats_rows": 800,
+   "columns": [
+    {
+     "name": "person_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 800,
+     "is_unique": true,
+     "min_value": "nm0000210",
+     "max_value": "nm8639197",
+     "examples": [
+      "nm0000210",
+      "nm0049569",
+      "nm0288886",
+      "nm0538744",
+      "nm0578294"
+     ],
+     "top_values": [],
+     "description": "person id. the unique identifier for the person",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 800,
+     "is_unique": true,
+     "min_value": "Adam Grupper",
+     "max_value": "Zoe Saldana",
+     "examples": [
+      "Julia Roberts",
+      "Rene Balcer",
+      "Billy Fox",
+      "Constantine Makris",
+      "Thomas Meloeny"
+     ],
+     "top_values": [],
+     "description": "the name of the person",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "birthdate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.5537,
+     "distinct_count": 355,
+     "is_unique": false,
+     "min_value": "1930-01-15",
+     "max_value": "2029-08-21",
+     "examples": [
+      "1967-10-28",
+      "1954-02-09",
+      "1930-01-15",
+      "1946-12-20",
+      "1970-04-01"
+     ],
+     "top_values": [],
+     "description": "birth date. the date the person was born",
+     "value_description": "if null, it means this birthdate of the person is not available",
+     "notes": [
+      "55% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "birth_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.7837,
+     "distinct_count": 173,
+     "is_unique": true,
+     "min_value": "Aleksander Krupa",
+     "max_value": "Zoë Yadira Saldaña Nazario",
+     "examples": [
+      "Julia Fiona Roberts",
+      "Rene Chenevert Balcer",
+      "William M. Nicholson",
+      "Richard A. Wolf",
+      "Sondra Karyl Kattlove"
+     ],
+     "top_values": [],
+     "description": "birth name. the name parents gave to the person shortly after birth",
+     "value_description": "",
+     "notes": [
+      "78% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "birth_place",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.58,
+     "distinct_count": 178,
+     "is_unique": false,
+     "min_value": "Albany",
+     "max_value": "York",
+     "examples": [
+      "Smyrna",
+      "Montreal",
+      "Harrisburg",
+      "New York City",
+      "Wilmington"
+     ],
+     "top_values": [],
+     "description": "birth place. the place where a person was born",
+     "value_description": "commonsense evidence: the birth place info is integrate if birth_name, birth_place, birth_region don't contain null value\nthe full birth place = birth_country +birth_region +birth_place",
+     "notes": [
+      "58% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "birth_region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.5787,
+     "distinct_count": 47,
+     "is_unique": false,
+     "min_value": "Alabama",
+     "max_value": "Yorkshire",
+     "examples": [
+      "Georgia",
+      "Quebec",
+      "Pennsylvania",
+      "New York",
+      "North Carolina"
+     ],
+     "top_values": [
+      [
+       "New York",
+       115
+      ],
+      [
+       "Pennsylvania",
+       25
+      ],
+      [
+       "New Jersey",
+       22
+      ],
+      [
+       "Massachusetts",
+       16
+      ],
+      [
+       "California",
+       15
+      ],
+      [
+       "Michigan",
+       12
+      ],
+      [
+       "Illinois",
+       11
+      ],
+      [
+       "Texas",
+       9
+      ],
+      [
+       "Ohio",
+       9
+      ],
+      [
+       "North Carolina",
+       8
+      ],
+      [
+       "Connecticut",
+       8
+      ],
+      [
+       "Missouri",
+       6
+      ],
+      [
+       "Indiana",
+       6
+      ],
+      [
+       "Georgia",
+       6
+      ],
+      [
+       "District of Columbia",
+       6
+      ],
+      [
+       "Virginia",
+       5
+      ],
+      [
+       "Maryland",
+       5
+      ],
+      [
+       "Louisiana",
+       5
+      ],
+      [
+       "Kansas",
+       5
+      ],
+      [
+       "Tennessee",
+       3
+      ],
+      [
+       "Ontario",
+       3
+      ],
+      [
+       "Minnesota",
+       3
+      ],
+      [
+       "London",
+       3
+      ],
+      [
+       "West Virginia",
+       2
+      ],
+      [
+       "Rhode Island",
+       2
+      ],
+      [
+       "Maine",
+       2
+      ],
+      [
+       "Kentucky",
+       2
+      ],
+      [
+       "Iowa",
+       2
+      ],
+      [
+       "Florida",
+       2
+      ],
+      [
+       "Delaware",
+       2
+      ],
+      [
+       "Yorkshire",
+       1
+      ],
+      [
+       "Washington",
+       1
+      ],
+      [
+       "Vermont",
+       1
+      ],
+      [
+       "Utah",
+       1
+      ],
+      [
+       "Tuscany",
+       1
+      ],
+      [
+       "Slaskie",
+       1
+      ],
+      [
+       "Québec",
+       1
+      ],
+      [
+       "Quebec",
+       1
+      ],
+      [
+       "Puerto Rico",
+       1
+      ],
+      [
+       "Oklahoma",
+       1
+      ],
+      [
+       "Idaho",
+       1
+      ],
+      [
+       "Hawaii",
+       1
+      ],
+      [
+       "Fife",
+       1
+      ],
+      [
+       "Colorado",
+       1
+      ],
+      [
+       "British Columbia",
+       1
+      ],
+      [
+       "Arizona",
+       1
+      ],
+      [
+       "Alabama",
+       1
+      ]
+     ],
+     "description": "birth region. the geographical area describing where a person was born that is larger than the birth place",
+     "value_description": "",
+     "notes": [
+      "58% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "birth_country",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.5588,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": "Canada",
+     "max_value": "USSR",
+     "examples": [
+      "USA",
+      "Canada",
+      "England",
+      "USSR"
+     ],
+     "top_values": [
+      [
+       "USA",
+       330
+      ],
+      [
+       "Canada",
+       6
+      ],
+      [
+       "England",
+       4
+      ],
+      [
+       "USSR",
+       1
+      ],
+      [
+       "Turkey",
+       1
+      ],
+      [
+       "Sri Lanka",
+       1
+      ],
+      [
+       "South Korea",
+       1
+      ],
+      [
+       "Slovenia",
+       1
+      ],
+      [
+       "Scotland",
+       1
+      ],
+      [
+       "Romania",
+       1
+      ],
+      [
+       "Poland",
+       1
+      ],
+      [
+       "Italy",
+       1
+      ],
+      [
+       "Ireland",
+       1
+      ],
+      [
+       "India",
+       1
+      ],
+      [
+       "Germany",
+       1
+      ],
+      [
+       "Colombia",
+       1
+      ]
+     ],
+     "description": "birth country. the name of the country where the person was born",
+     "value_description": "commonsense evidence: can ask questions about its corresponding continent: e.g.: \nUSA --> North America",
+     "notes": [
+      "56% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "height_meters",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.8025,
+     "distinct_count": 29,
+     "is_unique": false,
+     "min_value": 1.57,
+     "max_value": 1.96,
+     "examples": [
+      1.73,
+      1.88,
+      1.93,
+      1.8,
+      1.75
+     ],
+     "top_values": [
+      [
+       1.83,
+       25
+      ],
+      [
+       1.75,
+       18
+      ],
+      [
+       1.88,
+       12
+      ],
+      [
+       1.85,
+       12
+      ],
+      [
+       1.8,
+       12
+      ],
+      [
+       1.73,
+       9
+      ],
+      [
+       1.78,
+       8
+      ],
+      [
+       1.65,
+       8
+      ],
+      [
+       1.7,
+       7
+      ],
+      [
+       1.68,
+       6
+      ],
+      [
+       1.91,
+       5
+      ],
+      [
+       1.63,
+       5
+      ],
+      [
+       1.6,
+       5
+      ],
+      [
+       1.77,
+       4
+      ],
+      [
+       1.87,
+       3
+      ],
+      [
+       1.93,
+       2
+      ],
+      [
+       1.79,
+       2
+      ],
+      [
+       1.74,
+       2
+      ],
+      [
+       1.61,
+       2
+      ],
+      [
+       1.57,
+       2
+      ],
+      [
+       1.96,
+       1
+      ],
+      [
+       1.92,
+       1
+      ],
+      [
+       1.89,
+       1
+      ],
+      [
+       1.82,
+       1
+      ],
+      [
+       1.81,
+       1
+      ],
+      [
+       1.69,
+       1
+      ],
+      [
+       1.67,
+       1
+      ],
+      [
+       1.64,
+       1
+      ],
+      [
+       1.59,
+       1
+      ]
+     ],
+     "description": "height meters. how tall the person is in meters",
+     "value_description": "",
+     "notes": [
+      "80% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "nickname",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9575,
+     "distinct_count": 34,
+     "is_unique": true,
+     "min_value": "Angie",
+     "max_value": "Valcin",
+     "examples": [
+      "Jules",
+      "Gus",
+      "Ed",
+      "Dagmar",
+      "Mike Preston"
+     ],
+     "top_values": [
+      [
+       "Valcin",
+       1
+      ],
+      [
+       "Tucci",
+       1
+      ],
+      [
+       "Tom Conway",
+       1
+      ],
+      [
+       "The History Channel Guy",
+       1
+      ],
+      [
+       "The Belz",
+       1
+      ],
+      [
+       "That Guy Over There",
+       1
+      ],
+      [
+       "San",
+       1
+      ],
+      [
+       "Rony",
+       1
+      ],
+      [
+       "Ronald Foster",
+       1
+      ],
+      [
+       "Motele",
+       1
+      ],
+      [
+       "Mo",
+       1
+      ],
+      [
+       "Mike the Bike",
+       1
+      ],
+      [
+       "Mike Preston",
+       1
+      ],
+      [
+       "Mare",
+       1
+      ],
+      [
+       "Larry",
+       1
+      ],
+      [
+       "Kada",
+       1
+      ],
+      [
+       "Jules",
+       1
+      ],
+      [
+       "Joe Lat",
+       1
+      ],
+      [
+       "Jimbo",
+       1
+      ],
+      [
+       "Jay",
+       1
+      ],
+      [
+       "Gus",
+       1
+      ],
+      [
+       "Garold",
+       1
+      ],
+      [
+       "Franny",
+       1
+      ],
+      [
+       "Frankie",
+       1
+      ],
+      [
+       "Ed",
+       1
+      ],
+      [
+       "Dick Hughes",
+       1
+      ],
+      [
+       "Dagmar",
+       1
+      ],
+      [
+       "Chevi",
+       1
+      ],
+      [
+       "Carriker, Terri",
+       1
+      ],
+      [
+       "Bobby Reed",
+       1
+      ],
+      [
+       "Bobby",
+       1
+      ],
+      [
+       "Bill",
+       1
+      ],
+      [
+       "Axe",
+       1
+      ],
+      [
+       "Angie",
+       1
+      ]
+     ],
+     "description": "the nickname the person goes by",
+     "value_description": "",
+     "notes": [
+      "96% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "person_id"
+   ],
+   "sample_rows": [
+    {
+     "person_id": "nm0000210",
+     "name": "Julia Roberts",
+     "birthdate": "1967-10-28",
+     "birth_name": "Julia Fiona Roberts",
+     "birth_place": "Smyrna",
+     "birth_region": "Georgia",
+     "birth_country": "USA",
+     "height_meters": 1.73,
+     "nickname": "Jules"
+    },
+    {
+     "person_id": "nm0049569",
+     "name": "Rene Balcer",
+     "birthdate": "1954-02-09",
+     "birth_name": "Rene Chenevert Balcer",
+     "birth_place": "Montreal",
+     "birth_region": "Quebec",
+     "birth_country": "Canada",
+     "height_meters": null,
+     "nickname": null
+    },
+    {
+     "person_id": "nm0288886",
+     "name": "Billy Fox",
+     "birthdate": null,
+     "birth_name": null,
+     "birth_place": null,
+     "birth_region": null,
+     "birth_country": null,
+     "height_meters": null,
+     "nickname": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Vote",
+   "row_count": 240,
+   "stats_rows": 240,
+   "columns": [
+    {
+     "name": "episode_id",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": "tt0629146",
+     "max_value": "tt0629487",
+     "examples": [
+      "tt0629204",
+      "tt0629228",
+      "tt0629170",
+      "tt0629266",
+      "tt0629149"
+     ],
+     "top_values": [
+      [
+       "tt0629487",
+       10
+      ],
+      [
+       "tt0629477",
+       10
+      ],
+      [
+       "tt0629448",
+       10
+      ],
+      [
+       "tt0629422",
+       10
+      ],
+      [
+       "tt0629420",
+       10
+      ],
+      [
+       "tt0629409",
+       10
+      ],
+      [
+       "tt0629398",
+       10
+      ],
+      [
+       "tt0629397",
+       10
+      ],
+      [
+       "tt0629394",
+       10
+      ],
+      [
+       "tt0629391",
+       10
+      ],
+      [
+       "tt0629321",
+       10
+      ],
+      [
+       "tt0629306",
+       10
+      ],
+      [
+       "tt0629292",
+       10
+      ],
+      [
+       "tt0629291",
+       10
+      ],
+      [
+       "tt0629289",
+       10
+      ],
+      [
+       "tt0629266",
+       10
+      ],
+      [
+       "tt0629248",
+       10
+      ],
+      [
+       "tt0629239",
+       10
+      ],
+      [
+       "tt0629228",
+       10
+      ],
+      [
+       "tt0629204",
+       10
+      ],
+      [
+       "tt0629170",
+       10
+      ],
+      [
+       "tt0629153",
+       10
+      ],
+      [
+       "tt0629149",
+       10
+      ],
+      [
+       "tt0629146",
+       10
+      ]
+     ],
+     "description": "episode id. the id of the episode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "stars",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 10,
+     "examples": [
+      10,
+      9,
+      8,
+      7,
+      6
+     ],
+     "top_values": [
+      [
+       10,
+       24
+      ],
+      [
+       9,
+       24
+      ],
+      [
+       8,
+       24
+      ],
+      [
+       7,
+       24
+      ],
+      [
+       6,
+       24
+      ],
+      [
+       5,
+       24
+      ],
+      [
+       4,
+       24
+      ],
+      [
+       3,
+       24
+      ],
+      [
+       2,
+       24
+      ],
+      [
+       1,
+       24
+      ]
+     ],
+     "description": "a number between 1 and 10 indicating how much the viewer enjoyed the episode",
+     "value_description": "commonsense evidence: The higher the number, the more the episode was enjoyed",
+     "notes": []
+    },
+    {
+     "name": "votes",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 58,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 72,
+     "examples": [
+      36,
+      39,
+      64,
+      35,
+      13
+     ],
+     "top_values": [],
+     "description": "The total number of viewers that gave the specific episode the number of stars indicated in the \"stars\" column",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "percent",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 135,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 35.3,
+     "examples": [
+      17.7,
+      19.2,
+      31.5,
+      17.2,
+      6.4
+     ],
+     "top_values": [],
+     "description": "The percent of viewers that gave the specific episode the number of stars indicated in the \"stars\" column",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "episode_id": "tt0629204",
+     "stars": 10,
+     "votes": 36,
+     "percent": 17.7
+    },
+    {
+     "episode_id": "tt0629204",
+     "stars": 9,
+     "votes": 39,
+     "percent": 19.2
+    },
+    {
+     "episode_id": "tt0629204",
+     "stars": 8,
+     "votes": 64,
+     "percent": 31.5
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "Award",
+   "from_column": "person_id",
+   "to_table": "Person",
+   "to_column": "person_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Award",
+   "from_column": "episode_id",
+   "to_table": "Episode",
+   "to_column": "episode_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Credit",
+   "from_column": "person_id",
+   "to_table": "Person",
+   "to_column": "person_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Credit",
+   "from_column": "episode_id",
+   "to_table": "Episode",
+   "to_column": "episode_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Keyword",
+   "from_column": "episode_id",
+   "to_table": "Episode",
+   "to_column": "episode_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Vote",
+   "from_column": "episode_id",
+   "to_table": "Episode",
+   "to_column": "episode_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Award",
+   "from_column": "episode_id",
+   "to_table": "Credit",
+   "to_column": "episode_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Keyword",
+   "from_column": "episode_id",
+   "to_table": "Credit",
+   "to_column": "episode_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Vote",
+   "from_column": "episode_id",
+   "to_table": "Credit",
+   "to_column": "episode_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

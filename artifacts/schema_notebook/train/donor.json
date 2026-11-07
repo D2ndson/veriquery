@@ -1,0 +1,2451 @@
+{
+ "db_id": "donor",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/donor/donor.sqlite",
+ "fingerprint": "4497768448-1793993084097609540-v1.0",
+ "created_at": "2026-11-06T19:25:44+00:00",
+ "profile_seconds": 52.576,
+ "tables": [
+  {
+   "name": "donations",
+   "row_count": 3097556,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "donationid",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": "00004179ea6003e99dd6dd3a18f65109",
+     "max_value": "ffffd48fa2f52e2f1d36610a4c3d6b84",
+     "examples": [
+      "431d720bc3dfd75ae445a5eaa0b0638d",
+      "fcfedba1c8a0ba77d280cace80a909f6",
+      "3fa95d29986aa6f401c6719ced3a3ce7",
+      "020ad6bd5e88a35741d23b5e08f8b8e8",
+      "4b44b03f304d6425ae94446686f93cd6"
+     ],
+     "top_values": [],
+     "description": "unique donation identifier",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "projectid",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 33546,
+     "is_unique": false,
+     "min_value": "ef9b8926082033fa2828640cee5369d1",
+     "max_value": "ffffac55ee02a49d1abc87ba6fc61135",
+     "examples": [
+      "ffffac55ee02a49d1abc87ba6fc61135",
+      "ffff97ed93720407d70a2787475932b0",
+      "ffff418bb42fad24347527ad96100f81",
+      "ffff2d9c769c8fb5335e949c615425eb",
+      "fffeebf4827d745aa36b17c2d38d1966"
+     ],
+     "top_values": [],
+     "description": "project identifier that received the donation",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "donor_acctid",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 124327,
+     "is_unique": false,
+     "min_value": "00004604e6624b5c03da7e1a4440dc93",
+     "max_value": "ffff96b7f6370e0f8641dbcdc014e61c",
+     "examples": [
+      "22cbc920c9b5fa08dfb331422f5926b5",
+      "521f1830a77c9dbbf8119d99c6206a16",
+      "1e0a63fc8141c7ba26b8b44ca0871b90",
+      "1d4acb508df29d5f1cc6d382969576cb",
+      "59c3c3cfcccc53ae855f7eee911c478b"
+     ],
+     "top_values": [],
+     "description": "donor accid. donor that made a donation",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "donor_city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.4793,
+     "distinct_count": 7038,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "zanesville",
+     "examples": [
+      "Peachtree City",
+      "Rockville",
+      "Salem",
+      "anonymous",
+      ""
+     ],
+     "top_values": [],
+     "description": "donor city. donation city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "donor_state",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1963,
+     "distinct_count": 60,
+     "is_unique": false,
+     "min_value": "  ",
+     "max_value": "WY",
+     "examples": [
+      "GA",
+      "MD",
+      "IN",
+      "NY",
+      "TX"
+     ],
+     "top_values": [],
+     "description": "donor state. donation state",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "donor_zip",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.5553,
+     "distinct_count": 11147,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "99999",
+     "examples": [
+      "30269",
+      "20853",
+      "47167",
+      "0",
+      "83201"
+     ],
+     "top_values": [],
+     "description": "donor zip. donation zip code",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison",
+      "56% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "is_teacher_acct",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f",
+      "t"
+     ],
+     "top_values": [
+      [
+       "f",
+       177014
+      ],
+      [
+       "t",
+       22986
+      ]
+     ],
+     "description": "is teacher acct. whether donor is also a teacher",
+     "value_description": "commonsense evidence:\n• f: false, it means this donor is not a teacher\n• t: true, it means this donor is a teacher",
+     "notes": []
+    },
+    {
+     "name": "donation_timestamp",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 199526,
+     "is_unique": false,
+     "min_value": "2000-03-01 14:24:26",
+     "max_value": "2014-04-27 00:32:15.206",
+     "examples": [
+      "2011-08-25 14:27:34.807",
+      "2011-11-04 07:54:21.552",
+      "2011-11-02 22:53:53.019",
+      "2011-11-03 23:54:01.109",
+      "2011-11-02 23:21:00.043"
+     ],
+     "top_values": [],
+     "description": "donation timestamp. the time of donation",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "donation_to_project",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22665,
+     "is_unique": false,
+     "min_value": -11.8,
+     "max_value": 14609.75,
+     "examples": [
+      42.5,
+      26.83,
+      55.35,
+      8.5,
+      20.0
+     ],
+     "top_values": [],
+     "description": "donation to project. amount to project, excluding optional support (tip)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "donation_optional_support",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10015,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 2578.19,
+     "examples": [
+      7.5,
+      4.73,
+      0.0,
+      1.5,
+      0.75
+     ],
+     "top_values": [],
+     "description": "donation optional support. amount of optional support",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "donation_total",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 23907,
+     "is_unique": false,
+     "min_value": -11.8,
+     "max_value": 17187.94,
+     "examples": [
+      50.0,
+      31.56,
+      55.35,
+      10.0,
+      20.0
+     ],
+     "top_values": [],
+     "description": "donation total. donated amount",
+     "value_description": "commonsense evidence:\ndonated amount = donation_to_project + donation_optional_support",
+     "notes": []
+    },
+    {
+     "name": "dollar_amount",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "100_and_up",
+     "max_value": "under_10",
+     "examples": [
+      "10_to_100",
+      "under_10",
+      "100_and_up"
+     ],
+     "top_values": [
+      [
+       "10_to_100",
+       131737
+      ],
+      [
+       "100_and_up",
+       40856
+      ],
+      [
+       "under_10",
+       27407
+      ]
+     ],
+     "description": "dollar amount. donated amount in US dollars",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "donation_included_optional_support",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "t",
+      "f"
+     ],
+     "top_values": [
+      [
+       "t",
+       179981
+      ],
+      [
+       "f",
+       20019
+      ]
+     ],
+     "description": "donation included optional support. whether optional support (tip) was included for DonorsChoose.org",
+     "value_description": "commonsense evidence:\n• f: false, optional support (tip) was not included for DonorsChoose.org\n• t: true, optional support (tip) was included for DonorsChoose.org",
+     "notes": []
+    },
+    {
+     "name": "payment_method",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": "almost_home_match",
+     "max_value": "promo_code_match",
+     "examples": [
+      "no_cash_received",
+      "creditcard",
+      "paypal",
+      "amazon",
+      "promo_code_match"
+     ],
+     "top_values": [
+      [
+       "no_cash_received",
+       94091
+      ],
+      [
+       "creditcard",
+       58101
+      ],
+      [
+       "paypal",
+       16826
+      ],
+      [
+       "promo_code_match",
+       15352
+      ],
+      [
+       "double_your_impact_match",
+       6708
+      ],
+      [
+       "amazon",
+       5680
+      ],
+      [
+       "check",
+       1889
+      ],
+      [
+       "almost_home_match",
+       1353
+      ]
+     ],
+     "description": "payment method. what card/payment option was used",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "payment_included_acct_credit",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f",
+      "t"
+     ],
+     "top_values": [
+      [
+       "f",
+       178787
+      ],
+      [
+       "t",
+       21213
+      ]
+     ],
+     "description": "payment included acct credit. whether a portion of a donation used account credits redemption",
+     "value_description": "commonsense evidence:\n• f: false, a portion of a donation didn't use account credits redemption\n• t: true, a portion of a donation used account credits redemption",
+     "notes": []
+    },
+    {
+     "name": "payment_included_campaign_gift_card",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "t",
+      "f"
+     ],
+     "top_values": [
+      [
+       "f",
+       132605
+      ],
+      [
+       "t",
+       67395
+      ]
+     ],
+     "description": "payment included campaign gift card. whether a portion of a donation included corporate sponsored gift card",
+     "value_description": "commonsense evidence:\n• f: false, a portion of a donation included corporate sponsored gift card\n• t: true, a portion of a donation included corporate sponsored gift card",
+     "notes": []
+    },
+    {
+     "name": "payment_included_web_purchased_gift_card",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f",
+      "t"
+     ],
+     "top_values": [
+      [
+       "f",
+       189592
+      ],
+      [
+       "t",
+       10408
+      ]
+     ],
+     "description": "payment included web purchased gift card. whether a portion of a donation included citizen purchased gift card (ex: friend buy a gift card for you)",
+     "value_description": "• f: false\n• t: true",
+     "notes": []
+    },
+    {
+     "name": "payment_was_promo_matched",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f",
+      "t"
+     ],
+     "top_values": [
+      [
+       "f",
+       183469
+      ],
+      [
+       "t",
+       16531
+      ]
+     ],
+     "description": "payment was promo matched. whether a donation was matched 1-1 with corporate funds",
+     "value_description": "commonsense evidence:\n• f: false, a donation was not matched 1-1 with corporate funds\n• t: true, a donation was matched 1-1 with corporate funds",
+     "notes": []
+    },
+    {
+     "name": "via_giving_page",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f",
+      "t"
+     ],
+     "top_values": [
+      [
+       "f",
+       133993
+      ],
+      [
+       "t",
+       66007
+      ]
+     ],
+     "description": "via giving page. donation given via a giving / campaign page (example: Mustaches for Kids)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "for_honoree",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f",
+      "t"
+     ],
+     "top_values": [
+      [
+       "f",
+       195949
+      ],
+      [
+       "t",
+       4051
+      ]
+     ],
+     "description": "for honoree. donation made for an honoree",
+     "value_description": "commonsense evidence:\n• f: false, this donation is not made for an honoree\n• t: true, this donation is made for an honoree",
+     "notes": []
+    },
+    {
+     "name": "donation_message",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.2576,
+     "distinct_count": 76049,
+     "is_unique": false,
+     "min_value": "\t\n\\nAt DIRECTV, we believe in the importance of science, tec...",
+     "max_value": "♪♫Happy Birthday, Adam! ♫♪ ♥ Glambert  #3557",
+     "examples": [
+      "I gave to this project because I support the efforts of this...",
+      "I donated because I want to support kids in Georgia.",
+      "The Spark's 'pet' projects include those which support deaf ...",
+      "I gave to this project because Education is important and an...",
+      "I lent a paw to help the children in this classroom in Georg..."
+     ],
+     "top_values": [],
+     "description": "donation message. donation comment/message",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "donationid"
+   ],
+   "sample_rows": [
+    {
+     "donationid": "431d720bc3dfd75ae445a5eaa0b0638d",
+     "projectid": "ffffac55ee02a49d1abc87ba6fc61135",
+     "donor_acctid": "22cbc920c9b5fa08dfb331422f5926b5",
+     "donor_city": "Peachtree City",
+     "donor_state": "GA",
+     "donor_zip": "30269",
+     "is_teacher_acct": "f",
+     "donation_timestamp": "2011-08-25 14:27:34.807",
+     "donation_to_project": 42.5,
+     "donation_optional_support": 7.5,
+     "donation_total": 50.0,
+     "dollar_amount": "10_to_100",
+     "donation_included_optional_support": "t",
+     "payment_method": "no_cash_received",
+     "payment_included_acct_credit": "f",
+     "payment_included_campaign_gift_card": "t",
+     "payment_included_web_purchased_gift_card": "f",
+     "payment_was_promo_matched": "f",
+     "via_giving_page": "f",
+     "for_honoree": "f",
+     "donation_message": "I gave to this project because I support the efforts of this..."
+    },
+    {
+     "donationid": "fcfedba1c8a0ba77d280cace80a909f6",
+     "projectid": "ffffac55ee02a49d1abc87ba6fc61135",
+     "donor_acctid": "521f1830a77c9dbbf8119d99c6206a16",
+     "donor_city": null,
+     "donor_state": "GA",
+     "donor_zip": null,
+     "is_teacher_acct": "f",
+     "donation_timestamp": "2011-11-04 07:54:21.552",
+     "donation_to_project": 26.83,
+     "donation_optional_support": 4.73,
+     "donation_total": 31.56,
+     "dollar_amount": "10_to_100",
+     "donation_included_optional_support": "t",
+     "payment_method": "creditcard",
+     "payment_included_acct_credit": "f",
+     "payment_included_campaign_gift_card": "t",
+     "payment_included_web_purchased_gift_card": "f",
+     "payment_was_promo_matched": "f",
+     "via_giving_page": "f",
+     "for_honoree": "f",
+     "donation_message": "I donated because I want to support kids in Georgia."
+    },
+    {
+     "donationid": "3fa95d29986aa6f401c6719ced3a3ce7",
+     "projectid": "ffffac55ee02a49d1abc87ba6fc61135",
+     "donor_acctid": "1e0a63fc8141c7ba26b8b44ca0871b90",
+     "donor_city": "Rockville",
+     "donor_state": "MD",
+     "donor_zip": "20853",
+     "is_teacher_acct": "f",
+     "donation_timestamp": "2011-11-02 22:53:53.019",
+     "donation_to_project": 55.35,
+     "donation_optional_support": 0.0,
+     "donation_total": 55.35,
+     "dollar_amount": "10_to_100",
+     "donation_included_optional_support": "f",
+     "payment_method": "no_cash_received",
+     "payment_included_acct_credit": "t",
+     "payment_included_campaign_gift_card": "f",
+     "payment_included_web_purchased_gift_card": "f",
+     "payment_was_promo_matched": "f",
+     "via_giving_page": "t",
+     "for_honoree": "f",
+     "donation_message": "The Spark's 'pet' projects include those which support deaf ..."
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 3,097,556 rows"
+   ]
+  },
+  {
+   "name": "essays",
+   "row_count": 99998,
+   "stats_rows": 99998,
+   "columns": [
+    {
+     "name": "projectid",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 99998,
+     "is_unique": true,
+     "min_value": "\\nI am trying to provide my students with basic necessities ...",
+     "max_value": "ffffc4f85b60efc5b52347df489d0238",
+     "examples": [
+      "ffffc4f85b60efc5b52347df489d0238",
+      "ffffac55ee02a49d1abc87ba6fc61135",
+      "ffff97ed93720407d70a2787475932b0",
+      "ffff7266778f71242675416e600b94e1",
+      "ffff418bb42fad24347527ad96100f81"
+     ],
+     "top_values": [],
+     "description": "unique project identifier",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "teacher_acctid",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 68583,
+     "is_unique": false,
+     "min_value": " should the need arise. Currently",
+     "max_value": "fffce598ea805118936f629dc2af8631",
+     "examples": [
+      "c24011b20fc161ed02248e85beb59a90",
+      "947066d0af47e0566f334566553dd6a6",
+      "462270f5d5c212162fcab11afa2623cb",
+      "b9a8f14199e0d8109200ece179281f4f",
+      "e885fb002a1d0d39aaed9d21a7683549"
+     ],
+     "top_values": [],
+     "description": "teacher acctid. teacher id that created a project",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 93160,
+     "is_unique": false,
+     "min_value": "\tWindows to Knowledge for Students with Vision Impairment",
+     "max_value": "�Podcasting En Espa�ol!",
+     "examples": [
+      "iMath",
+      "Recording Rockin' Readers",
+      "Kindergarten In Need of Important Materials!",
+      "Let's Find Out!",
+      "Whistle While We Work!"
+     ],
+     "top_values": [],
+     "description": "title of the project",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "short_description",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0002,
+     "distinct_count": 99107,
+     "is_unique": false,
+     "min_value": "\tI teach fourth grade at an elementary school in Southeast W...",
+     "max_value": "“e-Classroom” is a project that will help transform a tradit...",
+     "examples": [
+      "It is imperative that teachers bring technology into the cla...",
+      "Can you imagine having to translate everything you read into...",
+      "It takes a special person to donate to a group of children t...",
+      "My Kindergarten students come from a variety of backgrounds....",
+      "By using the cross curricular games requested, students will..."
+     ],
+     "top_values": [],
+     "description": "short description of a project",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "need_statement",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0023,
+     "distinct_count": 98038,
+     "is_unique": false,
+     "min_value": "\n\\nA Therm-A-Bind 250T thermal binder, ten sets of assorted ...",
+     "max_value": "•My students need 300 pens, 300 pencils, 300 glue sticks, an...",
+     "examples": [
+      "My students need four iPods.",
+      "My students need a camcorder. ",
+      "My students need 17 assorted classroom materials to ensure t...",
+      "My students need 25 copies of Scholastic's \"Let's Find Out!\"...",
+      "My students need grade level appropriate games so that they ..."
+     ],
+     "top_values": [],
+     "description": "need statement of a project",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "essay",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 99054,
+     "is_unique": false,
+     "min_value": "\t\n\\nI am a fourth year teacher working at an inner city scho...",
+     "max_value": "﻿I am a special education teacher at Muir Elementary in Boun...",
+     "examples": [
+      "I am a fourth year fifth grade math teacher. The school I te...",
+      "Can you imagine having to translate everything you read into...",
+      "Hi. I teach a wonderful group of 4-5 year old Kindergarten s...",
+      "My Kindergarten students come from a variety of backgrounds....",
+      "All work and no play makes school a dull place to learn. Our..."
+     ],
+     "top_values": [],
+     "description": "complete project essay",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "projectid": "ffffc4f85b60efc5b52347df489d0238",
+     "teacher_acctid": "c24011b20fc161ed02248e85beb59a90",
+     "title": "iMath",
+     "short_description": "It is imperative that teachers bring technology into the cla...",
+     "need_statement": "My students need four iPods.",
+     "essay": "I am a fourth year fifth grade math teacher. The school I te..."
+    },
+    {
+     "projectid": "ffffac55ee02a49d1abc87ba6fc61135",
+     "teacher_acctid": "947066d0af47e0566f334566553dd6a6",
+     "title": "Recording Rockin' Readers",
+     "short_description": "Can you imagine having to translate everything you read into...",
+     "need_statement": "My students need a camcorder. ",
+     "essay": "Can you imagine having to translate everything you read into..."
+    },
+    {
+     "projectid": "ffff97ed93720407d70a2787475932b0",
+     "teacher_acctid": "462270f5d5c212162fcab11afa2623cb",
+     "title": "Kindergarten In Need of Important Materials!",
+     "short_description": "It takes a special person to donate to a group of children t...",
+     "need_statement": "My students need 17 assorted classroom materials to ensure t...",
+     "essay": "Hi. I teach a wonderful group of 4-5 year old Kindergarten s..."
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "projects",
+   "row_count": 664098,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "projectid",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": "00001ccc0e81598c4bd86bacb94d7acb",
+     "max_value": "ffff7266778f71242675416e600b94e1",
+     "examples": [
+      "316ed8fb3b81402ff6ac8f721bb31192",
+      "90de744e368a7e4883223ca49318ae30",
+      "32943bb1063267de6ed19fc0ceb4b9a7",
+      "bb18f409abda2f264d5acda8cab577a9",
+      "24761b686e18e5eace634607acbcc19f"
+     ],
+     "top_values": [],
+     "description": "project id. project's unique identifier",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "teacher_acctid",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 103986,
+     "is_unique": false,
+     "min_value": "0000fb6aea57099cc5b051acb7f52a9e",
+     "max_value": "ffff0e2011fcdf31aefd7aee0719e4fb",
+     "examples": [
+      "42d43fa6f37314365d08692e08680973",
+      "864eb466462bf704bf7a16a585ef296a",
+      "37f85135259ece793213aca9d8765542",
+      "2133fc46f951f1e7d60645b0f9e48a6c",
+      "867ff478a63f5457eaf41049536c47cd"
+     ],
+     "top_values": [],
+     "description": "teacher's unique identifier (teacher that created a project)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "schoolid",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 35934,
+     "is_unique": false,
+     "min_value": "0000efec25428001c9dd83f651c5d181",
+     "max_value": "fffc0387dcfbd2a43582dc7ec444f10a",
+     "examples": [
+      "c0e6ce89b244764085691a1b8e28cb81",
+      "d711e47810900c96f26a5d0be30c446d",
+      "665c3613013ba0a66e3a2a26b89f1b68",
+      "4f12c3fa0c1cce823c7ba1df57e90ccb",
+      "10179fd362d7b8cf0e89baa1ca3025bb"
+     ],
+     "top_values": [],
+     "description": "school's identifier (school where teacher works)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_ncesid",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0042,
+     "distinct_count": 32940,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "610000801737",
+     "examples": [
+      "063627006187",
+      "483702008193",
+      "410327000109",
+      "360015302507",
+      "062271003157"
+     ],
+     "top_values": [],
+     "description": "school national center for education statistics id. Public National Center for Ed Statistics id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_latitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 34959,
+     "is_unique": false,
+     "min_value": 18.24914,
+     "max_value": 67.258157,
+     "examples": [
+      36.57634,
+      32.911179,
+      45.166039,
+      40.641727,
+      34.043939
+     ],
+     "top_values": [],
+     "description": "school latitude. latitude of school",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_longitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 34954,
+     "is_unique": false,
+     "min_value": -171.690554,
+     "max_value": -66.628036,
+     "examples": [
+      -119.608713,
+      -96.72364,
+      -122.414576,
+      -73.965655,
+      -118.288371
+     ],
+     "top_values": [],
+     "description": "school longitude. longitude of school",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6782,
+     "is_unique": false,
+     "min_value": "Abbeville",
+     "max_value": "Zwolle",
+     "examples": [
+      "Selma",
+      "Dallas",
+      "Colton",
+      "Brooklyn",
+      "Los Angeles"
+     ],
+     "top_values": [],
+     "description": "school city. city where the school is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_state",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 51,
+     "is_unique": false,
+     "min_value": "AK",
+     "max_value": "WY",
+     "examples": [
+      "CA",
+      "TX",
+      "OR",
+      "NY",
+      "AZ"
+     ],
+     "top_values": [],
+     "description": "school state. state where the school is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_zip",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12681,
+     "is_unique": false,
+     "min_value": 1001,
+     "max_value": 99926,
+     "examples": [
+      93662,
+      75243,
+      97017,
+      11226,
+      90006
+     ],
+     "top_values": [],
+     "description": "school zip. zipcode of school",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_metro",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.1318,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "rural",
+     "max_value": "urban",
+     "examples": [
+      "urban",
+      "rural",
+      "suburban"
+     ],
+     "top_values": [
+      [
+       "urban",
+       95242
+      ],
+      [
+       "suburban",
+       54498
+      ],
+      [
+       "rural",
+       23902
+      ]
+     ],
+     "description": "school metro. metro where the school is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_district",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6839,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "[State run]",
+     "examples": [
+      "Selma Unified Sch District",
+      "Richardson Ind School District",
+      "Colton School District 53",
+      "New York City Dept Of Ed",
+      "Los Angeles Unif Sch Dist"
+     ],
+     "top_values": [],
+     "description": "school district. district where the school is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_county",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1540,
+     "is_unique": false,
+     "min_value": "Abbeville",
+     "max_value": "Yuma",
+     "examples": [
+      "Fresno",
+      "Dallas",
+      "Clackamas",
+      "Kings (Brooklyn)",
+      "Los Angeles"
+     ],
+     "top_values": [],
+     "description": "school county. country where the school is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_charter",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f",
+      "t"
+     ],
+     "top_values": [
+      [
+       "f",
+       181227
+      ],
+      [
+       "t",
+       18773
+      ]
+     ],
+     "description": "school charter. whether it is a public charter school or not (no private schools in the dataset)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_magnet",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f",
+      "t"
+     ],
+     "top_values": [
+      [
+       "f",
+       184005
+      ],
+      [
+       "t",
+       15995
+      ]
+     ],
+     "description": "school magnet. whether a public magnet school or not",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_year_round",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f",
+      "t"
+     ],
+     "top_values": [
+      [
+       "f",
+       191177
+      ],
+      [
+       "t",
+       8823
+      ]
+     ],
+     "description": "school year round. whether it is a public year round school or not",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_nlns",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f",
+      "t"
+     ],
+     "top_values": [
+      [
+       "f",
+       198292
+      ],
+      [
+       "t",
+       1708
+      ]
+     ],
+     "description": "school Nonleafy Normal Stature. whether it is a public Nonleafy Normal Stature school or not",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_kipp",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f"
+     ],
+     "top_values": [
+      [
+       "f",
+       198832
+      ],
+      [
+       "t",
+       1168
+      ]
+     ],
+     "description": "school Knowledge Is Power Program. whether it is a public Knowledge Power Program school or not",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school_charter_ready_promise",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f"
+     ],
+     "top_values": [
+      [
+       "f",
+       199436
+      ],
+      [
+       "t",
+       564
+      ]
+     ],
+     "description": "school charter ready promise. whether it is a public ready promise school or not",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "teacher_prefix",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Ms.",
+     "examples": [
+      "Mrs.",
+      "Mr.",
+      "Ms."
+     ],
+     "top_values": [
+      [
+       "Mrs.",
+       96023
+      ],
+      [
+       "Ms.",
+       77980
+      ],
+      [
+       "Mr.",
+       25985
+      ],
+      [
+       "Dr.",
+       8
+      ],
+      [
+       "",
+       4
+      ]
+     ],
+     "description": "teacher prefix. teacher's gender",
+     "value_description": "commonsense evidence:\nif the value is equal to \"Dr. \", it means this teacher acquired P.h.D or doctor degree.",
+     "notes": []
+    },
+    {
+     "name": "teacher_teach_for_america",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f",
+      "t"
+     ],
+     "top_values": [
+      [
+       "f",
+       191458
+      ],
+      [
+       "t",
+       8542
+      ]
+     ],
+     "description": "teachers teach for america. Teach for America or not",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "teacher_ny_teaching_fellow",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f",
+      "t"
+     ],
+     "top_values": [
+      [
+       "f",
+       198297
+      ],
+      [
+       "t",
+       1703
+      ]
+     ],
+     "description": "teacher_new_york_teaching_fellow. New York teaching fellow or not",
+     "value_description": "• t: true\n• f: false\ncommonsense evidence:\nif true: it means that this teacher is a New York teacher",
+     "notes": []
+    },
+    {
+     "name": "primary_focus_subject",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0001,
+     "distinct_count": 27,
+     "is_unique": false,
+     "min_value": "Applied Sciences",
+     "max_value": "Visual Arts",
+     "examples": [
+      "Literature & Writing",
+      "Literacy",
+      "Social Sciences",
+      "Mathematics",
+      "Gym & Fitness"
+     ],
+     "top_values": [
+      [
+       "Literacy",
+       58567
+      ],
+      [
+       "Mathematics",
+       28290
+      ],
+      [
+       "Literature & Writing",
+       25139
+      ],
+      [
+       "Special Needs",
+       13771
+      ],
+      [
+       "Applied Sciences",
+       10279
+      ],
+      [
+       "Visual Arts",
+       9093
+      ],
+      [
+       "Environmental Science",
+       8344
+      ],
+      [
+       "Health & Life Science",
+       6560
+      ],
+      [
+       "Music",
+       6115
+      ],
+      [
+       "History & Geography",
+       4167
+      ],
+      [
+       "Early Development",
+       4132
+      ],
+      [
+       "Other",
+       2900
+      ],
+      [
+       "Performing Arts",
+       2729
+      ],
+      [
+       "ESL",
+       2659
+      ],
+      [
+       "Health & Wellness",
+       2597
+      ],
+      [
+       "Character Education",
+       2418
+      ],
+      [
+       "College & Career Prep",
+       2234
+      ],
+      [
+       "Social Sciences",
+       2203
+      ],
+      [
+       "Gym & Fitness",
+       2128
+      ],
+      [
+       "Foreign Languages",
+       1451
+      ],
+      [
+       "Sports",
+       967
+      ],
+      [
+       "Economics",
+       926
+      ],
+      [
+       "Extracurricular",
+       774
+      ],
+      [
+       "Civics & Government",
+       605
+      ],
+      [
+       "Nutrition",
+       377
+      ],
+      [
+       "Community Service",
+       364
+      ],
+      [
+       "Parent Involvement",
+       183
+      ]
+     ],
+     "description": "primary focus subject. main subject for which project materials are intended",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "primary_focus_area",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0001,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "Applied Learning",
+     "max_value": "Special Needs",
+     "examples": [
+      "Literacy & Language",
+      "History & Civics",
+      "Math & Science",
+      "Health & Sports",
+      "Applied Learning"
+     ],
+     "top_values": [
+      [
+       "Literacy & Language",
+       87816
+      ],
+      [
+       "Math & Science",
+       53473
+      ],
+      [
+       "Music & The Arts",
+       17937
+      ],
+      [
+       "Special Needs",
+       13771
+      ],
+      [
+       "Applied Learning",
+       13005
+      ],
+      [
+       "History & Civics",
+       7901
+      ],
+      [
+       "Health & Sports",
+       6069
+      ]
+     ],
+     "description": "primary focus area. main subject area for which project materials are intended",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "secondary_focus_subject",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.3177,
+     "distinct_count": 27,
+     "is_unique": false,
+     "min_value": "Applied Sciences",
+     "max_value": "Visual Arts",
+     "examples": [
+      "College & Career Prep",
+      "ESL",
+      "Mathematics",
+      "Special Needs",
+      "Literacy"
+     ],
+     "top_values": [
+      [
+       "Mathematics",
+       21671
+      ],
+      [
+       "Literacy",
+       20342
+      ],
+      [
+       "Literature & Writing",
+       19870
+      ],
+      [
+       "Special Needs",
+       8301
+      ],
+      [
+       "ESL",
+       7290
+      ],
+      [
+       "Applied Sciences",
+       5757
+      ],
+      [
+       "Early Development",
+       5649
+      ],
+      [
+       "Health & Life Science",
+       4995
+      ],
+      [
+       "Environmental Science",
+       4975
+      ],
+      [
+       "History & Geography",
+       4547
+      ],
+      [
+       "Performing Arts",
+       3827
+      ],
+      [
+       "Social Sciences",
+       3809
+      ],
+      [
+       "Visual Arts",
+       3588
+      ],
+      [
+       "College & Career Prep",
+       3225
+      ],
+      [
+       "Character Education",
+       3198
+      ],
+      [
+       "Other",
+       2951
+      ],
+      [
+       "Health & Wellness",
+       2629
+      ],
+      [
+       "Music",
+       1763
+      ],
+      [
+       "Extracurricular",
+       1284
+      ],
+      [
+       "Gym & Fitness",
+       1233
+      ],
+      [
+       "Civics & Government",
+       1061
+      ],
+      [
+       "Economics",
+       914
+      ],
+      [
+       "Community Service",
+       866
+      ],
+      [
+       "Parent Involvement",
+       733
+      ],
+      [
+       "Sports",
+       704
+      ],
+      [
+       "Foreign Languages",
+       673
+      ],
+      [
+       "Nutrition",
+       611
+      ]
+     ],
+     "description": "secondary focus subject. secondary subject",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "secondary_focus_area",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.3177,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "Applied Learning",
+     "max_value": "Special Needs",
+     "examples": [
+      "Applied Learning",
+      "Literacy & Language",
+      "Math & Science",
+      "Special Needs",
+      "History & Civics"
+     ],
+     "top_values": [
+      [
+       "Literacy & Language",
+       48175
+      ],
+      [
+       "Math & Science",
+       37398
+      ],
+      [
+       "Applied Learning",
+       17906
+      ],
+      [
+       "History & Civics",
+       10331
+      ],
+      [
+       "Music & The Arts",
+       9178
+      ],
+      [
+       "Special Needs",
+       8301
+      ],
+      [
+       "Health & Sports",
+       5177
+      ]
+     ],
+     "description": "secondary focus area. secondary subject area",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "resource_type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0002,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "Books",
+     "max_value": "Visitors",
+     "examples": [
+      "Books",
+      "Technology",
+      "Other",
+      "Supplies"
+     ],
+     "top_values": [
+      [
+       "Technology",
+       76102
+      ],
+      [
+       "Supplies",
+       63562
+      ],
+      [
+       "Books",
+       37464
+      ],
+      [
+       "Other",
+       21143
+      ],
+      [
+       "Trips",
+       1410
+      ],
+      [
+       "Visitors",
+       286
+      ]
+     ],
+     "description": "resource type. main type of resources requested by a project",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "poverty_level",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "high poverty",
+     "max_value": "moderate poverty",
+     "examples": [
+      "highest poverty",
+      "high poverty",
+      "moderate poverty",
+      "low poverty"
+     ],
+     "top_values": [
+      [
+       "highest poverty",
+       109193
+      ],
+      [
+       "high poverty",
+       52710
+      ],
+      [
+       "moderate poverty",
+       31597
+      ],
+      [
+       "low poverty",
+       6500
+      ]
+     ],
+     "description": "school's poverty level",
+     "value_description": "commonsense evidence:\nhighest: 65%+ free of reduced lunch; high: 40-64%; moderate: 10-39%low: 0-9%",
+     "notes": []
+    },
+    {
+     "name": "grade_level",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "Grades 3-5",
+     "max_value": "Grades PreK-2",
+     "examples": [
+      "Grades 6-8",
+      "Grades PreK-2",
+      "Grades 3-5",
+      "Grades 9-12"
+     ],
+     "top_values": [
+      [
+       "Grades PreK-2",
+       76033
+      ],
+      [
+       "Grades 3-5",
+       62818
+      ],
+      [
+       "Grades 6-8",
+       34628
+      ],
+      [
+       "Grades 9-12",
+       26517
+      ]
+     ],
+     "description": "grade level for which project materials are intended",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "fulfillment_labor_materials",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 30.0,
+     "max_value": 30.0,
+     "examples": [
+      30.0
+     ],
+     "top_values": [
+      [
+       30.0,
+       200000
+      ]
+     ],
+     "description": "fulfillment labor materials. cost of fulfillment",
+     "value_description": "commonsense evidence:\nhigher means higher cost, or need more labors",
+     "notes": []
+    },
+    {
+     "name": "total_price_excluding_optional_support",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 72762,
+     "is_unique": false,
+     "min_value": 50.3,
+     "max_value": 139725.41,
+     "examples": [
+      555.81,
+      296.47,
+      430.89,
+      576.07,
+      408.4
+     ],
+     "top_values": [],
+     "description": "total price excluding optional support. project cost excluding optional tip that donors give to DonorsChoose.org while funding a project",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "total_price_including_optional_support",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 72762,
+     "is_unique": false,
+     "min_value": 59.18,
+     "max_value": 164382.84,
+     "examples": [
+      653.89,
+      348.79,
+      506.93,
+      677.73,
+      480.47
+     ],
+     "top_values": [],
+     "description": "total price including optional support. project cost including optional tip that donors give to DonorsChoose.org while funding a project",
+     "value_description": "commonsense evidence:\ncost of optional tip = total_price_including_optional_support -total_price_excluding_optional_support",
+     "notes": []
+    },
+    {
+     "name": "students_reached",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0004,
+     "distinct_count": 855,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4871,
+     "examples": [
+      32,
+      22,
+      17,
+      12,
+      24
+     ],
+     "top_values": [],
+     "description": "students reached. number of students impacted by a project (if funded)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "eligible_double_your_impact_match",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f",
+      "t"
+     ],
+     "top_values": [
+      [
+       "f",
+       153007
+      ],
+      [
+       "t",
+       46993
+      ]
+     ],
+     "description": "eligible double your impact match. project was eligible for a 50% off offer by a corporate partner (logo appears on a project, like Starbucks or Disney)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "eligible_almost_home_match",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "f",
+     "max_value": "t",
+     "examples": [
+      "f"
+     ],
+     "top_values": [
+      [
+       "f",
+       195530
+      ],
+      [
+       "t",
+       4470
+      ]
+     ],
+     "description": "eligible almost home match. project was eligible for a $100 boost offer by a corporate partner",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "date_posted",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 570,
+     "is_unique": false,
+     "min_value": "2012-10-20",
+     "max_value": "2014-05-12",
+     "examples": [
+      "2014-05-12",
+      "2014-05-11"
+     ],
+     "top_values": [],
+     "description": "date posted. data a project went live on the site",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "projectid"
+   ],
+   "sample_rows": [
+    {
+     "projectid": "316ed8fb3b81402ff6ac8f721bb31192",
+     "teacher_acctid": "42d43fa6f37314365d08692e08680973",
+     "schoolid": "c0e6ce89b244764085691a1b8e28cb81",
+     "school_ncesid": "063627006187",
+     "school_latitude": 36.57634,
+     "school_longitude": -119.608713,
+     "school_city": "Selma",
+     "school_state": "CA",
+     "school_zip": 93662,
+     "school_metro": null,
+     "school_district": "Selma Unified Sch District",
+     "school_county": "Fresno",
+     "school_charter": "f",
+     "school_magnet": "f",
+     "school_year_round": "f",
+     "school_nlns": "f",
+     "school_kipp": "f",
+     "school_charter_ready_promise": "f",
+     "teacher_prefix": "Mrs.",
+     "teacher_teach_for_america": "f",
+     "teacher_ny_teaching_fellow": "f",
+     "primary_focus_subject": "Literature & Writing",
+     "primary_focus_area": "Literacy & Language",
+     "secondary_focus_subject": "College & Career Prep",
+     "secondary_focus_area": "Applied Learning",
+     "resource_type": "Books",
+     "poverty_level": "highest poverty",
+     "grade_level": "Grades 6-8",
+     "fulfillment_labor_materials": 30.0,
+     "total_price_excluding_optional_support": 555.81,
+     "total_price_including_optional_support": 653.89,
+     "students_reached": 32,
+     "eligible_double_your_impact_match": "f",
+     "eligible_almost_home_match": "f",
+     "date_posted": "2014-05-12"
+    },
+    {
+     "projectid": "90de744e368a7e4883223ca49318ae30",
+     "teacher_acctid": "864eb466462bf704bf7a16a585ef296a",
+     "schoolid": "d711e47810900c96f26a5d0be30c446d",
+     "school_ncesid": "483702008193",
+     "school_latitude": 32.911179,
+     "school_longitude": -96.72364,
+     "school_city": "Dallas",
+     "school_state": "TX",
+     "school_zip": 75243,
+     "school_metro": "urban",
+     "school_district": "Richardson Ind School District",
+     "school_county": "Dallas",
+     "school_charter": "f",
+     "school_magnet": "f",
+     "school_year_round": "f",
+     "school_nlns": "f",
+     "school_kipp": "f",
+     "school_charter_ready_promise": "f",
+     "teacher_prefix": "Mrs.",
+     "teacher_teach_for_america": "f",
+     "teacher_ny_teaching_fellow": "f",
+     "primary_focus_subject": "Literacy",
+     "primary_focus_area": "Literacy & Language",
+     "secondary_focus_subject": "ESL",
+     "secondary_focus_area": "Literacy & Language",
+     "resource_type": "Books",
+     "poverty_level": "highest poverty",
+     "grade_level": "Grades PreK-2",
+     "fulfillment_labor_materials": 30.0,
+     "total_price_excluding_optional_support": 296.47,
+     "total_price_including_optional_support": 348.79,
+     "students_reached": 22,
+     "eligible_double_your_impact_match": "f",
+     "eligible_almost_home_match": "f",
+     "date_posted": "2014-05-12"
+    },
+    {
+     "projectid": "32943bb1063267de6ed19fc0ceb4b9a7",
+     "teacher_acctid": "37f85135259ece793213aca9d8765542",
+     "schoolid": "665c3613013ba0a66e3a2a26b89f1b68",
+     "school_ncesid": "410327000109",
+     "school_latitude": 45.166039,
+     "school_longitude": -122.414576,
+     "school_city": "Colton",
+     "school_state": "OR",
+     "school_zip": 97017,
+     "school_metro": "rural",
+     "school_district": "Colton School District 53",
+     "school_county": "Clackamas",
+     "school_charter": "f",
+     "school_magnet": "f",
+     "school_year_round": "f",
+     "school_nlns": "f",
+     "school_kipp": "f",
+     "school_charter_ready_promise": "f",
+     "teacher_prefix": "Mr.",
+     "teacher_teach_for_america": "f",
+     "teacher_ny_teaching_fellow": "f",
+     "primary_focus_subject": "Literacy",
+     "primary_focus_area": "Literacy & Language",
+     "secondary_focus_subject": "Mathematics",
+     "secondary_focus_area": "Math & Science",
+     "resource_type": "Technology",
+     "poverty_level": "high poverty",
+     "grade_level": "Grades PreK-2",
+     "fulfillment_labor_materials": 30.0,
+     "total_price_excluding_optional_support": 430.89,
+     "total_price_including_optional_support": 506.93,
+     "students_reached": 17,
+     "eligible_double_your_impact_match": "f",
+     "eligible_almost_home_match": "f",
+     "date_posted": "2014-05-11"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 664,098 rows"
+   ]
+  },
+  {
+   "name": "resources",
+   "row_count": 3666757,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "resourceid",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": "0000222415de41c85b0e42e1117456f7",
+     "max_value": "ffff8e4a5cc1e3fb9cb336adf72d3fa9",
+     "examples": [
+      "8a1c1c45bc30d065061912fd9114fcf3",
+      "015d2c4935c50427964a12dc3f584091",
+      "26a02944b2f0c25f9abdeacca3ede3ee",
+      "7fef1f92cb4447d18d599f69ea27e833",
+      "8dccf77df25ee615bb1a68b98ba9d861"
+     ],
+     "top_values": [],
+     "description": "unique resource id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "projectid",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 36196,
+     "is_unique": false,
+     "min_value": "f1ed729d3b1849bb7c3bf102daecca89",
+     "max_value": "ffffc4f85b60efc5b52347df489d0238",
+     "examples": [
+      "ffffc4f85b60efc5b52347df489d0238",
+      "ffffac55ee02a49d1abc87ba6fc61135",
+      "ffff97ed93720407d70a2787475932b0",
+      "ffff7266778f71242675416e600b94e1",
+      "ffff418bb42fad24347527ad96100f81"
+     ],
+     "top_values": [],
+     "description": "project id that requested resources for a classroom",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vendorid",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0301,
+     "distinct_count": 153,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1020,
+     "examples": [
+      430,
+      82,
+      767,
+      47,
+      773
+     ],
+     "top_values": [],
+     "description": "vendor id that supplies resources to a project",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vendor_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0301,
+     "distinct_count": 152,
+     "is_unique": false,
+     "min_value": "ABC School Supply",
+     "max_value": "the yoga site",
+     "examples": [
+      "Woodwind and Brasswind",
+      "Best Buy for Business",
+      "Lakeshore Learning Materials",
+      "Scholastic Classroom Magazines",
+      "School Specialty"
+     ],
+     "top_values": [],
+     "description": "vendor name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "project_resource_type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "Books",
+     "max_value": "Visitors",
+     "examples": [
+      "Technology",
+      "Supplies",
+      "Other",
+      "Books"
+     ],
+     "top_values": [
+      [
+       "Books",
+       86647
+      ],
+      [
+       "Supplies",
+       71876
+      ],
+      [
+       "Technology",
+       26302
+      ],
+      [
+       "Other",
+       14730
+      ],
+      [
+       "Trips",
+       371
+      ],
+      [
+       "Visitors",
+       68
+      ]
+     ],
+     "description": "project resource type. type of resource",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "item_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0042,
+     "distinct_count": 109331,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "•\tiGuy Standing Cover for iPad & iPad 2",
+     "examples": [
+      "iPod nano 4th Gen 8GB (Black)",
+      "Sony bloggie MHS-FS1 - camcorder - internal flash memory",
+      "VX748 - Best-Buy Jumbo Crayons - 12-Color Box",
+      "LA138 - Best-Buy Write & Wipe Broad-Tip Markers - Class Pack",
+      "BJ7471 - 1 1/2&#34; Ruled Chart Tablet"
+     ],
+     "top_values": [],
+     "description": "item name. resource name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "item_number",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0042,
+     "distinct_count": 105928,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "ydd928046-x",
+     "examples": [
+      "249995.001",
+      "BB11216668",
+      "VX748",
+      "LA138",
+      "BJ7471"
+     ],
+     "top_values": [],
+     "description": "item number. resource item identifier",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "item_unit_price",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0043,
+     "distinct_count": 10991,
+     "is_unique": false,
+     "min_value": -22.0,
+     "max_value": 27894.99,
+     "examples": [
+      149.0,
+      148.0,
+      69.95,
+      34.95,
+      10.95
+     ],
+     "top_values": [],
+     "description": "item unit price. unit price of the resource",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "item_quantity",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0025,
+     "distinct_count": 148,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 10500,
+     "examples": [
+      4,
+      1,
+      2,
+      3,
+      25
+     ],
+     "top_values": [],
+     "description": "item quantity. number of a specific item requested by a teacher",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "resourceid"
+   ],
+   "sample_rows": [
+    {
+     "resourceid": "8a1c1c45bc30d065061912fd9114fcf3",
+     "projectid": "ffffc4f85b60efc5b52347df489d0238",
+     "vendorid": 430,
+     "vendor_name": "Woodwind and Brasswind",
+     "project_resource_type": "Technology",
+     "item_name": "iPod nano 4th Gen 8GB (Black)",
+     "item_number": "249995.001",
+     "item_unit_price": 149.0,
+     "item_quantity": 4
+    },
+    {
+     "resourceid": "015d2c4935c50427964a12dc3f584091",
+     "projectid": "ffffac55ee02a49d1abc87ba6fc61135",
+     "vendorid": 82,
+     "vendor_name": "Best Buy for Business",
+     "project_resource_type": "Technology",
+     "item_name": "Sony bloggie MHS-FS1 - camcorder - internal flash memory",
+     "item_number": "BB11216668",
+     "item_unit_price": 148.0,
+     "item_quantity": 1
+    },
+    {
+     "resourceid": "26a02944b2f0c25f9abdeacca3ede3ee",
+     "projectid": "ffff97ed93720407d70a2787475932b0",
+     "vendorid": 767,
+     "vendor_name": "Lakeshore Learning Materials",
+     "project_resource_type": "Supplies",
+     "item_name": "VX748 - Best-Buy Jumbo Crayons - 12-Color Box",
+     "item_number": "VX748",
+     "item_unit_price": 69.95,
+     "item_quantity": 1
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 3,666,757 rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "donations",
+   "from_column": "projectid",
+   "to_table": "projects",
+   "to_column": "projectid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "resources",
+   "from_column": "projectid",
+   "to_table": "projects",
+   "to_column": "projectid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "donations",
+   "from_column": "projectid",
+   "to_table": "essays",
+   "to_column": "projectid",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "essays",
+   "from_column": "projectid",
+   "to_table": "projects",
+   "to_column": "projectid",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "resources",
+   "from_column": "projectid",
+   "to_table": "essays",
+   "to_column": "projectid",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

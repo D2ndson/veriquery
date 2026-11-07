@@ -1,0 +1,1056 @@
+{
+ "db_id": "airline",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/airline/airline.sqlite",
+ "fingerprint": "122699776-1793993071822361151-v1.0",
+ "created_at": "2026-11-06T19:24:53+00:00",
+ "profile_seconds": 4.489,
+ "tables": [
+  {
+   "name": "Air Carriers",
+   "row_count": 1656,
+   "stats_rows": 1656,
+   "columns": [
+    {
+     "name": "Code",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1656,
+     "is_unique": true,
+     "min_value": 19031,
+     "max_value": 22005,
+     "examples": [
+      19031,
+      19032,
+      19033,
+      19034,
+      19035
+     ],
+     "top_values": [],
+     "description": "the code of the air carriers",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Description",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1656,
+     "is_unique": true,
+     "min_value": "21 Air LLC: 2PQ",
+     "max_value": "Zuliana De Aviacion: ZUQ",
+     "examples": [
+      "Mackey International Inc.: MAC",
+      "Munz Northern Airlines Inc.: XY",
+      "Cochise Airlines Inc.: COC",
+      "Golden Gate Airlines Inc.: GSA",
+      "Aeromech Inc.: RZZ"
+     ],
+     "top_values": [],
+     "description": "the description of air carriers",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Code"
+   ],
+   "sample_rows": [
+    {
+     "Code": 19031,
+     "Description": "Mackey International Inc.: MAC"
+    },
+    {
+     "Code": 19032,
+     "Description": "Munz Northern Airlines Inc.: XY"
+    },
+    {
+     "Code": 19033,
+     "Description": "Cochise Airlines Inc.: COC"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Airlines",
+   "row_count": 701352,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "FL_DATE",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": "2018/8/1",
+     "max_value": "2018/8/9",
+     "examples": [
+      "2018/8/1"
+     ],
+     "top_values": [
+      [
+       "2018/8/3",
+       23897
+      ],
+      [
+       "2018/8/2",
+       23835
+      ],
+      [
+       "2018/8/6",
+       23826
+      ],
+      [
+       "2018/8/1",
+       23566
+      ],
+      [
+       "2018/8/8",
+       23254
+      ],
+      [
+       "2018/8/7",
+       23102
+      ],
+      [
+       "2018/8/5",
+       23060
+      ],
+      [
+       "2018/8/4",
+       20207
+      ],
+      [
+       "2018/8/9",
+       15253
+      ]
+     ],
+     "description": "flight date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "OP_CARRIER_AIRLINE_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 26,
+     "is_unique": false,
+     "min_value": 19393,
+     "max_value": 21167,
+     "examples": [
+      19805
+     ],
+     "top_values": [
+      [
+       19393,
+       31013
+      ],
+      [
+       19790,
+       26470
+      ],
+      [
+       19805,
+       23421
+      ],
+      [
+       20304,
+       21114
+      ],
+      [
+       19977,
+       15495
+      ],
+      [
+       20452,
+       7818
+      ],
+      [
+       20398,
+       7772
+      ],
+      [
+       20409,
+       7356
+      ],
+      [
+       20397,
+       7136
+      ],
+      [
+       20363,
+       6771
+      ],
+      [
+       19930,
+       6212
+      ],
+      [
+       20378,
+       5717
+      ],
+      [
+       20366,
+       4969
+      ],
+      [
+       20416,
+       4281
+      ],
+      [
+       20436,
+       3089
+      ],
+      [
+       20368,
+       2788
+      ],
+      [
+       19687,
+       2654
+      ],
+      [
+       21167,
+       2534
+      ],
+      [
+       20427,
+       2502
+      ],
+      [
+       20500,
+       2476
+      ],
+      [
+       20046,
+       2388
+      ],
+      [
+       20237,
+       2218
+      ],
+      [
+       19690,
+       2207
+      ],
+      [
+       20445,
+       1341
+      ],
+      [
+       20263,
+       220
+      ],
+      [
+       20225,
+       38
+      ]
+     ],
+     "description": "operator carrier airline id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "TAIL_NUM",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0031,
+     "distinct_count": 5525,
+     "is_unique": false,
+     "min_value": "215NV",
+     "max_value": "N999DN",
+     "examples": [
+      "N956AN",
+      "N973AN",
+      "N9006",
+      "N870NN",
+      "N9023N"
+     ],
+     "top_values": [],
+     "description": "plane's tail number",
+     "value_description": "plane's tail number",
+     "notes": []
+    },
+    {
+     "name": "OP_CARRIER_FL_NUM",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6487,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 9383,
+     "examples": [
+      1587,
+      1588,
+      1590,
+      1591,
+      1593
+     ],
+     "top_values": [],
+     "description": "operator carrier flight number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ORIGIN_AIRPORT_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 364,
+     "is_unique": false,
+     "min_value": 10135,
+     "max_value": 16218,
+     "examples": [
+      12478,
+      14107,
+      11042,
+      14843,
+      10423
+     ],
+     "top_values": [],
+     "description": "origin airport id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ORIGIN_AIRPORT_SEQ_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 364,
+     "is_unique": false,
+     "min_value": 1013505,
+     "max_value": 1621801,
+     "examples": [
+      1247805,
+      1410702,
+      1104205,
+      1484306,
+      1042302
+     ],
+     "top_values": [],
+     "description": "origin airport sequence id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ORIGIN_CITY_MARKET_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 340,
+     "is_unique": false,
+     "min_value": 30070,
+     "max_value": 36101,
+     "examples": [
+      31703,
+      30466,
+      30647,
+      34819,
+      30423
+     ],
+     "top_values": [],
+     "description": "origin city market id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ORIGIN",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 364,
+     "is_unique": false,
+     "min_value": "ABE",
+     "max_value": "YUM",
+     "examples": [
+      "JFK",
+      "PHX",
+      "CLE",
+      "SJU",
+      "AUS"
+     ],
+     "top_values": [],
+     "description": "airport of origin",
+     "value_description": "commonsense evidence:\n\n• the origin city could be inferred by this code:\n\nyou can refer to https://www.iata.org/en/publications/directories/code-search/?airport.search=mia\n\nto quickly check",
+     "notes": []
+    },
+    {
+     "name": "DEST_AIRPORT_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 364,
+     "is_unique": false,
+     "min_value": 10135,
+     "max_value": 16218,
+     "examples": [
+      14107,
+      11618,
+      11298,
+      13303,
+      13930
+     ],
+     "top_values": [],
+     "description": "destination airport id. ID of the destination airport",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DEST_AIRPORT_SEQ_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 364,
+     "is_unique": false,
+     "min_value": 1013505,
+     "max_value": 1621801,
+     "examples": [
+      1410702,
+      1161802,
+      1129806,
+      1330303,
+      1393006
+     ],
+     "top_values": [],
+     "description": "destination airport sequence id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DEST_CITY_MARKET_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 340,
+     "is_unique": false,
+     "min_value": 30070,
+     "max_value": 36101,
+     "examples": [
+      30466,
+      31703,
+      30194,
+      32467,
+      30977
+     ],
+     "top_values": [],
+     "description": "destination city market id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DEST",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 364,
+     "is_unique": false,
+     "min_value": "ABE",
+     "max_value": "YUM",
+     "examples": [
+      "PHX",
+      "EWR",
+      "DFW",
+      "MIA",
+      "ORD"
+     ],
+     "top_values": [],
+     "description": "Destination airport",
+     "value_description": "commonsense evidence:\n\n• the dest city could be inferred by this code:\n\nyou can refer to https://www.iata.org/en/publications/directories/code-search/?airport.search=mia\n\nto quickly check",
+     "notes": []
+    },
+    {
+     "name": "CRS_DEP_TIME",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1199,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2359,
+     "examples": [
+      1640,
+      1512,
+      744,
+      900,
+      600
+     ],
+     "top_values": [],
+     "description": "scheduled local departure time",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DEP_TIME",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0294,
+     "distinct_count": 1396,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2400,
+     "examples": [
+      1649,
+      1541,
+      741,
+      944,
+      556
+     ],
+     "top_values": [],
+     "description": "Flight departure time",
+     "value_description": "stored as the integer",
+     "notes": []
+    },
+    {
+     "name": "DEP_DELAY",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0305,
+     "distinct_count": 782,
+     "is_unique": false,
+     "min_value": -36,
+     "max_value": 1855,
+     "examples": [
+      9,
+      29,
+      -3,
+      44,
+      -4
+     ],
+     "top_values": [],
+     "description": "Departure delay indicator",
+     "value_description": "in minutes\n\ncommonsense evidence:\n\n• if this value is positive: it means this flight delays; if the value is negative, it means this flight departs in advance (-4)\n\n• if this value <= 0, it means this flight departs on time",
+     "notes": []
+    },
+    {
+     "name": "DEP_DELAY_NEW",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0305,
+     "distinct_count": 748,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1855,
+     "examples": [
+      9,
+      29,
+      0,
+      44,
+      1
+     ],
+     "top_values": [],
+     "description": "departure delay new",
+     "value_description": "not useful",
+     "notes": []
+    },
+    {
+     "name": "ARR_TIME",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0314,
+     "distinct_count": 1438,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2400,
+     "examples": [
+      2006,
+      2350,
+      938,
+      1347,
+      951
+     ],
+     "top_values": [],
+     "description": "Flight arrival time.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ARR_DELAY",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0354,
+     "distinct_count": 814,
+     "is_unique": false,
+     "min_value": -78,
+     "max_value": 1843,
+     "examples": [
+      44,
+      53,
+      -2,
+      43,
+      -7
+     ],
+     "top_values": [],
+     "description": "arrival delay time",
+     "value_description": "in minutes\n\ncommonsense evidence:\n\n• if this value is positive: it means this flight will arrives late (delay); If the value is negative, this flight arrives earlier than scheduled. (-4)\n\n• if this value <= 0, it means this flight arrives on time",
+     "notes": []
+    },
+    {
+     "name": "ARR_DELAY_NEW",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0354,
+     "distinct_count": 746,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1843,
+     "examples": [
+      44,
+      53,
+      0,
+      43,
+      5
+     ],
+     "top_values": [],
+     "description": "arrival delay new",
+     "value_description": "not useful",
+     "notes": []
+    },
+    {
+     "name": "CANCELLED",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       193776
+      ],
+      [
+       1,
+       6224
+      ]
+     ],
+     "description": "Flight cancellation indicator.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CANCELLATION_CODE",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9689,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "C",
+     "examples": [
+      "A"
+     ],
+     "top_values": [
+      [
+       "C",
+       3186
+      ],
+      [
+       "B",
+       1575
+      ],
+      [
+       "A",
+       1463
+      ]
+     ],
+     "description": "cancellation code",
+     "value_description": "commonsense evidence:\n\nC--> A: more serious reasons lead to this cancellation",
+     "notes": [
+      "97% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "CRS_ELAPSED_TIME",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 430,
+     "is_unique": false,
+     "min_value": 22,
+     "max_value": 656,
+     "examples": [
+      342,
+      285,
+      176,
+      304,
+      173
+     ],
+     "top_values": [],
+     "description": "scheduled elapsed time",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ACTUAL_ELAPSED_TIME",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0349,
+     "distinct_count": 567,
+     "is_unique": false,
+     "min_value": 4,
+     "max_value": 945,
+     "examples": [
+      377,
+      309,
+      177,
+      303,
+      175
+     ],
+     "top_values": [],
+     "description": "actual elapsed time",
+     "value_description": "commonsense evidence:\n\nif ACTUAL_ELAPSED_TIME < CRS_ELAPSED_TIME: this flight is faster than scheduled;\n\nif ACTUAL_ELAPSED_TIME > CRS_ELAPSED_TIME: this flight is slower than scheduled",
+     "notes": []
+    },
+    {
+     "name": "CARRIER_DELAY",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.7356,
+     "distinct_count": 560,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1843,
+     "examples": [
+      9,
+      0,
+      43,
+      28,
+      21
+     ],
+     "top_values": [],
+     "description": "carrier delay",
+     "value_description": "minutes",
+     "notes": [
+      "74% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "WEATHER_DELAY",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.7356,
+     "distinct_count": 332,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1093,
+     "examples": [
+      0,
+      2,
+      48,
+      46,
+      9
+     ],
+     "top_values": [],
+     "description": "weather delay. delay caused by the wheather problem",
+     "value_description": "minutes",
+     "notes": [
+      "74% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "NAS_DELAY",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.7356,
+     "distinct_count": 434,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1158,
+     "examples": [
+      35,
+      53,
+      0,
+      2,
+      70
+     ],
+     "top_values": [],
+     "description": "National Aviavtion System delay. delay, in minutes, attributable to the National Aviation System",
+     "value_description": "minutes",
+     "notes": [
+      "74% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "SECURITY_DELAY",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.7356,
+     "distinct_count": 61,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 363,
+     "examples": [
+      0,
+      42
+     ],
+     "top_values": [],
+     "description": "security delay. delay attribute to security",
+     "value_description": "minutes",
+     "notes": [
+      "74% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "LATE_AIRCRAFT_DELAY",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.7356,
+     "distinct_count": 471,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1155,
+     "examples": [
+      0,
+      6,
+      73,
+      33,
+      5
+     ],
+     "top_values": [],
+     "description": "late aircraft delay. delay attribute to late aircraft",
+     "value_description": "minutes",
+     "notes": [
+      "74% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "FL_DATE": "2018/8/1",
+     "OP_CARRIER_AIRLINE_ID": 19805,
+     "TAIL_NUM": "N956AN",
+     "OP_CARRIER_FL_NUM": 1587,
+     "ORIGIN_AIRPORT_ID": 12478,
+     "ORIGIN_AIRPORT_SEQ_ID": 1247805,
+     "ORIGIN_CITY_MARKET_ID": 31703,
+     "ORIGIN": "JFK",
+     "DEST_AIRPORT_ID": 14107,
+     "DEST_AIRPORT_SEQ_ID": 1410702,
+     "DEST_CITY_MARKET_ID": 30466,
+     "DEST": "PHX",
+     "CRS_DEP_TIME": 1640,
+     "DEP_TIME": 1649,
+     "DEP_DELAY": 9,
+     "DEP_DELAY_NEW": 9,
+     "ARR_TIME": 2006,
+     "ARR_DELAY": 44,
+     "ARR_DELAY_NEW": 44,
+     "CANCELLED": 0,
+     "CANCELLATION_CODE": null,
+     "CRS_ELAPSED_TIME": 342,
+     "ACTUAL_ELAPSED_TIME": 377,
+     "CARRIER_DELAY": 9,
+     "WEATHER_DELAY": 0,
+     "NAS_DELAY": 35,
+     "SECURITY_DELAY": 0,
+     "LATE_AIRCRAFT_DELAY": 0
+    },
+    {
+     "FL_DATE": "2018/8/1",
+     "OP_CARRIER_AIRLINE_ID": 19805,
+     "TAIL_NUM": "N973AN",
+     "OP_CARRIER_FL_NUM": 1588,
+     "ORIGIN_AIRPORT_ID": 14107,
+     "ORIGIN_AIRPORT_SEQ_ID": 1410702,
+     "ORIGIN_CITY_MARKET_ID": 30466,
+     "ORIGIN": "PHX",
+     "DEST_AIRPORT_ID": 11618,
+     "DEST_AIRPORT_SEQ_ID": 1161802,
+     "DEST_CITY_MARKET_ID": 31703,
+     "DEST": "EWR",
+     "CRS_DEP_TIME": 1512,
+     "DEP_TIME": 1541,
+     "DEP_DELAY": 29,
+     "DEP_DELAY_NEW": 29,
+     "ARR_TIME": 2350,
+     "ARR_DELAY": 53,
+     "ARR_DELAY_NEW": 53,
+     "CANCELLED": 0,
+     "CANCELLATION_CODE": null,
+     "CRS_ELAPSED_TIME": 285,
+     "ACTUAL_ELAPSED_TIME": 309,
+     "CARRIER_DELAY": 0,
+     "WEATHER_DELAY": 0,
+     "NAS_DELAY": 53,
+     "SECURITY_DELAY": 0,
+     "LATE_AIRCRAFT_DELAY": 0
+    },
+    {
+     "FL_DATE": "2018/8/1",
+     "OP_CARRIER_AIRLINE_ID": 19805,
+     "TAIL_NUM": "N9006",
+     "OP_CARRIER_FL_NUM": 1590,
+     "ORIGIN_AIRPORT_ID": 11042,
+     "ORIGIN_AIRPORT_SEQ_ID": 1104205,
+     "ORIGIN_CITY_MARKET_ID": 30647,
+     "ORIGIN": "CLE",
+     "DEST_AIRPORT_ID": 11298,
+     "DEST_AIRPORT_SEQ_ID": 1129806,
+     "DEST_CITY_MARKET_ID": 30194,
+     "DEST": "DFW",
+     "CRS_DEP_TIME": 744,
+     "DEP_TIME": 741,
+     "DEP_DELAY": -3,
+     "DEP_DELAY_NEW": 0,
+     "ARR_TIME": 938,
+     "ARR_DELAY": -2,
+     "ARR_DELAY_NEW": 0,
+     "CANCELLED": 0,
+     "CANCELLATION_CODE": null,
+     "CRS_ELAPSED_TIME": 176,
+     "ACTUAL_ELAPSED_TIME": 177,
+     "CARRIER_DELAY": null,
+     "WEATHER_DELAY": null,
+     "NAS_DELAY": null,
+     "SECURITY_DELAY": null,
+     "LATE_AIRCRAFT_DELAY": null
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 701,352 rows",
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "Airports",
+   "row_count": 6510,
+   "stats_rows": 6510,
+   "columns": [
+    {
+     "name": "Code",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6510,
+     "is_unique": true,
+     "min_value": "01A",
+     "max_value": "ZZZ",
+     "examples": [
+      "01A",
+      "03A",
+      "04A",
+      "05A",
+      "06A"
+     ],
+     "top_values": [],
+     "description": "IATA code of the air airports",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Description",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6464,
+     "is_unique": false,
+     "min_value": "47-Mile Mine, AK: 47-Mile Mine Airport",
+     "max_value": "Zweibrucken, Germany: Zweibruecken",
+     "examples": [
+      "Afognak Lake, AK: Afognak Lake Airport",
+      "Granite Mountain, AK: Bear Creek Mining Strip",
+      "Lik, AK: Lik Mining Camp",
+      "Little Squaw, AK: Little Squaw Airport",
+      "Kizhuyak, AK: Kizhuyak Bay"
+     ],
+     "top_values": [],
+     "description": "the description of airports",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Code"
+   ],
+   "sample_rows": [
+    {
+     "Code": "01A",
+     "Description": "Afognak Lake, AK: Afognak Lake Airport"
+    },
+    {
+     "Code": "03A",
+     "Description": "Granite Mountain, AK: Bear Creek Mining Strip"
+    },
+    {
+     "Code": "04A",
+     "Description": "Lik, AK: Lik Mining Camp"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "Airlines",
+   "from_column": "OP_CARRIER_AIRLINE_ID",
+   "to_table": "Air Carriers",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Airlines",
+   "from_column": "DEST",
+   "to_table": "Airports",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Airlines",
+   "from_column": "ORIGIN",
+   "to_table": "Airports",
+   "to_column": "Code",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

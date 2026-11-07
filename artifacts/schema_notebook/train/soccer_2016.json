@@ -1,0 +1,5814 @@
+{
+ "db_id": "soccer_2016",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/soccer_2016/soccer_2016.sqlite",
+ "fingerprint": "17170432-1793993015132216954-v1.0",
+ "created_at": "2026-11-06T19:25:13+00:00",
+ "profile_seconds": 0.904,
+ "tables": [
+  {
+   "name": "Ball_by_Ball",
+   "row_count": 136590,
+   "stats_rows": 136590,
+   "columns": [
+    {
+     "name": "Match_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 577,
+     "is_unique": false,
+     "min_value": 335987,
+     "max_value": 981024,
+     "examples": [
+      335987
+     ],
+     "top_values": [],
+     "description": "match id. Unique Number Which Identifies a match",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Over_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 20,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       1,
+       7337
+      ],
+      [
+       2,
+       7276
+      ],
+      [
+       3,
+       7197
+      ],
+      [
+       4,
+       7166
+      ],
+      [
+       5,
+       7149
+      ],
+      [
+       6,
+       7140
+      ],
+      [
+       7,
+       7109
+      ],
+      [
+       8,
+       7086
+      ],
+      [
+       9,
+       7056
+      ],
+      [
+       10,
+       7013
+      ],
+      [
+       11,
+       6962
+      ],
+      [
+       12,
+       6932
+      ],
+      [
+       13,
+       6909
+      ],
+      [
+       14,
+       6838
+      ],
+      [
+       15,
+       6763
+      ],
+      [
+       16,
+       6659
+      ],
+      [
+       17,
+       6596
+      ],
+      [
+       18,
+       6353
+      ],
+      [
+       19,
+       5934
+      ],
+      [
+       20,
+       5115
+      ]
+     ],
+     "description": "over id. Unique Number which Identifies an over in an Innings",
+     "value_description": "commonsense evidence:\nThe match is made up of two innings and each team takes a turn at batting and bowling. An innings is made up of 50 overs. An over involves six deliveries from the bowler.",
+     "notes": []
+    },
+    {
+     "name": "Ball_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 9,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       1,
+       22137
+      ],
+      [
+       2,
+       22085
+      ],
+      [
+       3,
+       22021
+      ],
+      [
+       4,
+       21969
+      ],
+      [
+       5,
+       21897
+      ],
+      [
+       6,
+       21825
+      ],
+      [
+       7,
+       3943
+      ],
+      [
+       8,
+       615
+      ],
+      [
+       9,
+       98
+      ]
+     ],
+     "description": "ball id. Unique Number which Identifies a ball in an over",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Innings_No",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       1,
+       70750
+      ],
+      [
+       2,
+       65772
+      ],
+      [
+       3,
+       38
+      ],
+      [
+       4,
+       30
+      ]
+     ],
+     "description": "innings number. Unique Number which Identifies an innings in a match",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Team_Batting",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 13,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       7,
+       16988
+      ],
+      [
+       2,
+       16140
+      ],
+      [
+       4,
+       15991
+      ],
+      [
+       3,
+       15821
+      ],
+      [
+       6,
+       15481
+      ],
+      [
+       1,
+       15416
+      ],
+      [
+       5,
+       13845
+      ],
+      [
+       8,
+       9033
+      ],
+      [
+       11,
+       7379
+      ],
+      [
+       10,
+       5443
+      ],
+      [
+       13,
+       1891
+      ],
+      [
+       9,
+       1582
+      ],
+      [
+       12,
+       1580
+      ]
+     ],
+     "description": "team batting. Unique Number which Identifies Batting team in a match",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Team_Bowling",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 13,
+     "examples": [
+      2,
+      1
+     ],
+     "top_values": [
+      [
+       7,
+       16704
+      ],
+      [
+       2,
+       16416
+      ],
+      [
+       4,
+       15776
+      ],
+      [
+       1,
+       15585
+      ],
+      [
+       6,
+       15534
+      ],
+      [
+       3,
+       15493
+      ],
+      [
+       5,
+       14177
+      ],
+      [
+       8,
+       9038
+      ],
+      [
+       11,
+       7276
+      ],
+      [
+       10,
+       5457
+      ],
+      [
+       13,
+       1905
+      ],
+      [
+       12,
+       1615
+      ],
+      [
+       9,
+       1614
+      ]
+     ],
+     "description": "team bowling. Unique Number which Identifies Bowling team in a match",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Striker_Batting_Position",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 11,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       2,
+       25584
+      ],
+      [
+       1,
+       25476
+      ],
+      [
+       3,
+       23439
+      ],
+      [
+       4,
+       20435
+      ],
+      [
+       5,
+       16627
+      ],
+      [
+       6,
+       10844
+      ],
+      [
+       7,
+       6633
+      ],
+      [
+       8,
+       3834
+      ],
+      [
+       9,
+       2126
+      ],
+      [
+       10,
+       1160
+      ],
+      [
+       11,
+       432
+      ]
+     ],
+     "description": "striker batting position. Unique Number which Identifies the position in which player came into bat",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Striker",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 434,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 434,
+     "examples": [
+      1,
+      6,
+      2,
+      7,
+      8
+     ],
+     "top_values": [],
+     "description": "Unique Number which Identifies the player who is on strike for that particular ball",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Non_Striker",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 429,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 451,
+     "examples": [
+      2,
+      7,
+      1,
+      6,
+      8
+     ],
+     "top_values": [],
+     "description": "non striker. Unique Number which Identifies the player who is Non-striker for that particular ball",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Bowler",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 331,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 465,
+     "examples": [
+      14,
+      106,
+      15,
+      84,
+      13
+     ],
+     "top_values": [],
+     "description": "Unique Number which Identifies the player who is Bowling that particular ball",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Match_Id",
+    "Over_Id",
+    "Ball_Id",
+    "Innings_No"
+   ],
+   "sample_rows": [
+    {
+     "Match_Id": 335987,
+     "Over_Id": 1,
+     "Ball_Id": 1,
+     "Innings_No": 1,
+     "Team_Batting": 1,
+     "Team_Bowling": 2,
+     "Striker_Batting_Position": 1,
+     "Striker": 1,
+     "Non_Striker": 2,
+     "Bowler": 14
+    },
+    {
+     "Match_Id": 335987,
+     "Over_Id": 1,
+     "Ball_Id": 1,
+     "Innings_No": 2,
+     "Team_Batting": 2,
+     "Team_Bowling": 1,
+     "Striker_Batting_Position": 1,
+     "Striker": 6,
+     "Non_Striker": 7,
+     "Bowler": 106
+    },
+    {
+     "Match_Id": 335987,
+     "Over_Id": 1,
+     "Ball_Id": 2,
+     "Innings_No": 1,
+     "Team_Batting": 1,
+     "Team_Bowling": 2,
+     "Striker_Batting_Position": 2,
+     "Striker": 2,
+     "Non_Striker": 1,
+     "Bowler": 14
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Batsman_Scored",
+   "row_count": 133097,
+   "stats_rows": 133097,
+   "columns": [
+    {
+     "name": "Match_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 577,
+     "is_unique": false,
+     "min_value": 335987,
+     "max_value": 981024,
+     "examples": [
+      335987
+     ],
+     "top_values": [],
+     "description": "match id. Unique Number Which Identifies a match",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Over_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 20,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       1,
+       7048
+      ],
+      [
+       2,
+       6982
+      ],
+      [
+       3,
+       6980
+      ],
+      [
+       4,
+       6975
+      ],
+      [
+       5,
+       6958
+      ],
+      [
+       6,
+       6950
+      ],
+      [
+       8,
+       6926
+      ],
+      [
+       7,
+       6920
+      ],
+      [
+       9,
+       6896
+      ],
+      [
+       10,
+       6881
+      ],
+      [
+       11,
+       6842
+      ],
+      [
+       12,
+       6805
+      ],
+      [
+       13,
+       6771
+      ],
+      [
+       14,
+       6709
+      ],
+      [
+       15,
+       6617
+      ],
+      [
+       16,
+       6503
+      ],
+      [
+       17,
+       6411
+      ],
+      [
+       18,
+       6187
+      ],
+      [
+       19,
+       5765
+      ],
+      [
+       20,
+       4971
+      ]
+     ],
+     "description": "over id. Unique Number which Identifies an over in an Innings",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Ball_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 9,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       2,
+       21514
+      ],
+      [
+       1,
+       21489
+      ],
+      [
+       3,
+       21481
+      ],
+      [
+       4,
+       21447
+      ],
+      [
+       5,
+       21364
+      ],
+      [
+       6,
+       21290
+      ],
+      [
+       7,
+       3823
+      ],
+      [
+       8,
+       592
+      ],
+      [
+       9,
+       97
+      ]
+     ],
+     "description": "ball id. Unique Number which Identifies a ball in an over",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Runs_Scored",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 6,
+     "examples": [
+      0,
+      1,
+      4,
+      6,
+      2
+     ],
+     "top_values": [
+      [
+       0,
+       52404
+      ],
+      [
+       1,
+       50108
+      ],
+      [
+       4,
+       15414
+      ],
+      [
+       2,
+       8842
+      ],
+      [
+       6,
+       5814
+      ],
+      [
+       3,
+       473
+      ],
+      [
+       5,
+       42
+      ]
+     ],
+     "description": "Number of Runs scored by the batsman",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Innings_No",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       1,
+       68982
+      ],
+      [
+       2,
+       64048
+      ],
+      [
+       3,
+       37
+      ],
+      [
+       4,
+       30
+      ]
+     ],
+     "description": "innings number. Unique Number which Identifies an innings in a match",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Match_Id",
+    "Over_Id",
+    "Ball_Id",
+    "Innings_No"
+   ],
+   "sample_rows": [
+    {
+     "Match_Id": 335987,
+     "Over_Id": 1,
+     "Ball_Id": 1,
+     "Runs_Scored": 0,
+     "Innings_No": 1
+    },
+    {
+     "Match_Id": 335987,
+     "Over_Id": 1,
+     "Ball_Id": 1,
+     "Runs_Scored": 1,
+     "Innings_No": 2
+    },
+    {
+     "Match_Id": 335987,
+     "Over_Id": 1,
+     "Ball_Id": 2,
+     "Runs_Scored": 0,
+     "Innings_No": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Batting_Style",
+   "row_count": 2,
+   "stats_rows": 2,
+   "columns": [
+    {
+     "name": "Batting_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "batting id. unique id for batting hand",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Batting_hand",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": "Left-hand bat",
+     "max_value": "Right-hand bat",
+     "examples": [
+      "Left-hand bat",
+      "Right-hand bat"
+     ],
+     "top_values": [
+      [
+       "Right-hand bat",
+       1
+      ],
+      [
+       "Left-hand bat",
+       1
+      ]
+     ],
+     "description": "the batting hand: left or right",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Batting_Id"
+   ],
+   "sample_rows": [
+    {
+     "Batting_Id": 1,
+     "Batting_hand": "Left-hand bat"
+    },
+    {
+     "Batting_Id": 2,
+     "Batting_hand": "Right-hand bat"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Bowling_Style",
+   "row_count": 14,
+   "stats_rows": 14,
+   "columns": [
+    {
+     "name": "Bowling_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 14,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 14,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "bowling id. unique id for bowling style",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Bowling_skill",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 14,
+     "is_unique": true,
+     "min_value": "Left-arm fast",
+     "max_value": "Slow left-arm orthodox",
+     "examples": [
+      "Right-arm medium",
+      "Right-arm offbreak",
+      "Right-arm fast-medium",
+      "Legbreak googly",
+      "Right-arm medium-fast"
+     ],
+     "top_values": [
+      [
+       "Slow left-arm orthodox",
+       1
+      ],
+      [
+       "Slow left-arm chinaman",
+       1
+      ],
+      [
+       "Right-arm offbreak",
+       1
+      ],
+      [
+       "Right-arm medium-fast",
+       1
+      ],
+      [
+       "Right-arm medium",
+       1
+      ],
+      [
+       "Right-arm fast-medium",
+       1
+      ],
+      [
+       "Right-arm fast",
+       1
+      ],
+      [
+       "Right-arm bowler",
+       1
+      ],
+      [
+       "Legbreak googly",
+       1
+      ],
+      [
+       "Legbreak",
+       1
+      ],
+      [
+       "Left-arm medium-fast",
+       1
+      ],
+      [
+       "Left-arm medium",
+       1
+      ],
+      [
+       "Left-arm fast-medium",
+       1
+      ],
+      [
+       "Left-arm fast",
+       1
+      ]
+     ],
+     "description": "the bowling skill",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Bowling_Id"
+   ],
+   "sample_rows": [
+    {
+     "Bowling_Id": 1,
+     "Bowling_skill": "Right-arm medium"
+    },
+    {
+     "Bowling_Id": 2,
+     "Bowling_skill": "Right-arm offbreak"
+    },
+    {
+     "Bowling_Id": 3,
+     "Bowling_skill": "Right-arm fast-medium"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "City",
+   "row_count": 29,
+   "stats_rows": 29,
+   "columns": [
+    {
+     "name": "City_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 29,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 29,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "city id. unique id for city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "City_Name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 29,
+     "is_unique": true,
+     "min_value": "Abu Dhabi",
+     "max_value": "Visakhapatnam",
+     "examples": [
+      "Bangalore",
+      "Chandigarh",
+      "Delhi",
+      "Mumbai",
+      "Kolkata"
+     ],
+     "top_values": [
+      [
+       "Visakhapatnam",
+       1
+      ],
+      [
+       "Ranchi",
+       1
+      ],
+      [
+       "Rajkot",
+       1
+      ],
+      [
+       "Raipur",
+       1
+      ],
+      [
+       "Pune",
+       1
+      ],
+      [
+       "Port Elizabeth",
+       1
+      ],
+      [
+       "Nagpur",
+       1
+      ],
+      [
+       "Mumbai",
+       1
+      ],
+      [
+       "Kolkata",
+       1
+      ],
+      [
+       "Kochi",
+       1
+      ],
+      [
+       "Kimberley",
+       1
+      ],
+      [
+       "Kanpur",
+       1
+      ],
+      [
+       "Johannesburg",
+       1
+      ],
+      [
+       "Jaipur",
+       1
+      ],
+      [
+       "Indore",
+       1
+      ],
+      [
+       "Hyderabad",
+       1
+      ],
+      [
+       "East London",
+       1
+      ],
+      [
+       "Durban",
+       1
+      ],
+      [
+       "Dharamsala",
+       1
+      ],
+      [
+       "Delhi",
+       1
+      ],
+      [
+       "Cuttack",
+       1
+      ],
+      [
+       "Chennai",
+       1
+      ],
+      [
+       "Chandigarh",
+       1
+      ],
+      [
+       "Centurion",
+       1
+      ],
+      [
+       "Cape Town",
+       1
+      ],
+      [
+       "Bloemfontein",
+       1
+      ],
+      [
+       "Bangalore",
+       1
+      ],
+      [
+       "Ahmedabad",
+       1
+      ],
+      [
+       "Abu Dhabi",
+       1
+      ]
+     ],
+     "description": "city name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 3,
+     "examples": [
+      1,
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       1,
+       20
+      ],
+      [
+       2,
+       8
+      ],
+      [
+       3,
+       1
+      ]
+     ],
+     "description": "country id. id of country",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "City_Id"
+   ],
+   "sample_rows": [
+    {
+     "City_Id": 1,
+     "City_Name": "Bangalore",
+     "Country_id": 1
+    },
+    {
+     "City_Id": 2,
+     "City_Name": "Chandigarh",
+     "Country_id": 1
+    },
+    {
+     "City_Id": 3,
+     "City_Name": "Delhi",
+     "Country_id": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Country",
+   "row_count": 12,
+   "stats_rows": 12,
+   "columns": [
+    {
+     "name": "Country_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 12,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "country id. unique id for country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country_Name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": true,
+     "min_value": "Australia",
+     "max_value": "Zimbabwea",
+     "examples": [
+      "India",
+      "South Africa",
+      "U.A.E",
+      "New Zealand",
+      "Australia"
+     ],
+     "top_values": [
+      [
+       "Zimbabwea",
+       1
+      ],
+      [
+       "West Indies",
+       1
+      ],
+      [
+       "U.A.E",
+       1
+      ],
+      [
+       "Sri Lanka",
+       1
+      ],
+      [
+       "South Africa",
+       1
+      ],
+      [
+       "Pakistan",
+       1
+      ],
+      [
+       "New Zealand",
+       1
+      ],
+      [
+       "Netherlands",
+       1
+      ],
+      [
+       "India",
+       1
+      ],
+      [
+       "England",
+       1
+      ],
+      [
+       "Bangladesh",
+       1
+      ],
+      [
+       "Australia",
+       1
+      ]
+     ],
+     "description": "country name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Country_Id"
+   ],
+   "sample_rows": [
+    {
+     "Country_Id": 1,
+     "Country_Name": "India"
+    },
+    {
+     "Country_Id": 2,
+     "Country_Name": "South Africa"
+    },
+    {
+     "Country_Id": 3,
+     "Country_Name": "U.A.E"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Extra_Runs",
+   "row_count": 7469,
+   "stats_rows": 7469,
+   "columns": [
+    {
+     "name": "Match_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 577,
+     "is_unique": false,
+     "min_value": 335987,
+     "max_value": 981024,
+     "examples": [
+      335987,
+      335988,
+      335989,
+      335990,
+      335991
+     ],
+     "top_values": [],
+     "description": "match id. Unique Number Which Identifies a match",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Over_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 20,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      7
+     ],
+     "top_values": [
+      [
+       1,
+       522
+      ],
+      [
+       2,
+       510
+      ],
+      [
+       3,
+       443
+      ],
+      [
+       17,
+       438
+      ],
+      [
+       20,
+       421
+      ],
+      [
+       4,
+       416
+      ],
+      [
+       19,
+       408
+      ],
+      [
+       18,
+       399
+      ],
+      [
+       6,
+       395
+      ],
+      [
+       5,
+       382
+      ],
+      [
+       7,
+       362
+      ],
+      [
+       16,
+       339
+      ],
+      [
+       9,
+       335
+      ],
+      [
+       8,
+       329
+      ],
+      [
+       15,
+       308
+      ],
+      [
+       13,
+       304
+      ],
+      [
+       10,
+       298
+      ],
+      [
+       14,
+       297
+      ],
+      [
+       12,
+       285
+      ],
+      [
+       11,
+       278
+      ]
+     ],
+     "description": "over id. Unique Number which Identifies an over in an Innings",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Ball_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 9,
+     "examples": [
+      1,
+      2,
+      3,
+      7,
+      5
+     ],
+     "top_values": [
+      [
+       1,
+       1283
+      ],
+      [
+       3,
+       1254
+      ],
+      [
+       2,
+       1237
+      ],
+      [
+       6,
+       1154
+      ],
+      [
+       5,
+       1129
+      ],
+      [
+       4,
+       1113
+      ],
+      [
+       7,
+       253
+      ],
+      [
+       8,
+       45
+      ],
+      [
+       9,
+       1
+      ]
+     ],
+     "description": "ball id. Unique Number which Identifies a ball in an over",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Extra_Type_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 5,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       2,
+       4153
+      ],
+      [
+       1,
+       2357
+      ],
+      [
+       4,
+       579
+      ],
+      [
+       3,
+       379
+      ],
+      [
+       5,
+       1
+      ]
+     ],
+     "description": "extra type id. Unique Number which Identifies extra type",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Extra_Runs",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 5,
+     "examples": [
+      1,
+      4,
+      5,
+      2
+     ],
+     "top_values": [
+      [
+       1,
+       6605
+      ],
+      [
+       2,
+       344
+      ],
+      [
+       4,
+       275
+      ],
+      [
+       5,
+       193
+      ],
+      [
+       3,
+       52
+      ]
+     ],
+     "description": "Number of extra runs",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Innings_No",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       1,
+       3867
+      ],
+      [
+       2,
+       3596
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       4,
+       1
+      ]
+     ],
+     "description": "innings number. Unique Number which Identifies an innings in a match",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Match_Id",
+    "Over_Id",
+    "Ball_Id",
+    "Innings_No"
+   ],
+   "sample_rows": [
+    {
+     "Match_Id": 335987,
+     "Over_Id": 1,
+     "Ball_Id": 1,
+     "Extra_Type_Id": 1,
+     "Extra_Runs": 1,
+     "Innings_No": 1
+    },
+    {
+     "Match_Id": 335987,
+     "Over_Id": 1,
+     "Ball_Id": 2,
+     "Extra_Type_Id": 2,
+     "Extra_Runs": 1,
+     "Innings_No": 2
+    },
+    {
+     "Match_Id": 335987,
+     "Over_Id": 1,
+     "Ball_Id": 3,
+     "Extra_Type_Id": 2,
+     "Extra_Runs": 1,
+     "Innings_No": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Extra_Type",
+   "row_count": 5,
+   "stats_rows": 5,
+   "columns": [
+    {
+     "name": "Extra_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 5,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "extra id. unique id for extra type",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Extra_Name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": true,
+     "min_value": "byes",
+     "max_value": "wides",
+     "examples": [
+      "legbyes",
+      "wides",
+      "byes",
+      "noballs",
+      "penalty"
+     ],
+     "top_values": [
+      [
+       "wides",
+       1
+      ],
+      [
+       "penalty",
+       1
+      ],
+      [
+       "noballs",
+       1
+      ],
+      [
+       "legbyes",
+       1
+      ],
+      [
+       "byes",
+       1
+      ]
+     ],
+     "description": "extra name. extra type name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Extra_Id"
+   ],
+   "sample_rows": [
+    {
+     "Extra_Id": 1,
+     "Extra_Name": "legbyes"
+    },
+    {
+     "Extra_Id": 2,
+     "Extra_Name": "wides"
+    },
+    {
+     "Extra_Id": 3,
+     "Extra_Name": "byes"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Match",
+   "row_count": 577,
+   "stats_rows": 577,
+   "columns": [
+    {
+     "name": "Match_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 577,
+     "is_unique": true,
+     "min_value": 335987,
+     "max_value": 981024,
+     "examples": [
+      335987,
+      335988,
+      335989,
+      335990,
+      335991
+     ],
+     "top_values": [],
+     "description": "unique id for match",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Team_1",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 13,
+     "examples": [
+      2,
+      4,
+      6,
+      7,
+      1
+     ],
+     "top_values": [
+      [
+       2,
+       78
+      ],
+      [
+       3,
+       74
+      ],
+      [
+       6,
+       69
+      ],
+      [
+       4,
+       65
+      ],
+      [
+       7,
+       62
+      ],
+      [
+       1,
+       62
+      ],
+      [
+       5,
+       52
+      ],
+      [
+       8,
+       39
+      ],
+      [
+       11,
+       30
+      ],
+      [
+       10,
+       23
+      ],
+      [
+       13,
+       9
+      ],
+      [
+       12,
+       7
+      ],
+      [
+       9,
+       7
+      ]
+     ],
+     "description": "team 1. the team id of the first team",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Team_2",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 13,
+     "examples": [
+      1,
+      3,
+      5,
+      2,
+      8
+     ],
+     "top_values": [
+      [
+       7,
+       78
+      ],
+      [
+       1,
+       70
+      ],
+      [
+       4,
+       69
+      ],
+      [
+       5,
+       66
+      ],
+      [
+       6,
+       64
+      ],
+      [
+       2,
+       61
+      ],
+      [
+       3,
+       57
+      ],
+      [
+       8,
+       36
+      ],
+      [
+       11,
+       32
+      ],
+      [
+       10,
+       23
+      ],
+      [
+       13,
+       7
+      ],
+      [
+       12,
+       7
+      ],
+      [
+       9,
+       7
+      ]
+     ],
+     "description": "team 2. the team id for the second team",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Match_Date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 407,
+     "is_unique": false,
+     "min_value": "2008-04-18",
+     "max_value": "2016-05-29",
+     "examples": [
+      "2008-04-18",
+      "2008-04-19",
+      "2008-04-20",
+      "2008-04-21",
+      "2008-04-22"
+     ],
+     "top_values": [],
+     "description": "match date. the date of the match",
+     "value_description": "yyyy-mm-dd",
+     "notes": []
+    },
+    {
+     "name": "Season_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 9,
+     "examples": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       6,
+       76
+      ],
+      [
+       5,
+       74
+      ],
+      [
+       4,
+       73
+      ],
+      [
+       9,
+       60
+      ],
+      [
+       7,
+       60
+      ],
+      [
+       3,
+       60
+      ],
+      [
+       8,
+       59
+      ],
+      [
+       1,
+       58
+      ],
+      [
+       2,
+       57
+      ]
+     ],
+     "description": "season id. the id of the season",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Venue_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 35,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 35,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       1,
+       58
+      ],
+      [
+       5,
+       54
+      ],
+      [
+       3,
+       53
+      ],
+      [
+       4,
+       49
+      ],
+      [
+       8,
+       48
+      ],
+      [
+       7,
+       41
+      ],
+      [
+       2,
+       35
+      ],
+      [
+       6,
+       33
+      ],
+      [
+       26,
+       17
+      ],
+      [
+       9,
+       17
+      ],
+      [
+       12,
+       15
+      ],
+      [
+       19,
+       12
+      ],
+      [
+       13,
+       12
+      ],
+      [
+       25,
+       11
+      ],
+      [
+       18,
+       11
+      ],
+      [
+       22,
+       9
+      ],
+      [
+       32,
+       8
+      ],
+      [
+       15,
+       8
+      ],
+      [
+       33,
+       7
+      ],
+      [
+       31,
+       7
+      ],
+      [
+       29,
+       7
+      ],
+      [
+       28,
+       7
+      ],
+      [
+       20,
+       7
+      ],
+      [
+       11,
+       7
+      ],
+      [
+       10,
+       7
+      ],
+      [
+       30,
+       6
+      ],
+      [
+       27,
+       6
+      ],
+      [
+       34,
+       5
+      ],
+      [
+       23,
+       5
+      ],
+      [
+       21,
+       3
+      ],
+      [
+       16,
+       3
+      ],
+      [
+       14,
+       3
+      ],
+      [
+       35,
+       2
+      ],
+      [
+       24,
+       2
+      ],
+      [
+       17,
+       2
+      ]
+     ],
+     "description": "venue id. the id of the venue where the match held",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Toss_Winner",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 13,
+     "examples": [
+      2,
+      3,
+      5,
+      7,
+      8
+     ],
+     "top_values": [
+      [
+       7,
+       74
+      ],
+      [
+       1,
+       69
+      ],
+      [
+       3,
+       66
+      ],
+      [
+       6,
+       64
+      ],
+      [
+       4,
+       64
+      ],
+      [
+       5,
+       63
+      ],
+      [
+       2,
+       61
+      ],
+      [
+       8,
+       43
+      ],
+      [
+       11,
+       30
+      ],
+      [
+       10,
+       20
+      ],
+      [
+       13,
+       8
+      ],
+      [
+       9,
+       8
+      ],
+      [
+       12,
+       7
+      ]
+     ],
+     "description": "the id of the toss winner",
+     "value_description": "commonsense evidence:\r\nThe toss winner is a term used in cricket and is the team that wins the heads or tails toss of coin at the beginning of a match which then enables the team captain to decide whether to bat or bowl first on the pitch.",
+     "notes": []
+    },
+    {
+     "name": "Toss_Decide",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       1,
+       315
+      ],
+      [
+       2,
+       262
+      ]
+     ],
+     "description": "toss decide. the decision (batting or bowling) made after winning the toss",
+     "value_description": "â¢ field \r\nâ¢ bat",
+     "notes": []
+    },
+    {
+     "name": "Win_Type",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      1,
+      2,
+      4
+     ],
+     "top_values": [
+      [
+       2,
+       307
+      ],
+      [
+       1,
+       261
+      ],
+      [
+       4,
+       6
+      ],
+      [
+       3,
+       3
+      ]
+     ],
+     "description": "the id of the winning type",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Win_Margin",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0156,
+     "distinct_count": 82,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 144,
+     "examples": [
+      140,
+      33,
+      9,
+      5,
+      6
+     ],
+     "top_values": [],
+     "description": "the points of the winning margin",
+     "value_description": "commonsense evidence:\r\nA winning margin bet is a wager on the final result of a game, within a certain range of points.",
+     "notes": []
+    },
+    {
+     "name": "Outcome_type",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 3,
+     "examples": [
+      1,
+      3
+     ],
+     "top_values": [
+      [
+       1,
+       568
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "description": "the id of the outcome type",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Match_Winner",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0052,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 13,
+     "examples": [
+      1,
+      3,
+      6,
+      2,
+      5
+     ],
+     "top_values": [
+      [
+       7,
+       80
+      ],
+      [
+       3,
+       79
+      ],
+      [
+       2,
+       70
+      ],
+      [
+       1,
+       68
+      ],
+      [
+       5,
+       63
+      ],
+      [
+       4,
+       63
+      ],
+      [
+       6,
+       56
+      ],
+      [
+       11,
+       34
+      ],
+      [
+       8,
+       29
+      ],
+      [
+       10,
+       12
+      ],
+      [
+       13,
+       9
+      ],
+      [
+       9,
+       6
+      ],
+      [
+       12,
+       5
+      ]
+     ],
+     "description": "the team id of the match winner",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Man_of_the_Match",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0052,
+     "distinct_count": 187,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 460,
+     "examples": [
+      2,
+      19,
+      90,
+      11,
+      4
+     ],
+     "top_values": [],
+     "description": "the id of the man of the match",
+     "value_description": "commonsense evidence:\r\nIn team sport, a player of the match or man (or woman) of the match award is often given to the outstanding player in a particular match.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Match_Id"
+   ],
+   "sample_rows": [
+    {
+     "Match_Id": 335987,
+     "Team_1": 2,
+     "Team_2": 1,
+     "Match_Date": "2008-04-18",
+     "Season_Id": 1,
+     "Venue_Id": 1,
+     "Toss_Winner": 2,
+     "Toss_Decide": 1,
+     "Win_Type": 1,
+     "Win_Margin": 140,
+     "Outcome_type": 1,
+     "Match_Winner": 1,
+     "Man_of_the_Match": 2
+    },
+    {
+     "Match_Id": 335988,
+     "Team_1": 4,
+     "Team_2": 3,
+     "Match_Date": "2008-04-19",
+     "Season_Id": 1,
+     "Venue_Id": 2,
+     "Toss_Winner": 3,
+     "Toss_Decide": 2,
+     "Win_Type": 1,
+     "Win_Margin": 33,
+     "Outcome_type": 1,
+     "Match_Winner": 3,
+     "Man_of_the_Match": 19
+    },
+    {
+     "Match_Id": 335989,
+     "Team_1": 6,
+     "Team_2": 5,
+     "Match_Date": "2008-04-19",
+     "Season_Id": 1,
+     "Venue_Id": 3,
+     "Toss_Winner": 5,
+     "Toss_Decide": 2,
+     "Win_Type": 2,
+     "Win_Margin": 9,
+     "Outcome_type": 1,
+     "Match_Winner": 6,
+     "Man_of_the_Match": 90
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Out_Type",
+   "row_count": 9,
+   "stats_rows": 9,
+   "columns": [
+    {
+     "name": "Out_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 9,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "out id. unique id for out type",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Out_Name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": true,
+     "min_value": "bowled",
+     "max_value": "stumped",
+     "examples": [
+      "caught",
+      "bowled",
+      "run out",
+      "lbw",
+      "retired hurt"
+     ],
+     "top_values": [
+      [
+       "stumped",
+       1
+      ],
+      [
+       "run out",
+       1
+      ],
+      [
+       "retired hurt",
+       1
+      ],
+      [
+       "obstructing the field",
+       1
+      ],
+      [
+       "lbw",
+       1
+      ],
+      [
+       "hit wicket",
+       1
+      ],
+      [
+       "caught and bowled",
+       1
+      ],
+      [
+       "caught",
+       1
+      ],
+      [
+       "bowled",
+       1
+      ]
+     ],
+     "description": "out name. out type name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Out_Id"
+   ],
+   "sample_rows": [
+    {
+     "Out_Id": 1,
+     "Out_Name": "caught"
+    },
+    {
+     "Out_Id": 2,
+     "Out_Name": "bowled"
+    },
+    {
+     "Out_Id": 3,
+     "Out_Name": "run out"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Outcome",
+   "row_count": 3,
+   "stats_rows": 3,
+   "columns": [
+    {
+     "name": "Outcome_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 3,
+     "examples": [
+      1,
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "outcome id. unique id for outcome",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Outcome_Type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": "No Result",
+     "max_value": "Superover",
+     "examples": [
+      "Result",
+      "No Result",
+      "Superover"
+     ],
+     "top_values": [
+      [
+       "Superover",
+       1
+      ],
+      [
+       "Result",
+       1
+      ],
+      [
+       "No Result",
+       1
+      ]
+     ],
+     "description": "outcome type. type of the outcome",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Outcome_Id"
+   ],
+   "sample_rows": [
+    {
+     "Outcome_Id": 1,
+     "Outcome_Type": "Result"
+    },
+    {
+     "Outcome_Id": 2,
+     "Outcome_Type": "No Result"
+    },
+    {
+     "Outcome_Id": 3,
+     "Outcome_Type": "Superover"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Player",
+   "row_count": 469,
+   "stats_rows": 469,
+   "columns": [
+    {
+     "name": "Player_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 469,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 469,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "player id. the id of the player",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Player_Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 469,
+     "is_unique": true,
+     "min_value": "A Ashish Reddy",
+     "max_value": "Z Khan",
+     "examples": [
+      "SC Ganguly",
+      "BB McCullum",
+      "RT Ponting",
+      "DJ Hussey",
+      "Mohammad Hafeez"
+     ],
+     "top_values": [],
+     "description": "player name. the name of the player",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DOB",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 455,
+     "is_unique": false,
+     "min_value": "1969-06-30",
+     "max_value": "1998-07-18",
+     "examples": [
+      "1972-07-08",
+      "1981-09-27",
+      "1974-12-19",
+      "1977-07-15",
+      "1980-10-17"
+     ],
+     "top_values": [],
+     "description": "date of birth. player's birthday",
+     "value_description": "yyyy-mm-dd",
+     "notes": []
+    },
+    {
+     "name": "Batting_hand",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       343
+      ],
+      [
+       1,
+       126
+      ]
+     ],
+     "description": "the id of the batting hand",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Bowling_skill",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0917,
+     "distinct_count": 14,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 14,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       1,
+       104
+      ],
+      [
+       2,
+       81
+      ],
+      [
+       3,
+       53
+      ],
+      [
+       7,
+       44
+      ],
+      [
+       5,
+       38
+      ],
+      [
+       10,
+       24
+      ],
+      [
+       4,
+       21
+      ],
+      [
+       11,
+       20
+      ],
+      [
+       6,
+       13
+      ],
+      [
+       13,
+       11
+      ],
+      [
+       9,
+       8
+      ],
+      [
+       8,
+       5
+      ],
+      [
+       14,
+       3
+      ],
+      [
+       12,
+       1
+      ]
+     ],
+     "description": "the id of the bowling skill",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country_Name",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 12,
+     "examples": [
+      1,
+      4,
+      5,
+      6,
+      2
+     ],
+     "top_values": [
+      [
+       1,
+       262
+      ],
+      [
+       5,
+       72
+      ],
+      [
+       2,
+       39
+      ],
+      [
+       4,
+       22
+      ],
+      [
+       7,
+       20
+      ],
+      [
+       8,
+       19
+      ],
+      [
+       10,
+       14
+      ],
+      [
+       6,
+       13
+      ],
+      [
+       11,
+       5
+      ],
+      [
+       9,
+       2
+      ],
+      [
+       12,
+       1
+      ]
+     ],
+     "description": "country name. the name of the country where the player is from",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Player_Id"
+   ],
+   "sample_rows": [
+    {
+     "Player_Id": 1,
+     "Player_Name": "SC Ganguly",
+     "DOB": "1972-07-08",
+     "Batting_hand": 1,
+     "Bowling_skill": 1,
+     "Country_Name": 1
+    },
+    {
+     "Player_Id": 2,
+     "Player_Name": "BB McCullum",
+     "DOB": "1981-09-27",
+     "Batting_hand": 2,
+     "Bowling_skill": 1,
+     "Country_Name": 4
+    },
+    {
+     "Player_Id": 3,
+     "Player_Name": "RT Ponting",
+     "DOB": "1974-12-19",
+     "Batting_hand": 2,
+     "Bowling_skill": 1,
+     "Country_Name": 5
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Player_Match",
+   "row_count": 12694,
+   "stats_rows": 12694,
+   "columns": [
+    {
+     "name": "Match_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 577,
+     "is_unique": false,
+     "min_value": 335987,
+     "max_value": 981024,
+     "examples": [
+      335987,
+      335988,
+      335989,
+      335990,
+      335991
+     ],
+     "top_values": [],
+     "description": "match id. unique id for match",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Player_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 469,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 469,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "player id. the id of the player",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Role_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      1,
+      3,
+      2,
+      4
+     ],
+     "top_values": [
+      [
+       3,
+       10635
+      ],
+      [
+       2,
+       905
+      ],
+      [
+       1,
+       905
+      ],
+      [
+       4,
+       249
+      ]
+     ],
+     "description": "role id. the id of the play's role in the match",
+     "value_description": "commonsense evidence:\nif a player has multiple roles in a match, it means this player is versatile",
+     "notes": []
+    },
+    {
+     "name": "Team_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 13,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       7,
+       1540
+      ],
+      [
+       2,
+       1529
+      ],
+      [
+       4,
+       1474
+      ],
+      [
+       6,
+       1463
+      ],
+      [
+       1,
+       1452
+      ],
+      [
+       3,
+       1441
+      ],
+      [
+       5,
+       1298
+      ],
+      [
+       8,
+       825
+      ],
+      [
+       11,
+       682
+      ],
+      [
+       10,
+       506
+      ],
+      [
+       13,
+       176
+      ],
+      [
+       12,
+       154
+      ],
+      [
+       9,
+       154
+      ]
+     ],
+     "description": "team id. the id of player's team",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Match_Id",
+    "Player_Id",
+    "Role_Id"
+   ],
+   "sample_rows": [
+    {
+     "Match_Id": 335987,
+     "Player_Id": 1,
+     "Role_Id": 1,
+     "Team_Id": 1
+    },
+    {
+     "Match_Id": 335987,
+     "Player_Id": 2,
+     "Role_Id": 3,
+     "Team_Id": 1
+    },
+    {
+     "Match_Id": 335987,
+     "Player_Id": 3,
+     "Role_Id": 3,
+     "Team_Id": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Rolee",
+   "row_count": 4,
+   "stats_rows": 4,
+   "columns": [
+    {
+     "name": "Role_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "role id. the unique id for the role",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Role_Desc",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": "Captain",
+     "max_value": "Player",
+     "examples": [
+      "Captain",
+      "Keeper",
+      "Player",
+      "CaptainKeeper"
+     ],
+     "top_values": [
+      [
+       "Player",
+       1
+      ],
+      [
+       "Keeper",
+       1
+      ],
+      [
+       "CaptainKeeper",
+       1
+      ],
+      [
+       "Captain",
+       1
+      ]
+     ],
+     "description": "the role description",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Role_Id"
+   ],
+   "sample_rows": [
+    {
+     "Role_Id": 1,
+     "Role_Desc": "Captain"
+    },
+    {
+     "Role_Id": 2,
+     "Role_Desc": "Keeper"
+    },
+    {
+     "Role_Id": 3,
+     "Role_Desc": "Player"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Season",
+   "row_count": 9,
+   "stats_rows": 9,
+   "columns": [
+    {
+     "name": "Season_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 9,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "season id. the unique id for season",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Man_of_the_Series",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": 8,
+     "max_value": 334,
+     "examples": [
+      32,
+      53,
+      133,
+      162,
+      315
+     ],
+     "top_values": [
+      [
+       32,
+       2
+      ],
+      [
+       334,
+       1
+      ],
+      [
+       315,
+       1
+      ],
+      [
+       305,
+       1
+      ],
+      [
+       162,
+       1
+      ],
+      [
+       133,
+       1
+      ],
+      [
+       53,
+       1
+      ],
+      [
+       8,
+       1
+      ]
+     ],
+     "description": "the player id of man of the series",
+     "value_description": "commonsense evidence:\r\nIn team sport, a player of the series or man (or woman) of the series award is often given to the outstanding player in a particular series.",
+     "notes": []
+    },
+    {
+     "name": "Orange_Cap",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": 8,
+     "max_value": 187,
+     "examples": [
+      100,
+      18,
+      133,
+      162,
+      19
+     ],
+     "top_values": [
+      [
+       162,
+       2
+      ],
+      [
+       187,
+       1
+      ],
+      [
+       133,
+       1
+      ],
+      [
+       100,
+       1
+      ],
+      [
+       46,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       8,
+       1
+      ]
+     ],
+     "description": "the player id who wins the orange cap",
+     "value_description": "commonsense evidence:\r\nThe Orange Cap is a coveted award for a batter who is participating in the Indian Premier League (IPL)",
+     "notes": []
+    },
+    {
+     "name": "Purple_Cap",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": 61,
+     "max_value": 364,
+     "examples": [
+      102,
+      61,
+      131,
+      194,
+      190
+     ],
+     "top_values": [
+      [
+       71,
+       2
+      ],
+      [
+       364,
+       1
+      ],
+      [
+       299,
+       1
+      ],
+      [
+       194,
+       1
+      ],
+      [
+       190,
+       1
+      ],
+      [
+       131,
+       1
+      ],
+      [
+       102,
+       1
+      ],
+      [
+       61,
+       1
+      ]
+     ],
+     "description": "the player id who wins the purple cap",
+     "value_description": "commonsense evidence:\r\nThe Purple Cap is awarded to the bowler who has emerged as the leading wicket-taker in a particular edition of the high-profile Indian Premier League (IPL)",
+     "notes": []
+    },
+    {
+     "name": "Season_Year",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": true,
+     "min_value": 2008,
+     "max_value": 2016,
+     "examples": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+     ],
+     "top_values": [
+      [
+       2016,
+       1
+      ],
+      [
+       2015,
+       1
+      ],
+      [
+       2014,
+       1
+      ],
+      [
+       2013,
+       1
+      ],
+      [
+       2012,
+       1
+      ],
+      [
+       2011,
+       1
+      ],
+      [
+       2010,
+       1
+      ],
+      [
+       2009,
+       1
+      ],
+      [
+       2008,
+       1
+      ]
+     ],
+     "description": "season year. the year of the season",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Season_Id"
+   ],
+   "sample_rows": [
+    {
+     "Season_Id": 1,
+     "Man_of_the_Series": 32,
+     "Orange_Cap": 100,
+     "Purple_Cap": 102,
+     "Season_Year": 2008
+    },
+    {
+     "Season_Id": 2,
+     "Man_of_the_Series": 53,
+     "Orange_Cap": 18,
+     "Purple_Cap": 61,
+     "Season_Year": 2009
+    },
+    {
+     "Season_Id": 3,
+     "Man_of_the_Series": 133,
+     "Orange_Cap": 133,
+     "Purple_Cap": 131,
+     "Season_Year": 2010
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Team",
+   "row_count": 13,
+   "stats_rows": 13,
+   "columns": [
+    {
+     "name": "Team_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 13,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "team id. the unique id for the team",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Team_Name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": true,
+     "min_value": "Chennai Super Kings",
+     "max_value": "Sunrisers Hyderabad",
+     "examples": [
+      "Kolkata Knight Riders",
+      "Royal Challengers Bangalore",
+      "Chennai Super Kings",
+      "Kings XI Punjab",
+      "Rajasthan Royals"
+     ],
+     "top_values": [
+      [
+       "Sunrisers Hyderabad",
+       1
+      ],
+      [
+       "Royal Challengers Bangalore",
+       1
+      ],
+      [
+       "Rising Pune Supergiants",
+       1
+      ],
+      [
+       "Rajasthan Royals",
+       1
+      ],
+      [
+       "Pune Warriors",
+       1
+      ],
+      [
+       "Mumbai Indians",
+       1
+      ],
+      [
+       "Kolkata Knight Riders",
+       1
+      ],
+      [
+       "Kochi Tuskers Kerala",
+       1
+      ],
+      [
+       "Kings XI Punjab",
+       1
+      ],
+      [
+       "Gujarat Lions",
+       1
+      ],
+      [
+       "Delhi Daredevils",
+       1
+      ],
+      [
+       "Deccan Chargers",
+       1
+      ],
+      [
+       "Chennai Super Kings",
+       1
+      ]
+     ],
+     "description": "the team name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Team_Id"
+   ],
+   "sample_rows": [
+    {
+     "Team_Id": 1,
+     "Team_Name": "Kolkata Knight Riders"
+    },
+    {
+     "Team_Id": 2,
+     "Team_Name": "Royal Challengers Bangalore"
+    },
+    {
+     "Team_Id": 3,
+     "Team_Name": "Chennai Super Kings"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Toss_Decision",
+   "row_count": 2,
+   "stats_rows": 2,
+   "columns": [
+    {
+     "name": "Toss_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "toss id. the unique id for the toss",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Toss_Name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": "bat",
+     "max_value": "field",
+     "examples": [
+      "field",
+      "bat"
+     ],
+     "top_values": [
+      [
+       "field",
+       1
+      ],
+      [
+       "bat",
+       1
+      ]
+     ],
+     "description": "toss name. the toss decision name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Toss_Id"
+   ],
+   "sample_rows": [
+    {
+     "Toss_Id": 1,
+     "Toss_Name": "field"
+    },
+    {
+     "Toss_Id": 2,
+     "Toss_Name": "bat"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Umpire",
+   "row_count": 52,
+   "stats_rows": 52,
+   "columns": [
+    {
+     "name": "Umpire_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 52,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 52,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "umpire id. the unique id of the umpire",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Umpire_Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 52,
+     "is_unique": true,
+     "min_value": "A Nand Kishore",
+     "max_value": "VK Sharma",
+     "examples": [
+      "Asad Rauf",
+      "MR Benson",
+      "Aleem Dar",
+      "SJ Davis",
+      "BF Bowden"
+     ],
+     "top_values": [],
+     "description": "umpire name. umpire's name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Umpire_Country",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 10,
+     "examples": [
+      6,
+      10,
+      4,
+      2,
+      5
+     ],
+     "top_values": [
+      [
+       1,
+       27
+      ],
+      [
+       5,
+       6
+      ],
+      [
+       2,
+       5
+      ],
+      [
+       10,
+       4
+      ],
+      [
+       4,
+       4
+      ],
+      [
+       7,
+       2
+      ],
+      [
+       6,
+       2
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ]
+     ],
+     "description": "umpire country. the id of the country where the umpire are from",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Umpire_Id"
+   ],
+   "sample_rows": [
+    {
+     "Umpire_Id": 1,
+     "Umpire_Name": "Asad Rauf",
+     "Umpire_Country": 6
+    },
+    {
+     "Umpire_Id": 2,
+     "Umpire_Name": "MR Benson",
+     "Umpire_Country": 10
+    },
+    {
+     "Umpire_Id": 3,
+     "Umpire_Name": "Aleem Dar",
+     "Umpire_Country": 6
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Venue",
+   "row_count": 35,
+   "stats_rows": 35,
+   "columns": [
+    {
+     "name": "Venue_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 35,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 35,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       35,
+       1
+      ],
+      [
+       34,
+       1
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       32,
+       1
+      ],
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "venue id. the unique id of the venue",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Venue_Name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 35,
+     "is_unique": true,
+     "min_value": "Barabati Stadium",
+     "max_value": "Wankhede Stadium",
+     "examples": [
+      "M Chinnaswamy Stadium",
+      "Punjab Cricket Association Stadium",
+      "Feroz Shah Kotla",
+      "Wankhede Stadium",
+      "Eden Gardens"
+     ],
+     "top_values": [
+      [
+       "Wankhede Stadium",
+       1
+      ],
+      [
+       "Vidarbha Cricket Association Stadium",
+       1
+      ],
+      [
+       "SuperSport Park",
+       1
+      ],
+      [
+       "Subrata Roy Sahara Stadium",
+       1
+      ],
+      [
+       "St George's Park",
+       1
+      ],
+      [
+       "Sheikh Zayed Stadium",
+       1
+      ],
+      [
+       "Sharjah Cricket Stadium",
+       1
+      ],
+      [
+       "Shaheed Veer Narayan Singh International Stadium",
+       1
+      ],
+      [
+       "Sawai Mansingh Stadium",
+       1
+      ],
+      [
+       "Saurashtra Cricket Association Stadium",
+       1
+      ],
+      [
+       "Sardar Patel Stadium",
+       1
+      ],
+      [
+       "Rajiv Gandhi International Stadium",
+       1
+      ],
+      [
+       "Punjab Cricket Association Stadium",
+       1
+      ],
+      [
+       "Punjab Cricket Association IS Bindra Stadium",
+       1
+      ],
+      [
+       "OUTsurance Oval",
+       1
+      ],
+      [
+       "Newlands",
+       1
+      ],
+      [
+       "New Wanderers Stadium",
+       1
+      ],
+      [
+       "Nehru Stadium",
+       1
+      ],
+      [
+       "Maharashtra Cricket Association Stadium",
+       1
+      ],
+      [
+       "MA Chidambaram Stadium",
+       1
+      ],
+      [
+       "M Chinnaswamy Stadium",
+       1
+      ],
+      [
+       "Kingsmead",
+       1
+      ],
+      [
+       "JSCA International Stadium Complex",
+       1
+      ],
+      [
+       "Holkar Cricket Stadium",
+       1
+      ],
+      [
+       "Himachal Pradesh Cricket Association Stadium",
+       1
+      ],
+      [
+       "Green Park",
+       1
+      ],
+      [
+       "Feroz Shah Kotla",
+       1
+      ],
+      [
+       "Eden Gardens",
+       1
+      ],
+      [
+       "Dubai International Cricket Stadium",
+       1
+      ],
+      [
+       "Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium",
+       1
+      ],
+      [
+       "Dr DY Patil Sports Academy",
+       1
+      ],
+      [
+       "De Beers Diamond Oval",
+       1
+      ],
+      [
+       "Buffalo Park",
+       1
+      ],
+      [
+       "Brabourne Stadium",
+       1
+      ],
+      [
+       "Barabati Stadium",
+       1
+      ]
+     ],
+     "description": "venue name. the name of the venue",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "City_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 29,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 29,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       27,
+       3
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       24,
+       2
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the city id where the venue is located in",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Venue_Id"
+   ],
+   "sample_rows": [
+    {
+     "Venue_Id": 1,
+     "Venue_Name": "M Chinnaswamy Stadium",
+     "City_Id": 1
+    },
+    {
+     "Venue_Id": 2,
+     "Venue_Name": "Punjab Cricket Association Stadium",
+     "City_Id": 2
+    },
+    {
+     "Venue_Id": 3,
+     "Venue_Name": "Feroz Shah Kotla",
+     "City_Id": 3
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Wicket_Taken",
+   "row_count": 6727,
+   "stats_rows": 6727,
+   "columns": [
+    {
+     "name": "Match_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 577,
+     "is_unique": false,
+     "min_value": 335987,
+     "max_value": 981024,
+     "examples": [
+      335987,
+      335988,
+      335989,
+      335990,
+      335991
+     ],
+     "top_values": [],
+     "description": "match id. the id of the match",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Over_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 20,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 20,
+     "examples": [
+      2,
+      3,
+      5,
+      6,
+      8
+     ],
+     "top_values": [
+      [
+       20,
+       678
+      ],
+      [
+       19,
+       538
+      ],
+      [
+       18,
+       506
+      ],
+      [
+       17,
+       411
+      ],
+      [
+       16,
+       375
+      ],
+      [
+       15,
+       340
+      ],
+      [
+       14,
+       317
+      ],
+      [
+       11,
+       300
+      ],
+      [
+       3,
+       296
+      ],
+      [
+       5,
+       295
+      ],
+      [
+       6,
+       290
+      ],
+      [
+       12,
+       285
+      ],
+      [
+       13,
+       284
+      ],
+      [
+       4,
+       282
+      ],
+      [
+       9,
+       278
+      ],
+      [
+       2,
+       269
+      ],
+      [
+       10,
+       263
+      ],
+      [
+       8,
+       243
+      ],
+      [
+       7,
+       241
+      ],
+      [
+       1,
+       236
+      ]
+     ],
+     "description": "over id. the id of the over in an inning",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Ball_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 9,
+     "examples": [
+      1,
+      2,
+      5,
+      8,
+      6
+     ],
+     "top_values": [
+      [
+       4,
+       1133
+      ],
+      [
+       6,
+       1121
+      ],
+      [
+       2,
+       1110
+      ],
+      [
+       5,
+       1075
+      ],
+      [
+       3,
+       1069
+      ],
+      [
+       1,
+       1000
+      ],
+      [
+       7,
+       190
+      ],
+      [
+       8,
+       26
+      ],
+      [
+       9,
+       3
+      ]
+     ],
+     "description": "ball id. the id of the ball in an over",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Player_Out",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 411,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 438,
+     "examples": [
+      6,
+      8,
+      9,
+      1,
+      7
+     ],
+     "top_values": [],
+     "description": "player out. the player id who got an out",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Kind_Out",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 9,
+     "examples": [
+      2,
+      1,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       1,
+       3954
+      ],
+      [
+       2,
+       1251
+      ],
+      [
+       3,
+       697
+      ],
+      [
+       4,
+       399
+      ],
+      [
+       6,
+       222
+      ],
+      [
+       7,
+       187
+      ],
+      [
+       8,
+       8
+      ],
+      [
+       5,
+       8
+      ],
+      [
+       9,
+       1
+      ]
+     ],
+     "description": "kind out. the id that represents the out type",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Fielders",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2765,
+     "distinct_count": 377,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 469,
+     "examples": [
+      83,
+      9,
+      3,
+      62,
+      82
+     ],
+     "top_values": [],
+     "description": "the id of fielders",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Innings_No",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      2,
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       3500
+      ],
+      [
+       2,
+       3215
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       4,
+       5
+      ]
+     ],
+     "description": "innings number. number which identifies an innings in a match",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Match_Id",
+    "Over_Id",
+    "Ball_Id",
+    "Innings_No"
+   ],
+   "sample_rows": [
+    {
+     "Match_Id": 335987,
+     "Over_Id": 2,
+     "Ball_Id": 1,
+     "Player_Out": 6,
+     "Kind_Out": 2,
+     "Fielders": null,
+     "Innings_No": 2
+    },
+    {
+     "Match_Id": 335987,
+     "Over_Id": 3,
+     "Ball_Id": 2,
+     "Player_Out": 8,
+     "Kind_Out": 2,
+     "Fielders": null,
+     "Innings_No": 2
+    },
+    {
+     "Match_Id": 335987,
+     "Over_Id": 5,
+     "Ball_Id": 5,
+     "Player_Out": 9,
+     "Kind_Out": 1,
+     "Fielders": 83,
+     "Innings_No": 2
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Win_By",
+   "row_count": 4,
+   "stats_rows": 4,
+   "columns": [
+    {
+     "name": "Win_Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "winning id. the unique id for the winning",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Win_Type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": "NO Result",
+     "max_value": "wickets",
+     "examples": [
+      "runs",
+      "wickets",
+      "NO Result",
+      "Tie"
+     ],
+     "top_values": [
+      [
+       "wickets",
+       1
+      ],
+      [
+       "runs",
+       1
+      ],
+      [
+       "Tie",
+       1
+      ],
+      [
+       "NO Result",
+       1
+      ]
+     ],
+     "description": "the winning type",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Win_Id"
+   ],
+   "sample_rows": [
+    {
+     "Win_Id": 1,
+     "Win_Type": "runs"
+    },
+    {
+     "Win_Id": 2,
+     "Win_Type": "wickets"
+    },
+    {
+     "Win_Id": 3,
+     "Win_Type": "NO Result"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "Ball_by_Ball",
+   "from_column": "Match_Id",
+   "to_table": "Match",
+   "to_column": "Match_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Batsman_Scored",
+   "from_column": "Match_Id",
+   "to_table": "Match",
+   "to_column": "Match_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Extra_Runs",
+   "from_column": "Extra_Type_Id",
+   "to_table": "Extra_Type",
+   "to_column": "Extra_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Match",
+   "from_column": "Man_of_the_Match",
+   "to_table": "Player",
+   "to_column": "Player_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Match",
+   "from_column": "Match_Winner",
+   "to_table": "Team",
+   "to_column": "Team_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Match",
+   "from_column": "Outcome_type",
+   "to_table": "Out_Type",
+   "to_column": "Out_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Match",
+   "from_column": "Win_Type",
+   "to_table": "Win_By",
+   "to_column": "Win_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Match",
+   "from_column": "Toss_Decide",
+   "to_table": "Toss_Decision",
+   "to_column": "Toss_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Match",
+   "from_column": "Toss_Winner",
+   "to_table": "Team",
+   "to_column": "Team_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Match",
+   "from_column": "Venue_Id",
+   "to_table": "Venue",
+   "to_column": "Venue_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Match",
+   "from_column": "Season_Id",
+   "to_table": "Season",
+   "to_column": "Season_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Match",
+   "from_column": "Team_2",
+   "to_table": "Team",
+   "to_column": "Team_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Match",
+   "from_column": "Team_1",
+   "to_table": "Team",
+   "to_column": "Team_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Player",
+   "from_column": "Country_Name",
+   "to_table": "Country",
+   "to_column": "Country_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Player",
+   "from_column": "Bowling_skill",
+   "to_table": "Bowling_Style",
+   "to_column": "Bowling_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Player",
+   "from_column": "Batting_hand",
+   "to_table": "Batting_Style",
+   "to_column": "Batting_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Player_Match",
+   "from_column": "Role_Id",
+   "to_table": "Rolee",
+   "to_column": "Role_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Player_Match",
+   "from_column": "Team_Id",
+   "to_table": "Team",
+   "to_column": "Team_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Player_Match",
+   "from_column": "Player_Id",
+   "to_table": "Player",
+   "to_column": "Player_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Player_Match",
+   "from_column": "Match_Id",
+   "to_table": "Match",
+   "to_column": "Match_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Umpire",
+   "from_column": "Umpire_Country",
+   "to_table": "Country",
+   "to_column": "Country_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Venue",
+   "from_column": "City_Id",
+   "to_table": "City",
+   "to_column": "City_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Wicket_Taken",
+   "from_column": "Fielders",
+   "to_table": "Player",
+   "to_column": "Player_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Wicket_Taken",
+   "from_column": "Kind_Out",
+   "to_table": "Out_Type",
+   "to_column": "Out_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Wicket_Taken",
+   "from_column": "Player_Out",
+   "to_table": "Player",
+   "to_column": "Player_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Wicket_Taken",
+   "from_column": "Match_Id",
+   "to_table": "Match",
+   "to_column": "Match_Id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Ball_by_Ball",
+   "from_column": "Match_Id",
+   "to_table": "Batsman_Scored",
+   "to_column": "Match_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Ball_by_Ball",
+   "from_column": "Over_Id",
+   "to_table": "Batsman_Scored",
+   "to_column": "Over_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Ball_by_Ball",
+   "from_column": "Ball_Id",
+   "to_table": "Batsman_Scored",
+   "to_column": "Ball_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Ball_by_Ball",
+   "from_column": "Innings_No",
+   "to_table": "Batsman_Scored",
+   "to_column": "Innings_No",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Ball_by_Ball",
+   "from_column": "Match_Id",
+   "to_table": "Extra_Runs",
+   "to_column": "Match_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Ball_by_Ball",
+   "from_column": "Over_Id",
+   "to_table": "Extra_Runs",
+   "to_column": "Over_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Ball_by_Ball",
+   "from_column": "Ball_Id",
+   "to_table": "Extra_Runs",
+   "to_column": "Ball_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Ball_by_Ball",
+   "from_column": "Innings_No",
+   "to_table": "Extra_Runs",
+   "to_column": "Innings_No",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Ball_by_Ball",
+   "from_column": "Match_Id",
+   "to_table": "Player_Match",
+   "to_column": "Match_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Ball_by_Ball",
+   "from_column": "Match_Id",
+   "to_table": "Wicket_Taken",
+   "to_column": "Match_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Ball_by_Ball",
+   "from_column": "Over_Id",
+   "to_table": "Wicket_Taken",
+   "to_column": "Over_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Ball_by_Ball",
+   "from_column": "Ball_Id",
+   "to_table": "Wicket_Taken",
+   "to_column": "Ball_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Ball_by_Ball",
+   "from_column": "Innings_No",
+   "to_table": "Wicket_Taken",
+   "to_column": "Innings_No",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Batsman_Scored",
+   "from_column": "Match_Id",
+   "to_table": "Extra_Runs",
+   "to_column": "Match_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Batsman_Scored",
+   "from_column": "Over_Id",
+   "to_table": "Extra_Runs",
+   "to_column": "Over_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Batsman_Scored",
+   "from_column": "Ball_Id",
+   "to_table": "Extra_Runs",
+   "to_column": "Ball_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Batsman_Scored",
+   "from_column": "Innings_No",
+   "to_table": "Extra_Runs",
+   "to_column": "Innings_No",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Batsman_Scored",
+   "from_column": "Match_Id",
+   "to_table": "Player_Match",
+   "to_column": "Match_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Batsman_Scored",
+   "from_column": "Match_Id",
+   "to_table": "Wicket_Taken",
+   "to_column": "Match_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Batsman_Scored",
+   "from_column": "Over_Id",
+   "to_table": "Wicket_Taken",
+   "to_column": "Over_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Batsman_Scored",
+   "from_column": "Ball_Id",
+   "to_table": "Wicket_Taken",
+   "to_column": "Ball_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Batsman_Scored",
+   "from_column": "Innings_No",
+   "to_table": "Wicket_Taken",
+   "to_column": "Innings_No",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "City",
+   "from_column": "Country_id",
+   "to_table": "Country",
+   "to_column": "Country_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Extra_Runs",
+   "from_column": "Match_Id",
+   "to_table": "Match",
+   "to_column": "Match_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Extra_Runs",
+   "from_column": "Match_Id",
+   "to_table": "Player_Match",
+   "to_column": "Match_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Extra_Runs",
+   "from_column": "Match_Id",
+   "to_table": "Wicket_Taken",
+   "to_column": "Match_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Extra_Runs",
+   "from_column": "Over_Id",
+   "to_table": "Wicket_Taken",
+   "to_column": "Over_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Extra_Runs",
+   "from_column": "Ball_Id",
+   "to_table": "Wicket_Taken",
+   "to_column": "Ball_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Extra_Runs",
+   "from_column": "Innings_No",
+   "to_table": "Wicket_Taken",
+   "to_column": "Innings_No",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Player_Match",
+   "from_column": "Match_Id",
+   "to_table": "Wicket_Taken",
+   "to_column": "Match_Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

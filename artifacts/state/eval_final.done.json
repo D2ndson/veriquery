@@ -1,0 +1,23 @@
+{
+ "stage": "eval_final",
+ "seconds": 783.3,
+ "finished": "2026-11-06 21:18:11",
+ "info": {
+  "once": {
+   "accuracy": 0.5150905432595574,
+   "n": 497
+  },
+  "final": {
+   "accuracy": 0.5353535353535354,
+   "n": 99
+  },
+  "final_norepair": {
+   "accuracy": 0.5757575757575758,
+   "n": 99
+  },
+  "shop": {
+   "accuracy": 0.675,
+   "n": 40
+  }
+ }
+}

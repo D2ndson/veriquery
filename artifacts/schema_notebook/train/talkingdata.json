@@ -1,0 +1,1828 @@
+{
+ "db_id": "talkingdata",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/talkingdata/talkingdata.sqlite",
+ "fingerprint": "1903886336-1793993058305087882-v1.0",
+ "created_at": "2026-11-06T19:26:14+00:00",
+ "profile_seconds": 55.953,
+ "tables": [
+  {
+   "name": "app_all",
+   "row_count": 113211,
+   "stats_rows": 113211,
+   "columns": [
+    {
+     "name": "app_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 113211,
+     "is_unique": true,
+     "min_value": -9223281467940916832,
+     "max_value": 9223317927457411432,
+     "examples": [
+      -9223281467940916832,
+      -9222877069545393219,
+      -9222785464897897681,
+      -9222198347540756780,
+      -9221970424041518544
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "app_id"
+   ],
+   "sample_rows": [
+    {
+     "app_id": -9223281467940916832
+    },
+    {
+     "app_id": -9222877069545393219
+    },
+    {
+     "app_id": -9222785464897897681
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "app_events",
+   "row_count": 32473067,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "event_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 8575,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 18737,
+     "examples": [
+      2,
+      6,
+      7,
+      9,
+      16
+     ],
+     "top_values": [],
+     "description": "event id. the id of events",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "app_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6958,
+     "is_unique": false,
+     "min_value": -9221156934682287334,
+     "max_value": 9220205176760015004,
+     "examples": [
+      -8942695423876075857,
+      -8022267440849930066,
+      -5720078949152207372,
+      -3725672010020973973,
+      -1758857579862594461
+     ],
+     "top_values": [],
+     "description": "app id. the id of app users",
+     "value_description": "each app_id represents for an user",
+     "notes": []
+    },
+    {
+     "name": "is_installed",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       200000
+      ]
+     ],
+     "description": "whether this app is installed or not",
+     "value_description": " 0: no\n 1: yes: installed",
+     "notes": []
+    },
+    {
+     "name": "is_active",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       126784
+      ],
+      [
+       1,
+       73216
+      ]
+     ],
+     "description": "whether this user is active or not",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "event_id",
+    "app_id"
+   ],
+   "sample_rows": [
+    {
+     "event_id": 2,
+     "app_id": -8942695423876075857,
+     "is_installed": 1,
+     "is_active": 0
+    },
+    {
+     "event_id": 2,
+     "app_id": -8022267440849930066,
+     "is_installed": 1,
+     "is_active": 0
+    },
+    {
+     "event_id": 2,
+     "app_id": -5720078949152207372,
+     "is_installed": 1,
+     "is_active": 0
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 32,473,067 rows"
+   ]
+  },
+  {
+   "name": "app_events_relevant",
+   "row_count": 3701900,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "event_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 8530,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 19176,
+     "examples": [
+      2,
+      6,
+      7,
+      9,
+      16
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "app_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6895,
+     "is_unique": false,
+     "min_value": -9221156934682287334,
+     "max_value": 9220205176760015004,
+     "examples": [
+      -8942695423876075857,
+      -8022267440849930066,
+      -5720078949152207372,
+      -3725672010020973973,
+      -1758857579862594461
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "is_installed",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       200000
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "is_active",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       127107
+      ],
+      [
+       1,
+       72893
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "event_id",
+    "app_id"
+   ],
+   "sample_rows": [
+    {
+     "event_id": 2,
+     "app_id": -8942695423876075857,
+     "is_installed": 1,
+     "is_active": 0
+    },
+    {
+     "event_id": 2,
+     "app_id": -8022267440849930066,
+     "is_installed": 1,
+     "is_active": 0
+    },
+    {
+     "event_id": 2,
+     "app_id": -5720078949152207372,
+     "is_installed": 1,
+     "is_active": 0
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 3,701,900 rows"
+   ]
+  },
+  {
+   "name": "app_labels",
+   "row_count": 459943,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "app_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 57492,
+     "is_unique": false,
+     "min_value": -9221970424041518544,
+     "max_value": 9223317927457411432,
+     "examples": [
+      7324884708820027918,
+      -4494216993218550286,
+      6058196446775239644,
+      8694625920731541625,
+      1977658975649789753
+     ],
+     "top_values": [],
+     "description": "app id. id of the app user",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "label_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 130,
+     "is_unique": false,
+     "min_value": 251,
+     "max_value": 826,
+     "examples": [
+      251,
+      406,
+      407,
+      256,
+      261
+     ],
+     "top_values": [],
+     "description": "label id. id of labels represents which behavior category that each user belongs to",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "app_id": 7324884708820027918,
+     "label_id": 251
+    },
+    {
+     "app_id": -4494216993218550286,
+     "label_id": 251
+    },
+    {
+     "app_id": 6058196446775239644,
+     "label_id": 406
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 459,943 rows",
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "events",
+   "row_count": 3252950,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "event_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 200000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "event id. unique id number referring to the event",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "device_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 35376,
+     "is_unique": false,
+     "min_value": -9222956879900151005,
+     "max_value": 9222355582733155698,
+     "examples": [
+      29182687948017175,
+      -6401643145415154744,
+      -4833982096941402721,
+      -6815121365017318426,
+      -5373797595892518570
+     ],
+     "top_values": [],
+     "description": "device id. id number referring the device",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "timestamp",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 167676,
+     "is_unique": false,
+     "min_value": "2016-04-30 23:53:59.0",
+     "max_value": "2016-05-07 23:57:21.0",
+     "examples": [
+      "2016-05-01 00:55:25.0",
+      "2016-05-01 00:54:12.0",
+      "2016-05-01 00:08:05.0",
+      "2016-05-01 00:06:40.0",
+      "2016-05-01 00:07:18.0"
+     ],
+     "top_values": [],
+     "description": "the time of the event",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "longitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 79,
+     "is_unique": false,
+     "min_value": -180.0,
+     "max_value": 151.0,
+     "examples": [
+      121.0,
+      104.0,
+      107.0,
+      116.0,
+      0.0
+     ],
+     "top_values": [],
+     "description": "longitude",
+     "value_description": "commonsense evidence:\nthe location / coordinate = (longitude, latitude)",
+     "notes": []
+    },
+    {
+     "name": "latitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 56,
+     "is_unique": false,
+     "min_value": -38.0,
+     "max_value": 54.0,
+     "examples": [
+      31.0,
+      30.0,
+      23.0,
+      29.0,
+      0.0
+     ],
+     "top_values": [],
+     "description": "latitude",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "event_id"
+   ],
+   "sample_rows": [
+    {
+     "event_id": 1,
+     "device_id": 29182687948017175,
+     "timestamp": "2016-05-01 00:55:25.0",
+     "longitude": 121.0,
+     "latitude": 31.0
+    },
+    {
+     "event_id": 2,
+     "device_id": -6401643145415154744,
+     "timestamp": "2016-05-01 00:54:12.0",
+     "longitude": 104.0,
+     "latitude": 31.0
+    },
+    {
+     "event_id": 3,
+     "device_id": -4833982096941402721,
+     "timestamp": "2016-05-01 00:08:05.0",
+     "longitude": 107.0,
+     "latitude": 30.0
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 3,252,950 rows"
+   ]
+  },
+  {
+   "name": "events_relevant",
+   "row_count": 167389,
+   "stats_rows": 167389,
+   "columns": [
+    {
+     "name": "event_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 167389,
+     "is_unique": true,
+     "min_value": 2,
+     "max_value": 376994,
+     "examples": [
+      2,
+      6,
+      7,
+      9,
+      16
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "device_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "timestamp",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2575,
+     "is_unique": false,
+     "min_value": -9221156934682287334,
+     "max_value": 9220205176760015004,
+     "examples": [
+      -8942695423876075857,
+      -8764672938472212518,
+      -9050100410106163077,
+      -7680145830980282919,
+      -9142957261685295367
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "longitude",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 1.0,
+     "examples": [
+      1.0
+     ],
+     "top_values": [
+      [
+       1.0,
+       167389
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "latitude",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 1.0,
+     "examples": [
+      0.0,
+      1.0
+     ],
+     "top_values": [
+      [
+       1.0,
+       110156
+      ],
+      [
+       0.0,
+       57233
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "event_id"
+   ],
+   "sample_rows": [
+    {
+     "event_id": 2,
+     "device_id": null,
+     "timestamp": -8942695423876075857,
+     "longitude": 1.0,
+     "latitude": 0.0
+    },
+    {
+     "event_id": 6,
+     "device_id": null,
+     "timestamp": -8764672938472212518,
+     "longitude": 1.0,
+     "latitude": 1.0
+    },
+    {
+     "event_id": 7,
+     "device_id": null,
+     "timestamp": -9050100410106163077,
+     "longitude": 1.0,
+     "latitude": 0.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "gender_age",
+   "row_count": 186697,
+   "stats_rows": 186697,
+   "columns": [
+    {
+     "name": "device_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 186697,
+     "is_unique": true,
+     "min_value": -9221086586254644858,
+     "max_value": 9223069070668353002,
+     "examples": [
+      -9221086586254644858,
+      -9221079146476055829,
+      -9221066489596332354,
+      -9221046405740900422,
+      -9221026417907250887
+     ],
+     "top_values": [],
+     "description": "device id. unique number of devices",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.6002,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "M",
+     "examples": [
+      "M",
+      "F"
+     ],
+     "top_values": [
+      [
+       "M",
+       47899
+      ],
+      [
+       "F",
+       26739
+      ]
+     ],
+     "description": "gender of the user who uses this device",
+     "value_description": "",
+     "notes": [
+      "60% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "age",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.6002,
+     "distinct_count": 85,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 96,
+     "examples": [
+      29,
+      31,
+      38,
+      20,
+      19
+     ],
+     "top_values": [],
+     "description": "age of the user who uses this device",
+     "value_description": " M: male;\n F: female",
+     "notes": [
+      "60% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "group",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.6002,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": "F23-",
+     "max_value": "M39+",
+     "examples": [
+      "M29-31",
+      "M32-38",
+      "F29-32",
+      "M22-",
+      "M39+"
+     ],
+     "top_values": [
+      [
+       "M23-26",
+       9603
+      ],
+      [
+       "M32-38",
+       9474
+      ],
+      [
+       "M39+",
+       8581
+      ],
+      [
+       "M22-",
+       7488
+      ],
+      [
+       "M29-31",
+       7308
+      ],
+      [
+       "F33-42",
+       5561
+      ],
+      [
+       "M27-28",
+       5445
+      ],
+      [
+       "F23-",
+       5050
+      ],
+      [
+       "F29-32",
+       4628
+      ],
+      [
+       "F43+",
+       4193
+      ],
+      [
+       "F24-26",
+       4190
+      ],
+      [
+       "F27-28",
+       3117
+      ]
+     ],
+     "description": "group of the ages",
+     "value_description": "",
+     "notes": [
+      "60% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "device_id"
+   ],
+   "sample_rows": [
+    {
+     "device_id": -9221086586254644858,
+     "gender": "M",
+     "age": 29,
+     "group": "M29-31"
+    },
+    {
+     "device_id": -9221079146476055829,
+     "gender": null,
+     "age": null,
+     "group": null
+    },
+    {
+     "device_id": -9221066489596332354,
+     "gender": "M",
+     "age": 31,
+     "group": "M29-31"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "gender_age_test",
+   "row_count": 112071,
+   "stats_rows": 112071,
+   "columns": [
+    {
+     "name": "device_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 112071,
+     "is_unique": true,
+     "min_value": -9223321966609553846,
+     "max_value": 9223069070668353002,
+     "examples": [
+      -9223321966609553846,
+      -9223042152723782980,
+      -9222896629442493034,
+      -9222894989445037972,
+      -9222894319703307262
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "device_id"
+   ],
+   "sample_rows": [
+    {
+     "device_id": -9223321966609553846
+    },
+    {
+     "device_id": -9223042152723782980
+    },
+    {
+     "device_id": -9222896629442493034
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "gender_age_train",
+   "row_count": 74645,
+   "stats_rows": 74645,
+   "columns": [
+    {
+     "name": "device_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 74645,
+     "is_unique": true,
+     "min_value": -9223067244542181226,
+     "max_value": 9222849349208140841,
+     "examples": [
+      -9223067244542181226,
+      -9222956879900151005,
+      -9222754701995937853,
+      -9222352239947207574,
+      -9222173362545970626
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "M",
+     "examples": [
+      "M",
+      "F"
+     ],
+     "top_values": [
+      [
+       "M",
+       47904
+      ],
+      [
+       "F",
+       26741
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "age",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 85,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 96,
+     "examples": [
+      24,
+      36,
+      29,
+      23,
+      56
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "group",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": "F23-",
+     "max_value": "M39+",
+     "examples": [
+      "M23-26",
+      "M32-38",
+      "M29-31",
+      "F43+",
+      "F27-28"
+     ],
+     "top_values": [
+      [
+       "M23-26",
+       9605
+      ],
+      [
+       "M32-38",
+       9476
+      ],
+      [
+       "M39+",
+       8581
+      ],
+      [
+       "M22-",
+       7488
+      ],
+      [
+       "M29-31",
+       7309
+      ],
+      [
+       "F33-42",
+       5561
+      ],
+      [
+       "M27-28",
+       5445
+      ],
+      [
+       "F23-",
+       5050
+      ],
+      [
+       "F29-32",
+       4628
+      ],
+      [
+       "F43+",
+       4194
+      ],
+      [
+       "F24-26",
+       4190
+      ],
+      [
+       "F27-28",
+       3118
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "device_id"
+   ],
+   "sample_rows": [
+    {
+     "device_id": -9223067244542181226,
+     "gender": "M",
+     "age": 24,
+     "group": "M23-26"
+    },
+    {
+     "device_id": -9222956879900151005,
+     "gender": "M",
+     "age": 36,
+     "group": "M32-38"
+    },
+    {
+     "device_id": -9222754701995937853,
+     "gender": "M",
+     "age": 29,
+     "group": "M29-31"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "label_categories",
+   "row_count": 930,
+   "stats_rows": 930,
+   "columns": [
+    {
+     "name": "label_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 930,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 1021,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "label id. unique id of label",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "category",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0032,
+     "distinct_count": 833,
+     "is_unique": false,
+     "min_value": "\"Europe",
+     "max_value": "zombies game",
+     "examples": [
+      "game-game type",
+      "game-Game themes",
+      "game-Art Style",
+      "game-Leisure time",
+      "game-Cutting things"
+     ],
+     "top_values": [],
+     "description": "category of the label",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "label_id"
+   ],
+   "sample_rows": [
+    {
+     "label_id": 1,
+     "category": null
+    },
+    {
+     "label_id": 2,
+     "category": "game-game type"
+    },
+    {
+     "label_id": 3,
+     "category": "game-Game themes"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "phone_brand_device_model2",
+   "row_count": 89200,
+   "stats_rows": 89200,
+   "columns": [
+    {
+     "name": "device_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 89195,
+     "is_unique": false,
+     "min_value": -9223321966609553846,
+     "max_value": -436251091738486485,
+     "examples": [
+      -9223321966609553846,
+      -9223067244542181226,
+      -9223042152723782980,
+      -9222956879900151005,
+      -9222896629442493034
+     ],
+     "top_values": [],
+     "description": "device id. the id number of the device",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "phone_brand",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 122,
+     "is_unique": false,
+     "min_value": "E人E本",
+     "max_value": "黑米",
+     "examples": [
+      "小米",
+      "vivo",
+      "三星",
+      "OPPO",
+      "金立"
+     ],
+     "top_values": [],
+     "description": "phone brand",
+     "value_description": "commonsense evidence:\nphone_brand has duplicated values since some device models belong to the same brand",
+     "notes": []
+    },
+    {
+     "name": "device_model",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1490,
+     "is_unique": false,
+     "min_value": "1100",
+     "max_value": "黄金斗士青春版",
+     "examples": [
+      "红米note",
+      "Y19T",
+      "MI 3",
+      "Galaxy Note 2",
+      "A31"
+     ],
+     "top_values": [],
+     "description": "device model",
+     "value_description": "commonsense evidence:\nphone_brand has duplicated values since some device models belong to the same brand",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "device_id",
+    "phone_brand",
+    "device_model"
+   ],
+   "sample_rows": [
+    {
+     "device_id": -9223321966609553846,
+     "phone_brand": "小米",
+     "device_model": "红米note"
+    },
+    {
+     "device_id": -9223067244542181226,
+     "phone_brand": "vivo",
+     "device_model": "Y19T"
+    },
+    {
+     "device_id": -9223042152723782980,
+     "phone_brand": "小米",
+     "device_model": "MI 3"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "sample_submission",
+   "row_count": 13700,
+   "stats_rows": 13700,
+   "columns": [
+    {
+     "name": "device_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 13700,
+     "is_unique": true,
+     "min_value": -9223321966609553846,
+     "max_value": -6985565702856993648,
+     "examples": [
+      -9223321966609553846,
+      -9223042152723782980,
+      -9222896629442493034,
+      -9222894989445037972,
+      -9222894319703307262
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "F23-",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 0.0833,
+     "max_value": 0.0833,
+     "examples": [
+      0.0833
+     ],
+     "top_values": [
+      [
+       0.0833,
+       13700
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "F24-26",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 0.0833,
+     "max_value": 0.0833,
+     "examples": [
+      0.0833
+     ],
+     "top_values": [
+      [
+       0.0833,
+       13700
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "F27-28",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 0.0833,
+     "max_value": 0.0833,
+     "examples": [
+      0.0833
+     ],
+     "top_values": [
+      [
+       0.0833,
+       13700
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "F29-32",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 0.0833,
+     "max_value": 0.0833,
+     "examples": [
+      0.0833
+     ],
+     "top_values": [
+      [
+       0.0833,
+       13700
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "F33-42",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 0.0833,
+     "max_value": 0.0833,
+     "examples": [
+      0.0833
+     ],
+     "top_values": [
+      [
+       0.0833,
+       13700
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "F43+",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 0.0833,
+     "max_value": 0.0833,
+     "examples": [
+      0.0833
+     ],
+     "top_values": [
+      [
+       0.0833,
+       13700
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "M22-",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 0.0833,
+     "max_value": 0.0833,
+     "examples": [
+      0.0833
+     ],
+     "top_values": [
+      [
+       0.0833,
+       13700
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "M23-26",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 0.0833,
+     "max_value": 0.0833,
+     "examples": [
+      0.0833
+     ],
+     "top_values": [
+      [
+       0.0833,
+       13700
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "M27-28",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 0.0833,
+     "max_value": 0.0833,
+     "examples": [
+      0.0833
+     ],
+     "top_values": [
+      [
+       0.0833,
+       13700
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "M29-31",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 0.0833,
+     "max_value": 0.0833,
+     "examples": [
+      0.0833
+     ],
+     "top_values": [
+      [
+       0.0833,
+       13700
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "M32-38",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 0.0833,
+     "max_value": 0.0833,
+     "examples": [
+      0.0833
+     ],
+     "top_values": [
+      [
+       0.0833,
+       13700
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "M39+",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 0.0833,
+     "max_value": 0.0833,
+     "examples": [
+      0.0833
+     ],
+     "top_values": [
+      [
+       0.0833,
+       13700
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    }
+   ],
+   "primary_key": [
+    "device_id"
+   ],
+   "sample_rows": [
+    {
+     "device_id": -9223321966609553846,
+     "F23-": 0.0833,
+     "F24-26": 0.0833,
+     "F27-28": 0.0833,
+     "F29-32": 0.0833,
+     "F33-42": 0.0833,
+     "F43+": 0.0833,
+     "M22-": 0.0833,
+     "M23-26": 0.0833,
+     "M27-28": 0.0833,
+     "M29-31": 0.0833,
+     "M32-38": 0.0833,
+     "M39+": 0.0833
+    },
+    {
+     "device_id": -9223042152723782980,
+     "F23-": 0.0833,
+     "F24-26": 0.0833,
+     "F27-28": 0.0833,
+     "F29-32": 0.0833,
+     "F33-42": 0.0833,
+     "F43+": 0.0833,
+     "M22-": 0.0833,
+     "M23-26": 0.0833,
+     "M27-28": 0.0833,
+     "M29-31": 0.0833,
+     "M32-38": 0.0833,
+     "M39+": 0.0833
+    },
+    {
+     "device_id": -9222896629442493034,
+     "F23-": 0.0833,
+     "F24-26": 0.0833,
+     "F27-28": 0.0833,
+     "F29-32": 0.0833,
+     "F33-42": 0.0833,
+     "F43+": 0.0833,
+     "M22-": 0.0833,
+     "M23-26": 0.0833,
+     "M27-28": 0.0833,
+     "M29-31": 0.0833,
+     "M32-38": 0.0833,
+     "M39+": 0.0833
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "app_events",
+   "from_column": "event_id",
+   "to_table": "events",
+   "to_column": "event_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "app_events_relevant",
+   "from_column": "app_id",
+   "to_table": "app_all",
+   "to_column": "app_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "app_events_relevant",
+   "from_column": "event_id",
+   "to_table": "events_relevant",
+   "to_column": "event_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "app_labels",
+   "from_column": "app_id",
+   "to_table": "app_all",
+   "to_column": "app_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "app_labels",
+   "from_column": "label_id",
+   "to_table": "label_categories",
+   "to_column": "label_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "events_relevant",
+   "from_column": "device_id",
+   "to_table": "gender_age",
+   "to_column": "device_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "gender_age",
+   "from_column": "device_id",
+   "to_table": "phone_brand_device_model2",
+   "to_column": "device_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "app_events",
+   "from_column": "app_id",
+   "to_table": "app_all",
+   "to_column": "app_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "app_events",
+   "from_column": "event_id",
+   "to_table": "app_events_relevant",
+   "to_column": "event_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.983
+  },
+  {
+   "from_table": "app_events",
+   "from_column": "app_id",
+   "to_table": "app_events_relevant",
+   "to_column": "app_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "app_events",
+   "from_column": "event_id",
+   "to_table": "events_relevant",
+   "to_column": "event_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.983
+  },
+  {
+   "from_table": "app_events_relevant",
+   "from_column": "event_id",
+   "to_table": "events",
+   "to_column": "event_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "app_labels",
+   "from_column": "app_id",
+   "to_table": "app_events",
+   "to_column": "app_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.953
+  },
+  {
+   "from_table": "app_labels",
+   "from_column": "app_id",
+   "to_table": "app_events_relevant",
+   "to_column": "app_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.917
+  },
+  {
+   "from_table": "events",
+   "from_column": "device_id",
+   "to_table": "gender_age",
+   "to_column": "device_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.98
+  },
+  {
+   "from_table": "events_relevant",
+   "from_column": "event_id",
+   "to_table": "events",
+   "to_column": "event_id",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "gender_age_test",
+   "from_column": "device_id",
+   "to_table": "gender_age",
+   "to_column": "device_id",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 0.96
+  },
+  {
+   "from_table": "gender_age_test",
+   "from_column": "device_id",
+   "to_table": "phone_brand_device_model2",
+   "to_column": "device_id",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "gender_age_test",
+   "from_column": "device_id",
+   "to_table": "sample_submission",
+   "to_column": "device_id",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "gender_age_train",
+   "from_column": "device_id",
+   "to_table": "gender_age",
+   "to_column": "device_id",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 0.977
+  },
+  {
+   "from_table": "gender_age_train",
+   "from_column": "device_id",
+   "to_table": "phone_brand_device_model2",
+   "to_column": "device_id",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "sample_submission",
+   "from_column": "device_id",
+   "to_table": "gender_age",
+   "to_column": "device_id",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 0.96
+  },
+  {
+   "from_table": "sample_submission",
+   "from_column": "device_id",
+   "to_table": "phone_brand_device_model2",
+   "to_column": "device_id",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

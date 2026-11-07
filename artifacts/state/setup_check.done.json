@@ -1,0 +1,19 @@
+{
+ "stage": "setup_check",
+ "seconds": 0.9,
+ "finished": "2026-11-06 19:20:56",
+ "info": {
+  "python": "3.12.15",
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+  "torch": "2.10.0+cu128",
+  "cuda": true,
+  "gpu": "NVIDIA GeForce RTX 5090 (34 GB) x1",
+  "transformers": true,
+  "peft": true,
+  "vllm": true,
+  "sqlglot": true,
+  "tqdm": true,
+  "yaml": true,
+  "disk_free_gb": 159
+ }
+}

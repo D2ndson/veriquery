@@ -1,0 +1,90 @@
+{
+ "stage": "golden_runs",
+ "seconds": 4.2,
+ "finished": "2026-11-06 21:18:37",
+ "info": {
+  "runs": [
+   {
+    "id": "a01",
+    "question": "What was our revenue last quarter?",
+    "evidence": "Today is 2025-07-01.",
+    "trap": "ambiguous",
+    "ok": false,
+    "seconds": 0.5,
+    "file": "a01.jsonl"
+   },
+   {
+    "id": "a03",
+    "question": "How many big orders were there in 2024?",
+    "evidence": "Today is 2025-07-01.",
+    "trap": "ambiguous",
+    "ok": false,
+    "seconds": 0.5,
+    "file": "a03.jsonl"
+   },
+   {
+    "id": "f02",
+    "question": "What is the total shipping fee on orders that contain at least one Electronics item?",
+    "evidence": "",
+    "trap": "fanout",
+    "ok": false,
+    "seconds": 0.5,
+    "file": "f02.jsonl"
+   },
+   {
+    "id": "u01",
+    "question": "What is the average list price of a product in dollars?",
+    "evidence": "",
+    "trap": "units",
+    "ok": false,
+    "seconds": 0.5,
+    "file": "u01.jsonl"
+   },
+   {
+    "id": "w01",
+    "question": "Why did Electronics revenue change from Q1 2025 to Q2 2025?",
+    "evidence": "Net revenue means revenue after discounts, from delivered orders only. Today is 2025-07-01.",
+    "trap": "why",
+    "ok": false,
+    "seconds": 0.5,
+    "file": "w01.jsonl"
+   },
+   {
+    "id": "t01",
+    "question": "Show monthly delivered revenue for 2024 and flag any anomalous months.",
+    "evidence": "",
+    "trap": "anomaly",
+    "ok": false,
+    "seconds": 0.4,
+    "file": "t01.jsonl"
+   },
+   {
+    "id": "t02",
+    "question": "Forecast total monthly order counts for the next 3 months.",
+    "evidence": "",
+    "trap": "forecast",
+    "ok": false,
+    "seconds": 0.4,
+    "file": "t02.jsonl"
+   },
+   {
+    "id": "p03",
+    "question": "How many products are in each category?",
+    "evidence": "",
+    "trap": "plain",
+    "ok": false,
+    "seconds": 0.5,
+    "file": "p03.jsonl"
+   },
+   {
+    "id": "d02",
+    "question": "What was the total revenue target for Electronics in 2024?",
+    "evidence": "",
+    "trap": "date_format",
+    "ok": false,
+    "seconds": 0.5,
+    "file": "d02.jsonl"
+   }
+  ]
+ }
+}

@@ -1,0 +1,3154 @@
+{
+ "db_id": "simpson_episodes",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/simpson_episodes/simpson_episodes.sqlite",
+ "fingerprint": "753664-1793993088272694072-v1.0",
+ "created_at": "2026-11-06T19:25:12+00:00",
+ "profile_seconds": 0.02,
+ "tables": [
+  {
+   "name": "Award",
+   "row_count": 75,
+   "stats_rows": 75,
+   "columns": [
+    {
+     "name": "award_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 75,
+     "is_unique": true,
+     "min_value": 325,
+     "max_value": 1308,
+     "examples": [
+      325,
+      326,
+      327,
+      328,
+      329
+     ],
+     "top_values": [],
+     "description": "award id. the unique id for the award",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "organization",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": "Annie Awards",
+     "max_value": "Writers Guild of America, USA",
+     "examples": [
+      "Primetime Emmy Awards",
+      "Annie Awards",
+      "Image Awards (NAACP)",
+      "Jupiter Award",
+      "Kids' Choice Awards, USA"
+     ],
+     "top_values": [
+      [
+       "Writers Guild of America, USA",
+       32
+      ],
+      [
+       "Primetime Emmy Awards",
+       24
+      ],
+      [
+       "Annie Awards",
+       5
+      ],
+      [
+       "Online Film & Television Association",
+       4
+      ],
+      [
+       "Kids' Choice Awards, USA",
+       3
+      ],
+      [
+       "Image Awards (NAACP)",
+       2
+      ],
+      [
+       "Teen Choice Awards",
+       1
+      ],
+      [
+       "TP de Oro, Spain",
+       1
+      ],
+      [
+       "Prism Awards",
+       1
+      ],
+      [
+       "People's Choice Awards, USA",
+       1
+      ],
+      [
+       "Jupiter Award",
+       1
+      ]
+     ],
+     "description": "the organization that holds the award",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 2009,
+     "max_value": 2018,
+     "examples": [
+      2009,
+      2010,
+      2017,
+      2018
+     ],
+     "top_values": [
+      [
+       2009,
+       61
+      ],
+      [
+       2010,
+       12
+      ],
+      [
+       2018,
+       1
+      ],
+      [
+       2017,
+       1
+      ]
+     ],
+     "description": "year of award",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "award_category",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": "Annie",
+     "max_value": "WGA Award (TV)",
+     "examples": [
+      "Primetime Emmy",
+      "Annie",
+      "Image Award",
+      "Jupiter Award",
+      "Blimp Award"
+     ],
+     "top_values": [
+      [
+       "WGA Award (TV)",
+       32
+      ],
+      [
+       "Primetime Emmy",
+       24
+      ],
+      [
+       "Annie",
+       5
+      ],
+      [
+       "OFTA Television Award",
+       4
+      ],
+      [
+       "Blimp Award",
+       3
+      ],
+      [
+       "Image Award",
+       2
+      ],
+      [
+       "Teen Choice Award",
+       1
+      ],
+      [
+       "TP de Oro",
+       1
+      ],
+      [
+       "Prism Award",
+       1
+      ],
+      [
+       "People's Choice Award",
+       1
+      ],
+      [
+       "Jupiter Award",
+       1
+      ]
+     ],
+     "description": "the category of the award",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "award",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 18,
+     "is_unique": false,
+     "min_value": "Animation",
+     "max_value": "Writing in a Television Production",
+     "examples": [
+      "Outstanding Voice-Over Performance",
+      "Outstanding Animated Program (For Programming Less Than One ...",
+      "Outstanding Music Composition for a Series (Original Dramati...",
+      "Writing in a Television Production",
+      "Best Animated Television Production"
+     ],
+     "top_values": [
+      [
+       "Comedy Series",
+       25
+      ],
+      [
+       "Outstanding Animated Program (For Programming Less Than One ...",
+       20
+      ],
+      [
+       "Animation",
+       7
+      ],
+      [
+       "Writing in a Television Production",
+       3
+      ],
+      [
+       "Outstanding Voice-Over Performance",
+       3
+      ],
+      [
+       "Favorite Cartoon",
+       3
+      ],
+      [
+       "Outstanding Writing in a Comedy Series",
+       2
+      ],
+      [
+       "Best Voice-Over Performance",
+       2
+      ],
+      [
+       "Outstanding Music Composition for a Series (Original Dramati...",
+       1
+      ],
+      [
+       "Favorite Animated Comedy",
+       1
+      ],
+      [
+       "Comedy Episode",
+       1
+      ],
+      [
+       "Choice TV: Animated Show",
+       1
+      ],
+      [
+       "Best Music in a Series",
+       1
+      ],
+      [
+       "Best International TV Series",
+       1
+      ],
+      [
+       "Best Foreign Series (Mejor Serie Extranjera)",
+       1
+      ],
+      [
+       "Best Directing in an Animated Television Production or Short...",
+       1
+      ],
+      [
+       "Best Animated Television Production",
+       1
+      ],
+      [
+       "Best Animated Series",
+       1
+      ]
+     ],
+     "description": "the name of the award",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "person",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.1467,
+     "distinct_count": 41,
+     "is_unique": false,
+     "min_value": "Al Jean",
+     "max_value": "William Wright",
+     "examples": [
+      "Dan Castellaneta",
+      "Hank Azaria",
+      "Harry Shearer",
+      "James L. Brooks",
+      "Matt Groening"
+     ],
+     "top_values": [
+      [
+       "Marc Wilmore",
+       4
+      ],
+      [
+       "Ian Maxtone-Graham",
+       4
+      ],
+      [
+       "Billy Kimball",
+       4
+      ],
+      [
+       "John Frink",
+       3
+      ],
+      [
+       "Tim Long",
+       2
+      ],
+      [
+       "Stephanie Gillis",
+       2
+      ],
+      [
+       "Michael Price",
+       2
+      ],
+      [
+       "Matt Selman",
+       2
+      ],
+      [
+       "Kevin Curran",
+       2
+      ],
+      [
+       "Joel H. Cohen",
+       2
+      ],
+      [
+       "Jeff Westbrook",
+       2
+      ],
+      [
+       "J. Stewart Burns",
+       2
+      ],
+      [
+       "Hank Azaria",
+       2
+      ],
+      [
+       "Don Payne",
+       2
+      ],
+      [
+       "Dan Castellaneta",
+       2
+      ],
+      [
+       "Al Jean",
+       2
+      ],
+      [
+       "William Wright",
+       1
+      ],
+      [
+       "Valentina Garza",
+       1
+      ],
+      [
+       "Tom Klein",
+       1
+      ],
+      [
+       "Tom Gammill",
+       1
+      ],
+      [
+       "Scott Brutz",
+       1
+      ],
+      [
+       "Ron Hauge",
+       1
+      ],
+      [
+       "Reid Harrison",
+       1
+      ],
+      [
+       "Mike Scully",
+       1
+      ],
+      [
+       "Mike Reiss",
+       1
+      ],
+      [
+       "Mike B. Anderson",
+       1
+      ],
+      [
+       "Max Pross",
+       1
+      ],
+      [
+       "Matthew Faughnan",
+       1
+      ],
+      [
+       "Matt Warburton",
+       1
+      ],
+      [
+       "Matt Groening",
+       1
+      ],
+      [
+       "Laurie Biernacki",
+       1
+      ],
+      [
+       "James L. Brooks",
+       1
+      ],
+      [
+       "Harry Shearer",
+       1
+      ],
+      [
+       "Daniel Chun",
+       1
+      ],
+      [
+       "Dan Greaney",
+       1
+      ],
+      [
+       "Chris Clements",
+       1
+      ],
+      [
+       "Carolyn Omine",
+       1
+      ],
+      [
+       "Brian Kelley",
+       1
+      ],
+      [
+       "Bob Anderson",
+       1
+      ],
+      [
+       "Bill Odenkirk",
+       1
+      ],
+      [
+       "Alf Clausen",
+       1
+      ]
+     ],
+     "description": "the person who gets the award",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "role",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.7067,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": "Mejor Serie Extranjera",
+     "max_value": "writer",
+     "examples": [
+      "executive producer",
+      "co-executive producer",
+      "co-executive producer, writer",
+      "animation producer",
+      "writer"
+     ],
+     "top_values": [
+      [
+       "co-executive producer",
+       7
+      ],
+      [
+       "executive producer",
+       4
+      ],
+      [
+       "writer",
+       2
+      ],
+      [
+       "animation producer",
+       2
+      ],
+      [
+       "supervising director",
+       1
+      ],
+      [
+       "director",
+       1
+      ],
+      [
+       "composer",
+       1
+      ],
+      [
+       "co-executive producer, writer",
+       1
+      ],
+      [
+       "assistant director",
+       1
+      ],
+      [
+       "animation timer",
+       1
+      ],
+      [
+       "Mejor Serie Extranjera",
+       1
+      ]
+     ],
+     "description": "the role of the honoree",
+     "value_description": "",
+     "notes": [
+      "71% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "episode_id",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.4267,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": "S20-E10",
+     "max_value": "S20-E8",
+     "examples": [
+      "S20-E18",
+      "S20-E16",
+      "S20-E8",
+      "S20-E13",
+      "S20-E20"
+     ],
+     "top_values": [
+      [
+       "S20-E13",
+       26
+      ],
+      [
+       "S20-E7",
+       5
+      ],
+      [
+       "S20-E8",
+       2
+      ],
+      [
+       "S20-E17",
+       2
+      ],
+      [
+       "S20-E16",
+       2
+      ],
+      [
+       "S20-E6",
+       1
+      ],
+      [
+       "S20-E4",
+       1
+      ],
+      [
+       "S20-E20",
+       1
+      ],
+      [
+       "S20-E18",
+       1
+      ],
+      [
+       "S20-E15",
+       1
+      ],
+      [
+       "S20-E10",
+       1
+      ]
+     ],
+     "description": "episode id. S stands for 'Season' and E stands for 'Episode'",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "season",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "the season of the awarded work",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "song",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "the theme song of the awarded work",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "result",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "Nominee",
+     "max_value": "Winner",
+     "examples": [
+      "Winner",
+      "Nominee"
+     ],
+     "top_values": [
+      [
+       "Nominee",
+       69
+      ],
+      [
+       "Winner",
+       6
+      ]
+     ],
+     "description": "the final award result",
+     "value_description": "commonsense evidence:\n Nominee: the prospective recipient of the award. The nominee are people who were nominated but didn't win the award. \n Winner: the people who finally won the award",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "award_id"
+   ],
+   "sample_rows": [
+    {
+     "award_id": 325,
+     "organization": "Primetime Emmy Awards",
+     "year": 2009,
+     "award_category": "Primetime Emmy",
+     "award": "Outstanding Voice-Over Performance",
+     "person": "Dan Castellaneta",
+     "role": null,
+     "episode_id": "S20-E18",
+     "season": null,
+     "song": null,
+     "result": "Winner"
+    },
+    {
+     "award_id": 326,
+     "organization": "Primetime Emmy Awards",
+     "year": 2009,
+     "award_category": "Primetime Emmy",
+     "award": "Outstanding Voice-Over Performance",
+     "person": "Hank Azaria",
+     "role": null,
+     "episode_id": "S20-E16",
+     "season": null,
+     "song": null,
+     "result": "Nominee"
+    },
+    {
+     "award_id": 327,
+     "organization": "Primetime Emmy Awards",
+     "year": 2009,
+     "award_category": "Primetime Emmy",
+     "award": "Outstanding Voice-Over Performance",
+     "person": "Harry Shearer",
+     "role": null,
+     "episode_id": "S20-E8",
+     "season": null,
+     "song": null,
+     "result": "Nominee"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Character_Award",
+   "row_count": 12,
+   "stats_rows": 12,
+   "columns": [
+    {
+     "name": "award_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 325,
+     "max_value": 327,
+     "examples": [
+      325,
+      326,
+      327
+     ],
+     "top_values": [
+      [
+       327,
+       8
+      ],
+      [
+       326,
+       2
+      ],
+      [
+       325,
+       2
+      ]
+     ],
+     "description": "award id. A unique identifier for the award",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "character",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "Homer Simpson",
+     "max_value": "Smithers",
+     "examples": [
+      "Homer Simpson",
+      "Moe Szyslak",
+      "Kent Brockman",
+      "Lenny",
+      "Mr. Burns"
+     ],
+     "top_values": [
+      [
+       "Smithers",
+       2
+      ],
+      [
+       "Mr. Burns",
+       2
+      ],
+      [
+       "Moe Szyslak",
+       2
+      ],
+      [
+       "Lenny",
+       2
+      ],
+      [
+       "Kent Brockman",
+       2
+      ],
+      [
+       "Homer Simpson",
+       2
+      ]
+     ],
+     "description": "the name of the awarded character",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "award_id": 325,
+     "character": "Homer Simpson"
+    },
+    {
+     "award_id": 326,
+     "character": "Moe Szyslak"
+    },
+    {
+     "award_id": 327,
+     "character": "Kent Brockman"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "Credit",
+   "row_count": 4557,
+   "stats_rows": 4557,
+   "columns": [
+    {
+     "name": "episode_id",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": "S20-E1",
+     "max_value": "S20-E9",
+     "examples": [
+      "S20-E10",
+      "S20-E13",
+      "S20-E14",
+      "S20-E4",
+      "S20-E19"
+     ],
+     "top_values": [
+      [
+       "S20-E14",
+       252
+      ],
+      [
+       "S20-E20",
+       233
+      ],
+      [
+       "S20-E19",
+       231
+      ],
+      [
+       "S20-E11",
+       228
+      ],
+      [
+       "S20-E13",
+       226
+      ],
+      [
+       "S20-E12",
+       224
+      ],
+      [
+       "S20-E3",
+       222
+      ],
+      [
+       "S20-E15",
+       221
+      ],
+      [
+       "S20-E10",
+       221
+      ],
+      [
+       "S20-E4",
+       220
+      ],
+      [
+       "S20-E18",
+       220
+      ],
+      [
+       "S20-E21",
+       217
+      ],
+      [
+       "S20-E5",
+       211
+      ],
+      [
+       "S20-E7",
+       209
+      ],
+      [
+       "S20-E17",
+       209
+      ],
+      [
+       "S20-E6",
+       207
+      ],
+      [
+       "S20-E2",
+       205
+      ],
+      [
+       "S20-E8",
+       203
+      ],
+      [
+       "S20-E16",
+       202
+      ],
+      [
+       "S20-E1",
+       202
+      ],
+      [
+       "S20-E9",
+       194
+      ]
+     ],
+     "description": "episode id. A unique identifier for episodes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "category",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": "Animation Department",
+     "max_value": "Writing Credits",
+     "examples": [
+      "Casting Department",
+      "Animation Department",
+      "Sound Department",
+      "Editorial Department",
+      "Produced by"
+     ],
+     "top_values": [
+      [
+       "Animation Department",
+       1340
+      ],
+      [
+       "Produced by",
+       943
+      ],
+      [
+       "Cast",
+       619
+      ],
+      [
+       "Other crew",
+       388
+      ],
+      [
+       "Sound Department",
+       253
+      ],
+      [
+       "Music Department",
+       238
+      ],
+      [
+       "Art Department",
+       216
+      ],
+      [
+       "Editorial Department",
+       152
+      ],
+      [
+       "Writing Credits",
+       116
+      ],
+      [
+       "General",
+       115
+      ],
+      [
+       "Second Unit Director or Assistant Director",
+       45
+      ],
+      [
+       "Production Management",
+       45
+      ],
+      [
+       "Visual Effects by",
+       42
+      ],
+      [
+       "Script and Continuity Department",
+       21
+      ],
+      [
+       "Casting Department",
+       21
+      ],
+      [
+       "Thanks",
+       2
+      ],
+      [
+       "Directed by",
+       1
+      ]
+     ],
+     "description": "the category of the credit",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "person",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 369,
+     "is_unique": false,
+     "min_value": "Adam Greeley",
+     "max_value": "Young Yoo",
+     "examples": [
+      "Bonita Pietila",
+      "Adam Kuhlman",
+      "Carlton Batten",
+      "Jack Dyer",
+      "Jeremy Robinson"
+     ],
+     "top_values": [],
+     "description": "the name of cast and crew members",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "role",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 388,
+     "is_unique": false,
+     "min_value": "1st Girl in Cafeteria",
+     "max_value": "writer-performer",
+     "examples": [
+      "casting",
+      "additional timer",
+      "adr engineer",
+      "adr mixer",
+      "animatic editor"
+     ],
+     "top_values": [],
+     "description": "the role of the person",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "credited",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "false",
+     "max_value": "true",
+     "examples": [
+      "true"
+     ],
+     "top_values": [
+      [
+       "true",
+       4353
+      ],
+      [
+       "false",
+       204
+      ]
+     ],
+     "description": "whether the person is credited",
+     "value_description": "true/ false\ncommonsense evidence:\n true: The person is included in the credit list\n false: The person isn't included in the credit list",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "episode_id": "S20-E10",
+     "category": "Casting Department",
+     "person": "Bonita Pietila",
+     "role": "casting",
+     "credited": "true"
+    },
+    {
+     "episode_id": "S20-E13",
+     "category": "Casting Department",
+     "person": "Bonita Pietila",
+     "role": "casting",
+     "credited": "true"
+    },
+    {
+     "episode_id": "S20-E14",
+     "category": "Casting Department",
+     "person": "Bonita Pietila",
+     "role": "casting",
+     "credited": "true"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "Episode",
+   "row_count": 21,
+   "stats_rows": 21,
+   "columns": [
+    {
+     "name": "episode_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": true,
+     "min_value": "S20-E1",
+     "max_value": "S20-E9",
+     "examples": [
+      "S20-E1",
+      "S20-E2",
+      "S20-E3",
+      "S20-E4",
+      "S20-E5"
+     ],
+     "top_values": [
+      [
+       "S20-E9",
+       1
+      ],
+      [
+       "S20-E8",
+       1
+      ],
+      [
+       "S20-E7",
+       1
+      ],
+      [
+       "S20-E6",
+       1
+      ],
+      [
+       "S20-E5",
+       1
+      ],
+      [
+       "S20-E4",
+       1
+      ],
+      [
+       "S20-E3",
+       1
+      ],
+      [
+       "S20-E21",
+       1
+      ],
+      [
+       "S20-E20",
+       1
+      ],
+      [
+       "S20-E2",
+       1
+      ],
+      [
+       "S20-E19",
+       1
+      ],
+      [
+       "S20-E18",
+       1
+      ],
+      [
+       "S20-E17",
+       1
+      ],
+      [
+       "S20-E16",
+       1
+      ],
+      [
+       "S20-E15",
+       1
+      ],
+      [
+       "S20-E14",
+       1
+      ],
+      [
+       "S20-E13",
+       1
+      ],
+      [
+       "S20-E12",
+       1
+      ],
+      [
+       "S20-E11",
+       1
+      ],
+      [
+       "S20-E10",
+       1
+      ],
+      [
+       "S20-E1",
+       1
+      ]
+     ],
+     "description": "episode id. A unique identifier for episodes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "season",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 20,
+     "max_value": 20,
+     "examples": [
+      20
+     ],
+     "top_values": [
+      [
+       20,
+       21
+      ]
+     ],
+     "description": "the season of the episode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "episode",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 21,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "the episode number of the episode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "number_in_series",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": true,
+     "min_value": 421,
+     "max_value": 441,
+     "examples": [
+      421,
+      422,
+      423,
+      424,
+      425
+     ],
+     "top_values": [
+      [
+       441,
+       1
+      ],
+      [
+       440,
+       1
+      ],
+      [
+       439,
+       1
+      ],
+      [
+       438,
+       1
+      ],
+      [
+       437,
+       1
+      ],
+      [
+       436,
+       1
+      ],
+      [
+       435,
+       1
+      ],
+      [
+       434,
+       1
+      ],
+      [
+       433,
+       1
+      ],
+      [
+       432,
+       1
+      ],
+      [
+       431,
+       1
+      ],
+      [
+       430,
+       1
+      ],
+      [
+       429,
+       1
+      ],
+      [
+       428,
+       1
+      ],
+      [
+       427,
+       1
+      ],
+      [
+       426,
+       1
+      ],
+      [
+       425,
+       1
+      ],
+      [
+       424,
+       1
+      ],
+      [
+       423,
+       1
+      ],
+      [
+       422,
+       1
+      ],
+      [
+       421,
+       1
+      ]
+     ],
+     "description": "the number in series",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": true,
+     "min_value": "Coming to Homerica",
+     "max_value": "Wedding for Disaster",
+     "examples": [
+      "Sex, Pies and Idiot Scrapes",
+      "Lost Verizon",
+      "Double, Double, Boy in Trouble",
+      "Treehouse of Horror XIX",
+      "Dangerous Curves"
+     ],
+     "top_values": [
+      [
+       "Wedding for Disaster",
+       1
+      ],
+      [
+       "Waverly Hills, 9021-D'Oh",
+       1
+      ],
+      [
+       "Treehouse of Horror XIX",
+       1
+      ],
+      [
+       "The Good, the Sad and the Drugly",
+       1
+      ],
+      [
+       "The Burns and the Bees",
+       1
+      ],
+      [
+       "Take My Life, Please",
+       1
+      ],
+      [
+       "Sex, Pies and Idiot Scrapes",
+       1
+      ],
+      [
+       "No Loan Again, Naturally",
+       1
+      ],
+      [
+       "MyPods and Boomsticks",
+       1
+      ],
+      [
+       "Lost Verizon",
+       1
+      ],
+      [
+       "Lisa the Drama Queen",
+       1
+      ],
+      [
+       "In the Name of the Grandfather",
+       1
+      ],
+      [
+       "How the Test Was Won",
+       1
+      ],
+      [
+       "Homer and Lisa Exchange Cross Words",
+       1
+      ],
+      [
+       "Gone Maggie Gone",
+       1
+      ],
+      [
+       "Four Great Women and a Manicure",
+       1
+      ],
+      [
+       "Father Knows Worst",
+       1
+      ],
+      [
+       "Eeny Teeny Maya Moe",
+       1
+      ],
+      [
+       "Double, Double, Boy in Trouble",
+       1
+      ],
+      [
+       "Dangerous Curves",
+       1
+      ],
+      [
+       "Coming to Homerica",
+       1
+      ]
+     ],
+     "description": "the title of the episode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "summary",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": true,
+     "min_value": "A series of parodies based on four strong women: Queen Eliza...",
+     "max_value": "Townspeople build a wall around Springfield to keep \"immigra...",
+     "examples": [
+      "Homer and Ned go into business together as bounty hunters, a...",
+      "Bart gets in trouble with Marge after she finds out that he ...",
+      "Bart trades lives with his multi-millionaire lookalike, but ...",
+      "The Simpsons' 19th Halloween Special, with parodies of \"Tran...",
+      "The Simpsons take a Fourth of July vacation to a cabin hotel..."
+     ],
+     "top_values": [
+      [
+       "Townspeople build a wall around Springfield to keep \"immigra...",
+       1
+      ],
+      [
+       "The Simpsons' 19th Halloween Special, with parodies of \"Tran...",
+       1
+      ],
+      [
+       "The Simpsons take a Fourth of July vacation to a cabin hotel...",
+       1
+      ],
+      [
+       "The Simpsons take Grandpa to Ireland so he can go back to vi...",
+       1
+      ],
+      [
+       "The Simpsons set up a fake residence in Waverly Hills so tha...",
+       1
+      ],
+      [
+       "The Simpsons lose their house, but Flanders buys it and offe...",
+       1
+      ],
+      [
+       "Mr. Burns wins a professional basketball team in a poker gam...",
+       1
+      ],
+      [
+       "Moe begins dating a little person he met on the Internet, wh...",
+       1
+      ],
+      [
+       "Lisa and her new best friend create their own fantasy world,...",
+       1
+      ],
+      [
+       "In order to rescue Maggie from a Catholic orphanage, Lisa mu...",
+       1
+      ],
+      [
+       "Homer suspects that the family of Bart's new Muslim friend f...",
+       1
+      ],
+      [
+       "Homer is kidnapped moments before he and Marge are supposed ...",
+       1
+      ],
+      [
+       "Homer gets a job breaking up couples, and Lisa becomes an ex...",
+       1
+      ],
+      [
+       "Homer finds out that he actually won the senior class presid...",
+       1
+      ],
+      [
+       "Homer becomes a \"helicopter parent\" at Springfield Elementar...",
+       1
+      ],
+      [
+       "Homer and Ned go into business together as bounty hunters, a...",
+       1
+      ],
+      [
+       "Bart trades lives with his multi-millionaire lookalike, but ...",
+       1
+      ],
+      [
+       "Bart gets in trouble with Marge after she finds out that he ...",
+       1
+      ],
+      [
+       "Bart gets Milhouse to take the rap for a prank at school, an...",
+       1
+      ],
+      [
+       "Bart and his fellow underachievers are taken on a \"field tri...",
+       1
+      ],
+      [
+       "A series of parodies based on four strong women: Queen Eliza...",
+       1
+      ]
+     ],
+     "description": "the summary of the episode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "air_date",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": true,
+     "min_value": "2008-09-28",
+     "max_value": "2009-05-17",
+     "examples": [
+      "2008-09-28",
+      "2008-10-05",
+      "2008-10-19",
+      "2008-11-02",
+      "2008-11-09"
+     ],
+     "top_values": [
+      [
+       "2009-05-17",
+       1
+      ],
+      [
+       "2009-05-10",
+       1
+      ],
+      [
+       "2009-05-03",
+       1
+      ],
+      [
+       "2009-04-26",
+       1
+      ],
+      [
+       "2009-04-19",
+       1
+      ],
+      [
+       "2009-04-05",
+       1
+      ],
+      [
+       "2009-03-29",
+       1
+      ],
+      [
+       "2009-03-22",
+       1
+      ],
+      [
+       "2009-03-15",
+       1
+      ],
+      [
+       "2009-03-08",
+       1
+      ],
+      [
+       "2009-03-01",
+       1
+      ],
+      [
+       "2009-02-15",
+       1
+      ],
+      [
+       "2009-01-25",
+       1
+      ],
+      [
+       "2008-12-07",
+       1
+      ],
+      [
+       "2008-11-30",
+       1
+      ],
+      [
+       "2008-11-16",
+       1
+      ],
+      [
+       "2008-11-09",
+       1
+      ],
+      [
+       "2008-11-02",
+       1
+      ],
+      [
+       "2008-10-19",
+       1
+      ],
+      [
+       "2008-10-05",
+       1
+      ],
+      [
+       "2008-09-28",
+       1
+      ]
+     ],
+     "description": "the air date of the episode",
+     "value_description": "YYYY-MM-DD",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "episode_image",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": true,
+     "min_value": "https://m.media-amazon.com/images/M/MV5BMTQ2MzcyOTMyMl5BMl5B...",
+     "max_value": "https://m.media-amazon.com/images/M/MV5BNzg5OTYwMTI3OF5BMl5B...",
+     "examples": [
+      "https://m.media-amazon.com/images/M/MV5BMTYwMzk2Njg5N15BMl5B...",
+      "https://m.media-amazon.com/images/M/MV5BMjMyNzU4ODMzN15BMl5B...",
+      "https://m.media-amazon.com/images/M/MV5BMjA1ODM2ODkwM15BMl5B...",
+      "https://m.media-amazon.com/images/M/MV5BMTgzOTYyNTc2OF5BMl5B...",
+      "https://m.media-amazon.com/images/M/MV5BMjMxOTY4MjQzNl5BMl5B..."
+     ],
+     "top_values": [
+      [
+       "https://m.media-amazon.com/images/M/MV5BNzg5OTYwMTI3OF5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BNTg0MTc4MDM2Nl5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BNTE5NzY3NjU3OV5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMjMyNzU4ODMzN15BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMjMxOTY4MjQzNl5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMjIzMzkxNTkwOF5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMjI2MjcyNDYwNV5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMjEyMDg1MzY3MF5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMjExNTE1MjExMl5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMjExMzg0MzM3M15BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMjE5NTUyNzQxOV5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMjA1ODM2ODkwM15BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMTk3NjE0NTc2N15BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMTgzOTYyNTc2OF5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMTgyNzk3ODUyNl5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMTg1ODc4NTQxOV5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMTc2MDMzOTI3MF5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMTc0NzM2NzA0MF5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMTYwMzk2Njg5N15BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMTQyODI1MjM5OF5BMl5B...",
+       1
+      ],
+      [
+       "https://m.media-amazon.com/images/M/MV5BMTQ2MzcyOTMyMl5BMl5B...",
+       1
+      ]
+     ],
+     "description": "episode image. the image of episode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "rating",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 5.9,
+     "max_value": 7.2,
+     "examples": [
+      7.2,
+      7.0,
+      7.1,
+      6.5,
+      6.6
+     ],
+     "top_values": [
+      [
+       7.0,
+       5
+      ],
+      [
+       7.2,
+       4
+      ],
+      [
+       7.1,
+       3
+      ],
+      [
+       6.9,
+       2
+      ],
+      [
+       6.6,
+       2
+      ],
+      [
+       6.3,
+       2
+      ],
+      [
+       6.8,
+       1
+      ],
+      [
+       6.5,
+       1
+      ],
+      [
+       5.9,
+       1
+      ]
+     ],
+     "description": "the rating of episode",
+     "value_description": "0.0 - 10.0\ncommonsense evidence:\nHigher ratings mean higher quality and better response.\n excellent: 7.0 < rating <= 10.0\n average: 5.0 < rating <= 7.0 \n bad: 0.0 < rating <= 5.0\nnot bad: average, excellent",
+     "notes": []
+    },
+    {
+     "name": "votes",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": true,
+     "min_value": 871,
+     "max_value": 1192,
+     "examples": [
+      1192,
+      1055,
+      1015,
+      1190,
+      951
+     ],
+     "top_values": [
+      [
+       1192,
+       1
+      ],
+      [
+       1190,
+       1
+      ],
+      [
+       1117,
+       1
+      ],
+      [
+       1085,
+       1
+      ],
+      [
+       1055,
+       1
+      ],
+      [
+       1049,
+       1
+      ],
+      [
+       1032,
+       1
+      ],
+      [
+       1015,
+       1
+      ],
+      [
+       992,
+       1
+      ],
+      [
+       976,
+       1
+      ],
+      [
+       957,
+       1
+      ],
+      [
+       956,
+       1
+      ],
+      [
+       955,
+       1
+      ],
+      [
+       951,
+       1
+      ],
+      [
+       948,
+       1
+      ],
+      [
+       927,
+       1
+      ],
+      [
+       919,
+       1
+      ],
+      [
+       911,
+       1
+      ],
+      [
+       905,
+       1
+      ],
+      [
+       901,
+       1
+      ],
+      [
+       871,
+       1
+      ]
+     ],
+     "description": "the votes of episode",
+     "value_description": "commonsense evidence:\nHigher votes mean more audience supports (or popular).",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "episode_id"
+   ],
+   "sample_rows": [
+    {
+     "episode_id": "S20-E1",
+     "season": 20,
+     "episode": 1,
+     "number_in_series": 421,
+     "title": "Sex, Pies and Idiot Scrapes",
+     "summary": "Homer and Ned go into business together as bounty hunters, a...",
+     "air_date": "2008-09-28",
+     "episode_image": "https://m.media-amazon.com/images/M/MV5BMTYwMzk2Njg5N15BMl5B...",
+     "rating": 7.2,
+     "votes": 1192
+    },
+    {
+     "episode_id": "S20-E2",
+     "season": 20,
+     "episode": 2,
+     "number_in_series": 422,
+     "title": "Lost Verizon",
+     "summary": "Bart gets in trouble with Marge after she finds out that he ...",
+     "air_date": "2008-10-05",
+     "episode_image": "https://m.media-amazon.com/images/M/MV5BMjMyNzU4ODMzN15BMl5B...",
+     "rating": 7.0,
+     "votes": 1055
+    },
+    {
+     "episode_id": "S20-E3",
+     "season": 20,
+     "episode": 3,
+     "number_in_series": 423,
+     "title": "Double, Double, Boy in Trouble",
+     "summary": "Bart trades lives with his multi-millionaire lookalike, but ...",
+     "air_date": "2008-10-19",
+     "episode_image": "https://m.media-amazon.com/images/M/MV5BMjA1ODM2ODkwM15BMl5B...",
+     "rating": 7.0,
+     "votes": 1015
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Keyword",
+   "row_count": 307,
+   "stats_rows": 307,
+   "columns": [
+    {
+     "name": "episode_id",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": "S20-E1",
+     "max_value": "S20-E9",
+     "examples": [
+      "S20-E1",
+      "S20-E2",
+      "S20-E3",
+      "S20-E4",
+      "S20-E5"
+     ],
+     "top_values": [
+      [
+       "S20-E1",
+       56
+      ],
+      [
+       "S20-E4",
+       46
+      ],
+      [
+       "S20-E8",
+       23
+      ],
+      [
+       "S20-E13",
+       20
+      ],
+      [
+       "S20-E18",
+       17
+      ],
+      [
+       "S20-E11",
+       17
+      ],
+      [
+       "S20-E20",
+       16
+      ],
+      [
+       "S20-E21",
+       13
+      ],
+      [
+       "S20-E12",
+       12
+      ],
+      [
+       "S20-E10",
+       10
+      ],
+      [
+       "S20-E3",
+       9
+      ],
+      [
+       "S20-E14",
+       9
+      ],
+      [
+       "S20-E2",
+       8
+      ],
+      [
+       "S20-E16",
+       8
+      ],
+      [
+       "S20-E9",
+       7
+      ],
+      [
+       "S20-E6",
+       7
+      ],
+      [
+       "S20-E7",
+       6
+      ],
+      [
+       "S20-E5",
+       6
+      ],
+      [
+       "S20-E19",
+       6
+      ],
+      [
+       "S20-E15",
+       6
+      ],
+      [
+       "S20-E17",
+       5
+      ]
+     ],
+     "description": "episode id. A unique identifier for episodes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "keyword",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 264,
+     "is_unique": false,
+     "min_value": "1930s to 2020s",
+     "max_value": "year 2008",
+     "examples": [
+      "1930s to 2020s",
+      "erotic bakery",
+      "cake",
+      "bullet",
+      "st. patrick's day"
+     ],
+     "top_values": [],
+     "description": "the keywords of episode",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "episode_id",
+    "keyword"
+   ],
+   "sample_rows": [
+    {
+     "episode_id": "S20-E1",
+     "keyword": "1930s to 2020s"
+    },
+    {
+     "episode_id": "S20-E1",
+     "keyword": "erotic bakery"
+    },
+    {
+     "episode_id": "S20-E1",
+     "keyword": "cake"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Person",
+   "row_count": 369,
+   "stats_rows": 369,
+   "columns": [
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 369,
+     "is_unique": true,
+     "min_value": "Adam Greeley",
+     "max_value": "Young Yoo",
+     "examples": [
+      "Marc Wilmore",
+      "Valentina Garza",
+      "J. Stewart Burns",
+      "Stephanie Gillis",
+      "Laurie Biernacki"
+     ],
+     "top_values": [],
+     "description": "the name of the crew",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "birthdate",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.6423,
+     "distinct_count": 132,
+     "is_unique": true,
+     "min_value": "1925-01-26",
+     "max_value": "1988-02-28",
+     "examples": [
+      "1963-05-04",
+      "1975-03-30",
+      "1969-12-04",
+      "1969-10-02",
+      "1940-05-09"
+     ],
+     "top_values": [],
+     "description": "the birth date of the crew",
+     "value_description": "YYYY-MM-DD",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)",
+      "64% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "birth_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.71,
+     "distinct_count": 107,
+     "is_unique": true,
+     "min_value": "Alexander Charles Dilts",
+     "max_value": "William Leonard Odenkirk",
+     "examples": [
+      "Marc Edward Wilmore",
+      "Valentina Lantigua",
+      "Joseph Stewart Burns",
+      "Stephanie Katina Gillis",
+      "Laurie D Templeton"
+     ],
+     "top_values": [],
+     "description": "the birth name of the crew",
+     "value_description": "",
+     "notes": [
+      "71% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "birth_place",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.6667,
+     "distinct_count": 73,
+     "is_unique": false,
+     "min_value": "Albuquerque",
+     "max_value": "unknown",
+     "examples": [
+      "USA",
+      "Brooklyn",
+      "Chicago",
+      "Portland",
+      "New York City"
+     ],
+     "top_values": [],
+     "description": "the birth place of the crew",
+     "value_description": "",
+     "notes": [
+      "67% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "birth_region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.6992,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": "Boston",
+     "max_value": "U.S. Virgin Islands",
+     "examples": [
+      "California",
+      "New York",
+      "Illinois",
+      "Oregon",
+      "Connecticut"
+     ],
+     "top_values": [
+      [
+       "California",
+       51
+      ],
+      [
+       "New York",
+       14
+      ],
+      [
+       "Massachusetts",
+       6
+      ],
+      [
+       "Pennsylvania",
+       5
+      ],
+      [
+       "Illinois",
+       5
+      ],
+      [
+       "Ohio",
+       4
+      ],
+      [
+       "Michigan",
+       3
+      ],
+      [
+       "Connecticut",
+       3
+      ],
+      [
+       "Texas",
+       2
+      ],
+      [
+       "Ontario",
+       2
+      ],
+      [
+       "New Jersey",
+       2
+      ],
+      [
+       "Iowa",
+       2
+      ],
+      [
+       "U.S. Virgin Islands",
+       1
+      ],
+      [
+       "Oregon",
+       1
+      ],
+      [
+       "Nova Scotia",
+       1
+      ],
+      [
+       "North Dakota",
+       1
+      ],
+      [
+       "North Carolina",
+       1
+      ],
+      [
+       "New Mexico",
+       1
+      ],
+      [
+       "Minnesota",
+       1
+      ],
+      [
+       "Maryland",
+       1
+      ],
+      [
+       "Manitoba",
+       1
+      ],
+      [
+       "Indiana",
+       1
+      ],
+      [
+       "England",
+       1
+      ],
+      [
+       "Boston",
+       1
+      ]
+     ],
+     "description": "the birth region of the crew",
+     "value_description": "",
+     "notes": [
+      "70% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "birth_country",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.6775,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": "Canada",
+     "max_value": "USA",
+     "examples": [
+      "USA",
+      "Canada",
+      "Ireland",
+      "Philippines",
+      "Czechoslovakia"
+     ],
+     "top_values": [
+      [
+       "USA",
+       106
+      ],
+      [
+       "Canada",
+       5
+      ],
+      [
+       "Ireland",
+       2
+      ],
+      [
+       "UK",
+       1
+      ],
+      [
+       "Philippines",
+       1
+      ],
+      [
+       "North Korea",
+       1
+      ],
+      [
+       "Iran",
+       1
+      ],
+      [
+       "France",
+       1
+      ],
+      [
+       "Czechoslovakia",
+       1
+      ]
+     ],
+     "description": "the birth country of the crew",
+     "value_description": "",
+     "notes": [
+      "68% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "height_meters",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.8645,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": 1.55,
+     "max_value": 2.03,
+     "examples": [
+      1.85,
+      1.75,
+      2.03,
+      1.89,
+      1.82
+     ],
+     "top_values": [
+      [
+       1.85,
+       4
+      ],
+      [
+       1.78,
+       4
+      ],
+      [
+       1.7,
+       4
+      ],
+      [
+       1.6,
+       4
+      ],
+      [
+       1.88,
+       3
+      ],
+      [
+       1.83,
+       3
+      ],
+      [
+       1.93,
+       2
+      ],
+      [
+       1.89,
+       2
+      ],
+      [
+       1.82,
+       2
+      ],
+      [
+       1.8,
+       2
+      ],
+      [
+       1.77,
+       2
+      ],
+      [
+       1.75,
+       2
+      ],
+      [
+       1.74,
+       2
+      ],
+      [
+       1.71,
+       2
+      ],
+      [
+       1.69,
+       2
+      ],
+      [
+       1.55,
+       2
+      ],
+      [
+       2.03,
+       1
+      ],
+      [
+       1.84,
+       1
+      ],
+      [
+       1.73,
+       1
+      ],
+      [
+       1.68,
+       1
+      ],
+      [
+       1.65,
+       1
+      ],
+      [
+       1.64,
+       1
+      ],
+      [
+       1.63,
+       1
+      ],
+      [
+       1.57,
+       1
+      ]
+     ],
+     "description": "height meters. the height of the crew",
+     "value_description": "the unit is meter",
+     "notes": [
+      "86% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "nickname",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9593,
+     "distinct_count": 15,
+     "is_unique": true,
+     "min_value": "Annie",
+     "max_value": "The Tiny Canadian",
+     "examples": [
+      "Jim",
+      "Doofus",
+      "Hoops",
+      "Boop",
+      "King Cool"
+     ],
+     "top_values": [
+      [
+       "The Tiny Canadian",
+       1
+      ],
+      [
+       "Simple",
+       1
+      ],
+      [
+       "Moe",
+       1
+      ],
+      [
+       "Little Yum-Yum",
+       1
+      ],
+      [
+       "King Cool",
+       1
+      ],
+      [
+       "Joe Cool",
+       1
+      ],
+      [
+       "Jodie F",
+       1
+      ],
+      [
+       "Jim",
+       1
+      ],
+      [
+       "Hoops",
+       1
+      ],
+      [
+       "Doofus",
+       1
+      ],
+      [
+       "Bubba",
+       1
+      ],
+      [
+       "Boop",
+       1
+      ],
+      [
+       "Bobby",
+       1
+      ],
+      [
+       "Beek",
+       1
+      ],
+      [
+       "Annie",
+       1
+      ]
+     ],
+     "description": "the nickname of the crew",
+     "value_description": "",
+     "notes": [
+      "96% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "name"
+   ],
+   "sample_rows": [
+    {
+     "name": "Marc Wilmore",
+     "birthdate": "1963-05-04",
+     "birth_name": "Marc Edward Wilmore",
+     "birth_place": null,
+     "birth_region": "California",
+     "birth_country": "USA",
+     "height_meters": null,
+     "nickname": null
+    },
+    {
+     "name": "Valentina Garza",
+     "birthdate": "1975-03-30",
+     "birth_name": "Valentina Lantigua",
+     "birth_place": "USA",
+     "birth_region": null,
+     "birth_country": null,
+     "height_meters": null,
+     "nickname": null
+    },
+    {
+     "name": "J. Stewart Burns",
+     "birthdate": "1969-12-04",
+     "birth_name": "Joseph Stewart Burns",
+     "birth_place": "USA",
+     "birth_region": null,
+     "birth_country": null,
+     "height_meters": null,
+     "nickname": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Vote",
+   "row_count": 210,
+   "stats_rows": 210,
+   "columns": [
+    {
+     "name": "episode_id",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": "S20-E1",
+     "max_value": "S20-E9",
+     "examples": [
+      "S20-E1",
+      "S20-E10",
+      "S20-E11",
+      "S20-E12",
+      "S20-E13"
+     ],
+     "top_values": [
+      [
+       "S20-E9",
+       10
+      ],
+      [
+       "S20-E8",
+       10
+      ],
+      [
+       "S20-E7",
+       10
+      ],
+      [
+       "S20-E6",
+       10
+      ],
+      [
+       "S20-E5",
+       10
+      ],
+      [
+       "S20-E4",
+       10
+      ],
+      [
+       "S20-E3",
+       10
+      ],
+      [
+       "S20-E21",
+       10
+      ],
+      [
+       "S20-E20",
+       10
+      ],
+      [
+       "S20-E2",
+       10
+      ],
+      [
+       "S20-E19",
+       10
+      ],
+      [
+       "S20-E18",
+       10
+      ],
+      [
+       "S20-E17",
+       10
+      ],
+      [
+       "S20-E16",
+       10
+      ],
+      [
+       "S20-E15",
+       10
+      ],
+      [
+       "S20-E14",
+       10
+      ],
+      [
+       "S20-E13",
+       10
+      ],
+      [
+       "S20-E12",
+       10
+      ],
+      [
+       "S20-E11",
+       10
+      ],
+      [
+       "S20-E10",
+       10
+      ],
+      [
+       "S20-E1",
+       10
+      ]
+     ],
+     "description": "episode id. A unique identifier for episodes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "stars",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 10,
+     "examples": [
+      2,
+      3,
+      4,
+      5,
+      1
+     ],
+     "top_values": [
+      [
+       10,
+       21
+      ],
+      [
+       9,
+       21
+      ],
+      [
+       8,
+       21
+      ],
+      [
+       7,
+       21
+      ],
+      [
+       6,
+       21
+      ],
+      [
+       5,
+       21
+      ],
+      [
+       4,
+       21
+      ],
+      [
+       3,
+       21
+      ],
+      [
+       2,
+       21
+      ],
+      [
+       1,
+       21
+      ]
+     ],
+     "description": "the star score of the episode",
+     "value_description": "1-10\ncommonsense evidence:\nStar classification is a type of rating scale. The lowest star is 1 which means the worst, and the highest star is 10 which means the best.",
+     "notes": []
+    },
+    {
+     "name": "votes",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 130,
+     "is_unique": false,
+     "min_value": 7,
+     "max_value": 306,
+     "examples": [
+      16,
+      20,
+      36,
+      49,
+      67
+     ],
+     "top_values": [],
+     "description": "the number of votes of the star score",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "percent",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 136,
+     "is_unique": false,
+     "min_value": 0.7,
+     "max_value": 30.5,
+     "examples": [
+      1.3,
+      1.7,
+      3.0,
+      4.1,
+      5.6
+     ],
+     "top_values": [],
+     "description": "the percent of the vote number of the star score",
+     "value_description": "commonsense evidence:\npercent = the number of votes for the star / the total amount of votes for all stars",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "episode_id": "S20-E1",
+     "stars": 2,
+     "votes": 16,
+     "percent": 1.3
+    },
+    {
+     "episode_id": "S20-E1",
+     "stars": 3,
+     "votes": 20,
+     "percent": 1.7
+    },
+    {
+     "episode_id": "S20-E1",
+     "stars": 4,
+     "votes": 36,
+     "percent": 3.0
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "Award",
+   "from_column": "episode_id",
+   "to_table": "Episode",
+   "to_column": "episode_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Award",
+   "from_column": "person",
+   "to_table": "Person",
+   "to_column": "name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Character_Award",
+   "from_column": "award_id",
+   "to_table": "Award",
+   "to_column": "award_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Credit",
+   "from_column": "person",
+   "to_table": "Person",
+   "to_column": "name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Credit",
+   "from_column": "episode_id",
+   "to_table": "Episode",
+   "to_column": "episode_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Keyword",
+   "from_column": "episode_id",
+   "to_table": "Episode",
+   "to_column": "episode_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Vote",
+   "from_column": "episode_id",
+   "to_table": "Episode",
+   "to_column": "episode_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Award",
+   "from_column": "episode_id",
+   "to_table": "Keyword",
+   "to_column": "episode_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Credit",
+   "from_column": "episode_id",
+   "to_table": "Keyword",
+   "to_column": "episode_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Vote",
+   "from_column": "episode_id",
+   "to_table": "Keyword",
+   "to_column": "episode_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

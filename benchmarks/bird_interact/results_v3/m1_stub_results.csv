@@ -1,0 +1,9 @@
+question,gold_ambiguous,flagged,decision(user),decision(no user),critical spans,first question,n_interp
+Which product category lost the most revenue last quarter?,True,True,ask,answer_each,revenue [metric_definition]; last quarter [time_range],Do you mean gross revenue (before discounts and refunds) or net revenue (after discounts and refunds)?,2
+Who are our top customers?,True,True,ask,answer_each,top customers [return_content],"What metric should be used to determine the top customers - revenue, number of orders, or number of purchases?",1
+List the active customers.,True,True,ask,answer_each,active [filter]; customers [entity_reference],"What makes a customer 'active' for you - recent orders, subscription status, or something else?",3
+What is the average order value?,True,True,ask,answer_each,average order value [metric_definition],"Do you mean the average total value of each order, or the average value per item in each order?",2
+How many orders were placed on 2025-03-01?,False,False,proceed,proceed,,,1
+What was the total refund amount in calendar year 2025?,False,True,ask,answer_each,calendar year 2025 [time_range],"Do you mean the calendar year 2025 (January 1 to December 31) or the fiscal year 2025 (April 1, 2025 to March 31, 2026)?",2
+Show monthly gross revenue for 2025 by product category.,False,True,ask,answer_each,gross revenue [metric_definition]; 2025 [time_range],Do you mean the sum of quantity multiplied by unit price across all order items for gross revenue?,2
+How many customers are in the Enterprise segment?,False,False,proceed,proceed,,,1

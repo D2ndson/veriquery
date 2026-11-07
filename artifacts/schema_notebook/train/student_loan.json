@@ -1,0 +1,819 @@
+{
+ "db_id": "student_loan",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/student_loan/student_loan.sqlite",
+ "fingerprint": "307200-1793993058500091822-v1.0",
+ "created_at": "2026-11-06T19:25:18+00:00",
+ "profile_seconds": 0.023,
+ "tables": [
+  {
+   "name": "bool",
+   "row_count": 2,
+   "stats_rows": 2,
+   "columns": [
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": "neg",
+     "max_value": "pos",
+     "examples": [
+      "neg",
+      "pos"
+     ],
+     "top_values": [
+      [
+       "pos",
+       1
+      ],
+      [
+       "neg",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "name"
+   ],
+   "sample_rows": [
+    {
+     "name": "neg"
+    },
+    {
+     "name": "pos"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "disabled",
+   "row_count": 95,
+   "stats_rows": 95,
+   "columns": [
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 95,
+     "is_unique": true,
+     "min_value": "student114",
+     "max_value": "student992",
+     "examples": [
+      "student114",
+      "student125",
+      "student142",
+      "student155",
+      "student156"
+     ],
+     "top_values": [],
+     "description": "the name of the disabled students",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "name"
+   ],
+   "sample_rows": [
+    {
+     "name": "student114"
+    },
+    {
+     "name": "student125"
+    },
+    {
+     "name": "student142"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "enlist",
+   "row_count": 306,
+   "stats_rows": 306,
+   "columns": [
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 283,
+     "is_unique": false,
+     "min_value": "student1000",
+     "max_value": "student999",
+     "examples": [
+      "student40",
+      "student51",
+      "student109",
+      "student139",
+      "student148"
+     ],
+     "top_values": [],
+     "description": "the name of the enlisted students",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "organ",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "air_force",
+     "max_value": "peace_corps",
+     "examples": [
+      "fire_department",
+      "air_force",
+      "navy",
+      "marines",
+      "foreign_legion"
+     ],
+     "top_values": [
+      [
+       "fire_department",
+       114
+      ],
+      [
+       "navy",
+       37
+      ],
+      [
+       "army",
+       35
+      ],
+      [
+       "peace_corps",
+       32
+      ],
+      [
+       "marines",
+       31
+      ],
+      [
+       "foreign_legion",
+       31
+      ],
+      [
+       "air_force",
+       26
+      ]
+     ],
+     "description": "the organization that the student enlisted in",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "name": "student40",
+     "organ": "fire_department"
+    },
+    {
+     "name": "student51",
+     "organ": "fire_department"
+    },
+    {
+     "name": "student109",
+     "organ": "fire_department"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "enrolled",
+   "row_count": 1194,
+   "stats_rows": 1194,
+   "columns": [
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 960,
+     "is_unique": false,
+     "min_value": "student1",
+     "max_value": "student999",
+     "examples": [
+      "student10",
+      "student101",
+      "student122",
+      "student154",
+      "student161"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "school",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "occ",
+     "max_value": "ucsd",
+     "examples": [
+      "smc",
+      "ucb",
+      "ucsd",
+      "ucla",
+      "occ"
+     ],
+     "top_values": [
+      [
+       "occ",
+       247
+      ],
+      [
+       "ucla",
+       236
+      ],
+      [
+       "uci",
+       230
+      ],
+      [
+       "smc",
+       226
+      ],
+      [
+       "ucsd",
+       166
+      ],
+      [
+       "ucb",
+       89
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "month",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 15,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 15,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       3,
+       131
+      ],
+      [
+       4,
+       126
+      ],
+      [
+       1,
+       108
+      ],
+      [
+       2,
+       107
+      ],
+      [
+       10,
+       105
+      ],
+      [
+       9,
+       94
+      ],
+      [
+       6,
+       89
+      ],
+      [
+       5,
+       88
+      ],
+      [
+       12,
+       87
+      ],
+      [
+       11,
+       80
+      ],
+      [
+       7,
+       69
+      ],
+      [
+       8,
+       68
+      ],
+      [
+       15,
+       16
+      ],
+      [
+       14,
+       14
+      ],
+      [
+       13,
+       12
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "name",
+    "school"
+   ],
+   "sample_rows": [
+    {
+     "name": "student10",
+     "school": "smc",
+     "month": 1
+    },
+    {
+     "name": "student101",
+     "school": "ucb",
+     "month": 1
+    },
+    {
+     "name": "student122",
+     "school": "ucsd",
+     "month": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "filed_for_bankrupcy",
+   "row_count": 96,
+   "stats_rows": 96,
+   "columns": [
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 96,
+     "is_unique": true,
+     "min_value": "student122",
+     "max_value": "student999",
+     "examples": [
+      "student122",
+      "student126",
+      "student136",
+      "student145",
+      "student148"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "name"
+   ],
+   "sample_rows": [
+    {
+     "name": "student122"
+    },
+    {
+     "name": "student126"
+    },
+    {
+     "name": "student136"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "longest_absense_from_school",
+   "row_count": 1000,
+   "stats_rows": 1000,
+   "columns": [
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1000,
+     "is_unique": true,
+     "min_value": "student1",
+     "max_value": "student999",
+     "examples": [
+      "student10",
+      "student102",
+      "student110",
+      "student111",
+      "student114"
+     ],
+     "top_values": [],
+     "description": "student's name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "month",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 9,
+     "examples": [
+      0,
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       4,
+       120
+      ],
+      [
+       5,
+       110
+      ],
+      [
+       3,
+       104
+      ],
+      [
+       0,
+       100
+      ],
+      [
+       7,
+       99
+      ],
+      [
+       2,
+       96
+      ],
+      [
+       6,
+       95
+      ],
+      [
+       8,
+       93
+      ],
+      [
+       1,
+       93
+      ],
+      [
+       9,
+       90
+      ]
+     ],
+     "description": "the duration of absence",
+     "value_description": "commonsense evidence:\n0 means that the student has never been absent.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "name"
+   ],
+   "sample_rows": [
+    {
+     "name": "student10",
+     "month": 0
+    },
+    {
+     "name": "student102",
+     "month": 0
+    },
+    {
+     "name": "student110",
+     "month": 0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "male",
+   "row_count": 497,
+   "stats_rows": 497,
+   "columns": [
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 497,
+     "is_unique": true,
+     "min_value": "student1",
+     "max_value": "student997",
+     "examples": [
+      "student1",
+      "student101",
+      "student102",
+      "student103",
+      "student105"
+     ],
+     "top_values": [],
+     "description": "student's name who are male",
+     "value_description": "commonsense evidence:\nthe students who are not in this list are female.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "name"
+   ],
+   "sample_rows": [
+    {
+     "name": "student1"
+    },
+    {
+     "name": "student101"
+    },
+    {
+     "name": "student102"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "no_payment_due",
+   "row_count": 1000,
+   "stats_rows": 1000,
+   "columns": [
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1000,
+     "is_unique": true,
+     "min_value": "student1",
+     "max_value": "student999",
+     "examples": [
+      "student10",
+      "student101",
+      "student103",
+      "student107",
+      "student110"
+     ],
+     "top_values": [],
+     "description": "student's name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "bool",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "neg",
+     "max_value": "pos",
+     "examples": [
+      "neg"
+     ],
+     "top_values": [
+      [
+       "pos",
+       643
+      ],
+      [
+       "neg",
+       357
+      ]
+     ],
+     "description": "whether the student has payment dues",
+     "value_description": "commonsense evidence:\n\tneg: the student doesn't have payment due\n\tpos: the student has payment due",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "name"
+   ],
+   "sample_rows": [
+    {
+     "name": "student10",
+     "bool": "neg"
+    },
+    {
+     "name": "student101",
+     "bool": "neg"
+    },
+    {
+     "name": "student103",
+     "bool": "neg"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "person",
+   "row_count": 1000,
+   "stats_rows": 1000,
+   "columns": [
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1000,
+     "is_unique": true,
+     "min_value": "student1",
+     "max_value": "student999",
+     "examples": [
+      "student1",
+      "student10",
+      "student100",
+      "student1000",
+      "student101"
+     ],
+     "top_values": [],
+     "description": "student's name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "name"
+   ],
+   "sample_rows": [
+    {
+     "name": "student1"
+    },
+    {
+     "name": "student10"
+    },
+    {
+     "name": "student100"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "unemployed",
+   "row_count": 98,
+   "stats_rows": 98,
+   "columns": [
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 98,
+     "is_unique": true,
+     "min_value": "student1000",
+     "max_value": "student996",
+     "examples": [
+      "student1000",
+      "student102",
+      "student106",
+      "student109",
+      "student118"
+     ],
+     "top_values": [],
+     "description": "student who is unemployed",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "name"
+   ],
+   "sample_rows": [
+    {
+     "name": "student1000"
+    },
+    {
+     "name": "student102"
+    },
+    {
+     "name": "student106"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "disabled",
+   "from_column": "name",
+   "to_table": "person",
+   "to_column": "name",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "enlist",
+   "from_column": "name",
+   "to_table": "person",
+   "to_column": "name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "enrolled",
+   "from_column": "name",
+   "to_table": "person",
+   "to_column": "name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "filed_for_bankrupcy",
+   "from_column": "name",
+   "to_table": "person",
+   "to_column": "name",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "longest_absense_from_school",
+   "from_column": "name",
+   "to_table": "person",
+   "to_column": "name",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "male",
+   "from_column": "name",
+   "to_table": "person",
+   "to_column": "name",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "no_payment_due",
+   "from_column": "bool",
+   "to_table": "bool",
+   "to_column": "name",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "no_payment_due",
+   "from_column": "name",
+   "to_table": "person",
+   "to_column": "name",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "unemployed",
+   "from_column": "name",
+   "to_table": "person",
+   "to_column": "name",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

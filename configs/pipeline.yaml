@@ -1,0 +1,62 @@
+# ============================================================================================
+# Settings for the training / evaluation pipeline (python -m veriquery.pipeline.runner).
+# TUNED FOR ONE RTX 5090 32GB (batch 1 x accum 16, vLLM 0.88). On an 80GB card set sft.micro_bs 4, accum 4.
+# LEAN defaults (about 4-5 h on an A100 80GB): every stage still runs, only the sample sizes are smaller.
+# Full-strength values are noted beside each LEAN line. Defaults are tuned for ONE 80 GB GPU (A100/H100). On a 48 GB card they still work; on 24 GB set sft.load_4bit: true.
+# ============================================================================================
+data:
+  bird_splits: [minidev, train]       # add "dev" for the full 1534-question dev set (+ ~1 GB download)
+
+sft:                                  # stage A: LoRA fine-tuning of the SQL writer
+  method: lora                        # lora | rslora | dora
+  r: 32
+  alpha: 64
+  epochs: 1                           # LEAN (full-strength: 2)
+  lr: 2.0e-4
+  micro_bs: 1                         # RTX 5090 32GB (A100 80GB: 4)
+  accum: 16                           # effective batch = micro_bs * accum = 16
+  max_len: 4096
+  load_4bit: false                    # QLoRA: true if the GPU has < 40 GB
+  fewshot_frac: 0.5                   # share of training prompts that include 3 retrieved few-shot examples
+  limit: 4000                         # LEAN: first N BIRD train examples (full-strength: null = all ~9.4k)
+
+mine:                                 # on-policy samples used for stages B/C
+  n_questions: 1000                   # LEAN (full-strength: 3000)
+  n_samples: 4                        # LEAN (full-strength: 8)
+  temperature: 0.8
+  workers: 24
+
+dpo:                                  # stage C: preference tuning from the SFT adapter
+  beta: 0.1
+  lr: 5.0e-6
+  epochs: 1
+  micro_bs: 1
+  accum: 16
+  sft_alpha: 0.2
+  pairs: pairs_gold                   # pairs_gold | pairs_labelfree (the label-free-reward variant)
+
+repair:                               # role adapter: (wrong SQL + verifier feedback) -> fixed SQL
+  r: 16
+  alpha: 32
+  epochs: 2
+  lr: 2.0e-4
+
+eval:
+  n_final: 100                        # BIRD Mini-Dev questions for runs that call the hosted models (costs HF credits)
+  n_writer_only: 500                  # writer-only runs make no hosted calls, so use all of Mini-Dev
+  workers: 8
+  token_budget: null                  # e.g. 20000000 = stop a run after 20M tokens (resumable)
+
+vllm:
+  port: 8000
+  max_model_len: 12288
+  gpu_memory_utilization: 0.88
+  max_lora_rank: 64
+
+# `--quick` = smoke test of the WHOLE pipeline in ~30-40 min (tiny samples, outputs get a "-quick" suffix).
+quick:
+  sft: {limit: 400, max_steps: 25, epochs: 1}
+  mine: {n_questions: 40, n_samples: 4, workers: 8}
+  dpo: {epochs: 1, max_steps: 6}
+  repair: {epochs: 1, max_steps: 6}
+  eval: {n_final: 15, n_writer_only: 40}

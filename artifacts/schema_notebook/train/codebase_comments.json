@@ -1,0 +1,914 @@
+{
+ "db_id": "codebase_comments",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/codebase_comments/codebase_comments.sqlite",
+ "fingerprint": "4497768448-1793993065755238462-v1.0",
+ "created_at": "2026-11-06T19:24:57+00:00",
+ "profile_seconds": 7.397,
+ "tables": [
+  {
+   "name": "Method",
+   "row_count": 3508215,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 440356,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique id number\r\nthat identifies methods",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 158933,
+     "is_unique": false,
+     "min_value": "<invalid-global-code>.Add",
+     "max_value": "zlib.ZStream.read_buf",
+     "examples": [
+      "HtmlSharp.HtmlParser.Feed",
+      "HtmlSharp.HtmlParser.ParseDoctypeElement",
+      "IQ.Data.DbQueryProvider.GetQueryText",
+      "IQ.Data.DbQueryProvider.Execute",
+      "IQ.Data.DbQueryProvider.GetExecutionPlan"
+     ],
+     "top_values": [],
+     "description": "name of methods",
+     "value_description": "the second part is the task of this method\r\ndelimited by \".\"",
+     "notes": []
+    },
+    {
+     "name": "FullComment",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 117228,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "默认添加到末尾",
+     "examples": [
+      "Feeds data into the parser",
+      " interneral -- scan past <!ELEMENT declarations",
+      " <summary>\n        /// Converts the query expression into te...",
+      " <summary>\n        /// Execute the query expression (does tr...",
+      " <summary>\n        /// Convert the query expression into an ..."
+     ],
+     "top_values": [],
+     "description": "full comment of this method",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Summary",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1304,
+     "distinct_count": 91886,
+     "is_unique": false,
+     "min_value": "    Initializes the algorithm, and the following things:    ...",
+     "max_value": "﻿ ﻿  Internal helper to make an HTTP request and return the ...",
+     "examples": [
+      "Converts the query expression into text that corresponds to ...",
+      "Execute the query expression ",
+      "Convert the query expression into an execution plan",
+      "Do all query translations execpt building the execution plan",
+      "Determines whether a given expression can be executed locall..."
+     ],
+     "top_values": [],
+     "description": "summary of the method",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ApiCalls",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 142484,
+     "is_unique": false,
+     "min_value": ".Add",
+     "max_value": "zlib.ZStream.next_out_index zlib.ZStream.avail_out zlib.ZStr...",
+     "examples": [
+      "System.String.IsNullOrEmpty HtmlSharp.HtmlParser.GoAhead Htm...",
+      "HtmlSharp.HtmlParser.ScanName System.Collections.Generic.Key...",
+      "IQ.Data.DbQueryProvider.Translate IQ.Data.QueryLanguage.Form...",
+      "IQ.Data.DbQueryProvider.GetExecutionPlan System.Linq.Express...",
+      "System.Linq.Expressions.LambdaExpression.Body IQ.Data.DbQuer..."
+     ],
+     "top_values": [],
+     "description": "linearized sequenced of API calls",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CommentIsXml",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       184358
+      ],
+      [
+       0,
+       15642
+      ]
+     ],
+     "description": "CommentIs Xml. whether the comment is XML format or not",
+     "value_description": "commonsense evidence:\r\n\r\n0: the comment for this method is not XML format.\r\n1: the comment for this method is XML format.",
+     "notes": []
+    },
+    {
+     "name": "SampledAt",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3653,
+     "is_unique": false,
+     "min_value": 636430963695654788,
+     "max_value": 636438436218374844,
+     "examples": [
+      636430963695654788,
+      636430963695709898,
+      636430963721734366,
+      636430963721804459,
+      636430963721809465
+     ],
+     "top_values": [],
+     "description": "Sampled At. the time of sampling",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "SolutionId",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2255,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 7829,
+     "examples": [
+      1,
+      2,
+      3,
+      5,
+      7
+     ],
+     "top_values": [],
+     "description": "Solution Id. id number of solutions",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Lang",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.1305,
+     "distinct_count": 38,
+     "is_unique": false,
+     "min_value": "af",
+     "max_value": "zh-tw",
+     "examples": [
+      "en",
+      "fr",
+      "fi",
+      "it",
+      "af"
+     ],
+     "top_values": [
+      [
+       "en",
+       164665
+      ],
+      [
+       "ca",
+       1363
+      ],
+      [
+       "de",
+       1001
+      ],
+      [
+       "fr",
+       964
+      ],
+      [
+       "it",
+       853
+      ],
+      [
+       "ro",
+       690
+      ],
+      [
+       "no",
+       675
+      ],
+      [
+       "da",
+       610
+      ],
+      [
+       "ja",
+       507
+      ],
+      [
+       "et",
+       326
+      ],
+      [
+       "nl",
+       303
+      ],
+      [
+       "pt",
+       281
+      ],
+      [
+       "ru",
+       280
+      ],
+      [
+       "id",
+       179
+      ],
+      [
+       "sv",
+       173
+      ],
+      [
+       "es",
+       150
+      ],
+      [
+       "tl",
+       114
+      ],
+      [
+       "af",
+       114
+      ],
+      [
+       "cy",
+       106
+      ],
+      [
+       "zh-cn",
+       98
+      ],
+      [
+       "vi",
+       77
+      ],
+      [
+       "pl",
+       74
+      ],
+      [
+       "ko",
+       50
+      ],
+      [
+       "fi",
+       40
+      ],
+      [
+       "hu",
+       35
+      ],
+      [
+       "sk",
+       26
+      ],
+      [
+       "bg",
+       22
+      ],
+      [
+       "sl",
+       20
+      ],
+      [
+       "hr",
+       20
+      ],
+      [
+       "tr",
+       17
+      ],
+      [
+       "sw",
+       15
+      ],
+      [
+       "sq",
+       11
+      ],
+      [
+       "so",
+       11
+      ],
+      [
+       "lt",
+       11
+      ],
+      [
+       "cs",
+       10
+      ],
+      [
+       "lv",
+       6
+      ],
+      [
+       "mk",
+       2
+      ],
+      [
+       "zh-tw",
+       1
+      ]
+     ],
+     "description": "language code of method",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "NameTokenized",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 133553,
+     "is_unique": false,
+     "min_value": "<invalid-global-code> add",
+     "max_value": "课本 create课本",
+     "examples": [
+      "html parser feed",
+      "html parser parse doctype element",
+      "db query provider get query text",
+      "db query provider execute",
+      "db query provider get execution plan"
+     ],
+     "top_values": [],
+     "description": "Name Tokenized. tokenized name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 1,
+     "Name": "HtmlSharp.HtmlParser.Feed",
+     "FullComment": "Feeds data into the parser",
+     "Summary": null,
+     "ApiCalls": "System.String.IsNullOrEmpty HtmlSharp.HtmlParser.GoAhead Htm...",
+     "CommentIsXml": 0,
+     "SampledAt": 636430963695654788,
+     "SolutionId": 1,
+     "Lang": null,
+     "NameTokenized": "html parser feed"
+    },
+    {
+     "Id": 2,
+     "Name": "HtmlSharp.HtmlParser.ParseDoctypeElement",
+     "FullComment": " interneral -- scan past <!ELEMENT declarations",
+     "Summary": null,
+     "ApiCalls": "HtmlSharp.HtmlParser.ScanName System.Collections.Generic.Key...",
+     "CommentIsXml": 0,
+     "SampledAt": 636430963695709898,
+     "SolutionId": 1,
+     "Lang": null,
+     "NameTokenized": "html parser parse doctype element"
+    },
+    {
+     "Id": 3,
+     "Name": "IQ.Data.DbQueryProvider.GetQueryText",
+     "FullComment": " <summary>\n        /// Converts the query expression into te...",
+     "Summary": "Converts the query expression into text that corresponds to ...",
+     "ApiCalls": "IQ.Data.DbQueryProvider.Translate IQ.Data.QueryLanguage.Form...",
+     "CommentIsXml": 1,
+     "SampledAt": 636430963721734366,
+     "SolutionId": 2,
+     "Lang": "en",
+     "NameTokenized": "db query provider get query text"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 3,508,215 rows"
+   ]
+  },
+  {
+   "name": "MethodParameter",
+   "row_count": 5132027,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 542467,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique id number identifying method parameters",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "MethodId",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 108503,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "9999",
+     "examples": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "top_values": [],
+     "description": "Method Id",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "Type",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13310,
+     "is_unique": false,
+     "min_value": "<anonymous type: <anonymous type: System.String Value, Syste...",
+     "max_value": "wx.Event",
+     "examples": [
+      "System.String",
+      "System.Int32",
+      "System.Linq.Expressions.Expression",
+      "IQ.Data.SelectExpression",
+      "IQ.Data.QueryCommand"
+     ],
+     "top_values": [],
+     "description": "type of the method",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 20366,
+     "is_unique": false,
+     "min_value": "@base",
+     "max_value": "页数",
+     "examples": [
+      "data",
+      "i",
+      "declstartpos",
+      "expression",
+      "s"
+     ],
+     "top_values": [],
+     "description": "name of the method",
+     "value_description": "commonsense evidence:\n\nif the name is not a word like \"H\", \"z\", it means this method is not well-discriminative.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 1,
+     "MethodId": "1",
+     "Type": "System.String",
+     "Name": "data"
+    },
+    {
+     "Id": 2,
+     "MethodId": "2",
+     "Type": "System.Int32",
+     "Name": "i"
+    },
+    {
+     "Id": 3,
+     "MethodId": "2",
+     "Type": "System.Int32",
+     "Name": "declstartpos"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 5,132,027 rows"
+   ]
+  },
+  {
+   "name": "Repo",
+   "row_count": 140990,
+   "stats_rows": 140990,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 140990,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 156550,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique id to identify repositories",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 140990,
+     "is_unique": true,
+     "min_value": "https://github.com/0-Eclipse-0/EExplorer.git",
+     "max_value": "https://github.com/zzzprojects/html-agility-pack.git",
+     "examples": [
+      "https://github.com/wallerdev/htmlsharp.git",
+      "https://github.com/unclebob/nslim.git",
+      "https://github.com/maravillas/linq-to-delicious.git",
+      "https://github.com/mauriciodeamorim/tdd.encontro2.git",
+      "https://github.com/aroder/heatmap.git"
+     ],
+     "top_values": [],
+     "description": "github address of repository",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Stars",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 807,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 13322,
+     "examples": [
+      14,
+      6,
+      3,
+      1,
+      5
+     ],
+     "top_values": [],
+     "description": "stars this repository has received",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Forks",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 460,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 6845,
+     "examples": [
+      2,
+      3,
+      0,
+      1,
+      32
+     ],
+     "top_values": [],
+     "description": "forks that the repository has received",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Watchers",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 807,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 13322,
+     "examples": [
+      14,
+      6,
+      3,
+      1,
+      5
+     ],
+     "top_values": [],
+     "description": "how many watchers of this repository",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ProcessedTime",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 140932,
+     "is_unique": false,
+     "min_value": 636430963247108053,
+     "max_value": 636482996318115663,
+     "examples": [
+      636430963247108053,
+      636472436323838240,
+      636430963280029575,
+      636430963299356346,
+      636472436346806990
+     ],
+     "top_values": [],
+     "description": "how much processed time of downloading this repository",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 1,
+     "Url": "https://github.com/wallerdev/htmlsharp.git",
+     "Stars": 14,
+     "Forks": 2,
+     "Watchers": 14,
+     "ProcessedTime": 636430963247108053
+    },
+    {
+     "Id": 2,
+     "Url": "https://github.com/unclebob/nslim.git",
+     "Stars": 6,
+     "Forks": 3,
+     "Watchers": 6,
+     "ProcessedTime": 636472436323838240
+    },
+    {
+     "Id": 3,
+     "Url": "https://github.com/maravillas/linq-to-delicious.git",
+     "Stars": 6,
+     "Forks": 0,
+     "Watchers": 6,
+     "ProcessedTime": 636430963280029575
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Solution",
+   "row_count": 338087,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "Id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 200000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique id to identify this solution",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "RepoId",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 100454,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 138928,
+     "examples": [
+      1,
+      3,
+      4,
+      5,
+      6
+     ],
+     "top_values": [],
+     "description": "Repository Id. id of repository",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Path",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 199987,
+     "is_unique": false,
+     "min_value": "00091701_ADFC-NewsApp-Mono\\NewsAppDroid\\NewsAppDroid.sln",
+     "max_value": "zzzprojects_html-agility-pack\\src\\Tests\\NugetReferenceTests\\...",
+     "examples": [
+      "wallerdev_htmlsharp\\HtmlSharp.sln",
+      "maravillas_linq-to-delicious\\tasty.sln",
+      "mauriciodeamorim_tdd.encontro2\\Tdd.Encontro2.sln",
+      "aroder_heatmap\\CenStatsHeatMap.sln",
+      "managedfusion_managedfusion\\ManagedFusion.sln"
+     ],
+     "top_values": [],
+     "description": "path of this solution",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ProcessedTime",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 636430963695642191,
+     "max_value": 636451966701200938,
+     "examples": [
+      636430963695642191,
+      636430963721734366,
+      636430963735704849,
+      636430963750457674,
+      636430963775379234
+     ],
+     "top_values": [],
+     "description": "processed time",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "WasCompiled",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      1,
+      0
+     ],
+     "top_values": [
+      [
+       1,
+       102675
+      ],
+      [
+       0,
+       97325
+      ]
+     ],
+     "description": "Was Compiled. whether this solution needs to be compiled or not",
+     "value_description": "commonsense evidence:\n0: this solution needs to be compiled if user wants to implement it.\n1: this solution can be implemented without needs of compilation",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Id"
+   ],
+   "sample_rows": [
+    {
+     "Id": 1,
+     "RepoId": 1,
+     "Path": "wallerdev_htmlsharp\\HtmlSharp.sln",
+     "ProcessedTime": 636430963695642191,
+     "WasCompiled": 1
+    },
+    {
+     "Id": 2,
+     "RepoId": 3,
+     "Path": "maravillas_linq-to-delicious\\tasty.sln",
+     "ProcessedTime": 636430963721734366,
+     "WasCompiled": 1
+    },
+    {
+     "Id": 3,
+     "RepoId": 4,
+     "Path": "mauriciodeamorim_tdd.encontro2\\Tdd.Encontro2.sln",
+     "ProcessedTime": 636430963735704849,
+     "WasCompiled": 1
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 338,087 rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "Method",
+   "from_column": "SolutionId",
+   "to_table": "Solution",
+   "to_column": "Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.995
+  },
+  {
+   "from_table": "MethodParameter",
+   "from_column": "MethodId",
+   "to_table": "Method",
+   "to_column": "Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "Solution",
+   "from_column": "RepoId",
+   "to_table": "Repo",
+   "to_column": "Id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

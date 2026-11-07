@@ -1,0 +1,134 @@
+{
+ "current": null,
+ "done": 18,
+ "total": 18,
+ "updated": "2026-11-06 21:19:01",
+ "stages": [
+  {
+   "stage": "setup_check",
+   "status": "done",
+   "seconds": 0.9,
+   "kind": "cpu",
+   "est": "1 min"
+  },
+  {
+   "stage": "data_shoptrap",
+   "status": "done",
+   "seconds": 0.1,
+   "kind": "cpu",
+   "est": "<1 min"
+  },
+  {
+   "stage": "data_bird",
+   "status": "done",
+   "seconds": 232.3,
+   "kind": "cpu",
+   "est": "5-20 min (network)"
+  },
+  {
+   "stage": "schema_cards",
+   "status": "done",
+   "seconds": 86.0,
+   "kind": "cpu",
+   "est": "10-25 min"
+  },
+  {
+   "stage": "fewshot_bank",
+   "status": "done",
+   "seconds": 5.0,
+   "kind": "cpu",
+   "est": "5-10 min"
+  },
+  {
+   "stage": "baseline_eval",
+   "status": "done",
+   "seconds": 1414.8,
+   "kind": "api",
+   "est": "45-75 min"
+  },
+  {
+   "stage": "sft_data",
+   "status": "done",
+   "seconds": 589.5,
+   "kind": "cpu",
+   "est": "5-15 min"
+  },
+  {
+   "stage": "sft_train",
+   "status": "done",
+   "seconds": 2133.8,
+   "kind": "train",
+   "est": "1.5-2.5 h"
+  },
+  {
+   "stage": "eval_sft",
+   "status": "done",
+   "seconds": 670.2,
+   "kind": "api",
+   "est": "30-50 min"
+  },
+  {
+   "stage": "mine",
+   "status": "done",
+   "seconds": 538.3,
+   "kind": "serve",
+   "est": "40-80 min"
+  },
+  {
+   "stage": "pref_data",
+   "status": "done",
+   "seconds": 0.1,
+   "kind": "cpu",
+   "est": "<2 min"
+  },
+  {
+   "stage": "repair_train",
+   "status": "done",
+   "seconds": 114.0,
+   "kind": "train",
+   "est": "10-25 min"
+  },
+  {
+   "stage": "dpo_train",
+   "status": "done",
+   "seconds": 423.7,
+   "kind": "train",
+   "est": "30-70 min"
+  },
+  {
+   "stage": "eval_final",
+   "status": "done",
+   "seconds": 783.3,
+   "kind": "api",
+   "est": "60-100 min"
+  },
+  {
+   "stage": "calibrate",
+   "status": "done",
+   "seconds": 0.4,
+   "kind": "cpu",
+   "est": "<1 min"
+  },
+  {
+   "stage": "golden_runs",
+   "status": "done",
+   "seconds": 4.2,
+   "kind": "api",
+   "est": "5-10 min"
+  },
+  {
+   "stage": "report",
+   "status": "done",
+   "seconds": 1.1,
+   "kind": "cpu",
+   "est": "<1 min"
+  },
+  {
+   "stage": "backup",
+   "status": "done",
+   "seconds": 22.5,
+   "kind": "cpu",
+   "est": "2-10 min"
+  }
+ ]
+}

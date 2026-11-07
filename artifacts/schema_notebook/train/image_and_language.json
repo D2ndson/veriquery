@@ -1,0 +1,713 @@
+{
+ "db_id": "image_and_language",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/image_and_language/image_and_language.sqlite",
+ "fingerprint": "138891264-1793993022164358613-v1.0",
+ "created_at": "2026-11-06T19:24:56+00:00",
+ "profile_seconds": 1.574,
+ "tables": [
+  {
+   "name": "ATT_CLASSES",
+   "row_count": 699,
+   "stats_rows": 699,
+   "columns": [
+    {
+     "name": "ATT_CLASS_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 699,
+     "is_unique": true,
+     "min_value": 0,
+     "max_value": 698,
+     "examples": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [],
+     "description": "the unique attribute class ids",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ATT_CLASS",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 699,
+     "is_unique": true,
+     "min_value": "a",
+     "max_value": "zebra s",
+     "examples": [
+      "building s",
+      "indoors",
+      "cluttered",
+      "park",
+      "two story"
+     ],
+     "top_values": [],
+     "description": "ATTRIBUTE CLASS. the corresponding classes for attributes",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "ATT_CLASS_ID"
+   ],
+   "sample_rows": [
+    {
+     "ATT_CLASS_ID": 0,
+     "ATT_CLASS": "building s"
+    },
+    {
+     "ATT_CLASS_ID": 1,
+     "ATT_CLASS": "indoors"
+    },
+    {
+     "ATT_CLASS_ID": 2,
+     "ATT_CLASS": "cluttered"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "IMG_OBJ",
+   "row_count": 1750617,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "IMG_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 11907,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2317853,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "IMAGE ID. the id representing images",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "OBJ_SAMPLE_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 121,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 121,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "OBJECT SAMPLE ID. the id of the object sample",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "OBJ_CLASS_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 300,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 299,
+     "examples": [
+      298,
+      246,
+      293,
+      239,
+      295
+     ],
+     "top_values": [],
+     "description": "OBJECT CLASS ID. the id indicating class of the objects",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "X",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1101,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1250,
+     "examples": [
+      0,
+      78,
+      1,
+      439,
+      178
+     ],
+     "top_values": [],
+     "description": "x coordinate",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Y",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1032,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1245,
+     "examples": [
+      0,
+      308,
+      283,
+      1,
+      344
+     ],
+     "top_values": [],
+     "description": "y coordinate",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "W",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1085,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1542,
+     "examples": [
+      799,
+      722,
+      222,
+      359,
+      135
+     ],
+     "top_values": [],
+     "description": "width of the bounding box of the object",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "H",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 998,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1281,
+     "examples": [
+      557,
+      290,
+      538,
+      258,
+      535
+     ],
+     "top_values": [],
+     "description": "height of the bounding box of the object",
+     "value_description": "commonsense evidence:\n\nbounding box of the object: (x, y, W, H)",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "IMG_ID",
+    "OBJ_SAMPLE_ID"
+   ],
+   "sample_rows": [
+    {
+     "IMG_ID": 1,
+     "OBJ_SAMPLE_ID": 1,
+     "OBJ_CLASS_ID": 298,
+     "X": 0,
+     "Y": 0,
+     "W": 799,
+     "H": 557
+    },
+    {
+     "IMG_ID": 1,
+     "OBJ_SAMPLE_ID": 2,
+     "OBJ_CLASS_ID": 246,
+     "X": 78,
+     "Y": 308,
+     "W": 722,
+     "H": 290
+    },
+    {
+     "IMG_ID": 1,
+     "OBJ_SAMPLE_ID": 3,
+     "OBJ_CLASS_ID": 293,
+     "X": 1,
+     "Y": 0,
+     "W": 222,
+     "H": 538
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 1,750,617 rows"
+   ]
+  },
+  {
+   "name": "IMG_OBJ_ATT",
+   "row_count": 1074674,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "IMG_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 72226,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2417995,
+     "examples": [
+      1113,
+      1463,
+      1500,
+      1646,
+      1719
+     ],
+     "top_values": [],
+     "description": "IMAGE ID. id number of each image",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ATT_CLASS_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 619,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 618,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [],
+     "description": "ATTRIBUTE CLASS ID. attribute class number for image",
+     "value_description": "commonsense evidence:\n\nif one IMG_ID has many ATT_CLASS_ID, it refers to that this image has multiple attributes",
+     "notes": []
+    },
+    {
+     "name": "OBJ_SAMPLE_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 90,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 125,
+     "examples": [
+      21,
+      22,
+      23,
+      24,
+      25
+     ],
+     "top_values": [],
+     "description": "object sample id",
+     "value_description": "commonsense evidence:\n\nâ¢ if one IMG_ID has many OBJ_SAMPLE_ID, it refers to that this image has multiple objects\n\nâ¢ if one ATT_CLASS_ID has many OBJ_SAMPLE_ID, it refers to that this attribute is composed of multiple objects.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "IMG_ID",
+    "ATT_CLASS_ID",
+    "OBJ_SAMPLE_ID"
+   ],
+   "sample_rows": [
+    {
+     "IMG_ID": 1113,
+     "ATT_CLASS_ID": 0,
+     "OBJ_SAMPLE_ID": 21
+    },
+    {
+     "IMG_ID": 1113,
+     "ATT_CLASS_ID": 0,
+     "OBJ_SAMPLE_ID": 22
+    },
+    {
+     "IMG_ID": 1113,
+     "ATT_CLASS_ID": 0,
+     "OBJ_SAMPLE_ID": 23
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 1,074,674 rows"
+   ]
+  },
+  {
+   "name": "IMG_REL",
+   "row_count": 763159,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "IMG_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 65838,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2417994,
+     "examples": [
+      675,
+      1193,
+      3447,
+      2316535,
+      2318367
+     ],
+     "top_values": [],
+     "description": "the image id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "PRED_CLASS_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 144,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 143,
+     "examples": [
+      0
+     ],
+     "top_values": [],
+     "description": "PREDICTION CLASS ID. the prediction relationship class between objects",
+     "value_description": "commonsense evidence:\n\nif OBJ1_SAMPLE_ID = OBJ2_SAMPLE_ID, this relationship is the self-relation.",
+     "notes": []
+    },
+    {
+     "name": "OBJ1_SAMPLE_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 89,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 116,
+     "examples": [
+      13,
+      12,
+      4,
+      17,
+      33
+     ],
+     "top_values": [],
+     "description": "OBJECT1 SAMPLE ID. the sample id of the first object",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "OBJ2_SAMPLE_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 85,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 124,
+     "examples": [
+      1,
+      34,
+      5,
+      9,
+      8
+     ],
+     "top_values": [],
+     "description": "OBJECT2 SAMPLE ID. the sample id of the second object",
+     "value_description": "commonsense evidence:\n\nif (OBJ1_SAMPLE_ID, OBJ2_SAMPLE_ID) has multiple PRED_CLASS_ID, it means these two objects have multiple relations.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "IMG_ID",
+    "PRED_CLASS_ID",
+    "OBJ1_SAMPLE_ID",
+    "OBJ2_SAMPLE_ID"
+   ],
+   "sample_rows": [
+    {
+     "IMG_ID": 675,
+     "PRED_CLASS_ID": 0,
+     "OBJ1_SAMPLE_ID": 13,
+     "OBJ2_SAMPLE_ID": 1
+    },
+    {
+     "IMG_ID": 1193,
+     "PRED_CLASS_ID": 0,
+     "OBJ1_SAMPLE_ID": 12,
+     "OBJ2_SAMPLE_ID": 34
+    },
+    {
+     "IMG_ID": 3447,
+     "PRED_CLASS_ID": 0,
+     "OBJ1_SAMPLE_ID": 4,
+     "OBJ2_SAMPLE_ID": 5
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 763,159 rows"
+   ]
+  },
+  {
+   "name": "OBJ_CLASSES",
+   "row_count": 300,
+   "stats_rows": 300,
+   "columns": [
+    {
+     "name": "OBJ_CLASS_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 300,
+     "is_unique": true,
+     "min_value": 0,
+     "max_value": 299,
+     "examples": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [],
+     "description": "OBJECT CLASS ID. unique id number identifying object classes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "OBJ_CLASS",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 300,
+     "is_unique": true,
+     "min_value": "a",
+     "max_value": "zebra",
+     "examples": [
+      "awning",
+      "goggles",
+      "dot",
+      "kitchen",
+      "feathers"
+     ],
+     "top_values": [],
+     "description": "the explanation about object classes",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "OBJ_CLASS_ID"
+   ],
+   "sample_rows": [
+    {
+     "OBJ_CLASS_ID": 0,
+     "OBJ_CLASS": "awning"
+    },
+    {
+     "OBJ_CLASS_ID": 1,
+     "OBJ_CLASS": "goggles"
+    },
+    {
+     "OBJ_CLASS_ID": 2,
+     "OBJ_CLASS": "dot"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "PRED_CLASSES",
+   "row_count": 150,
+   "stats_rows": 150,
+   "columns": [
+    {
+     "name": "PRED_CLASS_ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 150,
+     "is_unique": true,
+     "min_value": 0,
+     "max_value": 149,
+     "examples": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [],
+     "description": "PREDICTION CLASS ID. the unique prediction id for the class",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "PRED_CLASS",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 150,
+     "is_unique": true,
+     "min_value": "a",
+     "max_value": "written on",
+     "examples": [
+      "playing on",
+      "looking a",
+      "to left of",
+      "beyond",
+      "covers"
+     ],
+     "top_values": [],
+     "description": "the caption for the prediction class id",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "PRED_CLASS_ID"
+   ],
+   "sample_rows": [
+    {
+     "PRED_CLASS_ID": 0,
+     "PRED_CLASS": "playing on"
+    },
+    {
+     "PRED_CLASS_ID": 1,
+     "PRED_CLASS": "looking a"
+    },
+    {
+     "PRED_CLASS_ID": 2,
+     "PRED_CLASS": "to left of"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "IMG_OBJ",
+   "from_column": "OBJ_CLASS_ID",
+   "to_table": "OBJ_CLASSES",
+   "to_column": "OBJ_CLASS_ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "IMG_OBJ_ATT",
+   "from_column": "IMG_ID",
+   "to_table": "IMG_OBJ",
+   "to_column": "IMG_ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "IMG_OBJ_ATT",
+   "from_column": "OBJ_SAMPLE_ID",
+   "to_table": "IMG_OBJ",
+   "to_column": "OBJ_SAMPLE_ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "IMG_OBJ_ATT",
+   "from_column": "ATT_CLASS_ID",
+   "to_table": "ATT_CLASSES",
+   "to_column": "ATT_CLASS_ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "IMG_REL",
+   "from_column": "IMG_ID",
+   "to_table": "IMG_OBJ",
+   "to_column": "IMG_ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "IMG_REL",
+   "from_column": "OBJ2_SAMPLE_ID",
+   "to_table": "IMG_OBJ",
+   "to_column": "OBJ_SAMPLE_ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "IMG_REL",
+   "from_column": "OBJ1_SAMPLE_ID",
+   "to_table": "IMG_OBJ",
+   "to_column": "OBJ_SAMPLE_ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "IMG_REL",
+   "from_column": "PRED_CLASS_ID",
+   "to_table": "PRED_CLASSES",
+   "to_column": "PRED_CLASS_ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "IMG_OBJ_ATT",
+   "from_column": "IMG_ID",
+   "to_table": "IMG_REL",
+   "to_column": "IMG_ID",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.96
+  }
+ ],
+ "notes": []
+}

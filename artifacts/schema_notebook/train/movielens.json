@@ -1,0 +1,1078 @@
+{
+ "db_id": "movielens",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/movielens/movielens.sqlite",
+ "fingerprint": "85786624-1793993088520699094-v1.0",
+ "created_at": "2026-11-06T19:25:00+00:00",
+ "profile_seconds": 1.769,
+ "tables": [
+  {
+   "name": "actors",
+   "row_count": 98690,
+   "stats_rows": 98690,
+   "columns": [
+    {
+     "name": "actorid",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 98690,
+     "is_unique": true,
+     "min_value": 4,
+     "max_value": 2749386,
+     "examples": [
+      4,
+      16,
+      28,
+      566,
+      580
+     ],
+     "top_values": [],
+     "description": "actor id. unique identificator number of actors",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "a_gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "M",
+     "examples": [
+      "M"
+     ],
+     "top_values": [
+      [
+       "M",
+       65794
+      ],
+      [
+       "F",
+       32896
+      ]
+     ],
+     "description": "actor gender",
+     "value_description": "M: male;\r\nF: female",
+     "notes": []
+    },
+    {
+     "name": "a_quality",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 5,
+     "examples": [
+      4,
+      0,
+      3,
+      2,
+      5
+     ],
+     "top_values": [
+      [
+       3,
+       40193
+      ],
+      [
+       4,
+       39066
+      ],
+      [
+       0,
+       14171
+      ],
+      [
+       2,
+       4490
+      ],
+      [
+       5,
+       568
+      ],
+      [
+       1,
+       202
+      ]
+     ],
+     "description": "actor quality",
+     "value_description": "higher is better, lower is the worse",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "actorid"
+   ],
+   "sample_rows": [
+    {
+     "actorid": 4,
+     "a_gender": "M",
+     "a_quality": 4
+    },
+    {
+     "actorid": 16,
+     "a_gender": "M",
+     "a_quality": 0
+    },
+    {
+     "actorid": 28,
+     "a_gender": "M",
+     "a_quality": 4
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "directors",
+   "row_count": 2201,
+   "stats_rows": 2201,
+   "columns": [
+    {
+     "name": "directorid",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2201,
+     "is_unique": true,
+     "min_value": 67,
+     "max_value": 306351,
+     "examples": [
+      67,
+      92,
+      284,
+      708,
+      746
+     ],
+     "top_values": [],
+     "description": "director id. unique identification number of actors directors",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "d_quality",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 5,
+     "examples": [
+      4,
+      2,
+      3,
+      0
+     ],
+     "top_values": [
+      [
+       3,
+       1000
+      ],
+      [
+       4,
+       983
+      ],
+      [
+       2,
+       158
+      ],
+      [
+       0,
+       48
+      ],
+      [
+       1,
+       10
+      ],
+      [
+       5,
+       2
+      ]
+     ],
+     "description": "director quality",
+     "value_description": "higher value is better, lower is the worse",
+     "notes": []
+    },
+    {
+     "name": "avg_revenue",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 4,
+     "examples": [
+      1,
+      3,
+      0,
+      4,
+      2
+     ],
+     "top_values": [
+      [
+       0,
+       552
+      ],
+      [
+       4,
+       413
+      ],
+      [
+       3,
+       412
+      ],
+      [
+       2,
+       412
+      ],
+      [
+       1,
+       412
+      ]
+     ],
+     "description": "average revenue",
+     "value_description": "higher value is the higher, lower is the lower",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "directorid"
+   ],
+   "sample_rows": [
+    {
+     "directorid": 67,
+     "d_quality": 4,
+     "avg_revenue": 1
+    },
+    {
+     "directorid": 92,
+     "d_quality": 2,
+     "avg_revenue": 3
+    },
+    {
+     "directorid": 284,
+     "d_quality": 4,
+     "avg_revenue": 0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "movies",
+   "row_count": 3832,
+   "stats_rows": 3832,
+   "columns": [
+    {
+     "name": "movieid",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3832,
+     "is_unique": true,
+     "min_value": 1672052,
+     "max_value": 2593313,
+     "examples": [
+      1672052,
+      1672111,
+      1672580,
+      1672716,
+      1672946
+     ],
+     "top_values": [],
+     "description": "movie id. unique identifier number of movies",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      3,
+      4,
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       4,
+       2723
+      ],
+      [
+       3,
+       749
+      ],
+      [
+       2,
+       310
+      ],
+      [
+       1,
+       50
+      ]
+     ],
+     "description": "year",
+     "value_description": "4: newest;\n\n1: oldest\n\nhigher value means newer published date",
+     "notes": []
+    },
+    {
+     "name": "isEnglish",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "T",
+     "examples": [
+      "T",
+      "F"
+     ],
+     "top_values": [
+      [
+       "T",
+       3411
+      ],
+      [
+       "F",
+       421
+      ]
+     ],
+     "description": "is English",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "country",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "France",
+     "max_value": "other",
+     "examples": [
+      "other",
+      "USA",
+      "France",
+      "UK"
+     ],
+     "top_values": [
+      [
+       "USA",
+       2725
+      ],
+      [
+       "other",
+       531
+      ],
+      [
+       "UK",
+       384
+      ],
+      [
+       "France",
+       192
+      ]
+     ],
+     "description": "country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "runningtime",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 3,
+     "examples": [
+      2,
+      3,
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       3,
+       1297
+      ],
+      [
+       2,
+       1261
+      ],
+      [
+       1,
+       1221
+      ],
+      [
+       0,
+       53
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "movieid"
+   ],
+   "sample_rows": [
+    {
+     "movieid": 1672052,
+     "year": 3,
+     "isEnglish": "T",
+     "country": "other",
+     "runningtime": 2
+    },
+    {
+     "movieid": 1672111,
+     "year": 4,
+     "isEnglish": "T",
+     "country": "other",
+     "runningtime": 2
+    },
+    {
+     "movieid": 1672580,
+     "year": 4,
+     "isEnglish": "T",
+     "country": "USA",
+     "runningtime": 3
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "movies2actors",
+   "row_count": 138349,
+   "stats_rows": 138349,
+   "columns": [
+    {
+     "name": "movieid",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3798,
+     "is_unique": false,
+     "min_value": 1672052,
+     "max_value": 2593313,
+     "examples": [
+      1672580,
+      1672946,
+      1673647,
+      1673658,
+      1674388
+     ],
+     "top_values": [],
+     "description": "movie id. identifier number of movies",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "actorid",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 84696,
+     "is_unique": false,
+     "min_value": 4,
+     "max_value": 2749386,
+     "examples": [
+      981535,
+      1094968,
+      149985,
+      261595,
+      781357
+     ],
+     "top_values": [],
+     "description": "actor id. identifier number of actors",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "cast_num",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 3,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       3,
+       65864
+      ],
+      [
+       2,
+       47830
+      ],
+      [
+       1,
+       18301
+      ],
+      [
+       0,
+       6354
+      ]
+     ],
+     "description": "cast number",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "movieid",
+    "actorid"
+   ],
+   "sample_rows": [
+    {
+     "movieid": 1672580,
+     "actorid": 981535,
+     "cast_num": 0
+    },
+    {
+     "movieid": 1672946,
+     "actorid": 1094968,
+     "cast_num": 0
+    },
+    {
+     "movieid": 1673647,
+     "actorid": 149985,
+     "cast_num": 0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "movies2directors",
+   "row_count": 4141,
+   "stats_rows": 4141,
+   "columns": [
+    {
+     "name": "movieid",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3814,
+     "is_unique": false,
+     "min_value": 1672052,
+     "max_value": 2593313,
+     "examples": [
+      1672111,
+      1672946,
+      1679461,
+      1691387,
+      1693305
+     ],
+     "top_values": [],
+     "description": "movie id. identifier number of movies",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "directorid",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2201,
+     "is_unique": false,
+     "min_value": 67,
+     "max_value": 306351,
+     "examples": [
+      54934,
+      188940,
+      179783,
+      291700,
+      14663
+     ],
+     "top_values": [],
+     "description": "director id. identifier number of directors",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "genre",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": "Action",
+     "max_value": "Other",
+     "examples": [
+      "Action"
+     ],
+     "top_values": [
+      [
+       "Comedy",
+       1257
+      ],
+      [
+       "Drama",
+       955
+      ],
+      [
+       "Action",
+       593
+      ],
+      [
+       "Adventure",
+       342
+      ],
+      [
+       "Crime",
+       299
+      ],
+      [
+       "Documentary",
+       257
+      ],
+      [
+       "Horror",
+       231
+      ],
+      [
+       "Animation",
+       104
+      ],
+      [
+       "Other",
+       103
+      ]
+     ],
+     "description": "genre of movies",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "movieid",
+    "directorid"
+   ],
+   "sample_rows": [
+    {
+     "movieid": 1672111,
+     "directorid": 54934,
+     "genre": "Action"
+    },
+    {
+     "movieid": 1672946,
+     "directorid": 188940,
+     "genre": "Action"
+    },
+    {
+     "movieid": 1679461,
+     "directorid": 179783,
+     "genre": "Action"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "u2base",
+   "row_count": 996159,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "userid",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5820,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 6040,
+     "examples": [
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "top_values": [],
+     "description": "user id. identifier number of users",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "movieid",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3532,
+     "is_unique": false,
+     "min_value": 1672052,
+     "max_value": 2593313,
+     "examples": [
+      1964242,
+      2219779,
+      1856939,
+      2273044,
+      1681655
+     ],
+     "top_values": [],
+     "description": "movie id. identifier number of movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "rating",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "3",
+     "examples": [
+      "1"
+     ],
+     "top_values": [
+      [
+       "2",
+       107114
+      ],
+      [
+       "1",
+       55607
+      ],
+      [
+       "3",
+       37279
+      ]
+     ],
+     "description": "ratings of movies",
+     "value_description": "higher value refers to higher satisfactory, each value is the rating of movies left by users.",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    }
+   ],
+   "primary_key": [
+    "userid",
+    "movieid"
+   ],
+   "sample_rows": [
+    {
+     "userid": 2,
+     "movieid": 1964242,
+     "rating": "1"
+    },
+    {
+     "userid": 2,
+     "movieid": 2219779,
+     "rating": "1"
+    },
+    {
+     "userid": 3,
+     "movieid": 1856939,
+     "rating": "1"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 996,159 rows"
+   ]
+  },
+  {
+   "name": "users",
+   "row_count": 6039,
+   "stats_rows": 6039,
+   "columns": [
+    {
+     "name": "userid",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6039,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 6040,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "user id. unique identifier number of users",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "age",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "56",
+     "examples": [
+      "1",
+      "56",
+      "25",
+      "45",
+      "50"
+     ],
+     "top_values": [
+      [
+       "25",
+       2095
+      ],
+      [
+       "35",
+       1193
+      ],
+      [
+       "18",
+       1103
+      ],
+      [
+       "45",
+       550
+      ],
+      [
+       "50",
+       496
+      ],
+      [
+       "56",
+       380
+      ],
+      [
+       "1",
+       222
+      ]
+     ],
+     "description": "age",
+     "value_description": "1: 1-18 years old; \n18: 18-25 years old; \n25: 25-35 years old; \n35: 35-45 years old; \n45: 45-50 years old; \n50: 50-56 years old; \n56: over 56 years old",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "u_gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "M",
+     "examples": [
+      "F",
+      "M"
+     ],
+     "top_values": [
+      [
+       "M",
+       4331
+      ],
+      [
+       "F",
+       1708
+      ]
+     ],
+     "description": "user gender",
+     "value_description": "M / F: Male / Female",
+     "notes": []
+    },
+    {
+     "name": "occupation",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "5",
+     "examples": [
+      "2",
+      "3",
+      "4",
+      "1",
+      "5"
+     ],
+     "top_values": [
+      [
+       "2",
+       1614
+      ],
+      [
+       "5",
+       1453
+      ],
+      [
+       "1",
+       1132
+      ],
+      [
+       "4",
+       1051
+      ],
+      [
+       "3",
+       789
+      ]
+     ],
+     "description": "occupation",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    }
+   ],
+   "primary_key": [
+    "userid"
+   ],
+   "sample_rows": [
+    {
+     "userid": 1,
+     "age": "1",
+     "u_gender": "F",
+     "occupation": "2"
+    },
+    {
+     "userid": 2,
+     "age": "56",
+     "u_gender": "M",
+     "occupation": "3"
+    },
+    {
+     "userid": 3,
+     "age": "25",
+     "u_gender": "M",
+     "occupation": "2"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "movies2actors",
+   "from_column": "actorid",
+   "to_table": "actors",
+   "to_column": "actorid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movies2actors",
+   "from_column": "movieid",
+   "to_table": "movies",
+   "to_column": "movieid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movies2directors",
+   "from_column": "directorid",
+   "to_table": "directors",
+   "to_column": "directorid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movies2directors",
+   "from_column": "movieid",
+   "to_table": "movies",
+   "to_column": "movieid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "u2base",
+   "from_column": "movieid",
+   "to_table": "movies",
+   "to_column": "movieid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "u2base",
+   "from_column": "userid",
+   "to_table": "users",
+   "to_column": "userid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movies2actors",
+   "from_column": "movieid",
+   "to_table": "movies2directors",
+   "to_column": "movieid",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "movies2actors",
+   "from_column": "movieid",
+   "to_table": "u2base",
+   "to_column": "movieid",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.963
+  },
+  {
+   "from_table": "movies2directors",
+   "from_column": "movieid",
+   "to_table": "u2base",
+   "to_column": "movieid",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.963
+  }
+ ],
+ "notes": []
+}

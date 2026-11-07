@@ -1,0 +1,891 @@
+{
+ "db_id": "genes",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/genes/genes.sqlite",
+ "fingerprint": "1527808-1793993051403948472-v1.0",
+ "created_at": "2026-11-06T19:24:53+00:00",
+ "profile_seconds": 0.09,
+ "tables": [
+  {
+   "name": "Classification",
+   "row_count": 862,
+   "stats_rows": 862,
+   "columns": [
+    {
+     "name": "GeneID",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 862,
+     "is_unique": true,
+     "min_value": "G234064",
+     "max_value": "G240504",
+     "examples": [
+      "G234064",
+      "G234065",
+      "G234070",
+      "G234073",
+      "G234074"
+     ],
+     "top_values": [],
+     "description": "gene id. unique identifier number of genes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Localization",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 15,
+     "is_unique": false,
+     "min_value": "ER",
+     "max_value": "vacuole",
+     "examples": [
+      "cytoplasm",
+      "cytoskeleton",
+      "nucleus",
+      "plasma membrane",
+      "mitochondria"
+     ],
+     "top_values": [
+      [
+       "nucleus",
+       367
+      ],
+      [
+       "cytoplasm",
+       191
+      ],
+      [
+       "mitochondria",
+       69
+      ],
+      [
+       "cytoskeleton",
+       58
+      ],
+      [
+       "plasma membrane",
+       43
+      ],
+      [
+       "ER",
+       43
+      ],
+      [
+       "golgi",
+       35
+      ],
+      [
+       "vacuole",
+       18
+      ],
+      [
+       "transport vesicles",
+       17
+      ],
+      [
+       "peroxisome",
+       10
+      ],
+      [
+       "endosome",
+       4
+      ],
+      [
+       "integral membrane",
+       3
+      ],
+      [
+       "extracellular",
+       2
+      ],
+      [
+       "lipid particles",
+       1
+      ],
+      [
+       "cell wall",
+       1
+      ]
+     ],
+     "description": "location",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "GeneID"
+   ],
+   "sample_rows": [
+    {
+     "GeneID": "G234064",
+     "Localization": "cytoplasm"
+    },
+    {
+     "GeneID": "G234065",
+     "Localization": "cytoplasm"
+    },
+    {
+     "GeneID": "G234070",
+     "Localization": "cytoskeleton"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Genes",
+   "row_count": 4346,
+   "stats_rows": 4346,
+   "columns": [
+    {
+     "name": "GeneID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 862,
+     "is_unique": false,
+     "min_value": "G234064",
+     "max_value": "G240504",
+     "examples": [
+      "G234064",
+      "G234065",
+      "G234070",
+      "G234073",
+      "G234074"
+     ],
+     "top_values": [],
+     "description": "gene id. identifier number of genes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Essential",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "?",
+     "max_value": "Non-Essential",
+     "examples": [
+      "Essential",
+      "Non-Essential",
+      "?"
+     ],
+     "top_values": [
+      [
+       "Non-Essential",
+       2824
+      ],
+      [
+       "Essential",
+       1348
+      ],
+      [
+       "?",
+       133
+      ],
+      [
+       "Ambiguous-Essential",
+       41
+      ]
+     ],
+     "description": "essential",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Class",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": "?",
+     "max_value": "Unknown",
+     "examples": [
+      "GTP/GDP-exchange factors (GEFs)",
+      "ATPases",
+      "Molecular chaperones",
+      "Motorproteins",
+      "Cyclins"
+     ],
+     "top_values": [
+      [
+       "?",
+       2657
+      ],
+      [
+       "Protein Kinases",
+       265
+      ],
+      [
+       "ATPases",
+       256
+      ],
+      [
+       "Transcription factors",
+       194
+      ],
+      [
+       "GTP-binding proteins",
+       169
+      ],
+      [
+       "Major facilitator superfamily proteins (MFS)",
+       128
+      ],
+      [
+       "Molecular chaperones",
+       117
+      ],
+      [
+       "Polymerases",
+       98
+      ],
+      [
+       "Motorproteins",
+       95
+      ],
+      [
+       "Protein phosphatases",
+       62
+      ],
+      [
+       "Histones",
+       56
+      ],
+      [
+       "Ubiquitin-system proteins",
+       46
+      ],
+      [
+       "GTP/GDP-exchange factors (GEFs)",
+       46
+      ],
+      [
+       "Other kinases",
+       36
+      ],
+      [
+       "Proteases",
+       29
+      ],
+      [
+       "Tubulins",
+       24
+      ],
+      [
+       "GTPase activating proteins (GAPs)",
+       18
+      ],
+      [
+       "Peptidyl-Prolyl-Isomerases",
+       17
+      ],
+      [
+       "Unknown",
+       8
+      ],
+      [
+       "Cyclins",
+       8
+      ],
+      [
+       "Actin related proteins",
+       6
+      ],
+      [
+       "GTP/GDP dissociation inhibitors (GDIs)",
+       5
+      ],
+      [
+       "Nucleases",
+       3
+      ],
+      [
+       "Adaptins",
+       3
+      ]
+     ],
+     "description": "class",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Complex",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 52,
+     "is_unique": false,
+     "min_value": "2-oxoglutarate dehydrogenase",
+     "max_value": "delta3-cis-delta2-trans-enoyl-CoA isomerase",
+     "examples": [
+      "Translation complexes",
+      "?",
+      "Cytoskeleton",
+      "Cyclin-CDK (Cyclin-dependent kinases) complexes",
+      "Transcription complexes/Transcriptosome"
+     ],
+     "top_values": [],
+     "description": "Complex",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Phenotype",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": "?",
+     "max_value": "Unknown",
+     "examples": [
+      "?",
+      "Mating and sporulation defects",
+      "Cell cycle defects",
+      "Cell morphology and organelle mutants",
+      "Conditional phenotypes"
+     ],
+     "top_values": [
+      [
+       "?",
+       1065
+      ],
+      [
+       "Conditional phenotypes",
+       726
+      ],
+      [
+       "Cell morphology and organelle mutants",
+       666
+      ],
+      [
+       "Cell cycle defects",
+       381
+      ],
+      [
+       "Nucleic acid metabolism defects",
+       362
+      ],
+      [
+       "Mating and sporulation defects",
+       308
+      ],
+      [
+       "Auxotrophies, carbon and",
+       292
+      ],
+      [
+       "Stress response defects",
+       200
+      ],
+      [
+       "Sensitivity to aminoacid analogs and other drugs",
+       150
+      ],
+      [
+       "Unknown",
+       82
+      ],
+      [
+       "Sensitivity to antibiotics",
+       51
+      ],
+      [
+       "Carbohydrate and lipid biosynthesis defects",
+       45
+      ],
+      [
+       "Sensitivity to immunosuppressants",
+       18
+      ]
+     ],
+     "description": "Phenotype",
+     "value_description": "?: means: doesn't exit the phenotype",
+     "notes": []
+    },
+    {
+     "name": "Motif",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 236,
+     "is_unique": false,
+     "min_value": "?",
+     "max_value": "PS01257",
+     "examples": [
+      "PS00824",
+      "PS00825",
+      "?",
+      "PS00017",
+      "PS00013"
+     ],
+     "top_values": [],
+     "description": "Motif",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Chromosome",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 16,
+     "examples": [
+      1,
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       4,
+       672
+      ],
+      [
+       12,
+       384
+      ],
+      [
+       2,
+       364
+      ],
+      [
+       15,
+       355
+      ],
+      [
+       14,
+       342
+      ],
+      [
+       7,
+       327
+      ],
+      [
+       13,
+       283
+      ],
+      [
+       10,
+       265
+      ],
+      [
+       11,
+       244
+      ],
+      [
+       16,
+       241
+      ],
+      [
+       5,
+       193
+      ],
+      [
+       3,
+       185
+      ],
+      [
+       8,
+       180
+      ],
+      [
+       9,
+       175
+      ],
+      [
+       6,
+       79
+      ],
+      [
+       1,
+       55
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "description": "Chromosome",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Function",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": "CELL GROWTH, CELL DIVISION AND DNA SYNTHESIS",
+     "max_value": "TRANSPORT FACILITATION",
+     "examples": [
+      "CELLULAR ORGANIZATION (proteins are localized to the corresp...",
+      "PROTEIN SYNTHESIS",
+      "CELL RESCUE, DEFENSE, CELL DEATH AND AGEING",
+      "CELLULAR TRANSPORT AND TRANSPORTMECHANISMS",
+      "PROTEIN DESTINATION"
+     ],
+     "top_values": [
+      [
+       "CELLULAR ORGANIZATION (proteins are localized to the corresp...",
+       1532
+      ],
+      [
+       "CELL GROWTH, CELL DIVISION AND DNA SYNTHESIS",
+       674
+      ],
+      [
+       "TRANSCRIPTION",
+       476
+      ],
+      [
+       "METABOLISM",
+       336
+      ],
+      [
+       "PROTEIN DESTINATION",
+       321
+      ],
+      [
+       "CELLULAR TRANSPORT AND TRANSPORTMECHANISMS",
+       298
+      ],
+      [
+       "CELL RESCUE, DEFENSE, CELL DEATH AND AGEING",
+       192
+      ],
+      [
+       "CELLULAR COMMUNICATION/SIGNAL TRANSDUCTION",
+       118
+      ],
+      [
+       "CELLULAR BIOGENESIS (proteins are not localized to the corre...",
+       118
+      ],
+      [
+       "PROTEIN SYNTHESIS",
+       88
+      ],
+      [
+       "TRANSPORT FACILITATION",
+       74
+      ],
+      [
+       "ENERGY",
+       66
+      ],
+      [
+       "IONIC HOMEOSTASIS",
+       53
+      ]
+     ],
+     "description": "Function",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Localization",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 15,
+     "is_unique": false,
+     "min_value": "ER",
+     "max_value": "vacuole",
+     "examples": [
+      "cytoplasm",
+      "cytoskeleton",
+      "nucleus",
+      "plasma membrane",
+      "mitochondria"
+     ],
+     "top_values": [
+      [
+       "nucleus",
+       1671
+      ],
+      [
+       "cytoplasm",
+       931
+      ],
+      [
+       "cytoskeleton",
+       389
+      ],
+      [
+       "mitochondria",
+       346
+      ],
+      [
+       "plasma membrane",
+       328
+      ],
+      [
+       "ER",
+       239
+      ],
+      [
+       "golgi",
+       175
+      ],
+      [
+       "vacuole",
+       135
+      ],
+      [
+       "transport vesicles",
+       52
+      ],
+      [
+       "peroxisome",
+       37
+      ],
+      [
+       "endosome",
+       23
+      ],
+      [
+       "extracellular",
+       11
+      ],
+      [
+       "integral membrane",
+       4
+      ],
+      [
+       "cell wall",
+       3
+      ],
+      [
+       "lipid particles",
+       2
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "GeneID": "G234064",
+     "Essential": "Essential",
+     "Class": "GTP/GDP-exchange factors (GEFs)",
+     "Complex": "Translation complexes",
+     "Phenotype": "?",
+     "Motif": "PS00824",
+     "Chromosome": 1,
+     "Function": "CELLULAR ORGANIZATION (proteins are localized to the corresp...",
+     "Localization": "cytoplasm"
+    },
+    {
+     "GeneID": "G234064",
+     "Essential": "Essential",
+     "Class": "GTP/GDP-exchange factors (GEFs)",
+     "Complex": "Translation complexes",
+     "Phenotype": "?",
+     "Motif": "PS00824",
+     "Chromosome": 1,
+     "Function": "PROTEIN SYNTHESIS",
+     "Localization": "cytoplasm"
+    },
+    {
+     "GeneID": "G234064",
+     "Essential": "Essential",
+     "Class": "GTP/GDP-exchange factors (GEFs)",
+     "Complex": "Translation complexes",
+     "Phenotype": "?",
+     "Motif": "PS00825",
+     "Chromosome": 1,
+     "Function": "CELLULAR ORGANIZATION (proteins are localized to the corresp...",
+     "Localization": "cytoplasm"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "Interactions",
+   "row_count": 910,
+   "stats_rows": 910,
+   "columns": [
+    {
+     "name": "GeneID1",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 460,
+     "is_unique": false,
+     "min_value": "G234064",
+     "max_value": "G240504",
+     "examples": [
+      "G234064",
+      "G234065",
+      "G234073",
+      "G234074",
+      "G234076"
+     ],
+     "top_values": [],
+     "description": "gene id 1. identifier number of genes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "GeneID2",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 453,
+     "is_unique": false,
+     "min_value": "G234065",
+     "max_value": "G240410",
+     "examples": [
+      "G234126",
+      "G235065",
+      "G234371",
+      "G234854",
+      "G234065"
+     ],
+     "top_values": [],
+     "description": "gene id 2. identifier number of genes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Genetic",
+     "max_value": "Physical",
+     "examples": [
+      "Genetic-Physical",
+      "Genetic",
+      "Physical"
+     ],
+     "top_values": [
+      [
+       "Physical",
+       549
+      ],
+      [
+       "Genetic",
+       292
+      ],
+      [
+       "Genetic-Physical",
+       69
+      ]
+     ],
+     "description": "Type",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Expression_Corr",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 817,
+     "is_unique": false,
+     "min_value": -0.946683516,
+     "max_value": 1.0,
+     "examples": [
+      0.914095071,
+      0.751584888,
+      0.823773738,
+      0.939001091,
+      0.749192312
+     ],
+     "top_values": [],
+     "description": "Expression correlation score",
+     "value_description": "range: (0,1)\n\nif the value is the positive then it's \"positively correlated\"\n\nif the value is the negative then it's \"negatively correlated\"\n\nif the value is very high positively, it means two genes are highly correlated",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "GeneID1",
+    "GeneID2"
+   ],
+   "sample_rows": [
+    {
+     "GeneID1": "G234064",
+     "GeneID2": "G234126",
+     "Type": "Genetic-Physical",
+     "Expression_Corr": 0.914095071
+    },
+    {
+     "GeneID1": "G234064",
+     "GeneID2": "G235065",
+     "Type": "Genetic-Physical",
+     "Expression_Corr": 0.751584888
+    },
+    {
+     "GeneID1": "G234065",
+     "GeneID2": "G234371",
+     "Type": "Genetic",
+     "Expression_Corr": 0.823773738
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "Genes",
+   "from_column": "GeneID",
+   "to_table": "Classification",
+   "to_column": "GeneID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Interactions",
+   "from_column": "GeneID2",
+   "to_table": "Classification",
+   "to_column": "GeneID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Interactions",
+   "from_column": "GeneID1",
+   "to_table": "Classification",
+   "to_column": "GeneID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

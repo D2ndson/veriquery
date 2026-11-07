@@ -1,0 +1,3093 @@
+{
+ "db_id": "beer_factory",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/beer_factory/beer_factory.sqlite",
+ "fingerprint": "991232-1793993058308087942-v1.0",
+ "created_at": "2026-11-06T19:24:48+00:00",
+ "profile_seconds": 0.069,
+ "tables": [
+  {
+   "name": "customers",
+   "row_count": 554,
+   "stats_rows": 554,
+   "columns": [
+    {
+     "name": "CustomerID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 554,
+     "is_unique": true,
+     "min_value": 101811,
+     "max_value": 999915,
+     "examples": [
+      101811,
+      103508,
+      104939,
+      105549,
+      105771
+     ],
+     "top_values": [],
+     "description": "customer id. the unique id for the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "First",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 359,
+     "is_unique": false,
+     "min_value": "Aaron",
+     "max_value": "William",
+     "examples": [
+      "Kenneth",
+      "Madeleine",
+      "Damen",
+      "Kevin",
+      "John"
+     ],
+     "top_values": [],
+     "description": "the first name of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Last",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 478,
+     "is_unique": false,
+     "min_value": "Abramson",
+     "max_value": "de Berry",
+     "examples": [
+      "Walton",
+      "Jones",
+      "Wheeler",
+      "Gilbert",
+      "Young"
+     ],
+     "top_values": [],
+     "description": "the last name of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "StreetAddress",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 554,
+     "is_unique": true,
+     "min_value": "1003 Heather Tree Dr",
+     "max_value": "9978 Glenleigh Ct",
+     "examples": [
+      "6715 Commonwealth Dr",
+      "3603 Leola Way",
+      "6740 Branwood Way",
+      "3198 Livingston Way",
+      "663 Westward Way"
+     ],
+     "top_values": [],
+     "description": "street address. the address of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "City",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": "Antelope",
+     "max_value": "Wilton",
+     "examples": [
+      "Sacramento",
+      "Orangevale",
+      "Folsom",
+      "Isleton",
+      "Ryde"
+     ],
+     "top_values": [
+      [
+       "Sacramento",
+       423
+      ],
+      [
+       "Elk Grove",
+       18
+      ],
+      [
+       "Folsom",
+       12
+      ],
+      [
+       "Citrus Heights",
+       11
+      ],
+      [
+       "Rancho Cordova",
+       10
+      ],
+      [
+       "Carmichael",
+       10
+      ],
+      [
+       "Ryde",
+       8
+      ],
+      [
+       "Orangevale",
+       7
+      ],
+      [
+       "North Highlands",
+       6
+      ],
+      [
+       "Antelope",
+       6
+      ],
+      [
+       "Fair Oaks",
+       5
+      ],
+      [
+       "Elverta",
+       5
+      ],
+      [
+       "Wilton",
+       4
+      ],
+      [
+       "Rio Linda",
+       4
+      ],
+      [
+       "Rancho Murieta",
+       4
+      ],
+      [
+       "McClellan",
+       4
+      ],
+      [
+       "Isleton",
+       4
+      ],
+      [
+       "Herald",
+       4
+      ],
+      [
+       "Mather",
+       3
+      ],
+      [
+       "Courtland",
+       3
+      ],
+      [
+       "Walnut Grove",
+       2
+      ],
+      [
+       "Galt",
+       1
+      ]
+     ],
+     "description": "the city where the customer lives",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "State",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "CA",
+     "max_value": "CA",
+     "examples": [
+      "CA"
+     ],
+     "top_values": [
+      [
+       "CA",
+       554
+      ]
+     ],
+     "description": "the state code",
+     "value_description": "commonsense evidence: please refer to https://www23.statcan.gc.ca/imdb/p3VD.pl?Function=getVD&TVD=53971\r\nand mention its corresponding state name in the question. i.e. New York-- NY",
+     "notes": []
+    },
+    {
+     "name": "ZipCode",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 133,
+     "is_unique": false,
+     "min_value": 94203,
+     "max_value": 95899,
+     "examples": [
+      94256,
+      94258,
+      95662,
+      95671,
+      95899
+     ],
+     "top_values": [],
+     "description": "the zip code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Email",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 554,
+     "is_unique": true,
+     "min_value": "a.lane@zoho.com",
+     "max_value": "zellerj@hotmail.com",
+     "examples": [
+      "walton.k76@fastmail.com",
+      "j_madeleine@gmail.com",
+      "dwheeler@outlook.com",
+      "kgilbert@fastmail.com",
+      "john.y90@mail.com"
+     ],
+     "top_values": [],
+     "description": "the customer's email",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "PhoneNumber",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 554,
+     "is_unique": true,
+     "min_value": "(209) 262-5722",
+     "max_value": "(916) 996-4789",
+     "examples": [
+      "(916) 918-1561",
+      "(916) 186-9423",
+      "(916) 164-1156",
+      "(916) 304-9859",
+      "(916) 730-6109"
+     ],
+     "top_values": [],
+     "description": "the customer's phone number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "FirstPurchaseDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 307,
+     "is_unique": false,
+     "min_value": "2012-07-01",
+     "max_value": "2013-09-18",
+     "examples": [
+      "2013-05-30",
+      "2013-02-06",
+      "2013-04-11",
+      "2013-02-28",
+      "2013-09-05"
+     ],
+     "top_values": [],
+     "description": "the first purchase date of the customer",
+     "value_description": "yyyy-mm-dd",
+     "notes": []
+    },
+    {
+     "name": "SubscribedToEmailList",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "TRUE",
+     "examples": [
+      "FALSE",
+      "TRUE"
+     ],
+     "top_values": [
+      [
+       "TRUE",
+       299
+      ],
+      [
+       "FALSE",
+       255
+      ]
+     ],
+     "description": "subscribed to email list. whether the customer subscribe to the email list",
+     "value_description": "commonsense evidence:\r\n 'true' means the user permits the company to send regular emails to them.",
+     "notes": []
+    },
+    {
+     "name": "Gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "M",
+     "examples": [
+      "M",
+      "F"
+     ],
+     "top_values": [
+      [
+       "M",
+       277
+      ],
+      [
+       "F",
+       277
+      ]
+     ],
+     "description": "the customer's gender",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "CustomerID"
+   ],
+   "sample_rows": [
+    {
+     "CustomerID": 101811,
+     "First": "Kenneth",
+     "Last": "Walton",
+     "StreetAddress": "6715 Commonwealth Dr",
+     "City": "Sacramento",
+     "State": "CA",
+     "ZipCode": 94256,
+     "Email": "walton.k76@fastmail.com",
+     "PhoneNumber": "(916) 918-1561",
+     "FirstPurchaseDate": "2013-05-30",
+     "SubscribedToEmailList": "FALSE",
+     "Gender": "M"
+    },
+    {
+     "CustomerID": 103508,
+     "First": "Madeleine",
+     "Last": "Jones",
+     "StreetAddress": "3603 Leola Way",
+     "City": "Sacramento",
+     "State": "CA",
+     "ZipCode": 94258,
+     "Email": "j_madeleine@gmail.com",
+     "PhoneNumber": "(916) 186-9423",
+     "FirstPurchaseDate": "2013-02-06",
+     "SubscribedToEmailList": "FALSE",
+     "Gender": "F"
+    },
+    {
+     "CustomerID": 104939,
+     "First": "Damen",
+     "Last": "Wheeler",
+     "StreetAddress": "6740 Branwood Way",
+     "City": "Orangevale",
+     "State": "CA",
+     "ZipCode": 95662,
+     "Email": "dwheeler@outlook.com",
+     "PhoneNumber": "(916) 164-1156",
+     "FirstPurchaseDate": "2013-04-11",
+     "SubscribedToEmailList": "FALSE",
+     "Gender": "M"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "geolocation",
+   "row_count": 3,
+   "stats_rows": 3,
+   "columns": [
+    {
+     "name": "LocationID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": 0,
+     "max_value": 2,
+     "examples": [
+      0,
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "description": "location id. the id of the location",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Latitude",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": 0.0,
+     "max_value": 38.566129,
+     "examples": [
+      0.0,
+      38.566129,
+      38.559615
+     ],
+     "top_values": [
+      [
+       38.566129,
+       1
+      ],
+      [
+       38.559615,
+       1
+      ],
+      [
+       0.0,
+       1
+      ]
+     ],
+     "description": "the latitude of the location",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Longitude",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": -121.426432,
+     "max_value": 0.0,
+     "examples": [
+      0.0,
+      -121.426432,
+      -121.42243
+     ],
+     "top_values": [
+      [
+       0.0,
+       1
+      ],
+      [
+       -121.42243,
+       1
+      ],
+      [
+       -121.426432,
+       1
+      ]
+     ],
+     "description": "the longitude of the location",
+     "value_description": "commonsense evidence:\r\nprecise location / coordinate = POINT(latitude, longitude)",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "LocationID"
+   ],
+   "sample_rows": [
+    {
+     "LocationID": 0,
+     "Latitude": 0.0,
+     "Longitude": 0.0
+    },
+    {
+     "LocationID": 1,
+     "Latitude": 38.566129,
+     "Longitude": -121.426432
+    },
+    {
+     "LocationID": 2,
+     "Latitude": 38.559615,
+     "Longitude": -121.42243
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "location",
+   "row_count": 3,
+   "stats_rows": 3,
+   "columns": [
+    {
+     "name": "LocationID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": 0,
+     "max_value": 2,
+     "examples": [
+      0,
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "description": "location id. the unique id for the location",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LocationName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": "LOST",
+     "max_value": "Sac State Union",
+     "examples": [
+      "LOST",
+      "Sac State American River Courtyard",
+      "Sac State Union"
+     ],
+     "top_values": [
+      [
+       "Sac State Union",
+       1
+      ],
+      [
+       "Sac State American River Courtyard",
+       1
+      ],
+      [
+       "LOST",
+       1
+      ]
+     ],
+     "description": "location name. the name of the location",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "StreetAddress",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.3333,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "6000 J St",
+     "max_value": "6000 J St",
+     "examples": [
+      "6000 J St"
+     ],
+     "top_values": [
+      [
+       "6000 J St",
+       2
+      ]
+     ],
+     "description": "the street address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "City",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.3333,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "Sacramento",
+     "max_value": "Sacramento",
+     "examples": [
+      "Sacramento"
+     ],
+     "top_values": [
+      [
+       "Sacramento",
+       2
+      ]
+     ],
+     "description": "the city where the location locates",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "State",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.3333,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "CA",
+     "max_value": "CA",
+     "examples": [
+      "CA"
+     ],
+     "top_values": [
+      [
+       "CA",
+       2
+      ]
+     ],
+     "description": "the state code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ZipCode",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.3333,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 95819,
+     "max_value": 95819,
+     "examples": [
+      95819
+     ],
+     "top_values": [
+      [
+       95819,
+       2
+      ]
+     ],
+     "description": "the zip code of the location",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "LocationID"
+   ],
+   "sample_rows": [
+    {
+     "LocationID": 0,
+     "LocationName": "LOST",
+     "StreetAddress": null,
+     "City": null,
+     "State": null,
+     "ZipCode": null
+    },
+    {
+     "LocationID": 1,
+     "LocationName": "Sac State American River Courtyard",
+     "StreetAddress": "6000 J St",
+     "City": "Sacramento",
+     "State": "CA",
+     "ZipCode": 95819
+    },
+    {
+     "LocationID": 2,
+     "LocationName": "Sac State Union",
+     "StreetAddress": "6000 J St",
+     "City": "Sacramento",
+     "State": "CA",
+     "ZipCode": 95819
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "rootbeer",
+   "row_count": 6430,
+   "stats_rows": 6430,
+   "columns": [
+    {
+     "name": "RootBeerID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6430,
+     "is_unique": true,
+     "min_value": 100000,
+     "max_value": 106429,
+     "examples": [
+      100000,
+      100001,
+      100002,
+      100003,
+      100004
+     ],
+     "top_values": [],
+     "description": "root beer id. the unique id for the root beer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "BrandID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 23,
+     "is_unique": false,
+     "min_value": 10001,
+     "max_value": 10023,
+     "examples": [
+      10001,
+      10002
+     ],
+     "top_values": [
+      [
+       10016,
+       547
+      ],
+      [
+       10014,
+       529
+      ],
+      [
+       10012,
+       491
+      ],
+      [
+       10013,
+       462
+      ],
+      [
+       10008,
+       423
+      ],
+      [
+       10010,
+       414
+      ],
+      [
+       10011,
+       400
+      ],
+      [
+       10015,
+       391
+      ],
+      [
+       10009,
+       365
+      ],
+      [
+       10005,
+       357
+      ],
+      [
+       10007,
+       339
+      ],
+      [
+       10003,
+       336
+      ],
+      [
+       10006,
+       309
+      ],
+      [
+       10004,
+       291
+      ],
+      [
+       10017,
+       289
+      ],
+      [
+       10002,
+       279
+      ],
+      [
+       10001,
+       153
+      ],
+      [
+       10020,
+       26
+      ],
+      [
+       10021,
+       13
+      ],
+      [
+       10019,
+       7
+      ],
+      [
+       10022,
+       4
+      ],
+      [
+       10018,
+       4
+      ],
+      [
+       10023,
+       1
+      ]
+     ],
+     "description": "the brand id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ContainerType",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "Bottle",
+     "max_value": "Can",
+     "examples": [
+      "Bottle",
+      "Can"
+     ],
+     "top_values": [
+      [
+       "Bottle",
+       5436
+      ],
+      [
+       "Can",
+       994
+      ]
+     ],
+     "description": "container type. the type of the container",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LocationID",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       3281
+      ],
+      [
+       1,
+       3149
+      ]
+     ],
+     "description": "the location id of the selling company",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "PurchaseDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 807,
+     "is_unique": false,
+     "min_value": "2014-05-04",
+     "max_value": "2016-10-04",
+     "examples": [
+      "2015-07-03",
+      "2016-05-09",
+      "2015-05-24",
+      "2015-08-15",
+      "2015-03-10"
+     ],
+     "top_values": [],
+     "description": "the purchase date of the root beer",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "RootBeerID"
+   ],
+   "sample_rows": [
+    {
+     "RootBeerID": 100000,
+     "BrandID": 10001,
+     "ContainerType": "Bottle",
+     "LocationID": 1,
+     "PurchaseDate": "2015-07-03"
+    },
+    {
+     "RootBeerID": 100001,
+     "BrandID": 10001,
+     "ContainerType": "Bottle",
+     "LocationID": 1,
+     "PurchaseDate": "2016-05-09"
+    },
+    {
+     "RootBeerID": 100002,
+     "BrandID": 10001,
+     "ContainerType": "Can",
+     "LocationID": 2,
+     "PurchaseDate": "2015-05-24"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "rootbeerbrand",
+   "row_count": 24,
+   "stats_rows": 24,
+   "columns": [
+    {
+     "name": "BrandID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": true,
+     "min_value": 10001,
+     "max_value": 10024,
+     "examples": [
+      10001,
+      10002,
+      10003,
+      10004,
+      10005
+     ],
+     "top_values": [
+      [
+       10024,
+       1
+      ],
+      [
+       10023,
+       1
+      ],
+      [
+       10022,
+       1
+      ],
+      [
+       10021,
+       1
+      ],
+      [
+       10020,
+       1
+      ],
+      [
+       10019,
+       1
+      ],
+      [
+       10018,
+       1
+      ],
+      [
+       10017,
+       1
+      ],
+      [
+       10016,
+       1
+      ],
+      [
+       10015,
+       1
+      ],
+      [
+       10014,
+       1
+      ],
+      [
+       10013,
+       1
+      ],
+      [
+       10012,
+       1
+      ],
+      [
+       10011,
+       1
+      ],
+      [
+       10010,
+       1
+      ],
+      [
+       10009,
+       1
+      ],
+      [
+       10008,
+       1
+      ],
+      [
+       10007,
+       1
+      ],
+      [
+       10006,
+       1
+      ],
+      [
+       10005,
+       1
+      ],
+      [
+       10004,
+       1
+      ],
+      [
+       10003,
+       1
+      ],
+      [
+       10002,
+       1
+      ],
+      [
+       10001,
+       1
+      ]
+     ],
+     "description": "brand id. the unique id for the brand",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "BrandName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": true,
+     "min_value": "1919",
+     "max_value": "Virgil's",
+     "examples": [
+      "A&W",
+      "A.J. Stephans",
+      "Abita",
+      "Barq's",
+      "Bedfords"
+     ],
+     "top_values": [
+      [
+       "Virgil's",
+       1
+      ],
+      [
+       "Thomas Kemper",
+       1
+      ],
+      [
+       "Sprecher",
+       1
+      ],
+      [
+       "Sparky's Fresh Draft",
+       1
+      ],
+      [
+       "River City",
+       1
+      ],
+      [
+       "Mug",
+       1
+      ],
+      [
+       "IBC",
+       1
+      ],
+      [
+       "Henry Weinhard's",
+       1
+      ],
+      [
+       "Gales",
+       1
+      ],
+      [
+       "Frostie",
+       1
+      ],
+      [
+       "Fitz's",
+       1
+      ],
+      [
+       "Dominion",
+       1
+      ],
+      [
+       "Dog n Suds",
+       1
+      ],
+      [
+       "Diet Stewarts",
+       1
+      ],
+      [
+       "Dad's",
+       1
+      ],
+      [
+       "Captain Eli's",
+       1
+      ],
+      [
+       "Bundaberg",
+       1
+      ],
+      [
+       "Bulldog",
+       1
+      ],
+      [
+       "Bedfords",
+       1
+      ],
+      [
+       "Barq's",
+       1
+      ],
+      [
+       "Abita",
+       1
+      ],
+      [
+       "A.J. Stephans",
+       1
+      ],
+      [
+       "A&W",
+       1
+      ],
+      [
+       "1919",
+       1
+      ]
+     ],
+     "description": "the brand name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "FirstBrewedYear",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 19,
+     "is_unique": false,
+     "min_value": 1898,
+     "max_value": 2009,
+     "examples": [
+      1919,
+      1926,
+      1986,
+      1898,
+      1984
+     ],
+     "top_values": [
+      [
+       1919,
+       3
+      ],
+      [
+       1990,
+       2
+      ],
+      [
+       1989,
+       2
+      ],
+      [
+       1947,
+       2
+      ],
+      [
+       2009,
+       1
+      ],
+      [
+       2000,
+       1
+      ],
+      [
+       1997,
+       1
+      ],
+      [
+       1996,
+       1
+      ],
+      [
+       1993,
+       1
+      ],
+      [
+       1986,
+       1
+      ],
+      [
+       1985,
+       1
+      ],
+      [
+       1984,
+       1
+      ],
+      [
+       1960,
+       1
+      ],
+      [
+       1953,
+       1
+      ],
+      [
+       1939,
+       1
+      ],
+      [
+       1937,
+       1
+      ],
+      [
+       1926,
+       1
+      ],
+      [
+       1914,
+       1
+      ],
+      [
+       1898,
+       1
+      ]
+     ],
+     "description": "the first brewed year of the brand",
+     "value_description": "commonsense evidence:\r\nbrand with earlier first brewed year has a much longer brewed history",
+     "notes": []
+    },
+    {
+     "name": "BreweryName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 23,
+     "is_unique": false,
+     "min_value": "AJ Stephans Beverages",
+     "max_value": "Thomas Kemper Soda",
+     "examples": [
+      "Dr Pepper Snapple Group",
+      "AJ Stephans Beverages",
+      "Abita Brewery",
+      "Coca-Cola",
+      "Northwest Soda Works"
+     ],
+     "top_values": [
+      [
+       "Dr Pepper Snapple Group",
+       2
+      ],
+      [
+       "Thomas Kemper Soda",
+       1
+      ],
+      [
+       "The Dad's Root Beer Company ",
+       1
+      ],
+      [
+       "Stewarts",
+       1
+      ],
+      [
+       "Sprecher Brewery",
+       1
+      ],
+      [
+       "Shipyard Brewing Company",
+       1
+      ],
+      [
+       "Reed's",
+       1
+      ],
+      [
+       "Northwest Soda Works",
+       1
+      ],
+      [
+       "New Century Beverage Company",
+       1
+      ],
+      [
+       "Knox Brewery",
+       1
+      ],
+      [
+       "Henry Weinhard's Brewery",
+       1
+      ],
+      [
+       "Gale's Bread and Butter",
+       1
+      ],
+      [
+       "Frostie Beverage",
+       1
+      ],
+      [
+       "Fordham & Dominion Brewing Company",
+       1
+      ],
+      [
+       "Fitz's",
+       1
+      ],
+      [
+       "DNS Distributing",
+       1
+      ],
+      [
+       "Coca-Cola",
+       1
+      ],
+      [
+       "Bundaberg Brewed Drinks",
+       1
+      ],
+      [
+       "Bulldog Brewing Company",
+       1
+      ],
+      [
+       "Blue Dog Beverages",
+       1
+      ],
+      [
+       "August Schell Brewing Company",
+       1
+      ],
+      [
+       "Abita Brewery",
+       1
+      ],
+      [
+       "AJ Stephans Beverages",
+       1
+      ]
+     ],
+     "description": "the brewery name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "City",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0417,
+     "distinct_count": 19,
+     "is_unique": false,
+     "min_value": "Bainbridge Island",
+     "max_value": "St. Louis",
+     "examples": [
+      "Lodi",
+      "Fall River",
+      "Covington",
+      "New Orleans",
+      "Port Angeles"
+     ],
+     "top_values": [
+      [
+       "Chicago",
+       3
+      ],
+      [
+       "St. Louis",
+       2
+      ],
+      [
+       "Portland",
+       2
+      ],
+      [
+       "San Francisco",
+       1
+      ],
+      [
+       "Sacramento",
+       1
+      ],
+      [
+       "Port Angeles",
+       1
+      ],
+      [
+       "Pacific Grove",
+       1
+      ],
+      [
+       "New Ulm",
+       1
+      ],
+      [
+       "New Orleans",
+       1
+      ],
+      [
+       "Mansfield",
+       1
+      ],
+      [
+       "Lodi",
+       1
+      ],
+      [
+       "Glendale",
+       1
+      ],
+      [
+       "Fresno",
+       1
+      ],
+      [
+       "Fall River",
+       1
+      ],
+      [
+       "Dover",
+       1
+      ],
+      [
+       "Detroit",
+       1
+      ],
+      [
+       "Covington",
+       1
+      ],
+      [
+       "Bundaberg",
+       1
+      ],
+      [
+       "Bainbridge Island",
+       1
+      ]
+     ],
+     "description": "the city where the brewery locates",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "State",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0417,
+     "distinct_count": 14,
+     "is_unique": false,
+     "min_value": "CA",
+     "max_value": "WI",
+     "examples": [
+      "CA",
+      "MA",
+      "LA",
+      "WA",
+      "QLD"
+     ],
+     "top_values": [
+      [
+       "CA",
+       5
+      ],
+      [
+       "IL",
+       3
+      ],
+      [
+       "WA",
+       2
+      ],
+      [
+       "MO",
+       2
+      ],
+      [
+       "LA",
+       2
+      ],
+      [
+       "WI",
+       1
+      ],
+      [
+       "QLD",
+       1
+      ],
+      [
+       "OR",
+       1
+      ],
+      [
+       "OH",
+       1
+      ],
+      [
+       "MN",
+       1
+      ],
+      [
+       "MI",
+       1
+      ],
+      [
+       "ME",
+       1
+      ],
+      [
+       "MA",
+       1
+      ],
+      [
+       "DE",
+       1
+      ]
+     ],
+     "description": "the state code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "Australia",
+     "max_value": "United States",
+     "examples": [
+      "United States",
+      "Australia"
+     ],
+     "top_values": [
+      [
+       "United States",
+       23
+      ],
+      [
+       "Australia",
+       1
+      ]
+     ],
+     "description": "the country where the brewery locates",
+     "value_description": "commonsense evidence:\r\ncan find its corresponding continent. e.g., U.S.--> North America",
+     "notes": []
+    },
+    {
+     "name": "Description",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": true,
+     "min_value": " Made In Maine Sweetened with natural cane and brown sugars ...",
+     "max_value": "“I love root beer!” While cooking in England some years ago,...",
+     "examples": [
+      "After setting up the first A&W Root Beer stand in California...",
+      "AJ Stephans Company makes \nthe finest elixirs and mixers in ...",
+      "Abita Root Beer is made with a hot mix process using spring ...",
+      "Since 1898 Barq's root beer has had a simple slogan - DRINK ...",
+      "Always ice cold, “never with ice”."
+     ],
+     "top_values": [
+      [
+       "“I love root beer!” While cooking in England some years ago,...",
+       1
+      ],
+      [
+       "Virgil’s is a gourmet root beer. We’re what Ben and Jerry’s ...",
+       1
+      ],
+      [
+       "This truly old fashioned soda has the rich, creamy flavor th...",
+       1
+      ],
+      [
+       "This American recipe was originally made by master brewers d...",
+       1
+      ],
+      [
+       "The name 1919 Classic American Draft Root Beer signifies the...",
+       1
+      ],
+      [
+       "The flavor has been hand-crafted from a secret blend of over...",
+       1
+      ],
+      [
+       "The Frostie Beverage company began it’s days in an abandoned...",
+       1
+      ],
+      [
+       "The Dog 'n Suds Brand\n …in the early 50’s two school teacher...",
+       1
+      ],
+      [
+       "Since 1919, IBC has provided great tasting sodas with the un...",
+       1
+      ],
+      [
+       "Since 1898 Barq's root beer has had a simple slogan - DRINK ...",
+       1
+      ],
+      [
+       "Savour the taste of the past and the excitement of the futur...",
+       1
+      ],
+      [
+       "SPARKY'S Fresh Draft Root Beer is a delicous full flavored p...",
+       1
+      ],
+      [
+       "Our Root Beer grew out of original authentic American recipe...",
+       1
+      ],
+      [
+       "Originally produced by the Belfast Beverage Company in San F...",
+       1
+      ],
+      [
+       "One sip of Thomas Kemper Root Beer and you’ll taste where it...",
+       1
+      ],
+      [
+       "MADE FOR ICE CREAM!! The Best on the River! River City Root ...",
+       1
+      ],
+      [
+       "Dad’s originated in Chicago in 1937. This old time favorite ...",
+       1
+      ],
+      [
+       "Bulldog Root Beer is different from other national brands of...",
+       1
+      ],
+      [
+       "An old-fashioned thick and creamy root beer with plenty of f...",
+       1
+      ],
+      [
+       "Always ice cold, “never with ice”.",
+       1
+      ],
+      [
+       "After setting up the first A&W Root Beer stand in California...",
+       1
+      ],
+      [
+       "Abita Root Beer is made with a hot mix process using spring ...",
+       1
+      ],
+      [
+       "AJ Stephans Company makes \nthe finest elixirs and mixers in ...",
+       1
+      ],
+      [
+       " Made In Maine Sweetened with natural cane and brown sugars ...",
+       1
+      ]
+     ],
+     "description": "the description of the brand",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CaneSugar",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "TRUE",
+     "examples": [
+      "FALSE",
+      "TRUE"
+     ],
+     "top_values": [
+      [
+       "TRUE",
+       17
+      ],
+      [
+       "FALSE",
+       7
+      ]
+     ],
+     "description": "whether the drink contains cane sugar",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CornSyrup",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "TRUE",
+     "examples": [
+      "TRUE",
+      "FALSE"
+     ],
+     "top_values": [
+      [
+       "FALSE",
+       18
+      ],
+      [
+       "TRUE",
+       6
+      ]
+     ],
+     "description": "whether the drink contains the corn syrup",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Honey",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "TRUE",
+     "examples": [
+      "FALSE",
+      "TRUE"
+     ],
+     "top_values": [
+      [
+       "FALSE",
+       18
+      ],
+      [
+       "TRUE",
+       6
+      ]
+     ],
+     "description": "whether the drink contains the honey",
+     "value_description": "commonsense evidence:\r\nif the beer has honey, it means this beer is sweeter or has sweetness",
+     "notes": []
+    },
+    {
+     "name": "ArtificialSweetener",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "TRUE",
+     "examples": [
+      "FALSE",
+      "TRUE"
+     ],
+     "top_values": [
+      [
+       "FALSE",
+       22
+      ],
+      [
+       "TRUE",
+       2
+      ]
+     ],
+     "description": "whether the drink contains the artificial sweetener",
+     "value_description": "commonsense evidence:\r\nif the beer has artificial sweetener, it means this beer is sweeter or has sweetness",
+     "notes": []
+    },
+    {
+     "name": "Caffeinated",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "TRUE",
+     "examples": [
+      "FALSE",
+      "TRUE"
+     ],
+     "top_values": [
+      [
+       "FALSE",
+       23
+      ],
+      [
+       "TRUE",
+       1
+      ]
+     ],
+     "description": "whether the drink is caffeinated",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Alcoholic",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "FALSE",
+     "examples": [
+      "FALSE"
+     ],
+     "top_values": [
+      [
+       "FALSE",
+       24
+      ]
+     ],
+     "description": "whether the drink is alcoholic",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "AvailableInCans",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "TRUE",
+     "examples": [
+      "TRUE",
+      "FALSE"
+     ],
+     "top_values": [
+      [
+       "FALSE",
+       20
+      ],
+      [
+       "TRUE",
+       4
+      ]
+     ],
+     "description": "whether the drink is available in cans",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "AvailableInBottles",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "TRUE",
+     "examples": [
+      "FALSE",
+      "TRUE"
+     ],
+     "top_values": [
+      [
+       "TRUE",
+       19
+      ],
+      [
+       "FALSE",
+       5
+      ]
+     ],
+     "description": "whether the drink is available in bottles",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "AvailableInKegs",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "FALSE",
+     "max_value": "TRUE",
+     "examples": [
+      "FALSE",
+      "TRUE"
+     ],
+     "top_values": [
+      [
+       "FALSE",
+       22
+      ],
+      [
+       "TRUE",
+       2
+      ]
+     ],
+     "description": "whether the drink is available in kegs",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Website",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0833,
+     "distinct_count": 22,
+     "is_unique": true,
+     "min_value": "http://bedfordssodas.com/products.html",
+     "max_value": "https://www.sprecherbrewery.com/soda.php",
+     "examples": [
+      "http://www.rootbeer.com/",
+      "http://www.ajstephans.com/",
+      "https://abita.com/brews/our_brews/abita-root-beer",
+      "http://www.barqs.com/",
+      "http://bedfordssodas.com/products.html"
+     ],
+     "top_values": [
+      [
+       "https://www.sprecherbrewery.com/soda.php",
+       1
+      ],
+      [
+       "https://www.facebook.com/MugRootBeer/",
+       1
+      ],
+      [
+       "https://www.drpeppersnapplegroup.com/brands/ibc/",
+       1
+      ],
+      [
+       "https://www.bundaberg.com/en-us/brew/root-beer/",
+       1
+      ],
+      [
+       "https://fitzsrootbeer.com/",
+       1
+      ],
+      [
+       "https://abita.com/brews/our_brews/abita-root-beer",
+       1
+      ],
+      [
+       "http://www.sparkysrootbeer.com/",
+       1
+      ],
+      [
+       "http://www.rootbeer.com/",
+       1
+      ],
+      [
+       "http://www.galegand.com/cookbooks-soda/",
+       1
+      ],
+      [
+       "http://www.fordhamanddominion.com/sodas",
+       1
+      ],
+      [
+       "http://www.drinkstewarts.com/flavors.aspx#dietrootbeer",
+       1
+      ],
+      [
+       "http://www.dadsrootbeer.com/dads/dads.nsf/vwContent/Homepage",
+       1
+      ],
+      [
+       "http://www.captneli.com/rootbeer.php",
+       1
+      ],
+      [
+       "http://www.bulldogrootbeer.com/",
+       1
+      ],
+      [
+       "http://www.bluedogbeverage.com/sodas/river-city-root-beer-12...",
+       1
+      ],
+      [
+       "http://www.barqs.com/",
+       1
+      ],
+      [
+       "http://www.ajstephans.com/",
+       1
+      ],
+      [
+       "http://www.1919rootbeer.com/",
+       1
+      ],
+      [
+       "http://thomaskemper.com/#Root-Beer",
+       1
+      ],
+      [
+       "http://supplies.dog-n-suds.com/page.php?5",
+       1
+      ],
+      [
+       "http://reedsinc.com/product/virgils-root-beer/",
+       1
+      ],
+      [
+       "http://bedfordssodas.com/products.html",
+       1
+      ]
+     ],
+     "description": "the website of the brand",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "FacebookPage",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.75,
+     "distinct_count": 6,
+     "is_unique": true,
+     "min_value": "https://www.facebook.com/1919rootbeer",
+     "max_value": "https://www.facebook.com/fitzsrootbeer",
+     "examples": [
+      "https://www.facebook.com/Dads-Old-Fashioned-Root-Beer-and-Cr...",
+      "https://www.facebook.com/Dog-N-Suds-Bottled-Root-Beer-117372...",
+      "https://www.facebook.com/fitzsrootbeer",
+      "https://www.facebook.com/Gales-Root-Beer-207365072632626/",
+      "https://www.facebook.com/MugRootBeer/"
+     ],
+     "top_values": [
+      [
+       "https://www.facebook.com/fitzsrootbeer",
+       1
+      ],
+      [
+       "https://www.facebook.com/MugRootBeer/",
+       1
+      ],
+      [
+       "https://www.facebook.com/Gales-Root-Beer-207365072632626/",
+       1
+      ],
+      [
+       "https://www.facebook.com/Dog-N-Suds-Bottled-Root-Beer-117372...",
+       1
+      ],
+      [
+       "https://www.facebook.com/Dads-Old-Fashioned-Root-Beer-and-Cr...",
+       1
+      ],
+      [
+       "https://www.facebook.com/1919rootbeer",
+       1
+      ]
+     ],
+     "description": "the facebook page of the brand",
+     "value_description": "commonsense evidence:\r\nif not, it means this brand doesn't advertise on facebook",
+     "notes": [
+      "75% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Twitter",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9167,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": "https://twitter.com/1919rootbeer",
+     "max_value": "https://twitter.com/ilovedads",
+     "examples": [
+      "https://twitter.com/ilovedads",
+      "https://twitter.com/1919rootbeer"
+     ],
+     "top_values": [
+      [
+       "https://twitter.com/ilovedads",
+       1
+      ],
+      [
+       "https://twitter.com/1919rootbeer",
+       1
+      ]
+     ],
+     "description": "the twitter of the brand",
+     "value_description": "commonsense evidence:\r\nif not, it means this brand doesn't advertise on twitter",
+     "notes": [
+      "92% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "WholesaleCost",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": 0.4,
+     "max_value": 22.0,
+     "examples": [
+      0.42,
+      0.98,
+      1.13,
+      0.4,
+      1.1
+     ],
+     "top_values": [
+      [
+       1.09,
+       6
+      ],
+      [
+       1.26,
+       2
+      ],
+      [
+       0.4,
+       2
+      ],
+      [
+       22.0,
+       1
+      ],
+      [
+       1.61,
+       1
+      ],
+      [
+       1.3,
+       1
+      ],
+      [
+       1.28,
+       1
+      ],
+      [
+       1.15,
+       1
+      ],
+      [
+       1.14,
+       1
+      ],
+      [
+       1.13,
+       1
+      ],
+      [
+       1.1,
+       1
+      ],
+      [
+       1.02,
+       1
+      ],
+      [
+       1.01,
+       1
+      ],
+      [
+       1.0,
+       1
+      ],
+      [
+       0.98,
+       1
+      ],
+      [
+       0.91,
+       1
+      ],
+      [
+       0.42,
+       1
+      ]
+     ],
+     "description": "the wholesale cost",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CurrentRetailPrice",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 44.0,
+     "examples": [
+      1.0,
+      3.0,
+      44.0
+     ],
+     "top_values": [
+      [
+       3.0,
+       20
+      ],
+      [
+       1.0,
+       3
+      ],
+      [
+       44.0,
+       1
+      ]
+     ],
+     "description": "the current retail price",
+     "value_description": "commonsense evidence:\r\nThe unit profit available to wholesalers = current retail price - wholesale cost",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "BrandID"
+   ],
+   "sample_rows": [
+    {
+     "BrandID": 10001,
+     "BrandName": "A&W",
+     "FirstBrewedYear": 1919,
+     "BreweryName": "Dr Pepper Snapple Group",
+     "City": "Lodi",
+     "State": "CA",
+     "Country": "United States",
+     "Description": "After setting up the first A&W Root Beer stand in California...",
+     "CaneSugar": "FALSE",
+     "CornSyrup": "TRUE",
+     "Honey": "FALSE",
+     "ArtificialSweetener": "FALSE",
+     "Caffeinated": "FALSE",
+     "Alcoholic": "FALSE",
+     "AvailableInCans": "TRUE",
+     "AvailableInBottles": "FALSE",
+     "AvailableInKegs": "FALSE",
+     "Website": "http://www.rootbeer.com/",
+     "FacebookPage": null,
+     "Twitter": null,
+     "WholesaleCost": 0.42,
+     "CurrentRetailPrice": 1.0
+    },
+    {
+     "BrandID": 10002,
+     "BrandName": "A.J. Stephans",
+     "FirstBrewedYear": 1926,
+     "BreweryName": "AJ Stephans Beverages",
+     "City": "Fall River",
+     "State": "MA",
+     "Country": "United States",
+     "Description": "AJ Stephans Company makes \nthe finest elixirs and mixers in ...",
+     "CaneSugar": "TRUE",
+     "CornSyrup": "FALSE",
+     "Honey": "FALSE",
+     "ArtificialSweetener": "FALSE",
+     "Caffeinated": "FALSE",
+     "Alcoholic": "FALSE",
+     "AvailableInCans": "FALSE",
+     "AvailableInBottles": "TRUE",
+     "AvailableInKegs": "FALSE",
+     "Website": "http://www.ajstephans.com/",
+     "FacebookPage": null,
+     "Twitter": null,
+     "WholesaleCost": 0.98,
+     "CurrentRetailPrice": 3.0
+    },
+    {
+     "BrandID": 10003,
+     "BrandName": "Abita",
+     "FirstBrewedYear": 1986,
+     "BreweryName": "Abita Brewery",
+     "City": "Covington",
+     "State": "LA",
+     "Country": "United States",
+     "Description": "Abita Root Beer is made with a hot mix process using spring ...",
+     "CaneSugar": "TRUE",
+     "CornSyrup": "FALSE",
+     "Honey": "FALSE",
+     "ArtificialSweetener": "FALSE",
+     "Caffeinated": "FALSE",
+     "Alcoholic": "FALSE",
+     "AvailableInCans": "FALSE",
+     "AvailableInBottles": "TRUE",
+     "AvailableInKegs": "FALSE",
+     "Website": "https://abita.com/brews/our_brews/abita-root-beer",
+     "FacebookPage": null,
+     "Twitter": null,
+     "WholesaleCost": 1.13,
+     "CurrentRetailPrice": 3.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "rootbeerreview",
+   "row_count": 713,
+   "stats_rows": 713,
+   "columns": [
+    {
+     "name": "CustomerID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 362,
+     "is_unique": false,
+     "min_value": 101811,
+     "max_value": 999915,
+     "examples": [
+      101811,
+      105549,
+      105771,
+      108708,
+      109251
+     ],
+     "top_values": [],
+     "description": "customer id. the id of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "BrandID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": 10001,
+     "max_value": 10022,
+     "examples": [
+      10012,
+      10014,
+      10015,
+      10021,
+      10020
+     ],
+     "top_values": [
+      [
+       10018,
+       132
+      ],
+      [
+       10019,
+       86
+      ],
+      [
+       10022,
+       57
+      ],
+      [
+       10021,
+       55
+      ],
+      [
+       10020,
+       52
+      ],
+      [
+       10016,
+       32
+      ],
+      [
+       10006,
+       25
+      ],
+      [
+       10012,
+       24
+      ],
+      [
+       10014,
+       22
+      ],
+      [
+       10008,
+       22
+      ],
+      [
+       10013,
+       20
+      ],
+      [
+       10009,
+       20
+      ],
+      [
+       10002,
+       20
+      ],
+      [
+       10004,
+       19
+      ],
+      [
+       10015,
+       18
+      ],
+      [
+       10003,
+       18
+      ],
+      [
+       10017,
+       17
+      ],
+      [
+       10011,
+       17
+      ],
+      [
+       10010,
+       17
+      ],
+      [
+       10005,
+       17
+      ],
+      [
+       10007,
+       15
+      ],
+      [
+       10001,
+       8
+      ]
+     ],
+     "description": "brand id. the id of the brand",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "StarRating",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 5,
+     "examples": [
+      5,
+      1,
+      3,
+      2,
+      4
+     ],
+     "top_values": [
+      [
+       4,
+       165
+      ],
+      [
+       2,
+       157
+      ],
+      [
+       3,
+       144
+      ],
+      [
+       5,
+       135
+      ],
+      [
+       1,
+       112
+      ]
+     ],
+     "description": "the star rating of the root beer",
+     "value_description": "commonsense evidence:\r\nroot beer with higher star rating has higher market evaluation and acceptance",
+     "notes": []
+    },
+    {
+     "name": "ReviewDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 421,
+     "is_unique": false,
+     "min_value": "2012-09-03",
+     "max_value": "2014-09-15",
+     "examples": [
+      "2013-07-15",
+      "2013-07-08",
+      "2013-07-25",
+      "2013-11-15",
+      "2013-08-11"
+     ],
+     "top_values": [],
+     "description": "the review date",
+     "value_description": "yyyy-mm-dd",
+     "notes": []
+    },
+    {
+     "name": "Review",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9776,
+     "distinct_count": 16,
+     "is_unique": true,
+     "min_value": "Awww, doggies!",
+     "max_value": "Yuk, more like licorice soda.",
+     "examples": [
+      "You could have done better Sactown.",
+      "Too much bite, not enough barq.",
+      "The drink is fine, but the crest on the label is pretentious...",
+      "Fantastic!",
+      "Love stopping by Fitz's in St. Louis."
+     ],
+     "top_values": [
+      [
+       "Yuk, more like licorice soda.",
+       1
+      ],
+      [
+       "You could have done better Sactown.",
+       1
+      ],
+      [
+       "Too much bite, not enough barq.",
+       1
+      ],
+      [
+       "Too Spicy!",
+       1
+      ],
+      [
+       "This is the best root beer ever!",
+       1
+      ],
+      [
+       "The quintessential dessert root beer. No ice cream required.",
+       1
+      ],
+      [
+       "The drink is fine, but the crest on the label is pretentious...",
+       1
+      ],
+      [
+       "That is the coolest bottle and the foulest root beer.",
+       1
+      ],
+      [
+       "Tastes like Australia.",
+       1
+      ],
+      [
+       "Only root beer I've ever seen.",
+       1
+      ],
+      [
+       "Love stopping by Fitz's in St. Louis.",
+       1
+      ],
+      [
+       "Fantastic!",
+       1
+      ],
+      [
+       "Does Wisconsin proud.",
+       1
+      ],
+      [
+       "Didn't try it, but the label was ugly.",
+       1
+      ],
+      [
+       "Cans? Not a chance.",
+       1
+      ],
+      [
+       "Awww, doggies!",
+       1
+      ]
+     ],
+     "description": "the specific review content",
+     "value_description": "",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "CustomerID",
+    "BrandID"
+   ],
+   "sample_rows": [
+    {
+     "CustomerID": 101811,
+     "BrandID": 10012,
+     "StarRating": 5,
+     "ReviewDate": "2013-07-15",
+     "Review": null
+    },
+    {
+     "CustomerID": 101811,
+     "BrandID": 10014,
+     "StarRating": 1,
+     "ReviewDate": "2013-07-08",
+     "Review": null
+    },
+    {
+     "CustomerID": 101811,
+     "BrandID": 10015,
+     "StarRating": 3,
+     "ReviewDate": "2013-07-25",
+     "Review": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "transaction",
+   "row_count": 6312,
+   "stats_rows": 6312,
+   "columns": [
+    {
+     "name": "TransactionID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6312,
+     "is_unique": true,
+     "min_value": 100000,
+     "max_value": 106311,
+     "examples": [
+      100000,
+      100001,
+      100002,
+      100003,
+      100004
+     ],
+     "top_values": [],
+     "description": "transaction id. the unique id for the transaction",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CreditCardNumber",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 554,
+     "is_unique": false,
+     "min_value": 340348517399962,
+     "max_value": 6011969318749298,
+     "examples": [
+      6011583832864739,
+      4716634257568793,
+      5597608517846968,
+      5487443089509478,
+      4532262424412224
+     ],
+     "top_values": [],
+     "description": "credit card number. the number of the credit card used for payment",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "CustomerID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 554,
+     "is_unique": false,
+     "min_value": 101811,
+     "max_value": 999915,
+     "examples": [
+      864896,
+      610766,
+      207846,
+      166612,
+      482274
+     ],
+     "top_values": [],
+     "description": "the customer id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "TransactionDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 727,
+     "is_unique": false,
+     "min_value": "2014-07-07",
+     "max_value": "2016-09-14",
+     "examples": [
+      "2014-07-07",
+      "2014-07-13",
+      "2014-07-17",
+      "2014-07-26",
+      "2014-07-28"
+     ],
+     "top_values": [],
+     "description": "the transaction date",
+     "value_description": "yyyy-mm-dd",
+     "notes": []
+    },
+    {
+     "name": "CreditCardType",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "American Express",
+     "max_value": "Visa",
+     "examples": [
+      "Discover",
+      "Visa",
+      "MasterCard",
+      "American Express"
+     ],
+     "top_values": [
+      [
+       "Visa",
+       2152
+      ],
+      [
+       "MasterCard",
+       2087
+      ],
+      [
+       "Discover",
+       1108
+      ],
+      [
+       "American Express",
+       965
+      ]
+     ],
+     "description": "the credit card type",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "LocationID",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      2,
+      1
+     ],
+     "top_values": [
+      [
+       2,
+       3216
+      ],
+      [
+       1,
+       3096
+      ]
+     ],
+     "description": "the location id of the selling company",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "RootBeerID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6312,
+     "is_unique": true,
+     "min_value": 100000,
+     "max_value": 106416,
+     "examples": [
+      105661,
+      105798,
+      102514,
+      105623,
+      103940
+     ],
+     "top_values": [],
+     "description": "the root beer id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "PurchasePrice",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 3.0,
+     "examples": [
+      3.0,
+      1.0
+     ],
+     "top_values": [
+      [
+       3.0,
+       6092
+      ],
+      [
+       1.0,
+       220
+      ]
+     ],
+     "description": "the unit purchase price of the root beer",
+     "value_description": "us dollars",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "TransactionID"
+   ],
+   "sample_rows": [
+    {
+     "TransactionID": 100000,
+     "CreditCardNumber": 6011583832864739,
+     "CustomerID": 864896,
+     "TransactionDate": "2014-07-07",
+     "CreditCardType": "Discover",
+     "LocationID": 2,
+     "RootBeerID": 105661,
+     "PurchasePrice": 3.0
+    },
+    {
+     "TransactionID": 100001,
+     "CreditCardNumber": 6011583832864739,
+     "CustomerID": 864896,
+     "TransactionDate": "2014-07-07",
+     "CreditCardType": "Discover",
+     "LocationID": 2,
+     "RootBeerID": 105798,
+     "PurchasePrice": 3.0
+    },
+    {
+     "TransactionID": 100002,
+     "CreditCardNumber": 6011583832864739,
+     "CustomerID": 864896,
+     "TransactionDate": "2014-07-07",
+     "CreditCardType": "Discover",
+     "LocationID": 2,
+     "RootBeerID": 102514,
+     "PurchasePrice": 3.0
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "geolocation",
+   "from_column": "LocationID",
+   "to_table": "location",
+   "to_column": "LocationID",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "rootbeer",
+   "from_column": "BrandID",
+   "to_table": "rootbeerbrand",
+   "to_column": "BrandID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "rootbeer",
+   "from_column": "LocationID",
+   "to_table": "location",
+   "to_column": "LocationID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "rootbeer",
+   "from_column": "LocationID",
+   "to_table": "geolocation",
+   "to_column": "LocationID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "rootbeerreview",
+   "from_column": "BrandID",
+   "to_table": "rootbeerbrand",
+   "to_column": "BrandID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "rootbeerreview",
+   "from_column": "CustomerID",
+   "to_table": "customers",
+   "to_column": "CustomerID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "transaction",
+   "from_column": "RootBeerID",
+   "to_table": "rootbeer",
+   "to_column": "RootBeerID",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "transaction",
+   "from_column": "LocationID",
+   "to_table": "location",
+   "to_column": "LocationID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "transaction",
+   "from_column": "CustomerID",
+   "to_table": "customers",
+   "to_column": "CustomerID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "rootbeer",
+   "from_column": "BrandID",
+   "to_table": "rootbeerreview",
+   "to_column": "BrandID",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.957
+  },
+  {
+   "from_table": "transaction",
+   "from_column": "LocationID",
+   "to_table": "geolocation",
+   "to_column": "LocationID",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

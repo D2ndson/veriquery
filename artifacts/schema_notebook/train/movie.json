@@ -1,0 +1,1386 @@
+{
+ "db_id": "movie",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/movie/movie.sqlite",
+ "fingerprint": "1568768-1793993015140217115-v1.0",
+ "created_at": "2026-11-06T19:24:57+00:00",
+ "profile_seconds": 0.042,
+ "tables": [
+  {
+   "name": "actor",
+   "row_count": 2713,
+   "stats_rows": 2713,
+   "columns": [
+    {
+     "name": "ActorID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2713,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 2713,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "actor id. the unique id for the actor",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0417,
+     "distinct_count": 2598,
+     "is_unique": false,
+     "min_value": "Aaron Eckhart",
+     "max_value": "Zooey Deschanel",
+     "examples": [
+      "John Travolta",
+      "Kirstie Alley",
+      "Olympia Dukakis",
+      "George Segal",
+      "Abe Vigoda"
+     ],
+     "top_values": [],
+     "description": "actor's name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Date of Birth",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.1452,
+     "distinct_count": 2173,
+     "is_unique": false,
+     "min_value": "1902-07-31",
+     "max_value": "2008-07-31",
+     "examples": [
+      "1954-02-18",
+      "1951-01-12",
+      "1931-06-20",
+      "1934-02-13",
+      "1921-02-24"
+     ],
+     "top_values": [],
+     "description": "actor's birth date",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Birth City",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.146,
+     "distinct_count": 1043,
+     "is_unique": false,
+     "min_value": "Aberdeen",
+     "max_value": "�sterbro",
+     "examples": [
+      "Englewood",
+      "Wichita",
+      "Lowell",
+      "Great Neck",
+      "Brooklyn"
+     ],
+     "top_values": [],
+     "description": "actor's birth city",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Birth Country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1519,
+     "distinct_count": 79,
+     "is_unique": false,
+     "min_value": "Argentina",
+     "max_value": "Yugoslavia",
+     "examples": [
+      "USA",
+      "West Germany",
+      "UK",
+      "Canada",
+      "Scotland"
+     ],
+     "top_values": [],
+     "description": "actor's birth country",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Height (Inches)",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2418,
+     "distinct_count": 34,
+     "is_unique": false,
+     "min_value": 32,
+     "max_value": 86,
+     "examples": [
+      74,
+      67,
+      63,
+      71,
+      73
+     ],
+     "top_values": [
+      [
+       61,
+       393
+      ],
+      [
+       69,
+       182
+      ],
+      [
+       67,
+       178
+      ],
+      [
+       68,
+       177
+      ],
+      [
+       72,
+       172
+      ],
+      [
+       73,
+       156
+      ],
+      [
+       74,
+       150
+      ],
+      [
+       66,
+       127
+      ],
+      [
+       65,
+       127
+      ],
+      [
+       64,
+       118
+      ],
+      [
+       63,
+       56
+      ],
+      [
+       75,
+       55
+      ],
+      [
+       62,
+       52
+      ],
+      [
+       76,
+       49
+      ],
+      [
+       77,
+       13
+      ],
+      [
+       49,
+       10
+      ],
+      [
+       78,
+       8
+      ],
+      [
+       60,
+       8
+      ],
+      [
+       79,
+       4
+      ],
+      [
+       57,
+       3
+      ],
+      [
+       81,
+       2
+      ],
+      [
+       71,
+       2
+      ],
+      [
+       70,
+       2
+      ],
+      [
+       52,
+       2
+      ],
+      [
+       48,
+       2
+      ],
+      [
+       86,
+       1
+      ],
+      [
+       84,
+       1
+      ],
+      [
+       80,
+       1
+      ],
+      [
+       56,
+       1
+      ],
+      [
+       54,
+       1
+      ],
+      [
+       42,
+       1
+      ],
+      [
+       41,
+       1
+      ],
+      [
+       38,
+       1
+      ],
+      [
+       32,
+       1
+      ]
+     ],
+     "description": "height inches. actor's height",
+     "value_description": "the unit is inch",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Biography",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0604,
+     "distinct_count": 2547,
+     "is_unique": false,
+     "min_value": "\"Because I'm NOT one of your FANS!!!!!\", screamed Diana Scar...",
+     "max_value": "Zooey Deschanel was born in 1980 into a showbiz family. Her ...",
+     "examples": [
+      "John Joseph Travolta was born in Englewood, New Jersey, one ...",
+      "Long a vital, respected lady of the classic and contemporary...",
+      "Actor and musician Bruce Willis is well known for playing wi...",
+      "With an authoritative voice and calm demeanor, this ever pop...",
+      "A beloved, twinkly blue-eyed doyenne of stage and screen, ac..."
+     ],
+     "top_values": [],
+     "description": "actor's biography",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.568,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "Female",
+     "max_value": "Male",
+     "examples": [
+      "Male",
+      "Female"
+     ],
+     "top_values": [
+      [
+       "Male",
+       802
+      ],
+      [
+       "Female",
+       370
+      ]
+     ],
+     "description": "actor's gender",
+     "value_description": "",
+     "notes": [
+      "57% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Ethnicity",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.791,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": "African American",
+     "max_value": "White",
+     "examples": [
+      "White",
+      "African American",
+      "Lebanese",
+      "Armenian",
+      "Asian"
+     ],
+     "top_values": [
+      [
+       "White",
+       494
+      ],
+      [
+       "African American",
+       49
+      ],
+      [
+       "Native American",
+       5
+      ],
+      [
+       "Latino",
+       3
+      ],
+      [
+       "South African",
+       2
+      ],
+      [
+       "Israeli",
+       2
+      ],
+      [
+       "Asian",
+       2
+      ],
+      [
+       "Puerto Rican",
+       1
+      ],
+      [
+       "Polish",
+       1
+      ],
+      [
+       "Mixed",
+       1
+      ],
+      [
+       "Lebanese",
+       1
+      ],
+      [
+       "Japanese-American",
+       1
+      ],
+      [
+       "Asian American",
+       1
+      ],
+      [
+       "Armenian",
+       1
+      ],
+      [
+       "Argentine",
+       1
+      ],
+      [
+       "American-South African",
+       1
+      ],
+      [
+       "American-Irish",
+       1
+      ]
+     ],
+     "description": "actor's ethnicity",
+     "value_description": "",
+     "notes": [
+      "79% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "NetWorth",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.5031,
+     "distinct_count": 80,
+     "is_unique": false,
+     "min_value": "$1,000,000.00",
+     "max_value": "$95,000,000.00",
+     "examples": [
+      "$250,000,000.00",
+      "$40,000,000.00",
+      "$6,000,000.00",
+      "$10,000,000.00",
+      "$20,000,000.00"
+     ],
+     "top_values": [],
+     "description": "actor's networth",
+     "value_description": "commonsense evidence:\nThe actor with more networth is richer.",
+     "notes": [
+      "50% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "ActorID"
+   ],
+   "sample_rows": [
+    {
+     "ActorID": 1,
+     "Name": "John Travolta",
+     "Date of Birth": "1954-02-18",
+     "Birth City": "Englewood",
+     "Birth Country": "USA",
+     "Height (Inches)": 74,
+     "Biography": "John Joseph Travolta was born in Englewood, New Jersey, one ...",
+     "Gender": "Male",
+     "Ethnicity": "White",
+     "NetWorth": "$250,000,000.00"
+    },
+    {
+     "ActorID": 2,
+     "Name": "Kirstie Alley",
+     "Date of Birth": "1951-01-12",
+     "Birth City": "Wichita",
+     "Birth Country": "USA",
+     "Height (Inches)": 67,
+     "Biography": null,
+     "Gender": "Female",
+     "Ethnicity": "White",
+     "NetWorth": "$40,000,000.00"
+    },
+    {
+     "ActorID": 3,
+     "Name": "Olympia Dukakis",
+     "Date of Birth": "1931-06-20",
+     "Birth City": "Lowell",
+     "Birth Country": "USA",
+     "Height (Inches)": 63,
+     "Biography": "Long a vital, respected lady of the classic and contemporary...",
+     "Gender": "Female",
+     "Ethnicity": "White",
+     "NetWorth": "$6,000,000.00"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "characters",
+   "row_count": 4312,
+   "stats_rows": 4312,
+   "columns": [
+    {
+     "name": "MovieID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 480,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 510,
+     "examples": [
+      1,
+      2,
+      4,
+      5,
+      6
+     ],
+     "top_values": [],
+     "description": "movie id. the unique id for the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ActorID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2600,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2600,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "actor id. the unique id for the actor",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Character Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3643,
+     "is_unique": false,
+     "min_value": "1st Marketing Guy (voice)",
+     "max_value": "Zuba",
+     "examples": [
+      "James",
+      "Mollie",
+      "Rosie",
+      "Albert",
+      "Grandpa"
+     ],
+     "top_values": [],
+     "description": "the name of the character",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "creditOrder",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 9,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       5,
+       480
+      ],
+      [
+       4,
+       480
+      ],
+      [
+       3,
+       480
+      ],
+      [
+       2,
+       480
+      ],
+      [
+       7,
+       479
+      ],
+      [
+       6,
+       479
+      ],
+      [
+       1,
+       479
+      ],
+      [
+       8,
+       478
+      ],
+      [
+       9,
+       477
+      ]
+     ],
+     "description": "credit order. order of the character in the credit list",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "pay",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9977,
+     "distinct_count": 10,
+     "is_unique": true,
+     "min_value": "$100,000,000.00",
+     "max_value": "$75,000,000.00",
+     "examples": [],
+     "top_values": [
+      [
+       "$75,000,000.00",
+       1
+      ],
+      [
+       "$70,000,000.00",
+       1
+      ],
+      [
+       "$68,000,000.00",
+       1
+      ],
+      [
+       "$65,000,000.00",
+       1
+      ],
+      [
+       "$60,000,000.00",
+       1
+      ],
+      [
+       "$55,000,000.00",
+       1
+      ],
+      [
+       "$50,000,000.00",
+       1
+      ],
+      [
+       "$5,000,000.00",
+       1
+      ],
+      [
+       "$29,000,000.00",
+       1
+      ],
+      [
+       "$100,000,000.00",
+       1
+      ]
+     ],
+     "description": "the salary of the character",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "screentime",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9981,
+     "distinct_count": 8,
+     "is_unique": true,
+     "min_value": "0:02:45",
+     "max_value": "0:32:30",
+     "examples": [
+      "0:32:30",
+      "0:32:15",
+      "0:29:00",
+      "0:08:45",
+      "0:04:30"
+     ],
+     "top_values": [
+      [
+       "0:32:30",
+       1
+      ],
+      [
+       "0:32:15",
+       1
+      ],
+      [
+       "0:29:00",
+       1
+      ],
+      [
+       "0:08:45",
+       1
+      ],
+      [
+       "0:04:30",
+       1
+      ],
+      [
+       "0:04:15",
+       1
+      ],
+      [
+       "0:03:30",
+       1
+      ],
+      [
+       "0:02:45",
+       1
+      ]
+     ],
+     "description": "the screentime of the character",
+     "value_description": "commonsense evidence:\nScreentime is directly proportional to the importance of the characters.",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "MovieID",
+    "ActorID"
+   ],
+   "sample_rows": [
+    {
+     "MovieID": 1,
+     "ActorID": 1,
+     "Character Name": "James",
+     "creditOrder": 1,
+     "pay": null,
+     "screentime": null
+    },
+    {
+     "MovieID": 1,
+     "ActorID": 2,
+     "Character Name": "Mollie",
+     "creditOrder": 2,
+     "pay": null,
+     "screentime": null
+    },
+    {
+     "MovieID": 1,
+     "ActorID": 3,
+     "Character Name": "Rosie",
+     "creditOrder": 3,
+     "pay": null,
+     "screentime": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "movie",
+   "row_count": 634,
+   "stats_rows": 634,
+   "columns": [
+    {
+     "name": "MovieID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 634,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 635,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "movie id. the unique id for the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Title",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 626,
+     "is_unique": false,
+     "min_value": "101 Dalmatians",
+     "max_value": "xXx",
+     "examples": [
+      "Look Who's Talking",
+      "Driving Miss Daisy",
+      "Turner & Hooch",
+      "Born on the Fourth of July",
+      "Field of Dreams"
+     ],
+     "top_values": [],
+     "description": "the title of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "MPAA Rating",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "G",
+     "max_value": "R",
+     "examples": [
+      "PG-13",
+      "PG",
+      "R",
+      "G"
+     ],
+     "top_values": [
+      [
+       "PG-13",
+       300
+      ],
+      [
+       "PG",
+       165
+      ],
+      [
+       "R",
+       142
+      ],
+      [
+       "G",
+       27
+      ]
+     ],
+     "description": "motion picture association of america rating. MPAA rating of the movie",
+     "value_description": "commonsense evidence:\nMPAA rating is the movie rating for parents to use as a guide to determine the appropriateness of a film's content for children and teenagers. \n rated G: General audiences  All ages admitted\n rated PG: Parental guidance suggested  Some material may not be suitable for pre-teenagers\n rated R: Restricted  Under 17 requires accompanying parent or adult guardian\n rated X: No one under 17 admitted",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Budget",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 149,
+     "is_unique": false,
+     "min_value": 60000,
+     "max_value": 400000000,
+     "examples": [
+      7500000,
+      13000000,
+      14000000,
+      15000000,
+      16000000
+     ],
+     "top_values": [],
+     "description": "the budget of the movie",
+     "value_description": "the unit is dollar",
+     "notes": []
+    },
+    {
+     "name": "Gross",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0016,
+     "distinct_count": 630,
+     "is_unique": false,
+     "min_value": 106457,
+     "max_value": 2796000000,
+     "examples": [
+      296000000,
+      145793296,
+      71079915,
+      161001698,
+      84431625
+     ],
+     "top_values": [],
+     "description": "the gross of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Release Date",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 612,
+     "is_unique": false,
+     "min_value": "1989-04-21",
+     "max_value": "2021-12-17",
+     "examples": [
+      "1989-10-12",
+      "1989-12-13",
+      "1989-07-28",
+      "1989-12-20",
+      "1989-04-21"
+     ],
+     "top_values": [],
+     "description": "release date",
+     "value_description": "yyyy-mm-dd",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)",
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Genre",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": "Action",
+     "max_value": "Western",
+     "examples": [
+      "Romance",
+      "Comedy",
+      "Crime",
+      "War",
+      "Drama"
+     ],
+     "top_values": [
+      [
+       "Action",
+       116
+      ],
+      [
+       "Comedy",
+       101
+      ],
+      [
+       "Animation",
+       88
+      ],
+      [
+       "Drama",
+       67
+      ],
+      [
+       "Thriller",
+       41
+      ],
+      [
+       "Science Fiction",
+       38
+      ],
+      [
+       "Adventure",
+       31
+      ],
+      [
+       "Family",
+       30
+      ],
+      [
+       "Romance",
+       29
+      ],
+      [
+       "Fantasy",
+       28
+      ],
+      [
+       "Crime",
+       17
+      ],
+      [
+       "Horror",
+       15
+      ],
+      [
+       "Mystery",
+       12
+      ],
+      [
+       "War",
+       9
+      ],
+      [
+       "Western",
+       6
+      ],
+      [
+       "History",
+       5
+      ],
+      [
+       "Musical",
+       1
+      ]
+     ],
+     "description": "the genre of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Runtime",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 96,
+     "is_unique": false,
+     "min_value": 79,
+     "max_value": 201,
+     "examples": [
+      93,
+      99,
+      100,
+      145,
+      107
+     ],
+     "top_values": [],
+     "description": "the runtime of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Rating",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0016,
+     "distinct_count": 48,
+     "is_unique": false,
+     "min_value": 4.1,
+     "max_value": 9.0,
+     "examples": [
+      5.9,
+      7.4,
+      7.2,
+      7.5,
+      7.0
+     ],
+     "top_values": [
+      [
+       6.9,
+       38
+      ],
+      [
+       7.3,
+       33
+      ],
+      [
+       6.6,
+       33
+      ],
+      [
+       7.0,
+       31
+      ],
+      [
+       6.7,
+       30
+      ],
+      [
+       7.6,
+       27
+      ],
+      [
+       7.2,
+       27
+      ],
+      [
+       6.4,
+       27
+      ],
+      [
+       6.5,
+       26
+      ],
+      [
+       7.8,
+       25
+      ],
+      [
+       6.8,
+       25
+      ],
+      [
+       7.7,
+       24
+      ],
+      [
+       8.0,
+       23
+      ],
+      [
+       7.4,
+       22
+      ],
+      [
+       7.5,
+       20
+      ],
+      [
+       7.1,
+       19
+      ],
+      [
+       6.1,
+       18
+      ],
+      [
+       6.3,
+       17
+      ],
+      [
+       6.2,
+       17
+      ],
+      [
+       8.1,
+       15
+      ],
+      [
+       6.0,
+       13
+      ],
+      [
+       5.9,
+       11
+      ],
+      [
+       7.9,
+       10
+      ],
+      [
+       5.6,
+       10
+      ],
+      [
+       5.8,
+       8
+      ],
+      [
+       5.7,
+       8
+      ],
+      [
+       5.4,
+       8
+      ],
+      [
+       8.4,
+       7
+      ],
+      [
+       8.3,
+       6
+      ],
+      [
+       8.2,
+       6
+      ],
+      [
+       8.6,
+       5
+      ],
+      [
+       8.5,
+       5
+      ],
+      [
+       5.5,
+       5
+      ],
+      [
+       8.9,
+       4
+      ],
+      [
+       8.8,
+       4
+      ],
+      [
+       5.2,
+       4
+      ],
+      [
+       8.7,
+       3
+      ],
+      [
+       5.0,
+       3
+      ],
+      [
+       4.9,
+       3
+      ],
+      [
+       4.7,
+       3
+      ],
+      [
+       4.3,
+       2
+      ],
+      [
+       4.1,
+       2
+      ],
+      [
+       9.0,
+       1
+      ],
+      [
+       5.3,
+       1
+      ],
+      [
+       5.1,
+       1
+      ],
+      [
+       4.5,
+       1
+      ],
+      [
+       4.4,
+       1
+      ],
+      [
+       4.2,
+       1
+      ]
+     ],
+     "description": "the rating of the movie",
+     "value_description": "0.0 - 10.0\ncommonsense evidence:\nHigher ratings mean higher quality and better response.",
+     "notes": []
+    },
+    {
+     "name": "Rating Count",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0158,
+     "distinct_count": 595,
+     "is_unique": false,
+     "min_value": 14918,
+     "max_value": 2127228,
+     "examples": [
+      73638,
+      91075,
+      91415,
+      101702,
+      77659
+     ],
+     "top_values": [],
+     "description": "the number of the ratings",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Summary",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 634,
+     "is_unique": true,
+     "min_value": "160 elite U.S. soldiers drop into Somalia to capture two top...",
+     "max_value": "Years after a plague kills most of humanity and transforms t...",
+     "examples": [
+      "After a single, career-minded woman is left on her own to gi...",
+      "An old Jewish woman and her African-American chauffeur in th...",
+      "Det. Scott Turner (Tom Hanks) is an uptight, by-the-book pol...",
+      "The biography of Ron Kovic. Paralyzed in the Vietnam war, he...",
+      "An Iowa corn farmer, hearing voices, interprets them as a co..."
+     ],
+     "top_values": [],
+     "description": "the summary of the movie",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "MovieID"
+   ],
+   "sample_rows": [
+    {
+     "MovieID": 1,
+     "Title": "Look Who's Talking",
+     "MPAA Rating": "PG-13",
+     "Budget": 7500000,
+     "Gross": 296000000,
+     "Release Date": "1989-10-12",
+     "Genre": "Romance",
+     "Runtime": 93,
+     "Rating": 5.9,
+     "Rating Count": 73638,
+     "Summary": "After a single, career-minded woman is left on her own to gi..."
+    },
+    {
+     "MovieID": 2,
+     "Title": "Driving Miss Daisy",
+     "MPAA Rating": "PG",
+     "Budget": 7500000,
+     "Gross": 145793296,
+     "Release Date": "1989-12-13",
+     "Genre": "Comedy",
+     "Runtime": 99,
+     "Rating": 7.4,
+     "Rating Count": 91075,
+     "Summary": "An old Jewish woman and her African-American chauffeur in th..."
+    },
+    {
+     "MovieID": 3,
+     "Title": "Turner & Hooch",
+     "MPAA Rating": "PG",
+     "Budget": 13000000,
+     "Gross": 71079915,
+     "Release Date": "1989-07-28",
+     "Genre": "Crime",
+     "Runtime": 100,
+     "Rating": 7.2,
+     "Rating Count": 91415,
+     "Summary": "Det. Scott Turner (Tom Hanks) is an uptight, by-the-book pol..."
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "characters",
+   "from_column": "MovieID",
+   "to_table": "movie",
+   "to_column": "MovieID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "characters",
+   "from_column": "ActorID",
+   "to_table": "actor",
+   "to_column": "ActorID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

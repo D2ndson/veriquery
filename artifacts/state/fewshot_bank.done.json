@@ -1,0 +1,8 @@
+{
+ "stage": "fewshot_bank",
+ "seconds": 5.0,
+ "finished": "2026-11-06 19:26:19",
+ "info": {
+  "examples": 9394
+ }
+}

@@ -1,0 +1,3747 @@
+{
+ "db_id": "regional_sales",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/regional_sales/regional_sales.sqlite",
+ "fingerprint": "2277376-1793993025033416432-v1.0",
+ "created_at": "2026-11-06T19:25:08+00:00",
+ "profile_seconds": 0.159,
+ "tables": [
+  {
+   "name": "Customers",
+   "row_count": 50,
+   "stats_rows": 50,
+   "columns": [
+    {
+     "name": "CustomerID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 50,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 50,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       50,
+       1
+      ],
+      [
+       49,
+       1
+      ],
+      [
+       48,
+       1
+      ],
+      [
+       47,
+       1
+      ],
+      [
+       46,
+       1
+      ],
+      [
+       45,
+       1
+      ],
+      [
+       44,
+       1
+      ],
+      [
+       43,
+       1
+      ],
+      [
+       42,
+       1
+      ],
+      [
+       41,
+       1
+      ],
+      [
+       40,
+       1
+      ],
+      [
+       39,
+       1
+      ],
+      [
+       38,
+       1
+      ],
+      [
+       37,
+       1
+      ],
+      [
+       36,
+       1
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       34,
+       1
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       32,
+       1
+      ],
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "customer id. unique id number indicating which customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Customer Names",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 50,
+     "is_unique": true,
+     "min_value": "21st Ltd",
+     "max_value": "Wuxi Group",
+     "examples": [
+      "Avon Corp",
+      "WakeFern ",
+      "Elorac, Corp",
+      "ETUDE Ltd",
+      "Procter Corp"
+     ],
+     "top_values": [
+      [
+       "Wuxi Group",
+       1
+      ],
+      [
+       "Winthrop ",
+       1
+      ],
+      [
+       "Weimei Corp",
+       1
+      ],
+      [
+       "WakeFern ",
+       1
+      ],
+      [
+       "Victory Ltd",
+       1
+      ],
+      [
+       "Uriel Group",
+       1
+      ],
+      [
+       "U.S. Ltd",
+       1
+      ],
+      [
+       "Trigen ",
+       1
+      ],
+      [
+       "Sundial ",
+       1
+      ],
+      [
+       "Select ",
+       1
+      ],
+      [
+       "S.S.S. Group",
+       1
+      ],
+      [
+       "Rochester Ltd",
+       1
+      ],
+      [
+       "Qualitest ",
+       1
+      ],
+      [
+       "Pure Group",
+       1
+      ],
+      [
+       "Procter Corp",
+       1
+      ],
+      [
+       "Prasco Group",
+       1
+      ],
+      [
+       "Pacific Ltd",
+       1
+      ],
+      [
+       "PEDIFIX, Corp",
+       1
+      ],
+      [
+       "Ole Group",
+       1
+      ],
+      [
+       "Ohio ",
+       1
+      ],
+      [
+       "OUR Ltd",
+       1
+      ],
+      [
+       "OHTA'S Corp",
+       1
+      ],
+      [
+       "O.E. Ltd",
+       1
+      ],
+      [
+       "Nipro ",
+       1
+      ],
+      [
+       "Niconovum Corp",
+       1
+      ],
+      [
+       "New Ltd",
+       1
+      ],
+      [
+       "Mylan Corp",
+       1
+      ],
+      [
+       "Medsep Group",
+       1
+      ],
+      [
+       "Medline ",
+       1
+      ],
+      [
+       "Llorens Ltd",
+       1
+      ],
+      [
+       "Linde ",
+       1
+      ],
+      [
+       "Fenwal, Corp",
+       1
+      ],
+      [
+       "Exact-Rx, Corp",
+       1
+      ],
+      [
+       "Eminence Corp",
+       1
+      ],
+      [
+       "Elorac, Corp",
+       1
+      ],
+      [
+       "Ei ",
+       1
+      ],
+      [
+       "ETUDE Ltd",
+       1
+      ],
+      [
+       "E. Ltd",
+       1
+      ],
+      [
+       "Dharma Ltd",
+       1
+      ],
+      [
+       "Capweld ",
+       1
+      ],
+      [
+       "Burt's Corp",
+       1
+      ],
+      [
+       "Bare ",
+       1
+      ],
+      [
+       "Avon Corp",
+       1
+      ],
+      [
+       "AuroMedics Corp",
+       1
+      ],
+      [
+       "Ascend Ltd",
+       1
+      ],
+      [
+       "Apotheca, Ltd",
+       1
+      ],
+      [
+       "Apollo Ltd",
+       1
+      ],
+      [
+       "Amylin Group",
+       1
+      ],
+      [
+       "3LAB, Ltd",
+       1
+      ],
+      [
+       "21st Ltd",
+       1
+      ]
+     ],
+     "description": "the name of the customer",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    }
+   ],
+   "primary_key": [
+    "CustomerID"
+   ],
+   "sample_rows": [
+    {
+     "CustomerID": 1,
+     "Customer Names": "Avon Corp"
+    },
+    {
+     "CustomerID": 2,
+     "Customer Names": "WakeFern "
+    },
+    {
+     "CustomerID": 3,
+     "Customer Names": "Elorac, Corp"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Products",
+   "row_count": 47,
+   "stats_rows": 47,
+   "columns": [
+    {
+     "name": "ProductID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 47,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 47,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       47,
+       1
+      ],
+      [
+       46,
+       1
+      ],
+      [
+       45,
+       1
+      ],
+      [
+       44,
+       1
+      ],
+      [
+       43,
+       1
+      ],
+      [
+       42,
+       1
+      ],
+      [
+       41,
+       1
+      ],
+      [
+       40,
+       1
+      ],
+      [
+       39,
+       1
+      ],
+      [
+       38,
+       1
+      ],
+      [
+       37,
+       1
+      ],
+      [
+       36,
+       1
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       34,
+       1
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       32,
+       1
+      ],
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "product id. unique id number representing each product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Product Name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 47,
+     "is_unique": true,
+     "min_value": "Accessories",
+     "max_value": "Wreaths",
+     "examples": [
+      "Cookware",
+      "Photo Frames",
+      "Table Lamps",
+      "Serveware",
+      "Bathroom Furniture"
+     ],
+     "top_values": [
+      [
+       "Wreaths",
+       1
+      ],
+      [
+       "Wine Storage",
+       1
+      ],
+      [
+       "Wardrobes",
+       1
+      ],
+      [
+       "Wall Frames",
+       1
+      ],
+      [
+       "Wall Coverings",
+       1
+      ],
+      [
+       "Vases",
+       1
+      ],
+      [
+       "Vanities",
+       1
+      ],
+      [
+       "Table Linens",
+       1
+      ],
+      [
+       "Table Lamps",
+       1
+      ],
+      [
+       "TV and video",
+       1
+      ],
+      [
+       "Stemware",
+       1
+      ],
+      [
+       "Serveware",
+       1
+      ],
+      [
+       "Sculptures",
+       1
+      ],
+      [
+       "Rugs",
+       1
+      ],
+      [
+       "Platters",
+       1
+      ],
+      [
+       "Pillows",
+       1
+      ],
+      [
+       "Photo Frames",
+       1
+      ],
+      [
+       "Phones",
+       1
+      ],
+      [
+       "Pendants",
+       1
+      ],
+      [
+       "Outdoor Furniture",
+       1
+      ],
+      [
+       "Outdoor Decor",
+       1
+      ],
+      [
+       "Ornaments",
+       1
+      ],
+      [
+       "Mirrors",
+       1
+      ],
+      [
+       "Home Fragrances",
+       1
+      ],
+      [
+       "Furniture Cushions",
+       1
+      ],
+      [
+       "Floral",
+       1
+      ],
+      [
+       "Floor Lamps",
+       1
+      ],
+      [
+       "Festive",
+       1
+      ],
+      [
+       "Dinnerware",
+       1
+      ],
+      [
+       "Dining Furniture",
+       1
+      ],
+      [
+       "Cookware",
+       1
+      ],
+      [
+       "Computers",
+       1
+      ],
+      [
+       "Collectibles",
+       1
+      ],
+      [
+       "Cocktail Glasses",
+       1
+      ],
+      [
+       "Clocks",
+       1
+      ],
+      [
+       "Candles",
+       1
+      ],
+      [
+       "Candleholders",
+       1
+      ],
+      [
+       "Blankets",
+       1
+      ],
+      [
+       "Bedroom Furniture",
+       1
+      ],
+      [
+       "Bean Bags",
+       1
+      ],
+      [
+       "Bathroom Furniture",
+       1
+      ],
+      [
+       "Basketball",
+       1
+      ],
+      [
+       "Baseball",
+       1
+      ],
+      [
+       "Bar Tools",
+       1
+      ],
+      [
+       "Bakeware",
+       1
+      ],
+      [
+       "Audio",
+       1
+      ],
+      [
+       "Accessories",
+       1
+      ]
+     ],
+     "description": "name of the product",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    }
+   ],
+   "primary_key": [
+    "ProductID"
+   ],
+   "sample_rows": [
+    {
+     "ProductID": 1,
+     "Product Name": "Cookware"
+    },
+    {
+     "ProductID": 2,
+     "Product Name": "Photo Frames"
+    },
+    {
+     "ProductID": 3,
+     "Product Name": "Table Lamps"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Regions",
+   "row_count": 48,
+   "stats_rows": 48,
+   "columns": [
+    {
+     "name": "StateCode",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 48,
+     "is_unique": true,
+     "min_value": "AL",
+     "max_value": "WY",
+     "examples": [
+      "AL",
+      "AR",
+      "AZ",
+      "CA",
+      "CO"
+     ],
+     "top_values": [
+      [
+       "WY",
+       1
+      ],
+      [
+       "WI",
+       1
+      ],
+      [
+       "WA",
+       1
+      ],
+      [
+       "VA",
+       1
+      ],
+      [
+       "UT",
+       1
+      ],
+      [
+       "TX",
+       1
+      ],
+      [
+       "TN",
+       1
+      ],
+      [
+       "SD",
+       1
+      ],
+      [
+       "SC",
+       1
+      ],
+      [
+       "RI",
+       1
+      ],
+      [
+       "PA",
+       1
+      ],
+      [
+       "OR",
+       1
+      ],
+      [
+       "OK",
+       1
+      ],
+      [
+       "OH",
+       1
+      ],
+      [
+       "NY",
+       1
+      ],
+      [
+       "NV",
+       1
+      ],
+      [
+       "NM",
+       1
+      ],
+      [
+       "NJ",
+       1
+      ],
+      [
+       "NH",
+       1
+      ],
+      [
+       "NE",
+       1
+      ],
+      [
+       "ND",
+       1
+      ],
+      [
+       "NC",
+       1
+      ],
+      [
+       "MT",
+       1
+      ],
+      [
+       "MS",
+       1
+      ],
+      [
+       "MO",
+       1
+      ],
+      [
+       "MN",
+       1
+      ],
+      [
+       "MI",
+       1
+      ],
+      [
+       "ME",
+       1
+      ],
+      [
+       "MD",
+       1
+      ],
+      [
+       "MA",
+       1
+      ],
+      [
+       "LA",
+       1
+      ],
+      [
+       "KY",
+       1
+      ],
+      [
+       "KS",
+       1
+      ],
+      [
+       "IN",
+       1
+      ],
+      [
+       "IL",
+       1
+      ],
+      [
+       "ID",
+       1
+      ],
+      [
+       "IA",
+       1
+      ],
+      [
+       "HI",
+       1
+      ],
+      [
+       "GA",
+       1
+      ],
+      [
+       "FL",
+       1
+      ],
+      [
+       "DE",
+       1
+      ],
+      [
+       "DC",
+       1
+      ],
+      [
+       "CT",
+       1
+      ],
+      [
+       "CO",
+       1
+      ],
+      [
+       "CA",
+       1
+      ],
+      [
+       "AZ",
+       1
+      ],
+      [
+       "AR",
+       1
+      ],
+      [
+       "AL",
+       1
+      ]
+     ],
+     "description": "state code. the unique code identifying the state",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "State",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 48,
+     "is_unique": true,
+     "min_value": "Alabama",
+     "max_value": "Wyoming",
+     "examples": [
+      "Alabama",
+      "Arkansas",
+      "Arizona",
+      "California",
+      "Colorado"
+     ],
+     "top_values": [
+      [
+       "Wyoming",
+       1
+      ],
+      [
+       "Wisconsin",
+       1
+      ],
+      [
+       "Washington",
+       1
+      ],
+      [
+       "Virginia",
+       1
+      ],
+      [
+       "Utah",
+       1
+      ],
+      [
+       "Texas",
+       1
+      ],
+      [
+       "Tennessee",
+       1
+      ],
+      [
+       "South Dakota",
+       1
+      ],
+      [
+       "South Carolina",
+       1
+      ],
+      [
+       "Rhode Island",
+       1
+      ],
+      [
+       "Pennsylvania",
+       1
+      ],
+      [
+       "Oregon",
+       1
+      ],
+      [
+       "Oklahoma",
+       1
+      ],
+      [
+       "Ohio",
+       1
+      ],
+      [
+       "North Dakota",
+       1
+      ],
+      [
+       "North Carolina",
+       1
+      ],
+      [
+       "New York",
+       1
+      ],
+      [
+       "New Mexico",
+       1
+      ],
+      [
+       "New Jersey",
+       1
+      ],
+      [
+       "New Hampshire",
+       1
+      ],
+      [
+       "Nevada",
+       1
+      ],
+      [
+       "Nebraska",
+       1
+      ],
+      [
+       "Montana",
+       1
+      ],
+      [
+       "Missouri",
+       1
+      ],
+      [
+       "Mississippi",
+       1
+      ],
+      [
+       "Minnesota",
+       1
+      ],
+      [
+       "Michigan",
+       1
+      ],
+      [
+       "Massachusetts",
+       1
+      ],
+      [
+       "Maryland",
+       1
+      ],
+      [
+       "Maine",
+       1
+      ],
+      [
+       "Louisiana",
+       1
+      ],
+      [
+       "Kentucky",
+       1
+      ],
+      [
+       "Kansas",
+       1
+      ],
+      [
+       "Iowa",
+       1
+      ],
+      [
+       "Indiana",
+       1
+      ],
+      [
+       "Illinois",
+       1
+      ],
+      [
+       "Idaho",
+       1
+      ],
+      [
+       "Hawaii",
+       1
+      ],
+      [
+       "Georgia",
+       1
+      ],
+      [
+       "Florida",
+       1
+      ],
+      [
+       "District of Columbia",
+       1
+      ],
+      [
+       "Delaware",
+       1
+      ],
+      [
+       "Connecticut",
+       1
+      ],
+      [
+       "Colorado",
+       1
+      ],
+      [
+       "California",
+       1
+      ],
+      [
+       "Arkansas",
+       1
+      ],
+      [
+       "Arizona",
+       1
+      ],
+      [
+       "Alabama",
+       1
+      ]
+     ],
+     "description": "full state name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "Midwest",
+     "max_value": "West",
+     "examples": [
+      "South",
+      "West",
+      "Northeast",
+      "Midwest"
+     ],
+     "top_values": [
+      [
+       "South",
+       16
+      ],
+      [
+       "West",
+       12
+      ],
+      [
+       "Midwest",
+       12
+      ],
+      [
+       "Northeast",
+       8
+      ]
+     ],
+     "description": "the region where the state is located in",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "StateCode"
+   ],
+   "sample_rows": [
+    {
+     "StateCode": "AL",
+     "State": "Alabama",
+     "Region": "South"
+    },
+    {
+     "StateCode": "AR",
+     "State": "Arkansas",
+     "Region": "South"
+    },
+    {
+     "StateCode": "AZ",
+     "State": "Arizona",
+     "Region": "West"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Sales Orders",
+   "row_count": 7991,
+   "stats_rows": 7991,
+   "columns": [
+    {
+     "name": "OrderNumber",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 7991,
+     "is_unique": true,
+     "min_value": "SO - 0001000",
+     "max_value": "SO - 000999",
+     "examples": [
+      "SO - 000101",
+      "SO - 000102",
+      "SO - 000103",
+      "SO - 000104",
+      "SO - 000105"
+     ],
+     "top_values": [],
+     "description": "Order Number. the unique number identifying the order",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Sales Channel",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "Distributor",
+     "max_value": "Wholesale",
+     "examples": [
+      "In-Store",
+      "Online",
+      "Distributor",
+      "Wholesale"
+     ],
+     "top_values": [
+      [
+       "In-Store",
+       3298
+      ],
+      [
+       "Online",
+       2425
+      ],
+      [
+       "Distributor",
+       1375
+      ],
+      [
+       "Wholesale",
+       893
+      ]
+     ],
+     "description": "Sales Channel",
+     "value_description": " In-Store\n Online\n Distributor\n Wholesale",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "WarehouseCode",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "WARE-MKL1006",
+     "max_value": "WARE-XYS1001",
+     "examples": [
+      "WARE-UHY1004",
+      "WARE-NMK1003",
+      "WARE-PUJ1005",
+      "WARE-XYS1001",
+      "WARE-MKL1006"
+     ],
+     "top_values": [
+      [
+       "WARE-NMK1003",
+       2505
+      ],
+      [
+       "WARE-PUJ1005",
+       1451
+      ],
+      [
+       "WARE-UHY1004",
+       1265
+      ],
+      [
+       "WARE-XYS1001",
+       1222
+      ],
+      [
+       "WARE-MKL1006",
+       857
+      ],
+      [
+       "WARE-NBV1002",
+       691
+      ]
+     ],
+     "description": "Warehouse Code",
+     "value_description": "commonsense evidence:\nif the warehouse code is the same, it means this product is shipped from the same ware house",
+     "notes": []
+    },
+    {
+     "name": "ProcuredDate",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": "10/27/18",
+     "max_value": "9/26/20",
+     "examples": [
+      "12/31/17",
+      "4/10/18"
+     ],
+     "top_values": [
+      [
+       "6/18/20",
+       865
+      ],
+      [
+       "12/1/19",
+       856
+      ],
+      [
+       "3/10/20",
+       854
+      ],
+      [
+       "10/27/18",
+       853
+      ],
+      [
+       "7/19/18",
+       843
+      ],
+      [
+       "2/4/19",
+       843
+      ],
+      [
+       "8/23/19",
+       835
+      ],
+      [
+       "4/10/18",
+       825
+      ],
+      [
+       "5/15/19",
+       808
+      ],
+      [
+       "9/26/20",
+       299
+      ],
+      [
+       "12/31/17",
+       110
+      ]
+     ],
+     "description": "Procured Date",
+     "value_description": "commonsense evidence:\ndate: month/date/year, 17--> 2017",
+     "notes": []
+    },
+    {
+     "name": "OrderDate",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 945,
+     "is_unique": false,
+     "min_value": "1/1/19",
+     "max_value": "9/9/20",
+     "examples": [
+      "5/31/18",
+      "6/1/18",
+      "6/2/18",
+      "6/3/18",
+      "6/4/18"
+     ],
+     "top_values": [],
+     "description": "Order Date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ShipDate",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 966,
+     "is_unique": false,
+     "min_value": "1/1/19",
+     "max_value": "9/9/20",
+     "examples": [
+      "6/14/18",
+      "6/22/18",
+      "6/21/18",
+      "6/2/18",
+      "6/16/18"
+     ],
+     "top_values": [],
+     "description": "Ship Date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "DeliveryDate",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 966,
+     "is_unique": false,
+     "min_value": "1/1/19",
+     "max_value": "9/9/20",
+     "examples": [
+      "6/19/18",
+      "7/2/18",
+      "7/1/18",
+      "6/7/18",
+      "6/26/18"
+     ],
+     "top_values": [],
+     "description": "Delivery Date",
+     "value_description": "commonsense evidence:\nthe difference \"DeliveryDate - OrderDate\" is smaller, it means faster delivery",
+     "notes": []
+    },
+    {
+     "name": "CurrencyCode",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "USD",
+     "max_value": "USD",
+     "examples": [
+      "USD"
+     ],
+     "top_values": [
+      [
+       "USD",
+       7991
+      ]
+     ],
+     "description": "Currency Code",
+     "value_description": "USD",
+     "notes": []
+    },
+    {
+     "name": "_SalesTeamID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 28,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 28,
+     "examples": [
+      6,
+      14,
+      21,
+      28,
+      22
+     ],
+     "top_values": [
+      [
+       13,
+       340
+      ],
+      [
+       18,
+       316
+      ],
+      [
+       8,
+       315
+      ],
+      [
+       12,
+       314
+      ],
+      [
+       7,
+       303
+      ],
+      [
+       1,
+       302
+      ],
+      [
+       16,
+       298
+      ],
+      [
+       26,
+       296
+      ],
+      [
+       21,
+       296
+      ],
+      [
+       3,
+       296
+      ],
+      [
+       19,
+       293
+      ],
+      [
+       4,
+       292
+      ],
+      [
+       11,
+       289
+      ],
+      [
+       20,
+       288
+      ],
+      [
+       9,
+       285
+      ],
+      [
+       24,
+       284
+      ],
+      [
+       5,
+       283
+      ],
+      [
+       23,
+       277
+      ],
+      [
+       17,
+       275
+      ],
+      [
+       27,
+       274
+      ],
+      [
+       15,
+       271
+      ],
+      [
+       22,
+       266
+      ],
+      [
+       6,
+       265
+      ],
+      [
+       14,
+       261
+      ],
+      [
+       10,
+       260
+      ],
+      [
+       25,
+       259
+      ],
+      [
+       28,
+       247
+      ],
+      [
+       2,
+       246
+      ]
+     ],
+     "description": "_Sales Team ID. Sales Team ID",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "_CustomerID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 50,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 50,
+     "examples": [
+      15,
+      20,
+      16,
+      48,
+      49
+     ],
+     "top_values": [
+      [
+       12,
+       210
+      ],
+      [
+       18,
+       186
+      ],
+      [
+       3,
+       181
+      ],
+      [
+       29,
+       179
+      ],
+      [
+       11,
+       178
+      ],
+      [
+       39,
+       176
+      ],
+      [
+       34,
+       176
+      ],
+      [
+       17,
+       175
+      ],
+      [
+       32,
+       173
+      ],
+      [
+       48,
+       172
+      ],
+      [
+       13,
+       171
+      ],
+      [
+       9,
+       171
+      ],
+      [
+       47,
+       168
+      ],
+      [
+       20,
+       167
+      ],
+      [
+       4,
+       167
+      ],
+      [
+       19,
+       165
+      ],
+      [
+       23,
+       164
+      ],
+      [
+       21,
+       164
+      ],
+      [
+       50,
+       163
+      ],
+      [
+       25,
+       162
+      ],
+      [
+       42,
+       161
+      ],
+      [
+       41,
+       161
+      ],
+      [
+       30,
+       159
+      ],
+      [
+       5,
+       159
+      ],
+      [
+       10,
+       158
+      ],
+      [
+       46,
+       157
+      ],
+      [
+       14,
+       157
+      ],
+      [
+       45,
+       156
+      ],
+      [
+       44,
+       156
+      ],
+      [
+       36,
+       156
+      ],
+      [
+       33,
+       156
+      ],
+      [
+       26,
+       153
+      ],
+      [
+       7,
+       153
+      ],
+      [
+       49,
+       152
+      ],
+      [
+       37,
+       152
+      ],
+      [
+       31,
+       152
+      ],
+      [
+       1,
+       152
+      ],
+      [
+       43,
+       151
+      ],
+      [
+       24,
+       151
+      ],
+      [
+       40,
+       150
+      ],
+      [
+       38,
+       150
+      ],
+      [
+       35,
+       145
+      ],
+      [
+       28,
+       145
+      ],
+      [
+       27,
+       144
+      ],
+      [
+       6,
+       143
+      ],
+      [
+       15,
+       142
+      ],
+      [
+       8,
+       142
+      ],
+      [
+       22,
+       140
+      ],
+      [
+       16,
+       135
+      ],
+      [
+       2,
+       135
+      ]
+     ],
+     "description": "_Customer ID",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "_StoreID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 367,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 367,
+     "examples": [
+      259,
+      196,
+      213,
+      107,
+      111
+     ],
+     "top_values": [],
+     "description": "_Store ID",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "_ProductID",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 47,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 47,
+     "examples": [
+      12,
+      27,
+      16,
+      23,
+      26
+     ],
+     "top_values": [
+      [
+       37,
+       200
+      ],
+      [
+       4,
+       200
+      ],
+      [
+       8,
+       195
+      ],
+      [
+       23,
+       194
+      ],
+      [
+       27,
+       190
+      ],
+      [
+       40,
+       184
+      ],
+      [
+       38,
+       183
+      ],
+      [
+       46,
+       182
+      ],
+      [
+       11,
+       182
+      ],
+      [
+       12,
+       181
+      ],
+      [
+       25,
+       180
+      ],
+      [
+       41,
+       179
+      ],
+      [
+       28,
+       178
+      ],
+      [
+       17,
+       178
+      ],
+      [
+       16,
+       177
+      ],
+      [
+       29,
+       176
+      ],
+      [
+       13,
+       175
+      ],
+      [
+       5,
+       173
+      ],
+      [
+       2,
+       173
+      ],
+      [
+       45,
+       172
+      ],
+      [
+       3,
+       172
+      ],
+      [
+       36,
+       170
+      ],
+      [
+       20,
+       170
+      ],
+      [
+       9,
+       170
+      ],
+      [
+       31,
+       169
+      ],
+      [
+       35,
+       168
+      ],
+      [
+       22,
+       168
+      ],
+      [
+       21,
+       168
+      ],
+      [
+       10,
+       168
+      ],
+      [
+       33,
+       166
+      ],
+      [
+       7,
+       166
+      ],
+      [
+       43,
+       165
+      ],
+      [
+       39,
+       164
+      ],
+      [
+       19,
+       164
+      ],
+      [
+       24,
+       163
+      ],
+      [
+       14,
+       163
+      ],
+      [
+       1,
+       162
+      ],
+      [
+       26,
+       158
+      ],
+      [
+       15,
+       157
+      ],
+      [
+       30,
+       156
+      ],
+      [
+       18,
+       156
+      ],
+      [
+       6,
+       154
+      ],
+      [
+       47,
+       152
+      ],
+      [
+       34,
+       152
+      ],
+      [
+       42,
+       147
+      ],
+      [
+       32,
+       145
+      ],
+      [
+       44,
+       126
+      ]
+     ],
+     "description": "_Product ID",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Order Quantity",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 8,
+     "examples": [
+      5,
+      3,
+      1,
+      8,
+      4
+     ],
+     "top_values": [
+      [
+       8,
+       1068
+      ],
+      [
+       3,
+       1014
+      ],
+      [
+       1,
+       1014
+      ],
+      [
+       7,
+       1009
+      ],
+      [
+       4,
+       996
+      ],
+      [
+       5,
+       977
+      ],
+      [
+       2,
+       962
+      ],
+      [
+       6,
+       951
+      ]
+     ],
+     "description": "Order Quantity",
+     "value_description": "commonsense evidence:\n1 - 8:\nhigher means order quantity is higher or customer needs more",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Discount Applied",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": 0.05,
+     "max_value": 0.4,
+     "examples": [
+      0.075,
+      0.05,
+      0.1,
+      0.15,
+      0.3
+     ],
+     "top_values": [
+      [
+       0.05,
+       2348
+      ],
+      [
+       0.075,
+       2005
+      ],
+      [
+       0.1,
+       1346
+      ],
+      [
+       0.15,
+       959
+      ],
+      [
+       0.2,
+       666
+      ],
+      [
+       0.4,
+       346
+      ],
+      [
+       0.3,
+       321
+      ]
+     ],
+     "description": "Discount Applied",
+     "value_description": "commonsense evidence:\n0.2: 20% discount",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Unit Price",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 664,
+     "is_unique": false,
+     "min_value": "1,005.00",
+     "max_value": "998.30",
+     "examples": [
+      "1,963.10",
+      "3,939.60",
+      "1,775.50",
+      "2,324.90",
+      "1,822.40"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Unit Cost",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5252,
+     "is_unique": false,
+     "min_value": "1,001.18",
+     "max_value": "999.91",
+     "examples": [
+      "1,001.18",
+      "3,348.66",
+      "781.22",
+      "1,464.69",
+      "1,476.14"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "commonsense evidence:\nnet profit = Unit Price - Unit Cost",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    }
+   ],
+   "primary_key": [
+    "OrderNumber"
+   ],
+   "sample_rows": [
+    {
+     "OrderNumber": "SO - 000101",
+     "Sales Channel": "In-Store",
+     "WarehouseCode": "WARE-UHY1004",
+     "ProcuredDate": "12/31/17",
+     "OrderDate": "5/31/18",
+     "ShipDate": "6/14/18",
+     "DeliveryDate": "6/19/18",
+     "CurrencyCode": "USD",
+     "_SalesTeamID": 6,
+     "_CustomerID": 15,
+     "_StoreID": 259,
+     "_ProductID": 12,
+     "Order Quantity": 5,
+     "Discount Applied": 0.075,
+     "Unit Price": "1,963.10",
+     "Unit Cost": "1,001.18"
+    },
+    {
+     "OrderNumber": "SO - 000102",
+     "Sales Channel": "Online",
+     "WarehouseCode": "WARE-NMK1003",
+     "ProcuredDate": "12/31/17",
+     "OrderDate": "5/31/18",
+     "ShipDate": "6/22/18",
+     "DeliveryDate": "7/2/18",
+     "CurrencyCode": "USD",
+     "_SalesTeamID": 14,
+     "_CustomerID": 20,
+     "_StoreID": 196,
+     "_ProductID": 27,
+     "Order Quantity": 3,
+     "Discount Applied": 0.075,
+     "Unit Price": "3,939.60",
+     "Unit Cost": "3,348.66"
+    },
+    {
+     "OrderNumber": "SO - 000103",
+     "Sales Channel": "Distributor",
+     "WarehouseCode": "WARE-UHY1004",
+     "ProcuredDate": "12/31/17",
+     "OrderDate": "5/31/18",
+     "ShipDate": "6/21/18",
+     "DeliveryDate": "7/1/18",
+     "CurrencyCode": "USD",
+     "_SalesTeamID": 21,
+     "_CustomerID": 16,
+     "_StoreID": 213,
+     "_ProductID": 16,
+     "Order Quantity": 1,
+     "Discount Applied": 0.05,
+     "Unit Price": "1,775.50",
+     "Unit Cost": "781.22"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Sales Team",
+   "row_count": 28,
+   "stats_rows": 28,
+   "columns": [
+    {
+     "name": "SalesTeamID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 28,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 28,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "SalesTeam ID. unique sales team id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Sales Team",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 28,
+     "is_unique": true,
+     "min_value": "Adam Hernandez",
+     "max_value": "Todd Roberts",
+     "examples": [
+      "Adam Hernandez",
+      "Keith Griffin",
+      "Jerry Green",
+      "Chris Armstrong",
+      "Stephen Payne"
+     ],
+     "top_values": [
+      [
+       "Todd Roberts",
+       1
+      ],
+      [
+       "Stephen Payne",
+       1
+      ],
+      [
+       "Shawn Wallace",
+       1
+      ],
+      [
+       "Shawn Torres",
+       1
+      ],
+      [
+       "Shawn Cook",
+       1
+      ],
+      [
+       "Samuel Fowler",
+       1
+      ],
+      [
+       "Roy Rice",
+       1
+      ],
+      [
+       "Roger Alexander",
+       1
+      ],
+      [
+       "Paul Holmes",
+       1
+      ],
+      [
+       "Patrick Graham",
+       1
+      ],
+      [
+       "Nicholas Cunningham",
+       1
+      ],
+      [
+       "Keith Griffin",
+       1
+      ],
+      [
+       "Joshua Ryan",
+       1
+      ],
+      [
+       "Joshua Little",
+       1
+      ],
+      [
+       "Joshua Bennett",
+       1
+      ],
+      [
+       "Jonathan Hawkins",
+       1
+      ],
+      [
+       "Joe Price",
+       1
+      ],
+      [
+       "Jerry Green",
+       1
+      ],
+      [
+       "George Lewis",
+       1
+      ],
+      [
+       "Frank Brown",
+       1
+      ],
+      [
+       "Douglas Tucker",
+       1
+      ],
+      [
+       "Donald Reynolds",
+       1
+      ],
+      [
+       "Chris Armstrong",
+       1
+      ],
+      [
+       "Carlos Miller",
+       1
+      ],
+      [
+       "Carl Nguyen",
+       1
+      ],
+      [
+       "Anthony Torres",
+       1
+      ],
+      [
+       "Anthony Berry",
+       1
+      ],
+      [
+       "Adam Hernandez",
+       1
+      ]
+     ],
+     "description": "sales team names",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "Midwest",
+     "max_value": "West",
+     "examples": [
+      "Northeast",
+      "West",
+      "South",
+      "Midwest"
+     ],
+     "top_values": [
+      [
+       "Midwest",
+       8
+      ],
+      [
+       "West",
+       7
+      ],
+      [
+       "Northeast",
+       7
+      ],
+      [
+       "South",
+       6
+      ]
+     ],
+     "description": "the region where the state is located in",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "SalesTeamID"
+   ],
+   "sample_rows": [
+    {
+     "SalesTeamID": 1,
+     "Sales Team": "Adam Hernandez",
+     "Region": "Northeast"
+    },
+    {
+     "SalesTeamID": 2,
+     "Sales Team": "Keith Griffin",
+     "Region": "Northeast"
+    },
+    {
+     "SalesTeamID": 3,
+     "Sales Team": "Jerry Green",
+     "Region": "West"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "Store Locations",
+   "row_count": 367,
+   "stats_rows": 367,
+   "columns": [
+    {
+     "name": "StoreID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 367,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 367,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique store id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "City Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 351,
+     "is_unique": false,
+     "min_value": "Abilene",
+     "max_value": "York",
+     "examples": [
+      "Birmingham",
+      "Huntsville",
+      "Mobile",
+      "Montgomery",
+      "Little Rock"
+     ],
+     "top_values": [],
+     "description": "City Name",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "County",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 228,
+     "is_unique": false,
+     "min_value": "Ada County",
+     "max_value": "Yellowstone County",
+     "examples": [
+      "Shelby County/Jefferson County",
+      "Limestone County/Madison County",
+      "Mobile County",
+      "Montgomery County",
+      "Pulaski County"
+     ],
+     "top_values": [],
+     "description": "full county name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "StateCode",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 45,
+     "is_unique": false,
+     "min_value": "AL",
+     "max_value": "WI",
+     "examples": [
+      "AL",
+      "AR",
+      "AZ",
+      "CA",
+      "CO"
+     ],
+     "top_values": [
+      [
+       "CA",
+       74
+      ],
+      [
+       "TX",
+       38
+      ],
+      [
+       "IL",
+       30
+      ],
+      [
+       "FL",
+       25
+      ],
+      [
+       "NY",
+       20
+      ],
+      [
+       "IN",
+       13
+      ],
+      [
+       "CO",
+       13
+      ],
+      [
+       "CT",
+       10
+      ],
+      [
+       "AZ",
+       10
+      ],
+      [
+       "NC",
+       9
+      ],
+      [
+       "WA",
+       8
+      ],
+      [
+       "VA",
+       8
+      ],
+      [
+       "NV",
+       8
+      ],
+      [
+       "GA",
+       7
+      ],
+      [
+       "TN",
+       6
+      ],
+      [
+       "OH",
+       6
+      ],
+      [
+       "NJ",
+       6
+      ],
+      [
+       "MI",
+       6
+      ],
+      [
+       "OR",
+       5
+      ],
+      [
+       "MO",
+       5
+      ],
+      [
+       "MA",
+       5
+      ],
+      [
+       "LA",
+       5
+      ],
+      [
+       "KS",
+       5
+      ],
+      [
+       "UT",
+       4
+      ],
+      [
+       "OK",
+       4
+      ],
+      [
+       "AL",
+       4
+      ],
+      [
+       "WI",
+       3
+      ],
+      [
+       "SC",
+       3
+      ],
+      [
+       "PA",
+       3
+      ],
+      [
+       "MN",
+       3
+      ],
+      [
+       "IA",
+       3
+      ],
+      [
+       "NM",
+       2
+      ],
+      [
+       "NE",
+       2
+      ],
+      [
+       "MD",
+       2
+      ],
+      [
+       "KY",
+       2
+      ],
+      [
+       "SD",
+       1
+      ],
+      [
+       "RI",
+       1
+      ],
+      [
+       "NH",
+       1
+      ],
+      [
+       "ND",
+       1
+      ],
+      [
+       "MT",
+       1
+      ],
+      [
+       "MS",
+       1
+      ],
+      [
+       "ID",
+       1
+      ],
+      [
+       "HI",
+       1
+      ],
+      [
+       "DC",
+       1
+      ],
+      [
+       "AR",
+       1
+      ]
+     ],
+     "description": "state code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "State",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 45,
+     "is_unique": false,
+     "min_value": "Alabama",
+     "max_value": "Wisconsin",
+     "examples": [
+      "Alabama",
+      "Arkansas",
+      "Arizona",
+      "California",
+      "Colorado"
+     ],
+     "top_values": [
+      [
+       "California",
+       74
+      ],
+      [
+       "Texas",
+       38
+      ],
+      [
+       "Illinois",
+       30
+      ],
+      [
+       "Florida",
+       25
+      ],
+      [
+       "New York",
+       20
+      ],
+      [
+       "Indiana",
+       13
+      ],
+      [
+       "Colorado",
+       13
+      ],
+      [
+       "Connecticut",
+       10
+      ],
+      [
+       "Arizona",
+       10
+      ],
+      [
+       "North Carolina",
+       9
+      ],
+      [
+       "Washington",
+       8
+      ],
+      [
+       "Virginia",
+       8
+      ],
+      [
+       "Nevada",
+       8
+      ],
+      [
+       "Georgia",
+       7
+      ],
+      [
+       "Tennessee",
+       6
+      ],
+      [
+       "Ohio",
+       6
+      ],
+      [
+       "New Jersey",
+       6
+      ],
+      [
+       "Michigan",
+       6
+      ],
+      [
+       "Oregon",
+       5
+      ],
+      [
+       "Missouri",
+       5
+      ],
+      [
+       "Massachusetts",
+       5
+      ],
+      [
+       "Louisiana",
+       5
+      ],
+      [
+       "Kansas",
+       5
+      ],
+      [
+       "Utah",
+       4
+      ],
+      [
+       "Oklahoma",
+       4
+      ],
+      [
+       "Alabama",
+       4
+      ],
+      [
+       "Wisconsin",
+       3
+      ],
+      [
+       "South Carolina",
+       3
+      ],
+      [
+       "Pennsylvania",
+       3
+      ],
+      [
+       "Minnesota",
+       3
+      ],
+      [
+       "Iowa",
+       3
+      ],
+      [
+       "New Mexico",
+       2
+      ],
+      [
+       "Nebraska",
+       2
+      ],
+      [
+       "Maryland",
+       2
+      ],
+      [
+       "Kentucky",
+       2
+      ],
+      [
+       "South Dakota",
+       1
+      ],
+      [
+       "Rhode Island",
+       1
+      ],
+      [
+       "North Dakota",
+       1
+      ],
+      [
+       "New Hampshire",
+       1
+      ],
+      [
+       "Montana",
+       1
+      ],
+      [
+       "Mississippi",
+       1
+      ],
+      [
+       "Idaho",
+       1
+      ],
+      [
+       "Hawaii",
+       1
+      ],
+      [
+       "District of Columbia",
+       1
+      ],
+      [
+       "Arkansas",
+       1
+      ]
+     ],
+     "description": "full state name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": "Borough",
+     "max_value": "Urban County ",
+     "examples": [
+      "City",
+      "Town",
+      "CDP",
+      "Unified Government",
+      "Consolidated Government"
+     ],
+     "top_values": [
+      [
+       "City",
+       292
+      ],
+      [
+       "Township",
+       33
+      ],
+      [
+       "Town",
+       18
+      ],
+      [
+       "CDP",
+       14
+      ],
+      [
+       "Borough",
+       5
+      ],
+      [
+       "Urban County ",
+       1
+      ],
+      [
+       "Unified Government",
+       1
+      ],
+      [
+       "Other",
+       1
+      ],
+      [
+       "Metropolitan Government",
+       1
+      ],
+      [
+       "Consolidated Government",
+       1
+      ]
+     ],
+     "description": "type of the store",
+     "value_description": "City\nTown\nCDP (customer data platform)\nUnified Government\nConsolidated Government\nOther\nTownship\nUrban County \nBorough\nMetropolitan Government",
+     "notes": []
+    },
+    {
+     "name": "Latitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 365,
+     "is_unique": false,
+     "min_value": 21.32435,
+     "max_value": 47.97898,
+     "examples": [
+      33.52744,
+      34.69901,
+      30.69436,
+      32.36681,
+      34.74648
+     ],
+     "top_values": [],
+     "description": "Latitude",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Longitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 367,
+     "is_unique": true,
+     "min_value": -157.84764,
+     "max_value": -71.05977,
+     "examples": [
+      -86.79905,
+      -86.67298,
+      -88.04305,
+      -86.29997,
+      -92.28959
+     ],
+     "top_values": [],
+     "description": "Longitude",
+     "value_description": "commonsense evidence:\ncoordinates or detailed position: (Latitude, Longitude)",
+     "notes": []
+    },
+    {
+     "name": "AreaCode",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 177,
+     "is_unique": false,
+     "min_value": 202,
+     "max_value": 979,
+     "examples": [
+      205,
+      256,
+      251,
+      334,
+      501
+     ],
+     "top_values": [],
+     "description": "Area Code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 361,
+     "is_unique": false,
+     "min_value": 100242,
+     "max_value": 8550405,
+     "examples": [
+      212461,
+      190582,
+      194288,
+      200602,
+      197992
+     ],
+     "top_values": [],
+     "description": "Population",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Household Income",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 362,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 3113535,
+     "examples": [
+      89972,
+      78554,
+      76170,
+      79866,
+      79902
+     ],
+     "top_values": [],
+     "description": "Household Income",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Median Income",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 357,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 114098,
+     "examples": [
+      31061,
+      48775,
+      38776,
+      42927,
+      46085
+     ],
+     "top_values": [],
+     "description": "Median Income",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Land Area",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 362,
+     "is_unique": false,
+     "min_value": 16556713,
+     "max_value": 1935873371,
+     "examples": [
+      378353942,
+      552604579,
+      361044263,
+      413985435,
+      307398785
+     ],
+     "top_values": [],
+     "description": "Land Area",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Water Area",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 346,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 852118618,
+     "examples": [
+      6591013,
+      3452021,
+      105325210,
+      4411954,
+      6758644
+     ],
+     "top_values": [],
+     "description": "Water Area",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Time Zone",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": "America/Boise",
+     "max_value": "Pacific/Honolulu",
+     "examples": [
+      "America/Chicago",
+      "America/Phoenix",
+      "America/Los Angeles",
+      "America/Denver",
+      "America/New York"
+     ],
+     "top_values": [
+      [
+       "America/Chicago",
+       112
+      ],
+      [
+       "America/New York",
+       111
+      ],
+      [
+       "America/Los Angeles",
+       95
+      ],
+      [
+       "America/Denver",
+       21
+      ],
+      [
+       "America/Phoenix",
+       10
+      ],
+      [
+       "America/Indiana/Indianapolis",
+       10
+      ],
+      [
+       "America/Detroit",
+       6
+      ],
+      [
+       "Pacific/Honolulu",
+       1
+      ],
+      [
+       "America/Boise",
+       1
+      ]
+     ],
+     "description": "Time Zone",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    }
+   ],
+   "primary_key": [
+    "StoreID"
+   ],
+   "sample_rows": [
+    {
+     "StoreID": 1,
+     "City Name": "Birmingham",
+     "County": "Shelby County/Jefferson County",
+     "StateCode": "AL",
+     "State": "Alabama",
+     "Type": "City",
+     "Latitude": 33.52744,
+     "Longitude": -86.79905,
+     "AreaCode": 205,
+     "Population": 212461,
+     "Household Income": 89972,
+     "Median Income": 31061,
+     "Land Area": 378353942,
+     "Water Area": 6591013,
+     "Time Zone": "America/Chicago"
+    },
+    {
+     "StoreID": 2,
+     "City Name": "Huntsville",
+     "County": "Limestone County/Madison County",
+     "StateCode": "AL",
+     "State": "Alabama",
+     "Type": "City",
+     "Latitude": 34.69901,
+     "Longitude": -86.67298,
+     "AreaCode": 256,
+     "Population": 190582,
+     "Household Income": 78554,
+     "Median Income": 48775,
+     "Land Area": 552604579,
+     "Water Area": 3452021,
+     "Time Zone": "America/Chicago"
+    },
+    {
+     "StoreID": 3,
+     "City Name": "Mobile",
+     "County": "Mobile County",
+     "StateCode": "AL",
+     "State": "Alabama",
+     "Type": "City",
+     "Latitude": 30.69436,
+     "Longitude": -88.04305,
+     "AreaCode": 251,
+     "Population": 194288,
+     "Household Income": 76170,
+     "Median Income": 38776,
+     "Land Area": 361044263,
+     "Water Area": 105325210,
+     "Time Zone": "America/Chicago"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "Sales Orders",
+   "from_column": "_ProductID",
+   "to_table": "Products",
+   "to_column": "ProductID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Sales Orders",
+   "from_column": "_StoreID",
+   "to_table": "Store Locations",
+   "to_column": "StoreID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Sales Orders",
+   "from_column": "_CustomerID",
+   "to_table": "Customers",
+   "to_column": "CustomerID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Sales Orders",
+   "from_column": "_SalesTeamID",
+   "to_table": "Sales Team",
+   "to_column": "SalesTeamID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Store Locations",
+   "from_column": "StateCode",
+   "to_table": "Regions",
+   "to_column": "StateCode",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "Store Locations",
+   "from_column": "State",
+   "to_table": "Regions",
+   "to_column": "State",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

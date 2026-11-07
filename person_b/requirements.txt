@@ -1,0 +1,7 @@
+# Component B (schema_memory.py) uses only the Python standard library (Python >= 3.10).
+# Nothing to install for the scout, data cards, notebook, retrieval or smoke test.
+#
+# Optional, for later stretch work (uncomment when needed):
+# jsonschema>=4.21        # strict validation against data_card_schema/data_card.schema.json
+# sentence-transformers>=3.0   # embedding-based card retrieval (can use the GPU)
+# torch                   # install the CUDA build from pytorch.org for the RTX GPU

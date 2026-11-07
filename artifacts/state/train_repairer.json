@@ -1,0 +1,1 @@
+{"name": "repairer", "step": 18, "total": 18, "loss": 0.04096785932779312, "elapsed_s": 42.21797800064087, "eta_s": 0.0, "updated": 1793998648.4319673, "lr": 1e-05, "grad_norm": 0.2098492830991745, "epoch": 2.0, "val_loss": null}

@@ -1,0 +1,946 @@
+{
+ "db_id": "language_corpus",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/language_corpus/language_corpus.sqlite",
+ "fingerprint": "2383298560-1793993021549346221-v1.0",
+ "created_at": "2026-11-06T19:25:38+00:00",
+ "profile_seconds": 42.588,
+ "tables": [
+  {
+   "name": "biwords",
+   "row_count": 21587486,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "lid",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       200000
+      ]
+     ],
+     "description": "language id",
+     "value_description": "commonsense evidence: \nlid=1 means it's Catalan language.",
+     "notes": []
+    },
+    {
+     "name": "w1st",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 34,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 34,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       34,
+       139967
+      ],
+      [
+       3,
+       7967
+      ],
+      [
+       26,
+       7696
+      ],
+      [
+       5,
+       7456
+      ],
+      [
+       4,
+       5352
+      ],
+      [
+       23,
+       5304
+      ],
+      [
+       24,
+       3764
+      ],
+      [
+       11,
+       3504
+      ],
+      [
+       8,
+       3183
+      ],
+      [
+       17,
+       2824
+      ],
+      [
+       15,
+       2506
+      ],
+      [
+       32,
+       1839
+      ],
+      [
+       12,
+       1636
+      ],
+      [
+       2,
+       1205
+      ],
+      [
+       33,
+       1021
+      ],
+      [
+       14,
+       870
+      ],
+      [
+       28,
+       681
+      ],
+      [
+       6,
+       675
+      ],
+      [
+       20,
+       658
+      ],
+      [
+       13,
+       343
+      ],
+      [
+       21,
+       307
+      ],
+      [
+       16,
+       221
+      ],
+      [
+       9,
+       208
+      ],
+      [
+       10,
+       201
+      ],
+      [
+       22,
+       178
+      ],
+      [
+       7,
+       146
+      ],
+      [
+       27,
+       83
+      ],
+      [
+       29,
+       73
+      ],
+      [
+       1,
+       44
+      ],
+      [
+       18,
+       25
+      ],
+      [
+       19,
+       23
+      ],
+      [
+       31,
+       22
+      ],
+      [
+       25,
+       13
+      ],
+      [
+       30,
+       5
+      ]
+     ],
+     "description": "The word id of the first word of the biwords pair.",
+     "value_description": "The value is unique.",
+     "notes": []
+    },
+    {
+     "name": "w2nd",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 168942,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 2763946,
+     "examples": [
+      2,
+      4,
+      25,
+      34,
+      51
+     ],
+     "top_values": [],
+     "description": "The word id of the second word of the biwords pair.",
+     "value_description": "The value is unique.",
+     "notes": []
+    },
+    {
+     "name": "occurrences",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2680,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2974326,
+     "examples": [
+      4,
+      3,
+      13,
+      29,
+      14
+     ],
+     "top_values": [],
+     "description": "times of this pair appears in this language/page",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "lid",
+    "w1st",
+    "w2nd"
+   ],
+   "sample_rows": [
+    {
+     "lid": 1,
+     "w1st": 1,
+     "w2nd": 2,
+     "occurrences": 4
+    },
+    {
+     "lid": 1,
+     "w1st": 1,
+     "w2nd": 4,
+     "occurrences": 3
+    },
+    {
+     "lid": 1,
+     "w1st": 1,
+     "w2nd": 25,
+     "occurrences": 13
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 21,587,486 rows"
+   ]
+  },
+  {
+   "name": "langs",
+   "row_count": 1,
+   "stats_rows": 1,
+   "columns": [
+    {
+     "name": "lid",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 1,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "language id",
+     "value_description": "commonsense evidence: \nlid=1 means it's the Catalan language.",
+     "notes": []
+    },
+    {
+     "name": "lang",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": true,
+     "min_value": "ca",
+     "max_value": "ca",
+     "examples": [
+      "ca"
+     ],
+     "top_values": [
+      [
+       "ca",
+       1
+      ]
+     ],
+     "description": "language name",
+     "value_description": "commonsense evidence:\n ca means Catalan language.",
+     "notes": []
+    },
+    {
+     "name": "locale",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": true,
+     "min_value": "ca_ES",
+     "max_value": "ca_ES",
+     "examples": [
+      "ca_ES"
+     ],
+     "top_values": [
+      [
+       "ca_ES",
+       1
+      ]
+     ],
+     "description": "The locale of the language",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "pages",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": true,
+     "min_value": 1129144,
+     "max_value": 1129144,
+     "examples": [
+      1129144
+     ],
+     "top_values": [
+      [
+       1129144,
+       1
+      ]
+     ],
+     "description": "total pages of Wikipedia in this language",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "words",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": true,
+     "min_value": 2764996,
+     "max_value": 2764996,
+     "examples": [
+      2764996
+     ],
+     "top_values": [
+      [
+       2764996,
+       1
+      ]
+     ],
+     "description": "total number of words in this pages",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "lid"
+   ],
+   "sample_rows": [
+    {
+     "lid": 1,
+     "lang": "ca",
+     "locale": "ca_ES",
+     "pages": 1129144,
+     "words": 2764996
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "langs_words",
+   "row_count": 2764996,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "lid",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       200000
+      ]
+     ],
+     "description": "language id",
+     "value_description": "commonsense evidence: \nlid=1 means it's Catalan language.",
+     "notes": []
+    },
+    {
+     "name": "wid",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 200000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "The word id of the Catalan language",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "occurrences",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9303,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 19877053,
+     "examples": [
+      242,
+      16841,
+      48700,
+      49897,
+      60220
+     ],
+     "top_values": [],
+     "description": "repetitions of this word in this language",
+     "value_description": "it's INTEGER and DEFAULT is 0.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "lid",
+    "wid"
+   ],
+   "sample_rows": [
+    {
+     "lid": 1,
+     "wid": 1,
+     "occurrences": 242
+    },
+    {
+     "lid": 1,
+     "wid": 2,
+     "occurrences": 16841
+    },
+    {
+     "lid": 1,
+     "wid": 3,
+     "occurrences": 48700
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 2,764,996 rows"
+   ]
+  },
+  {
+   "name": "pages",
+   "row_count": 1129144,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "pid",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 200000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "page id of Wikipedia about Catalan language",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lid",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       200000
+      ]
+     ],
+     "description": "language id",
+     "value_description": "commonsense evidence: \nlid=1 means it's Catalan language",
+     "notes": []
+    },
+    {
+     "name": "page",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 318004,
+     "examples": [
+      1,
+      2,
+      8,
+      9,
+      10
+     ],
+     "top_values": [],
+     "description": "wikipedia page id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "revision",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 106601,
+     "max_value": 28463717,
+     "examples": [
+      28236978,
+      24086480,
+      26230310,
+      28374033,
+      28336725
+     ],
+     "top_values": [],
+     "description": "wikipedia revision page id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": "!",
+     "max_value": "ﾖ",
+     "examples": [
+      "Àbac",
+      "Abadia",
+      "Adagi",
+      "Adam",
+      "Addicció"
+     ],
+     "top_values": [],
+     "description": "The title of this Catalan language Wikipedia page",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "words",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2504,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 7506,
+     "examples": [
+      1081,
+      68,
+      304,
+      453,
+      1468
+     ],
+     "top_values": [],
+     "description": "number of different words in this page",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "pid"
+   ],
+   "sample_rows": [
+    {
+     "pid": 1,
+     "lid": 1,
+     "page": 1,
+     "revision": 28236978,
+     "title": "Àbac",
+     "words": 1081
+    },
+    {
+     "pid": 2,
+     "lid": 1,
+     "page": 2,
+     "revision": 24086480,
+     "title": "Abadia",
+     "words": 68
+    },
+    {
+     "pid": 3,
+     "lid": 1,
+     "page": 8,
+     "revision": 26230310,
+     "title": "Adagi",
+     "words": 304
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 1,129,144 rows"
+   ]
+  },
+  {
+   "name": "pages_words",
+   "row_count": 129131916,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "pid",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 336,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 336,
+     "examples": [
+      1
+     ],
+     "top_values": [],
+     "description": "page id of Wikipedia about Catalan language",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "wid",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 53644,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 53644,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "The word id of the Catalan language",
+     "value_description": "The value is unique.",
+     "notes": []
+    },
+    {
+     "name": "occurrences",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 322,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1240,
+     "examples": [
+      30,
+      8,
+      2,
+      5,
+      21
+     ],
+     "top_values": [],
+     "description": "times of this word appears into this page",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "pid",
+    "wid"
+   ],
+   "sample_rows": [
+    {
+     "pid": 1,
+     "wid": 1,
+     "occurrences": 30
+    },
+    {
+     "pid": 1,
+     "wid": 2,
+     "occurrences": 8
+    },
+    {
+     "pid": 1,
+     "wid": 3,
+     "occurrences": 2
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 129,131,916 rows"
+   ]
+  },
+  {
+   "name": "words",
+   "row_count": 2764996,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "wid",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 200000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "The word id of the Catalan language",
+     "value_description": "The value is unique.",
+     "notes": []
+    },
+    {
+     "name": "word",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": "+,4",
+     "max_value": "𒀯𒀳",
+     "examples": [
+      "àbac",
+      "xinès",
+      "llatí",
+      "grec",
+      "antic"
+     ],
+     "top_values": [],
+     "description": "The word itself",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "occurrences",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9303,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 19877053,
+     "examples": [
+      242,
+      16841,
+      48700,
+      49897,
+      60220
+     ],
+     "top_values": [],
+     "description": "The occurrences of the specific word",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "wid"
+   ],
+   "sample_rows": [
+    {
+     "wid": 1,
+     "word": "àbac",
+     "occurrences": 242
+    },
+    {
+     "wid": 2,
+     "word": "xinès",
+     "occurrences": 16841
+    },
+    {
+     "wid": 3,
+     "word": "llatí",
+     "occurrences": 48700
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 2,764,996 rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "biwords",
+   "from_column": "w2nd",
+   "to_table": "words",
+   "to_column": "wid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "biwords",
+   "from_column": "w1st",
+   "to_table": "words",
+   "to_column": "wid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "biwords",
+   "from_column": "lid",
+   "to_table": "langs",
+   "to_column": "lid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "langs_words",
+   "from_column": "wid",
+   "to_table": "words",
+   "to_column": "wid",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "langs_words",
+   "from_column": "lid",
+   "to_table": "langs",
+   "to_column": "lid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "pages",
+   "from_column": "lid",
+   "to_table": "langs",
+   "to_column": "lid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "pages_words",
+   "from_column": "wid",
+   "to_table": "words",
+   "to_column": "wid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "pages_words",
+   "from_column": "pid",
+   "to_table": "pages",
+   "to_column": "pid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "pages_words",
+   "from_column": "wid",
+   "to_table": "langs_words",
+   "to_column": "wid",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

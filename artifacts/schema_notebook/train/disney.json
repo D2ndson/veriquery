@@ -1,0 +1,2154 @@
+{
+ "db_id": "disney",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/disney/disney.sqlite",
+ "fingerprint": "258048-1793993065801239392-v1.0",
+ "created_at": "2026-11-06T19:24:51+00:00",
+ "profile_seconds": 0.014,
+ "tables": [
+  {
+   "name": "characters",
+   "row_count": 56,
+   "stats_rows": 56,
+   "columns": [
+    {
+     "name": "movie_title",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 56,
+     "is_unique": true,
+     "min_value": "Aladdin",
+     "max_value": "Zootopia",
+     "examples": [
+      "Snow White and the Seven Dwarfs",
+      "Pinocchio",
+      "Fantasia",
+      "Dumbo",
+      "Bambi"
+     ],
+     "top_values": [],
+     "description": "movie title. unique title of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "release_date",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 56,
+     "is_unique": true,
+     "min_value": "1-Nov-03",
+     "max_value": "8-Nov-73",
+     "examples": [
+      "21-Dec-37",
+      "7-Feb-40",
+      "13-Nov-40",
+      "23-Oct-41",
+      "13-Aug-42"
+     ],
+     "top_values": [],
+     "description": "The release date of the movie.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "hero",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0714,
+     "distinct_count": 49,
+     "is_unique": false,
+     "min_value": "Ace Cluck",
+     "max_value": "Winnie the Pooh",
+     "examples": [
+      "Snow White",
+      "Pinocchio",
+      "Dumbo",
+      "Bambi",
+      "Donald Duck"
+     ],
+     "top_values": [
+      [
+       "Winnie the Pooh",
+       2
+      ],
+      [
+       "Donald Duck",
+       2
+      ],
+      [
+       "Bernard and Miss Bianca",
+       2
+      ],
+      [
+       "Tod and Copper",
+       1
+      ],
+      [
+       "Tiana",
+       1
+      ],
+      [
+       "Thomas and Duchess",
+       1
+      ],
+      [
+       "Tarzan",
+       1
+      ],
+      [
+       "Taran",
+       1
+      ],
+      [
+       "Snow White",
+       1
+      ],
+      [
+       "Simba",
+       1
+      ],
+      [
+       "Robin Hood",
+       1
+      ],
+      [
+       "Rapunzel",
+       1
+      ],
+      [
+       "Ralph",
+       1
+      ],
+      [
+       "Quasimodo",
+       1
+      ],
+      [
+       "Pongo",
+       1
+      ],
+      [
+       "Pocahontas",
+       1
+      ],
+      [
+       "Pinocchio",
+       1
+      ],
+      [
+       "Peter Pan",
+       1
+      ],
+      [
+       "Oliver",
+       1
+      ],
+      [
+       "Mulan",
+       1
+      ],
+      [
+       "Mr. Toad and Ichabod Crane",
+       1
+      ],
+      [
+       "Mowgli",
+       1
+      ],
+      [
+       "Moana",
+       1
+      ],
+      [
+       "Milo Thatch",
+       1
+      ],
+      [
+       "Mickey Mouse",
+       1
+      ],
+      [
+       "Maggie",
+       1
+      ],
+      [
+       "Lilo and Stitch",
+       1
+      ],
+      [
+       "Lewis",
+       1
+      ],
+      [
+       "Lady and Tramp",
+       1
+      ],
+      [
+       "Kuzco",
+       1
+      ],
+      [
+       "Kenai",
+       1
+      ],
+      [
+       "Judy Hopps",
+       1
+      ],
+      [
+       "Jim Hawkins",
+       1
+      ],
+      [
+       "Hiro Hamada",
+       1
+      ],
+      [
+       "Hercules",
+       1
+      ],
+      [
+       "Elsa",
+       1
+      ],
+      [
+       "Dumbo",
+       1
+      ],
+      [
+       "Cinderella",
+       1
+      ],
+      [
+       "Bolt",
+       1
+      ],
+      [
+       "Belle",
+       1
+      ],
+      [
+       "Basil",
+       1
+      ],
+      [
+       "Bambi",
+       1
+      ],
+      [
+       "Aurora",
+       1
+      ],
+      [
+       "Arthur",
+       1
+      ],
+      [
+       "Ariel",
+       1
+      ],
+      [
+       "Alice",
+       1
+      ],
+      [
+       "Aladdin",
+       1
+      ],
+      [
+       "Aladar",
+       1
+      ],
+      [
+       "Ace Cluck",
+       1
+      ]
+     ],
+     "description": "The main character of the movie.",
+     "value_description": "commonsense evidence:\n\nround role",
+     "notes": []
+    },
+    {
+     "name": "villian",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.1786,
+     "distinct_count": 46,
+     "is_unique": true,
+     "min_value": "Alameda Slim",
+     "max_value": "Yzma",
+     "examples": [
+      "Evil Queen",
+      "Stromboli",
+      "Chernabog",
+      "Ringmaster",
+      "Hunter"
+     ],
+     "top_values": [
+      [
+       "Yzma",
+       1
+      ],
+      [
+       "Willie the Giant",
+       1
+      ],
+      [
+       "Ursula",
+       1
+      ],
+      [
+       "Turbo",
+       1
+      ],
+      [
+       "Sykes",
+       1
+      ],
+      [
+       "Stromboli",
+       1
+      ],
+      [
+       "Si and Am",
+       1
+      ],
+      [
+       "Shan Yu",
+       1
+      ],
+      [
+       "Scar",
+       1
+      ],
+      [
+       "Ringmaster",
+       1
+      ],
+      [
+       "Queen of Hearts",
+       1
+      ],
+      [
+       "Professor Ratigan",
+       1
+      ],
+      [
+       "Professor Callaghan",
+       1
+      ],
+      [
+       "Prince John",
+       1
+      ],
+      [
+       "Prince Hans",
+       1
+      ],
+      [
+       "Percival C. McLeach",
+       1
+      ],
+      [
+       "Mr. Winkie and The Headless Horseman",
+       1
+      ],
+      [
+       "Mother Gothel",
+       1
+      ],
+      [
+       "Maleficent",
+       1
+      ],
+      [
+       "Madame Medusa",
+       1
+      ],
+      [
+       "Madam Mim",
+       1
+      ],
+      [
+       "Lady Tremaine",
+       1
+      ],
+      [
+       "Kron",
+       1
+      ],
+      [
+       "Kaa and Shere Khan",
+       1
+      ],
+      [
+       "John Silver",
+       1
+      ],
+      [
+       "Jafar",
+       1
+      ],
+      [
+       "Hunter",
+       1
+      ],
+      [
+       "Horned King",
+       1
+      ],
+      [
+       "Hades",
+       1
+      ],
+      [
+       "Governor Ratcliffe",
+       1
+      ],
+      [
+       "Gaston",
+       1
+      ],
+      [
+       "Foxy Loxy",
+       1
+      ],
+      [
+       "Evil Queen",
+       1
+      ],
+      [
+       "Edgar Balthazar",
+       1
+      ],
+      [
+       "Dr. Facilier",
+       1
+      ],
+      [
+       "Dr. Calico",
+       1
+      ],
+      [
+       "Doris",
+       1
+      ],
+      [
+       "Denahi",
+       1
+      ],
+      [
+       "Cruella de Vil",
+       1
+      ],
+      [
+       "Commander Rourke",
+       1
+      ],
+      [
+       "Clayton",
+       1
+      ],
+      [
+       "Claude Frollo",
+       1
+      ],
+      [
+       "Chernabog",
+       1
+      ],
+      [
+       "Captain Hook",
+       1
+      ],
+      [
+       "Amos Slade",
+       1
+      ],
+      [
+       "Alameda Slim",
+       1
+      ]
+     ],
+     "description": "The villain of the movie.",
+     "value_description": "a character whose evil actions or motives are important to the plot.",
+     "notes": []
+    },
+    {
+     "name": "song",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.1607,
+     "distinct_count": 47,
+     "is_unique": true,
+     "min_value": "\n",
+     "max_value": "You'll Be in My Heart",
+     "examples": [
+      "Some Day My Prince Will Come",
+      "When You Wish upon a Star",
+      "Baby Mine",
+      "Love Is a Song",
+      "Saludos Amigos\n"
+     ],
+     "top_values": [
+      [
+       "You'll Be in My Heart",
+       1
+      ],
+      [
+       "You Can Fly!",
+       1
+      ],
+      [
+       "Winnie the Pooh\n",
+       1
+      ],
+      [
+       "Winnie the Pooh",
+       1
+      ],
+      [
+       "Where the Dream Takes You",
+       1
+      ],
+      [
+       "When You Wish upon a Star",
+       1
+      ],
+      [
+       "Under the Sea",
+       1
+      ],
+      [
+       "Try Everything",
+       1
+      ],
+      [
+       "The World's Greatest Criminal Mind",
+       1
+      ],
+      [
+       "The Unbirthday Song",
+       1
+      ],
+      [
+       "The Merrily Song",
+       1
+      ],
+      [
+       "The Journey",
+       1
+      ],
+      [
+       "The Bare Necessities\n",
+       1
+      ],
+      [
+       "Sugar Rush",
+       1
+      ],
+      [
+       "Some Day My Prince Will Come",
+       1
+      ],
+      [
+       "Saludos Amigos\n",
+       1
+      ],
+      [
+       "Oo De Lally",
+       1
+      ],
+      [
+       "Once Upon a Time in New York City",
+       1
+      ],
+      [
+       "Once Upon a Dream",
+       1
+      ],
+      [
+       "My Funny Friend and Me\n",
+       1
+      ],
+      [
+       "Love Is a Song",
+       1
+      ],
+      [
+       "Look Through My Eyes",
+       1
+      ],
+      [
+       "Little Wonders",
+       1
+      ],
+      [
+       "Little Toot",
+       1
+      ],
+      [
+       "Let It Go\n",
+       1
+      ],
+      [
+       "Immortals",
+       1
+      ],
+      [
+       "I'm Still Here\n",
+       1
+      ],
+      [
+       "I'll Make a Man Out of You\n",
+       1
+      ],
+      [
+       "I Thought I Lost You",
+       1
+      ],
+      [
+       "I See the Light",
+       1
+      ],
+      [
+       "How Far I'll Go\n",
+       1
+      ],
+      [
+       "Higitus Figitus\n",
+       1
+      ],
+      [
+       "He Mele No Lilo\n",
+       1
+      ],
+      [
+       "God Help the Outcasts",
+       1
+      ],
+      [
+       "Go the Distance",
+       1
+      ],
+      [
+       "Ev'rybody Wants to Be a Cat",
+       1
+      ],
+      [
+       "Cruella De Vil",
+       1
+      ],
+      [
+       "Colors of the Wind",
+       1
+      ],
+      [
+       "Circle of Life",
+       1
+      ],
+      [
+       "Bibbidi-Bobbidi-Boo",
+       1
+      ],
+      [
+       "Best of Friends",
+       1
+      ],
+      [
+       "Bella Notte",
+       1
+      ],
+      [
+       "Be Our Guest",
+       1
+      ],
+      [
+       "Baby Mine",
+       1
+      ],
+      [
+       "Almost There",
+       1
+      ],
+      [
+       "A Whole New World",
+       1
+      ],
+      [
+       "\n",
+       1
+      ]
+     ],
+     "description": "A song associated with the movie.",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "movie_title"
+   ],
+   "sample_rows": [
+    {
+     "movie_title": "Snow White and the Seven Dwarfs",
+     "release_date": "21-Dec-37",
+     "hero": "Snow White",
+     "villian": "Evil Queen",
+     "song": "Some Day My Prince Will Come"
+    },
+    {
+     "movie_title": "Pinocchio",
+     "release_date": "7-Feb-40",
+     "hero": "Pinocchio",
+     "villian": "Stromboli",
+     "song": "When You Wish upon a Star"
+    },
+    {
+     "movie_title": "Fantasia",
+     "release_date": "13-Nov-40",
+     "hero": null,
+     "villian": "Chernabog",
+     "song": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "director",
+   "row_count": 56,
+   "stats_rows": 56,
+   "columns": [
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 56,
+     "is_unique": true,
+     "min_value": "101 Dalmatians",
+     "max_value": "Zootopia",
+     "examples": [
+      "Snow White and the Seven Dwarfs",
+      "Pinocchio",
+      "Fantasia",
+      "Dumbo",
+      "Bambi"
+     ],
+     "top_values": [],
+     "description": "unique movie name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "director",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 29,
+     "is_unique": false,
+     "min_value": "Art Stevens",
+     "max_value": "full credits",
+     "examples": [
+      "David Hand",
+      "Ben Sharpsteen",
+      "full credits",
+      "Jack Kinney",
+      "Norman Ferguson"
+     ],
+     "top_values": [
+      [
+       "Wolfgang Reitherman",
+       7
+      ],
+      [
+       "Ron Clements",
+       7
+      ],
+      [
+       "Jack Kinney",
+       4
+      ],
+      [
+       "Gary Trousdale",
+       3
+      ],
+      [
+       "Clyde Geronimi",
+       3
+      ],
+      [
+       "full credits",
+       2
+      ],
+      [
+       "Stephen J. Anderson",
+       2
+      ],
+      [
+       "Mike Gabriel",
+       2
+      ],
+      [
+       "Mark Dindal",
+       2
+      ],
+      [
+       "Hamilton Luske",
+       2
+      ],
+      [
+       "David Hand",
+       2
+      ],
+      [
+       "Chris Buck",
+       2
+      ],
+      [
+       "Ben Sharpsteen",
+       2
+      ],
+      [
+       "Will Finn",
+       1
+      ],
+      [
+       "Wilfred Jackson",
+       1
+      ],
+      [
+       "Ted Berman",
+       1
+      ],
+      [
+       "Roger Allers",
+       1
+      ],
+      [
+       "Robert Walker",
+       1
+      ],
+      [
+       "Rich Moore",
+       1
+      ],
+      [
+       "Ralph Zondag",
+       1
+      ],
+      [
+       "Norman Ferguson",
+       1
+      ],
+      [
+       "Nathan Greno",
+       1
+      ],
+      [
+       "George Scribner",
+       1
+      ],
+      [
+       "Don Hall",
+       1
+      ],
+      [
+       "Chris Williams",
+       1
+      ],
+      [
+       "Chris Sanders",
+       1
+      ],
+      [
+       "Byron Howard",
+       1
+      ],
+      [
+       "Barry Cook",
+       1
+      ],
+      [
+       "Art Stevens",
+       1
+      ]
+     ],
+     "description": "the name of the director",
+     "value_description": "one director may have multiple movies.\n\nmore movies --> this director is more productive",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "name"
+   ],
+   "sample_rows": [
+    {
+     "name": "Snow White and the Seven Dwarfs",
+     "director": "David Hand"
+    },
+    {
+     "name": "Pinocchio",
+     "director": "Ben Sharpsteen"
+    },
+    {
+     "name": "Fantasia",
+     "director": "full credits"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "movies_total_gross",
+   "row_count": 579,
+   "stats_rows": 579,
+   "columns": [
+    {
+     "name": "movie_title",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 573,
+     "is_unique": false,
+     "min_value": "101 Dalmatians",
+     "max_value": "crazy/beautiful",
+     "examples": [
+      "Snow White and the Seven Dwarfs",
+      "Pinocchio",
+      "Fantasia",
+      "Song of the South",
+      "Cinderella"
+     ],
+     "top_values": [],
+     "description": "movie title",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "release_date",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 553,
+     "is_unique": false,
+     "min_value": "Apr 10, 2009",
+     "max_value": "Sep 8, 1995",
+     "examples": [
+      "Dec 21, 1937",
+      "Feb 9, 1940",
+      "Nov 13, 1940",
+      "Nov 12, 1946",
+      "Feb 15, 1950"
+     ],
+     "top_values": [],
+     "description": "release date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "genre",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "Western",
+     "examples": [
+      "Musical",
+      "Adventure",
+      "Drama",
+      "Comedy",
+      ""
+     ],
+     "top_values": [
+      [
+       "Comedy",
+       182
+      ],
+      [
+       "Adventure",
+       129
+      ],
+      [
+       "Drama",
+       114
+      ],
+      [
+       "Action",
+       40
+      ],
+      [
+       "Thriller/Suspense",
+       24
+      ],
+      [
+       "Romantic Comedy",
+       23
+      ],
+      [
+       "",
+       17
+      ],
+      [
+       "Musical",
+       16
+      ],
+      [
+       "Documentary",
+       16
+      ],
+      [
+       "Western",
+       7
+      ],
+      [
+       "Horror",
+       6
+      ],
+      [
+       "Black Comedy",
+       3
+      ],
+      [
+       "Concert/Performance",
+       2
+      ]
+     ],
+     "description": "genre of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "MPAA_rating",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "R",
+     "examples": [
+      "G",
+      "",
+      "Not Rated",
+      "PG",
+      "R"
+     ],
+     "top_values": [
+      [
+       "PG",
+       187
+      ],
+      [
+       "PG-13",
+       145
+      ],
+      [
+       "R",
+       102
+      ],
+      [
+       "G",
+       86
+      ],
+      [
+       "",
+       56
+      ],
+      [
+       "Not Rated",
+       3
+      ]
+     ],
+     "description": "Motion Picture Association of America rating. Motion Picture Association of America of the disney movie",
+     "value_description": "commonsense evidence:\nâ¢ G: general audience\nâ¢ PG: mature audiences or parental guidance suggested\nâ¢ R: restricted: no children under 17 allowed without parents or adult guardians\nâ¢ PG-13: PARENTS STRONGLY CAUTIONED. Some material may be inappropriate for children under 13\nmovies need accompany with parents: PG, PG-13, PG-17;\nif \"Not rated\" or null, it means this film can show only gets permissions by theatre management\nif the film can show without need of permissions of theatre management, the MPAA_rating should not be \"Not rated\" or null",
+     "notes": []
+    },
+    {
+     "name": "total_gross",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 576,
+     "is_unique": false,
+     "min_value": "$0",
+     "max_value": "$99,967,670",
+     "examples": [
+      "$184,925,485",
+      "$84,300,000",
+      "$83,320,000",
+      "$65,000,000",
+      "$85,000,000"
+     ],
+     "top_values": [],
+     "description": "The total gross of the movie.",
+     "value_description": "commonsense evidence:\nmore total_gross--> more popular movie",
+     "notes": []
+    },
+    {
+     "name": "inflation_adjusted_gross",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 576,
+     "is_unique": false,
+     "min_value": "$0",
+     "max_value": "$98,067,733",
+     "examples": [
+      "$5,228,953,251",
+      "$2,188,229,052",
+      "$2,187,090,808",
+      "$1,078,510,579",
+      "$920,608,730"
+     ],
+     "top_values": [],
+     "description": "inflation adjusted gross. The inflation-adjusted gross of the movie",
+     "value_description": "commonsense evidence:\nestimated inflation rate = inflation_adjusted_gross / total_gross;\nthe current gross = inflation_adjusted_gross",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "movie_title",
+    "release_date"
+   ],
+   "sample_rows": [
+    {
+     "movie_title": "Snow White and the Seven Dwarfs",
+     "release_date": "Dec 21, 1937",
+     "genre": "Musical",
+     "MPAA_rating": "G",
+     "total_gross": "$184,925,485",
+     "inflation_adjusted_gross": "$5,228,953,251"
+    },
+    {
+     "movie_title": "Pinocchio",
+     "release_date": "Feb 9, 1940",
+     "genre": "Adventure",
+     "MPAA_rating": "G",
+     "total_gross": "$84,300,000",
+     "inflation_adjusted_gross": "$2,188,229,052"
+    },
+    {
+     "movie_title": "Fantasia",
+     "release_date": "Nov 13, 1940",
+     "genre": "Musical",
+     "MPAA_rating": "G",
+     "total_gross": "$83,320,000",
+     "inflation_adjusted_gross": "$2,187,090,808"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "revenue",
+   "row_count": 26,
+   "stats_rows": 26,
+   "columns": [
+    {
+     "name": "Year",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 26,
+     "is_unique": true,
+     "min_value": 1991,
+     "max_value": 2016,
+     "examples": [
+      1991,
+      1992,
+      1993,
+      1994,
+      1995
+     ],
+     "top_values": [
+      [
+       2016,
+       1
+      ],
+      [
+       2015,
+       1
+      ],
+      [
+       2014,
+       1
+      ],
+      [
+       2013,
+       1
+      ],
+      [
+       2012,
+       1
+      ],
+      [
+       2011,
+       1
+      ],
+      [
+       2010,
+       1
+      ],
+      [
+       2009,
+       1
+      ],
+      [
+       2008,
+       1
+      ],
+      [
+       2007,
+       1
+      ],
+      [
+       2006,
+       1
+      ],
+      [
+       2005,
+       1
+      ],
+      [
+       2004,
+       1
+      ],
+      [
+       2003,
+       1
+      ],
+      [
+       2002,
+       1
+      ],
+      [
+       2001,
+       1
+      ],
+      [
+       2000,
+       1
+      ],
+      [
+       1999,
+       1
+      ],
+      [
+       1998,
+       1
+      ],
+      [
+       1997,
+       1
+      ],
+      [
+       1996,
+       1
+      ],
+      [
+       1995,
+       1
+      ],
+      [
+       1994,
+       1
+      ],
+      [
+       1993,
+       1
+      ],
+      [
+       1992,
+       1
+      ],
+      [
+       1991,
+       1
+      ]
+     ],
+     "description": "The year the movie was released.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Studio Entertainment[NI 1]",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0385,
+     "distinct_count": 25,
+     "is_unique": true,
+     "min_value": 2593.0,
+     "max_value": 9441.0,
+     "examples": [
+      2593.0,
+      3115.0,
+      3673.4,
+      4793.0,
+      6001.5
+     ],
+     "top_values": [
+      [
+       9441.0,
+       1
+      ],
+      [
+       8713.0,
+       1
+      ],
+      [
+       7587.0,
+       1
+      ],
+      [
+       7529.0,
+       1
+      ],
+      [
+       7491.0,
+       1
+      ],
+      [
+       7366.0,
+       1
+      ],
+      [
+       7364.0,
+       1
+      ],
+      [
+       7348.0,
+       1
+      ],
+      [
+       7278.0,
+       1
+      ],
+      [
+       7004.0,
+       1
+      ],
+      [
+       6981.0,
+       1
+      ],
+      [
+       6849.0,
+       1
+      ],
+      [
+       6701.0,
+       1
+      ],
+      [
+       6548.0,
+       1
+      ],
+      [
+       6465.0,
+       1
+      ],
+      [
+       6351.0,
+       1
+      ],
+      [
+       6136.0,
+       1
+      ],
+      [
+       6001.5,
+       1
+      ],
+      [
+       5994.0,
+       1
+      ],
+      [
+       5979.0,
+       1
+      ],
+      [
+       5825.0,
+       1
+      ],
+      [
+       4793.0,
+       1
+      ],
+      [
+       3673.4,
+       1
+      ],
+      [
+       3115.0,
+       1
+      ],
+      [
+       2593.0,
+       1
+      ]
+     ],
+     "description": "The studio entertainment segment of the Walt Disney Company.",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Disney Consumer Products[NI 2]",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0769,
+     "distinct_count": 24,
+     "is_unique": true,
+     "min_value": 724.0,
+     "max_value": 4499.0,
+     "examples": [
+      724.0,
+      1081.0,
+      1415.1,
+      1798.2,
+      2150.0
+     ],
+     "top_values": [
+      [
+       4499.0,
+       1
+      ],
+      [
+       3985.0,
+       1
+      ],
+      [
+       3782.0,
+       1
+      ],
+      [
+       3555.0,
+       1
+      ],
+      [
+       3252.0,
+       1
+      ],
+      [
+       3193.0,
+       1
+      ],
+      [
+       3049.0,
+       1
+      ],
+      [
+       3030.0,
+       1
+      ],
+      [
+       2678.0,
+       1
+      ],
+      [
+       2602.0,
+       1
+      ],
+      [
+       2590.0,
+       1
+      ],
+      [
+       2511.0,
+       1
+      ],
+      [
+       2440.0,
+       1
+      ],
+      [
+       2425.0,
+       1
+      ],
+      [
+       2415.0,
+       1
+      ],
+      [
+       2347.0,
+       1
+      ],
+      [
+       2344.0,
+       1
+      ],
+      [
+       2193.0,
+       1
+      ],
+      [
+       2150.0,
+       1
+      ],
+      [
+       2127.0,
+       1
+      ],
+      [
+       1798.2,
+       1
+      ],
+      [
+       1415.1,
+       1
+      ],
+      [
+       1081.0,
+       1
+      ],
+      [
+       724.0,
+       1
+      ]
+     ],
+     "description": "The consumer products segment of the Walt Disney Company.",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Disney Interactive[NI 3][Rev 1]",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.5385,
+     "distinct_count": 12,
+     "is_unique": true,
+     "min_value": 174,
+     "max_value": 1299,
+     "examples": [
+      174,
+      260,
+      206,
+      368,
+      719
+     ],
+     "top_values": [
+      [
+       1299,
+       1
+      ],
+      [
+       1174,
+       1
+      ],
+      [
+       1064,
+       1
+      ],
+      [
+       982,
+       1
+      ],
+      [
+       845,
+       1
+      ],
+      [
+       761,
+       1
+      ],
+      [
+       719,
+       1
+      ],
+      [
+       712,
+       1
+      ],
+      [
+       368,
+       1
+      ],
+      [
+       260,
+       1
+      ],
+      [
+       206,
+       1
+      ],
+      [
+       174,
+       1
+      ]
+     ],
+     "description": "The interactive segment of the Walt Disney Company.",
+     "value_description": "",
+     "notes": [
+      "54% NULL; filter or handle NULLs",
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Walt Disney Parks and Resorts",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 26,
+     "is_unique": true,
+     "min_value": 2794.0,
+     "max_value": 16974.0,
+     "examples": [
+      2794.0,
+      3306.0,
+      3440.7,
+      3463.6,
+      3959.8
+     ],
+     "top_values": [
+      [
+       16974.0,
+       1
+      ],
+      [
+       16162.0,
+       1
+      ],
+      [
+       15099.0,
+       1
+      ],
+      [
+       14087.0,
+       1
+      ],
+      [
+       12920.0,
+       1
+      ],
+      [
+       11797.0,
+       1
+      ],
+      [
+       11504.0,
+       1
+      ],
+      [
+       10761.0,
+       1
+      ],
+      [
+       10667.0,
+       1
+      ],
+      [
+       10626.0,
+       1
+      ],
+      [
+       9925.0,
+       1
+      ],
+      [
+       9023.0,
+       1
+      ],
+      [
+       7750.0,
+       1
+      ],
+      [
+       6803.0,
+       1
+      ],
+      [
+       6691.0,
+       1
+      ],
+      [
+       6412.0,
+       1
+      ],
+      [
+       6106.0,
+       1
+      ],
+      [
+       6009.0,
+       1
+      ],
+      [
+       5532.0,
+       1
+      ],
+      [
+       5014.0,
+       1
+      ],
+      [
+       4502.0,
+       1
+      ],
+      [
+       3959.8,
+       1
+      ],
+      [
+       3463.6,
+       1
+      ],
+      [
+       3440.7,
+       1
+      ],
+      [
+       3306.0,
+       1
+      ],
+      [
+       2794.0,
+       1
+      ]
+     ],
+     "description": "The parks and resorts segment of the Walt Disney Company.",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Disney Media Networks",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.1154,
+     "distinct_count": 23,
+     "is_unique": true,
+     "min_value": "10941",
+     "max_value": "9733",
+     "examples": [
+      "359",
+      "414",
+      "4,142",
+      "6522",
+      "7142"
+     ],
+     "top_values": [
+      [
+       "9733",
+       1
+      ],
+      [
+       "9615",
+       1
+      ],
+      [
+       "9569",
+       1
+      ],
+      [
+       "7512",
+       1
+      ],
+      [
+       "7142",
+       1
+      ],
+      [
+       "6522",
+       1
+      ],
+      [
+       "414",
+       1
+      ],
+      [
+       "4,142",
+       1
+      ],
+      [
+       "359",
+       1
+      ],
+      [
+       "23689",
+       1
+      ],
+      [
+       "23264",
+       1
+      ],
+      [
+       "21152",
+       1
+      ],
+      [
+       "20356",
+       1
+      ],
+      [
+       "19436",
+       1
+      ],
+      [
+       "18714",
+       1
+      ],
+      [
+       "17162",
+       1
+      ],
+      [
+       "16209",
+       1
+      ],
+      [
+       "15857",
+       1
+      ],
+      [
+       "15046",
+       1
+      ],
+      [
+       "14368",
+       1
+      ],
+      [
+       "13207",
+       1
+      ],
+      [
+       "11778",
+       1
+      ],
+      [
+       "10941",
+       1
+      ]
+     ],
+     "description": "The media networks segment of the Walt Disney Company.",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Total",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 26,
+     "is_unique": true,
+     "min_value": 6111,
+     "max_value": 55632,
+     "examples": [
+      6111,
+      7502,
+      8529,
+      10414,
+      12525
+     ],
+     "top_values": [
+      [
+       55632,
+       1
+      ],
+      [
+       52465,
+       1
+      ],
+      [
+       48813,
+       1
+      ],
+      [
+       45041,
+       1
+      ],
+      [
+       42278,
+       1
+      ],
+      [
+       40893,
+       1
+      ],
+      [
+       38063,
+       1
+      ],
+      [
+       37843,
+       1
+      ],
+      [
+       36149,
+       1
+      ],
+      [
+       35510,
+       1
+      ],
+      [
+       34285,
+       1
+      ],
+      [
+       31944,
+       1
+      ],
+      [
+       30752,
+       1
+      ],
+      [
+       27061,
+       1
+      ],
+      [
+       25790,
+       1
+      ],
+      [
+       25402,
+       1
+      ],
+      [
+       25360,
+       1
+      ],
+      [
+       23402,
+       1
+      ],
+      [
+       22976,
+       1
+      ],
+      [
+       22473,
+       1
+      ],
+      [
+       18739,
+       1
+      ],
+      [
+       12525,
+       1
+      ],
+      [
+       10414,
+       1
+      ],
+      [
+       8529,
+       1
+      ],
+      [
+       7502,
+       1
+      ],
+      [
+       6111,
+       1
+      ]
+     ],
+     "description": "The total box office gross for the movie.",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Year"
+   ],
+   "sample_rows": [
+    {
+     "Year": 1991,
+     "Studio Entertainment[NI 1]": 2593.0,
+     "Disney Consumer Products[NI 2]": 724.0,
+     "Disney Interactive[NI 3][Rev 1]": null,
+     "Walt Disney Parks and Resorts": 2794.0,
+     "Disney Media Networks": null,
+     "Total": 6111
+    },
+    {
+     "Year": 1992,
+     "Studio Entertainment[NI 1]": 3115.0,
+     "Disney Consumer Products[NI 2]": 1081.0,
+     "Disney Interactive[NI 3][Rev 1]": null,
+     "Walt Disney Parks and Resorts": 3306.0,
+     "Disney Media Networks": null,
+     "Total": 7502
+    },
+    {
+     "Year": 1993,
+     "Studio Entertainment[NI 1]": 3673.4,
+     "Disney Consumer Products[NI 2]": 1415.1,
+     "Disney Interactive[NI 3][Rev 1]": null,
+     "Walt Disney Parks and Resorts": 3440.7,
+     "Disney Media Networks": null,
+     "Total": 8529
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "voice-actors",
+   "row_count": 922,
+   "stats_rows": 922,
+   "columns": [
+    {
+     "name": "character",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 922,
+     "is_unique": true,
+     "min_value": "Abby Mallard",
+     "max_value": "Zira",
+     "examples": [
+      "Abby Mallard",
+      "Abigail Gabble",
+      "Abis Mal",
+      "Abu",
+      "Achilles"
+     ],
+     "top_values": [],
+     "description": "The unique name of the character.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "voice-actor",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 645,
+     "is_unique": false,
+     "min_value": "Adam Carolla",
+     "max_value": "Zoe Leader",
+     "examples": [
+      "Joan Cusack",
+      "Monica Evans",
+      "Jason Alexander",
+      "Frank Welker",
+      "None"
+     ],
+     "top_values": [],
+     "description": "The name of the voice actor.",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "movie",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 139,
+     "is_unique": false,
+     "min_value": "101 Dalmatians",
+     "max_value": "Zootopia",
+     "examples": [
+      "Chicken Little",
+      "The Aristocats",
+      "The Return of Jafar",
+      "Aladdin",
+      "The Hunchback of Notre Dame"
+     ],
+     "top_values": [],
+     "description": "The name of the movie.",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "character"
+   ],
+   "sample_rows": [
+    {
+     "character": "Abby Mallard",
+     "voice-actor": "Joan Cusack",
+     "movie": "Chicken Little"
+    },
+    {
+     "character": "Abigail Gabble",
+     "voice-actor": "Monica Evans",
+     "movie": "The Aristocats"
+    },
+    {
+     "character": "Abis Mal",
+     "voice-actor": "Jason Alexander",
+     "movie": "The Return of Jafar"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "characters",
+   "from_column": "hero",
+   "to_table": "voice-actors",
+   "to_column": "character",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "director",
+   "from_column": "name",
+   "to_table": "characters",
+   "to_column": "movie_title",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "movies_total_gross",
+   "from_column": "movie_title",
+   "to_table": "characters",
+   "to_column": "movie_title",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "voice-actors",
+   "from_column": "movie",
+   "to_table": "characters",
+   "to_column": "movie_title",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

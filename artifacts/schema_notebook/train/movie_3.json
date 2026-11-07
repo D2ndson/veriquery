@@ -1,0 +1,3441 @@
+{
+ "db_id": "movie_3",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/movie_3/movie_3.sqlite",
+ "fingerprint": "6356992-1793993088285694335-v1.0",
+ "created_at": "2026-11-06T19:24:57+00:00",
+ "profile_seconds": 0.093,
+ "tables": [
+  {
+   "name": "actor",
+   "row_count": 200,
+   "stats_rows": 200,
+   "columns": [
+    {
+     "name": "actor_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 200,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "actor id. unique id number identifying the actor",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "first_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 128,
+     "is_unique": false,
+     "min_value": "ADAM",
+     "max_value": "ZERO",
+     "examples": [
+      "PENELOPE",
+      "NICK",
+      "ED",
+      "JENNIFER",
+      "JOHNNY"
+     ],
+     "top_values": [],
+     "description": "First name of the actor",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 121,
+     "is_unique": false,
+     "min_value": "AKROYD",
+     "max_value": "ZELLWEGER",
+     "examples": [
+      "GUINESS",
+      "WAHLBERG",
+      "CHASE",
+      "DAVIS",
+      "LOLLOBRIGIDA"
+     ],
+     "top_values": [],
+     "description": "Last name of the actor",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2006-02-15 04:34:33.0",
+     "max_value": "2006-02-15 04:34:33.0",
+     "examples": [
+      "2006-02-15 04:34:33.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-15 04:34:33.0",
+       200
+      ]
+     ],
+     "description": "last update. The time of the latest update",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "actor_id"
+   ],
+   "sample_rows": [
+    {
+     "actor_id": 1,
+     "first_name": "PENELOPE",
+     "last_name": "GUINESS",
+     "last_update": "2006-02-15 04:34:33.0"
+    },
+    {
+     "actor_id": 2,
+     "first_name": "NICK",
+     "last_name": "WAHLBERG",
+     "last_update": "2006-02-15 04:34:33.0"
+    },
+    {
+     "actor_id": 3,
+     "first_name": "ED",
+     "last_name": "CHASE",
+     "last_update": "2006-02-15 04:34:33.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "address",
+   "row_count": 603,
+   "stats_rows": 603,
+   "columns": [
+    {
+     "name": "address_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 603,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 605,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "address id. unique id number identifying the address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "address",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 603,
+     "is_unique": true,
+     "min_value": "1 Valle de Santiago Avenue",
+     "max_value": "999 Sanaa Loop",
+     "examples": [
+      "47 MySakila Drive",
+      "28 MySQL Boulevard",
+      "23 Workhaven Lane",
+      "1411 Lillydale Drive",
+      "1913 Hanoi Way"
+     ],
+     "top_values": [],
+     "description": "The first address line",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "address2",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0066,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "",
+     "examples": [
+      ""
+     ],
+     "top_values": [
+      [
+       "",
+       599
+      ]
+     ],
+     "description": "address 2. the second address line",
+     "value_description": "commonsense evidence:\naddress2 is the additional address if any",
+     "notes": []
+    },
+    {
+     "name": "district",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 378,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "al-Sharqiya",
+     "examples": [
+      "Alberta",
+      "QLD",
+      "Nagasaki",
+      "California",
+      "Attika"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 599,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 600,
+     "examples": [
+      300,
+      576,
+      463,
+      449,
+      38
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "postal_code",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 597,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "99865",
+     "examples": [
+      "",
+      "35200",
+      "17886",
+      "83579",
+      "53561"
+     ],
+     "top_values": [],
+     "description": "postal code",
+     "value_description": "a postal code is a series of letters or digits or both, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail.",
+     "notes": []
+    },
+    {
+     "name": "phone",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 602,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "99883471275",
+     "examples": [
+      "",
+      "14033335568",
+      "6172235589",
+      "28303384290",
+      "838635286649"
+     ],
+     "top_values": [],
+     "description": "phone number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2006-02-15 04:45:30.0",
+     "max_value": "2006-02-15 04:45:30.0",
+     "examples": [
+      "2006-02-15 04:45:30.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-15 04:45:30.0",
+       603
+      ]
+     ],
+     "description": "last update. The time of the latest update",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "address_id"
+   ],
+   "sample_rows": [
+    {
+     "address_id": 1,
+     "address": "47 MySakila Drive",
+     "address2": null,
+     "district": "Alberta",
+     "city_id": 300,
+     "postal_code": "",
+     "phone": "",
+     "last_update": "2006-02-15 04:45:30.0"
+    },
+    {
+     "address_id": 2,
+     "address": "28 MySQL Boulevard",
+     "address2": null,
+     "district": "QLD",
+     "city_id": 576,
+     "postal_code": "",
+     "phone": "",
+     "last_update": "2006-02-15 04:45:30.0"
+    },
+    {
+     "address_id": 3,
+     "address": "23 Workhaven Lane",
+     "address2": null,
+     "district": "Alberta",
+     "city_id": 300,
+     "postal_code": "",
+     "phone": "14033335568",
+     "last_update": "2006-02-15 04:45:30.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "category",
+   "row_count": 16,
+   "stats_rows": 16,
+   "columns": [
+    {
+     "name": "category_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 16,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 16,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "category id. unique id number identifying the category",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 16,
+     "is_unique": true,
+     "min_value": "Action",
+     "max_value": "Travel",
+     "examples": [
+      "Action",
+      "Animation",
+      "Children",
+      "Classics",
+      "Comedy"
+     ],
+     "top_values": [
+      [
+       "Travel",
+       1
+      ],
+      [
+       "Sports",
+       1
+      ],
+      [
+       "Sci-Fi",
+       1
+      ],
+      [
+       "New",
+       1
+      ],
+      [
+       "Music",
+       1
+      ],
+      [
+       "Horror",
+       1
+      ],
+      [
+       "Games",
+       1
+      ],
+      [
+       "Foreign",
+       1
+      ],
+      [
+       "Family",
+       1
+      ],
+      [
+       "Drama",
+       1
+      ],
+      [
+       "Documentary",
+       1
+      ],
+      [
+       "Comedy",
+       1
+      ],
+      [
+       "Classics",
+       1
+      ],
+      [
+       "Children",
+       1
+      ],
+      [
+       "Animation",
+       1
+      ],
+      [
+       "Action",
+       1
+      ]
+     ],
+     "description": "name of the category",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2006-02-15 04:46:27.0",
+     "max_value": "2006-02-15 04:46:27.0",
+     "examples": [
+      "2006-02-15 04:46:27.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-15 04:46:27.0",
+       16
+      ]
+     ],
+     "description": "last update. The time of the latest update",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "category_id"
+   ],
+   "sample_rows": [
+    {
+     "category_id": 1,
+     "name": "Action",
+     "last_update": "2006-02-15 04:46:27.0"
+    },
+    {
+     "category_id": 2,
+     "name": "Animation",
+     "last_update": "2006-02-15 04:46:27.0"
+    },
+    {
+     "category_id": 3,
+     "name": "Children",
+     "last_update": "2006-02-15 04:46:27.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "city",
+   "row_count": 600,
+   "stats_rows": 600,
+   "columns": [
+    {
+     "name": "city_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 600,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 600,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "city id. unique id number identifying the city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 599,
+     "is_unique": false,
+     "min_value": "A Corua (La Corua)",
+     "max_value": "s-Hertogenbosch",
+     "examples": [
+      "A Corua (La Corua)",
+      "Abha",
+      "Abu Dhabi",
+      "Acua",
+      "Adana"
+     ],
+     "top_values": [],
+     "description": "name of the city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "country_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 109,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 109,
+     "examples": [
+      87,
+      82,
+      101,
+      60,
+      97
+     ],
+     "top_values": [],
+     "description": "country id. number identifying the country which the city belongs to",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2006-02-15 04:45:25.0",
+     "max_value": "2006-02-15 04:45:25.0",
+     "examples": [
+      "2006-02-15 04:45:25.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-15 04:45:25.0",
+       600
+      ]
+     ],
+     "description": "last update. The time of the latest update",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "city_id"
+   ],
+   "sample_rows": [
+    {
+     "city_id": 1,
+     "city": "A Corua (La Corua)",
+     "country_id": 87,
+     "last_update": "2006-02-15 04:45:25.0"
+    },
+    {
+     "city_id": 2,
+     "city": "Abha",
+     "country_id": 82,
+     "last_update": "2006-02-15 04:45:25.0"
+    },
+    {
+     "city_id": 3,
+     "city": "Abu Dhabi",
+     "country_id": 101,
+     "last_update": "2006-02-15 04:45:25.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "country",
+   "row_count": 109,
+   "stats_rows": 109,
+   "columns": [
+    {
+     "name": "country_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 109,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 109,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "country id. unique id number identifying the country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "country",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 109,
+     "is_unique": true,
+     "min_value": "Afghanistan",
+     "max_value": "Zambia",
+     "examples": [
+      "Afghanistan",
+      "Algeria",
+      "American Samoa",
+      "Angola",
+      "Anguilla"
+     ],
+     "top_values": [],
+     "description": "the name of the country. number identifying the country",
+     "value_description": "commonsense evidence:\n Africa: (Algeria, Angola, Cameroon, Chad, Congo, The Democratic Republic of the, Egypt, Ethiopia, Gambia...)\n Asia: (Afghanistan, Armenia, Azerbaijan, \nBahrain, Bangladesh, Brunei, Cambodia, China, Hong Kong, India, Indonesia, Iran, Iraq, Israel...)\n Oceania (American Samoa, Australia, French Polynesia...)\n North America (Anguilla, Canada, Dominican Republic, Ecuador, Greenland...)\n South America (Argentina, Bolivia, Brazil, Chile, \nColombia, Ecuador, French Guiana....)\n Europe (Austria, Belarus, Bulgaria, Czech Republic, Estonia, Faroe Islands, Finland, France, Germany, Greece, Holy See (Vatican City State), Hungary, Italy...)\ndetails: https://worldpopulationreview.com/country-rankings/list-of-countries-by-continent\nquestion can mention i.e., Europe instead of Austria, etc.",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2006-02-15 04:44:00.0",
+     "max_value": "2006-02-15 04:44:00.0",
+     "examples": [
+      "2006-02-15 04:44:00.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-15 04:44:00.0",
+       109
+      ]
+     ],
+     "description": "last update. The time of the latest update",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "country_id"
+   ],
+   "sample_rows": [
+    {
+     "country_id": 1,
+     "country": "Afghanistan",
+     "last_update": "2006-02-15 04:44:00.0"
+    },
+    {
+     "country_id": 2,
+     "country": "Algeria",
+     "last_update": "2006-02-15 04:44:00.0"
+    },
+    {
+     "country_id": 3,
+     "country": "American Samoa",
+     "last_update": "2006-02-15 04:44:00.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "customer",
+   "row_count": 599,
+   "stats_rows": 599,
+   "columns": [
+    {
+     "name": "customer_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 599,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 599,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "country id. unique id number identifying the country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "store_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       1,
+       326
+      ],
+      [
+       2,
+       273
+      ]
+     ],
+     "description": "store id. unique id number identifying the store",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "first_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 591,
+     "is_unique": false,
+     "min_value": "AARON",
+     "max_value": "ZACHARY",
+     "examples": [
+      "MARY",
+      "PATRICIA",
+      "LINDA",
+      "BARBARA",
+      "ELIZABETH"
+     ],
+     "top_values": [],
+     "description": "First name of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 599,
+     "is_unique": true,
+     "min_value": "ABNEY",
+     "max_value": "YOUNG",
+     "examples": [
+      "SMITH",
+      "JOHNSON",
+      "WILLIAMS",
+      "JONES",
+      "BROWN"
+     ],
+     "top_values": [],
+     "description": "Last name of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "email",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 599,
+     "is_unique": true,
+     "min_value": "AARON.SELBY@sakilacustomer.org",
+     "max_value": "ZACHARY.HITE@sakilacustomer.org",
+     "examples": [
+      "MARY.SMITH@sakilacustomer.org",
+      "PATRICIA.JOHNSON@sakilacustomer.org",
+      "LINDA.WILLIAMS@sakilacustomer.org",
+      "BARBARA.JONES@sakilacustomer.org",
+      "ELIZABETH.BROWN@sakilacustomer.org"
+     ],
+     "top_values": [],
+     "description": "Email address of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "address_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 599,
+     "is_unique": true,
+     "min_value": 5,
+     "max_value": 605,
+     "examples": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "top_values": [],
+     "description": "Address id number of the customer.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "active",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      1,
+      0
+     ],
+     "top_values": [
+      [
+       1,
+       584
+      ],
+      [
+       0,
+       15
+      ]
+     ],
+     "description": "Wether the customer is active or not.",
+     "value_description": "1: active\n0: not active",
+     "notes": []
+    },
+    {
+     "name": "create_date",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "2006-02-14 22:04:36.0",
+     "max_value": "2006-02-14 22:04:37.0",
+     "examples": [
+      "2006-02-14 22:04:36.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-14 22:04:37.0",
+       328
+      ],
+      [
+       "2006-02-14 22:04:36.0",
+       271
+      ]
+     ],
+     "description": "create date. The date when the record is created",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2006-02-15 04:57:20.0",
+     "max_value": "2006-02-15 04:57:20.0",
+     "examples": [
+      "2006-02-15 04:57:20.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-15 04:57:20.0",
+       599
+      ]
+     ],
+     "description": "last update. The time of the latest update",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "customer_id"
+   ],
+   "sample_rows": [
+    {
+     "customer_id": 1,
+     "store_id": 1,
+     "first_name": "MARY",
+     "last_name": "SMITH",
+     "email": "MARY.SMITH@sakilacustomer.org",
+     "address_id": 5,
+     "active": 1,
+     "create_date": "2006-02-14 22:04:36.0",
+     "last_update": "2006-02-15 04:57:20.0"
+    },
+    {
+     "customer_id": 2,
+     "store_id": 1,
+     "first_name": "PATRICIA",
+     "last_name": "JOHNSON",
+     "email": "PATRICIA.JOHNSON@sakilacustomer.org",
+     "address_id": 6,
+     "active": 1,
+     "create_date": "2006-02-14 22:04:36.0",
+     "last_update": "2006-02-15 04:57:20.0"
+    },
+    {
+     "customer_id": 3,
+     "store_id": 1,
+     "first_name": "LINDA",
+     "last_name": "WILLIAMS",
+     "email": "LINDA.WILLIAMS@sakilacustomer.org",
+     "address_id": 7,
+     "active": 1,
+     "create_date": "2006-02-14 22:04:36.0",
+     "last_update": "2006-02-15 04:57:20.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "film",
+   "row_count": 1000,
+   "stats_rows": 1000,
+   "columns": [
+    {
+     "name": "film_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 1000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "film id. unique id number identifying the film",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1000,
+     "is_unique": true,
+     "min_value": "ACADEMY DINOSAUR",
+     "max_value": "ZORRO ARK",
+     "examples": [
+      "ACADEMY DINOSAUR",
+      "ACE GOLDFINGER",
+      "ADAPTATION HOLES",
+      "AFFAIR PREJUDICE",
+      "AFRICAN EGG"
+     ],
+     "top_values": [],
+     "description": "title of the film",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "description",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1000,
+     "is_unique": true,
+     "min_value": "A Action-Packed Character Study of a Astronaut And a Explore...",
+     "max_value": "A Unbelieveable Yarn of a Student And a Database Administrat...",
+     "examples": [
+      "A Epic Drama of a Feminist And a Mad Scientist who must Batt...",
+      "A Astounding Epistle of a Database Administrator And a Explo...",
+      "A Astounding Reflection of a Lumberjack And a Car who must S...",
+      "A Fanciful Documentary of a Frisbee And a Lumberjack who mus...",
+      "A Fast-Paced Documentary of a Pastry Chef And a Dentist who ..."
+     ],
+     "top_values": [],
+     "description": "main content of the film",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "release_year",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2006",
+     "max_value": "2006",
+     "examples": [
+      "2006"
+     ],
+     "top_values": [
+      [
+       "2006",
+       1000
+      ]
+     ],
+     "description": "release year. the year when the film is released",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "language_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       1000
+      ]
+     ],
+     "description": "the language id of the film",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "original_language_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "the original language id of the film",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "rental_duration",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 3,
+     "max_value": 7,
+     "examples": [
+      6,
+      3,
+      7,
+      5,
+      4
+     ],
+     "top_values": [
+      [
+       6,
+       212
+      ],
+      [
+       4,
+       203
+      ],
+      [
+       3,
+       203
+      ],
+      [
+       7,
+       191
+      ],
+      [
+       5,
+       191
+      ]
+     ],
+     "description": "rental duration. how long this film can be rent at once",
+     "value_description": "commonsense evidence:\ndays\nprice / day = rental_rate / retal_duration",
+     "notes": []
+    },
+    {
+     "name": "rental_rate",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 0.99,
+     "max_value": 4.99,
+     "examples": [
+      0.99,
+      4.99,
+      2.99
+     ],
+     "top_values": [
+      [
+       0.99,
+       341
+      ],
+      [
+       4.99,
+       336
+      ],
+      [
+       2.99,
+       323
+      ]
+     ],
+     "description": "rental rate. the rate of renting this film",
+     "value_description": "higher -> expensive",
+     "notes": []
+    },
+    {
+     "name": "length",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 140,
+     "is_unique": false,
+     "min_value": 46,
+     "max_value": 185,
+     "examples": [
+      86,
+      48,
+      50,
+      117,
+      130
+     ],
+     "top_values": [],
+     "description": "Duration time of the film screening",
+     "value_description": "minutes",
+     "notes": []
+    },
+    {
+     "name": "replacement_cost",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": 9.99,
+     "max_value": 29.99,
+     "examples": [
+      20.99,
+      12.99,
+      18.99,
+      26.99,
+      22.99
+     ],
+     "top_values": [
+      [
+       20.99,
+       57
+      ],
+      [
+       22.99,
+       55
+      ],
+      [
+       21.99,
+       55
+      ],
+      [
+       13.99,
+       55
+      ],
+      [
+       12.99,
+       55
+      ],
+      [
+       29.99,
+       53
+      ],
+      [
+       27.99,
+       53
+      ],
+      [
+       14.99,
+       51
+      ],
+      [
+       19.99,
+       50
+      ],
+      [
+       11.99,
+       49
+      ],
+      [
+       10.99,
+       49
+      ],
+      [
+       17.99,
+       47
+      ],
+      [
+       26.99,
+       46
+      ],
+      [
+       23.99,
+       45
+      ],
+      [
+       25.99,
+       43
+      ],
+      [
+       18.99,
+       42
+      ],
+      [
+       28.99,
+       41
+      ],
+      [
+       9.99,
+       41
+      ],
+      [
+       24.99,
+       38
+      ],
+      [
+       16.99,
+       38
+      ],
+      [
+       15.99,
+       37
+      ]
+     ],
+     "description": "replacement cost. cost of replacing this film",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "rating",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "G",
+     "max_value": "R",
+     "examples": [
+      "PG",
+      "G",
+      "NC-17",
+      "PG-13",
+      "R"
+     ],
+     "top_values": [
+      [
+       "PG-13",
+       223
+      ],
+      [
+       "NC-17",
+       210
+      ],
+      [
+       "R",
+       195
+      ],
+      [
+       "PG",
+       194
+      ],
+      [
+       "G",
+       178
+      ]
+     ],
+     "description": "The Motion Picture Association film rating",
+     "value_description": "commonsense evidence:\nG ?General Audiences\nPG ? Parental Guidance Suggested\nPG-13 ? Parents Strongly Cautioned\nR ? Restricted\nNC-17 ? Adults Only",
+     "notes": []
+    },
+    {
+     "name": "special_features",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 15,
+     "is_unique": false,
+     "min_value": "Behind the Scenes",
+     "max_value": "Trailers,Deleted Scenes,Behind the Scenes",
+     "examples": [
+      "Deleted Scenes,Behind the Scenes",
+      "Trailers,Deleted Scenes",
+      "Commentaries,Behind the Scenes",
+      "Deleted Scenes",
+      "Trailers"
+     ],
+     "top_values": [
+      [
+       "Trailers,Commentaries,Behind the Scenes",
+       79
+      ],
+      [
+       "Trailers,Commentaries",
+       72
+      ],
+      [
+       "Trailers,Behind the Scenes",
+       72
+      ],
+      [
+       "Trailers",
+       72
+      ],
+      [
+       "Deleted Scenes,Behind the Scenes",
+       71
+      ],
+      [
+       "Commentaries,Behind the Scenes",
+       70
+      ],
+      [
+       "Behind the Scenes",
+       70
+      ],
+      [
+       "Trailers,Deleted Scenes",
+       66
+      ],
+      [
+       "Commentaries,Deleted Scenes,Behind the Scenes",
+       66
+      ],
+      [
+       "Commentaries,Deleted Scenes",
+       65
+      ],
+      [
+       "Trailers,Commentaries,Deleted Scenes",
+       64
+      ],
+      [
+       "Commentaries",
+       62
+      ],
+      [
+       "Trailers,Commentaries,Deleted Scenes,Behind the Scenes",
+       61
+      ],
+      [
+       "Deleted Scenes",
+       61
+      ],
+      [
+       "Trailers,Deleted Scenes,Behind the Scenes",
+       49
+      ]
+     ],
+     "description": "special features. features of this film",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2006-02-15 05:03:42.0",
+     "max_value": "2006-02-15 05:03:42.0",
+     "examples": [
+      "2006-02-15 05:03:42.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-15 05:03:42.0",
+       1000
+      ]
+     ],
+     "description": "last update. The time of the latest update",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "film_id"
+   ],
+   "sample_rows": [
+    {
+     "film_id": 1,
+     "title": "ACADEMY DINOSAUR",
+     "description": "A Epic Drama of a Feminist And a Mad Scientist who must Batt...",
+     "release_year": "2006",
+     "language_id": 1,
+     "original_language_id": null,
+     "rental_duration": 6,
+     "rental_rate": 0.99,
+     "length": 86,
+     "replacement_cost": 20.99,
+     "rating": "PG",
+     "special_features": "Deleted Scenes,Behind the Scenes",
+     "last_update": "2006-02-15 05:03:42.0"
+    },
+    {
+     "film_id": 2,
+     "title": "ACE GOLDFINGER",
+     "description": "A Astounding Epistle of a Database Administrator And a Explo...",
+     "release_year": "2006",
+     "language_id": 1,
+     "original_language_id": null,
+     "rental_duration": 3,
+     "rental_rate": 4.99,
+     "length": 48,
+     "replacement_cost": 12.99,
+     "rating": "G",
+     "special_features": "Trailers,Deleted Scenes",
+     "last_update": "2006-02-15 05:03:42.0"
+    },
+    {
+     "film_id": 3,
+     "title": "ADAPTATION HOLES",
+     "description": "A Astounding Reflection of a Lumberjack And a Car who must S...",
+     "release_year": "2006",
+     "language_id": 1,
+     "original_language_id": null,
+     "rental_duration": 7,
+     "rental_rate": 2.99,
+     "length": 50,
+     "replacement_cost": 18.99,
+     "rating": "NC-17",
+     "special_features": "Trailers,Deleted Scenes",
+     "last_update": "2006-02-15 05:03:42.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "film_actor",
+   "row_count": 5462,
+   "stats_rows": 5462,
+   "columns": [
+    {
+     "name": "actor_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 200,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "actor id. unique id number identifying the actor",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "film_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 997,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1000,
+     "examples": [
+      1,
+      23,
+      25,
+      106,
+      140
+     ],
+     "top_values": [],
+     "description": "film id. id number identifying the film",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2006-02-15 05:05:03.0",
+     "max_value": "2006-02-15 05:05:03.0",
+     "examples": [
+      "2006-02-15 05:05:03.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-15 05:05:03.0",
+       5462
+      ]
+     ],
+     "description": "last update. The time of the latest update",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "actor_id",
+    "film_id"
+   ],
+   "sample_rows": [
+    {
+     "actor_id": 1,
+     "film_id": 1,
+     "last_update": "2006-02-15 05:05:03.0"
+    },
+    {
+     "actor_id": 1,
+     "film_id": 23,
+     "last_update": "2006-02-15 05:05:03.0"
+    },
+    {
+     "actor_id": 1,
+     "film_id": 25,
+     "last_update": "2006-02-15 05:05:03.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "film_category",
+   "row_count": 1000,
+   "stats_rows": 1000,
+   "columns": [
+    {
+     "name": "film_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 1000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "film id. unique id number identifying the film",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "category_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 16,
+     "examples": [
+      6,
+      11,
+      8,
+      9,
+      5
+     ],
+     "top_values": [
+      [
+       15,
+       74
+      ],
+      [
+       9,
+       73
+      ],
+      [
+       8,
+       69
+      ],
+      [
+       6,
+       68
+      ],
+      [
+       2,
+       66
+      ],
+      [
+       1,
+       64
+      ],
+      [
+       13,
+       63
+      ],
+      [
+       7,
+       62
+      ],
+      [
+       14,
+       61
+      ],
+      [
+       10,
+       61
+      ],
+      [
+       3,
+       60
+      ],
+      [
+       5,
+       58
+      ],
+      [
+       16,
+       57
+      ],
+      [
+       4,
+       57
+      ],
+      [
+       11,
+       56
+      ],
+      [
+       12,
+       51
+      ]
+     ],
+     "description": "category id. id number identifying the category",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2006-02-15 05:07:09.0",
+     "max_value": "2006-02-15 05:07:09.0",
+     "examples": [
+      "2006-02-15 05:07:09.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-15 05:07:09.0",
+       1000
+      ]
+     ],
+     "description": "last update. The time of the latest update",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "film_id",
+    "category_id"
+   ],
+   "sample_rows": [
+    {
+     "film_id": 1,
+     "category_id": 6,
+     "last_update": "2006-02-15 05:07:09.0"
+    },
+    {
+     "film_id": 2,
+     "category_id": 11,
+     "last_update": "2006-02-15 05:07:09.0"
+    },
+    {
+     "film_id": 3,
+     "category_id": 6,
+     "last_update": "2006-02-15 05:07:09.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "film_text",
+   "row_count": 1000,
+   "stats_rows": 1000,
+   "columns": [
+    {
+     "name": "film_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 1000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "film id. unique id number identifying the film",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1000,
+     "is_unique": true,
+     "min_value": "ACADEMY DINOSAUR",
+     "max_value": "ZORRO ARK",
+     "examples": [
+      "ACADEMY DINOSAUR",
+      "ACE GOLDFINGER",
+      "ADAPTATION HOLES",
+      "AFFAIR PREJUDICE",
+      "AFRICAN EGG"
+     ],
+     "top_values": [],
+     "description": "title of the film",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "description",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1000,
+     "is_unique": true,
+     "min_value": "A Action-Packed Character Study of a Astronaut And a Explore...",
+     "max_value": "A Unbelieveable Yarn of a Student And a Database Administrat...",
+     "examples": [
+      "A Epic Drama of a Feminist And a Mad Scientist who must Batt...",
+      "A Astounding Epistle of a Database Administrator And a Explo...",
+      "A Astounding Reflection of a Lumberjack And a Car who must S...",
+      "A Fanciful Documentary of a Frisbee And a Lumberjack who mus...",
+      "A Fast-Paced Documentary of a Pastry Chef And a Dentist who ..."
+     ],
+     "top_values": [],
+     "description": "main content of the film",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "film_id"
+   ],
+   "sample_rows": [
+    {
+     "film_id": 1,
+     "title": "ACADEMY DINOSAUR",
+     "description": "A Epic Drama of a Feminist And a Mad Scientist who must Batt..."
+    },
+    {
+     "film_id": 2,
+     "title": "ACE GOLDFINGER",
+     "description": "A Astounding Epistle of a Database Administrator And a Explo..."
+    },
+    {
+     "film_id": 3,
+     "title": "ADAPTATION HOLES",
+     "description": "A Astounding Reflection of a Lumberjack And a Car who must S..."
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "inventory",
+   "row_count": 4581,
+   "stats_rows": 4581,
+   "columns": [
+    {
+     "name": "inventory_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4581,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 4581,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "inventory id. unique id number identifying the inventory",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "film_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 958,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "film id. unique id number identifying the film",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "store_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       2311
+      ],
+      [
+       1,
+       2270
+      ]
+     ],
+     "description": "store id. id of the store",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2006-02-15 05:09:17.0",
+     "max_value": "2006-02-15 05:09:17.0",
+     "examples": [
+      "2006-02-15 05:09:17.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-15 05:09:17.0",
+       4581
+      ]
+     ],
+     "description": "the last update time of the film",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "inventory_id"
+   ],
+   "sample_rows": [
+    {
+     "inventory_id": 1,
+     "film_id": 1,
+     "store_id": 1,
+     "last_update": "2006-02-15 05:09:17.0"
+    },
+    {
+     "inventory_id": 2,
+     "film_id": 1,
+     "store_id": 1,
+     "last_update": "2006-02-15 05:09:17.0"
+    },
+    {
+     "inventory_id": 3,
+     "film_id": 1,
+     "store_id": 1,
+     "last_update": "2006-02-15 05:09:17.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "language",
+   "row_count": 6,
+   "stats_rows": 6,
+   "columns": [
+    {
+     "name": "language_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 6,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "language id. unique id number identifying the language",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": true,
+     "min_value": "English",
+     "max_value": "Mandarin",
+     "examples": [
+      "English",
+      "Italian",
+      "Japanese",
+      "Mandarin",
+      "French"
+     ],
+     "top_values": [
+      [
+       "Mandarin",
+       1
+      ],
+      [
+       "Japanese",
+       1
+      ],
+      [
+       "Italian",
+       1
+      ],
+      [
+       "German",
+       1
+      ],
+      [
+       "French",
+       1
+      ],
+      [
+       "English",
+       1
+      ]
+     ],
+     "description": "name of the language",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2006-02-15 05:02:19.0",
+     "max_value": "2006-02-15 05:02:19.0",
+     "examples": [
+      "2006-02-15 05:02:19.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-15 05:02:19.0",
+       6
+      ]
+     ],
+     "description": "last update. The time of the latest update",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "language_id"
+   ],
+   "sample_rows": [
+    {
+     "language_id": 1,
+     "name": "English",
+     "last_update": "2006-02-15 05:02:19.0"
+    },
+    {
+     "language_id": 2,
+     "name": "Italian",
+     "last_update": "2006-02-15 05:02:19.0"
+    },
+    {
+     "language_id": 3,
+     "name": "Japanese",
+     "last_update": "2006-02-15 05:02:19.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "payment",
+   "row_count": 16049,
+   "stats_rows": 16049,
+   "columns": [
+    {
+     "name": "payment_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 16049,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 16049,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "payment id. unique id number identifying the payment",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "customer_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 599,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 599,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "customer id. unique id number identifying the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "staff_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       1,
+       8057
+      ],
+      [
+       2,
+       7992
+      ]
+     ],
+     "description": "staff id. unique id number identifying the staff",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "rental_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 16044,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 16049,
+     "examples": [
+      76,
+      573,
+      1185,
+      1422,
+      1476
+     ],
+     "top_values": [],
+     "description": "rental id. unique id number identifying the rental",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "amount",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 19,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 11.99,
+     "examples": [
+      2.99,
+      0.99,
+      5.99,
+      9.99,
+      4.99
+     ],
+     "top_values": [
+      [
+       4.99,
+       3789
+      ],
+      [
+       2.99,
+       3542
+      ],
+      [
+       0.99,
+       2979
+      ],
+      [
+       5.99,
+       1299
+      ],
+      [
+       6.99,
+       1119
+      ],
+      [
+       3.99,
+       1109
+      ],
+      [
+       7.99,
+       670
+      ],
+      [
+       1.99,
+       640
+      ],
+      [
+       8.99,
+       485
+      ],
+      [
+       9.99,
+       256
+      ],
+      [
+       10.99,
+       104
+      ],
+      [
+       0.0,
+       24
+      ],
+      [
+       11.99,
+       10
+      ],
+      [
+       3.98,
+       8
+      ],
+      [
+       5.98,
+       7
+      ],
+      [
+       7.98,
+       5
+      ],
+      [
+       9.98,
+       1
+      ],
+      [
+       8.97,
+       1
+      ],
+      [
+       1.98,
+       1
+      ]
+     ],
+     "description": "unique id number identifying the amount",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "payment_date",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 15819,
+     "is_unique": false,
+     "min_value": "2005-05-24 22:53:30.0",
+     "max_value": "2006-02-14 15:16:03.0",
+     "examples": [
+      "2005-05-25 11:30:37.0",
+      "2005-05-28 10:35:23.0",
+      "2005-06-15 00:54:12.0",
+      "2005-06-15 18:02:53.0",
+      "2005-06-15 21:08:46.0"
+     ],
+     "top_values": [],
+     "description": "payment date. the date when the payment ocurs",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 704,
+     "is_unique": false,
+     "min_value": "2006-02-15 22:12:30.0",
+     "max_value": "2006-02-15 22:24:13.0",
+     "examples": [
+      "2006-02-15 22:12:30.0",
+      "2006-02-15 22:12:31.0"
+     ],
+     "top_values": [],
+     "description": "last update. The time of the latest update",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "payment_id"
+   ],
+   "sample_rows": [
+    {
+     "payment_id": 1,
+     "customer_id": 1,
+     "staff_id": 1,
+     "rental_id": 76,
+     "amount": 2.99,
+     "payment_date": "2005-05-25 11:30:37.0",
+     "last_update": "2006-02-15 22:12:30.0"
+    },
+    {
+     "payment_id": 2,
+     "customer_id": 1,
+     "staff_id": 1,
+     "rental_id": 573,
+     "amount": 0.99,
+     "payment_date": "2005-05-28 10:35:23.0",
+     "last_update": "2006-02-15 22:12:30.0"
+    },
+    {
+     "payment_id": 3,
+     "customer_id": 1,
+     "staff_id": 1,
+     "rental_id": 1185,
+     "amount": 5.99,
+     "payment_date": "2005-06-15 00:54:12.0",
+     "last_update": "2006-02-15 22:12:30.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "rental",
+   "row_count": 16044,
+   "stats_rows": 16044,
+   "columns": [
+    {
+     "name": "rental_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 16044,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 16049,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "rental id. unique id number identifying the rental",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "rental_date",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 15815,
+     "is_unique": false,
+     "min_value": "2005-05-24 22:53:30.0",
+     "max_value": "2006-02-14 15:16:03.0",
+     "examples": [
+      "2005-05-24 22:53:30.0",
+      "2005-05-24 22:54:33.0",
+      "2005-05-24 23:03:39.0",
+      "2005-05-24 23:04:41.0",
+      "2005-05-24 23:05:21.0"
+     ],
+     "top_values": [],
+     "description": "rental date. date when the rental occurs",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "inventory_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4580,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4581,
+     "examples": [
+      367,
+      1525,
+      1711,
+      2452,
+      2079
+     ],
+     "top_values": [],
+     "description": "inventory id. id number identifying the inventory",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "customer_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 599,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 599,
+     "examples": [
+      130,
+      459,
+      408,
+      333,
+      222
+     ],
+     "top_values": [],
+     "description": "customer id. id number identifying the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "return_date",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0114,
+     "distinct_count": 15836,
+     "is_unique": false,
+     "min_value": "2005-05-25 23:55:21.0",
+     "max_value": "2005-09-02 02:35:22.0",
+     "examples": [
+      "2005-05-26 22:04:30.0",
+      "2005-05-28 19:40:33.0",
+      "2005-06-01 22:12:39.0",
+      "2005-06-03 01:43:41.0",
+      "2005-06-02 04:33:21.0"
+     ],
+     "top_values": [],
+     "description": "return date. date when the rental returns",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "staff_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       1,
+       8040
+      ],
+      [
+       2,
+       8004
+      ]
+     ],
+     "description": "staff id. id number identifying the staff",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "2006-02-15 21:30:53.0",
+     "max_value": "2006-02-23 04:12:08.0",
+     "examples": [
+      "2006-02-15 21:30:53.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-15 21:30:53.0",
+       16043
+      ],
+      [
+       "2006-02-23 04:12:08.0",
+       1
+      ]
+     ],
+     "description": "last update. The time of the latest update",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "rental_id"
+   ],
+   "sample_rows": [
+    {
+     "rental_id": 1,
+     "rental_date": "2005-05-24 22:53:30.0",
+     "inventory_id": 367,
+     "customer_id": 130,
+     "return_date": "2005-05-26 22:04:30.0",
+     "staff_id": 1,
+     "last_update": "2006-02-15 21:30:53.0"
+    },
+    {
+     "rental_id": 2,
+     "rental_date": "2005-05-24 22:54:33.0",
+     "inventory_id": 1525,
+     "customer_id": 459,
+     "return_date": "2005-05-28 19:40:33.0",
+     "staff_id": 1,
+     "last_update": "2006-02-15 21:30:53.0"
+    },
+    {
+     "rental_id": 3,
+     "rental_date": "2005-05-24 23:03:39.0",
+     "inventory_id": 1711,
+     "customer_id": 408,
+     "return_date": "2005-06-01 22:12:39.0",
+     "staff_id": 1,
+     "last_update": "2006-02-15 21:30:53.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "staff",
+   "row_count": 2,
+   "stats_rows": 2,
+   "columns": [
+    {
+     "name": "staff_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "staff id. unique id number identifying the staff",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "first_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": "Jon",
+     "max_value": "Mike",
+     "examples": [
+      "Mike",
+      "Jon"
+     ],
+     "top_values": [
+      [
+       "Mike",
+       1
+      ],
+      [
+       "Jon",
+       1
+      ]
+     ],
+     "description": "First name of the actor",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": "Hillyer",
+     "max_value": "Stephens",
+     "examples": [
+      "Hillyer",
+      "Stephens"
+     ],
+     "top_values": [
+      [
+       "Stephens",
+       1
+      ],
+      [
+       "Hillyer",
+       1
+      ]
+     ],
+     "description": "Last name of the actor",
+     "value_description": "full name = (first name, last name)",
+     "notes": []
+    },
+    {
+     "name": "address_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": 3,
+     "max_value": 4,
+     "examples": [
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ]
+     ],
+     "description": "address id. id number identifying the address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "picture",
+     "declared_type": "BLOB",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.5,
+     "distinct_count": 1,
+     "is_unique": true,
+     "min_value": "0x3F504E470D0A1A0A0000000D4948445200000079000000750802000000...",
+     "max_value": "0x3F504E470D0A1A0A0000000D4948445200000079000000750802000000...",
+     "examples": [
+      "0x3F504E470D0A1A0A0000000D4948445200000079000000750802000000..."
+     ],
+     "top_values": [
+      [
+       "0x3F504E470D0A1A0A0000000D4948445200000079000000750802000000...",
+       1
+      ]
+     ],
+     "description": "picture of the staff",
+     "value_description": "",
+     "notes": [
+      "50% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "email",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": "Jon.Stephens@sakilastaff.com",
+     "max_value": "Mike.Hillyer@sakilastaff.com",
+     "examples": [
+      "Mike.Hillyer@sakilastaff.com",
+      "Jon.Stephens@sakilastaff.com"
+     ],
+     "top_values": [
+      [
+       "Mike.Hillyer@sakilastaff.com",
+       1
+      ],
+      [
+       "Jon.Stephens@sakilastaff.com",
+       1
+      ]
+     ],
+     "description": "email of the staff",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "store_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "store id. id number identifying the store",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "active",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       2
+      ]
+     ],
+     "description": "Whether the staff is active or not.",
+     "value_description": "1: active\n0: not active",
+     "notes": []
+    },
+    {
+     "name": "username",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": "Jon",
+     "max_value": "Mike",
+     "examples": [
+      "Mike",
+      "Jon"
+     ],
+     "top_values": [
+      [
+       "Mike",
+       1
+      ],
+      [
+       "Jon",
+       1
+      ]
+     ],
+     "description": "username to login the staff",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "password",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "8cb2237d0679ca88db6464eac60da96345513964",
+     "max_value": "8cb2237d0679ca88db6464eac60da96345513964",
+     "examples": [
+      "8cb2237d0679ca88db6464eac60da96345513964"
+     ],
+     "top_values": [
+      [
+       "8cb2237d0679ca88db6464eac60da96345513964",
+       2
+      ]
+     ],
+     "description": "password to login the staff",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2006-02-15 04:57:16.0",
+     "max_value": "2006-02-15 04:57:16.0",
+     "examples": [
+      "2006-02-15 04:57:16.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-15 04:57:16.0",
+       2
+      ]
+     ],
+     "description": "last update. The time of the latest update",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "staff_id"
+   ],
+   "sample_rows": [
+    {
+     "staff_id": 1,
+     "first_name": "Mike",
+     "last_name": "Hillyer",
+     "address_id": 3,
+     "picture": "0x3F504E470D0A1A0A0000000D4948445200000079000000750802000000...",
+     "email": "Mike.Hillyer@sakilastaff.com",
+     "store_id": 1,
+     "active": 1,
+     "username": "Mike",
+     "password": "8cb2237d0679ca88db6464eac60da96345513964",
+     "last_update": "2006-02-15 04:57:16.0"
+    },
+    {
+     "staff_id": 2,
+     "first_name": "Jon",
+     "last_name": "Stephens",
+     "address_id": 4,
+     "picture": null,
+     "email": "Jon.Stephens@sakilastaff.com",
+     "store_id": 2,
+     "active": 1,
+     "username": "Jon",
+     "password": "8cb2237d0679ca88db6464eac60da96345513964",
+     "last_update": "2006-02-15 04:57:16.0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "store",
+   "row_count": 2,
+   "stats_rows": 2,
+   "columns": [
+    {
+     "name": "store_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "store id. unique id number identifying the store",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "manager_staff_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "manager staff id. id number identifying the manager staff",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "address_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "address id. id number identifying the address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_update",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "2006-02-15 04:57:12.0",
+     "max_value": "2006-02-15 04:57:12.0",
+     "examples": [
+      "2006-02-15 04:57:12.0"
+     ],
+     "top_values": [
+      [
+       "2006-02-15 04:57:12.0",
+       2
+      ]
+     ],
+     "description": "last update. The time of the latest update",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "store_id"
+   ],
+   "sample_rows": [
+    {
+     "store_id": 1,
+     "manager_staff_id": 1,
+     "address_id": 1,
+     "last_update": "2006-02-15 04:57:12.0"
+    },
+    {
+     "store_id": 2,
+     "manager_staff_id": 2,
+     "address_id": 2,
+     "last_update": "2006-02-15 04:57:12.0"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "address",
+   "from_column": "city_id",
+   "to_table": "city",
+   "to_column": "city_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "city",
+   "from_column": "country_id",
+   "to_table": "country",
+   "to_column": "country_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "customer",
+   "from_column": "address_id",
+   "to_table": "address",
+   "to_column": "address_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "customer",
+   "from_column": "store_id",
+   "to_table": "store",
+   "to_column": "store_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "film",
+   "from_column": "original_language_id",
+   "to_table": "language",
+   "to_column": "language_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "film",
+   "from_column": "language_id",
+   "to_table": "language",
+   "to_column": "language_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "film_actor",
+   "from_column": "film_id",
+   "to_table": "film",
+   "to_column": "film_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "film_actor",
+   "from_column": "actor_id",
+   "to_table": "actor",
+   "to_column": "actor_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "film_category",
+   "from_column": "category_id",
+   "to_table": "category",
+   "to_column": "category_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "film_category",
+   "from_column": "film_id",
+   "to_table": "film",
+   "to_column": "film_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "inventory",
+   "from_column": "store_id",
+   "to_table": "store",
+   "to_column": "store_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "inventory",
+   "from_column": "film_id",
+   "to_table": "film",
+   "to_column": "film_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "payment",
+   "from_column": "rental_id",
+   "to_table": "rental",
+   "to_column": "rental_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "payment",
+   "from_column": "staff_id",
+   "to_table": "staff",
+   "to_column": "staff_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "payment",
+   "from_column": "customer_id",
+   "to_table": "customer",
+   "to_column": "customer_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "rental",
+   "from_column": "staff_id",
+   "to_table": "staff",
+   "to_column": "staff_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "rental",
+   "from_column": "customer_id",
+   "to_table": "customer",
+   "to_column": "customer_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "rental",
+   "from_column": "inventory_id",
+   "to_table": "inventory",
+   "to_column": "inventory_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "staff",
+   "from_column": "store_id",
+   "to_table": "store",
+   "to_column": "store_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "staff",
+   "from_column": "address_id",
+   "to_table": "address",
+   "to_column": "address_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "store",
+   "from_column": "address_id",
+   "to_table": "address",
+   "to_column": "address_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "store",
+   "from_column": "manager_staff_id",
+   "to_table": "staff",
+   "to_column": "staff_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "customer",
+   "from_column": "store_id",
+   "to_table": "staff",
+   "to_column": "store_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "film",
+   "from_column": "film_id",
+   "to_table": "film_text",
+   "to_column": "film_id",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "film_actor",
+   "from_column": "film_id",
+   "to_table": "film_category",
+   "to_column": "film_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "film_actor",
+   "from_column": "film_id",
+   "to_table": "film_text",
+   "to_column": "film_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "film_category",
+   "from_column": "film_id",
+   "to_table": "film_text",
+   "to_column": "film_id",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "inventory",
+   "from_column": "film_id",
+   "to_table": "film_actor",
+   "to_column": "film_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.997
+  },
+  {
+   "from_table": "inventory",
+   "from_column": "film_id",
+   "to_table": "film_category",
+   "to_column": "film_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "inventory",
+   "from_column": "film_id",
+   "to_table": "film_text",
+   "to_column": "film_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "inventory",
+   "from_column": "store_id",
+   "to_table": "staff",
+   "to_column": "store_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

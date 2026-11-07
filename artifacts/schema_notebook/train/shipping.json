@@ -1,0 +1,1722 @@
+{
+ "db_id": "shipping",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/shipping/shipping.sqlite",
+ "fingerprint": "131072-1793993033474586178-v1.0",
+ "created_at": "2026-11-06T19:25:12+00:00",
+ "profile_seconds": 0.01,
+ "tables": [
+  {
+   "name": "city",
+   "row_count": 601,
+   "stats_rows": 601,
+   "columns": [
+    {
+     "name": "city_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 601,
+     "is_unique": true,
+     "min_value": 100,
+     "max_value": 700,
+     "examples": [
+      100,
+      101,
+      102,
+      103,
+      104
+     ],
+     "top_values": [],
+     "description": "city id. unique identifier for the city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 566,
+     "is_unique": false,
+     "min_value": "Abilene",
+     "max_value": "Yuma",
+     "examples": [
+      "Union City",
+      "Huntington Park",
+      "Passaic",
+      "Hempstead",
+      "Berwyn"
+     ],
+     "top_values": [],
+     "description": "city name. name of the city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 49,
+     "is_unique": false,
+     "min_value": "Alabama",
+     "max_value": "Wyoming",
+     "examples": [
+      "New Jersey",
+      "California",
+      "New York",
+      "Illinois",
+      "Massachusetts"
+     ],
+     "top_values": [
+      [
+       "California",
+       143
+      ],
+      [
+       "Texas",
+       47
+      ],
+      [
+       "Florida",
+       38
+      ],
+      [
+       "Illinois",
+       26
+      ],
+      [
+       "Michigan",
+       23
+      ],
+      [
+       "Massachusetts",
+       19
+      ],
+      [
+       "Ohio",
+       18
+      ],
+      [
+       "North Carolina",
+       15
+      ],
+      [
+       "Washington",
+       14
+      ],
+      [
+       "Minnesota",
+       14
+      ],
+      [
+       "Wisconsin",
+       13
+      ],
+      [
+       "New York",
+       13
+      ],
+      [
+       "Colorado",
+       13
+      ],
+      [
+       "New Jersey",
+       12
+      ],
+      [
+       "Indiana",
+       12
+      ],
+      [
+       "Connecticut",
+       12
+      ],
+      [
+       "Virginia",
+       11
+      ],
+      [
+       "Arizona",
+       11
+      ],
+      [
+       "Missouri",
+       10
+      ],
+      [
+       "Utah",
+       9
+      ],
+      [
+       "Oregon",
+       9
+      ],
+      [
+       "Iowa",
+       9
+      ],
+      [
+       "Georgia",
+       9
+      ],
+      [
+       "Tennessee",
+       8
+      ],
+      [
+       "Pennsylvania",
+       8
+      ],
+      [
+       "Louisiana",
+       8
+      ],
+      [
+       "Alabama",
+       8
+      ],
+      [
+       "Oklahoma",
+       7
+      ],
+      [
+       "Nevada",
+       6
+      ],
+      [
+       "Kansas",
+       6
+      ],
+      [
+       "Arkansas",
+       6
+      ],
+      [
+       "South Carolina",
+       4
+      ],
+      [
+       "Rhode Island",
+       4
+      ],
+      [
+       "New Mexico",
+       4
+      ],
+      [
+       "Maryland",
+       4
+      ],
+      [
+       "Idaho",
+       4
+      ],
+      [
+       "Montana",
+       3
+      ],
+      [
+       "Mississippi",
+       3
+      ],
+      [
+       "Kentucky",
+       3
+      ],
+      [
+       "Westrginia",
+       2
+      ],
+      [
+       "South Dakota",
+       2
+      ],
+      [
+       "North Dakota",
+       2
+      ],
+      [
+       "New Hampshire",
+       2
+      ],
+      [
+       "Nebraska",
+       2
+      ],
+      [
+       "Wyoming",
+       1
+      ],
+      [
+       "Maine",
+       1
+      ],
+      [
+       "Delaware",
+       1
+      ],
+      [
+       "DC",
+       1
+      ],
+      [
+       "Alaska",
+       1
+      ]
+     ],
+     "description": "state in which the city is",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "population",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 600,
+     "is_unique": false,
+     "min_value": 50052,
+     "max_value": 8008278,
+     "examples": [
+      67088,
+      61348,
+      67861,
+      56554,
+      54016
+     ],
+     "top_values": [],
+     "description": "population of the city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "area",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 444,
+     "is_unique": false,
+     "min_value": 1.3,
+     "max_value": 1697.3,
+     "examples": [
+      1.3,
+      3.0,
+      3.1,
+      3.7,
+      3.9
+     ],
+     "top_values": [],
+     "description": "square miles the city covers",
+     "value_description": "commonsense evidence: \npopulation density (land area per capita) = area / population",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "city_id"
+   ],
+   "sample_rows": [
+    {
+     "city_id": 100,
+     "city_name": "Union City",
+     "state": "New Jersey",
+     "population": 67088,
+     "area": 1.3
+    },
+    {
+     "city_id": 101,
+     "city_name": "Huntington Park",
+     "state": "California",
+     "population": 61348,
+     "area": 3.0
+    },
+    {
+     "city_id": 102,
+     "city_name": "Passaic",
+     "state": "New Jersey",
+     "population": 67861,
+     "area": 3.1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "customer",
+   "row_count": 100,
+   "stats_rows": 100,
+   "columns": [
+    {
+     "name": "cust_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 100,
+     "is_unique": true,
+     "min_value": 193,
+     "max_value": 4955,
+     "examples": [
+      193,
+      304,
+      314,
+      381,
+      493
+     ],
+     "top_values": [],
+     "description": "customer id. Unique identifier for the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "cust_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 99,
+     "is_unique": false,
+     "min_value": "A Plus Surface Coatings Inc",
+     "max_value": "Ziebart",
+     "examples": [
+      "Advanced Fabricators",
+      "Pard's Trailer Sales",
+      "Saar Enterprises, Inc.",
+      "Autoware Inc",
+      "Harry's Hot Rod Auto & Truck Accessories"
+     ],
+     "top_values": [],
+     "description": "customer name. Business name of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "annual_revenue",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 100,
+     "is_unique": true,
+     "min_value": 979237,
+     "max_value": 48352218,
+     "examples": [
+      39588651,
+      17158109,
+      47403613,
+      5583961,
+      11732302
+     ],
+     "top_values": [],
+     "description": "Annual revenue of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "cust_type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "manufacturer",
+     "max_value": "wholesaler",
+     "examples": [
+      "manufacturer",
+      "wholesaler",
+      "retailer"
+     ],
+     "top_values": [
+      [
+       "manufacturer",
+       40
+      ],
+      [
+       "retailer",
+       38
+      ],
+      [
+       "wholesaler",
+       22
+      ]
+     ],
+     "description": "customer type. Whether the customer is a manufacturer or a wholes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "address",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 100,
+     "is_unique": true,
+     "min_value": "1030 Northwest 107th Avenue",
+     "max_value": "9409 Bustleton Avenue",
+     "examples": [
+      "5141 Summit Boulevard",
+      "5910 South 300 West",
+      "11687 192nd Street",
+      "854 Southwest 12th Avenue",
+      "105 NW 13th St"
+     ],
+     "top_values": [],
+     "description": "Physical street address of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 82,
+     "is_unique": false,
+     "min_value": "Albany",
+     "max_value": "Yuma",
+     "examples": [
+      "West Palm Beach",
+      "Salt Lake City",
+      "Council Bluffs",
+      "Pompano Beach",
+      "Grand Prairie"
+     ],
+     "top_values": [],
+     "description": "City of the customer's address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 33,
+     "is_unique": false,
+     "min_value": "AL",
+     "max_value": "WI",
+     "examples": [
+      "FL",
+      "UT",
+      "IA",
+      "TX",
+      "PA"
+     ],
+     "top_values": [
+      [
+       "CA",
+       15
+      ],
+      [
+       "TX",
+       10
+      ],
+      [
+       "FL",
+       8
+      ],
+      [
+       "OR",
+       7
+      ],
+      [
+       "TN",
+       5
+      ],
+      [
+       "OH",
+       4
+      ],
+      [
+       "LA",
+       4
+      ],
+      [
+       "CO",
+       4
+      ],
+      [
+       "WA",
+       3
+      ],
+      [
+       "UT",
+       3
+      ],
+      [
+       "IN",
+       3
+      ],
+      [
+       "IL",
+       3
+      ],
+      [
+       "PA",
+       2
+      ],
+      [
+       "NY",
+       2
+      ],
+      [
+       "NE",
+       2
+      ],
+      [
+       "MO",
+       2
+      ],
+      [
+       "MN",
+       2
+      ],
+      [
+       "MI",
+       2
+      ],
+      [
+       "MA",
+       2
+      ],
+      [
+       "IA",
+       2
+      ],
+      [
+       "AZ",
+       2
+      ],
+      [
+       "AL",
+       2
+      ],
+      [
+       "WI",
+       1
+      ],
+      [
+       "SC",
+       1
+      ],
+      [
+       "OK",
+       1
+      ],
+      [
+       "NM",
+       1
+      ],
+      [
+       "ND",
+       1
+      ],
+      [
+       "NC",
+       1
+      ],
+      [
+       "MT",
+       1
+      ],
+      [
+       "MS",
+       1
+      ],
+      [
+       "KY",
+       1
+      ],
+      [
+       "GA",
+       1
+      ],
+      [
+       "AR",
+       1
+      ]
+     ],
+     "description": "State of the customer's address",
+     "value_description": "commonsense evidence: \nplease mention its full name in the question, by referring to \nhttps://www23.statcan.gc.ca/imdb/p3VD.pl?Function=getVD&TVD=53971\ne.g., NY --> New York",
+     "notes": []
+    },
+    {
+     "name": "zip",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 95,
+     "is_unique": false,
+     "min_value": 2128.0,
+     "max_value": 99217.0,
+     "examples": [
+      33415.0,
+      84107.0,
+      51503.0,
+      33069.0,
+      75050.0
+     ],
+     "top_values": [],
+     "description": "Postal code of the customer's address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "phone",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 100,
+     "is_unique": true,
+     "min_value": "(209) 464-3278",
+     "max_value": "(972) 263-8080",
+     "examples": [
+      "(561) 683-3535",
+      "(801) 262-4864",
+      "(712) 366-4929",
+      "(954) 738-4000",
+      "(972) 263-8080"
+     ],
+     "top_values": [],
+     "description": "Telephone number to reach the customer",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "cust_id"
+   ],
+   "sample_rows": [
+    {
+     "cust_id": 193,
+     "cust_name": "Advanced Fabricators",
+     "annual_revenue": 39588651,
+     "cust_type": "manufacturer",
+     "address": "5141 Summit Boulevard",
+     "city": "West Palm Beach",
+     "state": "FL",
+     "zip": 33415.0,
+     "phone": "(561) 683-3535"
+    },
+    {
+     "cust_id": 304,
+     "cust_name": "Pard's Trailer Sales",
+     "annual_revenue": 17158109,
+     "cust_type": "wholesaler",
+     "address": "5910 South 300 West",
+     "city": "Salt Lake City",
+     "state": "UT",
+     "zip": 84107.0,
+     "phone": "(801) 262-4864"
+    },
+    {
+     "cust_id": 314,
+     "cust_name": "Saar Enterprises, Inc.",
+     "annual_revenue": 47403613,
+     "cust_type": "retailer",
+     "address": "11687 192nd Street",
+     "city": "Council Bluffs",
+     "state": "IA",
+     "zip": 51503.0,
+     "phone": "(712) 366-4929"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "driver",
+   "row_count": 11,
+   "stats_rows": 11,
+   "columns": [
+    {
+     "name": "driver_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": true,
+     "min_value": 20,
+     "max_value": 30,
+     "examples": [
+      20,
+      21,
+      22,
+      23,
+      24
+     ],
+     "top_values": [
+      [
+       30,
+       1
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ]
+     ],
+     "description": "driver id. Unique identifier for the driver",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "first_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": true,
+     "min_value": "Adel",
+     "max_value": "Zachery",
+     "examples": [
+      "Sue",
+      "Andrea",
+      "Roger",
+      "Zachery",
+      "Adel"
+     ],
+     "top_values": [
+      [
+       "Zachery",
+       1
+      ],
+      [
+       "Sue",
+       1
+      ],
+      [
+       "Roger",
+       1
+      ],
+      [
+       "Maria",
+       1
+      ],
+      [
+       "Leszek",
+       1
+      ],
+      [
+       "Kristie",
+       1
+      ],
+      [
+       "Holger",
+       1
+      ],
+      [
+       "Gale",
+       1
+      ],
+      [
+       "Andrea",
+       1
+      ],
+      [
+       "Alina",
+       1
+      ],
+      [
+       "Adel",
+       1
+      ]
+     ],
+     "description": "first name. First given name of the driver",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": true,
+     "min_value": "Al-Alawi",
+     "max_value": "Sims",
+     "examples": [
+      "Newell",
+      "Simons",
+      "McHaney",
+      "Hicks",
+      "Al-Alawi"
+     ],
+     "top_values": [
+      [
+       "Sims",
+       1
+      ],
+      [
+       "Simons",
+       1
+      ],
+      [
+       "Oneal",
+       1
+      ],
+      [
+       "Nohr",
+       1
+      ],
+      [
+       "Newell",
+       1
+      ],
+      [
+       "McHaney",
+       1
+      ],
+      [
+       "Kieltyka",
+       1
+      ],
+      [
+       "Hicks",
+       1
+      ],
+      [
+       "Craft",
+       1
+      ],
+      [
+       "Chircu",
+       1
+      ],
+      [
+       "Al-Alawi",
+       1
+      ]
+     ],
+     "description": "last name. Family name of the driver",
+     "value_description": "commonsense evidence: full name = first_name + last_name",
+     "notes": []
+    },
+    {
+     "name": "address",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": true,
+     "min_value": "1000 Rayner St",
+     "max_value": "842 E Trigg Ave",
+     "examples": [
+      "268 Richmond Ave",
+      "3574 Oak Limb Cv",
+      "1839 S Orleans St",
+      "3649 Park Lake Dr",
+      "749 E Mckellar Ave"
+     ],
+     "top_values": [
+      [
+       "842 E Trigg Ave",
+       1
+      ],
+      [
+       "749 E Mckellar Ave",
+       1
+      ],
+      [
+       "572 Delta Rd",
+       1
+      ],
+      [
+       "4089 Persimmon View Cv",
+       1
+      ],
+      [
+       "3649 Park Lake Dr",
+       1
+      ],
+      [
+       "3574 Oak Limb Cv",
+       1
+      ],
+      [
+       "3522 Mimosa Ave",
+       1
+      ],
+      [
+       "2877 Laredo St",
+       1
+      ],
+      [
+       "268 Richmond Ave",
+       1
+      ],
+      [
+       "1839 S Orleans St",
+       1
+      ],
+      [
+       "1000 Rayner St",
+       1
+      ]
+     ],
+     "description": "Street address of the driver's home",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "Memphis",
+     "max_value": "Memphis",
+     "examples": [
+      "Memphis"
+     ],
+     "top_values": [
+      [
+       "Memphis",
+       11
+      ]
+     ],
+     "description": "City the driver lives in",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "TN",
+     "max_value": "TN",
+     "examples": [
+      "TN"
+     ],
+     "top_values": [
+      [
+       "TN",
+       11
+      ]
+     ],
+     "description": "State the driver lives in",
+     "value_description": "commonsense evidence: \nplease mention its full name in the question, by referring to \nhttps://www23.statcan.gc.ca/imdb/p3VD.pl?Function=getVD&TVD=53971 \ne.g., NY --> New York",
+     "notes": []
+    },
+    {
+     "name": "zip_code",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": 38106,
+     "max_value": 38135,
+     "examples": [
+      38106,
+      38135,
+      38118,
+      38109,
+      38114
+     ],
+     "top_values": [
+      [
+       38106,
+       4
+      ],
+      [
+       38135,
+       2
+      ],
+      [
+       38127,
+       1
+      ],
+      [
+       38118,
+       1
+      ],
+      [
+       38114,
+       1
+      ],
+      [
+       38111,
+       1
+      ],
+      [
+       38109,
+       1
+      ]
+     ],
+     "description": "zip code. postal code of the driver's address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "phone",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": true,
+     "min_value": "(901) 323-0258",
+     "max_value": "(901) 948-1043",
+     "examples": [
+      "(901) 774-6569",
+      "(901) 384-0984",
+      "(901) 948-1043",
+      "(901) 362-6674",
+      "(901) 947-4433"
+     ],
+     "top_values": [
+      [
+       "(901) 948-1043",
+       1
+      ],
+      [
+       "(901) 948-0108",
+       1
+      ],
+      [
+       "(901) 947-4433",
+       1
+      ],
+      [
+       "(901) 789-7564",
+       1
+      ],
+      [
+       "(901) 774-6569",
+       1
+      ],
+      [
+       "(901) 726-6205",
+       1
+      ],
+      [
+       "(901) 534-4388",
+       1
+      ],
+      [
+       "(901) 386-9194",
+       1
+      ],
+      [
+       "(901) 384-0984",
+       1
+      ],
+      [
+       "(901) 362-6674",
+       1
+      ],
+      [
+       "(901) 323-0258",
+       1
+      ]
+     ],
+     "description": "telephone number of the driver",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "driver_id"
+   ],
+   "sample_rows": [
+    {
+     "driver_id": 20,
+     "first_name": "Sue",
+     "last_name": "Newell",
+     "address": "268 Richmond Ave",
+     "city": "Memphis",
+     "state": "TN",
+     "zip_code": 38106,
+     "phone": "(901) 774-6569"
+    },
+    {
+     "driver_id": 21,
+     "first_name": "Andrea",
+     "last_name": "Simons",
+     "address": "3574 Oak Limb Cv",
+     "city": "Memphis",
+     "state": "TN",
+     "zip_code": 38135,
+     "phone": "(901) 384-0984"
+    },
+    {
+     "driver_id": 22,
+     "first_name": "Roger",
+     "last_name": "McHaney",
+     "address": "1839 S Orleans St",
+     "city": "Memphis",
+     "state": "TN",
+     "zip_code": 38106,
+     "phone": "(901) 948-1043"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "shipment",
+   "row_count": 960,
+   "stats_rows": 960,
+   "columns": [
+    {
+     "name": "ship_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 960,
+     "is_unique": true,
+     "min_value": 1000,
+     "max_value": 1959,
+     "examples": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004
+     ],
+     "top_values": [],
+     "description": "ship id. Unique identifier of the shipment",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "cust_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 100,
+     "is_unique": false,
+     "min_value": 193,
+     "max_value": 4955,
+     "examples": [
+      3660,
+      2001,
+      1669,
+      989,
+      2298
+     ],
+     "top_values": [],
+     "description": "customer id. A reference to the customer table that indicates which customer the shipment is for",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "weight",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 692,
+     "is_unique": false,
+     "min_value": 477.0,
+     "max_value": 85581.0,
+     "examples": [
+      3528.0,
+      11394.0,
+      8712.0,
+      17154.0,
+      9279.0
+     ],
+     "top_values": [],
+     "description": "The number of pounds being transported on the shipment",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "truck_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 12,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       12,
+       80
+      ],
+      [
+       11,
+       80
+      ],
+      [
+       10,
+       80
+      ],
+      [
+       9,
+       80
+      ],
+      [
+       8,
+       80
+      ],
+      [
+       7,
+       80
+      ],
+      [
+       6,
+       80
+      ],
+      [
+       5,
+       80
+      ],
+      [
+       4,
+       80
+      ],
+      [
+       3,
+       80
+      ],
+      [
+       2,
+       80
+      ],
+      [
+       1,
+       80
+      ]
+     ],
+     "description": "truck id. A reference to the truck table that indicates which truck is used in the shipment",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "driver_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": 20,
+     "max_value": 30,
+     "examples": [
+      23,
+      27,
+      21,
+      24,
+      22
+     ],
+     "top_values": [
+      [
+       27,
+       98
+      ],
+      [
+       23,
+       96
+      ],
+      [
+       21,
+       91
+      ],
+      [
+       24,
+       90
+      ],
+      [
+       22,
+       89
+      ],
+      [
+       30,
+       87
+      ],
+      [
+       26,
+       85
+      ],
+      [
+       29,
+       83
+      ],
+      [
+       20,
+       82
+      ],
+      [
+       28,
+       80
+      ],
+      [
+       25,
+       79
+      ]
+     ],
+     "description": "driver id. A reference to the driver table that indicates which driver transported the goods in the shipment",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 429,
+     "is_unique": false,
+     "min_value": 101,
+     "max_value": 700,
+     "examples": [
+      137,
+      186,
+      268,
+      365,
+      253
+     ],
+     "top_values": [],
+     "description": "city id. A reference to the city table that indicates the destination of the shipment",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ship_date",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 530,
+     "is_unique": false,
+     "min_value": "2016-01-08",
+     "max_value": "2017-12-27",
+     "examples": [
+      "2016-01-08",
+      "2016-01-18",
+      "2016-01-19",
+      "2016-01-24",
+      "2016-01-26"
+     ],
+     "top_values": [],
+     "description": "ship date. the date the items were received by the driver",
+     "value_description": "yyyy-mm-dd",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    }
+   ],
+   "primary_key": [
+    "ship_id"
+   ],
+   "sample_rows": [
+    {
+     "ship_id": 1000,
+     "cust_id": 3660,
+     "weight": 3528.0,
+     "truck_id": 1,
+     "driver_id": 23,
+     "city_id": 137,
+     "ship_date": "2016-01-08"
+    },
+    {
+     "ship_id": 1001,
+     "cust_id": 2001,
+     "weight": 11394.0,
+     "truck_id": 2,
+     "driver_id": 23,
+     "city_id": 186,
+     "ship_date": "2016-01-18"
+    },
+    {
+     "ship_id": 1002,
+     "cust_id": 1669,
+     "weight": 8712.0,
+     "truck_id": 3,
+     "driver_id": 27,
+     "city_id": 268,
+     "ship_date": "2016-01-19"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "truck",
+   "row_count": 12,
+   "stats_rows": 12,
+   "columns": [
+    {
+     "name": "truck_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 12,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "truck id. Unique identifier of the truck table",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "make",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Kenworth",
+     "max_value": "Peterbilt",
+     "examples": [
+      "Peterbilt",
+      "Mack",
+      "Kenworth"
+     ],
+     "top_values": [
+      [
+       "Mack",
+       5
+      ],
+      [
+       "Peterbilt",
+       4
+      ],
+      [
+       "Kenworth",
+       3
+      ]
+     ],
+     "description": "The brand of the truck",
+     "value_description": "commonsense evidence: \n Peterbilt headquarter: Texas (TX) \n Mack headquarter: North Carolina (NC) \n Kenworth headquarter: Washington (WA) \ncan ask question about headquarters of the truck",
+     "notes": []
+    },
+    {
+     "name": "model_year",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 2005,
+     "max_value": 2010,
+     "examples": [
+      2005,
+      2006,
+      2007,
+      2008,
+      2009
+     ],
+     "top_values": [
+      [
+       2009,
+       3
+      ],
+      [
+       2008,
+       3
+      ],
+      [
+       2010,
+       2
+      ],
+      [
+       2007,
+       2
+      ],
+      [
+       2006,
+       1
+      ],
+      [
+       2005,
+       1
+      ]
+     ],
+     "description": "model year. The year the truck was manufactured",
+     "value_description": "commonsense evidence: The truck with earlier model year means this truck is newer.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "truck_id"
+   ],
+   "sample_rows": [
+    {
+     "truck_id": 1,
+     "make": "Peterbilt",
+     "model_year": 2005
+    },
+    {
+     "truck_id": 2,
+     "make": "Mack",
+     "model_year": 2006
+    },
+    {
+     "truck_id": 3,
+     "make": "Peterbilt",
+     "model_year": 2007
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "shipment",
+   "from_column": "truck_id",
+   "to_table": "truck",
+   "to_column": "truck_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "shipment",
+   "from_column": "driver_id",
+   "to_table": "driver",
+   "to_column": "driver_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "shipment",
+   "from_column": "city_id",
+   "to_table": "city",
+   "to_column": "city_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "shipment",
+   "from_column": "cust_id",
+   "to_table": "customer",
+   "to_column": "cust_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

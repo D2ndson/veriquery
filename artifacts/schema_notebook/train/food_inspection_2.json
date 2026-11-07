@@ -1,0 +1,2302 @@
+{
+ "db_id": "food_inspection_2",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/food_inspection_2/food_inspection_2.sqlite",
+ "fingerprint": "216940544-1793993025785431590-v1.0",
+ "created_at": "2026-11-06T19:24:59+00:00",
+ "profile_seconds": 6.093,
+ "tables": [
+  {
+   "name": "employee",
+   "row_count": 75,
+   "stats_rows": 75,
+   "columns": [
+    {
+     "name": "employee_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 75,
+     "is_unique": true,
+     "min_value": 103705,
+     "max_value": 299239,
+     "examples": [
+      103705,
+      104633,
+      106581,
+      111559,
+      112202
+     ],
+     "top_values": [],
+     "description": "employee id. the unique id for the employee",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "first_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 71,
+     "is_unique": false,
+     "min_value": "Aaron",
+     "max_value": "Zachary",
+     "examples": [
+      "Anastasia",
+      "Joshua",
+      "Zach",
+      "Lisa",
+      "Bob"
+     ],
+     "top_values": [],
+     "description": "first name of the employee",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 72,
+     "is_unique": false,
+     "min_value": "Adkins",
+     "max_value": "William",
+     "examples": [
+      "Hansen",
+      "Rosa",
+      "Barber",
+      "Tillman",
+      "Benson"
+     ],
+     "top_values": [],
+     "description": "last name of the employee",
+     "value_description": "commonsense evidence: full name: first name + last_name",
+     "notes": []
+    },
+    {
+     "name": "address",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 75,
+     "is_unique": true,
+     "min_value": "1000 N Lake Shore Plz",
+     "max_value": "PO Box 546",
+     "examples": [
+      "6023 S Elizabeth St",
+      "5000 N Wolcott Ave",
+      "7522 N Oleander Ave",
+      "5529 S Dorchester Ave",
+      "7011 S Campbell Ave"
+     ],
+     "top_values": [],
+     "description": "physical street address of the employee",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Chicago",
+     "max_value": "Park Forest",
+     "examples": [
+      "Chicago",
+      "Park Forest",
+      "Hoffman Estates"
+     ],
+     "top_values": [
+      [
+       "Chicago",
+       73
+      ],
+      [
+       "Park Forest",
+       1
+      ],
+      [
+       "Hoffman Estates",
+       1
+      ]
+     ],
+     "description": "city of the employee's address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "IL",
+     "max_value": "IL",
+     "examples": [
+      "IL"
+     ],
+     "top_values": [
+      [
+       "IL",
+       75
+      ]
+     ],
+     "description": "state of the customer's address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "zip",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 37,
+     "is_unique": false,
+     "min_value": 60169,
+     "max_value": 60827,
+     "examples": [
+      60636,
+      60640,
+      60631,
+      60637,
+      60629
+     ],
+     "top_values": [
+      [
+       60617,
+       7
+      ],
+      [
+       60636,
+       6
+      ],
+      [
+       60649,
+       5
+      ],
+      [
+       60643,
+       4
+      ],
+      [
+       60629,
+       4
+      ],
+      [
+       60657,
+       3
+      ],
+      [
+       60651,
+       3
+      ],
+      [
+       60634,
+       3
+      ],
+      [
+       60619,
+       3
+      ],
+      [
+       60827,
+       2
+      ],
+      [
+       60660,
+       2
+      ],
+      [
+       60653,
+       2
+      ],
+      [
+       60637,
+       2
+      ],
+      [
+       60631,
+       2
+      ],
+      [
+       60624,
+       2
+      ],
+      [
+       60623,
+       2
+      ],
+      [
+       60620,
+       2
+      ],
+      [
+       60618,
+       2
+      ],
+      [
+       60654,
+       1
+      ],
+      [
+       60647,
+       1
+      ],
+      [
+       60645,
+       1
+      ],
+      [
+       60644,
+       1
+      ],
+      [
+       60642,
+       1
+      ],
+      [
+       60641,
+       1
+      ],
+      [
+       60640,
+       1
+      ],
+      [
+       60639,
+       1
+      ],
+      [
+       60625,
+       1
+      ],
+      [
+       60621,
+       1
+      ],
+      [
+       60615,
+       1
+      ],
+      [
+       60614,
+       1
+      ],
+      [
+       60612,
+       1
+      ],
+      [
+       60611,
+       1
+      ],
+      [
+       60610,
+       1
+      ],
+      [
+       60608,
+       1
+      ],
+      [
+       60607,
+       1
+      ],
+      [
+       60466,
+       1
+      ],
+      [
+       60169,
+       1
+      ]
+     ],
+     "description": "postal code of the employee's address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "phone",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 75,
+     "is_unique": true,
+     "min_value": "(219) 473-0757",
+     "max_value": "(773) 907-7655",
+     "examples": [
+      "(773) 424-8729",
+      "(773) 293-6409",
+      "(219) 473-0757",
+      "(773) 424-5470",
+      "(773) 891-8653"
+     ],
+     "top_values": [],
+     "description": "telephone number to reach the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Division Manager",
+     "max_value": "Supervisor",
+     "examples": [
+      "Sanitarian",
+      "Supervisor",
+      "Division Manager"
+     ],
+     "top_values": [
+      [
+       "Sanitarian",
+       67
+      ],
+      [
+       "Supervisor",
+       7
+      ],
+      [
+       "Division Manager",
+       1
+      ]
+     ],
+     "description": "career title of the employee",
+     "value_description": " Sanitarian \n Supervisor \n Division Manager",
+     "notes": []
+    },
+    {
+     "name": "salary",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 68,
+     "is_unique": false,
+     "min_value": 62200,
+     "max_value": 135200,
+     "examples": [
+      79300,
+      82000,
+      79900,
+      84700,
+      81900
+     ],
+     "top_values": [],
+     "description": "the salary of the employee",
+     "value_description": "us dollars / year\ncommonsense evidence: monthly salary: salary / 12",
+     "notes": []
+    },
+    {
+     "name": "supervisor",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": 177316,
+     "max_value": 204603,
+     "examples": [
+      177316,
+      186742,
+      179582,
+      182205,
+      192462
+     ],
+     "top_values": [
+      [
+       186498,
+       14
+      ],
+      [
+       179582,
+       14
+      ],
+      [
+       186742,
+       13
+      ],
+      [
+       182205,
+       10
+      ],
+      [
+       177316,
+       9
+      ],
+      [
+       201781,
+       7
+      ],
+      [
+       192462,
+       7
+      ],
+      [
+       204603,
+       1
+      ]
+     ],
+     "description": "the employee id of the employee's supervisor",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "employee_id"
+   ],
+   "sample_rows": [
+    {
+     "employee_id": 103705,
+     "first_name": "Anastasia",
+     "last_name": "Hansen",
+     "address": "6023 S Elizabeth St",
+     "city": "Chicago",
+     "state": "IL",
+     "zip": 60636,
+     "phone": "(773) 424-8729",
+     "title": "Sanitarian",
+     "salary": 79300,
+     "supervisor": 177316
+    },
+    {
+     "employee_id": 104633,
+     "first_name": "Joshua",
+     "last_name": "Rosa",
+     "address": "5000 N Wolcott Ave",
+     "city": "Chicago",
+     "state": "IL",
+     "zip": 60640,
+     "phone": "(773) 293-6409",
+     "title": "Sanitarian",
+     "salary": 82000,
+     "supervisor": 186742
+    },
+    {
+     "employee_id": 106581,
+     "first_name": "Zach",
+     "last_name": "Barber",
+     "address": "7522 N Oleander Ave",
+     "city": "Chicago",
+     "state": "IL",
+     "zip": 60631,
+     "phone": "(219) 473-0757",
+     "title": "Sanitarian",
+     "salary": 79900,
+     "supervisor": 179582
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "establishment",
+   "row_count": 31642,
+   "stats_rows": 31642,
+   "columns": [
+    {
+     "name": "license_no",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 31642,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 9999999,
+     "examples": [
+      1,
+      2,
+      9,
+      40,
+      43
+     ],
+     "top_values": [],
+     "description": "the license number of the facility",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "dba_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 23341,
+     "is_unique": false,
+     "min_value": "#1 CHINA EXPRESS, LTD.",
+     "max_value": "vitino pizzeria",
+     "examples": [
+      "HARVEST CRUSADES MINISTRIES",
+      "COSI",
+      "XANDO COFFEE & BAR / COSI SANDWICH BAR",
+      "VITO & NICK'S LOUNGE",
+      "JOHN SCHALLER"
+     ],
+     "top_values": [],
+     "description": "doing business as name. the dba name of the facility",
+     "value_description": "commonsense evidence: DBA stands for doing business as. It's also referred to as your business's assumed, trade or fictitious name.",
+     "notes": []
+    },
+    {
+     "name": "aka_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.8132,
+     "distinct_count": 4279,
+     "is_unique": false,
+     "min_value": "#1 CHINA EXPRESS , LTD",
+     "max_value": "the FRENCH LUNCHBOX",
+     "examples": [
+      "COSI",
+      "KING'S CHINESE/PARK MANOR LOUNGE",
+      "MR BEEF ON HARLEM",
+      "LA UNICA FOOD MART",
+      "LE PETIT PARIS"
+     ],
+     "top_values": [],
+     "description": "as know as name. the aka name of the facility",
+     "value_description": "commonsense evidence: the aka name is used to indicate another name that a person or thing has or uses",
+     "notes": [
+      "81% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "facility_type",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1297,
+     "distinct_count": 396,
+     "is_unique": false,
+     "min_value": "(convenience store)",
+     "max_value": "weight loss program",
+     "examples": [
+      "Special Event",
+      "Restaurant",
+      "TAVERN",
+      "Grocery Store",
+      "Liquor"
+     ],
+     "top_values": [],
+     "description": "the facility type",
+     "value_description": "commonsense evidence: can ask some questions about its categories, for i.e.:  \n \"Restaurant\" and \"Cafeteria\" refers to restaurants \n PASTRY school and \"CULINARY ARTS SCHOOL\" belongs to \"Education\" or \"School\". Please design this and mention your evidence in the commonsense part of questions, thanks",
+     "notes": []
+    },
+    {
+     "name": "risk_level",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0007,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 3,
+     "examples": [
+      2,
+      1,
+      3
+     ],
+     "top_values": [
+      [
+       1,
+       17116
+      ],
+      [
+       3,
+       7967
+      ],
+      [
+       2,
+       6538
+      ]
+     ],
+     "description": "the risk level of the facility",
+     "value_description": "commonsense evidence: Facilities with higher risk level have more serious food safety issues",
+     "notes": []
+    },
+    {
+     "name": "address",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 16450,
+     "is_unique": false,
+     "min_value": "1 E 113TH ST ",
+     "max_value": "9956 S WESTERN AVE ",
+     "examples": [
+      "118 N CENTRAL AVE ",
+      "230 W MONROE ST ",
+      "116 S MICHIGAN AVE ",
+      "233 N MICHIGAN AVE ",
+      "28 E JACKSON BLVD "
+     ],
+     "top_values": [],
+     "description": "physical street address of the facility",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0015,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": "ALSIP  ",
+     "max_value": "chicago",
+     "examples": [
+      "CHICAGO"
+     ],
+     "top_values": [
+      [
+       "CHICAGO",
+       31498
+      ],
+      [
+       "Chicago",
+       52
+      ],
+      [
+       "chicago",
+       12
+      ],
+      [
+       "MAYWOOD",
+       11
+      ],
+      [
+       "CICERO ",
+       5
+      ],
+      [
+       "SKOKIE ",
+       3
+      ],
+      [
+       "SUMMIT ",
+       2
+      ],
+      [
+       "ALSIP  ",
+       2
+      ],
+      [
+       "WORTH  ",
+       1
+      ],
+      [
+       "Maywood",
+       1
+      ],
+      [
+       "LOMBARD",
+       1
+      ],
+      [
+       "JUSTICE",
+       1
+      ],
+      [
+       "GLENCOE",
+       1
+      ],
+      [
+       "CHicago",
+       1
+      ],
+      [
+       "BURNHAM",
+       1
+      ],
+      [
+       "BERWYN ",
+       1
+      ]
+     ],
+     "description": "city of the facility's address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0001,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "IL",
+     "max_value": "IL",
+     "examples": [
+      "IL"
+     ],
+     "top_values": [
+      [
+       "IL",
+       31640
+      ]
+     ],
+     "description": "state of the facility's address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "zip",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0012,
+     "distinct_count": 71,
+     "is_unique": false,
+     "min_value": 60022,
+     "max_value": 60827,
+     "examples": [
+      60644,
+      60606,
+      60603,
+      60601,
+      60604
+     ],
+     "top_values": [],
+     "description": "postal code of the facility's address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "latitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0033,
+     "distinct_count": 15488,
+     "is_unique": false,
+     "min_value": 41.6446701321981,
+     "max_value": 42.0210642478255,
+     "examples": [
+      41.8828450747188,
+      41.8807571586472,
+      41.8803958382596,
+      41.8865673708869,
+      41.8783416120634
+     ],
+     "top_values": [],
+     "description": "the latitude of the facility",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "longitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0033,
+     "distinct_count": 15488,
+     "is_unique": false,
+     "min_value": -87.9144284392705,
+     "max_value": -87.5250941359867,
+     "examples": [
+      -87.7650954520439,
+      -87.6347092983425,
+      -87.6245017215946,
+      -87.6243846705971,
+      -87.6266749914868
+     ],
+     "top_values": [],
+     "description": "the longitude of the facility",
+     "value_description": "commonsense evidence: location = POINT(latitude, longitude)",
+     "notes": []
+    },
+    {
+     "name": "ward",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0031,
+     "distinct_count": 51,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 50,
+     "examples": [
+      29,
+      42,
+      18,
+      11,
+      25
+     ],
+     "top_values": [],
+     "description": "the ward number of the facility",
+     "value_description": "commonsense evidence: Ward number is the number assigned by the local authorities to identify the population count in each town, village and district usually for electoral purposes or to extract property and locality details",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "license_no"
+   ],
+   "sample_rows": [
+    {
+     "license_no": 1,
+     "dba_name": "HARVEST CRUSADES MINISTRIES",
+     "aka_name": null,
+     "facility_type": "Special Event",
+     "risk_level": 2,
+     "address": "118 N CENTRAL AVE ",
+     "city": "CHICAGO",
+     "state": "IL",
+     "zip": 60644,
+     "latitude": 41.8828450747188,
+     "longitude": -87.7650954520439,
+     "ward": 29
+    },
+    {
+     "license_no": 2,
+     "dba_name": "COSI",
+     "aka_name": null,
+     "facility_type": "Restaurant",
+     "risk_level": 1,
+     "address": "230 W MONROE ST ",
+     "city": "CHICAGO",
+     "state": "IL",
+     "zip": 60606,
+     "latitude": 41.8807571586472,
+     "longitude": -87.6347092983425,
+     "ward": 42
+    },
+    {
+     "license_no": 9,
+     "dba_name": "XANDO COFFEE & BAR / COSI SANDWICH BAR",
+     "aka_name": null,
+     "facility_type": "Restaurant",
+     "risk_level": 1,
+     "address": "116 S MICHIGAN AVE ",
+     "city": "CHICAGO",
+     "state": "IL",
+     "zip": 60603,
+     "latitude": 41.8803958382596,
+     "longitude": -87.6245017215946,
+     "ward": 42
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "inspection",
+   "row_count": 143870,
+   "stats_rows": 143870,
+   "columns": [
+    {
+     "name": "inspection_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 143870,
+     "is_unique": true,
+     "min_value": 44247,
+     "max_value": 1992212,
+     "examples": [
+      44247,
+      44248,
+      44249,
+      44250,
+      44251
+     ],
+     "top_values": [],
+     "description": "inspection id. the unique id for the inspection",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "inspection_date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1810,
+     "is_unique": false,
+     "min_value": "2010-01-04",
+     "max_value": "2017-02-17",
+     "examples": [
+      "2010-01-05",
+      "2010-01-21",
+      "2010-02-09",
+      "2010-03-18",
+      "2010-04-01"
+     ],
+     "top_values": [],
+     "description": "inspection date. the date of the inspection",
+     "value_description": "yyyy-mm-dd",
+     "notes": []
+    },
+    {
+     "name": "inspection_type",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 106,
+     "is_unique": false,
+     "min_value": "1315 license reinspection",
+     "max_value": "task force(1470) liquor tavern",
+     "examples": [
+      "Complaint",
+      "Canvass",
+      "Canvass Re-Inspection",
+      "Suspected Food Poisoning",
+      "License Re-Inspection"
+     ],
+     "top_values": [],
+     "description": "inspection type. the type of the inspection",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "results",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": "Business Not Located",
+     "max_value": "Pass w/ Conditions",
+     "examples": [
+      "Pass",
+      "Pass w/ Conditions",
+      "Fail"
+     ],
+     "top_values": [
+      [
+       "Pass",
+       84792
+      ],
+      [
+       "Fail",
+       27845
+      ],
+      [
+       "Pass w/ Conditions",
+       13567
+      ],
+      [
+       "Out of Business",
+       13243
+      ],
+      [
+       "No Entry",
+       3762
+      ],
+      [
+       "Not Ready",
+       618
+      ],
+      [
+       "Business Not Located",
+       43
+      ]
+     ],
+     "description": "the inspection results",
+     "value_description": " Pass \n Pass w/ Conditions \n Fail \n Out of Business \n Business Not Located \n No Entry \n Not Ready \ncommonsense evidence: the quality is verified: Pass + Pass w/ Conditions",
+     "notes": []
+    },
+    {
+     "name": "employee_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 28,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 173558,
+     "examples": [
+      141319,
+      143902,
+      143487,
+      104633,
+      123538
+     ],
+     "top_values": [
+      [
+       153225,
+       8663
+      ],
+      [
+       130467,
+       8524
+      ],
+      [
+       141319,
+       8495
+      ],
+      [
+       123538,
+       8479
+      ],
+      [
+       118150,
+       8452
+      ],
+      [
+       143902,
+       8366
+      ],
+      [
+       143487,
+       8320
+      ],
+      [
+       138450,
+       8224
+      ],
+      [
+       117743,
+       8206
+      ],
+      [
+       135792,
+       8198
+      ],
+      [
+       131505,
+       8195
+      ],
+      [
+       153443,
+       7312
+      ],
+      [
+       115790,
+       7195
+      ],
+      [
+       158905,
+       6292
+      ],
+      [
+       112202,
+       5750
+      ],
+      [
+       159988,
+       5532
+      ],
+      [
+       111559,
+       4569
+      ],
+      [
+       164795,
+       4066
+      ],
+      [
+       106581,
+       3179
+      ],
+      [
+       165130,
+       2776
+      ],
+      [
+       104633,
+       2147
+      ],
+      [
+       166407,
+       1433
+      ],
+      [
+       103705,
+       1111
+      ],
+      [
+       167785,
+       231
+      ],
+      [
+       1,
+       117
+      ],
+      [
+       172276,
+       19
+      ],
+      [
+       173558,
+       11
+      ],
+      [
+       171336,
+       8
+      ]
+     ],
+     "description": "employee id. the id of the employee who is responsible for the inspection",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "license_no",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 31733,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 9999999,
+     "examples": [
+      1222441,
+      1336561,
+      1334073,
+      1144381,
+      1144380
+     ],
+     "top_values": [],
+     "description": "the license number of the facility that is inspected",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "followup_to",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.8147,
+     "distinct_count": 26594,
+     "is_unique": false,
+     "min_value": 44255,
+     "max_value": 1992211,
+     "examples": [
+      67871,
+      248210,
+      233215,
+      67744,
+      176555
+     ],
+     "top_values": [],
+     "description": "followup to. the id of inspections that this inspection is following up",
+     "value_description": "commonsense evidence: 'No data' means the inspection has no followup.\nif followup_to has value: \n it's the parent inspection id, and this value represents child inspection id  \n the entire inspection: followup_to + inspection_id",
+     "notes": [
+      "81% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "inspection_id"
+   ],
+   "sample_rows": [
+    {
+     "inspection_id": 44247,
+     "inspection_date": "2010-01-05",
+     "inspection_type": "Complaint",
+     "results": "Pass",
+     "employee_id": 141319,
+     "license_no": 1222441,
+     "followup_to": null
+    },
+    {
+     "inspection_id": 44248,
+     "inspection_date": "2010-01-21",
+     "inspection_type": "Canvass",
+     "results": "Pass",
+     "employee_id": 143902,
+     "license_no": 1336561,
+     "followup_to": null
+    },
+    {
+     "inspection_id": 44249,
+     "inspection_date": "2010-01-21",
+     "inspection_type": "Canvass Re-Inspection",
+     "results": "Pass",
+     "employee_id": 143487,
+     "license_no": 1334073,
+     "followup_to": 67871
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "inspection_point",
+   "row_count": 46,
+   "stats_rows": 46,
+   "columns": [
+    {
+     "name": "point_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 46,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 70,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       70,
+       1
+      ],
+      [
+       45,
+       1
+      ],
+      [
+       44,
+       1
+      ],
+      [
+       43,
+       1
+      ],
+      [
+       42,
+       1
+      ],
+      [
+       41,
+       1
+      ],
+      [
+       40,
+       1
+      ],
+      [
+       39,
+       1
+      ],
+      [
+       38,
+       1
+      ],
+      [
+       37,
+       1
+      ],
+      [
+       36,
+       1
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       34,
+       1
+      ],
+      [
+       33,
+       1
+      ],
+      [
+       32,
+       1
+      ],
+      [
+       31,
+       1
+      ],
+      [
+       30,
+       1
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       28,
+       1
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "point id. the unique id for the inspection point",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Description",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 46,
+     "is_unique": true,
+     "min_value": "* Certified Food Manager on site when potentially hazardous ...",
+     "max_value": "Water source: safe, hot & cold under city pressure",
+     "examples": [
+      "Source sound condition, no spoilage, foods properly labeled,...",
+      "Facilities to maintain proper temperature",
+      "Potentially hazardous food meets temperature requirement dur...",
+      "Source of cross contamination controlled i.e. cutting boards...",
+      "Personnel with infections restricted: no open sores, wounds,..."
+     ],
+     "top_values": [
+      [
+       "Water source: safe, hot & cold under city pressure",
+       1
+      ],
+      [
+       "Wash and rinse water: clean and proper temperature",
+       1
+      ],
+      [
+       "Walls, ceilings, attached equipment constructed per code: go...",
+       1
+      ],
+      [
+       "Ventilation: rooms and equipment vented as required: plumbin...",
+       1
+      ],
+      [
+       "Unwrapped and potentially hazardous food not re-served",
+       1
+      ],
+      [
+       "Toxic items properly stored, labeled and used ",
+       1
+      ],
+      [
+       "Toilet rooms enclosed clean, provided with hand cleanser, sa...",
+       1
+      ],
+      [
+       "Toilet room doors self closing: dressing rooms with lockers ...",
+       1
+      ],
+      [
+       "Source sound condition, no spoilage, foods properly labeled,...",
+       1
+      ],
+      [
+       "Source of cross contamination controlled i.e. cutting boards...",
+       1
+      ],
+      [
+       "Sewage and waste water disposal, no back siphonage, cross co...",
+       1
+      ],
+      [
+       "Sanitizing rinse for equipment and utensils: clean, proper t...",
+       1
+      ],
+      [
+       "Refrigeration and metal stem thermometers provided and consp...",
+       1
+      ],
+      [
+       "Previous serious violation corrected",
+       1
+      ],
+      [
+       "Previous minor violation(s) Corrected",
+       1
+      ],
+      [
+       "Premises maintained free of litter, unnecessary articles, cl...",
+       1
+      ],
+      [
+       "Potentially hazardous food properly thawed",
+       1
+      ],
+      [
+       "Potentially hazardous food meets temperature requirement dur...",
+       1
+      ],
+      [
+       "Personnel with infections restricted: no open sores, wounds,...",
+       1
+      ],
+      [
+       "Outside garbage waste grease and storage area; clean, rodent...",
+       1
+      ],
+      [
+       "Only authorized personnel in the food-prep area ",
+       1
+      ],
+      [
+       "No evidence of rodent or insect outer openings protected/rod...",
+       1
+      ],
+      [
+       "No evidence of rodent or insect infestation, no birds, turtl...",
+       1
+      ],
+      [
+       "No Smoking Regulations ",
+       1
+      ],
+      [
+       "Linen: clean and soiled properly stored ",
+       1
+      ],
+      [
+       "Lighting: required minimum foot-candles of light provided, f...",
+       1
+      ],
+      [
+       "Inspection report summary displayed and visible to all custo...",
+       1
+      ],
+      [
+       "Inside containers or receptacles: adequate number, properly ...",
+       1
+      ],
+      [
+       "Hands washed and cleaned, good hygienic practices; bare hand...",
+       1
+      ],
+      [
+       "Hand washing facilities: with soap and sanitary hand drying ...",
+       1
+      ],
+      [
+       "Food protected during storage, preparation, display, service...",
+       1
+      ],
+      [
+       "Food in original container, properly labeled: customer advis...",
+       1
+      ],
+      [
+       "Food handler requrirements met",
+       1
+      ],
+      [
+       "Food and non-food contact surfaces properly designed, constr...",
+       1
+      ],
+      [
+       "Food and non-food contact equipment utensils clean, free of ...",
+       1
+      ],
+      [
+       "Food (ice) dispensing utensils, wash cloths properly stored ",
+       1
+      ],
+      [
+       "Floors: constructed per code, cleaned, good repair, covering...",
+       1
+      ],
+      [
+       "Facilities to maintain proper temperature",
+       1
+      ],
+      [
+       "Dishes and utensils flushed, scraped, soaked ",
+       1
+      ],
+      [
+       "Dish washing facilities: properly designed, constructed, mai...",
+       1
+      ],
+      [
+       "Dish machines: provided with accurate thermometers, chemical...",
+       1
+      ],
+      [
+       "Clean multi-use utensils and single service articles properl...",
+       1
+      ],
+      [
+       "Appropriate method of handling of food (ice) hair restraints...",
+       1
+      ],
+      [
+       "Adequate number, convenient, accessible, properly designed a...",
+       1
+      ],
+      [
+       "Adequate number, convenient, accessible, designed, and maint...",
+       1
+      ],
+      [
+       "* Certified Food Manager on site when potentially hazardous ...",
+       1
+      ]
+     ],
+     "description": "the specific description of the inspection results",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "category",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 14,
+     "is_unique": false,
+     "min_value": "Compliance",
+     "max_value": "Wash and Waste Water Disposal",
+     "examples": [
+      "Food Protection",
+      "Food Equipment and Utensil Sanitation",
+      "Wash and Waste Water Disposal",
+      "Toilet and Hand Washing Facilities for Staff",
+      "Compliance Insect and Rodent Control"
+     ],
+     "top_values": [
+      [
+       "Food Protection",
+       13
+      ],
+      [
+       "Food Maintenance",
+       12
+      ],
+      [
+       "Insect and Rodent Control",
+       3
+      ],
+      [
+       "Food Equipment and Utensil",
+       3
+      ],
+      [
+       "Wash and Waste Water Disposal",
+       2
+      ],
+      [
+       "Toilet and Hand Washing Facilities for Staff",
+       2
+      ],
+      [
+       "Toilet / Hand Washing Facilities For Customers",
+       2
+      ],
+      [
+       "Food Equipment and Utensil Sanitation",
+       2
+      ],
+      [
+       "Compliance",
+       2
+      ],
+      [
+       "Toxic Items",
+       1
+      ],
+      [
+       "Personnel",
+       1
+      ],
+      [
+       "No Smoking Regulations",
+       1
+      ],
+      [
+       "Display of Inspection Report Summary",
+       1
+      ],
+      [
+       "Compliance Insect and Rodent Control",
+       1
+      ]
+     ],
+     "description": "the inspection category",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "code",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": "7-32-010 Through 090",
+     "max_value": "Garbage 7-38-022",
+     "examples": [
+      "7-38-005 (B) (B-2)",
+      "7-38-005 (A)",
+      "7-38-010 (A) (B)",
+      "7-38-030",
+      "7-38-031"
+     ],
+     "top_values": [
+      [
+       "7-38-030, 015, 010 (A), 005 (A)",
+       12
+      ],
+      [
+       "7-38-005 (A)",
+       9
+      ],
+      [
+       "7-38-031",
+       5
+      ],
+      [
+       "7-38-030",
+       5
+      ],
+      [
+       "7-38-010 (A) (B)",
+       2
+      ],
+      [
+       "7-38-005 (B) (B-2)",
+       2
+      ],
+      [
+       "Garbage 7-38-022",
+       1
+      ],
+      [
+       "Garbage 7-38-021",
+       1
+      ],
+      [
+       "Garbage 7-38-020",
+       1
+      ],
+      [
+       "7-42-090 ",
+       1
+      ],
+      [
+       "7-42-090",
+       1
+      ],
+      [
+       "7-42-010 (B)",
+       1
+      ],
+      [
+       "7-38-030, 005 (A)",
+       1
+      ],
+      [
+       "7-38-020",
+       1
+      ],
+      [
+       "7-38-012",
+       1
+      ],
+      [
+       "7-38-005 (A), 7-38-030",
+       1
+      ],
+      [
+       "7-32-010 Through 090",
+       1
+      ]
+     ],
+     "description": "the sanitary operating requirement code",
+     "value_description": "commonsense evidence: Each code stands for an operating requirement",
+     "notes": []
+    },
+    {
+     "name": "fine",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 100,
+     "max_value": 500,
+     "examples": [
+      500,
+      250,
+      100
+     ],
+     "top_values": [
+      [
+       100,
+       17
+      ],
+      [
+       250,
+       15
+      ],
+      [
+       500,
+       14
+      ]
+     ],
+     "description": "the fines for food safety problems",
+     "value_description": "commonsense evidence: The fine of more serious food safety problems will be higher. \r\n Minor: 100 \r\n Serious: 250 \r\n Critical: 500",
+     "notes": []
+    },
+    {
+     "name": "point_level",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Critical",
+     "max_value": "Serious ",
+     "examples": [
+      "Critical",
+      "Serious ",
+      "Minor   "
+     ],
+     "top_values": [
+      [
+       "Minor   ",
+       17
+      ],
+      [
+       "Serious ",
+       15
+      ],
+      [
+       "Critical",
+       14
+      ]
+     ],
+     "description": "point level",
+     "value_description": "Critical / Serious/ Minor",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "point_id"
+   ],
+   "sample_rows": [
+    {
+     "point_id": 1,
+     "Description": "Source sound condition, no spoilage, foods properly labeled,...",
+     "category": "Food Protection",
+     "code": "7-38-005 (B) (B-2)",
+     "fine": 500,
+     "point_level": "Critical"
+    },
+    {
+     "point_id": 2,
+     "Description": "Facilities to maintain proper temperature",
+     "category": "Food Protection",
+     "code": "7-38-005 (B) (B-2)",
+     "fine": 500,
+     "point_level": "Critical"
+    },
+    {
+     "point_id": 3,
+     "Description": "Potentially hazardous food meets temperature requirement dur...",
+     "category": "Food Protection",
+     "code": "7-38-005 (A)",
+     "fine": 500,
+     "point_level": "Critical"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "violation",
+   "row_count": 525709,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "inspection_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 41737,
+     "is_unique": false,
+     "min_value": 44247,
+     "max_value": 1170252,
+     "examples": [
+      44247,
+      44248,
+      44249,
+      44250,
+      44251
+     ],
+     "top_values": [],
+     "description": "inspection id. the unique id for the inspection",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "point_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 45,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 70,
+     "examples": [
+      30,
+      32,
+      33,
+      34,
+      37
+     ],
+     "top_values": [
+      [
+       34,
+       27175
+      ],
+      [
+       35,
+       24393
+      ],
+      [
+       33,
+       23950
+      ],
+      [
+       38,
+       19991
+      ],
+      [
+       32,
+       19730
+      ],
+      [
+       41,
+       13312
+      ],
+      [
+       36,
+       11079
+      ],
+      [
+       18,
+       10121
+      ],
+      [
+       40,
+       6258
+      ],
+      [
+       30,
+       5380
+      ],
+      [
+       31,
+       3888
+      ],
+      [
+       37,
+       3586
+      ],
+      [
+       21,
+       3101
+      ],
+      [
+       2,
+       2826
+      ],
+      [
+       43,
+       2755
+      ],
+      [
+       3,
+       2583
+      ],
+      [
+       29,
+       2442
+      ],
+      [
+       42,
+       2299
+      ],
+      [
+       19,
+       2255
+      ],
+      [
+       24,
+       1901
+      ],
+      [
+       16,
+       1323
+      ],
+      [
+       12,
+       1196
+      ],
+      [
+       26,
+       1038
+      ],
+      [
+       11,
+       1038
+      ],
+      [
+       8,
+       995
+      ],
+      [
+       9,
+       987
+      ],
+      [
+       10,
+       566
+      ],
+      [
+       14,
+       548
+      ],
+      [
+       6,
+       533
+      ],
+      [
+       4,
+       420
+      ],
+      [
+       28,
+       400
+      ],
+      [
+       70,
+       349
+      ],
+      [
+       13,
+       310
+      ],
+      [
+       39,
+       304
+      ],
+      [
+       1,
+       251
+      ],
+      [
+       27,
+       242
+      ],
+      [
+       44,
+       176
+      ],
+      [
+       25,
+       115
+      ],
+      [
+       20,
+       101
+      ],
+      [
+       7,
+       29
+      ],
+      [
+       22,
+       27
+      ],
+      [
+       17,
+       22
+      ],
+      [
+       23,
+       2
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       15,
+       1
+      ]
+     ],
+     "description": "the inspection point id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "fine",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 500,
+     "examples": [
+      100,
+      0,
+      500,
+      250
+     ],
+     "top_values": [
+      [
+       100,
+       143280
+      ],
+      [
+       0,
+       31772
+      ],
+      [
+       250,
+       15281
+      ],
+      [
+       500,
+       9667
+      ]
+     ],
+     "description": "the fine of the violation",
+     "value_description": "commonsense evidence: The fine of more serious food safety problems will be higher. \n Minor: 100 \n Serious: 250 \n Critical: 500",
+     "notes": []
+    },
+    {
+     "name": "inspector_comment",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0194,
+     "distinct_count": 156445,
+     "is_unique": false,
+     "min_value": "  ",
+     "max_value": "walls/ceilingsthat had peeling paint plaster in kitchen prep...",
+     "examples": [
+      "All food not stored in the original container shall be store...",
+      "OBSERVED TORN DOOR GASKET ON DOOR OF 'CHILL ISLE' REACH-IN C...",
+      "All food and non-food contact surfaces of equipment and all ...",
+      "The floors shall be constructed per code, be smooth and easi...",
+      "Toilet rooms shall be completely enclosed and shall be vente..."
+     ],
+     "top_values": [],
+     "description": "the comment of the inspector",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "inspection_id",
+    "point_id"
+   ],
+   "sample_rows": [
+    {
+     "inspection_id": 44247,
+     "point_id": 30,
+     "fine": 100,
+     "inspector_comment": "All food not stored in the original container shall be store..."
+    },
+    {
+     "inspection_id": 44247,
+     "point_id": 32,
+     "fine": 100,
+     "inspector_comment": "OBSERVED TORN DOOR GASKET ON DOOR OF 'CHILL ISLE' REACH-IN C..."
+    },
+    {
+     "inspection_id": 44247,
+     "point_id": 33,
+     "fine": 100,
+     "inspector_comment": "All food and non-food contact surfaces of equipment and all ..."
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 525,709 rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "employee",
+   "from_column": "supervisor",
+   "to_table": "employee",
+   "to_column": "employee_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "inspection",
+   "from_column": "followup_to",
+   "to_table": "inspection",
+   "to_column": "inspection_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "inspection",
+   "from_column": "license_no",
+   "to_table": "establishment",
+   "to_column": "license_no",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "inspection",
+   "from_column": "employee_id",
+   "to_table": "employee",
+   "to_column": "employee_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "violation",
+   "from_column": "point_id",
+   "to_table": "inspection_point",
+   "to_column": "point_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "violation",
+   "from_column": "inspection_id",
+   "to_table": "inspection",
+   "to_column": "inspection_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

@@ -1,0 +1,4151 @@
+{
+ "db_id": "legislator",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/legislator/legislator.sqlite",
+ "fingerprint": "3485696-1793993033350584118-v1.0",
+ "created_at": "2026-11-06T19:24:57+00:00",
+ "profile_seconds": 0.232,
+ "tables": [
+  {
+   "name": "current",
+   "row_count": 541,
+   "stats_rows": 541,
+   "columns": [
+    {
+     "name": "ballotpedia_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.3586,
+     "distinct_count": 347,
+     "is_unique": true,
+     "min_value": "Adam Kinzinger",
+     "max_value": "Zoe Lofgren",
+     "examples": [
+      "Sherrod Brown",
+      "Maria Cantwell",
+      "Ben Cardin",
+      "Tom Carper",
+      "Bob Casey, Jr."
+     ],
+     "top_values": [],
+     "description": "ballotpedia id. The ballotpedia.org page name for the person (spaces are given as spaces, not underscores)",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on ballotpedia.org",
+     "notes": []
+    },
+    {
+     "name": "bioguide_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 541,
+     "is_unique": true,
+     "min_value": "A000055",
+     "max_value": "Z000018",
+     "examples": [
+      "B000944",
+      "C000127",
+      "C000141",
+      "C000174",
+      "C001070"
+     ],
+     "top_values": [],
+     "description": "bioguide id. The alphanumeric ID for this legislator",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "birthday_bio",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0037,
+     "distinct_count": 530,
+     "is_unique": false,
+     "min_value": "1929-05-16",
+     "max_value": "1995-09-23",
+     "examples": [
+      "1952-11-09",
+      "1958-10-13",
+      "1943-10-05",
+      "1947-01-23",
+      "1960-04-13"
+     ],
+     "top_values": [],
+     "description": "birthday bio. The legislator's birthday,",
+     "value_description": "in YYYY-MM-DD format.",
+     "notes": []
+    },
+    {
+     "name": "cspan_id",
+     "declared_type": "REAL",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.22,
+     "distinct_count": 422,
+     "is_unique": true,
+     "min_value": 5.0,
+     "max_value": 9269028.0,
+     "examples": [
+      5051.0,
+      26137.0,
+      4004.0,
+      663.0,
+      47036.0
+     ],
+     "top_values": [],
+     "description": "cspan id. The numeric ID for this legislator on C-SPAN's video website,",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on C-SPAN's video website",
+     "notes": []
+    },
+    {
+     "name": "fec_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0943,
+     "distinct_count": 490,
+     "is_unique": true,
+     "min_value": "['H0AL02087']",
+     "max_value": "['S8WA00194', 'H2WA01054']",
+     "examples": [
+      "['H2OH13033', 'S6OH00163']",
+      "['S8WA00194', 'H2WA01054']",
+      "['H6MD03177', 'S6MD03177']",
+      "['S8DE00079']",
+      "['S6PA00217']"
+     ],
+     "top_values": [],
+     "description": "fec id. A list of IDs for this legislator in Federal Election Commission data",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator hasn't not been registered in Federal Election Commission data.",
+     "notes": []
+    },
+    {
+     "name": "first_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 305,
+     "is_unique": false,
+     "min_value": "A.",
+     "max_value": "Zoe",
+     "examples": [
+      "Sherrod",
+      "Maria",
+      "Benjamin",
+      "Thomas",
+      "Robert"
+     ],
+     "top_values": [],
+     "description": "first name of the legislator",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "gender_bio",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "M",
+     "examples": [
+      "M",
+      "F"
+     ],
+     "top_values": [
+      [
+       "M",
+       432
+      ],
+      [
+       "F",
+       109
+      ]
+     ],
+     "description": "gender bio. gender of the legislator",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "google_entity_id_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.1017,
+     "distinct_count": 486,
+     "is_unique": true,
+     "min_value": "kg:/g/11cmmch3q8",
+     "max_value": "kg:/m/0z6rww4",
+     "examples": [
+      "kg:/m/034s80",
+      "kg:/m/01x68t",
+      "kg:/m/025k3k",
+      "kg:/m/01xw7t",
+      "kg:/m/047ymw"
+     ],
+     "top_values": [],
+     "description": "google entity id",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator are not google entities",
+     "notes": []
+    },
+    {
+     "name": "govtrack_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 541,
+     "is_unique": true,
+     "min_value": 300002,
+     "max_value": 412732,
+     "examples": [
+      400050,
+      300018,
+      400064,
+      300019,
+      412246
+     ],
+     "top_values": [],
+     "description": "govtrack id. The numeric ID for this legislator on GovTrack.us",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on GovTrack.us",
+     "notes": []
+    },
+    {
+     "name": "house_history_id",
+     "declared_type": "REAL",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.353,
+     "distinct_count": 350,
+     "is_unique": true,
+     "min_value": 7697.0,
+     "max_value": 15032425053.0,
+     "examples": [
+      9996.0,
+      10608.0,
+      10629.0,
+      10671.0,
+      13044.0
+     ],
+     "top_values": [],
+     "description": "house history id. The numeric ID for this legislator on http://history.house.gov/People/Search/",
+     "value_description": "commonsense evidence:\nThe ID is present only for members who have served in the U.S. House.",
+     "notes": []
+    },
+    {
+     "name": "icpsr_id",
+     "declared_type": "REAL",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.2403,
+     "distinct_count": 411,
+     "is_unique": true,
+     "min_value": 10713.0,
+     "max_value": 49706.0,
+     "examples": [
+      29389.0,
+      39310.0,
+      15408.0,
+      15015.0,
+      40703.0
+     ],
+     "top_values": [],
+     "description": "interuniversity consortium for political and social research id. The numeric ID for this legislator in Keith Poole's VoteView.com website, originally based on an ID system by the Interuniversity Consortium for Political and Social Research (stored as an integer)",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on VoteView.com",
+     "notes": []
+    },
+    {
+     "name": "last_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 489,
+     "is_unique": false,
+     "min_value": "Abraham",
+     "max_value": "Zinke",
+     "examples": [
+      "Brown",
+      "Cantwell",
+      "Cardin",
+      "Carper",
+      "Casey"
+     ],
+     "top_values": [],
+     "description": "last name of the legislator",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lis_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.8152,
+     "distinct_count": 100,
+     "is_unique": true,
+     "min_value": "S057",
+     "max_value": "S391",
+     "examples": [
+      "S307",
+      "S275",
+      "S308",
+      "S277",
+      "S309"
+     ],
+     "top_values": [],
+     "description": "legislator id. The alphanumeric ID for this legislator found in Senate roll call votes",
+     "value_description": "commonsense evidence:\nThe ID is present only for members who attended in Senate roll call votes",
+     "notes": [
+      "82% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "maplight_id",
+     "declared_type": "REAL",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.1017,
+     "distinct_count": 486,
+     "is_unique": true,
+     "min_value": 127.0,
+     "max_value": 2167.0,
+     "examples": [
+      168.0,
+      544.0,
+      182.0,
+      545.0,
+      727.0
+     ],
+     "top_values": [],
+     "description": "maplight id. The numeric ID for this legislator on maplight.org",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on maplight.org",
+     "notes": []
+    },
+    {
+     "name": "middle_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.6007,
+     "distinct_count": 57,
+     "is_unique": false,
+     "min_value": "A.",
+     "max_value": "Z.",
+     "examples": [
+      "L.",
+      "Richard",
+      "P.",
+      "G.",
+      "Jean"
+     ],
+     "top_values": [],
+     "description": "the middle name of the legislator",
+     "value_description": "",
+     "notes": [
+      "60% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "nickname_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9316,
+     "distinct_count": 28,
+     "is_unique": false,
+     "min_value": "Al",
+     "max_value": "Steve",
+     "examples": [
+      "Bob",
+      "Bernie",
+      "Jim",
+      "Jack",
+      "Jeff"
+     ],
+     "top_values": [
+      [
+       "Jim",
+       4
+      ],
+      [
+       "Chuck",
+       3
+      ],
+      [
+       "Pat",
+       2
+      ],
+      [
+       "Mike",
+       2
+      ],
+      [
+       "Ed",
+       2
+      ],
+      [
+       "Bob",
+       2
+      ],
+      [
+       "Steve",
+       1
+      ],
+      [
+       "Rob",
+       1
+      ],
+      [
+       "Rick",
+       1
+      ],
+      [
+       "Phil",
+       1
+      ],
+      [
+       "Pete",
+       1
+      ],
+      [
+       "Mark",
+       1
+      ],
+      [
+       "Maggie",
+       1
+      ],
+      [
+       "Johnny",
+       1
+      ],
+      [
+       "Joe",
+       1
+      ],
+      [
+       "Jimmy",
+       1
+      ],
+      [
+       "Jeff",
+       1
+      ],
+      [
+       "Jan",
+       1
+      ],
+      [
+       "Jack",
+       1
+      ],
+      [
+       "Hank",
+       1
+      ],
+      [
+       "Hal",
+       1
+      ],
+      [
+       "G.K.",
+       1
+      ],
+      [
+       "Dave",
+       1
+      ],
+      [
+       "Chris",
+       1
+      ],
+      [
+       "Bobby",
+       1
+      ],
+      [
+       "Bernie",
+       1
+      ],
+      [
+       "Andy",
+       1
+      ],
+      [
+       "Al",
+       1
+      ]
+     ],
+     "description": "nickname of the legislator",
+     "value_description": "",
+     "notes": [
+      "93% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "official_full_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 541,
+     "is_unique": true,
+     "min_value": "A. Donald McEachin",
+     "max_value": "Zoe Lofgren",
+     "examples": [
+      "Sherrod Brown",
+      "Maria Cantwell",
+      "Benjamin L. Cardin",
+      "Thomas R. Carper",
+      "Robert P. Casey, Jr."
+     ],
+     "top_values": [],
+     "description": "official full name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "opensecrets_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.1017,
+     "distinct_count": 486,
+     "is_unique": true,
+     "min_value": "N00000078",
+     "max_value": "N00038767",
+     "examples": [
+      "N00003535",
+      "N00007836",
+      "N00001955",
+      "N00012508",
+      "N00027503"
+     ],
+     "top_values": [],
+     "description": "opensecrets id. The alphanumeric ID for this legislator on OpenSecrets.org",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on OpenSecrets.org.",
+     "notes": []
+    },
+    {
+     "name": "religion_bio",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.7024,
+     "distinct_count": 19,
+     "is_unique": false,
+     "min_value": "African Methodist Episcopal",
+     "max_value": "Unknown",
+     "examples": [
+      "Lutheran",
+      "Roman Catholic",
+      "Jewish",
+      "Presbyterian",
+      "Latter Day Saints"
+     ],
+     "top_values": [
+      [
+       "Roman Catholic",
+       37
+      ],
+      [
+       "Baptist",
+       20
+      ],
+      [
+       "Methodist",
+       16
+      ],
+      [
+       "Catholic",
+       14
+      ],
+      [
+       "Presbyterian",
+       13
+      ],
+      [
+       "Jewish",
+       13
+      ],
+      [
+       "Episcopalian",
+       12
+      ],
+      [
+       "Latter Day Saints",
+       6
+      ],
+      [
+       "Unknown",
+       5
+      ],
+      [
+       "Lutheran",
+       5
+      ],
+      [
+       "Christian",
+       5
+      ],
+      [
+       "Protestant",
+       4
+      ],
+      [
+       "African Methodist Episcopal",
+       3
+      ],
+      [
+       "Southern Baptist",
+       2
+      ],
+      [
+       "Christian Scientist",
+       2
+      ],
+      [
+       "United Methodist",
+       1
+      ],
+      [
+       "Seventh Day Adventist",
+       1
+      ],
+      [
+       "Nazarene",
+       1
+      ],
+      [
+       "Church of Christ",
+       1
+      ]
+     ],
+     "description": "religion bio. The legislator's religion",
+     "value_description": "",
+     "notes": [
+      "70% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "suffix_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.963,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "II",
+     "max_value": "Jr.",
+     "examples": [
+      "Jr.",
+      "III",
+      "II"
+     ],
+     "top_values": [
+      [
+       "Jr.",
+       16
+      ],
+      [
+       "III",
+       2
+      ],
+      [
+       "II",
+       2
+      ]
+     ],
+     "description": "suffix name",
+     "value_description": "",
+     "notes": [
+      "96% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "thomas_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.1054,
+     "distinct_count": 484,
+     "is_unique": true,
+     "min_value": 62,
+     "max_value": 2296,
+     "examples": [
+      136,
+      172,
+      174,
+      179,
+      1828
+     ],
+     "top_values": [],
+     "description": "thomas id. The numeric ID for this legislator on http://thomas.gov and http://beta.congress.gov",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on both http://thomas.gov and http://beta.congress.gov.",
+     "notes": []
+    },
+    {
+     "name": "votesmart_id",
+     "declared_type": "REAL",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.2107,
+     "distinct_count": 427,
+     "is_unique": true,
+     "min_value": 119.0,
+     "max_value": 166760.0,
+     "examples": [
+      27018.0,
+      27122.0,
+      26888.0,
+      22421.0,
+      2541.0
+     ],
+     "top_values": [],
+     "description": "votesmart id. The numeric ID for this legislator on VoteSmart.org",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on VoteSmart.org",
+     "notes": []
+    },
+    {
+     "name": "wikidata_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.1017,
+     "distinct_count": 486,
+     "is_unique": true,
+     "min_value": "Q1027026",
+     "max_value": "Q984509",
+     "examples": [
+      "Q381880",
+      "Q22250",
+      "Q723295",
+      "Q457432",
+      "Q887841"
+     ],
+     "top_values": [],
+     "description": "wikidata id. the id for wikidata",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "wikipedia_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0943,
+     "distinct_count": 490,
+     "is_unique": true,
+     "min_value": "Adam Kinzinger",
+     "max_value": "Zoe Lofgren",
+     "examples": [
+      "Sherrod Brown",
+      "Maria Cantwell",
+      "Ben Cardin",
+      "Tom Carper",
+      "Bob Casey Jr."
+     ],
+     "top_values": [],
+     "description": "wikipedia id. The Wikipedia page name for the person",
+     "value_description": "commonsense evidence:\nif a legislator has wikipedia id, it means he or she is famous or impact",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "bioguide_id",
+    "cspan_id"
+   ],
+   "sample_rows": [
+    {
+     "ballotpedia_id": "Sherrod Brown",
+     "bioguide_id": "B000944",
+     "birthday_bio": "1952-11-09",
+     "cspan_id": 5051.0,
+     "fec_id": "['H2OH13033', 'S6OH00163']",
+     "first_name": "Sherrod",
+     "gender_bio": "M",
+     "google_entity_id_id": "kg:/m/034s80",
+     "govtrack_id": 400050,
+     "house_history_id": 9996.0,
+     "icpsr_id": 29389.0,
+     "last_name": "Brown",
+     "lis_id": "S307",
+     "maplight_id": 168.0,
+     "middle_name": null,
+     "nickname_name": null,
+     "official_full_name": "Sherrod Brown",
+     "opensecrets_id": "N00003535",
+     "religion_bio": "Lutheran",
+     "suffix_name": null,
+     "thomas_id": 136,
+     "votesmart_id": 27018.0,
+     "wikidata_id": "Q381880",
+     "wikipedia_id": "Sherrod Brown"
+    },
+    {
+     "ballotpedia_id": "Maria Cantwell",
+     "bioguide_id": "C000127",
+     "birthday_bio": "1958-10-13",
+     "cspan_id": 26137.0,
+     "fec_id": "['S8WA00194', 'H2WA01054']",
+     "first_name": "Maria",
+     "gender_bio": "F",
+     "google_entity_id_id": "kg:/m/01x68t",
+     "govtrack_id": 300018,
+     "house_history_id": 10608.0,
+     "icpsr_id": 39310.0,
+     "last_name": "Cantwell",
+     "lis_id": "S275",
+     "maplight_id": 544.0,
+     "middle_name": null,
+     "nickname_name": null,
+     "official_full_name": "Maria Cantwell",
+     "opensecrets_id": "N00007836",
+     "religion_bio": "Roman Catholic",
+     "suffix_name": null,
+     "thomas_id": 172,
+     "votesmart_id": 27122.0,
+     "wikidata_id": "Q22250",
+     "wikipedia_id": "Maria Cantwell"
+    },
+    {
+     "ballotpedia_id": "Ben Cardin",
+     "bioguide_id": "C000141",
+     "birthday_bio": "1943-10-05",
+     "cspan_id": 4004.0,
+     "fec_id": "['H6MD03177', 'S6MD03177']",
+     "first_name": "Benjamin",
+     "gender_bio": "M",
+     "google_entity_id_id": "kg:/m/025k3k",
+     "govtrack_id": 400064,
+     "house_history_id": 10629.0,
+     "icpsr_id": 15408.0,
+     "last_name": "Cardin",
+     "lis_id": "S308",
+     "maplight_id": 182.0,
+     "middle_name": "L.",
+     "nickname_name": null,
+     "official_full_name": "Benjamin L. Cardin",
+     "opensecrets_id": "N00001955",
+     "religion_bio": "Jewish",
+     "suffix_name": null,
+     "thomas_id": 174,
+     "votesmart_id": 26888.0,
+     "wikidata_id": "Q723295",
+     "wikipedia_id": "Ben Cardin"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "current-terms",
+   "row_count": 3078,
+   "stats_rows": 3078,
+   "columns": [
+    {
+     "name": "address",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.4779,
+     "distinct_count": 1008,
+     "is_unique": false,
+     "min_value": "100 Cannon HOB; Washington DC 20515-1006",
+     "max_value": "G12 Dirksen Senate Office Building Washington DC 20510",
+     "examples": [
+      "713 HART SENATE OFFICE BUILDING WASHINGTON DC 20510",
+      "713 Hart Senate Office Building Washington DC 20510",
+      "311 HART SENATE OFFICE BUILDING WASHINGTON DC 20510",
+      "511 Hart Senate Office Building Washington DC 20510",
+      "509 HART SENATE OFFICE BUILDING WASHINGTON DC 20510"
+     ],
+     "top_values": [],
+     "description": "the address of this legislator",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "bioguide",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 541,
+     "is_unique": false,
+     "min_value": "A000055",
+     "max_value": "Z000018",
+     "examples": [
+      "B000944",
+      "C000127",
+      "C000141",
+      "C000174",
+      "C001070"
+     ],
+     "top_values": [],
+     "description": "bioguide id. The alphanumeric ID for this legislator",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "caucus",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.999,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "Democrat",
+     "max_value": "Democrat",
+     "examples": [
+      "Democrat"
+     ],
+     "top_values": [
+      [
+       "Democrat",
+       3
+      ]
+     ],
+     "description": "caucus",
+     "value_description": "For independents, the party that the legislator caucuses with, using the same values as the party field. Omitted if the legislator caucuses with the party indicated in the party field. When in doubt about the difference between the party and caucus fields, the party field is what displays after the legislator's name (i.e. \"(D)\") but the caucus field is what normally determines committee seniority. This field was added starting with terms for the 113th Congress.",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "chamber",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9909,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "house",
+     "max_value": "senate",
+     "examples": [
+      "senate"
+     ],
+     "top_values": [
+      [
+       "house",
+       15
+      ],
+      [
+       "senate",
+       13
+      ]
+     ],
+     "description": "chamber",
+     "value_description": "â¢ senate\nâ¢ house",
+     "notes": [
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "class",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9207,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 3.0,
+     "examples": [
+      1.0,
+      2.0
+     ],
+     "top_values": [
+      [
+       3.0,
+       98
+      ],
+      [
+       2.0,
+       79
+      ],
+      [
+       1.0,
+       67
+      ]
+     ],
+     "description": "class",
+     "value_description": "For senators, their election class (1, 2, or 3). \ncommonsense evidence:\nonly senator has class, if the value is null or empty, it means this legislator is not senator.",
+     "notes": [
+      "92% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "contact_form",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.6758,
+     "distinct_count": 616,
+     "is_unique": false,
+     "min_value": "Http://mariodiaz-balart.house.gov//index.cfm?sectionid=11",
+     "max_value": "https://yoho.house.gov/contact/email-me",
+     "examples": [
+      "http://www.brown.senate.gov/contact/",
+      "http://www.brown.senate.gov/contact",
+      "http://www.cantwell.senate.gov/contact/",
+      "http://www.cantwell.senate.gov/public/index.cfm/email-maria",
+      "http://www.cardin.senate.gov/contact/"
+     ],
+     "top_values": [],
+     "description": "The website URL of the contact page on the legislator's official website",
+     "value_description": "",
+     "notes": [
+      "68% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "district",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1001,
+     "distinct_count": 54,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 53.0,
+     "examples": [
+      13.0,
+      1.0,
+      3.0,
+      0.0,
+      9.0
+     ],
+     "top_values": [],
+     "description": "district",
+     "value_description": "For representatives, the district number they are serving from. \ncommonsense evidence:\nif null or empty, they are not representatives.",
+     "notes": []
+    },
+    {
+     "name": "end",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": true,
+     "null_rate": 0.0143,
+     "distinct_count": 41,
+     "is_unique": false,
+     "min_value": "1967-01-03",
+     "max_value": "2023-01-03",
+     "examples": [
+      "1995-01-03",
+      "1997-01-03",
+      "1999-01-03",
+      "2001-01-03",
+      "2003-01-03"
+     ],
+     "top_values": [
+      [
+       "2019-01-03",
+       474
+      ],
+      [
+       "2017-01-03",
+       418
+      ],
+      [
+       "2015-01-03",
+       363
+      ],
+      [
+       "2013-01-03",
+       294
+      ],
+      [
+       "2011-01-03",
+       227
+      ],
+      [
+       "2009-01-03",
+       198
+      ],
+      [
+       "2007-01-03",
+       163
+      ],
+      [
+       "2005-01-03",
+       147
+      ],
+      [
+       "2003-01-03",
+       127
+      ],
+      [
+       "2001-01-03",
+       105
+      ],
+      [
+       "1999-01-03",
+       98
+      ],
+      [
+       "1997-01-03",
+       78
+      ],
+      [
+       "1995-01-03",
+       66
+      ],
+      [
+       "1993-01-03",
+       46
+      ],
+      [
+       "1991-01-03",
+       37
+      ],
+      [
+       "2023-01-03",
+       34
+      ],
+      [
+       "2021-01-03",
+       33
+      ],
+      [
+       "1989-01-03",
+       30
+      ],
+      [
+       "1987-01-03",
+       22
+      ],
+      [
+       "1985-01-03",
+       19
+      ],
+      [
+       "1983-01-03",
+       13
+      ],
+      [
+       "1981-01-03",
+       9
+      ],
+      [
+       "1979-01-03",
+       6
+      ],
+      [
+       "1977-01-03",
+       6
+      ],
+      [
+       "1975-01-03",
+       3
+      ],
+      [
+       "2011-01-05",
+       2
+      ],
+      [
+       "2009-01-06",
+       2
+      ],
+      [
+       "2014-07-31",
+       1
+      ],
+      [
+       "2013-07-15",
+       1
+      ],
+      [
+       "2013-01-02",
+       1
+      ],
+      [
+       "2011-05-09",
+       1
+      ],
+      [
+       "2009-01-26",
+       1
+      ],
+      [
+       "2007-12-31",
+       1
+      ],
+      [
+       "2006-01-16",
+       1
+      ],
+      [
+       "2005-04-29",
+       1
+      ],
+      [
+       "1996-02-05",
+       1
+      ],
+      [
+       "1994-11-15",
+       1
+      ],
+      [
+       "1973-01-03",
+       1
+      ],
+      [
+       "1971-01-03",
+       1
+      ],
+      [
+       "1969-01-03",
+       1
+      ],
+      [
+       "1967-01-03",
+       1
+      ]
+     ],
+     "description": "the end of the term",
+     "value_description": "end: The date the term ended (because the Congress ended or the legislator died or resigned, etc.). End dates follow the Constitutional end of a term. Since 1935, terms begin and end on January 3 at noon in odd-numbered years, and thus a term end date may also be a term start date. Prior to 1935, terms began on March 4 and ended either on March 3 or March 4. The end date is the last date on which the legislator served this term. Unlike the start date, whether Congress was in session or not does not affect the value of this field.",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "fax",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.6641,
+     "distinct_count": 440,
+     "is_unique": false,
+     "min_value": "200-226-9739",
+     "max_value": "920-230-7262",
+     "examples": [
+      "202-228-6321",
+      "202-228-0514",
+      "202-224-1651",
+      "202-228-2190",
+      "202-228-0604"
+     ],
+     "top_values": [],
+     "description": "The fax number of the legislator's Washington, D.C. office",
+     "value_description": "only valid if the term is current",
+     "notes": [
+      "66% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "last",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9997,
+     "distinct_count": 1,
+     "is_unique": true,
+     "min_value": "Menendez",
+     "max_value": "Menendez",
+     "examples": [
+      "Menendez"
+     ],
+     "top_values": [
+      [
+       "Menendez",
+       1
+      ]
+     ],
+     "description": "the last known number",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9886,
+     "distinct_count": 35,
+     "is_unique": true,
+     "min_value": "Arch Alfred Moore Jr.",
+     "max_value": "William Oliver Lipinski",
+     "examples": [],
+     "top_values": [
+      [
+       "William Oliver Lipinski",
+       1
+      ],
+      [
+       "William Lacy Clay Sr.",
+       1
+      ],
+      [
+       "Walter Beaman Jones Sr.",
+       1
+      ],
+      [
+       "Thomas D?Alesandro Jr.",
+       1
+      ],
+      [
+       "Theodore Frelinghuysen",
+       1
+      ],
+      [
+       "Stewart Lee Udall",
+       1
+      ],
+      [
+       "Senator Paul Sarbanes",
+       1
+      ],
+      [
+       "Ronald Ernest Paul",
+       1
+      ],
+      [
+       "Robert Matsui",
+       1
+      ],
+      [
+       "Peter Hood Ballantine Frelinghuysen Jr.",
+       1
+      ],
+      [
+       "Paul Tsongas",
+       1
+      ],
+      [
+       "Patrick Joseph Kennedy",
+       1
+      ],
+      [
+       "Morris K. Udall",
+       1
+      ],
+      [
+       "Michael Bilirakis",
+       1
+      ],
+      [
+       "Mark Udall",
+       1
+      ],
+      [
+       "Loretta Sanchez",
+       1
+      ],
+      [
+       "Lincoln Diaz Balart",
+       1
+      ],
+      [
+       "Julia Carson",
+       1
+      ],
+      [
+       "Joseph Patrick Kennedy II",
+       1
+      ],
+      [
+       "John James Duncan",
+       1
+      ],
+      [
+       "John Francis Fitzgerald",
+       1
+      ],
+      [
+       "John Fitzgerald Kennedy",
+       1
+      ],
+      [
+       "Gordon H. Smith",
+       1
+      ],
+      [
+       "George Washington Murray",
+       1
+      ],
+      [
+       "Frederick Frelinghuysen",
+       1
+      ],
+      [
+       "Frank Hughes Murkowski",
+       1
+      ],
+      [
+       "Edward R. Roybal",
+       1
+      ],
+      [
+       "Edward Moore Kennedy",
+       1
+      ],
+      [
+       "E. G. ?Bud? Shuster",
+       1
+      ],
+      [
+       "Duncan Lee Hunter",
+       1
+      ],
+      [
+       "Donald Milford Payne",
+       1
+      ],
+      [
+       "Delbert L. Latta ",
+       1
+      ],
+      [
+       "Dale Edward Kildee",
+       1
+      ],
+      [
+       "Carl Levin",
+       1
+      ],
+      [
+       "Arch Alfred Moore Jr.",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "not useful",
+     "notes": [
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "office",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.4782,
+     "distinct_count": 574,
+     "is_unique": false,
+     "min_value": "100 Cannon House Office Building",
+     "max_value": "G12 Dirksen Senate Office Building",
+     "examples": [
+      "713 Hart Senate Office Building",
+      "311 Hart Senate Office Building",
+      "511 Hart Senate Office Building",
+      "509 Hart Senate Office Building",
+      "513 Hart Senate Office Building"
+     ],
+     "top_values": [],
+     "description": "office",
+     "value_description": "only valid if the term is current, otherwise the last known office",
+     "notes": []
+    },
+    {
+     "name": "party",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0208,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Democrat",
+     "max_value": "Republican",
+     "examples": [
+      "Democrat",
+      "Republican",
+      "Independent"
+     ],
+     "top_values": [
+      [
+       "Democrat",
+       1558
+      ],
+      [
+       "Republican",
+       1444
+      ],
+      [
+       "Independent",
+       12
+      ]
+     ],
+     "description": "The political party of the legislator.",
+     "value_description": "commonsense evidence:\nIf the legislator changed parties, this is the most recent party held during the term and party_affiliations will be set. Values are typically \"Democrat\", \"Independent\", or \"Republican\". The value typically matches the political party of the legislator on the ballot in his or her last election, although for state affiliate parties such as \"Democratic Farmer Labor\" we will use the national party name (\"Democrat\") instead to keep the values of this field normalized.",
+     "notes": []
+    },
+    {
+     "name": "party_affiliations",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.9994,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": "{'start': '1993-01-05', 'end': '1994-11-09', 'party': 'Democ...",
+     "max_value": "{'start': '2009-01-06', 'end': '2009-02-23', 'party': 'Indep...",
+     "examples": [],
+     "top_values": [
+      [
+       "{'start': '2009-01-06', 'end': '2009-02-23', 'party': 'Indep...",
+       1
+      ],
+      [
+       "{'start': '1993-01-05', 'end': '1994-11-09', 'party': 'Democ...",
+       1
+      ]
+     ],
+     "description": "party affiliations. This field is present if the legislator changed party or caucus affiliation during the term",
+     "value_description": "The value is a list of time periods, with start and end dates, each of which has a party field and a caucus field if applicable, with the same meanings as the main party and caucus fields. The time periods cover the entire term, so the first start will match the term start, the last end will match the term end, and the last party (and caucus if present) will match the term party (and caucus).",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "phone",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.4782,
+     "distinct_count": 541,
+     "is_unique": false,
+     "min_value": "202-224-2023",
+     "max_value": "202-225-9901",
+     "examples": [
+      "202-224-2315",
+      "202-224-3441",
+      "202-224-4524",
+      "202-224-2441",
+      "202-224-6324"
+     ],
+     "top_values": [],
+     "description": "The phone number of the legislator's Washington, D.C. office",
+     "value_description": "only valid if the term is current, otherwise the last known number",
+     "notes": []
+    },
+    {
+     "name": "relation",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9886,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": "brother",
+     "max_value": "wife",
+     "examples": [],
+     "top_values": [
+      [
+       "son",
+       14
+      ],
+      [
+       "daughter",
+       4
+      ],
+      [
+       "wife",
+       2
+      ],
+      [
+       "nephew",
+       2
+      ],
+      [
+       "great nephew",
+       2
+      ],
+      [
+       "great great grandson",
+       2
+      ],
+      [
+       "cousin",
+       2
+      ],
+      [
+       "brother",
+       2
+      ],
+      [
+       "sister",
+       1
+      ],
+      [
+       "relative",
+       1
+      ],
+      [
+       "great great great nephew",
+       1
+      ],
+      [
+       "grandson",
+       1
+      ],
+      [
+       "first cousin once removed",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "not useful",
+     "notes": [
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "rss_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.6566,
+     "distinct_count": 395,
+     "is_unique": false,
+     "min_value": "feed://olson.house.gov/common/rss/?rss=82",
+     "max_value": "https://www.reed.senate.gov//rss/feeds/?type=all",
+     "examples": [
+      "http://www.brown.senate.gov/rss/feeds/?type=all&amp;",
+      "http://www.cantwell.senate.gov/public/index.cfm/rss/feed",
+      "http://www.cardin.senate.gov/rss/feeds/?type=all",
+      "http://www.carper.senate.gov/public/index.cfm/rss/feed",
+      "http://www.casey.senate.gov/rss/feeds/?all"
+     ],
+     "top_values": [],
+     "description": "Really Simple Syndication URL. The URL to the official website's RSS feed",
+     "value_description": "",
+     "notes": [
+      "66% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "start",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0117,
+     "distinct_count": 89,
+     "is_unique": false,
+     "min_value": "1965-01-04",
+     "max_value": "2017-01-03",
+     "examples": [
+      "1993-01-05",
+      "1995-01-04",
+      "1997-01-07",
+      "1999-01-06",
+      "2001-01-03"
+     ],
+     "top_values": [],
+     "description": "The date legislative service began: the date the legislator was sworn in, if known, or else the beginning of the legislator's term.",
+     "value_description": "Since 1935 regularly elected terms begin on January 3 at noon on odd-numbered years, but when Congress does not first meet on January 3, term start dates might reflect that swearing-in occurred on a later date. (Prior to 1935, terms began on March 4 of odd-numbered years, see here.)",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0208,
+     "distinct_count": 56,
+     "is_unique": false,
+     "min_value": "AK",
+     "max_value": "WY",
+     "examples": [
+      "OH",
+      "WA",
+      "MD",
+      "DE",
+      "PA"
+     ],
+     "top_values": [],
+     "description": "state code",
+     "value_description": "commonsense evidence:\nAK: Alaska \nAL: Alabama \nAR: Arkansas \nAZ: Arizona \nCA: California \nCO: Colorado \nCT: Connecticut \nDE: Delaware \nFL: Florida \nGA: Georgia \nHI: Hawaii \nIA: Iowa \nID: Idaho \nIL: Illinois \nIN: Indiana \nKS: Kansas \nKY: Kentucky \nLA: Louisiana \nMA: Massachusetts \nMD: Maryland \nME: Maine \nMI: Michigan \nMN: Minnesota \nMO: Missouri \nMS: Mississippi \nMT: Montana \nNC: North Carolina \nND: North Dakota \nNE: Nebraska \nNH: New Hampshire \nNJ: New Jersey\n9 divisions of states in us: (please mention)\nhttps://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf",
+     "notes": []
+    },
+    {
+     "name": "state_rank",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9522,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "junior",
+     "max_value": "senior",
+     "examples": [
+      "senior",
+      "junior"
+     ],
+     "top_values": [
+      [
+       "senior",
+       80
+      ],
+      [
+       "junior",
+       67
+      ]
+     ],
+     "description": "whether they are the \"junior\" or \"senior\" senator",
+     "value_description": "only valid if the term is current, otherwise the senator's rank at the time the term ended\ncommonsense evidence:\nonly senator has this value",
+     "notes": [
+      "95% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9909,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "Majority Leader",
+     "max_value": "Speaker",
+     "examples": [
+      "Minority Whip",
+      "Majority Whip",
+      "Minority Leader",
+      "Majority Leader"
+     ],
+     "top_values": [
+      [
+       "Majority Whip",
+       9
+      ],
+      [
+       "Minority Whip",
+       8
+      ],
+      [
+       "Minority Leader",
+       7
+      ],
+      [
+       "Majority Leader",
+       3
+      ],
+      [
+       "Speaker",
+       1
+      ]
+     ],
+     "description": "title of the legislator",
+     "value_description": "",
+     "notes": [
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0208,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "rep",
+     "max_value": "sen",
+     "examples": [
+      "rep",
+      "sen"
+     ],
+     "top_values": [
+      [
+       "rep",
+       2770
+      ],
+      [
+       "sen",
+       244
+      ]
+     ],
+     "description": "The type of the term.",
+     "value_description": "Either \"sen\" for senators or \"rep\" for representatives and delegates to the House",
+     "notes": []
+    },
+    {
+     "name": "url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.2664,
+     "distinct_count": 852,
+     "is_unique": false,
+     "min_value": "http://adams.house.gov",
+     "max_value": "https://zinke.house.gov",
+     "examples": [
+      "http://www.house.gov/sherrodbrown",
+      "http://brown.senate.gov/",
+      "https://www.brown.senate.gov",
+      "http://cantwell.senate.gov",
+      "https://www.cantwell.senate.gov"
+     ],
+     "top_values": [],
+     "description": "The official website URL of the legislator",
+     "value_description": "only valid if the term is current",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "bioguide",
+    "end"
+   ],
+   "sample_rows": [
+    {
+     "address": null,
+     "bioguide": "B000944",
+     "caucus": null,
+     "chamber": null,
+     "class": null,
+     "contact_form": null,
+     "district": 13.0,
+     "end": "1995-01-03",
+     "fax": null,
+     "last": null,
+     "name": null,
+     "office": null,
+     "party": "Democrat",
+     "party_affiliations": null,
+     "phone": null,
+     "relation": null,
+     "rss_url": null,
+     "start": "1993-01-05",
+     "state": "OH",
+     "state_rank": null,
+     "title": null,
+     "type": "rep",
+     "url": null
+    },
+    {
+     "address": null,
+     "bioguide": "B000944",
+     "caucus": null,
+     "chamber": null,
+     "class": null,
+     "contact_form": null,
+     "district": 13.0,
+     "end": "1997-01-03",
+     "fax": null,
+     "last": null,
+     "name": null,
+     "office": null,
+     "party": "Democrat",
+     "party_affiliations": null,
+     "phone": null,
+     "relation": null,
+     "rss_url": null,
+     "start": "1995-01-04",
+     "state": "OH",
+     "state_rank": null,
+     "title": null,
+     "type": "rep",
+     "url": null
+    },
+    {
+     "address": null,
+     "bioguide": "B000944",
+     "caucus": null,
+     "chamber": null,
+     "class": null,
+     "contact_form": null,
+     "district": 13.0,
+     "end": "1999-01-03",
+     "fax": null,
+     "last": null,
+     "name": null,
+     "office": null,
+     "party": "Democrat",
+     "party_affiliations": null,
+     "phone": null,
+     "relation": null,
+     "rss_url": null,
+     "start": "1997-01-07",
+     "state": "OH",
+     "state_rank": null,
+     "title": null,
+     "type": "rep",
+     "url": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "historical",
+   "row_count": 11864,
+   "stats_rows": 11864,
+   "columns": [
+    {
+     "name": "ballotpedia_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.9915,
+     "distinct_count": 101,
+     "is_unique": true,
+     "min_value": "Aaron Schock",
+     "max_value": "William Enyart",
+     "examples": [],
+     "top_values": [],
+     "description": "ballotpedia id. The ballotpedia.org page name for the person (spaces are given as spaces, not underscores)",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on ballotpedia.org",
+     "notes": [
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "bioguide_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 11864,
+     "is_unique": true,
+     "min_value": "A000001",
+     "max_value": "Z000016",
+     "examples": [
+      "B000226",
+      "B000546",
+      "B001086",
+      "C000187",
+      "C000538"
+     ],
+     "top_values": [],
+     "description": "bioguide id. The alphanumeric ID for this legislator",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "bioguide_previous_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.9997,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": "['F000246']",
+     "max_value": "['W000790']",
+     "examples": [],
+     "top_values": [
+      [
+       "['W000790']",
+       1
+      ],
+      [
+       "['L000266']",
+       1
+      ],
+      [
+       "['F000246']",
+       1
+      ]
+     ],
+     "description": "bioguide previous id. The previous alphanumeric ID for this legislator",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "birthday_bio",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0467,
+     "distinct_count": 10429,
+     "is_unique": false,
+     "min_value": "1721-04-19",
+     "max_value": "1983-03-30",
+     "examples": [
+      "1745-04-02",
+      "1742-03-21",
+      "1743-06-16",
+      "1730-07-22",
+      "1739-03-16"
+     ],
+     "top_values": [],
+     "description": "birthday bio. The legislator's birthday,",
+     "value_description": "in YYYY-MM-DD format.",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "cspan_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.9744,
+     "distinct_count": 304,
+     "is_unique": true,
+     "min_value": "1000221.0",
+     "max_value": "95348.0",
+     "examples": [],
+     "top_values": [],
+     "description": "cspan id. The numeric ID for this legislator on C-SPAN's video website,",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on C-SPAN's video website",
+     "notes": [
+      "97% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "fec_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.9642,
+     "distinct_count": 425,
+     "is_unique": true,
+     "min_value": "['H0AL05049']",
+     "max_value": "['S8WI00026']",
+     "examples": [],
+     "top_values": [],
+     "description": "fec id. A list of IDs for this legislator in Federal Election Commission data",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator hasn't not been registered in Federal Election Commission data.",
+     "notes": [
+      "96% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "first_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1514,
+     "is_unique": false,
+     "min_value": "A.",
+     "max_value": "Zephaniah",
+     "examples": [
+      "Richard",
+      "Theodorick",
+      "Aedanus",
+      "Daniel",
+      "George"
+     ],
+     "top_values": [],
+     "description": "first name of the legislator",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "gender_bio",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "M",
+     "examples": [
+      "M"
+     ],
+     "top_values": [
+      [
+       "M",
+       11648
+      ],
+      [
+       "F",
+       216
+      ]
+     ],
+     "description": "gender bio. gender of the legislator",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "google_entity_id_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0013,
+     "distinct_count": 11849,
+     "is_unique": true,
+     "min_value": "kg:/g/11bc5_pspc",
+     "max_value": "kg:/m/0ywyyqz",
+     "examples": [
+      "kg:/m/02pz46",
+      "kg:/m/033mf4",
+      "kg:/m/03yccv",
+      "kg:/m/02q22c",
+      "kg:/m/01mpsj"
+     ],
+     "top_values": [],
+     "description": "google entity id",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator are not google entities",
+     "notes": []
+    },
+    {
+     "name": "govtrack_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11864,
+     "is_unique": true,
+     "min_value": 300001,
+     "max_value": 412645,
+     "examples": [
+      401222,
+      401521,
+      402032,
+      402334,
+      402671
+     ],
+     "top_values": [],
+     "description": "govtrack id. The numeric ID for this legislator on GovTrack.us",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on GovTrack.us",
+     "notes": []
+    },
+    {
+     "name": "house_history_alternate_id",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.9999,
+     "distinct_count": 1,
+     "is_unique": true,
+     "min_value": "13283.0",
+     "max_value": "13283.0",
+     "examples": [],
+     "top_values": [
+      [
+       "13283.0",
+       1
+      ]
+     ],
+     "description": "house history alternate id. The alternative numeric ID for this legislator",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "house_history_id",
+     "declared_type": "REAL",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.1004,
+     "distinct_count": 10673,
+     "is_unique": true,
+     "min_value": 7672.0,
+     "max_value": 15032409716.0,
+     "examples": [
+      9479.0,
+      10177.0,
+      10687.0,
+      11120.0,
+      11343.0
+     ],
+     "top_values": [],
+     "description": "house history id. The numeric ID for this legislator on http://history.house.gov/People/Search/",
+     "value_description": "commonsense evidence:\nThe ID is present only for members who have served in the U.S. House.",
+     "notes": []
+    },
+    {
+     "name": "icpsr_id",
+     "declared_type": "REAL",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0176,
+     "distinct_count": 11655,
+     "is_unique": true,
+     "min_value": 1.0,
+     "max_value": 99342.0,
+     "examples": [
+      507.0,
+      786.0,
+      1260.0,
+      1538.0,
+      1859.0
+     ],
+     "top_values": [],
+     "description": "interuniversity consortium for political and social research id. The numeric ID for this legislator in Keith Poole's VoteView.com website, originally based on an ID system by the Interuniversity Consortium for Political and Social Research (stored as an integer)",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on VoteView.com",
+     "notes": []
+    },
+    {
+     "name": "last_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5410,
+     "is_unique": false,
+     "min_value": "Aandahl",
+     "max_value": "du Pont",
+     "examples": [
+      "Bassett",
+      "Bland",
+      "Burke",
+      "Carroll",
+      "Clymer"
+     ],
+     "top_values": [],
+     "description": "last name of the legislator",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lis_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.985,
+     "distinct_count": 178,
+     "is_unique": true,
+     "min_value": "S009",
+     "max_value": "S371",
+     "examples": [],
+     "top_values": [],
+     "description": "legislator id. The alphanumeric ID for this legislator found in Senate roll call votes",
+     "value_description": "commonsense evidence:\nThe ID is present only for members who attended in Senate roll call votes",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "maplight_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.9882,
+     "distinct_count": 140,
+     "is_unique": true,
+     "min_value": "1210.0",
+     "max_value": "808.0",
+     "examples": [],
+     "top_values": [],
+     "description": "maplight id. The numeric ID for this legislator on maplight.org",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on maplight.org",
+     "notes": [
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "middle_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.2993,
+     "distinct_count": 2900,
+     "is_unique": false,
+     "min_value": "(Jim) Guy",
+     "max_value": "de Veaux",
+     "examples": [
+      "Samuel",
+      "Henry",
+      "Jenifer",
+      "Baptista",
+      "Corneliusen"
+     ],
+     "top_values": [],
+     "description": "the middle name of the legislator",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "nickname_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9817,
+     "distinct_count": 121,
+     "is_unique": false,
+     "min_value": "Abe",
+     "max_value": "of Ohio",
+     "examples": [
+      "of Carrollton"
+     ],
+     "top_values": [],
+     "description": "nickname of the legislator",
+     "value_description": "",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "official_full_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9808,
+     "distinct_count": 228,
+     "is_unique": true,
+     "min_value": "Aaron Schock",
+     "max_value": "William M. Cowan",
+     "examples": [],
+     "top_values": [],
+     "description": "official full name",
+     "value_description": "",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "opensecrets_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.9534,
+     "distinct_count": 553,
+     "is_unique": true,
+     "min_value": "N00000010",
+     "max_value": "N99999896",
+     "examples": [],
+     "top_values": [],
+     "description": "opensecrets id. The alphanumeric ID for this legislator on OpenSecrets.org",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on OpenSecrets.org.",
+     "notes": [
+      "95% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "religion_bio",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9692,
+     "distinct_count": 31,
+     "is_unique": false,
+     "min_value": "African Methodist Episcopal",
+     "max_value": "Zion Lutheran",
+     "examples": [],
+     "top_values": [
+      [
+       "Roman Catholic",
+       63
+      ],
+      [
+       "Baptist",
+       44
+      ],
+      [
+       "Methodist",
+       40
+      ],
+      [
+       "Presbyterian",
+       35
+      ],
+      [
+       "Catholic",
+       32
+      ],
+      [
+       "Episcopalian",
+       31
+      ],
+      [
+       "Jewish",
+       24
+      ],
+      [
+       "Protestant",
+       23
+      ],
+      [
+       "Lutheran",
+       18
+      ],
+      [
+       "Latter Day Saints",
+       11
+      ],
+      [
+       "Christian",
+       10
+      ],
+      [
+       "United Church of Christ",
+       4
+      ],
+      [
+       "Congregationalist",
+       4
+      ],
+      [
+       "Greek Orthodox",
+       3
+      ],
+      [
+       "Christian Scientist",
+       3
+      ],
+      [
+       "Assembly of God",
+       3
+      ],
+      [
+       "United Methodist",
+       2
+      ],
+      [
+       "Unitarian",
+       2
+      ],
+      [
+       "First Christian Church (Disciples of Christ)",
+       2
+      ],
+      [
+       "Zion Lutheran",
+       1
+      ],
+      [
+       "Unknown",
+       1
+      ],
+      [
+       "United Brethren in Christ",
+       1
+      ],
+      [
+       "Unitarian Universalist",
+       1
+      ],
+      [
+       "Seventh-Day Adventist",
+       1
+      ],
+      [
+       "Second Baptist",
+       1
+      ],
+      [
+       "Reformed Latter Day Saint",
+       1
+      ],
+      [
+       "Reformed Church in America",
+       1
+      ],
+      [
+       "Non-Denominational",
+       1
+      ],
+      [
+       "Moravian",
+       1
+      ],
+      [
+       "Christian Reformed",
+       1
+      ],
+      [
+       "African Methodist Episcopal",
+       1
+      ]
+     ],
+     "description": "religion bio. The legislator's religion",
+     "value_description": "",
+     "notes": [
+      "97% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "suffix_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9648,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "II",
+     "max_value": "Sr.",
+     "examples": [
+      "Jr."
+     ],
+     "top_values": [
+      [
+       "Jr.",
+       366
+      ],
+      [
+       "III",
+       29
+      ],
+      [
+       "Sr.",
+       13
+      ],
+      [
+       "II",
+       8
+      ],
+      [
+       "IV",
+       2
+      ]
+     ],
+     "description": "suffix name",
+     "value_description": "",
+     "notes": [
+      "96% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "thomas_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.857,
+     "distinct_count": 1697,
+     "is_unique": true,
+     "min_value": "00001",
+     "max_value": "02260",
+     "examples": [],
+     "top_values": [],
+     "description": "thomas id. The numeric ID for this legislator on http://thomas.gov and http://beta.congress.gov",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on both http://thomas.gov and http://beta.congress.gov.",
+     "notes": [
+      "86% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "votesmart_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.9632,
+     "distinct_count": 437,
+     "is_unique": true,
+     "min_value": "0.0",
+     "max_value": "9680.0",
+     "examples": [],
+     "top_values": [],
+     "description": "votesmart id. The numeric ID for this legislator on VoteSmart.org",
+     "value_description": "commonsense evidence:\nif this value is null or empty, it means this legislator doesn't have account on VoteSmart.org",
+     "notes": [
+      "96% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "wikidata_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 11861,
+     "is_unique": true,
+     "min_value": "Q1000051",
+     "max_value": "Q999912",
+     "examples": [
+      "Q518823",
+      "Q1749152",
+      "Q380504",
+      "Q674371",
+      "Q708913"
+     ],
+     "top_values": [],
+     "description": "wikidata id. the id for wikidata",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "wikipedia_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 11861,
+     "is_unique": true,
+     "min_value": "A. C. Schiffler",
+     "max_value": "Zephaniah Swift",
+     "examples": [
+      "Richard Bassett (politician)",
+      "Theodorick Bland (congressman)",
+      "Aedanus Burke",
+      "Daniel Carroll",
+      "George Clymer"
+     ],
+     "top_values": [],
+     "description": "wikipedia id. The Wikipedia page name for the person",
+     "value_description": "commonsense evidence:\nif a legislator has wikipedia id, it means he or she is famous or impact",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "bioguide_id"
+   ],
+   "sample_rows": [
+    {
+     "ballotpedia_id": null,
+     "bioguide_id": "B000226",
+     "bioguide_previous_id": null,
+     "birthday_bio": "1745-04-02",
+     "cspan_id": null,
+     "fec_id": null,
+     "first_name": "Richard",
+     "gender_bio": "M",
+     "google_entity_id_id": "kg:/m/02pz46",
+     "govtrack_id": 401222,
+     "house_history_alternate_id": null,
+     "house_history_id": null,
+     "icpsr_id": 507.0,
+     "last_name": "Bassett",
+     "lis_id": null,
+     "maplight_id": null,
+     "middle_name": null,
+     "nickname_name": null,
+     "official_full_name": null,
+     "opensecrets_id": null,
+     "religion_bio": null,
+     "suffix_name": null,
+     "thomas_id": null,
+     "votesmart_id": null,
+     "wikidata_id": "Q518823",
+     "wikipedia_id": "Richard Bassett (politician)"
+    },
+    {
+     "ballotpedia_id": null,
+     "bioguide_id": "B000546",
+     "bioguide_previous_id": null,
+     "birthday_bio": "1742-03-21",
+     "cspan_id": null,
+     "fec_id": null,
+     "first_name": "Theodorick",
+     "gender_bio": "M",
+     "google_entity_id_id": "kg:/m/033mf4",
+     "govtrack_id": 401521,
+     "house_history_alternate_id": null,
+     "house_history_id": 9479.0,
+     "icpsr_id": 786.0,
+     "last_name": "Bland",
+     "lis_id": null,
+     "maplight_id": null,
+     "middle_name": null,
+     "nickname_name": null,
+     "official_full_name": null,
+     "opensecrets_id": null,
+     "religion_bio": null,
+     "suffix_name": null,
+     "thomas_id": null,
+     "votesmart_id": null,
+     "wikidata_id": "Q1749152",
+     "wikipedia_id": "Theodorick Bland (congressman)"
+    },
+    {
+     "ballotpedia_id": null,
+     "bioguide_id": "B001086",
+     "bioguide_previous_id": null,
+     "birthday_bio": "1743-06-16",
+     "cspan_id": null,
+     "fec_id": null,
+     "first_name": "Aedanus",
+     "gender_bio": "M",
+     "google_entity_id_id": "kg:/m/03yccv",
+     "govtrack_id": 402032,
+     "house_history_alternate_id": null,
+     "house_history_id": 10177.0,
+     "icpsr_id": 1260.0,
+     "last_name": "Burke",
+     "lis_id": null,
+     "maplight_id": null,
+     "middle_name": null,
+     "nickname_name": null,
+     "official_full_name": null,
+     "opensecrets_id": null,
+     "religion_bio": null,
+     "suffix_name": null,
+     "thomas_id": null,
+     "votesmart_id": null,
+     "wikidata_id": "Q380504",
+     "wikipedia_id": "Aedanus Burke"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "historical-terms",
+   "row_count": 11864,
+   "stats_rows": 11864,
+   "columns": [
+    {
+     "name": "address",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9948,
+     "distinct_count": 61,
+     "is_unique": false,
+     "min_value": "1030 Longworth HOB; Washington DC 20515-0308",
+     "max_value": "521 Dirksen Senate Office Building Washington DC 20510",
+     "examples": [],
+     "top_values": [],
+     "description": "the address of this legislator",
+     "value_description": "",
+     "notes": [
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "bioguide",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 11864,
+     "is_unique": true,
+     "min_value": "A000001",
+     "max_value": "Z000016",
+     "examples": [
+      "B000226",
+      "B000546",
+      "B001086",
+      "C000187",
+      "C000538"
+     ],
+     "top_values": [],
+     "description": "bioguide id. The alphanumeric ID for this legislator",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "chamber",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.9997,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "house",
+     "max_value": "senate",
+     "examples": [],
+     "top_values": [
+      [
+       "house",
+       2
+      ],
+      [
+       "senate",
+       1
+      ]
+     ],
+     "description": "chamber",
+     "value_description": "â¢ senate\nâ¢ house",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "class",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.8941,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 1.0,
+     "max_value": 3.0,
+     "examples": [
+      2.0,
+      1.0,
+      3.0
+     ],
+     "top_values": [
+      [
+       2.0,
+       432
+      ],
+      [
+       1.0,
+       414
+      ],
+      [
+       3.0,
+       410
+      ]
+     ],
+     "description": "class",
+     "value_description": "For senators, their election class (1, 2, or 3). \ncommonsense evidence:\nonly senator has class, if the value is null or empty, it means this legislator is not senator.",
+     "notes": [
+      "89% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "contact_form",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9979,
+     "distinct_count": 25,
+     "is_unique": true,
+     "min_value": "http://enyart.house.gov/contact",
+     "max_value": "https://walsh.house.gov/contact-me",
+     "examples": [],
+     "top_values": [
+      [
+       "https://walsh.house.gov/contact-me",
+       1
+      ],
+      [
+       "https://mcallister.house.gov/email-me",
+       1
+      ],
+      [
+       "https://jolly.house.gov/contact/email-me",
+       1
+      ],
+      [
+       "https://horsford.house.gov/contact/email-me",
+       1
+      ],
+      [
+       "https://hahn.house.gov/contact-me/email-me",
+       1
+      ],
+      [
+       "https://gallego.house.gov/contact/email-me",
+       1
+      ],
+      [
+       "https://forms.house.gov/pierluisi/contact-form.shtml",
+       1
+      ],
+      [
+       "https://forms.house.gov/carney/webforms/email-me.shtml",
+       1
+      ],
+      [
+       "https://bobturner.house.gov/contact-me",
+       1
+      ],
+      [
+       "https://bentivolio.house.gov/contact/email-me",
+       1
+      ],
+      [
+       "https://barber.house.gov/contact-me/email-me",
+       1
+      ],
+      [
+       "http://www.webb.senate.gov/contact.cfm",
+       1
+      ],
+      [
+       "http://www.walsh.senate.gov/contact.cfm",
+       1
+      ],
+      [
+       "http://www.scottbrown.senate.gov/public/index.cfm/emailscott...",
+       1
+      ],
+      [
+       "http://www.johanns.senate.gov/public/?p=EmailSenatorJohanns",
+       1
+      ],
+      [
+       "http://www.hagan.senate.gov/contact/",
+       1
+      ],
+      [
+       "http://www.cowan.senate.gov/contact",
+       1
+      ],
+      [
+       "http://www.chiesa.senate.gov/contact.cfm",
+       1
+      ],
+      [
+       "http://www.begich.senate.gov/public/index.cfm?p=EmailSenator",
+       1
+      ],
+      [
+       "http://www.ayotte.senate.gov/?p=contact",
+       1
+      ],
+      [
+       "http://radel.house.gov/contact",
+       1
+      ],
+      [
+       "http://patrickmurphy.house.gov/contact/",
+       1
+      ],
+      [
+       "http://negretemcleod.house.gov/EmailGloria",
+       1
+      ],
+      [
+       "http://garciaforms.house.gov/email-me/",
+       1
+      ],
+      [
+       "http://enyart.house.gov/contact",
+       1
+      ]
+     ],
+     "description": "The website URL of the contact page on the legislator's official website",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "district",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.1064,
+     "distinct_count": 50,
+     "is_unique": false,
+     "min_value": -1.0,
+     "max_value": 50.0,
+     "examples": [
+      9.0,
+      2.0,
+      6.0,
+      -1.0,
+      3.0
+     ],
+     "top_values": [
+      [
+       1.0,
+       1052
+      ],
+      [
+       2.0,
+       1021
+      ],
+      [
+       3.0,
+       897
+      ],
+      [
+       4.0,
+       796
+      ],
+      [
+       -1.0,
+       713
+      ],
+      [
+       5.0,
+       689
+      ],
+      [
+       6.0,
+       659
+      ],
+      [
+       7.0,
+       521
+      ],
+      [
+       8.0,
+       478
+      ],
+      [
+       9.0,
+       389
+      ],
+      [
+       10.0,
+       356
+      ],
+      [
+       11.0,
+       309
+      ],
+      [
+       12.0,
+       247
+      ],
+      [
+       13.0,
+       222
+      ],
+      [
+       0.0,
+       215
+      ],
+      [
+       14.0,
+       190
+      ],
+      [
+       15.0,
+       173
+      ],
+      [
+       16.0,
+       166
+      ],
+      [
+       17.0,
+       156
+      ],
+      [
+       19.0,
+       142
+      ],
+      [
+       18.0,
+       136
+      ],
+      [
+       20.0,
+       131
+      ],
+      [
+       21.0,
+       119
+      ],
+      [
+       22.0,
+       95
+      ],
+      [
+       23.0,
+       94
+      ],
+      [
+       24.0,
+       79
+      ],
+      [
+       25.0,
+       70
+      ],
+      [
+       26.0,
+       66
+      ],
+      [
+       27.0,
+       61
+      ],
+      [
+       28.0,
+       48
+      ],
+      [
+       29.0,
+       45
+      ],
+      [
+       30.0,
+       43
+      ],
+      [
+       31.0,
+       38
+      ],
+      [
+       33.0,
+       31
+      ],
+      [
+       32.0,
+       30
+      ],
+      [
+       34.0,
+       24
+      ],
+      [
+       37.0,
+       16
+      ],
+      [
+       38.0,
+       13
+      ],
+      [
+       35.0,
+       12
+      ],
+      [
+       42.0,
+       10
+      ],
+      [
+       41.0,
+       10
+      ],
+      [
+       36.0,
+       10
+      ],
+      [
+       40.0,
+       8
+      ],
+      [
+       43.0,
+       7
+      ],
+      [
+       39.0,
+       6
+      ],
+      [
+       44.0,
+       4
+      ],
+      [
+       49.0,
+       2
+      ],
+      [
+       50.0,
+       1
+      ],
+      [
+       48.0,
+       1
+      ],
+      [
+       46.0,
+       1
+      ]
+     ],
+     "description": "district",
+     "value_description": "For representatives, the district number they are serving from. \ncommonsense evidence:\nif null or empty, they are not representatives.",
+     "notes": []
+    },
+    {
+     "name": "end",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 231,
+     "is_unique": false,
+     "min_value": "1791-03-03",
+     "max_value": "2017-01-03",
+     "examples": [
+      "1793-03-03",
+      "1791-03-03",
+      "1795-03-03",
+      "1791-12-31",
+      "1797-03-03"
+     ],
+     "top_values": [],
+     "description": "the end of the term",
+     "value_description": "end: The date the term ended (because the Congress ended or the legislator died or resigned, etc.). End dates follow the Constitutional end of a term. Since 1935, terms begin and end on January 3 at noon in odd-numbered years, and thus a term end date may also be a term start date. Prior to 1935, terms began on March 4 and ended either on March 3 or March 4. The end date is the last date on which the legislator served this term. Unlike the start date, whether Congress was in session or not does not affect the value of this field.",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "fax",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9959,
+     "distinct_count": 47,
+     "is_unique": false,
+     "min_value": "202- 225-2185",
+     "max_value": "210-927-4903",
+     "examples": [],
+     "top_values": [
+      [
+       "202-225-8398",
+       2
+      ],
+      [
+       "202-225-5615",
+       2
+      ],
+      [
+       "210-927-4903",
+       1
+      ],
+      [
+       "202-228-6363",
+       1
+      ],
+      [
+       "202-228-2563",
+       1
+      ],
+      [
+       "202-228-0436",
+       1
+      ],
+      [
+       "202-226-7290",
+       1
+      ],
+      [
+       "202-226-6299",
+       1
+      ],
+      [
+       "202-226-5452",
+       1
+      ],
+      [
+       "202-226-1272",
+       1
+      ],
+      [
+       "202-226-0893",
+       1
+      ],
+      [
+       "202-226-0346",
+       1
+      ],
+      [
+       "202-226-0218",
+       1
+      ],
+      [
+       "202-225-9783",
+       1
+      ],
+      [
+       "202-225-8671",
+       1
+      ],
+      [
+       "202-225-7830",
+       1
+      ],
+      [
+       "202-225-5903",
+       1
+      ],
+      [
+       "202-225-5822",
+       1
+      ],
+      [
+       "202-225-5730",
+       1
+      ],
+      [
+       "202-225-5681",
+       1
+      ],
+      [
+       "202-225-4218",
+       1
+      ],
+      [
+       "202-225-4042",
+       1
+      ],
+      [
+       "202-225-3462",
+       1
+      ],
+      [
+       "202-225-2291",
+       1
+      ],
+      [
+       "202-225-2237",
+       1
+      ],
+      [
+       "202-225-2154",
+       1
+      ],
+      [
+       "202-225-1891",
+       1
+      ],
+      [
+       "202-225-1765",
+       1
+      ],
+      [
+       "202-225-1168",
+       1
+      ],
+      [
+       "202-225-0837",
+       1
+      ],
+      [
+       "202-225-0778",
+       1
+      ],
+      [
+       "202-225-0688",
+       1
+      ],
+      [
+       "202-225-0378",
+       1
+      ],
+      [
+       "202-224-7981",
+       1
+      ],
+      [
+       "202-224-4952",
+       1
+      ],
+      [
+       "202-224-2354",
+       1
+      ],
+      [
+       "202- 226-6559",
+       1
+      ],
+      [
+       "202- 226-3944",
+       1
+      ],
+      [
+       "202- 225-6211",
+       1
+      ],
+      [
+       "202- 225-5729",
+       1
+      ],
+      [
+       "202- 225-5662",
+       1
+      ],
+      [
+       "202- 225-5396",
+       1
+      ],
+      [
+       "202- 225-5124",
+       1
+      ],
+      [
+       "202- 225-4744",
+       1
+      ],
+      [
+       "202- 225-3549",
+       1
+      ],
+      [
+       "202- 225-3289",
+       1
+      ],
+      [
+       "202- 225-2185",
+       1
+      ]
+     ],
+     "description": "The fax number of the legislator's Washington, D.C. office",
+     "value_description": "only valid if the term is current",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "last",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9997,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": "Bono",
+     "max_value": "Levy",
+     "examples": [],
+     "top_values": [
+      [
+       "Levy",
+       1
+      ],
+      [
+       "Lambert",
+       1
+      ],
+      [
+       "Bono",
+       1
+      ]
+     ],
+     "description": "the last known number",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "middle",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "",
+     "value_description": "not useful",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "office",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9948,
+     "distinct_count": 58,
+     "is_unique": false,
+     "min_value": "1030 Longworth House Office Building",
+     "max_value": "521 Dirksen Senate Office Building",
+     "examples": [],
+     "top_values": [],
+     "description": "office",
+     "value_description": "only valid if the term is current, otherwise the last known office",
+     "notes": [
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "party",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0192,
+     "distinct_count": 61,
+     "is_unique": false,
+     "min_value": "AL",
+     "max_value": "Whig",
+     "examples": [
+      "Anti-Administration",
+      "Pro-Administration",
+      "Republican",
+      "Federalist",
+      "Democratic Republican"
+     ],
+     "top_values": [],
+     "description": "The political party of the legislator.",
+     "value_description": "commonsense evidence:\nIf the legislator changed parties, this is the most recent party held during the term and party_affiliations will be set. Values are typically \"Democrat\", \"Independent\", or \"Republican\". The value typically matches the political party of the legislator on the ballot in his or her last election, although for state affiliate parties such as \"Democratic Farmer Labor\" we will use the national party name (\"Democrat\") instead to keep the values of this field normalized.",
+     "notes": []
+    },
+    {
+     "name": "party_affiliations",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.9998,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": "{'start': '2003-01-07', 'end': '2004-08-09', 'party': 'Democ...",
+     "max_value": "{'start': '2009-01-06', 'end': '2009-12-22', 'party': 'Democ...",
+     "examples": [],
+     "top_values": [
+      [
+       "{'start': '2009-01-06', 'end': '2009-12-22', 'party': 'Democ...",
+       1
+      ],
+      [
+       "{'start': '2003-01-07', 'end': '2004-08-09', 'party': 'Democ...",
+       1
+      ]
+     ],
+     "description": "party affiliations. This field is present if the legislator changed party or caucus affiliation during the term",
+     "value_description": "The value is a list of time periods, with start and end dates, each of which has a party field and a caucus field if applicable, with the same meanings as the main party and caucus fields. The time periods cover the entire term, so the first start will match the term start, the last end will match the term end, and the last party (and caucus if present) will match the term party (and caucus).",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "phone",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9948,
+     "distinct_count": 55,
+     "is_unique": false,
+     "min_value": "202-224-2651",
+     "max_value": "202-225-9894",
+     "examples": [],
+     "top_values": [],
+     "description": "The phone number of the legislator's Washington, D.C. office",
+     "value_description": "only valid if the term is current, otherwise the last known number",
+     "notes": [
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "relation",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "",
+     "value_description": "not useful",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "rss_url",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.999,
+     "distinct_count": 12,
+     "is_unique": true,
+     "min_value": "http://ayotte.senate.gov/rss/?p=news",
+     "max_value": "http://www.johanns.senate.gov/public/?a=RSS.Feed",
+     "examples": [],
+     "top_values": [
+      [
+       "http://www.johanns.senate.gov/public/?a=RSS.Feed",
+       1
+      ],
+      [
+       "http://www.hagan.senate.gov/rss",
+       1
+      ],
+      [
+       "http://www.begich.senate.gov/public/?a=rss.feed",
+       1
+      ],
+      [
+       "http://radel.house.gov/news/rss.aspx",
+       1
+      ],
+      [
+       "http://patrickmurphy.house.gov/news/rss.aspx",
+       1
+      ],
+      [
+       "http://negretemcleod.house.gov/rss.xml",
+       1
+      ],
+      [
+       "http://horsford.house.gov/rss.xml",
+       1
+      ],
+      [
+       "http://garcia.house.gov/rss.xml",
+       1
+      ],
+      [
+       "http://gallego.house.gov/rss.xml",
+       1
+      ],
+      [
+       "http://enyart.house.gov/rss.xml",
+       1
+      ],
+      [
+       "http://bentivolio.house.gov/rss.xml",
+       1
+      ],
+      [
+       "http://ayotte.senate.gov/rss/?p=news",
+       1
+      ]
+     ],
+     "description": "Really Simple Syndication URL. The URL to the official website's RSS feed",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "start",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 333,
+     "is_unique": false,
+     "min_value": "1789-03-04",
+     "max_value": "2015-01-06",
+     "examples": [
+      "1789-03-04",
+      "1790-01-01",
+      "1791-10-24",
+      "1792-01-01",
+      "1793-01-10"
+     ],
+     "top_values": [],
+     "description": "The date legislative service began: the date the legislator was sworn in, if known, or else the beginning of the legislator's term.",
+     "value_description": "Since 1935 regularly elected terms begin on January 3 at noon on odd-numbered years, but when Congress does not first meet on January 3, term start dates might reflect that swearing-in occurred on a later date. (Prior to 1935, terms began on March 4 of odd-numbered years, see here.)",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0005,
+     "distinct_count": 58,
+     "is_unique": false,
+     "min_value": "AK",
+     "max_value": "WY",
+     "examples": [
+      "DE",
+      "VA",
+      "SC",
+      "MD",
+      "PA"
+     ],
+     "top_values": [],
+     "description": "state code",
+     "value_description": "commonsense evidence:\nAK: Alaska \nAL: Alabama \nAR: Arkansas \nAZ: Arizona \nCA: California \nCO: Colorado \nCT: Connecticut \nDE: Delaware \nFL: Florida \nGA: Georgia \nHI: Hawaii \nIA: Iowa \nID: Idaho \nIL: Illinois \nIN: Indiana \nKS: Kansas \nKY: Kentucky \nLA: Louisiana \nMA: Massachusetts \nMD: Maryland \nME: Maine \nMI: Michigan \nMN: Minnesota \nMO: Missouri \nMS: Mississippi \nMT: Montana \nNC: North Carolina \nND: North Dakota \nNE: Nebraska \nNH: New Hampshire \nNJ: New Jersey\n9 divisions of states in us: (please mention)\nhttps://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf",
+     "notes": []
+    },
+    {
+     "name": "state_rank",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.9994,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "junior",
+     "max_value": "senior",
+     "examples": [],
+     "top_values": [
+      [
+       "junior",
+       6
+      ],
+      [
+       "senior",
+       1
+      ]
+     ],
+     "description": "whether they are the \"junior\" or \"senior\" senator",
+     "value_description": "only valid if the term is current, otherwise the senator's rank at the time the term ended\ncommonsense evidence:\nonly senator has this value",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.9997,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "Majority Leader",
+     "max_value": "Speaker",
+     "examples": [],
+     "top_values": [
+      [
+       "Majority Leader",
+       2
+      ],
+      [
+       "Speaker",
+       1
+      ]
+     ],
+     "description": "title of the legislator",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0005,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "rep",
+     "max_value": "sen",
+     "examples": [
+      "sen",
+      "rep"
+     ],
+     "top_values": [
+      [
+       "rep",
+       10602
+      ],
+      [
+       "sen",
+       1256
+      ]
+     ],
+     "description": "The type of the term.",
+     "value_description": "Either \"sen\" for senators or \"rep\" for representatives and delegates to the House",
+     "notes": []
+    },
+    {
+     "name": "url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9847,
+     "distinct_count": 180,
+     "is_unique": false,
+     "min_value": "http://adams.house.gov/",
+     "max_value": "https://takai.house.gov",
+     "examples": [],
+     "top_values": [],
+     "description": "The official website URL of the legislator",
+     "value_description": "only valid if the term is current",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "bioguide"
+   ],
+   "sample_rows": [
+    {
+     "address": null,
+     "bioguide": "B000226",
+     "chamber": null,
+     "class": 2.0,
+     "contact_form": null,
+     "district": null,
+     "end": "1793-03-03",
+     "fax": null,
+     "last": null,
+     "middle": null,
+     "name": null,
+     "office": null,
+     "party": "Anti-Administration",
+     "party_affiliations": null,
+     "phone": null,
+     "relation": null,
+     "rss_url": null,
+     "start": "1789-03-04",
+     "state": "DE",
+     "state_rank": null,
+     "title": null,
+     "type": "sen",
+     "url": null
+    },
+    {
+     "address": null,
+     "bioguide": "B000546",
+     "chamber": null,
+     "class": null,
+     "contact_form": null,
+     "district": 9.0,
+     "end": "1791-03-03",
+     "fax": null,
+     "last": null,
+     "middle": null,
+     "name": null,
+     "office": null,
+     "party": null,
+     "party_affiliations": null,
+     "phone": null,
+     "relation": null,
+     "rss_url": null,
+     "start": "1789-03-04",
+     "state": "VA",
+     "state_rank": null,
+     "title": null,
+     "type": "rep",
+     "url": null
+    },
+    {
+     "address": null,
+     "bioguide": "B001086",
+     "chamber": null,
+     "class": null,
+     "contact_form": null,
+     "district": 2.0,
+     "end": "1791-03-03",
+     "fax": null,
+     "last": null,
+     "middle": null,
+     "name": null,
+     "office": null,
+     "party": null,
+     "party_affiliations": null,
+     "phone": null,
+     "relation": null,
+     "rss_url": null,
+     "start": "1789-03-04",
+     "state": "SC",
+     "state_rank": null,
+     "title": null,
+     "type": "rep",
+     "url": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "social-media",
+   "row_count": 479,
+   "stats_rows": 479,
+   "columns": [
+    {
+     "name": "bioguide",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 479,
+     "is_unique": true,
+     "min_value": "A000055",
+     "max_value": "Z000018",
+     "examples": [
+      "R000600",
+      "Y000064",
+      "E000295",
+      "T000476",
+      "Y000063"
+     ],
+     "top_values": [],
+     "description": "The unique alphanumeric ID for this legislator",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "facebook",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0438,
+     "distinct_count": 458,
+     "is_unique": true,
+     "min_value": "106631626049851",
+     "max_value": "zoelofgren",
+     "examples": [
+      "congresswomanaumuaamata",
+      "RepToddYoung",
+      "senjoniernst",
+      "SenatorThomTillis",
+      "CongressmanKevinYoder"
+     ],
+     "top_values": [],
+     "description": "The username of the current official Facebook presence of the legislator.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "facebook_id",
+     "declared_type": "REAL",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.1942,
+     "distinct_count": 386,
+     "is_unique": true,
+     "min_value": 1287257083.0,
+     "max_value": 1.015013539575516e+16,
+     "examples": [
+      1537155909907320.0,
+      186203844738421.0,
+      351671691660938.0,
+      1576257352609470.0,
+      154026694650252.0
+     ],
+     "top_values": [],
+     "description": "The numeric ID of the current official Facebook presence of the legislator.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "govtrack",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0063,
+     "distinct_count": 476,
+     "is_unique": true,
+     "min_value": 300002.0,
+     "max_value": 412674.0,
+     "examples": [
+      412664.0,
+      412428.0,
+      412667.0,
+      412668.0,
+      412430.0
+     ],
+     "top_values": [],
+     "description": "The numeric ID for this legislator on GovTrack.us",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "instagram",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.7724,
+     "distinct_count": 109,
+     "is_unique": true,
+     "min_value": "Farenthold",
+     "max_value": "wydenpress",
+     "examples": [
+      "senjoniernst",
+      "senatorwarner",
+      "SenWhitehouse",
+      "peterwelchvt",
+      "RepDWSTweets"
+     ],
+     "top_values": [],
+     "description": "The current official Instagram handle of the legislator.",
+     "value_description": "",
+     "notes": [
+      "77% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "instagram_id",
+     "declared_type": "REAL",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.8058,
+     "distinct_count": 93,
+     "is_unique": true,
+     "min_value": 9443881.0,
+     "max_value": 1679501092.0,
+     "examples": [
+      1582702853.0,
+      515327940.0,
+      1559860900.0,
+      519685522.0,
+      382962594.0
+     ],
+     "top_values": [],
+     "description": "The numeric ID of the current official Instagram handle of the legislator.",
+     "value_description": "",
+     "notes": [
+      "81% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "thomas",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0084,
+     "distinct_count": 475,
+     "is_unique": true,
+     "min_value": 62,
+     "max_value": 2295,
+     "examples": [
+      2222,
+      2019,
+      2283,
+      2291,
+      2021
+     ],
+     "top_values": [],
+     "description": "The numeric ID for this legislator on http://thomas.gov and http://beta.congress.gov.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "twitter",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0188,
+     "distinct_count": 470,
+     "is_unique": true,
+     "min_value": "AustinScottGA08",
+     "max_value": "teammoulton",
+     "examples": [
+      "RepAmata",
+      "RepToddYoung",
+      "SenJoniErnst",
+      "senthomtillis",
+      "RepKevinYoder"
+     ],
+     "top_values": [],
+     "description": "The current official Twitter handle of the legislator.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "twitter_id",
+     "declared_type": "REAL",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.023,
+     "distinct_count": 468,
+     "is_unique": true,
+     "min_value": 5558312.0,
+     "max_value": 3686482216.0,
+     "examples": [
+      3026622545.0,
+      234128524.0,
+      2856787757.0,
+      2964174789.0,
+      252819642.0
+     ],
+     "top_values": [],
+     "description": "The numeric ID of the current official twitter handle of the legislator.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "youtube",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1983,
+     "distinct_count": 384,
+     "is_unique": true,
+     "min_value": "1529tjw",
+     "max_value": "witammybaldwin",
+     "examples": [
+      "RepToddYoung",
+      "RepYoder",
+      "RepJohnYarmuth",
+      "RepDonYoung",
+      "CongressmanWomack"
+     ],
+     "top_values": [],
+     "description": "The current official YouTube username of the legislator.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "youtube_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.1566,
+     "distinct_count": 404,
+     "is_unique": true,
+     "min_value": "UC-6Ss-aZ3OPisf9GdVGtN8g",
+     "max_value": "UCzxqD7EY_Rdvbc0spbaYkJA",
+     "examples": [
+      "UCGdrLQbt1PYDTPsampx4t1A",
+      "UCuknj4PGn91gHDNAfboZEgQ",
+      "UCLwrmtF_84FIcK3TyMs4MIw",
+      "UCUD9VGV4SSGWjGdbn37Ea2w",
+      "UCCeYmn4A8kZEHCcAfeUW9lQ"
+     ],
+     "top_values": [],
+     "description": "The current official YouTube channel ID of the legislator.",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "bioguide"
+   ],
+   "sample_rows": [
+    {
+     "bioguide": "R000600",
+     "facebook": "congresswomanaumuaamata",
+     "facebook_id": 1537155909907320.0,
+     "govtrack": 412664.0,
+     "instagram": null,
+     "instagram_id": null,
+     "thomas": 2222,
+     "twitter": "RepAmata",
+     "twitter_id": 3026622545.0,
+     "youtube": null,
+     "youtube_id": "UCGdrLQbt1PYDTPsampx4t1A"
+    },
+    {
+     "bioguide": "Y000064",
+     "facebook": "RepToddYoung",
+     "facebook_id": 186203844738421.0,
+     "govtrack": 412428.0,
+     "instagram": null,
+     "instagram_id": null,
+     "thomas": 2019,
+     "twitter": "RepToddYoung",
+     "twitter_id": 234128524.0,
+     "youtube": "RepToddYoung",
+     "youtube_id": "UCuknj4PGn91gHDNAfboZEgQ"
+    },
+    {
+     "bioguide": "E000295",
+     "facebook": "senjoniernst",
+     "facebook_id": 351671691660938.0,
+     "govtrack": 412667.0,
+     "instagram": "senjoniernst",
+     "instagram_id": 1582702853.0,
+     "thomas": 2283,
+     "twitter": "SenJoniErnst",
+     "twitter_id": 2856787757.0,
+     "youtube": null,
+     "youtube_id": "UCLwrmtF_84FIcK3TyMs4MIw"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "current-terms",
+   "from_column": "bioguide",
+   "to_table": "current",
+   "to_column": "bioguide_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "historical-terms",
+   "from_column": "bioguide",
+   "to_table": "historical",
+   "to_column": "bioguide_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "social-media",
+   "from_column": "bioguide",
+   "to_table": "current",
+   "to_column": "bioguide_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "current-terms",
+   "from_column": "bioguide",
+   "to_table": "social-media",
+   "to_column": "bioguide",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.863
+  }
+ ],
+ "notes": []
+}

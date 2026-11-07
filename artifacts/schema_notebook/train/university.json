@@ -1,0 +1,1374 @@
+{
+ "db_id": "university",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/university/university.sqlite",
+ "fingerprint": "630784-1793993033383584784-v1.0",
+ "created_at": "2026-11-06T19:25:20+00:00",
+ "profile_seconds": 0.048,
+ "tables": [
+  {
+   "name": "country",
+   "row_count": 74,
+   "stats_rows": 74,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 74,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 74,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique id number identifying country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "country_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 74,
+     "is_unique": true,
+     "min_value": "Argentina",
+     "max_value": "Uruguay",
+     "examples": [
+      "Argentina",
+      "Australia",
+      "Austria",
+      "Bangladesh",
+      "Belarus"
+     ],
+     "top_values": [],
+     "description": "country name. the name of the country",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "country_name": "Argentina"
+    },
+    {
+     "id": 2,
+     "country_name": "Australia"
+    },
+    {
+     "id": 3,
+     "country_name": "Austria"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "ranking_criteria",
+   "row_count": 21,
+   "stats_rows": 21,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 21,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "unique id number identifying ranking criteria",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ranking_system_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 3,
+     "examples": [
+      1,
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       3,
+       8
+      ],
+      [
+       2,
+       7
+      ],
+      [
+       1,
+       6
+      ]
+     ],
+     "description": "ranking system id. id number identifying ranking system",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "criteria_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": true,
+     "min_value": "Alumni",
+     "max_value": "Total Times",
+     "examples": [
+      "Teaching",
+      "International",
+      "Research",
+      "Citations",
+      "Income"
+     ],
+     "top_values": [
+      [
+       "Total Times",
+       1
+      ],
+      [
+       "Total Shanghai",
+       1
+      ],
+      [
+       "Total CWUR",
+       1
+      ],
+      [
+       "Teaching",
+       1
+      ],
+      [
+       "Research",
+       1
+      ],
+      [
+       "Quality of Faculty Rank",
+       1
+      ],
+      [
+       "Quality of Education Rank",
+       1
+      ],
+      [
+       "Publications Rank",
+       1
+      ],
+      [
+       "Pub",
+       1
+      ],
+      [
+       "Patents Rank",
+       1
+      ],
+      [
+       "PCP",
+       1
+      ],
+      [
+       "N and S",
+       1
+      ],
+      [
+       "International",
+       1
+      ],
+      [
+       "Influence Rank",
+       1
+      ],
+      [
+       "Income",
+       1
+      ],
+      [
+       "HiCi",
+       1
+      ],
+      [
+       "Citations Rank",
+       1
+      ],
+      [
+       "Citations",
+       1
+      ],
+      [
+       "Award",
+       1
+      ],
+      [
+       "Alumni Employment Rank",
+       1
+      ],
+      [
+       "Alumni",
+       1
+      ]
+     ],
+     "description": "criteria name. name of the criteria",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "ranking_system_id": 1,
+     "criteria_name": "Teaching"
+    },
+    {
+     "id": 2,
+     "ranking_system_id": 1,
+     "criteria_name": "International"
+    },
+    {
+     "id": 3,
+     "ranking_system_id": 1,
+     "criteria_name": "Research"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "ranking_system",
+   "row_count": 3,
+   "stats_rows": 3,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 3,
+     "examples": [
+      1,
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "unique id number identifying ranking system",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "system_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": true,
+     "min_value": "Center for World University Rankings",
+     "max_value": "Times Higher Education World University Ranking",
+     "examples": [
+      "Times Higher Education World University Ranking",
+      "Shanghai Ranking",
+      "Center for World University Rankings"
+     ],
+     "top_values": [
+      [
+       "Times Higher Education World University Ranking",
+       1
+      ],
+      [
+       "Shanghai Ranking",
+       1
+      ],
+      [
+       "Center for World University Rankings",
+       1
+      ]
+     ],
+     "description": "system name. id number identifying ranking system",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "system_name": "Times Higher Education World University Ranking"
+    },
+    {
+     "id": 2,
+     "system_name": "Shanghai Ranking"
+    },
+    {
+     "id": 3,
+     "system_name": "Center for World University Rankings"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "university",
+   "row_count": 1247,
+   "stats_rows": 1247,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1247,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 1247,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique id number identifying university",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "country_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 74,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 74,
+     "examples": [
+      73,
+      72,
+      33,
+      65,
+      31
+     ],
+     "top_values": [],
+     "description": "country id. the country where the university locates",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "university_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1247,
+     "is_unique": true,
+     "min_value": "AGH University of Science and Technology",
+     "max_value": "Örebro University",
+     "examples": [
+      "Harvard University",
+      "Massachusetts Institute of Technology",
+      "Stanford University",
+      "University of Cambridge",
+      "California Institute of Technology"
+     ],
+     "top_values": [],
+     "description": "university name. name of the university",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "country_id": 73,
+     "university_name": "Harvard University"
+    },
+    {
+     "id": 2,
+     "country_id": 73,
+     "university_name": "Massachusetts Institute of Technology"
+    },
+    {
+     "id": 3,
+     "country_id": 73,
+     "university_name": "Stanford University"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "university_ranking_year",
+   "row_count": 29612,
+   "stats_rows": 29612,
+   "columns": [
+    {
+     "name": "university_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1065,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1107,
+     "examples": [
+      1,
+      5,
+      2,
+      3,
+      6
+     ],
+     "top_values": [],
+     "description": "university id. the id of the university",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ranking_criteria_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 21,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       21,
+       2200
+      ],
+      [
+       20,
+       2200
+      ],
+      [
+       19,
+       2200
+      ],
+      [
+       18,
+       2200
+      ],
+      [
+       17,
+       2200
+      ],
+      [
+       16,
+       2200
+      ],
+      [
+       15,
+       2200
+      ],
+      [
+       14,
+       2200
+      ],
+      [
+       6,
+       1085
+      ],
+      [
+       5,
+       1085
+      ],
+      [
+       4,
+       1085
+      ],
+      [
+       3,
+       1085
+      ],
+      [
+       2,
+       1085
+      ],
+      [
+       1,
+       1085
+      ],
+      [
+       13,
+       786
+      ],
+      [
+       12,
+       786
+      ],
+      [
+       11,
+       786
+      ],
+      [
+       10,
+       786
+      ],
+      [
+       9,
+       786
+      ],
+      [
+       8,
+       786
+      ],
+      [
+       7,
+       786
+      ]
+     ],
+     "description": "ranking criteria id. the id of the ranking criteria",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": 2005,
+     "max_value": 2016,
+     "examples": [
+      2011,
+      2012
+     ],
+     "top_values": [
+      [
+       2015,
+       9712
+      ],
+      [
+       2014,
+       9678
+      ],
+      [
+       2012,
+       2473
+      ],
+      [
+       2013,
+       2472
+      ],
+      [
+       2011,
+       1607
+      ],
+      [
+       2016,
+       660
+      ],
+      [
+       2007,
+       511
+      ],
+      [
+       2010,
+       504
+      ],
+      [
+       2008,
+       504
+      ],
+      [
+       2009,
+       497
+      ],
+      [
+       2006,
+       497
+      ],
+      [
+       2005,
+       497
+      ]
+     ],
+     "description": "ranking year",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "score",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0044,
+     "distinct_count": 997,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1000,
+     "examples": [
+      100,
+      98,
+      91,
+      90,
+      88
+     ],
+     "top_values": [],
+     "description": "ranking score",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "university_id": 1,
+     "ranking_criteria_id": 1,
+     "year": 2011,
+     "score": 100
+    },
+    {
+     "university_id": 5,
+     "ranking_criteria_id": 1,
+     "year": 2011,
+     "score": 98
+    },
+    {
+     "university_id": 2,
+     "ranking_criteria_id": 1,
+     "year": 2011,
+     "score": 98
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "university_year",
+   "row_count": 1085,
+   "stats_rows": 1085,
+   "columns": [
+    {
+     "name": "university_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 245,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1107,
+     "examples": [
+      1,
+      5,
+      2,
+      3,
+      6
+     ],
+     "top_values": [],
+     "description": "university id. id of the university",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 2011,
+     "max_value": 2016,
+     "examples": [
+      2011,
+      2012
+     ],
+     "top_values": [
+      [
+       2015,
+       199
+      ],
+      [
+       2014,
+       198
+      ],
+      [
+       2013,
+       197
+      ],
+      [
+       2012,
+       196
+      ],
+      [
+       2011,
+       185
+      ],
+      [
+       2016,
+       110
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "num_students",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 245,
+     "is_unique": false,
+     "min_value": 462,
+     "max_value": 127431,
+     "examples": [
+      20152,
+      2243,
+      11074,
+      15596,
+      7929
+     ],
+     "top_values": [],
+     "description": "the total number of students for the year",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "student_staff_ratio",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 158,
+     "is_unique": false,
+     "min_value": 3.6,
+     "max_value": 70.4,
+     "examples": [
+      8.9,
+      6.9,
+      9.0,
+      7.8,
+      8.4
+     ],
+     "top_values": [],
+     "description": "student staff ratio",
+     "value_description": "commonsense evidence: student_staff_ratio = number of students / number of staff",
+     "notes": []
+    },
+    {
+     "name": "pct_international_students",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 44,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 54,
+     "examples": [
+      25,
+      27,
+      33,
+      22,
+      34
+     ],
+     "top_values": [
+      [
+       10,
+       56
+      ],
+      [
+       12,
+       52
+      ],
+      [
+       16,
+       51
+      ],
+      [
+       9,
+       49
+      ],
+      [
+       15,
+       45
+      ],
+      [
+       25,
+       43
+      ],
+      [
+       14,
+       43
+      ],
+      [
+       13,
+       43
+      ],
+      [
+       20,
+       42
+      ],
+      [
+       17,
+       42
+      ],
+      [
+       11,
+       42
+      ],
+      [
+       19,
+       41
+      ],
+      [
+       18,
+       38
+      ],
+      [
+       28,
+       33
+      ],
+      [
+       7,
+       33
+      ],
+      [
+       8,
+       31
+      ],
+      [
+       23,
+       30
+      ],
+      [
+       22,
+       29
+      ],
+      [
+       35,
+       28
+      ],
+      [
+       33,
+       28
+      ],
+      [
+       27,
+       28
+      ],
+      [
+       26,
+       27
+      ],
+      [
+       37,
+       23
+      ],
+      [
+       34,
+       23
+      ],
+      [
+       21,
+       22
+      ],
+      [
+       36,
+       18
+      ],
+      [
+       24,
+       16
+      ],
+      [
+       29,
+       14
+      ],
+      [
+       5,
+       14
+      ],
+      [
+       4,
+       14
+      ],
+      [
+       6,
+       13
+      ],
+      [
+       30,
+       12
+      ],
+      [
+       38,
+       8
+      ],
+      [
+       54,
+       6
+      ],
+      [
+       51,
+       6
+      ],
+      [
+       47,
+       6
+      ],
+      [
+       46,
+       6
+      ],
+      [
+       40,
+       6
+      ],
+      [
+       39,
+       6
+      ],
+      [
+       31,
+       6
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       48,
+       4
+      ],
+      [
+       32,
+       1
+      ],
+      [
+       2,
+       1
+      ]
+     ],
+     "description": "pct internation student. the percentage of international students among all students",
+     "value_description": "commonsense evidence: pct_international_student = number of interbational students / number of students",
+     "notes": []
+    },
+    {
+     "name": "pct_female_students",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0885,
+     "distinct_count": 43,
+     "is_unique": false,
+     "min_value": 13,
+     "max_value": 70,
+     "examples": [
+      33,
+      37,
+      42,
+      45,
+      46
+     ],
+     "top_values": [
+      [
+       54,
+       103
+      ],
+      [
+       52,
+       91
+      ],
+      [
+       53,
+       70
+      ],
+      [
+       48,
+       62
+      ],
+      [
+       56,
+       60
+      ],
+      [
+       50,
+       53
+      ],
+      [
+       51,
+       52
+      ],
+      [
+       57,
+       44
+      ],
+      [
+       55,
+       44
+      ],
+      [
+       58,
+       43
+      ],
+      [
+       49,
+       32
+      ],
+      [
+       46,
+       26
+      ],
+      [
+       47,
+       24
+      ],
+      [
+       31,
+       22
+      ],
+      [
+       44,
+       20
+      ],
+      [
+       42,
+       18
+      ],
+      [
+       59,
+       17
+      ],
+      [
+       45,
+       17
+      ],
+      [
+       37,
+       17
+      ],
+      [
+       39,
+       14
+      ],
+      [
+       62,
+       13
+      ],
+      [
+       61,
+       13
+      ],
+      [
+       60,
+       13
+      ],
+      [
+       33,
+       13
+      ],
+      [
+       26,
+       13
+      ],
+      [
+       27,
+       12
+      ],
+      [
+       20,
+       12
+      ],
+      [
+       67,
+       11
+      ],
+      [
+       30,
+       10
+      ],
+      [
+       70,
+       5
+      ],
+      [
+       66,
+       5
+      ],
+      [
+       63,
+       5
+      ],
+      [
+       32,
+       5
+      ],
+      [
+       25,
+       5
+      ],
+      [
+       19,
+       5
+      ],
+      [
+       18,
+       5
+      ],
+      [
+       13,
+       5
+      ],
+      [
+       34,
+       3
+      ],
+      [
+       28,
+       3
+      ],
+      [
+       64,
+       1
+      ],
+      [
+       43,
+       1
+      ],
+      [
+       41,
+       1
+      ],
+      [
+       35,
+       1
+      ]
+     ],
+     "description": "pct female students. the percentage of female students",
+     "value_description": "commonsense evidence: pct_female_students = number of female students / number of students",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "university_id": 1,
+     "year": 2011,
+     "num_students": 20152,
+     "student_staff_ratio": 8.9,
+     "pct_international_students": 25,
+     "pct_female_students": null
+    },
+    {
+     "university_id": 5,
+     "year": 2011,
+     "num_students": 2243,
+     "student_staff_ratio": 6.9,
+     "pct_international_students": 27,
+     "pct_female_students": 33
+    },
+    {
+     "university_id": 2,
+     "year": 2011,
+     "num_students": 11074,
+     "student_staff_ratio": 9.0,
+     "pct_international_students": 33,
+     "pct_female_students": 37
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "ranking_criteria",
+   "from_column": "ranking_system_id",
+   "to_table": "ranking_system",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "university",
+   "from_column": "country_id",
+   "to_table": "country",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "university_ranking_year",
+   "from_column": "university_id",
+   "to_table": "university",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "university_ranking_year",
+   "from_column": "ranking_criteria_id",
+   "to_table": "ranking_criteria",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "university_year",
+   "from_column": "university_id",
+   "to_table": "university",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

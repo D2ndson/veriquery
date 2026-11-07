@@ -1,0 +1,3102 @@
+{
+ "db_id": "retail_complains",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/retail_complains/retail_complains.sqlite",
+ "fingerprint": "25133056-1793993071883362385-v1.0",
+ "created_at": "2026-11-06T19:25:09+00:00",
+ "profile_seconds": 0.707,
+ "tables": [
+  {
+   "name": "callcenterlogs",
+   "row_count": 3999,
+   "stats_rows": 3999,
+   "columns": [
+    {
+     "name": "Date received",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1842,
+     "is_unique": false,
+     "min_value": "2011-12-05",
+     "max_value": "2019-12-28",
+     "examples": [
+      "2017-03-27",
+      "2017-03-23",
+      "2017-03-22",
+      "2017-03-21",
+      "2017-03-17"
+     ],
+     "top_values": [],
+     "description": "complaint date",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Complaint ID",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.3738,
+     "distinct_count": 2504,
+     "is_unique": true,
+     "min_value": "CR0000072",
+     "max_value": "CR2406263",
+     "examples": [
+      "CR2406263",
+      "CR2405641",
+      "CR2405629",
+      "CR2400594",
+      "CR2399607"
+     ],
+     "top_values": [],
+     "description": "unique id number representing each complaint",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "rand client",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.3738,
+     "distinct_count": 2019,
+     "is_unique": false,
+     "min_value": "C00000001",
+     "max_value": "C00013924",
+     "examples": [
+      "C00004587",
+      "C00003328",
+      "C00001685",
+      "C00001945",
+      "C00004303"
+     ],
+     "top_values": [],
+     "description": "client id",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "phonefinal",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2744,
+     "is_unique": false,
+     "min_value": "100-624-5671",
+     "max_value": "999-572-7626",
+     "examples": [
+      "977-806-9726",
+      "322-598-7152",
+      "508-311-5237",
+      "265-394-2727",
+      "206-008-0460"
+     ],
+     "top_values": [],
+     "description": "phone final. final phone number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vru+line",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.2461,
+     "distinct_count": 27,
+     "is_unique": false,
+     "min_value": "AA0101",
+     "max_value": "AA0216",
+     "examples": [
+      "AA0103",
+      "AA0205",
+      "AA0110",
+      "AA0113",
+      "AA0102"
+     ],
+     "top_values": [
+      [
+       "AA0213",
+       183
+      ],
+      [
+       "AA0106",
+       169
+      ],
+      [
+       "AA0109",
+       167
+      ],
+      [
+       "AA0101",
+       160
+      ],
+      [
+       "AA0202",
+       158
+      ],
+      [
+       "AA0214",
+       152
+      ],
+      [
+       "AA0110",
+       145
+      ],
+      [
+       "AA0205",
+       142
+      ],
+      [
+       "AA0102",
+       142
+      ],
+      [
+       "AA0115",
+       141
+      ],
+      [
+       "AA0210",
+       139
+      ],
+      [
+       "AA0206",
+       139
+      ],
+      [
+       "AA0209",
+       138
+      ],
+      [
+       "AA0215",
+       134
+      ],
+      [
+       "AA0103",
+       131
+      ],
+      [
+       "AA0203",
+       129
+      ],
+      [
+       "AA0105",
+       127
+      ],
+      [
+       "AA0104",
+       119
+      ],
+      [
+       "AA0204",
+       115
+      ],
+      [
+       "AA0201",
+       76
+      ],
+      [
+       "AA0113",
+       54
+      ],
+      [
+       "AA0107",
+       53
+      ],
+      [
+       "AA0112",
+       38
+      ],
+      [
+       "AA0108",
+       25
+      ],
+      [
+       "AA0111",
+       16
+      ],
+      [
+       "AA0216",
+       14
+      ],
+      [
+       "AA0116",
+       9
+      ]
+     ],
+     "description": "voice response unit line",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "call_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.2461,
+     "distinct_count": 3015,
+     "is_unique": true,
+     "min_value": 30075,
+     "max_value": 50175,
+     "examples": [
+      34536,
+      34537,
+      34538,
+      34540,
+      34541
+     ],
+     "top_values": [],
+     "description": "call id. id number identifying the call",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "priority",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.2461,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 2,
+     "examples": [
+      0,
+      2,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       1656
+      ],
+      [
+       2,
+       875
+      ],
+      [
+       1,
+       484
+      ]
+     ],
+     "description": "priority of the complaint",
+     "value_description": "0, 1, 2, \nnull: not available,\nhigher: -> higher priority,\n-> more serious/urgent complaint",
+     "notes": []
+    },
+    {
+     "name": "type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.2461,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "IN",
+     "max_value": "TT",
+     "examples": [
+      "NW",
+      "PS",
+      "NE",
+      "TT"
+     ],
+     "top_values": [
+      [
+       "PS",
+       1996
+      ],
+      [
+       "NW",
+       624
+      ],
+      [
+       "NE",
+       254
+      ],
+      [
+       "TT",
+       94
+      ],
+      [
+       "IN",
+       28
+      ],
+      [
+       "PE",
+       19
+      ]
+     ],
+     "description": "type of complaint",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "outcome",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.2461,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "AGENT",
+     "max_value": "PHANTOM",
+     "examples": [
+      "AGENT"
+     ],
+     "top_values": [
+      [
+       "AGENT",
+       2580
+      ],
+      [
+       "HANG",
+       416
+      ],
+      [
+       "PHANTOM",
+       19
+      ]
+     ],
+     "description": "the outcome of processing of complaints",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "server",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.2461,
+     "distinct_count": 25,
+     "is_unique": false,
+     "min_value": "ANAT",
+     "max_value": "ZOHARI",
+     "examples": [
+      "MICHAL",
+      "TOVA",
+      "YIFAT",
+      "AVNI",
+      "STEREN"
+     ],
+     "top_values": [
+      [
+       "NO_SERVER",
+       488
+      ],
+      [
+       "KAZAV",
+       188
+      ],
+      [
+       "TOVA",
+       184
+      ],
+      [
+       "IDIT",
+       172
+      ],
+      [
+       "SHARON",
+       164
+      ],
+      [
+       "YIFAT",
+       158
+      ],
+      [
+       "AVNI",
+       153
+      ],
+      [
+       "YITZ",
+       144
+      ],
+      [
+       "MIKI",
+       131
+      ],
+      [
+       "MORIAH",
+       124
+      ],
+      [
+       "MICHAL",
+       118
+      ],
+      [
+       "STEREN",
+       110
+      ],
+      [
+       "BASCH",
+       107
+      ],
+      [
+       "DORIT",
+       105
+      ],
+      [
+       "BENSION",
+       104
+      ],
+      [
+       "ANAT",
+       104
+      ],
+      [
+       "AVIDAN",
+       102
+      ],
+      [
+       "ZOHARI",
+       92
+      ],
+      [
+       "GILI",
+       77
+      ],
+      [
+       "SHLOMO",
+       57
+      ],
+      [
+       "ELI",
+       47
+      ],
+      [
+       "DARMON",
+       44
+      ],
+      [
+       "NAAMA",
+       32
+      ],
+      [
+       "GELBER",
+       7
+      ],
+      [
+       "PINHAS",
+       3
+      ]
+     ],
+     "description": "server",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ser_start",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3733,
+     "is_unique": false,
+     "min_value": "09:00:02",
+     "max_value": "17:00:37",
+     "examples": [
+      "13:34:11",
+      "10:58:22",
+      "13:00:54",
+      "16:18:21",
+      "14:48:22"
+     ],
+     "top_values": [],
+     "description": "server start time",
+     "value_description": "HH:MM:SS",
+     "notes": []
+    },
+    {
+     "name": "ser_exit",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3738,
+     "is_unique": false,
+     "min_value": "09:01:47",
+     "max_value": "17:18:51",
+     "examples": [
+      "13:40:23",
+      "11:16:10",
+      "13:13:31",
+      "16:19:40",
+      "14:55:19"
+     ],
+     "top_values": [],
+     "description": "server exit time",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ser_time",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1303,
+     "is_unique": false,
+     "min_value": "00:00:00",
+     "max_value": "00:28:59",
+     "examples": [
+      "00:06:12",
+      "00:17:48",
+      "00:12:37",
+      "00:01:19",
+      "00:06:57"
+     ],
+     "top_values": [],
+     "description": "server time",
+     "value_description": "commonsense evidence:\nlonger server time referring to more verbose/longer complaint",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Complaint ID"
+   ],
+   "sample_rows": [
+    {
+     "Date received": "2017-03-27",
+     "Complaint ID": "CR2406263",
+     "rand client": "C00004587",
+     "phonefinal": "977-806-9726",
+     "vru+line": "AA0103",
+     "call_id": 34536,
+     "priority": 0,
+     "type": "NW",
+     "outcome": "AGENT",
+     "server": "MICHAL",
+     "ser_start": "13:34:11",
+     "ser_exit": "13:40:23",
+     "ser_time": "00:06:12"
+    },
+    {
+     "Date received": "2017-03-27",
+     "Complaint ID": "CR2405641",
+     "rand client": "C00003328",
+     "phonefinal": "322-598-7152",
+     "vru+line": "AA0205",
+     "call_id": 34537,
+     "priority": 0,
+     "type": "PS",
+     "outcome": "AGENT",
+     "server": "TOVA",
+     "ser_start": "10:58:22",
+     "ser_exit": "11:16:10",
+     "ser_time": "00:17:48"
+    },
+    {
+     "Date received": "2017-03-27",
+     "Complaint ID": "CR2405629",
+     "rand client": "C00001685",
+     "phonefinal": "508-311-5237",
+     "vru+line": "AA0110",
+     "call_id": 34538,
+     "priority": 2,
+     "type": "PS",
+     "outcome": "AGENT",
+     "server": "YIFAT",
+     "ser_start": "13:00:54",
+     "ser_exit": "13:13:31",
+     "ser_time": "00:12:37"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "client",
+   "row_count": 5369,
+   "stats_rows": 5369,
+   "columns": [
+    {
+     "name": "client_id",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5369,
+     "is_unique": true,
+     "min_value": "C00000001",
+     "max_value": "C00013998",
+     "examples": [
+      "C00000001",
+      "C00000002",
+      "C00000003",
+      "C00000004",
+      "C00000005"
+     ],
+     "top_values": [],
+     "description": "client id. unique id client number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "sex",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "Female",
+     "max_value": "Male",
+     "examples": [
+      "Female",
+      "Male"
+     ],
+     "top_values": [
+      [
+       "Male",
+       2724
+      ],
+      [
+       "Female",
+       2645
+      ]
+     ],
+     "description": "sex of client",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "day",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 31,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 31,
+     "examples": [
+      13,
+      4,
+      9,
+      1,
+      3
+     ],
+     "top_values": [
+      [
+       27,
+       207
+      ],
+      [
+       9,
+       201
+      ],
+      [
+       17,
+       195
+      ],
+      [
+       7,
+       195
+      ],
+      [
+       28,
+       194
+      ],
+      [
+       13,
+       191
+      ],
+      [
+       26,
+       187
+      ],
+      [
+       16,
+       186
+      ],
+      [
+       12,
+       183
+      ],
+      [
+       24,
+       181
+      ],
+      [
+       10,
+       180
+      ],
+      [
+       20,
+       178
+      ],
+      [
+       25,
+       177
+      ],
+      [
+       15,
+       176
+      ],
+      [
+       21,
+       175
+      ],
+      [
+       29,
+       172
+      ],
+      [
+       23,
+       172
+      ],
+      [
+       6,
+       172
+      ],
+      [
+       2,
+       172
+      ],
+      [
+       1,
+       170
+      ],
+      [
+       22,
+       168
+      ],
+      [
+       4,
+       166
+      ],
+      [
+       19,
+       164
+      ],
+      [
+       14,
+       163
+      ],
+      [
+       3,
+       162
+      ],
+      [
+       18,
+       161
+      ],
+      [
+       8,
+       159
+      ],
+      [
+       5,
+       155
+      ],
+      [
+       30,
+       153
+      ],
+      [
+       11,
+       147
+      ],
+      [
+       31,
+       107
+      ]
+     ],
+     "description": "day of the birthday",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "month",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 12,
+     "examples": [
+      12,
+      2,
+      10,
+      7,
+      9
+     ],
+     "top_values": [
+      [
+       8,
+       470
+      ],
+      [
+       9,
+       469
+      ],
+      [
+       5,
+       467
+      ],
+      [
+       10,
+       466
+      ],
+      [
+       7,
+       465
+      ],
+      [
+       1,
+       454
+      ],
+      [
+       4,
+       448
+      ],
+      [
+       12,
+       437
+      ],
+      [
+       2,
+       428
+      ],
+      [
+       3,
+       427
+      ],
+      [
+       11,
+       426
+      ],
+      [
+       6,
+       412
+      ]
+     ],
+     "description": "month of the birthday",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": false,
+     "min_value": 1931,
+     "max_value": 2007,
+     "examples": [
+      1990,
+      1965,
+      1960,
+      1976,
+      1980
+     ],
+     "top_values": [],
+     "description": "year when is born",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "age",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": false,
+     "min_value": 12,
+     "max_value": 88,
+     "examples": [
+      29,
+      54,
+      59,
+      43,
+      39
+     ],
+     "top_values": [],
+     "description": "age",
+     "value_description": "teenager: 13-19\nadult: 19-65\nelder: > 65",
+     "notes": []
+    },
+    {
+     "name": "social",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5369,
+     "is_unique": true,
+     "min_value": "100-00-4872",
+     "max_value": "999-93-5337",
+     "examples": [
+      "926-93-2157",
+      "806-94-5725",
+      "614-70-9100",
+      "580-20-3414",
+      "536-14-5809"
+     ],
+     "top_values": [],
+     "description": "social number",
+     "value_description": "ssn: us id number for each person",
+     "notes": []
+    },
+    {
+     "name": "first",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2885,
+     "is_unique": false,
+     "min_value": "Aaden",
+     "max_value": "Zyon",
+     "examples": [
+      "Emma",
+      "Noah",
+      "Olivia",
+      "Liam",
+      "Sophia"
+     ],
+     "top_values": [],
+     "description": "first name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "middle",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3925,
+     "is_unique": false,
+     "min_value": "Aaden",
+     "max_value": "Zyon",
+     "examples": [
+      "Avaya",
+      "Everest",
+      "Brooklynne",
+      "Irvin",
+      "Danae"
+     ],
+     "top_values": [],
+     "description": "middle name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1769,
+     "is_unique": false,
+     "min_value": "Abbott",
+     "max_value": "Zuniga",
+     "examples": [
+      "Smith",
+      "Thompson",
+      "Johnson",
+      "White",
+      "Williams"
+     ],
+     "top_values": [],
+     "description": "last name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "phone",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5369,
+     "is_unique": true,
+     "min_value": "100-121-8371",
+     "max_value": "999-739-0333",
+     "examples": [
+      "367-171-6840",
+      "212-423-7734",
+      "212-425-6932",
+      "951-567-8925",
+      "428-265-1568"
+     ],
+     "top_values": [],
+     "description": "phone number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "email",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5369,
+     "is_unique": true,
+     "min_value": "aaden.li@outlook.com",
+     "max_value": "zyon.mata@outlook.com",
+     "examples": [
+      "emma.smith@gmail.com",
+      "noah.thompson@gmail.com",
+      "olivia.johnson@outlook.com",
+      "liam.white@gmail.com",
+      "sophia.williams@gmail.com"
+     ],
+     "top_values": [],
+     "description": "email",
+     "value_description": "commonsense evidence:\ngoogle email / account: @gamil.com\nmicrosoft email / account: xxx@outlook.com",
+     "notes": []
+    },
+    {
+     "name": "address_1",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5365,
+     "is_unique": false,
+     "min_value": "1 Addison Ave.",
+     "max_value": "9995 Addison St.",
+     "examples": [
+      "387 Wellington Ave.",
+      "75 W. Berkshire St.",
+      "36 Second St.",
+      "7607 Sunnyslope Street",
+      "755 Galvin Street"
+     ],
+     "top_values": [],
+     "description": "address 1",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "address_2",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9845,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": "Apt. 1B",
+     "max_value": "Unit 84",
+     "examples": [
+      "Unit 1",
+      "Unit 6",
+      "Unit 80",
+      "Unit 1B",
+      "Apt. 3D"
+     ],
+     "top_values": [
+      [
+       "Unit 1B",
+       10
+      ],
+      [
+       "Unit 81",
+       5
+      ],
+      [
+       "Unit 80",
+       5
+      ],
+      [
+       "Unit 8",
+       5
+      ],
+      [
+       "Unit 77",
+       5
+      ],
+      [
+       "Unit 76",
+       5
+      ],
+      [
+       "Unit 7",
+       5
+      ],
+      [
+       "Unit 6",
+       5
+      ],
+      [
+       "Unit 1A",
+       5
+      ],
+      [
+       "Unit 1",
+       5
+      ],
+      [
+       "Apt. 4D",
+       5
+      ],
+      [
+       "Apt. 3D",
+       5
+      ],
+      [
+       "Unit 79",
+       4
+      ],
+      [
+       "Unit 5",
+       4
+      ],
+      [
+       "Unit 84",
+       1
+      ],
+      [
+       "Unit 83",
+       1
+      ],
+      [
+       "Unit 82",
+       1
+      ],
+      [
+       "Unit 75",
+       1
+      ],
+      [
+       "Unit 4",
+       1
+      ],
+      [
+       "Unit 3",
+       1
+      ],
+      [
+       "Unit 2",
+       1
+      ],
+      [
+       "Unit 1C",
+       1
+      ],
+      [
+       "Apt. 5B",
+       1
+      ],
+      [
+       "Apt. 1B",
+       1
+      ]
+     ],
+     "description": "address 2",
+     "value_description": "entire address = (address_1, address_2)",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 75,
+     "is_unique": false,
+     "min_value": "Albuquerque",
+     "max_value": "Yonkers",
+     "examples": [
+      "Albuquerque",
+      "New York City",
+      "Indianapolis",
+      "Portland",
+      "Louisville"
+     ],
+     "top_values": [],
+     "description": "city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 51,
+     "is_unique": false,
+     "min_value": "AK",
+     "max_value": "WY",
+     "examples": [
+      "NM",
+      "NY",
+      "IN",
+      "OR",
+      "KY"
+     ],
+     "top_values": [],
+     "description": "state code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "zipcode",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3512,
+     "is_unique": false,
+     "min_value": 1101,
+     "max_value": 49998,
+     "examples": [
+      47246,
+      10040,
+      10162,
+      49047,
+      40852
+     ],
+     "top_values": [],
+     "description": "zipcode",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "district_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 77,
+     "examples": [
+      18,
+      1,
+      5,
+      12,
+      15
+     ],
+     "top_values": [],
+     "description": "district id number",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "client_id"
+   ],
+   "sample_rows": [
+    {
+     "client_id": "C00000001",
+     "sex": "Female",
+     "day": 13,
+     "month": 12,
+     "year": 1990,
+     "age": 29,
+     "social": "926-93-2157",
+     "first": "Emma",
+     "middle": "Avaya",
+     "last": "Smith",
+     "phone": "367-171-6840",
+     "email": "emma.smith@gmail.com",
+     "address_1": "387 Wellington Ave.",
+     "address_2": "Unit 1",
+     "city": "Albuquerque",
+     "state": "NM",
+     "zipcode": 47246,
+     "district_id": 18
+    },
+    {
+     "client_id": "C00000002",
+     "sex": "Male",
+     "day": 4,
+     "month": 2,
+     "year": 1965,
+     "age": 54,
+     "social": "806-94-5725",
+     "first": "Noah",
+     "middle": "Everest",
+     "last": "Thompson",
+     "phone": "212-423-7734",
+     "email": "noah.thompson@gmail.com",
+     "address_1": "75 W. Berkshire St.",
+     "address_2": null,
+     "city": "New York City",
+     "state": "NY",
+     "zipcode": 10040,
+     "district_id": 1
+    },
+    {
+     "client_id": "C00000003",
+     "sex": "Female",
+     "day": 9,
+     "month": 10,
+     "year": 1960,
+     "age": 59,
+     "social": "614-70-9100",
+     "first": "Olivia",
+     "middle": "Brooklynne",
+     "last": "Johnson",
+     "phone": "212-425-6932",
+     "email": "olivia.johnson@outlook.com",
+     "address_1": "36 Second St.",
+     "address_2": null,
+     "city": "New York City",
+     "state": "NY",
+     "zipcode": 10162,
+     "district_id": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "district",
+   "row_count": 77,
+   "stats_rows": 77,
+   "columns": [
+    {
+     "name": "district_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 77,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "district id. unique id number representing district",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 75,
+     "is_unique": false,
+     "min_value": "Albuquerque",
+     "max_value": "Yonkers",
+     "examples": [
+      "New York City",
+      "Jacksonville",
+      "Columbus",
+      "Charlotte",
+      "Indianapolis"
+     ],
+     "top_values": [],
+     "description": "city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state_abbrev",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 51,
+     "is_unique": false,
+     "min_value": "AK",
+     "max_value": "WY",
+     "examples": [
+      "NY",
+      "FL",
+      "OH",
+      "NC",
+      "IN"
+     ],
+     "top_values": [],
+     "description": "state abbreviated code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "division",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": "East North Central",
+     "max_value": "West South Central",
+     "examples": [
+      "Middle Atlantic",
+      "South Atlantic",
+      "East North Central",
+      "Pacific",
+      "Mountain"
+     ],
+     "top_values": [
+      [
+       "New England",
+       26
+      ],
+      [
+       "South Atlantic",
+       9
+      ],
+      [
+       "Mountain",
+       8
+      ],
+      [
+       "West North Central",
+       7
+      ],
+      [
+       "Middle Atlantic",
+       7
+      ],
+      [
+       "Pacific",
+       6
+      ],
+      [
+       "West South Central",
+       5
+      ],
+      [
+       "East North Central",
+       5
+      ],
+      [
+       "East South Central",
+       4
+      ]
+     ],
+     "description": "division",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "district_id"
+   ],
+   "sample_rows": [
+    {
+     "district_id": 1,
+     "city": "New York City",
+     "state_abbrev": "NY",
+     "division": "Middle Atlantic"
+    },
+    {
+     "district_id": 2,
+     "city": "Jacksonville",
+     "state_abbrev": "FL",
+     "division": "South Atlantic"
+    },
+    {
+     "district_id": 3,
+     "city": "Columbus",
+     "state_abbrev": "OH",
+     "division": "East North Central"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "events",
+   "row_count": 23419,
+   "stats_rows": 23419,
+   "columns": [
+    {
+     "name": "Date received",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1908,
+     "is_unique": false,
+     "min_value": "2011-12-01",
+     "max_value": "2017-04-08",
+     "examples": [
+      "2014-07-03",
+      "2012-04-12",
+      "2012-04-03",
+      "2012-03-14",
+      "2012-03-05"
+     ],
+     "top_values": [],
+     "description": "Date received",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Product",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "Bank account or service",
+     "max_value": "Credit card",
+     "examples": [
+      "Bank account or service",
+      "Credit card"
+     ],
+     "top_values": [
+      [
+       "Bank account or service",
+       14091
+      ],
+      [
+       "Credit card",
+       9328
+      ]
+     ],
+     "description": "complaining about which product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Sub-product",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.3983,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "(CD) Certificate of deposit",
+     "max_value": "Savings account",
+     "examples": [
+      "Checking account",
+      "Savings account",
+      "Other bank product/service",
+      "(CD) Certificate of deposit",
+      "Cashing a check without an account"
+     ],
+     "top_values": [
+      [
+       "Checking account",
+       10005
+      ],
+      [
+       "Other bank product/service",
+       2794
+      ],
+      [
+       "Savings account",
+       791
+      ],
+      [
+       "(CD) Certificate of deposit",
+       376
+      ],
+      [
+       "Cashing a check without an account",
+       125
+      ]
+     ],
+     "description": "sub product if exists",
+     "value_description": "commonsense evidence:\ndetailed product",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Issue",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 38,
+     "is_unique": false,
+     "min_value": "APR or interest rate",
+     "max_value": "Using a debit or ATM card",
+     "examples": [
+      "Deposits and withdrawals",
+      "Account opening, closing, or management",
+      "Billing disputes",
+      "Problems caused by my funds being low",
+      "Other fee"
+     ],
+     "top_values": [
+      [
+       "Account opening, closing, or management",
+       5884
+      ],
+      [
+       "Deposits and withdrawals",
+       3788
+      ],
+      [
+       "Problems caused by my funds being low",
+       2041
+      ],
+      [
+       "Billing disputes",
+       1560
+      ],
+      [
+       "Making/receiving payments, sending money",
+       1246
+      ],
+      [
+       "Using a debit or ATM card",
+       1132
+      ],
+      [
+       "Other",
+       978
+      ],
+      [
+       "Identity theft / Fraud / Embezzlement",
+       841
+      ],
+      [
+       "Closing/Cancelling account",
+       834
+      ],
+      [
+       "APR or interest rate",
+       493
+      ],
+      [
+       "Customer service / Customer relations",
+       373
+      ],
+      [
+       "Other fee",
+       347
+      ],
+      [
+       "Transaction issue",
+       346
+      ],
+      [
+       "Late fee",
+       344
+      ],
+      [
+       "Credit card protection / Debt protection",
+       318
+      ],
+      [
+       "Delinquent account",
+       314
+      ],
+      [
+       "Rewards",
+       290
+      ],
+      [
+       "Credit reporting",
+       270
+      ],
+      [
+       "Billing statement",
+       262
+      ],
+      [
+       "Credit line increase/decrease",
+       253
+      ],
+      [
+       "Payoff process",
+       218
+      ],
+      [
+       "Credit determination",
+       203
+      ],
+      [
+       "Advertising and marketing",
+       192
+      ],
+      [
+       "Balance transfer",
+       139
+      ],
+      [
+       "Collection debt dispute",
+       135
+      ],
+      [
+       "Unsolicited issuance of credit card",
+       119
+      ],
+      [
+       "Collection practices",
+       92
+      ],
+      [
+       "Forbearance / Workout plans",
+       61
+      ],
+      [
+       "Privacy",
+       48
+      ],
+      [
+       "Bankruptcy",
+       43
+      ],
+      [
+       "Arbitration",
+       40
+      ],
+      [
+       "Cash advance",
+       39
+      ],
+      [
+       "Cash advance fee",
+       36
+      ],
+      [
+       "Application processing delay",
+       34
+      ],
+      [
+       "Balance transfer fee",
+       32
+      ],
+      [
+       "Sale of account",
+       31
+      ],
+      [
+       "Convenience checks",
+       26
+      ],
+      [
+       "Overlimit fee",
+       17
+      ]
+     ],
+     "description": "problems leading to this complaints",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Sub-issue",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 1.0,
+     "distinct_count": 0,
+     "is_unique": false,
+     "min_value": null,
+     "max_value": null,
+     "examples": [],
+     "top_values": [],
+     "description": "sub problems leading to this complaints if exists",
+     "value_description": "commonsense evidence:\nmore detailed issue",
+     "notes": [
+      "100% NULL; filter or handle NULLs",
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Consumer complaint narrative",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.8093,
+     "distinct_count": 4460,
+     "is_unique": false,
+     "min_value": "\" Eagle National Bank '' sold my debt, to a Law Firm. XXXX, ...",
+     "max_value": "{$3000.00} worth of CD 's purchased at Eagle National Bank i...",
+     "examples": [],
+     "top_values": [],
+     "description": "Consumer complaint narrative",
+     "value_description": "",
+     "notes": [
+      "81% NULL; filter or handle NULLs",
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Tags",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.8601,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Older American",
+     "max_value": "Servicemember",
+     "examples": [
+      "Older American",
+      "Older American, Servicemember",
+      "Servicemember"
+     ],
+     "top_values": [
+      [
+       "Older American",
+       2378
+      ],
+      [
+       "Servicemember",
+       659
+      ],
+      [
+       "Older American, Servicemember",
+       239
+      ]
+     ],
+     "description": "tags of client",
+     "value_description": "",
+     "notes": [
+      "86% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Consumer consent provided?",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0041,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "Consent not provided",
+     "max_value": "Other",
+     "examples": [
+      "N/A"
+     ],
+     "top_values": [
+      [
+       "N/A",
+       16451
+      ],
+      [
+       "Consent provided",
+       4467
+      ],
+      [
+       "Consent not provided",
+       2272
+      ],
+      [
+       "Other",
+       133
+      ]
+     ],
+     "description": "Tags Consumer consent provided?. whether the tags labeled under permission of the clients",
+     "value_description": "commonsense evidence:\n null, 'N/A' or empty value: indicating that the company didn't get the permission of consent.\n if the value is not empty: customers provide the consent for this tag.",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Submitted via",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "Email",
+     "max_value": "Web",
+     "examples": [
+      "Email",
+      "Fax"
+     ],
+     "top_values": [
+      [
+       "Web",
+       13235
+      ],
+      [
+       "Referral",
+       6303
+      ],
+      [
+       "Phone",
+       2504
+      ],
+      [
+       "Postal mail",
+       1071
+      ],
+      [
+       "Fax",
+       298
+      ],
+      [
+       "Email",
+       8
+      ]
+     ],
+     "description": "Submitted via",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Date sent to company",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1778,
+     "is_unique": false,
+     "min_value": "2011-12-01",
+     "max_value": "2017-04-10",
+     "examples": [
+      "2014-07-09",
+      "2012-04-13",
+      "2012-04-03",
+      "2012-03-14",
+      "2012-03-06"
+     ],
+     "top_values": [],
+     "description": "Date sent to company",
+     "value_description": "commonsense evidence:\ndelay of the complaints = 'Date sent to company'",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)",
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Company response to consumer",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": "Closed",
+     "max_value": "Untimely response",
+     "examples": [
+      "Closed with explanation",
+      "Closed with relief",
+      "Closed without relief",
+      "Closed with non-monetary relief",
+      "In progress"
+     ],
+     "top_values": [
+      [
+       "Closed with explanation",
+       14337
+      ],
+      [
+       "Closed with monetary relief",
+       5267
+      ],
+      [
+       "Closed with non-monetary relief",
+       1934
+      ],
+      [
+       "Closed with relief",
+       759
+      ],
+      [
+       "Closed without relief",
+       672
+      ],
+      [
+       "Closed",
+       266
+      ],
+      [
+       "In progress",
+       152
+      ],
+      [
+       "Untimely response",
+       32
+      ]
+     ],
+     "description": "Company response to consumer",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Timely response?",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "No",
+     "max_value": "Yes",
+     "examples": [
+      "Yes"
+     ],
+     "top_values": [
+      [
+       "Yes",
+       23048
+      ],
+      [
+       "No",
+       371
+      ]
+     ],
+     "description": "whether the response of the company is timely",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Consumer disputed?",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0428,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "No",
+     "max_value": "Yes",
+     "examples": [
+      "No",
+      "Yes"
+     ],
+     "top_values": [
+      [
+       "No",
+       17963
+      ],
+      [
+       "Yes",
+       4454
+      ]
+     ],
+     "description": "whether the consumer dispute about the response from the company.",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Complaint ID",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 23419,
+     "is_unique": true,
+     "min_value": "CR0000072",
+     "max_value": "CR2425940",
+     "examples": [
+      "CR0922485",
+      "CR0057298",
+      "CR0043811",
+      "CR0035411",
+      "CR0030939"
+     ],
+     "top_values": [],
+     "description": "id number indicating which complaint",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Client_ID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5284,
+     "is_unique": false,
+     "min_value": "C00000001",
+     "max_value": "C00013998",
+     "examples": [
+      "C00001925",
+      "C00003141",
+      "C00000297",
+      "C00004275",
+      "C00000900"
+     ],
+     "top_values": [],
+     "description": "Client ID. id number indicating which client",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Complaint ID",
+    "Client_ID"
+   ],
+   "sample_rows": [
+    {
+     "Date received": "2014-07-03",
+     "Product": "Bank account or service",
+     "Sub-product": "Checking account",
+     "Issue": "Deposits and withdrawals",
+     "Sub-issue": null,
+     "Consumer complaint narrative": null,
+     "Tags": null,
+     "Consumer consent provided?": "N/A",
+     "Submitted via": "Email",
+     "Date sent to company": "2014-07-09",
+     "Company response to consumer": "Closed with explanation",
+     "Timely response?": "Yes",
+     "Consumer disputed?": "No",
+     "Complaint ID": "CR0922485",
+     "Client_ID": "C00001925"
+    },
+    {
+     "Date received": "2012-04-12",
+     "Product": "Bank account or service",
+     "Sub-product": "Savings account",
+     "Issue": "Account opening, closing, or management",
+     "Sub-issue": null,
+     "Consumer complaint narrative": null,
+     "Tags": null,
+     "Consumer consent provided?": "N/A",
+     "Submitted via": "Email",
+     "Date sent to company": "2012-04-13",
+     "Company response to consumer": "Closed with relief",
+     "Timely response?": "Yes",
+     "Consumer disputed?": "No",
+     "Complaint ID": "CR0057298",
+     "Client_ID": "C00003141"
+    },
+    {
+     "Date received": "2012-04-03",
+     "Product": "Bank account or service",
+     "Sub-product": "Checking account",
+     "Issue": "Account opening, closing, or management",
+     "Sub-issue": null,
+     "Consumer complaint narrative": null,
+     "Tags": null,
+     "Consumer consent provided?": "N/A",
+     "Submitted via": "Email",
+     "Date sent to company": "2012-04-03",
+     "Company response to consumer": "Closed without relief",
+     "Timely response?": "Yes",
+     "Consumer disputed?": "No",
+     "Complaint ID": "CR0043811",
+     "Client_ID": "C00000297"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "reviews",
+   "row_count": 377,
+   "stats_rows": 377,
+   "columns": [
+    {
+     "name": "Date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 377,
+     "is_unique": true,
+     "min_value": "2013-02-04",
+     "max_value": "2019-12-19",
+     "examples": [
+      "2017-10-04",
+      "2017-10-02",
+      "2017-08-21",
+      "2017-12-17",
+      "2016-05-27"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Stars",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 5,
+     "examples": [
+      5,
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       5,
+       316
+      ],
+      [
+       1,
+       59
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Reviews",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.8806,
+     "distinct_count": 45,
+     "is_unique": true,
+     "min_value": "\nNew Federal regulations made this a tedious and time consum...",
+     "max_value": "usten Butler brought the humanity and connection to what can...",
+     "examples": [
+      "Great job, Eagle National! Each person was professional and ...",
+      "Matthew Richardson is professional and helpful. He helped us...",
+      "We had a past experience with Eagle National Mortgage and wo...",
+      "We have been dealing with Brad Thomka from the beginning of ...",
+      "I can't express how grateful I am for the support that Zach ..."
+     ],
+     "top_values": [
+      [
+       "usten Butler brought the humanity and connection to what can...",
+       1
+      ],
+      [
+       "Working with Michelle and Eagle went really well for me. As ...",
+       1
+      ],
+      [
+       "Working with Jon was such an amazing experience! From the st...",
+       1
+      ],
+      [
+       "What a horrible experience. We have excellent credit, plenty...",
+       1
+      ],
+      [
+       "We received offers from multiple banks after our lending tre...",
+       1
+      ],
+      [
+       "We have been dealing with Brad Thomka from the beginning of ...",
+       1
+      ],
+      [
+       "We had a past experience with Eagle National Mortgage and wo...",
+       1
+      ],
+      [
+       "This was the worst experience ever. It was like they had nev...",
+       1
+      ],
+      [
+       "This loan started off quite well. Our rep, Donna, was friend...",
+       1
+      ],
+      [
+       "This Lender contacted my previous phone number which I did n...",
+       1
+      ],
+      [
+       "They were not upfront. Learn from my mistake... I trusted th...",
+       1
+      ],
+      [
+       "The salesperson kept pushing a cash out refi on me even when...",
+       1
+      ],
+      [
+       "The NASB team went above and beyond for me and my family and...",
+       1
+      ],
+      [
+       "Rob was very helpful in getting this loan closed. Few issues...",
+       1
+      ],
+      [
+       "Peter and his team were great to work with. They were profes...",
+       1
+      ],
+      [
+       "Patrick answered all my questions by email immediately and h...",
+       1
+      ],
+      [
+       "Our loan officer was happy to communicate before we committe...",
+       1
+      ],
+      [
+       "NASB was amazing to work with! The pre-approval process was ...",
+       1
+      ],
+      [
+       "Matthew Richardson is professional and helpful. He helped us...",
+       1
+      ],
+      [
+       "Kory was by far the best loan officer I have ever worked wit...",
+       1
+      ],
+      [
+       "Jon Barrett was a great asset to my husband and I. He made o...",
+       1
+      ],
+      [
+       "Jay was easy to get a hold of if I had any questions so that...",
+       1
+      ],
+      [
+       "Initially, the Mortgage Broker was very friendly and asserti...",
+       1
+      ],
+      [
+       "If I had a million Friends I would recommend all of them to ...",
+       1
+      ],
+      [
+       "I worked with Kory and Carla at NASB. They were a superb tea...",
+       1
+      ],
+      [
+       "I was working with a loan consultant from NASB and she told ...",
+       1
+      ],
+      [
+       "I never write reviews but had to this time to prevent anyone...",
+       1
+      ],
+      [
+       "I loved working with this group of people! They laughed with...",
+       1
+      ],
+      [
+       "I had the pleasure of working with Eagle National in Septemb...",
+       1
+      ],
+      [
+       "I can't express how grateful I am for the support that Zach ...",
+       1
+      ],
+      [
+       "Great web interface for both the loan application and docume...",
+       1
+      ],
+      [
+       "Great job, Eagle National! Each person was professional and ...",
+       1
+      ],
+      [
+       "Expert loan officer, well versed in VA and the financial imp...",
+       1
+      ],
+      [
+       "Dallas Goodlet and his entire team are deserving a special t...",
+       1
+      ],
+      [
+       "Comments: To begin my wife and I were at the point of signin...",
+       1
+      ],
+      [
+       "Chaz was fantastic throughout the entire lending processs. I...",
+       1
+      ],
+      [
+       "Best loan officer I could have hoped for! Jeff exceeded my e...",
+       1
+      ],
+      [
+       "Austen has been awsome in every step of the way with my refi...",
+       1
+      ],
+      [
+       "A good rate but a very frustrating process, constant delays,...",
+       1
+      ],
+      [
+       "\nVery receptive\nThorough\nQuick to close\n        ",
+       1
+      ],
+      [
+       "\nVery informative, and responsive\n        ",
+       1
+      ],
+      [
+       "\nTim Pope was very informative throughout the process from b...",
+       1
+      ],
+      [
+       "\nShe, in every way, is a wonderful person, business woman an...",
+       1
+      ],
+      [
+       "\nRitu was a pleasure to work with. She was positive, energet...",
+       1
+      ],
+      [
+       "\nNew Federal regulations made this a tedious and time consum...",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "88% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "Product",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Eagle Capital",
+     "max_value": "Eagle National Mortgage",
+     "examples": [
+      "Eagle National Mortgage",
+      "Eagle National Bank",
+      "Eagle Capital"
+     ],
+     "top_values": [
+      [
+       "Eagle National Mortgage",
+       212
+      ],
+      [
+       "Eagle National Bank",
+       153
+      ],
+      [
+       "Eagle Capital",
+       12
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "district_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 77,
+     "examples": [
+      65,
+      66,
+      23,
+      55,
+      24
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Date"
+   ],
+   "sample_rows": [
+    {
+     "Date": "2017-10-04",
+     "Stars": 5,
+     "Reviews": "Great job, Eagle National! Each person was professional and ...",
+     "Product": "Eagle National Mortgage",
+     "district_id": 65
+    },
+    {
+     "Date": "2017-10-02",
+     "Stars": 5,
+     "Reviews": "Matthew Richardson is professional and helpful. He helped us...",
+     "Product": "Eagle National Mortgage",
+     "district_id": 66
+    },
+    {
+     "Date": "2017-08-21",
+     "Stars": 5,
+     "Reviews": "We had a past experience with Eagle National Mortgage and wo...",
+     "Product": "Eagle National Mortgage",
+     "district_id": 23
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "state",
+   "row_count": 48,
+   "stats_rows": 48,
+   "columns": [
+    {
+     "name": "StateCode",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 48,
+     "is_unique": true,
+     "min_value": "AL",
+     "max_value": "WY",
+     "examples": [
+      "AL",
+      "AR",
+      "AZ",
+      "CA",
+      "CO"
+     ],
+     "top_values": [
+      [
+       "WY",
+       1
+      ],
+      [
+       "WI",
+       1
+      ],
+      [
+       "WA",
+       1
+      ],
+      [
+       "VA",
+       1
+      ],
+      [
+       "UT",
+       1
+      ],
+      [
+       "TX",
+       1
+      ],
+      [
+       "TN",
+       1
+      ],
+      [
+       "SD",
+       1
+      ],
+      [
+       "SC",
+       1
+      ],
+      [
+       "RI",
+       1
+      ],
+      [
+       "PA",
+       1
+      ],
+      [
+       "OR",
+       1
+      ],
+      [
+       "OK",
+       1
+      ],
+      [
+       "OH",
+       1
+      ],
+      [
+       "NY",
+       1
+      ],
+      [
+       "NV",
+       1
+      ],
+      [
+       "NM",
+       1
+      ],
+      [
+       "NJ",
+       1
+      ],
+      [
+       "NH",
+       1
+      ],
+      [
+       "NE",
+       1
+      ],
+      [
+       "ND",
+       1
+      ],
+      [
+       "NC",
+       1
+      ],
+      [
+       "MT",
+       1
+      ],
+      [
+       "MS",
+       1
+      ],
+      [
+       "MO",
+       1
+      ],
+      [
+       "MN",
+       1
+      ],
+      [
+       "MI",
+       1
+      ],
+      [
+       "ME",
+       1
+      ],
+      [
+       "MD",
+       1
+      ],
+      [
+       "MA",
+       1
+      ],
+      [
+       "LA",
+       1
+      ],
+      [
+       "KY",
+       1
+      ],
+      [
+       "KS",
+       1
+      ],
+      [
+       "IN",
+       1
+      ],
+      [
+       "IL",
+       1
+      ],
+      [
+       "ID",
+       1
+      ],
+      [
+       "IA",
+       1
+      ],
+      [
+       "HI",
+       1
+      ],
+      [
+       "GA",
+       1
+      ],
+      [
+       "FL",
+       1
+      ],
+      [
+       "DE",
+       1
+      ],
+      [
+       "DC",
+       1
+      ],
+      [
+       "CT",
+       1
+      ],
+      [
+       "CO",
+       1
+      ],
+      [
+       "CA",
+       1
+      ],
+      [
+       "AZ",
+       1
+      ],
+      [
+       "AR",
+       1
+      ],
+      [
+       "AL",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "State",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 48,
+     "is_unique": true,
+     "min_value": "Alabama",
+     "max_value": "Wyoming",
+     "examples": [
+      "Alabama",
+      "Arkansas",
+      "Arizona",
+      "California",
+      "Colorado"
+     ],
+     "top_values": [
+      [
+       "Wyoming",
+       1
+      ],
+      [
+       "Wisconsin",
+       1
+      ],
+      [
+       "Washington",
+       1
+      ],
+      [
+       "Virginia",
+       1
+      ],
+      [
+       "Utah",
+       1
+      ],
+      [
+       "Texas",
+       1
+      ],
+      [
+       "Tennessee",
+       1
+      ],
+      [
+       "South Dakota",
+       1
+      ],
+      [
+       "South Carolina",
+       1
+      ],
+      [
+       "Rhode Island",
+       1
+      ],
+      [
+       "Pennsylvania",
+       1
+      ],
+      [
+       "Oregon",
+       1
+      ],
+      [
+       "Oklahoma",
+       1
+      ],
+      [
+       "Ohio",
+       1
+      ],
+      [
+       "North Dakota",
+       1
+      ],
+      [
+       "North Carolina",
+       1
+      ],
+      [
+       "New York",
+       1
+      ],
+      [
+       "New Mexico",
+       1
+      ],
+      [
+       "New Jersey",
+       1
+      ],
+      [
+       "New Hampshire",
+       1
+      ],
+      [
+       "Nevada",
+       1
+      ],
+      [
+       "Nebraska",
+       1
+      ],
+      [
+       "Montana",
+       1
+      ],
+      [
+       "Missouri",
+       1
+      ],
+      [
+       "Mississippi",
+       1
+      ],
+      [
+       "Minnesota",
+       1
+      ],
+      [
+       "Michigan",
+       1
+      ],
+      [
+       "Massachusetts",
+       1
+      ],
+      [
+       "Maryland",
+       1
+      ],
+      [
+       "Maine",
+       1
+      ],
+      [
+       "Louisiana",
+       1
+      ],
+      [
+       "Kentucky",
+       1
+      ],
+      [
+       "Kansas",
+       1
+      ],
+      [
+       "Iowa",
+       1
+      ],
+      [
+       "Indiana",
+       1
+      ],
+      [
+       "Illinois",
+       1
+      ],
+      [
+       "Idaho",
+       1
+      ],
+      [
+       "Hawaii",
+       1
+      ],
+      [
+       "Georgia",
+       1
+      ],
+      [
+       "Florida",
+       1
+      ],
+      [
+       "District of Columbia",
+       1
+      ],
+      [
+       "Delaware",
+       1
+      ],
+      [
+       "Connecticut",
+       1
+      ],
+      [
+       "Colorado",
+       1
+      ],
+      [
+       "California",
+       1
+      ],
+      [
+       "Arkansas",
+       1
+      ],
+      [
+       "Arizona",
+       1
+      ],
+      [
+       "Alabama",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "Midwest",
+     "max_value": "West",
+     "examples": [
+      "South",
+      "West",
+      "Northeast",
+      "Midwest"
+     ],
+     "top_values": [
+      [
+       "South",
+       16
+      ],
+      [
+       "West",
+       12
+      ],
+      [
+       "Midwest",
+       12
+      ],
+      [
+       "Northeast",
+       8
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "StateCode"
+   ],
+   "sample_rows": [
+    {
+     "StateCode": "AL",
+     "State": "Alabama",
+     "Region": "South"
+    },
+    {
+     "StateCode": "AR",
+     "State": "Arkansas",
+     "Region": "South"
+    },
+    {
+     "StateCode": "AZ",
+     "State": "Arizona",
+     "Region": "West"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "callcenterlogs",
+   "from_column": "rand client",
+   "to_table": "client",
+   "to_column": "client_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "client",
+   "from_column": "district_id",
+   "to_table": "district",
+   "to_column": "district_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "district",
+   "from_column": "state_abbrev",
+   "to_table": "state",
+   "to_column": "StateCode",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "events",
+   "from_column": "Client_ID",
+   "to_table": "client",
+   "to_column": "client_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "events",
+   "from_column": "Complaint ID",
+   "to_table": "callcenterlogs",
+   "to_column": "Complaint ID",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "reviews",
+   "from_column": "district_id",
+   "to_table": "district",
+   "to_column": "district_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

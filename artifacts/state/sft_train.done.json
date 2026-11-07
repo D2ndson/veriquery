@@ -1,0 +1,26 @@
+{
+ "stage": "sft_train",
+ "seconds": 2133.8,
+ "finished": "2026-11-06 20:35:17",
+ "info": {
+  "kind": "sft",
+  "base_model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+  "method": "lora",
+  "r": 32,
+  "alpha": 64,
+  "lr": 0.0002,
+  "epochs": 1,
+  "micro_bs": 1,
+  "accum": 16,
+  "max_len": 4096,
+  "load_4bit": false,
+  "dropped_for_length": 411,
+  "train_file": "/workspace/veriquery-final/artifacts/sft/sft_train.jsonl",
+  "steps": 210,
+  "final_loss": 0.07403473470185418,
+  "val_loss": 0.053407442625029944,
+  "train_seconds": 2051.602325439453,
+  "n_examples": 3374,
+  "finished": "2026-11-06 20:35:17"
+ }
+}

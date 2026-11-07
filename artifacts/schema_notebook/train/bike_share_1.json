@@ -1,0 +1,2837 @@
+{
+ "db_id": "bike_share_1",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/bike_share_1/bike_share_1.sqlite",
+ "fingerprint": "5209406464-1793993033339583896-v1.0",
+ "created_at": "2026-11-06T19:25:04+00:00",
+ "profile_seconds": 16.003,
+ "tables": [
+  {
+   "name": "station",
+   "row_count": 70,
+   "stats_rows": 70,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 70,
+     "is_unique": true,
+     "min_value": 2,
+     "max_value": 84,
+     "examples": [
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "top_values": [],
+     "description": "unique ID for each station",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 70,
+     "is_unique": true,
+     "min_value": "2nd at Folsom",
+     "max_value": "Yerba Buena Center of the Arts (3rd @ Howard)",
+     "examples": [
+      "San Jose Diridon Caltrain Station",
+      "San Jose Civic Center",
+      "Santa Clara at Almaden",
+      "Adobe on Almaden",
+      "San Pedro Square"
+     ],
+     "top_values": [],
+     "description": "Station name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lat",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 70,
+     "is_unique": true,
+     "min_value": 37.329732,
+     "max_value": 37.80477,
+     "examples": [
+      37.329732,
+      37.330698,
+      37.333988,
+      37.331415,
+      37.336721000000004
+     ],
+     "top_values": [],
+     "description": "latitude",
+     "value_description": "commonsense evidence:\nCan represent the location of the station when combined with longitude.",
+     "notes": []
+    },
+    {
+     "name": "long",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 70,
+     "is_unique": true,
+     "min_value": -122.418954,
+     "max_value": -121.877349,
+     "examples": [
+      -121.90178200000001,
+      -121.888979,
+      -121.894902,
+      -121.8932,
+      -121.894074
+     ],
+     "top_values": [],
+     "description": "longitude",
+     "value_description": "commonsense evidence:\nCan represent the location of the station when combined with \nlatitude.",
+     "notes": []
+    },
+    {
+     "name": "dock_count",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 11,
+     "max_value": 27,
+     "examples": [
+      27,
+      15,
+      11,
+      19,
+      25
+     ],
+     "top_values": [
+      [
+       15,
+       34
+      ],
+      [
+       19,
+       18
+      ],
+      [
+       23,
+       9
+      ],
+      [
+       27,
+       4
+      ],
+      [
+       11,
+       4
+      ],
+      [
+       25,
+       1
+      ]
+     ],
+     "description": "dock count. number of bikes the station can hold",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "Mountain View",
+     "max_value": "San Jose",
+     "examples": [
+      "San Jose",
+      "Redwood City",
+      "Mountain View",
+      "Palo Alto",
+      "San Francisco"
+     ],
+     "top_values": [
+      [
+       "San Francisco",
+       35
+      ],
+      [
+       "San Jose",
+       16
+      ],
+      [
+       "Redwood City",
+       7
+      ],
+      [
+       "Mountain View",
+       7
+      ],
+      [
+       "Palo Alto",
+       5
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "installation_date",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": "1/22/2014",
+     "max_value": "8/7/2013",
+     "examples": [
+      "8/6/2013",
+      "8/5/2013",
+      "8/7/2013",
+      "8/12/2013",
+      "8/15/2013"
+     ],
+     "top_values": [
+      [
+       "8/23/2013",
+       7
+      ],
+      [
+       "8/20/2013",
+       6
+      ],
+      [
+       "8/19/2013",
+       6
+      ],
+      [
+       "8/6/2013",
+       5
+      ],
+      [
+       "8/5/2013",
+       5
+      ],
+      [
+       "8/25/2013",
+       5
+      ],
+      [
+       "8/22/2013",
+       5
+      ],
+      [
+       "8/21/2013",
+       5
+      ],
+      [
+       "8/15/2013",
+       5
+      ],
+      [
+       "8/7/2013",
+       4
+      ],
+      [
+       "8/14/2013",
+       4
+      ],
+      [
+       "8/12/2013",
+       4
+      ],
+      [
+       "8/16/2013",
+       3
+      ],
+      [
+       "12/31/2013",
+       3
+      ],
+      [
+       "4/9/2014",
+       1
+      ],
+      [
+       "2/20/2014",
+       1
+      ],
+      [
+       "1/22/2014",
+       1
+      ]
+     ],
+     "description": "installation date",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 2,
+     "name": "San Jose Diridon Caltrain Station",
+     "lat": 37.329732,
+     "long": -121.90178200000001,
+     "dock_count": 27,
+     "city": "San Jose",
+     "installation_date": "8/6/2013"
+    },
+    {
+     "id": 3,
+     "name": "San Jose Civic Center",
+     "lat": 37.330698,
+     "long": -121.888979,
+     "dock_count": 15,
+     "city": "San Jose",
+     "installation_date": "8/5/2013"
+    },
+    {
+     "id": 4,
+     "name": "Santa Clara at Almaden",
+     "lat": 37.333988,
+     "long": -121.894902,
+     "dock_count": 11,
+     "city": "San Jose",
+     "installation_date": "8/6/2013"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "status",
+   "row_count": 71984434,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "station_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 2,
+     "examples": [
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       200000
+      ]
+     ],
+     "description": "station id",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "bikes_available",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 25,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 24,
+     "examples": [
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       14,
+       23671
+      ],
+      [
+       15,
+       23445
+      ],
+      [
+       13,
+       21631
+      ],
+      [
+       16,
+       21353
+      ],
+      [
+       12,
+       17646
+      ],
+      [
+       17,
+       16029
+      ],
+      [
+       11,
+       15188
+      ],
+      [
+       18,
+       9082
+      ],
+      [
+       19,
+       8790
+      ],
+      [
+       9,
+       7236
+      ],
+      [
+       10,
+       7125
+      ],
+      [
+       8,
+       6171
+      ],
+      [
+       20,
+       4834
+      ],
+      [
+       7,
+       3767
+      ],
+      [
+       6,
+       3211
+      ],
+      [
+       21,
+       3158
+      ],
+      [
+       5,
+       1929
+      ],
+      [
+       3,
+       1880
+      ],
+      [
+       22,
+       1249
+      ],
+      [
+       4,
+       1191
+      ],
+      [
+       2,
+       865
+      ],
+      [
+       1,
+       305
+      ],
+      [
+       23,
+       166
+      ],
+      [
+       0,
+       74
+      ],
+      [
+       24,
+       4
+      ]
+     ],
+     "description": "number of available bikes",
+     "value_description": "commonsense evidence:\n0 means no bike can be borrowed.",
+     "notes": []
+    },
+    {
+     "name": "docks_available",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 25,
+     "is_unique": false,
+     "min_value": 3,
+     "max_value": 27,
+     "examples": [
+      25,
+      24
+     ],
+     "top_values": [
+      [
+       13,
+       23738
+      ],
+      [
+       12,
+       23378
+      ],
+      [
+       14,
+       21623
+      ],
+      [
+       11,
+       21446
+      ],
+      [
+       15,
+       17640
+      ],
+      [
+       10,
+       16018
+      ],
+      [
+       16,
+       15229
+      ],
+      [
+       9,
+       9088
+      ],
+      [
+       8,
+       8795
+      ],
+      [
+       17,
+       7192
+      ],
+      [
+       18,
+       7173
+      ],
+      [
+       19,
+       6442
+      ],
+      [
+       7,
+       4834
+      ],
+      [
+       20,
+       3619
+      ],
+      [
+       6,
+       3158
+      ],
+      [
+       21,
+       2973
+      ],
+      [
+       24,
+       1990
+      ],
+      [
+       22,
+       1927
+      ],
+      [
+       5,
+       1249
+      ],
+      [
+       23,
+       1185
+      ],
+      [
+       25,
+       754
+      ],
+      [
+       26,
+       305
+      ],
+      [
+       4,
+       166
+      ],
+      [
+       27,
+       74
+      ],
+      [
+       3,
+       4
+      ]
+     ],
+     "description": "number of available docks",
+     "value_description": "commonsense evidence:\n0 means no bike can be returned to this station.",
+     "notes": []
+    },
+    {
+     "name": "time",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": "2013/08/29 12:06:01",
+     "max_value": "2014/01/17 22:07:02",
+     "examples": [
+      "2013/08/29 12:06:01",
+      "2013/08/29 12:07:01",
+      "2013/08/29 12:08:01",
+      "2013/08/29 12:09:01",
+      "2013/08/29 12:10:01"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "station_id": 2,
+     "bikes_available": 2,
+     "docks_available": 25,
+     "time": "2013/08/29 12:06:01"
+    },
+    {
+     "station_id": 2,
+     "bikes_available": 2,
+     "docks_available": 25,
+     "time": "2013/08/29 12:07:01"
+    },
+    {
+     "station_id": 2,
+     "bikes_available": 2,
+     "docks_available": 25,
+     "time": "2013/08/29 12:08:01"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 71,984,434 rows",
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "trip",
+   "row_count": 658901,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 4069,
+     "max_value": 275962,
+     "examples": [
+      4069,
+      4073,
+      4074,
+      4075,
+      4076
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "duration",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9188,
+     "is_unique": false,
+     "min_value": 60,
+     "max_value": 722236,
+     "examples": [
+      174,
+      1067,
+      1131,
+      1117,
+      1118
+     ],
+     "top_values": [],
+     "description": "The duration of the trip in seconds.",
+     "value_description": "commonsense evidence:\nduration = end_date - start_date",
+     "notes": []
+    },
+    {
+     "name": "start_date",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 118742,
+     "is_unique": false,
+     "min_value": "1/1/2014 0:14",
+     "max_value": "9/9/2013 9:59",
+     "examples": [
+      "8/29/2013 9:08",
+      "8/29/2013 9:24",
+      "8/29/2013 9:25",
+      "8/29/2013 9:31",
+      "8/29/2013 9:35"
+     ],
+     "top_values": [],
+     "description": "start date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "start_station_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 73,
+     "is_unique": false,
+     "min_value": "2nd at Folsom",
+     "max_value": "Yerba Buena Center of the Arts (3rd @ Howard)",
+     "examples": [
+      "2nd at South Park",
+      "South Van Ness at Market",
+      "Redwood City Caltrain Station",
+      "Mountain View City Hall",
+      "Commercial at Montgomery"
+     ],
+     "top_values": [],
+     "description": "start station name. The name of the start station",
+     "value_description": "commonsense evidence:\nIt represents the station name the bike borrowed from.",
+     "notes": []
+    },
+    {
+     "name": "start_station_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 70,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 84,
+     "examples": [
+      64,
+      66,
+      22,
+      27,
+      45
+     ],
+     "top_values": [],
+     "description": "start station id. The ID of the start station",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "end_date",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 117196,
+     "is_unique": false,
+     "min_value": "1/1/2014 0:21",
+     "max_value": "9/9/2013 9:57",
+     "examples": [
+      "8/29/2013 9:11",
+      "8/29/2013 9:42",
+      "8/29/2013 9:43",
+      "8/29/2013 10:34",
+      "8/29/2013 9:52"
+     ],
+     "top_values": [],
+     "description": "end date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "end_station_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 73,
+     "is_unique": false,
+     "min_value": "2nd at Folsom",
+     "max_value": "Yerba Buena Center of the Arts (3rd @ Howard)",
+     "examples": [
+      "2nd at South Park",
+      "San Francisco Caltrain 2 (330 Townsend)",
+      "Redwood City Caltrain Station",
+      "South Van Ness at Market",
+      "Mountain View City Hall"
+     ],
+     "top_values": [],
+     "description": "end station name. The name of the end station",
+     "value_description": "commonsense evidence:\nIt represents the station name the bike returned to.",
+     "notes": []
+    },
+    {
+     "name": "end_station_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 70,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 84,
+     "examples": [
+      64,
+      69,
+      22,
+      66,
+      27
+     ],
+     "top_values": [],
+     "description": "end station id. The ID of the end station",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "bike_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 696,
+     "is_unique": false,
+     "min_value": 9,
+     "max_value": 717,
+     "examples": [
+      288,
+      321,
+      317,
+      316,
+      322
+     ],
+     "top_values": [],
+     "description": "bike id. The ID of the bike",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "subscription_type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "Customer",
+     "max_value": "Subscriber",
+     "examples": [
+      "Subscriber",
+      "Customer"
+     ],
+     "top_values": [
+      [
+       "Subscriber",
+       161753
+      ],
+      [
+       "Customer",
+       38247
+      ]
+     ],
+     "description": "subscription type",
+     "value_description": "Allowed input: Subscriber, Customer.",
+     "notes": []
+    },
+    {
+     "name": "zip_code",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0309,
+     "distinct_count": 3647,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 5107721421,
+     "examples": [
+      94114,
+      94703,
+      94115,
+      94122,
+      94597
+     ],
+     "top_values": [],
+     "description": "zip code",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 4069,
+     "duration": 174,
+     "start_date": "8/29/2013 9:08",
+     "start_station_name": "2nd at South Park",
+     "start_station_id": 64,
+     "end_date": "8/29/2013 9:11",
+     "end_station_name": "2nd at South Park",
+     "end_station_id": 64,
+     "bike_id": 288,
+     "subscription_type": "Subscriber",
+     "zip_code": 94114
+    },
+    {
+     "id": 4073,
+     "duration": 1067,
+     "start_date": "8/29/2013 9:24",
+     "start_station_name": "South Van Ness at Market",
+     "start_station_id": 66,
+     "end_date": "8/29/2013 9:42",
+     "end_station_name": "San Francisco Caltrain 2 (330 Townsend)",
+     "end_station_id": 69,
+     "bike_id": 321,
+     "subscription_type": "Subscriber",
+     "zip_code": 94703
+    },
+    {
+     "id": 4074,
+     "duration": 1131,
+     "start_date": "8/29/2013 9:24",
+     "start_station_name": "South Van Ness at Market",
+     "start_station_id": 66,
+     "end_date": "8/29/2013 9:43",
+     "end_station_name": "San Francisco Caltrain 2 (330 Townsend)",
+     "end_station_id": 69,
+     "bike_id": 317,
+     "subscription_type": "Subscriber",
+     "zip_code": 94115
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 658,901 rows"
+   ]
+  },
+  {
+   "name": "weather",
+   "row_count": 3665,
+   "stats_rows": 3665,
+   "columns": [
+    {
+     "name": "date",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 733,
+     "is_unique": false,
+     "min_value": "1/1/2014",
+     "max_value": "9/9/2014",
+     "examples": [
+      "8/29/2013",
+      "8/30/2013",
+      "8/31/2013",
+      "9/1/2013",
+      "9/2/2013"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "max_temperature_f",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0011,
+     "distinct_count": 55,
+     "is_unique": false,
+     "min_value": 44,
+     "max_value": 102,
+     "examples": [
+      74,
+      78,
+      71,
+      75,
+      73
+     ],
+     "top_values": [],
+     "description": "max temperature in Fahrenheit degree",
+     "value_description": "commonsense evidence:\nIt represents the hottest temperature.",
+     "notes": []
+    },
+    {
+     "name": "mean_temperature_f",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0011,
+     "distinct_count": 46,
+     "is_unique": false,
+     "min_value": 38,
+     "max_value": 84,
+     "examples": [
+      68,
+      69,
+      64,
+      66,
+      67
+     ],
+     "top_values": [
+      [
+       60,
+       276
+      ],
+      [
+       68,
+       234
+      ],
+      [
+       58,
+       220
+      ],
+      [
+       62,
+       196
+      ],
+      [
+       70,
+       193
+      ],
+      [
+       56,
+       180
+      ],
+      [
+       66,
+       176
+      ],
+      [
+       57,
+       159
+      ],
+      [
+       65,
+       146
+      ],
+      [
+       55,
+       137
+      ],
+      [
+       64,
+       136
+      ],
+      [
+       63,
+       136
+      ],
+      [
+       54,
+       134
+      ],
+      [
+       67,
+       132
+      ],
+      [
+       59,
+       131
+      ],
+      [
+       61,
+       126
+      ],
+      [
+       69,
+       123
+      ],
+      [
+       52,
+       107
+      ],
+      [
+       53,
+       97
+      ],
+      [
+       71,
+       94
+      ],
+      [
+       72,
+       73
+      ],
+      [
+       50,
+       73
+      ],
+      [
+       51,
+       45
+      ],
+      [
+       74,
+       43
+      ],
+      [
+       48,
+       37
+      ],
+      [
+       73,
+       32
+      ],
+      [
+       49,
+       31
+      ],
+      [
+       47,
+       27
+      ],
+      [
+       76,
+       26
+      ],
+      [
+       75,
+       24
+      ],
+      [
+       46,
+       17
+      ],
+      [
+       45,
+       14
+      ],
+      [
+       44,
+       13
+      ],
+      [
+       42,
+       12
+      ],
+      [
+       77,
+       11
+      ],
+      [
+       78,
+       10
+      ],
+      [
+       43,
+       10
+      ],
+      [
+       41,
+       8
+      ],
+      [
+       38,
+       6
+      ],
+      [
+       80,
+       5
+      ],
+      [
+       82,
+       3
+      ],
+      [
+       79,
+       2
+      ],
+      [
+       40,
+       2
+      ],
+      [
+       39,
+       2
+      ],
+      [
+       84,
+       1
+      ],
+      [
+       81,
+       1
+      ]
+     ],
+     "description": "mean temperature in Fahrenheit degree",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "min_temperature_f",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0011,
+     "distinct_count": 45,
+     "is_unique": false,
+     "min_value": 25,
+     "max_value": 75,
+     "examples": [
+      61,
+      60,
+      57,
+      58,
+      62
+     ],
+     "top_values": [
+      [
+       53,
+       272
+      ],
+      [
+       55,
+       263
+      ],
+      [
+       50,
+       234
+      ],
+      [
+       57,
+       222
+      ],
+      [
+       59,
+       208
+      ],
+      [
+       48,
+       189
+      ],
+      [
+       60,
+       185
+      ],
+      [
+       62,
+       182
+      ],
+      [
+       51,
+       171
+      ],
+      [
+       46,
+       159
+      ],
+      [
+       44,
+       145
+      ],
+      [
+       54,
+       130
+      ],
+      [
+       52,
+       120
+      ],
+      [
+       61,
+       99
+      ],
+      [
+       58,
+       94
+      ],
+      [
+       56,
+       94
+      ],
+      [
+       47,
+       92
+      ],
+      [
+       49,
+       78
+      ],
+      [
+       41,
+       78
+      ],
+      [
+       42,
+       76
+      ],
+      [
+       64,
+       75
+      ],
+      [
+       45,
+       68
+      ],
+      [
+       43,
+       67
+      ],
+      [
+       39,
+       59
+      ],
+      [
+       63,
+       46
+      ],
+      [
+       40,
+       38
+      ],
+      [
+       37,
+       37
+      ],
+      [
+       38,
+       36
+      ],
+      [
+       36,
+       25
+      ],
+      [
+       66,
+       22
+      ],
+      [
+       35,
+       22
+      ],
+      [
+       34,
+       16
+      ],
+      [
+       32,
+       15
+      ],
+      [
+       31,
+       9
+      ],
+      [
+       33,
+       8
+      ],
+      [
+       68,
+       6
+      ],
+      [
+       29,
+       6
+      ],
+      [
+       65,
+       5
+      ],
+      [
+       28,
+       3
+      ],
+      [
+       30,
+       2
+      ],
+      [
+       75,
+       1
+      ],
+      [
+       73,
+       1
+      ],
+      [
+       71,
+       1
+      ],
+      [
+       69,
+       1
+      ],
+      [
+       25,
+       1
+      ]
+     ],
+     "description": "min temperature in Fahrenheit degree",
+     "value_description": "commonsense evidence:\nIt represents the coldest temperature.",
+     "notes": []
+    },
+    {
+     "name": "max_dew_point_f",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0147,
+     "distinct_count": 45,
+     "is_unique": false,
+     "min_value": 20,
+     "max_value": 68,
+     "examples": [
+      61,
+      57,
+      60,
+      59,
+      64
+     ],
+     "top_values": [
+      [
+       59,
+       285
+      ],
+      [
+       57,
+       282
+      ],
+      [
+       54,
+       275
+      ],
+      [
+       50,
+       255
+      ],
+      [
+       55,
+       254
+      ],
+      [
+       52,
+       249
+      ],
+      [
+       61,
+       188
+      ],
+      [
+       48,
+       172
+      ],
+      [
+       63,
+       144
+      ],
+      [
+       58,
+       139
+      ],
+      [
+       51,
+       127
+      ],
+      [
+       56,
+       119
+      ],
+      [
+       46,
+       119
+      ],
+      [
+       53,
+       117
+      ],
+      [
+       45,
+       108
+      ],
+      [
+       49,
+       101
+      ],
+      [
+       60,
+       97
+      ],
+      [
+       64,
+       81
+      ],
+      [
+       47,
+       81
+      ],
+      [
+       44,
+       56
+      ],
+      [
+       43,
+       50
+      ],
+      [
+       62,
+       41
+      ],
+      [
+       41,
+       40
+      ],
+      [
+       42,
+       35
+      ],
+      [
+       66,
+       21
+      ],
+      [
+       40,
+       20
+      ],
+      [
+       39,
+       18
+      ],
+      [
+       37,
+       18
+      ],
+      [
+       38,
+       17
+      ],
+      [
+       36,
+       15
+      ],
+      [
+       35,
+       11
+      ],
+      [
+       34,
+       11
+      ],
+      [
+       31,
+       10
+      ],
+      [
+       65,
+       8
+      ],
+      [
+       68,
+       7
+      ],
+      [
+       32,
+       7
+      ],
+      [
+       30,
+       7
+      ],
+      [
+       28,
+       7
+      ],
+      [
+       33,
+       5
+      ],
+      [
+       25,
+       4
+      ],
+      [
+       27,
+       3
+      ],
+      [
+       29,
+       2
+      ],
+      [
+       26,
+       2
+      ],
+      [
+       23,
+       2
+      ],
+      [
+       20,
+       1
+      ]
+     ],
+     "description": "max dew point in Fahrenheit degree",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "mean_dew_point_f",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0147,
+     "distinct_count": 51,
+     "is_unique": false,
+     "min_value": 13,
+     "max_value": 65,
+     "examples": [
+      58,
+      56,
+      60,
+      57,
+      51
+     ],
+     "top_values": [],
+     "description": "mean dew point in Fahrenheit degree",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "min_dew_point_f",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0147,
+     "distinct_count": 56,
+     "is_unique": false,
+     "min_value": 2,
+     "max_value": 63,
+     "examples": [
+      56,
+      54,
+      53,
+      58,
+      51
+     ],
+     "top_values": [],
+     "description": "min dew point in Fahrenheit degree",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "max_humidity",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0147,
+     "distinct_count": 60,
+     "is_unique": false,
+     "min_value": 24,
+     "max_value": 100,
+     "examples": [
+      93,
+      90,
+      87,
+      84,
+      86
+     ],
+     "top_values": [],
+     "description": "max humidity",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "mean_humidity",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0147,
+     "distinct_count": 72,
+     "is_unique": false,
+     "min_value": 24,
+     "max_value": 96,
+     "examples": [
+      75,
+      70,
+      68,
+      77,
+      65
+     ],
+     "top_values": [],
+     "description": "mean humidity",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "min_humidity",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0147,
+     "distinct_count": 77,
+     "is_unique": false,
+     "min_value": 4,
+     "max_value": 93,
+     "examples": [
+      57,
+      50,
+      49,
+      61,
+      46
+     ],
+     "top_values": [],
+     "description": "min humidity",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "max_sea_level_pressure_inches",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 82,
+     "is_unique": false,
+     "min_value": 29.5,
+     "max_value": 30.65,
+     "examples": [
+      30.07,
+      30.05,
+      30.0,
+      29.96,
+      29.97
+     ],
+     "top_values": [],
+     "description": "max sea level pressure in inches",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "mean_sea_level_pressure_inches",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 80,
+     "is_unique": false,
+     "min_value": 29.43,
+     "max_value": 30.41,
+     "examples": [
+      30.02,
+      30.0,
+      29.96,
+      29.93,
+      29.94
+     ],
+     "top_values": [],
+     "description": "mean sea level pressure in inches",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "min_sea_level_pressure_inches",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 89,
+     "is_unique": false,
+     "min_value": 28.98,
+     "max_value": 30.37,
+     "examples": [
+      29.97,
+      29.93,
+      29.92,
+      29.91,
+      29.9
+     ],
+     "top_values": [],
+     "description": "min sea level pressure in inches",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "max_visibility_miles",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0035,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": 5,
+     "max_value": 20,
+     "examples": [
+      10,
+      9
+     ],
+     "top_values": [
+      [
+       10,
+       3357
+      ],
+      [
+       20,
+       159
+      ],
+      [
+       15,
+       99
+      ],
+      [
+       9,
+       13
+      ],
+      [
+       7,
+       12
+      ],
+      [
+       8,
+       6
+      ],
+      [
+       6,
+       2
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       5,
+       1
+      ]
+     ],
+     "description": "max visibility in miles",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "mean_visibility_miles",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0035,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": 4,
+     "max_value": 20,
+     "examples": [
+      10,
+      9,
+      8,
+      5,
+      7
+     ],
+     "top_values": [
+      [
+       10,
+       2698
+      ],
+      [
+       9,
+       353
+      ],
+      [
+       8,
+       188
+      ],
+      [
+       7,
+       87
+      ],
+      [
+       6,
+       62
+      ],
+      [
+       11,
+       49
+      ],
+      [
+       12,
+       48
+      ],
+      [
+       14,
+       30
+      ],
+      [
+       13,
+       30
+      ],
+      [
+       15,
+       27
+      ],
+      [
+       5,
+       27
+      ],
+      [
+       16,
+       15
+      ],
+      [
+       4,
+       12
+      ],
+      [
+       18,
+       9
+      ],
+      [
+       17,
+       8
+      ],
+      [
+       20,
+       6
+      ],
+      [
+       19,
+       3
+      ]
+     ],
+     "description": "mean visibility in miles",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "min_visibility_miles",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0035,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 20,
+     "examples": [
+      10,
+      7,
+      6,
+      9,
+      2
+     ],
+     "top_values": [
+      [
+       10,
+       2137
+      ],
+      [
+       7,
+       303
+      ],
+      [
+       9,
+       214
+      ],
+      [
+       8,
+       200
+      ],
+      [
+       6,
+       182
+      ],
+      [
+       2,
+       166
+      ],
+      [
+       5,
+       134
+      ],
+      [
+       0,
+       93
+      ],
+      [
+       4,
+       91
+      ],
+      [
+       3,
+       55
+      ],
+      [
+       1,
+       55
+      ],
+      [
+       15,
+       16
+      ],
+      [
+       20,
+       6
+      ]
+     ],
+     "description": "min visibility in miles",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "max_wind_Speed_mph",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 49,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 128,
+     "examples": [
+      23,
+      29,
+      26,
+      25,
+      24
+     ],
+     "top_values": [
+      [
+       14,
+       382
+      ],
+      [
+       17,
+       333
+      ],
+      [
+       18,
+       316
+      ],
+      [
+       16,
+       276
+      ],
+      [
+       20,
+       274
+      ],
+      [
+       15,
+       265
+      ],
+      [
+       21,
+       250
+      ],
+      [
+       12,
+       230
+      ],
+      [
+       13,
+       219
+      ],
+      [
+       22,
+       164
+      ],
+      [
+       9,
+       153
+      ],
+      [
+       10,
+       140
+      ],
+      [
+       23,
+       121
+      ],
+      [
+       8,
+       121
+      ],
+      [
+       7,
+       105
+      ],
+      [
+       6,
+       65
+      ],
+      [
+       24,
+       49
+      ],
+      [
+       25,
+       39
+      ],
+      [
+       28,
+       34
+      ],
+      [
+       26,
+       21
+      ],
+      [
+       5,
+       20
+      ],
+      [
+       29,
+       17
+      ],
+      [
+       30,
+       11
+      ],
+      [
+       31,
+       9
+      ],
+      [
+       32,
+       6
+      ],
+      [
+       36,
+       5
+      ],
+      [
+       35,
+       4
+      ],
+      [
+       11,
+       4
+      ],
+      [
+       4,
+       4
+      ],
+      [
+       118,
+       2
+      ],
+      [
+       114,
+       2
+      ],
+      [
+       108,
+       2
+      ],
+      [
+       77,
+       2
+      ],
+      [
+       39,
+       2
+      ],
+      [
+       33,
+       2
+      ],
+      [
+       19,
+       2
+      ],
+      [
+       128,
+       1
+      ],
+      [
+       122,
+       1
+      ],
+      [
+       120,
+       1
+      ],
+      [
+       100,
+       1
+      ],
+      [
+       94,
+       1
+      ],
+      [
+       86,
+       1
+      ],
+      [
+       76,
+       1
+      ],
+      [
+       59,
+       1
+      ],
+      [
+       52,
+       1
+      ],
+      [
+       43,
+       1
+      ],
+      [
+       41,
+       1
+      ],
+      [
+       38,
+       1
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "description": "max wind Speed in mph",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "mean_wind_speed_mph",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 23,
+     "examples": [
+      11,
+      13,
+      15,
+      12,
+      19
+     ],
+     "top_values": [
+      [
+       6,
+       426
+      ],
+      [
+       7,
+       423
+      ],
+      [
+       5,
+       377
+      ],
+      [
+       8,
+       366
+      ],
+      [
+       4,
+       363
+      ],
+      [
+       3,
+       321
+      ],
+      [
+       2,
+       310
+      ],
+      [
+       9,
+       291
+      ],
+      [
+       1,
+       277
+      ],
+      [
+       10,
+       160
+      ],
+      [
+       11,
+       111
+      ],
+      [
+       12,
+       76
+      ],
+      [
+       13,
+       50
+      ],
+      [
+       0,
+       38
+      ],
+      [
+       14,
+       21
+      ],
+      [
+       15,
+       19
+      ],
+      [
+       16,
+       14
+      ],
+      [
+       17,
+       7
+      ],
+      [
+       19,
+       5
+      ],
+      [
+       22,
+       3
+      ],
+      [
+       18,
+       3
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ]
+     ],
+     "description": "mean wind Speed in mph",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "max_gust_speed_mph",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.2453,
+     "distinct_count": 45,
+     "is_unique": false,
+     "min_value": 6,
+     "max_value": 114,
+     "examples": [
+      28,
+      35,
+      31,
+      29,
+      30
+     ],
+     "top_values": [
+      [
+       23,
+       252
+      ],
+      [
+       22,
+       231
+      ],
+      [
+       21,
+       217
+      ],
+      [
+       24,
+       210
+      ],
+      [
+       20,
+       188
+      ],
+      [
+       25,
+       169
+      ],
+      [
+       28,
+       162
+      ],
+      [
+       18,
+       151
+      ],
+      [
+       14,
+       145
+      ],
+      [
+       17,
+       144
+      ],
+      [
+       26,
+       135
+      ],
+      [
+       16,
+       110
+      ],
+      [
+       15,
+       87
+      ],
+      [
+       29,
+       68
+      ],
+      [
+       13,
+       67
+      ],
+      [
+       12,
+       56
+      ],
+      [
+       10,
+       54
+      ],
+      [
+       30,
+       46
+      ],
+      [
+       32,
+       33
+      ],
+      [
+       31,
+       33
+      ],
+      [
+       9,
+       28
+      ],
+      [
+       33,
+       21
+      ],
+      [
+       8,
+       21
+      ],
+      [
+       35,
+       20
+      ],
+      [
+       36,
+       17
+      ],
+      [
+       114,
+       15
+      ],
+      [
+       40,
+       13
+      ],
+      [
+       38,
+       11
+      ],
+      [
+       37,
+       11
+      ],
+      [
+       39,
+       7
+      ],
+      [
+       19,
+       6
+      ],
+      [
+       7,
+       6
+      ],
+      [
+       43,
+       5
+      ],
+      [
+       44,
+       4
+      ],
+      [
+       41,
+       4
+      ],
+      [
+       86,
+       3
+      ],
+      [
+       45,
+       3
+      ],
+      [
+       6,
+       3
+      ],
+      [
+       51,
+       2
+      ],
+      [
+       49,
+       2
+      ],
+      [
+       34,
+       2
+      ],
+      [
+       93,
+       1
+      ],
+      [
+       62,
+       1
+      ],
+      [
+       53,
+       1
+      ],
+      [
+       48,
+       1
+      ]
+     ],
+     "description": "max gust Speed in mph",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "precipitation_inches",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 86,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "T",
+     "examples": [
+      "0",
+      "0.23",
+      "T",
+      "0.01",
+      "0.28"
+     ],
+     "top_values": [],
+     "description": "precipitation in inches",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "cloud_cover",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 8,
+     "examples": [
+      4,
+      2,
+      6,
+      3,
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       834
+      ],
+      [
+       1,
+       490
+      ],
+      [
+       2,
+       478
+      ],
+      [
+       3,
+       474
+      ],
+      [
+       4,
+       456
+      ],
+      [
+       5,
+       400
+      ],
+      [
+       6,
+       283
+      ],
+      [
+       7,
+       180
+      ],
+      [
+       8,
+       69
+      ]
+     ],
+     "description": "cloud cover",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "events",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "",
+     "max_value": "rain",
+     "examples": [
+      "",
+      "Fog",
+      "Rain",
+      "Fog-Rain",
+      "rain"
+     ],
+     "top_values": [
+      [
+       "",
+       3143
+      ],
+      [
+       "Rain",
+       388
+      ],
+      [
+       "Fog",
+       112
+      ],
+      [
+       "Fog-Rain",
+       17
+      ],
+      [
+       "Rain-Thunderstorm",
+       3
+      ],
+      [
+       "rain",
+       2
+      ]
+     ],
+     "description": "",
+     "value_description": "Allowed input: [null], Rain, other",
+     "notes": []
+    },
+    {
+     "name": "wind_dir_degrees",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 330,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 2772,
+     "examples": [
+      286,
+      291,
+      284,
+      277,
+      276
+     ],
+     "top_values": [],
+     "description": "wind direction degrees",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "zip_code",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "94041",
+     "max_value": "95113",
+     "examples": [
+      "94107",
+      "94063"
+     ],
+     "top_values": [
+      [
+       "95113",
+       733
+      ],
+      [
+       "94301",
+       733
+      ],
+      [
+       "94107",
+       733
+      ],
+      [
+       "94063",
+       733
+      ],
+      [
+       "94041",
+       733
+      ]
+     ],
+     "description": "zip code",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "date": "8/29/2013",
+     "max_temperature_f": 74,
+     "mean_temperature_f": 68,
+     "min_temperature_f": 61,
+     "max_dew_point_f": 61,
+     "mean_dew_point_f": 58,
+     "min_dew_point_f": 56,
+     "max_humidity": 93,
+     "mean_humidity": 75,
+     "min_humidity": 57,
+     "max_sea_level_pressure_inches": 30.07,
+     "mean_sea_level_pressure_inches": 30.02,
+     "min_sea_level_pressure_inches": 29.97,
+     "max_visibility_miles": 10,
+     "mean_visibility_miles": 10,
+     "min_visibility_miles": 10,
+     "max_wind_Speed_mph": 23,
+     "mean_wind_speed_mph": 11,
+     "max_gust_speed_mph": 28,
+     "precipitation_inches": "0",
+     "cloud_cover": 4,
+     "events": "",
+     "wind_dir_degrees": 286,
+     "zip_code": "94107"
+    },
+    {
+     "date": "8/30/2013",
+     "max_temperature_f": 78,
+     "mean_temperature_f": 69,
+     "min_temperature_f": 60,
+     "max_dew_point_f": 61,
+     "mean_dew_point_f": 58,
+     "min_dew_point_f": 56,
+     "max_humidity": 90,
+     "mean_humidity": 70,
+     "min_humidity": 50,
+     "max_sea_level_pressure_inches": 30.05,
+     "mean_sea_level_pressure_inches": 30.0,
+     "min_sea_level_pressure_inches": 29.93,
+     "max_visibility_miles": 10,
+     "mean_visibility_miles": 10,
+     "min_visibility_miles": 7,
+     "max_wind_Speed_mph": 29,
+     "mean_wind_speed_mph": 13,
+     "max_gust_speed_mph": 35,
+     "precipitation_inches": "0",
+     "cloud_cover": 2,
+     "events": "",
+     "wind_dir_degrees": 291,
+     "zip_code": "94107"
+    },
+    {
+     "date": "8/31/2013",
+     "max_temperature_f": 71,
+     "mean_temperature_f": 64,
+     "min_temperature_f": 57,
+     "max_dew_point_f": 57,
+     "mean_dew_point_f": 56,
+     "min_dew_point_f": 54,
+     "max_humidity": 93,
+     "mean_humidity": 75,
+     "min_humidity": 57,
+     "max_sea_level_pressure_inches": 30.0,
+     "mean_sea_level_pressure_inches": 29.96,
+     "min_sea_level_pressure_inches": 29.92,
+     "max_visibility_miles": 10,
+     "mean_visibility_miles": 10,
+     "min_visibility_miles": 10,
+     "max_wind_Speed_mph": 26,
+     "mean_wind_speed_mph": 15,
+     "max_gust_speed_mph": 31,
+     "precipitation_inches": "0",
+     "cloud_cover": 4,
+     "events": "",
+     "wind_dir_degrees": 284,
+     "zip_code": "94107"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "status",
+   "from_column": "station_id",
+   "to_table": "station",
+   "to_column": "id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

@@ -1,0 +1,1438 @@
+{
+ "db_id": "food_inspection",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/food_inspection/food_inspection.sqlite",
+ "fingerprint": "5021696-1793993033482586781-v1.0",
+ "created_at": "2026-11-06T19:24:52+00:00",
+ "profile_seconds": 0.163,
+ "tables": [
+  {
+   "name": "businesses",
+   "row_count": 6358,
+   "stats_rows": 6358,
+   "columns": [
+    {
+     "name": "business_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6358,
+     "is_unique": true,
+     "min_value": 10,
+     "max_value": 89453,
+     "examples": [
+      10,
+      24,
+      31,
+      45,
+      48
+     ],
+     "top_values": [],
+     "description": "business id. the unique id of the business",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5869,
+     "is_unique": false,
+     "min_value": "100% Dessert Cafe",
+     "max_value": "tacos san buena",
+     "examples": [
+      "Tiramisu Kitchen",
+      "OMNI S.F. Hotel - 2nd Floor Pantry",
+      "Norman's Ice Cream and Freezes",
+      "CHARLIE'S DELI CAFE",
+      "ART'S CAFE"
+     ],
+     "top_values": [],
+     "description": "the name of the eatery",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "address",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0002,
+     "distinct_count": 5684,
+     "is_unique": false,
+     "min_value": "004 VALENCIA St",
+     "max_value": "Various Farmers Markets",
+     "examples": [
+      "033 Belden Pl",
+      "500 California St, 2nd  Floor",
+      "2801 Leavenworth St",
+      "3202 FOLSOM St",
+      "747 IRVING St"
+     ],
+     "top_values": [],
+     "description": "the eatery address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.259,
+     "distinct_count": 30,
+     "is_unique": false,
+     "min_value": "CA",
+     "max_value": "sf",
+     "examples": [
+      "San Francisco",
+      "S.F.",
+      "SAN FRANCISCO",
+      "SF"
+     ],
+     "top_values": [
+      [
+       "SF",
+       2017
+      ],
+      [
+       "San Francisco",
+       1615
+      ],
+      [
+       "S.F.",
+       678
+      ],
+      [
+       "SAN FRANCISCO",
+       331
+      ],
+      [
+       "SF.",
+       32
+      ],
+      [
+       "Sf",
+       5
+      ],
+      [
+       "CA",
+       5
+      ],
+      [
+       "san Francisco",
+       4
+      ],
+      [
+       "sf",
+       2
+      ],
+      [
+       "San Francisco, Ca",
+       2
+      ],
+      [
+       "san francisco",
+       1
+      ],
+      [
+       "san Francisco CA",
+       1
+      ],
+      [
+       "Sand Francisco",
+       1
+      ],
+      [
+       "San Franicisco",
+       1
+      ],
+      [
+       "San Francsico",
+       1
+      ],
+      [
+       "San Francisco, Ca.",
+       1
+      ],
+      [
+       "San Francisco, CA 94132",
+       1
+      ],
+      [
+       "San Francisco, CA",
+       1
+      ],
+      [
+       "San Francisco,",
+       1
+      ],
+      [
+       "San Francisc",
+       1
+      ],
+      [
+       "San Franciisco",
+       1
+      ],
+      [
+       "SO. SAN FRANCISCO",
+       1
+      ],
+      [
+       "SF, CA 94115",
+       1
+      ],
+      [
+       "SF, CA 94110",
+       1
+      ],
+      [
+       "SF, CA",
+       1
+      ],
+      [
+       "SF , CA",
+       1
+      ],
+      [
+       "SAN FRANCICSO",
+       1
+      ],
+      [
+       "SAN BRUNO",
+       1
+      ],
+      [
+       "S F",
+       1
+      ],
+      [
+       "HAYWARD",
+       1
+      ]
+     ],
+     "description": "the city where the eatery is located in",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "postal_code",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0346,
+     "distinct_count": 40,
+     "is_unique": false,
+     "min_value": "92672",
+     "max_value": "Ca",
+     "examples": [
+      "94104",
+      "94133",
+      "94110",
+      "94122",
+      "94115"
+     ],
+     "top_values": [
+      [
+       "94110",
+       588
+      ],
+      [
+       "94103",
+       575
+      ],
+      [
+       "94102",
+       494
+      ],
+      [
+       "94133",
+       447
+      ],
+      [
+       "94109",
+       436
+      ],
+      [
+       "94107",
+       341
+      ],
+      [
+       "94111",
+       275
+      ],
+      [
+       "94122",
+       265
+      ],
+      [
+       "94108",
+       252
+      ],
+      [
+       "94118",
+       245
+      ],
+      [
+       "94115",
+       231
+      ],
+      [
+       "94105",
+       226
+      ],
+      [
+       "94114",
+       222
+      ],
+      [
+       "94117",
+       205
+      ],
+      [
+       "94112",
+       202
+      ],
+      [
+       "94124",
+       186
+      ],
+      [
+       "94123",
+       184
+      ],
+      [
+       "94121",
+       161
+      ],
+      [
+       "94104",
+       150
+      ],
+      [
+       "94132",
+       128
+      ],
+      [
+       "94116",
+       89
+      ],
+      [
+       "94134",
+       71
+      ],
+      [
+       "94127",
+       68
+      ],
+      [
+       "94131",
+       47
+      ],
+      [
+       "94158",
+       18
+      ],
+      [
+       "94130",
+       7
+      ],
+      [
+       "94143",
+       5
+      ],
+      [
+       "94014",
+       3
+      ],
+      [
+       "Ca",
+       2
+      ],
+      [
+       "CA",
+       2
+      ],
+      [
+       "94129",
+       2
+      ],
+      [
+       "94101",
+       2
+      ],
+      [
+       "94013",
+       2
+      ],
+      [
+       "95105",
+       1
+      ],
+      [
+       "94602",
+       1
+      ],
+      [
+       "94545",
+       1
+      ],
+      [
+       "94188",
+       1
+      ],
+      [
+       "94120",
+       1
+      ],
+      [
+       "94066",
+       1
+      ],
+      [
+       "92672",
+       1
+      ]
+     ],
+     "description": "the postal code of the eatery",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "latitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.4289,
+     "distinct_count": 798,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 37.8245,
+     "examples": [
+      37.7911,
+      37.7929,
+      37.8072,
+      37.7471,
+      37.764
+     ],
+     "top_values": [],
+     "description": "the latitude of the position",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "longitude",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.4289,
+     "distinct_count": 138,
+     "is_unique": false,
+     "min_value": -122.511,
+     "max_value": 0.0,
+     "examples": [
+      -122.404,
+      -122.403,
+      -122.419,
+      -122.414,
+      -122.466
+     ],
+     "top_values": [],
+     "description": "the longitude of the position",
+     "value_description": "commonsense evidence:\nthe distance between eatery A and eatery B = \\sqrt{(latitude_A-latitude_B)^2 + (longitude_A-longitude_B)^2}",
+     "notes": []
+    },
+    {
+     "name": "phone_number",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.7221,
+     "distinct_count": 1672,
+     "is_unique": false,
+     "min_value": 14150204876,
+     "max_value": 14159881393,
+     "examples": [
+      14155345060,
+      14155823535,
+      14155344645,
+      14155812403,
+      14155288985
+     ],
+     "top_values": [],
+     "description": "the phone number of the eatery",
+     "value_description": "",
+     "notes": [
+      "72% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "tax_code",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0002,
+     "distinct_count": 45,
+     "is_unique": false,
+     "min_value": "AA",
+     "max_value": "H99",
+     "examples": [
+      "H24",
+      "H01",
+      "H25",
+      "H88",
+      "H26"
+     ],
+     "top_values": [
+      [
+       "H24",
+       1346
+      ],
+      [
+       "H25",
+       1299
+      ],
+      [
+       "H26",
+       1026
+      ],
+      [
+       "H03",
+       409
+      ],
+      [
+       "H07",
+       369
+      ],
+      [
+       "H28",
+       348
+      ],
+      [
+       "H86",
+       314
+      ],
+      [
+       "H79",
+       199
+      ],
+      [
+       "H74",
+       110
+      ],
+      [
+       "H34",
+       104
+      ],
+      [
+       "H01",
+       93
+      ],
+      [
+       "H29",
+       66
+      ],
+      [
+       "H78",
+       65
+      ],
+      [
+       "H36",
+       63
+      ],
+      [
+       "H87",
+       60
+      ],
+      [
+       "H30",
+       54
+      ],
+      [
+       "H88",
+       51
+      ],
+      [
+       "H33",
+       33
+      ],
+      [
+       "H98",
+       32
+      ],
+      [
+       "H91",
+       30
+      ],
+      [
+       "H99",
+       29
+      ],
+      [
+       "H84",
+       25
+      ],
+      [
+       "H21",
+       25
+      ],
+      [
+       "H08",
+       22
+      ],
+      [
+       "H81",
+       21
+      ],
+      [
+       "H76",
+       16
+      ],
+      [
+       "H14",
+       16
+      ],
+      [
+       "H09",
+       16
+      ],
+      [
+       "H04",
+       15
+      ],
+      [
+       "H05",
+       14
+      ],
+      [
+       "H23",
+       10
+      ],
+      [
+       "H83",
+       9
+      ],
+      [
+       "H77",
+       9
+      ],
+      [
+       "H90",
+       7
+      ],
+      [
+       "H61",
+       7
+      ],
+      [
+       "H75",
+       6
+      ],
+      [
+       "H40",
+       6
+      ],
+      [
+       "H06",
+       6
+      ],
+      [
+       "H89",
+       5
+      ],
+      [
+       "H80",
+       5
+      ],
+      [
+       "H22",
+       5
+      ],
+      [
+       "H10",
+       5
+      ],
+      [
+       "H38",
+       4
+      ],
+      [
+       "H37",
+       2
+      ],
+      [
+       "AA",
+       1
+      ]
+     ],
+     "description": "the tax code of the eatery",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "business_certificate",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5180,
+     "is_unique": false,
+     "min_value": 671,
+     "max_value": 7451600,
+     "examples": [
+      779059,
+      352312,
+      346882,
+      340024,
+      318022
+     ],
+     "top_values": [],
+     "description": "the business certificate number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "application_date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.1902,
+     "distinct_count": 2590,
+     "is_unique": false,
+     "min_value": "1899-12-30",
+     "max_value": "2106-04-12",
+     "examples": [
+      "2001-10-10",
+      "1989-02-01",
+      "2003-05-23",
+      "1991-01-11",
+      "2002-12-09"
+     ],
+     "top_values": [],
+     "description": "the application date of the eatery",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "owner_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5698,
+     "is_unique": false,
+     "min_value": "100 Brannan LLC",
+     "max_value": "uadalupe Guerrero",
+     "examples": [
+      "Tiramisu LLC",
+      "OMNI San Francisco Hotel Corp",
+      "Norman Antiforda",
+      "HARB, CHARLES AND KRISTIN",
+      "YOON HAE RYONG"
+     ],
+     "top_values": [],
+     "description": "owner name. the owner's name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "owner_address",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5758,
+     "is_unique": false,
+     "min_value": "033 WEST PORTAL AVE",
+     "max_value": "c/o The Grove, 690 Mission Street",
+     "examples": [
+      "33 Belden St",
+      "500 California St, 2nd Floor",
+      "2801 Leavenworth St",
+      "1150 SANCHEZ",
+      "1567 FUNSTON AVE"
+     ],
+     "top_values": [],
+     "description": "owner address. the owner's address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "owner_city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 355,
+     "is_unique": false,
+     "min_value": "94115",
+     "max_value": "sf",
+     "examples": [
+      "San Francisco",
+      "S.F.",
+      "SAN FRANCISCO",
+      "SF",
+      "Okland"
+     ],
+     "top_values": [],
+     "description": "owner city. the city where the owner is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "owner_state",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0002,
+     "distinct_count": 52,
+     "is_unique": false,
+     "min_value": "ARIZONA",
+     "max_value": "ca",
+     "examples": [
+      "CA",
+      "DC",
+      "WA"
+     ],
+     "top_values": [],
+     "description": "owner state. the state where the owner is located",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "owner_zip",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 433,
+     "is_unique": false,
+     "min_value": "02421",
+     "max_value": "H4P 1S1, Canada",
+     "examples": [
+      "94104",
+      "94133",
+      "94114",
+      "94122",
+      "94115"
+     ],
+     "top_values": [],
+     "description": "owner zip. the zip code of the owner",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    }
+   ],
+   "primary_key": [
+    "business_id"
+   ],
+   "sample_rows": [
+    {
+     "business_id": 10,
+     "name": "Tiramisu Kitchen",
+     "address": "033 Belden Pl",
+     "city": "San Francisco",
+     "postal_code": "94104",
+     "latitude": 37.7911,
+     "longitude": -122.404,
+     "phone_number": null,
+     "tax_code": "H24",
+     "business_certificate": 779059,
+     "application_date": null,
+     "owner_name": "Tiramisu LLC",
+     "owner_address": "33 Belden St",
+     "owner_city": "San Francisco",
+     "owner_state": "CA",
+     "owner_zip": "94104"
+    },
+    {
+     "business_id": 24,
+     "name": "OMNI S.F. Hotel - 2nd Floor Pantry",
+     "address": "500 California St, 2nd  Floor",
+     "city": "San Francisco",
+     "postal_code": "94104",
+     "latitude": 37.7929,
+     "longitude": -122.403,
+     "phone_number": null,
+     "tax_code": "H24",
+     "business_certificate": 352312,
+     "application_date": null,
+     "owner_name": "OMNI San Francisco Hotel Corp",
+     "owner_address": "500 California St, 2nd Floor",
+     "owner_city": "San Francisco",
+     "owner_state": "CA",
+     "owner_zip": "94104"
+    },
+    {
+     "business_id": 31,
+     "name": "Norman's Ice Cream and Freezes",
+     "address": "2801 Leavenworth St",
+     "city": "San Francisco",
+     "postal_code": "94133",
+     "latitude": 37.8072,
+     "longitude": -122.419,
+     "phone_number": null,
+     "tax_code": "H24",
+     "business_certificate": 346882,
+     "application_date": null,
+     "owner_name": "Norman Antiforda",
+     "owner_address": "2801 Leavenworth St",
+     "owner_city": "San Francisco",
+     "owner_state": "CA",
+     "owner_zip": "94133"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "inspections",
+   "row_count": 23764,
+   "stats_rows": 23764,
+   "columns": [
+    {
+     "name": "business_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5219,
+     "is_unique": false,
+     "min_value": 10,
+     "max_value": 89296,
+     "examples": [
+      10,
+      24,
+      31,
+      45,
+      48
+     ],
+     "top_values": [],
+     "description": "business id. the unique id of the business",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "score",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.4577,
+     "distinct_count": 48,
+     "is_unique": false,
+     "min_value": 46,
+     "max_value": 100,
+     "examples": [
+      92,
+      94,
+      82,
+      100,
+      96
+     ],
+     "top_values": [
+      [
+       100,
+       2087
+      ],
+      [
+       96,
+       1600
+      ],
+      [
+       94,
+       1229
+      ],
+      [
+       92,
+       1073
+      ],
+      [
+       98,
+       949
+      ],
+      [
+       90,
+       924
+      ],
+      [
+       88,
+       505
+      ],
+      [
+       86,
+       414
+      ],
+      [
+       89,
+       365
+      ],
+      [
+       85,
+       341
+      ],
+      [
+       87,
+       323
+      ],
+      [
+       91,
+       316
+      ],
+      [
+       83,
+       281
+      ],
+      [
+       81,
+       254
+      ],
+      [
+       93,
+       248
+      ],
+      [
+       84,
+       245
+      ],
+      [
+       82,
+       223
+      ],
+      [
+       80,
+       215
+      ],
+      [
+       79,
+       151
+      ],
+      [
+       78,
+       149
+      ],
+      [
+       77,
+       113
+      ],
+      [
+       76,
+       110
+      ],
+      [
+       74,
+       101
+      ],
+      [
+       75,
+       96
+      ],
+      [
+       72,
+       88
+      ],
+      [
+       73,
+       80
+      ],
+      [
+       70,
+       68
+      ],
+      [
+       71,
+       60
+      ],
+      [
+       68,
+       48
+      ],
+      [
+       69,
+       39
+      ],
+      [
+       67,
+       34
+      ],
+      [
+       66,
+       31
+      ],
+      [
+       65,
+       20
+      ],
+      [
+       64,
+       19
+      ],
+      [
+       63,
+       17
+      ],
+      [
+       60,
+       12
+      ],
+      [
+       62,
+       10
+      ],
+      [
+       55,
+       9
+      ],
+      [
+       61,
+       8
+      ],
+      [
+       57,
+       8
+      ],
+      [
+       59,
+       5
+      ],
+      [
+       58,
+       5
+      ],
+      [
+       54,
+       5
+      ],
+      [
+       56,
+       4
+      ],
+      [
+       53,
+       2
+      ],
+      [
+       50,
+       1
+      ],
+      [
+       47,
+       1
+      ],
+      [
+       46,
+       1
+      ]
+     ],
+     "description": "the inspection score",
+     "value_description": "commonsense evidence:\nThe scores range from 1 to 100, where 100 means that the establishment meets all required standards.",
+     "notes": []
+    },
+    {
+     "name": "date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 823,
+     "is_unique": false,
+     "min_value": "2013-10-07",
+     "max_value": "2016-12-15",
+     "examples": [
+      "2014-01-14",
+      "2014-01-24",
+      "2014-07-29",
+      "2014-08-07",
+      "2016-05-03"
+     ],
+     "top_values": [],
+     "description": "the inspection date",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "type",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": "Administrative or Document Review",
+     "max_value": "Structural Inspection",
+     "examples": [
+      "Routine - Unscheduled",
+      "Reinspection/Followup",
+      "Complaint Reinspection/Followup",
+      "Non-inspection site visit",
+      "Complaint"
+     ],
+     "top_values": [
+      [
+       "Routine - Unscheduled",
+       13007
+      ],
+      [
+       "Reinspection/Followup",
+       4758
+      ],
+      [
+       "New Ownership",
+       1739
+      ],
+      [
+       "New Construction",
+       1662
+      ],
+      [
+       "Complaint",
+       1474
+      ],
+      [
+       "Non-inspection site visit",
+       728
+      ],
+      [
+       "Structural Inspection",
+       153
+      ],
+      [
+       "Complaint Reinspection/Followup",
+       124
+      ],
+      [
+       "Foodborne Illness Investigation",
+       73
+      ],
+      [
+       "Routine - Scheduled",
+       35
+      ],
+      [
+       "Special Event",
+       7
+      ],
+      [
+       "Administrative or Document Review",
+       3
+      ],
+      [
+       "Multi-agency Investigation",
+       1
+      ]
+     ],
+     "description": "the inspection type",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "business_id": 10,
+     "score": 92,
+     "date": "2014-01-14",
+     "type": "Routine - Unscheduled"
+    },
+    {
+     "business_id": 10,
+     "score": null,
+     "date": "2014-01-24",
+     "type": "Reinspection/Followup"
+    },
+    {
+     "business_id": 10,
+     "score": 94,
+     "date": "2014-07-29",
+     "type": "Routine - Unscheduled"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "violations",
+   "row_count": 36050,
+   "stats_rows": 36050,
+   "columns": [
+    {
+     "name": "business_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4473,
+     "is_unique": false,
+     "min_value": 10,
+     "max_value": 89072,
+     "examples": [
+      10,
+      24,
+      31,
+      45,
+      48
+     ],
+     "top_values": [],
+     "description": "business id. the unique id of the business",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 793,
+     "is_unique": false,
+     "min_value": "2013-10-07",
+     "max_value": "2016-10-05",
+     "examples": [
+      "2014-07-29",
+      "2014-01-14",
+      "2016-05-03",
+      "2014-06-12",
+      "2014-11-24"
+     ],
+     "top_values": [],
+     "description": "the date of the violation",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "violation_type_id",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 68,
+     "is_unique": false,
+     "min_value": "103101",
+     "max_value": "103178",
+     "examples": [
+      "103129",
+      "103144",
+      "103119",
+      "103145",
+      "103154"
+     ],
+     "top_values": [],
+     "description": "violation type id. the unique type id of the violation",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "risk_category",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "High Risk",
+     "max_value": "Moderate Risk",
+     "examples": [
+      "Moderate Risk",
+      "Low Risk",
+      "High Risk"
+     ],
+     "top_values": [
+      [
+       "Low Risk",
+       18576
+      ],
+      [
+       "Moderate Risk",
+       12372
+      ],
+      [
+       "High Risk",
+       5102
+      ]
+     ],
+     "description": "risk category\nHigh / Moderate / Low risk",
+     "value_description": "commonsense evidence:\nHigh risks have more safety and health hazards than low risks",
+     "notes": []
+    },
+    {
+     "name": "description",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 68,
+     "is_unique": false,
+     "min_value": "Consumer advisory not provided for raw or undercooked foods",
+     "max_value": "Worker safety hazards",
+     "examples": [
+      "Insufficient hot water or running water",
+      "Unapproved or unmaintained equipment or utensils",
+      "Inadequate and inaccessible handwashing facilities",
+      "Improper storage of equipment utensils or linens",
+      "Unclean or degraded floors walls or ceilings"
+     ],
+     "top_values": [],
+     "description": "the description of the violation",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "business_id": 10,
+     "date": "2014-07-29",
+     "violation_type_id": "103129",
+     "risk_category": "Moderate Risk",
+     "description": "Insufficient hot water or running water"
+    },
+    {
+     "business_id": 10,
+     "date": "2014-07-29",
+     "violation_type_id": "103144",
+     "risk_category": "Low Risk",
+     "description": "Unapproved or unmaintained equipment or utensils"
+    },
+    {
+     "business_id": 10,
+     "date": "2014-01-14",
+     "violation_type_id": "103119",
+     "risk_category": "Moderate Risk",
+     "description": "Inadequate and inaccessible handwashing facilities"
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "inspections",
+   "from_column": "business_id",
+   "to_table": "businesses",
+   "to_column": "business_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "violations",
+   "from_column": "business_id",
+   "to_table": "businesses",
+   "to_column": "business_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

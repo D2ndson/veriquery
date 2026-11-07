@@ -1,0 +1,1384 @@
+{
+ "db_id": "human_resources",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/human_resources/human_resources.sqlite",
+ "fingerprint": "28672-1793993025028965929-v1.0",
+ "created_at": "2026-11-06T19:24:55+00:00",
+ "profile_seconds": 0.003,
+ "tables": [
+  {
+   "name": "employee",
+   "row_count": 25,
+   "stats_rows": 25,
+   "columns": [
+    {
+     "name": "ssn",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 25,
+     "is_unique": true,
+     "min_value": "000-01-0000",
+     "max_value": "925-45-7116",
+     "examples": [
+      "000-01-0000",
+      "000-02-2222",
+      "109-87-6543",
+      "109-87-6544",
+      "111-12-1111"
+     ],
+     "top_values": [
+      [
+       "925-45-7116",
+       1
+      ],
+      [
+       "777-78-7777",
+       1
+      ],
+      [
+       "776-67-6666",
+       1
+      ],
+      [
+       "767-74-7373",
+       1
+      ],
+      [
+       "625-62-6262",
+       1
+      ],
+      [
+       "612-99-1111",
+       1
+      ],
+      [
+       "555-56-5555",
+       1
+      ],
+      [
+       "555-22-3333",
+       1
+      ],
+      [
+       "500-50-0505",
+       1
+      ],
+      [
+       "464-64-4466",
+       1
+      ],
+      [
+       "444-45-4444",
+       1
+      ],
+      [
+       "432-19-8765",
+       1
+      ],
+      [
+       "335-55-5533",
+       1
+      ],
+      [
+       "333-66-1234",
+       1
+      ],
+      [
+       "333-43-4444",
+       1
+      ],
+      [
+       "333-34-3333",
+       1
+      ],
+      [
+       "245-67-8910",
+       1
+      ],
+      [
+       "222-52-5555",
+       1
+      ],
+      [
+       "222-23-2222",
+       1
+      ],
+      [
+       "123-45-6789",
+       1
+      ],
+      [
+       "111-12-1111",
+       1
+      ],
+      [
+       "109-87-6544",
+       1
+      ],
+      [
+       "109-87-6543",
+       1
+      ],
+      [
+       "000-02-2222",
+       1
+      ],
+      [
+       "000-01-0000",
+       1
+      ]
+     ],
+     "description": "social security number. employee's ssn",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lastname",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": "Adams",
+     "max_value": "Wood",
+     "examples": [
+      "Milgrom",
+      "Adams",
+      "Wood",
+      "Foster",
+      "Johnson"
+     ],
+     "top_values": [
+      [
+       "Smith",
+       2
+      ],
+      [
+       "Wood",
+       1
+      ],
+      [
+       "Whitehead",
+       1
+      ],
+      [
+       "Webster",
+       1
+      ],
+      [
+       "Rubin",
+       1
+      ],
+      [
+       "Rodriguez",
+       1
+      ],
+      [
+       "Roberts",
+       1
+      ],
+      [
+       "Milgrom",
+       1
+      ],
+      [
+       "Martin",
+       1
+      ],
+      [
+       "Marlin",
+       1
+      ],
+      [
+       "Marder",
+       1
+      ],
+      [
+       "Manin",
+       1
+      ],
+      [
+       "Jones",
+       1
+      ],
+      [
+       "Johnson",
+       1
+      ],
+      [
+       "Johanson",
+       1
+      ],
+      [
+       "Holmes",
+       1
+      ],
+      [
+       "Frank",
+       1
+      ],
+      [
+       "Foster",
+       1
+      ],
+      [
+       "Coulter",
+       1
+      ],
+      [
+       "Charles",
+       1
+      ],
+      [
+       "Brown",
+       1
+      ],
+      [
+       "Bronson",
+       1
+      ],
+      [
+       "Adamson",
+       1
+      ],
+      [
+       "Adams",
+       1
+      ]
+     ],
+     "description": "employee's last name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "firstname",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 19,
+     "is_unique": false,
+     "min_value": "Bill",
+     "max_value": "William",
+     "examples": [
+      "Patricia",
+      "Sandy",
+      "Emily",
+      "Harold",
+      "James"
+     ],
+     "top_values": [
+      [
+       "David",
+       3
+      ],
+      [
+       "Sandy",
+       2
+      ],
+      [
+       "Patricia",
+       2
+      ],
+      [
+       "Holly",
+       2
+      ],
+      [
+       "Emily",
+       2
+      ],
+      [
+       "William",
+       1
+      ],
+      [
+       "Vernon",
+       1
+      ],
+      [
+       "Tracy",
+       1
+      ],
+      [
+       "Paul",
+       1
+      ],
+      [
+       "Melissa",
+       1
+      ],
+      [
+       "Mary",
+       1
+      ],
+      [
+       "Marietta",
+       1
+      ],
+      [
+       "Kenneth",
+       1
+      ],
+      [
+       "Kelly",
+       1
+      ],
+      [
+       "Jose",
+       1
+      ],
+      [
+       "James",
+       1
+      ],
+      [
+       "Harold",
+       1
+      ],
+      [
+       "Frank",
+       1
+      ],
+      [
+       "Bill",
+       1
+      ]
+     ],
+     "description": "employee's first name",
+     "value_description": "commonsense evidence:\nemployee's full name is firstname lastname .",
+     "notes": []
+    },
+    {
+     "name": "hiredate",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": "1/1/06",
+     "max_value": "9/25/97",
+     "examples": [
+      "10/1/04",
+      "1/15/01",
+      "3/12/97",
+      "8/14/05",
+      "5/3/96"
+     ],
+     "top_values": [
+      [
+       "1/29/91",
+       2
+      ],
+      [
+       "9/25/97",
+       1
+      ],
+      [
+       "8/26/06",
+       1
+      ],
+      [
+       "8/14/05",
+       1
+      ],
+      [
+       "7/25/80",
+       1
+      ],
+      [
+       "7/25/03",
+       1
+      ],
+      [
+       "7/16/98",
+       1
+      ],
+      [
+       "6/2/05",
+       1
+      ],
+      [
+       "6/18/98",
+       1
+      ],
+      [
+       "6/15/92",
+       1
+      ],
+      [
+       "5/3/96",
+       1
+      ],
+      [
+       "5/14/84",
+       1
+      ],
+      [
+       "4/8/86",
+       1
+      ],
+      [
+       "4/10/85",
+       1
+      ],
+      [
+       "3/7/01",
+       1
+      ],
+      [
+       "3/28/77",
+       1
+      ],
+      [
+       "3/12/97",
+       1
+      ],
+      [
+       "2/14/93",
+       1
+      ],
+      [
+       "12/1/00",
+       1
+      ],
+      [
+       "11/20/03",
+       1
+      ],
+      [
+       "10/4/02",
+       1
+      ],
+      [
+       "10/1/04",
+       1
+      ],
+      [
+       "1/15/01",
+       1
+      ],
+      [
+       "1/1/06",
+       1
+      ]
+     ],
+     "description": "employee's hire date",
+     "value_description": "yyyy-mm-dd",
+     "notes": []
+    },
+    {
+     "name": "salary",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": "US$100,000.00",
+     "max_value": "US$79,000.00",
+     "examples": [
+      "US$57,500.00",
+      "US$19,500.00",
+      "US$69,000.00",
+      "US$55,000.00",
+      "US$47,500.00"
+     ],
+     "top_values": [
+      [
+       "US$69,000.00",
+       2
+      ],
+      [
+       "US$65,000.00",
+       2
+      ],
+      [
+       "US$55,000.00",
+       2
+      ],
+      [
+       "US$79,000.00",
+       1
+      ],
+      [
+       "US$75,000.00",
+       1
+      ],
+      [
+       "US$58,500.00",
+       1
+      ],
+      [
+       "US$58,000.00",
+       1
+      ],
+      [
+       "US$57,500.00",
+       1
+      ],
+      [
+       "US$52,000.00",
+       1
+      ],
+      [
+       "US$49,500.00",
+       1
+      ],
+      [
+       "US$47,500.00",
+       1
+      ],
+      [
+       "US$45,000.00",
+       1
+      ],
+      [
+       "US$42,500.00",
+       1
+      ],
+      [
+       "US$40,000.00",
+       1
+      ],
+      [
+       "US$38,500.00",
+       1
+      ],
+      [
+       "US$23,000.00",
+       1
+      ],
+      [
+       "US$19,500.00",
+       1
+      ],
+      [
+       "US$18,500.00",
+       1
+      ],
+      [
+       "US$175,000.00",
+       1
+      ],
+      [
+       "US$150,000.00",
+       1
+      ],
+      [
+       "US$125,000.00",
+       1
+      ],
+      [
+       "US$100,000.00",
+       1
+      ]
+     ],
+     "description": "employee's salary",
+     "value_description": "the unit is dollar per year",
+     "notes": []
+    },
+    {
+     "name": "gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.04,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "F",
+     "max_value": "M",
+     "examples": [
+      "F",
+      "M"
+     ],
+     "top_values": [
+      [
+       "M",
+       12
+      ],
+      [
+       "F",
+       12
+      ]
+     ],
+     "description": "employee's gender",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "performance",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.08,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Average",
+     "max_value": "Poor",
+     "examples": [
+      "Average",
+      "Good",
+      "Poor"
+     ],
+     "top_values": [
+      [
+       "Good",
+       11
+      ],
+      [
+       "Average",
+       8
+      ],
+      [
+       "Poor",
+       4
+      ]
+     ],
+     "description": "employee's performance",
+     "value_description": "Good / Average/ Poor",
+     "notes": []
+    },
+    {
+     "name": "positionID",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      2,
+      3,
+      1,
+      4
+     ],
+     "top_values": [
+      [
+       2,
+       10
+      ],
+      [
+       1,
+       10
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       4,
+       2
+      ]
+     ],
+     "description": "position id. the unique id for position",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "locationID",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 7,
+     "examples": [
+      2,
+      1,
+      5,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       3,
+       6
+      ],
+      [
+       2,
+       5
+      ],
+      [
+       5,
+       4
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       6,
+       2
+      ],
+      [
+       7,
+       1
+      ]
+     ],
+     "description": "location id. the unique id for location",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "ssn"
+   ],
+   "sample_rows": [
+    {
+     "ssn": "000-01-0000",
+     "lastname": "Milgrom",
+     "firstname": "Patricia",
+     "hiredate": "10/1/04",
+     "salary": "US$57,500.00",
+     "gender": "F",
+     "performance": "Average",
+     "positionID": 2,
+     "locationID": 2
+    },
+    {
+     "ssn": "000-02-2222",
+     "lastname": "Adams",
+     "firstname": "Sandy",
+     "hiredate": "1/15/01",
+     "salary": "US$19,500.00",
+     "gender": "F",
+     "performance": "Average",
+     "positionID": 3,
+     "locationID": 1
+    },
+    {
+     "ssn": "109-87-6543",
+     "lastname": "Wood",
+     "firstname": "Emily",
+     "hiredate": "3/12/97",
+     "salary": "US$69,000.00",
+     "gender": "F",
+     "performance": "Average",
+     "positionID": 2,
+     "locationID": 5
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "location",
+   "row_count": 8,
+   "stats_rows": 8,
+   "columns": [
+    {
+     "name": "locationID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 8,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "location id. the unique id for location",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "locationcity",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": true,
+     "min_value": "Atlanta",
+     "max_value": "Salt Lake City",
+     "examples": [
+      "Atlanta",
+      "Boston",
+      "Chicago",
+      "Miami",
+      "New York City"
+     ],
+     "top_values": [
+      [
+       "Salt Lake City",
+       1
+      ],
+      [
+       "New York City",
+       1
+      ],
+      [
+       "Miami",
+       1
+      ],
+      [
+       "Los Angeles",
+       1
+      ],
+      [
+       "Denver",
+       1
+      ],
+      [
+       "Chicago",
+       1
+      ],
+      [
+       "Boston",
+       1
+      ],
+      [
+       "Atlanta",
+       1
+      ]
+     ],
+     "description": "the location city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "address",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": true,
+     "min_value": "1400 Main St",
+     "max_value": "500 Loop Highway",
+     "examples": [
+      "450 Peachtree Rd",
+      "3 Commons Blvd",
+      "500 Loop Highway",
+      "210 Biscayne Blvd",
+      "1650 Washington Blvd"
+     ],
+     "top_values": [
+      [
+       "500 Loop Highway",
+       1
+      ],
+      [
+       "450 Peachtree Rd",
+       1
+      ],
+      [
+       "316 S. State St",
+       1
+      ],
+      [
+       "312 Mount View Dr",
+       1
+      ],
+      [
+       "3 Commons Blvd",
+       1
+      ],
+      [
+       "210 Biscayne Blvd",
+       1
+      ],
+      [
+       "1650 Washington Blvd",
+       1
+      ],
+      [
+       "1400 Main St",
+       1
+      ]
+     ],
+     "description": "the detailed address of the location",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": true,
+     "min_value": "CA",
+     "max_value": "UT",
+     "examples": [
+      "GA",
+      "MA",
+      "IL",
+      "FL",
+      "NY"
+     ],
+     "top_values": [
+      [
+       "UT",
+       1
+      ],
+      [
+       "NY",
+       1
+      ],
+      [
+       "MA",
+       1
+      ],
+      [
+       "IL",
+       1
+      ],
+      [
+       "GA",
+       1
+      ],
+      [
+       "FL",
+       1
+      ],
+      [
+       "CO",
+       1
+      ],
+      [
+       "CA",
+       1
+      ]
+     ],
+     "description": "the state abbreviation",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "zipcode",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": true,
+     "min_value": 2190,
+     "max_value": 94235,
+     "examples": [
+      30316,
+      2190,
+      60620,
+      33103,
+      15648
+     ],
+     "top_values": [
+      [
+       94235,
+       1
+      ],
+      [
+       84125,
+       1
+      ],
+      [
+       60620,
+       1
+      ],
+      [
+       54657,
+       1
+      ],
+      [
+       33103,
+       1
+      ],
+      [
+       30316,
+       1
+      ],
+      [
+       15648,
+       1
+      ],
+      [
+       2190,
+       1
+      ]
+     ],
+     "description": "zip code of the location",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "officephone",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 8,
+     "is_unique": true,
+     "min_value": "(205)607-5289",
+     "max_value": "(801)459-6652",
+     "examples": [
+      "(404)333-5555",
+      "(617)123-4444",
+      "(312)444-6666",
+      "(305)787-9999",
+      "(518)256-3100"
+     ],
+     "top_values": [
+      [
+       "(801)459-6652",
+       1
+      ],
+      [
+       "(705)639-0227",
+       1
+      ],
+      [
+       "(617)123-4444",
+       1
+      ],
+      [
+       "(518)256-3100",
+       1
+      ],
+      [
+       "(404)333-5555",
+       1
+      ],
+      [
+       "(312)444-6666",
+       1
+      ],
+      [
+       "(305)787-9999",
+       1
+      ],
+      [
+       "(205)607-5289",
+       1
+      ]
+     ],
+     "description": "the office phone number of the location",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "locationID"
+   ],
+   "sample_rows": [
+    {
+     "locationID": 1,
+     "locationcity": "Atlanta",
+     "address": "450 Peachtree Rd",
+     "state": "GA",
+     "zipcode": 30316,
+     "officephone": "(404)333-5555"
+    },
+    {
+     "locationID": 2,
+     "locationcity": "Boston",
+     "address": "3 Commons Blvd",
+     "state": "MA",
+     "zipcode": 2190,
+     "officephone": "(617)123-4444"
+    },
+    {
+     "locationID": 3,
+     "locationcity": "Chicago",
+     "address": "500 Loop Highway",
+     "state": "IL",
+     "zipcode": 60620,
+     "officephone": "(312)444-6666"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "position",
+   "row_count": 4,
+   "stats_rows": 4,
+   "columns": [
+    {
+     "name": "positionID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "position id. the unique id for position",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "positiontitle",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": "Account Representative",
+     "max_value": "Trainee",
+     "examples": [
+      "Account Representative",
+      "Manager",
+      "Trainee",
+      "Regional Manager"
+     ],
+     "top_values": [
+      [
+       "Trainee",
+       1
+      ],
+      [
+       "Regional Manager",
+       1
+      ],
+      [
+       "Manager",
+       1
+      ],
+      [
+       "Account Representative",
+       1
+      ]
+     ],
+     "description": "the position title",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "educationrequired",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "2 year degree",
+     "max_value": "6 year degree",
+     "examples": [
+      "4 year degree",
+      "2 year degree",
+      "6 year degree"
+     ],
+     "top_values": [
+      [
+       "4 year degree",
+       2
+      ],
+      [
+       "6 year degree",
+       1
+      ],
+      [
+       "2 year degree",
+       1
+      ]
+     ],
+     "description": "education required. the required education year",
+     "value_description": "commonsense evidence:\nGenerally, more complex work requires more education year.",
+     "notes": []
+    },
+    {
+     "name": "minsalary",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": "US$100,000.00",
+     "max_value": "US$50,000.00",
+     "examples": [
+      "US$25,000.00",
+      "US$50,000.00",
+      "US$18,000.00",
+      "US$100,000.00"
+     ],
+     "top_values": [
+      [
+       "US$50,000.00",
+       1
+      ],
+      [
+       "US$25,000.00",
+       1
+      ],
+      [
+       "US$18,000.00",
+       1
+      ],
+      [
+       "US$100,000.00",
+       1
+      ]
+     ],
+     "description": "minimum salary of this position",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "maxsalary",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": "US$150,000.00",
+     "max_value": "US$75,000.00",
+     "examples": [
+      "US$75,000.00",
+      "US$150,000.00",
+      "US$25,000.00",
+      "US$250,000.00"
+     ],
+     "top_values": [
+      [
+       "US$75,000.00",
+       1
+      ],
+      [
+       "US$250,000.00",
+       1
+      ],
+      [
+       "US$25,000.00",
+       1
+      ],
+      [
+       "US$150,000.00",
+       1
+      ]
+     ],
+     "description": "maximum salary of this position",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "positionID"
+   ],
+   "sample_rows": [
+    {
+     "positionID": 1,
+     "positiontitle": "Account Representative",
+     "educationrequired": "4 year degree",
+     "minsalary": "US$25,000.00",
+     "maxsalary": "US$75,000.00"
+    },
+    {
+     "positionID": 2,
+     "positiontitle": "Manager",
+     "educationrequired": "4 year degree",
+     "minsalary": "US$50,000.00",
+     "maxsalary": "US$150,000.00"
+    },
+    {
+     "positionID": 3,
+     "positiontitle": "Trainee",
+     "educationrequired": "2 year degree",
+     "minsalary": "US$18,000.00",
+     "maxsalary": "US$25,000.00"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "employee",
+   "from_column": "positionID",
+   "to_table": "position",
+   "to_column": "positionID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "employee",
+   "from_column": "locationID",
+   "to_table": "location",
+   "to_column": "locationID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

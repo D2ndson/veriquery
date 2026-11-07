@@ -1,0 +1,3691 @@
+{
+ "db_id": "college_completion",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/college_completion/college_completion.sqlite",
+ "fingerprint": "71217152-1793993065942242242-v1.0",
+ "created_at": "2026-11-06T19:24:55+00:00",
+ "profile_seconds": 5.103,
+ "tables": [
+  {
+   "name": "institution_details",
+   "row_count": 3798,
+   "stats_rows": 3798,
+   "columns": [
+    {
+     "name": "unitid",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3798,
+     "is_unique": true,
+     "min_value": 100654,
+     "max_value": 475291,
+     "examples": [
+      100654,
+      100663,
+      100690,
+      100706,
+      100724
+     ],
+     "top_values": [],
+     "description": "unique Education Unit ID number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "chronname",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3793,
+     "is_unique": false,
+     "min_value": "AIB College of Business",
+     "max_value": "Zion Bible College",
+     "examples": [
+      "Alabama A&M University",
+      "University of Alabama at Birmingham",
+      "Amridge University",
+      "University of Alabama at Huntsville",
+      "Alabama State University"
+     ],
+     "top_values": [],
+     "description": "Institution name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1787,
+     "is_unique": false,
+     "min_value": "Aberdeen",
+     "max_value": "Zanesville",
+     "examples": [
+      "Normal",
+      "Birmingham",
+      "Montgomery",
+      "Huntsville",
+      "Tuscaloosa"
+     ],
+     "top_values": [],
+     "description": "Institution city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 51,
+     "is_unique": false,
+     "min_value": "Alabama",
+     "max_value": "Wyoming",
+     "examples": [
+      "Alabama",
+      "Alaska",
+      "Arizona",
+      "New Mexico",
+      "Arkansas"
+     ],
+     "top_values": [],
+     "description": "Institution state",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "level",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "2-year",
+     "max_value": "4-year",
+     "examples": [
+      "4-year",
+      "2-year"
+     ],
+     "top_values": [
+      [
+       "4-year",
+       2339
+      ],
+      [
+       "2-year",
+       1459
+      ]
+     ],
+     "description": "Level of institution",
+     "value_description": "commonsense evidence:\n4-year: bachelor's degree\n2-year: associate's degree",
+     "notes": []
+    },
+    {
+     "name": "control",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Private for-profit",
+     "max_value": "Public",
+     "examples": [
+      "Public",
+      "Private not-for-profit",
+      "Private for-profit"
+     ],
+     "top_values": [
+      [
+       "Public",
+       1558
+      ],
+      [
+       "Private not-for-profit",
+       1248
+      ],
+      [
+       "Private for-profit",
+       992
+      ]
+     ],
+     "description": "Control of institution",
+     "value_description": "Public, \nPrivate not-for-profit, \nPrivate for-profit",
+     "notes": []
+    },
+    {
+     "name": "basic",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 33,
+     "is_unique": false,
+     "min_value": "Associates--Private For-profit",
+     "max_value": "Tribal Colleges",
+     "examples": [
+      "Masters Colleges and Universities--larger programs",
+      "Research Universities--very high research activity",
+      "Baccalaureate Colleges--Arts & Sciences",
+      "Research Universities--high research activity",
+      "Associates--Public Rural-serving Medium"
+     ],
+     "top_values": [
+      [
+       "Associates--Private For-profit",
+       517
+      ],
+      [
+       "Masters Colleges and Universities--larger programs",
+       386
+      ],
+      [
+       "Baccalaureate Colleges--Diverse Fields",
+       343
+      ],
+      [
+       "Associates--Public Rural-serving Medium",
+       289
+      ],
+      [
+       "Baccalaureate Colleges--Arts & Sciences",
+       252
+      ],
+      [
+       "Masters Colleges and Universities--medium programs",
+       169
+      ],
+      [
+       "Associates--Public Rural-serving Large",
+       128
+      ],
+      [
+       "Associates--Public Urban-serving Multicampus",
+       125
+      ],
+      [
+       "Baccalaureate/Associates Colleges",
+       124
+      ],
+      [
+       "Schools of art- music- and design",
+       114
+      ],
+      [
+       "Associates--Public Rural-serving Small",
+       111
+      ],
+      [
+       "Theological seminaries- Bible colleges- and other faith-rela...",
+       106
+      ],
+      [
+       "Research Universities--very high research activity",
+       106
+      ],
+      [
+       "Masters Colleges and Universities--smaller programs",
+       106
+      ],
+      [
+       "Associates--Public Suburban-serving Single Campus",
+       106
+      ],
+      [
+       "Associates--Public Suburban-serving Multicampus",
+       99
+      ],
+      [
+       "Research Universities--high research activity",
+       96
+      ],
+      [
+       "Associates--Private For-profit 4-year Primarily Associates",
+       83
+      ],
+      [
+       "Not applicable- not in Carnegie universe",
+       81
+      ],
+      [
+       "Doctoral/Research Universities",
+       79
+      ],
+      [
+       "Associates--Private Not-for-profit",
+       73
+      ],
+      [
+       "Other technology-related schools",
+       54
+      ],
+      [
+       "Associates--Public 2-year colleges under 4-year universities",
+       47
+      ],
+      [
+       "Other health professions schools",
+       43
+      ],
+      [
+       "Schools of business and management",
+       42
+      ],
+      [
+       "Associates--Public 4-year Primarily Associates",
+       34
+      ],
+      [
+       "Tribal Colleges",
+       33
+      ],
+      [
+       "Associates--Public Urban-serving Single Campus",
+       31
+      ],
+      [
+       "Associates--Private Not-for-profit 4-year Primarily Associat...",
+       7
+      ],
+      [
+       "Other special-focus institutions",
+       5
+      ],
+      [
+       "Schools of engineering",
+       4
+      ],
+      [
+       "Associates--Public Special Use",
+       4
+      ],
+      [
+       "Schools of law",
+       1
+      ]
+     ],
+     "description": "Carnegie Foundation for the Advancement of Teaching Basic Classification (2010 version)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "hbcu",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "NULL",
+     "max_value": "X",
+     "examples": [
+      "X",
+      "NULL"
+     ],
+     "top_values": [
+      [
+       "NULL",
+       3704
+      ],
+      [
+       "X",
+       94
+      ]
+     ],
+     "description": "Denotes Historically Black College and Universities",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "flagship",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "NULL",
+     "max_value": "X",
+     "examples": [
+      "NULL",
+      "X"
+     ],
+     "top_values": [
+      [
+       "NULL",
+       3748
+      ],
+      [
+       "X",
+       50
+      ]
+     ],
+     "description": "Denotes Public flagship institutions",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "long_x",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3798,
+     "is_unique": true,
+     "min_value": -159.395966,
+     "max_value": -67.243306,
+     "examples": [
+      -86.568502,
+      -86.80917,
+      -86.17401,
+      -86.63842,
+      -86.295677
+     ],
+     "top_values": [],
+     "description": "Institution longitude",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lat_y",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3798,
+     "is_unique": true,
+     "min_value": 19.69972,
+     "max_value": 71.324702,
+     "examples": [
+      34.783368,
+      33.50223,
+      32.362609,
+      34.722818,
+      32.364317
+     ],
+     "top_values": [],
+     "description": "Institution latitude",
+     "value_description": "commonsense evidence:\ninstitute Coordinate",
+     "notes": []
+    },
+    {
+     "name": "site",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.005,
+     "distinct_count": 3333,
+     "is_unique": false,
+     "min_value": "abtu.edu",
+     "max_value": "yeshivaofnitra.org",
+     "examples": [
+      "www.aamu.edu/",
+      "www.uab.edu",
+      "www.amridgeuniversity.edu",
+      "www.uah.edu",
+      "www.alasu.edu/email/index.aspx"
+     ],
+     "top_values": [],
+     "description": "Institution Web site address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "student_count",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2829,
+     "is_unique": false,
+     "min_value": 23,
+     "max_value": 170144,
+     "examples": [
+      4051,
+      11502,
+      322,
+      5696,
+      5356
+     ],
+     "top_values": [],
+     "description": "student count. Total number of undergraduates in 2010",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "awards_per_value",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 517,
+     "is_unique": false,
+     "min_value": 0.5,
+     "max_value": 137.6,
+     "examples": [
+      14.2,
+      20.9,
+      29.9,
+      11.6,
+      18.3
+     ],
+     "top_values": [],
+     "description": "awards per value. Completions per 100 FTE (full-time equivalency) undergraduate students (average 2011, 2012, and 2013)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "awards_per_state_value",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 160,
+     "is_unique": false,
+     "min_value": 3.2,
+     "max_value": 59.9,
+     "examples": [
+      18.8,
+      17.8,
+      15.9,
+      29.1,
+      3.2
+     ],
+     "top_values": [],
+     "description": "awards per state value. Completions per 100 FTE (full-time equivalency) undergraduate students, state and sector average",
+     "value_description": "commonsense evidence:\n if his institute's completion (or graduation) rate exceeds the average for the state and sector in which it belongs:\nawards_per_value > awards_per_state_value\n if his institute's completion (or graduation) rate falls below the average for the state and sector in which it belongs:\nawards_per_value < awards_per_state_value",
+     "notes": []
+    },
+    {
+     "name": "awards_per_natl_value",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 16.5,
+     "max_value": 32.8,
+     "examples": [
+      21.5,
+      22.5,
+      16.5,
+      24.6,
+      32.8
+     ],
+     "top_values": [
+      [
+       22.5,
+       1180
+      ],
+      [
+       16.5,
+       926
+      ],
+      [
+       21.5,
+       632
+      ],
+      [
+       24.6,
+       527
+      ],
+      [
+       32.8,
+       465
+      ],
+      [
+       25.9,
+       68
+      ]
+     ],
+     "description": "awards per national value. Completions per 100 FTE (full-time equivalency) undergraduate students, national sector average",
+     "value_description": "commonsense evidence:\n if his institute's completion (or graduation) rate exceeds the average for the nationalin which it belongs:\nawards_per_value > awards_per_natl_value\n if his institute's completion (or graduation) rate falls below the average for the state and industry in which it belongs:\nawards_per_value < awards_per_natl_value",
+     "notes": []
+    },
+    {
+     "name": "exp_award_value",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3611,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 5282095,
+     "examples": [
+      105331,
+      136546,
+      58414,
+      64418,
+      132407
+     ],
+     "top_values": [],
+     "description": "expected award value. Estimated educational spending per academic award in 2013. Includes all certificates and degrees",
+     "value_description": "expenses related to instruction, research, public service, student services, academic support, institutional support, operations and maintenance. Includes all certificates and degrees",
+     "notes": []
+    },
+    {
+     "name": "exp_award_state_value",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 264,
+     "is_unique": false,
+     "min_value": 12346,
+     "max_value": 188870,
+     "examples": [
+      75743,
+      92268,
+      42194,
+      17406,
+      24274
+     ],
+     "top_values": [],
+     "description": "expected award state value. Spending per completion, state and sector average",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "exp_award_natl_value",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 24795,
+     "max_value": 101725,
+     "examples": [
+      66436,
+      101725,
+      37780,
+      38763,
+      24795
+     ],
+     "top_values": [
+      [
+       101725,
+       1180
+      ],
+      [
+       37780,
+       926
+      ],
+      [
+       66436,
+       632
+      ],
+      [
+       38763,
+       527
+      ],
+      [
+       24795,
+       465
+      ],
+      [
+       34510,
+       68
+      ]
+     ],
+     "description": "expected award national value. Spending per completion, national sector average",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "exp_award_percentile",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 101,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 100,
+     "examples": [
+      90,
+      97,
+      30,
+      61,
+      96
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ft_pct",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0011,
+     "distinct_count": 835,
+     "is_unique": false,
+     "min_value": 3.8,
+     "max_value": 100.0,
+     "examples": [
+      93.8,
+      72.7,
+      62.7,
+      74.4,
+      91.0
+     ],
+     "top_values": [],
+     "description": "Full-time percentage. Percentage of undergraduates who attend full-time",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "fte_value",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2745,
+     "is_unique": false,
+     "min_value": 33,
+     "max_value": 126411,
+     "examples": [
+      3906,
+      10032,
+      294,
+      5000,
+      5035
+     ],
+     "top_values": [],
+     "description": "Full-time percentage. total number of full-time equivalent undergraduates",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "fte_percentile",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 101,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 100,
+     "examples": [
+      33,
+      67,
+      12,
+      40,
+      41
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "med_sat_value",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 473,
+     "is_unique": false,
+     "min_value": "1000",
+     "max_value": "NULL",
+     "examples": [
+      "823",
+      "1146",
+      "NULL",
+      "1180",
+      "830"
+     ],
+     "top_values": [],
+     "description": "median SAT value. Median estimated SAT value for incoming students",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "med_sat_percentile",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 102,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "0",
+      "84",
+      "NULL",
+      "89",
+      "1"
+     ],
+     "top_values": [],
+     "description": "median SAT percentile. Institution's percent rank for median SAT value within sector",
+     "value_description": "Institution's percent rank for median SAT value within sector",
+     "notes": []
+    },
+    {
+     "name": "aid_value",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 3135,
+     "is_unique": false,
+     "min_value": 294,
+     "max_value": 41580,
+     "examples": [
+      7142,
+      6088,
+      2540,
+      6647,
+      7256
+     ],
+     "top_values": [],
+     "description": "aid value. The average amount of student aid going to undergraduate recipients",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "aid_percentile",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 101,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 100,
+     "examples": [
+      72,
+      50,
+      1,
+      63,
+      74
+     ],
+     "top_values": [],
+     "description": "aid percentile. Institution's percent rank for average amount of student aid going to undergraduate recipients within sector",
+     "value_description": "Institution's percent rank for average amount of student aid going to undergraduate recipients within sector",
+     "notes": []
+    },
+    {
+     "name": "endow_value",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2141,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "NULL",
+      "24136",
+      "302",
+      "11502",
+      "13202"
+     ],
+     "top_values": [],
+     "description": "endow value. End-of-year endowment value per full-time equivalent student",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "endow_percentile",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 102,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "NULL",
+      "93",
+      "1",
+      "81",
+      "84"
+     ],
+     "top_values": [],
+     "description": "endow percentile. Institution's percent rank for endowment value per full-time equivalent student within sector",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "grad_100_value",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0872,
+     "distinct_count": 806,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 100.0,
+     "examples": [
+      10.0,
+      29.4,
+      0.0,
+      16.5,
+      8.8
+     ],
+     "top_values": [],
+     "description": "graduation 100 value. percentage of first-time, full-time, degree-seeking undergraduates who complete a degree or certificate program within 100 percent of expected time (bachelor's-seeking group at 4-year institutions)",
+     "value_description": "%, \ncommonsense evidence:\nlower means harder to graduate for bachelor",
+     "notes": []
+    },
+    {
+     "name": "grad_100_percentile",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0872,
+     "distinct_count": 101,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 100,
+     "examples": [
+      15,
+      67,
+      0,
+      34,
+      11
+     ],
+     "top_values": [],
+     "description": "graduation 100 percentile. Institution's percent rank for completers within 100 percent of normal time within sector",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "grad_150_value",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0872,
+     "distinct_count": 862,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 100.0,
+     "examples": [
+      29.1,
+      53.5,
+      66.7,
+      48.4,
+      25.2
+     ],
+     "top_values": [],
+     "description": "graduation 150 value. percentage of first-time, full-time, degree-seeking undergraduates who complete a degree or certificate program within 150 percent of expected time (bachelor's-seeking group at 4-year institutions)",
+     "value_description": "%, \ncommonsense evidence:\nlower means harder to graduate for bachelor",
+     "notes": []
+    },
+    {
+     "name": "grad_150_percentile",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0872,
+     "distinct_count": 101,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 100,
+     "examples": [
+      14,
+      66,
+      72,
+      54,
+      9
+     ],
+     "top_values": [],
+     "description": "graduation 150 percentile. Institution's percent rank for completers within 150 percent of normal time within sector",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "pell_value",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 832,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 100.0,
+     "examples": [
+      71.2,
+      35.1,
+      68.4,
+      32.8,
+      82.7
+     ],
+     "top_values": [],
+     "description": "pell value. percentage of undergraduates receiving a Pell Grant",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "pell_percentile",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0003,
+     "distinct_count": 101,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 100,
+     "examples": [
+      98,
+      39,
+      91,
+      32,
+      100
+     ],
+     "top_values": [],
+     "description": "pell percentile. Institution's percent rank for undergraduate Pell recipients within sector",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "retain_value",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0692,
+     "distinct_count": 649,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 100.0,
+     "examples": [
+      63.1,
+      80.2,
+      37.5,
+      81.0,
+      62.2
+     ],
+     "top_values": [],
+     "description": "retain value. share of freshman students retained for a second year",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "retain_percentile",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0692,
+     "distinct_count": 101,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 100,
+     "examples": [
+      17,
+      70,
+      2,
+      72,
+      15
+     ],
+     "top_values": [],
+     "description": "retain percentile. Institution's percent rank for freshman retention percentage within sector",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ft_fac_value",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0034,
+     "distinct_count": 897,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 100.0,
+     "examples": [
+      82.8,
+      92.4,
+      67.2,
+      65.5,
+      67.0
+     ],
+     "top_values": [],
+     "description": "full time faculty value. Percentage of employees devoted to instruction, research or public service who are full-time and do not work for an associated medical school",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ft_fac_percentile",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0034,
+     "distinct_count": 100,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 99,
+     "examples": [
+      89,
+      98,
+      71,
+      56,
+      58
+     ],
+     "top_values": [],
+     "description": "full time faculty percentile. Institution's percent rank for full-time faculty share within sector",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_year",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0029,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "2008",
+     "max_value": "NULL",
+     "examples": [
+      "2010",
+      "2011",
+      "NULL",
+      "2008"
+     ],
+     "top_values": [
+      [
+       "NULL",
+       3508
+      ],
+      [
+       "2010",
+       178
+      ],
+      [
+       "2011",
+       70
+      ],
+      [
+       "2009",
+       21
+      ],
+      [
+       "2008",
+       10
+      ]
+     ],
+     "description": "voluntary system of accountability year. Most recent year of Student Success and Progress Rate data available from the Voluntary System of Accountability",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_grad_after4_first",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 221,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "14.7",
+      "22.3",
+      "NULL",
+      "12.8",
+      "4.1"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability after 4 year first time. First-time, full-time students who graduated from this institution within four years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_grad_elsewhere_after4_first",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 77,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "2",
+      "2.9",
+      "NULL",
+      "4.7",
+      "1.3"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability graduation elsewhere after 4 year first time. First-time, full-time students who graduated from another institution within four years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_enroll_after4_first",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 189,
+     "is_unique": false,
+     "min_value": "11.8",
+     "max_value": "NULL",
+     "examples": [
+      "36.5",
+      "34.2",
+      "NULL",
+      "42.8",
+      "67.8"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability enrollment after 4 year first time. First-time, full-time students who are still enrolled at this institution after four years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_enroll_elsewhere_after4_first",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 148,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "16.1",
+      "19.2",
+      "NULL",
+      "18.3",
+      "13.2"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability enrollment elsewhere after 4 year first time. First-time, full-time students who are enrolled at another institution after four years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_grad_after6_first",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 230,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "33",
+      "42.6",
+      "NULL",
+      "43",
+      "60.6"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability graduation elsewhere after 6 year first time. First-time, full-time students who graduated from this institution within six years",
+     "value_description": "null: not available",
+     "notes": []
+    },
+    {
+     "name": "vsa_grad_elsewhere_after6_first",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 124,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "5.3",
+      "10.5",
+      "NULL",
+      "14.5",
+      "8"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability graduation elsewhere after 6 year first time. First-time, full-time students who graduated from another institution within six years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_enroll_after6_first",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 124,
+     "is_unique": false,
+     "min_value": "0.7",
+     "max_value": "NULL",
+     "examples": [
+      "12.5",
+      "7.9",
+      "NULL",
+      "10.2",
+      "9.9"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability enrollment after 6 year first time. First-time, full-time students who are still enrolled at this institution after six years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_enroll_elsewhere_after6_first",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 129,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "14.6",
+      "13.1",
+      "NULL",
+      "11.7",
+      "8"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability enrollment elsewhere after 6 year first time. First-time, full-time students who are enrolled at another institution after six years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_grad_after4_transfer",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 206,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "15.7",
+      "NULL",
+      "0",
+      "45.8",
+      "64.2"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability transfer after 6 year first time. Full-time transfer students who graduated from this institution within four years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_grad_elsewhere_after4_transfer",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 101,
+     "is_unique": false,
+     "min_value": "-13.4",
+     "max_value": "NULL",
+     "examples": [
+      "1.5",
+      "NULL",
+      "0",
+      "5.2",
+      "6.3"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability graduation elsewhere after 4 year. Full-time transfer students who graduated from this institution within four years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_enroll_after4_transfer",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 141,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "40.9",
+      "NULL",
+      "0",
+      "23",
+      "11.6"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability enrollment after 4 years transfer. Full-time transfer students who are still enrolled at this institution after four years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_enroll_elsewhere_after4_transfer",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 119,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "17.2",
+      "NULL",
+      "0",
+      "7.9",
+      "7.6"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability enrollment elsewhere after 4 years transfer. Full-time transfer students who are enrolled at another institution after four years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_grad_after6_transfer",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 199,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "36.4",
+      "NULL",
+      "0",
+      "61.5",
+      "72.2"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability enrollment elsewhere after 6 years transfer. Full-time transfer students who graduated from this institution within six years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_grad_elsewhere_after6_transfer",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 121,
+     "is_unique": false,
+     "min_value": "-9",
+     "max_value": "NULL",
+     "examples": [
+      "5.6",
+      "NULL",
+      "0",
+      "8.5",
+      "9.7"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability graduation elsewhere after 6 years transfer. Full-time transfer students who graduated from another institution within six years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_enroll_after6_transfer",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 74,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "17.2",
+      "NULL",
+      "0",
+      "6.3",
+      "2"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability enrollment after 6 years transfer. Full-time transfer students who are still enrolled at this institution after six years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "vsa_enroll_elsewhere_after6_transfer",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 98,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "11.1",
+      "NULL",
+      "0",
+      "5.5",
+      "4.6"
+     ],
+     "top_values": [],
+     "description": "voluntary system of accountability enrollment elsewhere after 6 years transfer. Full-time transfer students who are enrolled at another institution after six years",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "similar",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3566,
+     "is_unique": false,
+     "min_value": "100654|100724|405997|113607|206695|228431|101480|159993|4195...",
+     "max_value": "NULL",
+     "examples": [
+      "232937|100724|405997|113607|139533|144005|228501|101480|1318...",
+      "196060|180461|201885|145600|209542|236939|126818|230764|1041...",
+      "217925|441511|205124|247825|197647|221856|135364|117575|1642...",
+      "232186|133881|196103|196413|207388|171128|190044|178402|1858...",
+      "100654|232937|242617|243197|144005|241739|235422|243601|1136..."
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state_sector_ct",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 51,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 116,
+     "examples": [
+      13,
+      16,
+      25,
+      9,
+      5
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "carnegie_ct",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 29,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 517,
+     "examples": [
+      386,
+      106,
+      252,
+      96,
+      289
+     ],
+     "top_values": [
+      [
+       517,
+       517
+      ],
+      [
+       106,
+       424
+      ],
+      [
+       386,
+       386
+      ],
+      [
+       343,
+       343
+      ],
+      [
+       289,
+       289
+      ],
+      [
+       252,
+       252
+      ],
+      [
+       169,
+       169
+      ],
+      [
+       128,
+       128
+      ],
+      [
+       125,
+       125
+      ],
+      [
+       124,
+       124
+      ],
+      [
+       114,
+       114
+      ],
+      [
+       111,
+       111
+      ],
+      [
+       99,
+       99
+      ],
+      [
+       96,
+       96
+      ],
+      [
+       83,
+       83
+      ],
+      [
+       81,
+       81
+      ],
+      [
+       79,
+       79
+      ],
+      [
+       73,
+       73
+      ],
+      [
+       54,
+       54
+      ],
+      [
+       47,
+       47
+      ],
+      [
+       43,
+       43
+      ],
+      [
+       42,
+       42
+      ],
+      [
+       34,
+       34
+      ],
+      [
+       33,
+       33
+      ],
+      [
+       31,
+       31
+      ],
+      [
+       4,
+       8
+      ],
+      [
+       7,
+       7
+      ],
+      [
+       5,
+       5
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "counted_pct",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1345,
+     "is_unique": false,
+     "min_value": "0.0|07",
+     "max_value": "NULL",
+     "examples": [
+      "99.7|07",
+      "56.0|07",
+      "100.0|07",
+      "43.1|07",
+      "88.0|07"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "nicknames",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 275,
+     "is_unique": false,
+     "min_value": "A&T|NC A&T",
+     "max_value": "YSU",
+     "examples": [
+      "NULL",
+      "UAB",
+      "UAH",
+      "ASU",
+      "AUM"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "cohort_size",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0872,
+     "distinct_count": 1409,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 16229,
+     "examples": [
+      882,
+      1376,
+      3,
+      759,
+      1351
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "unitid"
+   ],
+   "sample_rows": [
+    {
+     "unitid": 100654,
+     "chronname": "Alabama A&M University",
+     "city": "Normal",
+     "state": "Alabama",
+     "level": "4-year",
+     "control": "Public",
+     "basic": "Masters Colleges and Universities--larger programs",
+     "hbcu": "X",
+     "flagship": "NULL",
+     "long_x": -86.568502,
+     "lat_y": 34.783368,
+     "site": "www.aamu.edu/",
+     "student_count": 4051,
+     "awards_per_value": 14.2,
+     "awards_per_state_value": 18.8,
+     "awards_per_natl_value": 21.5,
+     "exp_award_value": 105331,
+     "exp_award_state_value": 75743,
+     "exp_award_natl_value": 66436,
+     "exp_award_percentile": 90,
+     "ft_pct": 93.8,
+     "fte_value": 3906,
+     "fte_percentile": 33,
+     "med_sat_value": "823",
+     "med_sat_percentile": "0",
+     "aid_value": 7142,
+     "aid_percentile": 72,
+     "endow_value": "NULL",
+     "endow_percentile": "NULL",
+     "grad_100_value": 10.0,
+     "grad_100_percentile": 15,
+     "grad_150_value": 29.1,
+     "grad_150_percentile": 14,
+     "pell_value": 71.2,
+     "pell_percentile": 98,
+     "retain_value": 63.1,
+     "retain_percentile": 17,
+     "ft_fac_value": 82.8,
+     "ft_fac_percentile": 89,
+     "vsa_year": "2010",
+     "vsa_grad_after4_first": "14.7",
+     "vsa_grad_elsewhere_after4_first": "2",
+     "vsa_enroll_after4_first": "36.5",
+     "vsa_enroll_elsewhere_after4_first": "16.1",
+     "vsa_grad_after6_first": "33",
+     "vsa_grad_elsewhere_after6_first": "5.3",
+     "vsa_enroll_after6_first": "12.5",
+     "vsa_enroll_elsewhere_after6_first": "14.6",
+     "vsa_grad_after4_transfer": "15.7",
+     "vsa_grad_elsewhere_after4_transfer": "1.5",
+     "vsa_enroll_after4_transfer": "40.9",
+     "vsa_enroll_elsewhere_after4_transfer": "17.2",
+     "vsa_grad_after6_transfer": "36.4",
+     "vsa_grad_elsewhere_after6_transfer": "5.6",
+     "vsa_enroll_after6_transfer": "17.2",
+     "vsa_enroll_elsewhere_after6_transfer": "11.1",
+     "similar": "232937|100724|405997|113607|139533|144005|228501|101480|1318...",
+     "state_sector_ct": 13,
+     "carnegie_ct": 386,
+     "counted_pct": "99.7|07",
+     "nicknames": "NULL",
+     "cohort_size": 882
+    },
+    {
+     "unitid": 100663,
+     "chronname": "University of Alabama at Birmingham",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "level": "4-year",
+     "control": "Public",
+     "basic": "Research Universities--very high research activity",
+     "hbcu": "NULL",
+     "flagship": "NULL",
+     "long_x": -86.80917,
+     "lat_y": 33.50223,
+     "site": "www.uab.edu",
+     "student_count": 11502,
+     "awards_per_value": 20.9,
+     "awards_per_state_value": 18.8,
+     "awards_per_natl_value": 21.5,
+     "exp_award_value": 136546,
+     "exp_award_state_value": 75743,
+     "exp_award_natl_value": 66436,
+     "exp_award_percentile": 97,
+     "ft_pct": 72.7,
+     "fte_value": 10032,
+     "fte_percentile": 67,
+     "med_sat_value": "1146",
+     "med_sat_percentile": "84",
+     "aid_value": 6088,
+     "aid_percentile": 50,
+     "endow_value": "24136",
+     "endow_percentile": "93",
+     "grad_100_value": 29.4,
+     "grad_100_percentile": 67,
+     "grad_150_value": 53.5,
+     "grad_150_percentile": 66,
+     "pell_value": 35.1,
+     "pell_percentile": 39,
+     "retain_value": 80.2,
+     "retain_percentile": 70,
+     "ft_fac_value": 92.4,
+     "ft_fac_percentile": 98,
+     "vsa_year": "2011",
+     "vsa_grad_after4_first": "22.3",
+     "vsa_grad_elsewhere_after4_first": "2.9",
+     "vsa_enroll_after4_first": "34.2",
+     "vsa_enroll_elsewhere_after4_first": "19.2",
+     "vsa_grad_after6_first": "42.6",
+     "vsa_grad_elsewhere_after6_first": "10.5",
+     "vsa_enroll_after6_first": "7.9",
+     "vsa_enroll_elsewhere_after6_first": "13.1",
+     "vsa_grad_after4_transfer": "NULL",
+     "vsa_grad_elsewhere_after4_transfer": "NULL",
+     "vsa_enroll_after4_transfer": "NULL",
+     "vsa_enroll_elsewhere_after4_transfer": "NULL",
+     "vsa_grad_after6_transfer": "NULL",
+     "vsa_grad_elsewhere_after6_transfer": "NULL",
+     "vsa_enroll_after6_transfer": "NULL",
+     "vsa_enroll_elsewhere_after6_transfer": "NULL",
+     "similar": "196060|180461|201885|145600|209542|236939|126818|230764|1041...",
+     "state_sector_ct": 13,
+     "carnegie_ct": 106,
+     "counted_pct": "56.0|07",
+     "nicknames": "UAB",
+     "cohort_size": 1376
+    },
+    {
+     "unitid": 100690,
+     "chronname": "Amridge University",
+     "city": "Montgomery",
+     "state": "Alabama",
+     "level": "4-year",
+     "control": "Private not-for-profit",
+     "basic": "Baccalaureate Colleges--Arts & Sciences",
+     "hbcu": "NULL",
+     "flagship": "NULL",
+     "long_x": -86.17401,
+     "lat_y": 32.362609,
+     "site": "www.amridgeuniversity.edu",
+     "student_count": 322,
+     "awards_per_value": 29.9,
+     "awards_per_state_value": 17.8,
+     "awards_per_natl_value": 22.5,
+     "exp_award_value": 58414,
+     "exp_award_state_value": 92268,
+     "exp_award_natl_value": 101725,
+     "exp_award_percentile": 30,
+     "ft_pct": 62.7,
+     "fte_value": 294,
+     "fte_percentile": 12,
+     "med_sat_value": "NULL",
+     "med_sat_percentile": "NULL",
+     "aid_value": 2540,
+     "aid_percentile": 1,
+     "endow_value": "302",
+     "endow_percentile": "1",
+     "grad_100_value": 0.0,
+     "grad_100_percentile": 0,
+     "grad_150_value": 66.7,
+     "grad_150_percentile": 72,
+     "pell_value": 68.4,
+     "pell_percentile": 91,
+     "retain_value": 37.5,
+     "retain_percentile": 2,
+     "ft_fac_value": 67.2,
+     "ft_fac_percentile": 71,
+     "vsa_year": "NULL",
+     "vsa_grad_after4_first": "NULL",
+     "vsa_grad_elsewhere_after4_first": "NULL",
+     "vsa_enroll_after4_first": "NULL",
+     "vsa_enroll_elsewhere_after4_first": "NULL",
+     "vsa_grad_after6_first": "NULL",
+     "vsa_grad_elsewhere_after6_first": "NULL",
+     "vsa_enroll_after6_first": "NULL",
+     "vsa_enroll_elsewhere_after6_first": "NULL",
+     "vsa_grad_after4_transfer": "NULL",
+     "vsa_grad_elsewhere_after4_transfer": "NULL",
+     "vsa_enroll_after4_transfer": "NULL",
+     "vsa_enroll_elsewhere_after4_transfer": "NULL",
+     "vsa_grad_after6_transfer": "NULL",
+     "vsa_grad_elsewhere_after6_transfer": "NULL",
+     "vsa_enroll_after6_transfer": "NULL",
+     "vsa_enroll_elsewhere_after6_transfer": "NULL",
+     "similar": "217925|441511|205124|247825|197647|221856|135364|117575|1642...",
+     "state_sector_ct": 16,
+     "carnegie_ct": 252,
+     "counted_pct": "100.0|07",
+     "nicknames": "NULL",
+     "cohort_size": 3
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "institution_grads",
+   "row_count": 1302102,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "unitid",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3704,
+     "is_unique": false,
+     "min_value": 100654,
+     "max_value": 474881,
+     "examples": [
+      100760,
+      101028,
+      101143,
+      101161
+     ],
+     "top_values": [],
+     "description": "Education Unit ID number",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": 2011,
+     "max_value": 2013,
+     "examples": [
+      2011,
+      2012,
+      2013
+     ],
+     "top_values": [
+      [
+       2012,
+       66672
+      ],
+      [
+       2011,
+       66672
+      ],
+      [
+       2013,
+       66656
+      ]
+     ],
+     "description": "year of data release",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "B",
+     "max_value": "M",
+     "examples": [
+      "B",
+      "M",
+      "F"
+     ],
+     "top_values": [
+      [
+       "M",
+       66667
+      ],
+      [
+       "B",
+       66667
+      ],
+      [
+       "F",
+       66666
+      ]
+     ],
+     "description": "gender of students",
+     "value_description": "'B' = both genders; 'M' = male; 'F' = female",
+     "notes": []
+    },
+    {
+     "name": "race",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "X",
+     "examples": [
+      "X",
+      "W",
+      "B",
+      "H",
+      "Ai"
+     ],
+     "top_values": [
+      [
+       "X",
+       33335
+      ],
+      [
+       "W",
+       33333
+      ],
+      [
+       "H",
+       33333
+      ],
+      [
+       "B",
+       33333
+      ],
+      [
+       "Ai",
+       33333
+      ],
+      [
+       "A",
+       33333
+      ]
+     ],
+     "description": "race/ethnicity of students",
+     "value_description": "commonsense evidence:\n'X' = all students; 'Ai' = American Indian; 'A' = Asian; 'B' = Black; 'H' = Hispanic; 'W' = White",
+     "notes": []
+    },
+    {
+     "name": "cohort",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "2y all",
+     "max_value": "4y other",
+     "examples": [
+      "2y all"
+     ],
+     "top_values": [
+      [
+       "4y other",
+       121214
+      ],
+      [
+       "2y all",
+       78786
+      ]
+     ],
+     "description": "degree-seeking cohort type",
+     "value_description": "commonsense evidence:\n '4y bach' = Bachelor's/equivalent-seeking cohort at 4-year institutions; \n '4y other' = Students seeking another type of degree or certificate at a 4-year institution; \n '2y all' = Degree-seeking students at 2-year institutions\n4-year degree is bachelor's degree\n2-year degree is associate's degree",
+     "notes": []
+    },
+    {
+     "name": "grad_cohort",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2048,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "446",
+      "185",
+      "261",
+      "348",
+      "162"
+     ],
+     "top_values": [],
+     "description": "graduation cohort. Number of first-time, full-time, degree-seeking students in the cohort being tracked, minus any exclusions",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "grad_100",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 512,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "73",
+      "NULL",
+      "40",
+      "46",
+      "25"
+     ],
+     "top_values": [],
+     "description": "graduation 100. Number of students who graduated within 100 percent of normal/expected time",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "grad_150",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 946,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "105",
+      "40",
+      "65",
+      "86",
+      "35"
+     ],
+     "top_values": [],
+     "description": "graduation 150. Number of students who graduated within 150 percent of normal/expected time",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "grad_100_rate",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 795,
+     "is_unique": false,
+     "min_value": "0.0",
+     "max_value": "NULL",
+     "examples": [
+      "16.4",
+      "NULL",
+      "6.7",
+      "7.7",
+      "9.6"
+     ],
+     "top_values": [],
+     "description": "Percentage of students who graduated within 100 percent of normal/expected time",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "grad_150_rate",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 991,
+     "is_unique": false,
+     "min_value": "0.0",
+     "max_value": "NULL",
+     "examples": [
+      "23.5",
+      "21.6",
+      "24.9",
+      "24.7",
+      "27.4"
+     ],
+     "top_values": [],
+     "description": "Percentage of students who graduated within 150 percent of normal/expected time",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "unitid": 100760,
+     "year": 2011,
+     "gender": "B",
+     "race": "X",
+     "cohort": "2y all",
+     "grad_cohort": "446",
+     "grad_100": "73",
+     "grad_150": "105",
+     "grad_100_rate": "16.4",
+     "grad_150_rate": "23.5"
+    },
+    {
+     "unitid": 100760,
+     "year": 2011,
+     "gender": "M",
+     "race": "X",
+     "cohort": "2y all",
+     "grad_cohort": "185",
+     "grad_100": "NULL",
+     "grad_150": "40",
+     "grad_100_rate": "NULL",
+     "grad_150_rate": "21.6"
+    },
+    {
+     "unitid": 100760,
+     "year": 2011,
+     "gender": "F",
+     "race": "X",
+     "cohort": "2y all",
+     "grad_cohort": "261",
+     "grad_100": "NULL",
+     "grad_150": "65",
+     "grad_100_rate": "NULL",
+     "grad_150_rate": "24.9"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 1,302,102 rows",
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "state_sector_details",
+   "row_count": 312,
+   "stats_rows": 312,
+   "columns": [
+    {
+     "name": "stateid",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 52,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 56,
+     "examples": [
+      0,
+      1,
+      2,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "state id. state FIPS (Federal Information Processing System) code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 52,
+     "is_unique": false,
+     "min_value": "Alabama",
+     "max_value": "Wyoming",
+     "examples": [
+      "United States",
+      "Alabama",
+      "Alaska",
+      "Arizona",
+      "Arkansas"
+     ],
+     "top_values": [],
+     "description": "state name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state_post",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 52,
+     "is_unique": false,
+     "min_value": "Ala.",
+     "max_value": "Wyo.",
+     "examples": [
+      "U.S.",
+      "Ala.",
+      "Alaska",
+      "Ariz.",
+      "Ark."
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "level",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "2-year",
+     "max_value": "4-year",
+     "examples": [
+      "4-year",
+      "2-year"
+     ],
+     "top_values": [
+      [
+       "4-year",
+       156
+      ],
+      [
+       "2-year",
+       156
+      ]
+     ],
+     "description": "Level of institution",
+     "value_description": "commonsense evidence:\n4-year: bachelor's degree\n2-year: associate's degree",
+     "notes": []
+    },
+    {
+     "name": "control",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Private for-profit",
+     "max_value": "Public",
+     "examples": [
+      "Public",
+      "Private not-for-profit",
+      "Private for-profit"
+     ],
+     "top_values": [
+      [
+       "Public",
+       104
+      ],
+      [
+       "Private not-for-profit",
+       104
+      ],
+      [
+       "Private for-profit",
+       104
+      ]
+     ],
+     "description": "",
+     "value_description": "Public, \nPrivate not-for-profit, \nPrivate for-profit",
+     "notes": []
+    },
+    {
+     "name": "schools_count",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 58,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1180,
+     "examples": [
+      632,
+      1180,
+      527,
+      926,
+      68
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "counted_pct",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 209,
+     "is_unique": false,
+     "min_value": "100",
+     "max_value": "NULL",
+     "examples": [
+      "NULL",
+      "61",
+      "62",
+      "37.8",
+      "49"
+     ],
+     "top_values": [],
+     "description": "counted percentage. Percentage of students in the entering class (Fall 2007 at 4-year institutions, Fall 2010 at 2-year institutions) who are first-time, full-time, degree-seeking students and generally part of the official graduation rate",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "awards_per_state_value",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 161,
+     "is_unique": false,
+     "min_value": "11.6",
+     "max_value": "NULL",
+     "examples": [
+      "NULL",
+      "18.8",
+      "17.8",
+      "29.1",
+      "15.9"
+     ],
+     "top_values": [],
+     "description": "awards per state value. Completions per 100 FTE (full-time equivalent) undergraduate students, state and sector average",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "awards_per_natl_value",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 16.5,
+     "max_value": 32.8,
+     "examples": [
+      21.5,
+      22.5,
+      24.6,
+      16.5,
+      25.9
+     ],
+     "top_values": [
+      [
+       32.8,
+       52
+      ],
+      [
+       25.9,
+       52
+      ],
+      [
+       24.6,
+       52
+      ],
+      [
+       22.5,
+       52
+      ],
+      [
+       21.5,
+       52
+      ],
+      [
+       16.5,
+       52
+      ]
+     ],
+     "description": "awards per national value. Completions per 100 FTE (full-time equivalent) undergraduate students, national sector average",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "exp_award_state_value",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 265,
+     "is_unique": false,
+     "min_value": "101521",
+     "max_value": "NULL",
+     "examples": [
+      "NULL",
+      "75743",
+      "92268",
+      "17406",
+      "42194"
+     ],
+     "top_values": [],
+     "description": "expected award state value. Spending per completion, state and sector average",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "exp_award_natl_value",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 24795,
+     "max_value": 101725,
+     "examples": [
+      66436,
+      101725,
+      38763,
+      37780,
+      34510
+     ],
+     "top_values": [
+      [
+       101725,
+       52
+      ],
+      [
+       66436,
+       52
+      ],
+      [
+       38763,
+       52
+      ],
+      [
+       37780,
+       52
+      ],
+      [
+       34510,
+       52
+      ],
+      [
+       24795,
+       52
+      ]
+     ],
+     "description": "expected award national value. Spending per completion, national sector average",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state_appr_value",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 50,
+     "is_unique": false,
+     "min_value": "121.6",
+     "max_value": "NULL",
+     "examples": [
+      "NULL",
+      "290.68",
+      "496.78",
+      "126.81",
+      "306.32"
+     ],
+     "top_values": [
+      [
+       "NULL",
+       12
+      ],
+      [
+       "254.79",
+       12
+      ],
+      [
+       "659.39",
+       6
+      ],
+      [
+       "64.7",
+       6
+      ],
+      [
+       "496.78",
+       6
+      ],
+      [
+       "475.27",
+       6
+      ],
+      [
+       "415.54",
+       6
+      ],
+      [
+       "383.36",
+       6
+      ],
+      [
+       "365.74",
+       6
+      ],
+      [
+       "352.99",
+       6
+      ],
+      [
+       "309.22",
+       6
+      ],
+      [
+       "306.32",
+       6
+      ],
+      [
+       "294.32",
+       6
+      ],
+      [
+       "290.68",
+       6
+      ],
+      [
+       "276.87",
+       6
+      ],
+      [
+       "275.92",
+       6
+      ],
+      [
+       "271.97",
+       6
+      ],
+      [
+       "268.24",
+       6
+      ],
+      [
+       "266.19",
+       6
+      ],
+      [
+       "262.35",
+       6
+      ],
+      [
+       "258.12",
+       6
+      ],
+      [
+       "254.17",
+       6
+      ],
+      [
+       "253.91",
+       6
+      ],
+      [
+       "242.95",
+       6
+      ],
+      [
+       "237.11",
+       6
+      ],
+      [
+       "236.69",
+       6
+      ],
+      [
+       "233.86",
+       6
+      ],
+      [
+       "230.7",
+       6
+      ],
+      [
+       "225.18",
+       6
+      ],
+      [
+       "224.01",
+       6
+      ],
+      [
+       "223.35",
+       6
+      ],
+      [
+       "212.2",
+       6
+      ],
+      [
+       "206.17",
+       6
+      ],
+      [
+       "205.96",
+       6
+      ],
+      [
+       "199.17",
+       6
+      ],
+      [
+       "198.8",
+       6
+      ],
+      [
+       "197.45",
+       6
+      ],
+      [
+       "196.93",
+       6
+      ],
+      [
+       "176.3",
+       6
+      ],
+      [
+       "170.9",
+       6
+      ],
+      [
+       "169.3",
+       6
+      ],
+      [
+       "161.32",
+       6
+      ],
+      [
+       "156.75",
+       6
+      ],
+      [
+       "156.11",
+       6
+      ],
+      [
+       "154.07",
+       6
+      ],
+      [
+       "148.14",
+       6
+      ],
+      [
+       "140.43",
+       6
+      ],
+      [
+       "140.34",
+       6
+      ],
+      [
+       "126.81",
+       6
+      ],
+      [
+       "121.6",
+       6
+      ]
+     ],
+     "description": "state appropriation value. State appropriations to higher education in fiscal year 2011 per resident",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state_appr_rank",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 50,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "NULL",
+     "examples": [
+      "NULL",
+      "11",
+      "2",
+      "47",
+      "9"
+     ],
+     "top_values": [
+      [
+       "NULL",
+       12
+      ],
+      [
+       "19",
+       12
+      ],
+      [
+       "9",
+       6
+      ],
+      [
+       "8",
+       6
+      ],
+      [
+       "7",
+       6
+      ],
+      [
+       "6",
+       6
+      ],
+      [
+       "5",
+       6
+      ],
+      [
+       "49",
+       6
+      ],
+      [
+       "48",
+       6
+      ],
+      [
+       "47",
+       6
+      ],
+      [
+       "46",
+       6
+      ],
+      [
+       "45",
+       6
+      ],
+      [
+       "44",
+       6
+      ],
+      [
+       "43",
+       6
+      ],
+      [
+       "42",
+       6
+      ],
+      [
+       "41",
+       6
+      ],
+      [
+       "40",
+       6
+      ],
+      [
+       "4",
+       6
+      ],
+      [
+       "39",
+       6
+      ],
+      [
+       "38",
+       6
+      ],
+      [
+       "37",
+       6
+      ],
+      [
+       "36",
+       6
+      ],
+      [
+       "35",
+       6
+      ],
+      [
+       "34",
+       6
+      ],
+      [
+       "33",
+       6
+      ],
+      [
+       "32",
+       6
+      ],
+      [
+       "31",
+       6
+      ],
+      [
+       "30",
+       6
+      ],
+      [
+       "3",
+       6
+      ],
+      [
+       "29",
+       6
+      ],
+      [
+       "28",
+       6
+      ],
+      [
+       "27",
+       6
+      ],
+      [
+       "26",
+       6
+      ],
+      [
+       "25",
+       6
+      ],
+      [
+       "24",
+       6
+      ],
+      [
+       "23",
+       6
+      ],
+      [
+       "22",
+       6
+      ],
+      [
+       "21",
+       6
+      ],
+      [
+       "20",
+       6
+      ],
+      [
+       "2",
+       6
+      ],
+      [
+       "18",
+       6
+      ],
+      [
+       "17",
+       6
+      ],
+      [
+       "16",
+       6
+      ],
+      [
+       "15",
+       6
+      ],
+      [
+       "14",
+       6
+      ],
+      [
+       "13",
+       6
+      ],
+      [
+       "12",
+       6
+      ],
+      [
+       "11",
+       6
+      ],
+      [
+       "10",
+       6
+      ],
+      [
+       "1",
+       6
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "grad_rate_rank",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 53,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "NULL",
+     "examples": [
+      "23",
+      "18",
+      "8",
+      "25",
+      "12"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "awards_per_rank",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 52,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "NULL",
+     "examples": [
+      "NULL",
+      "42",
+      "49",
+      "9",
+      "39"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "stateid",
+    "level",
+    "control"
+   ],
+   "sample_rows": [
+    {
+     "stateid": 0,
+     "state": "United States",
+     "state_post": "U.S.",
+     "level": "4-year",
+     "control": "Public",
+     "schools_count": 632,
+     "counted_pct": "NULL",
+     "awards_per_state_value": "NULL",
+     "awards_per_natl_value": 21.5,
+     "exp_award_state_value": "NULL",
+     "exp_award_natl_value": 66436,
+     "state_appr_value": "NULL",
+     "state_appr_rank": "NULL",
+     "grad_rate_rank": "23",
+     "awards_per_rank": "NULL"
+    },
+    {
+     "stateid": 0,
+     "state": "United States",
+     "state_post": "U.S.",
+     "level": "4-year",
+     "control": "Private not-for-profit",
+     "schools_count": 1180,
+     "counted_pct": "NULL",
+     "awards_per_state_value": "NULL",
+     "awards_per_natl_value": 22.5,
+     "exp_award_state_value": "NULL",
+     "exp_award_natl_value": 101725,
+     "state_appr_value": "NULL",
+     "state_appr_rank": "NULL",
+     "grad_rate_rank": "18",
+     "awards_per_rank": "NULL"
+    },
+    {
+     "stateid": 0,
+     "state": "United States",
+     "state_post": "U.S.",
+     "level": "4-year",
+     "control": "Private for-profit",
+     "schools_count": 527,
+     "counted_pct": "NULL",
+     "awards_per_state_value": "NULL",
+     "awards_per_natl_value": 24.6,
+     "exp_award_state_value": "NULL",
+     "exp_award_natl_value": 38763,
+     "state_appr_value": "NULL",
+     "state_appr_rank": "NULL",
+     "grad_rate_rank": "8",
+     "awards_per_rank": "NULL"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "state_sector_grads",
+   "row_count": 84942,
+   "stats_rows": 84942,
+   "columns": [
+    {
+     "name": "stateid",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 52,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 56,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [],
+     "description": "state id. state FIPS (Federal Information Processing System) code",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 52,
+     "is_unique": false,
+     "min_value": "Alabama",
+     "max_value": "Wyoming",
+     "examples": [
+      "Alabama",
+      "Alaska"
+     ],
+     "top_values": [],
+     "description": "state name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state_abbr",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 52,
+     "is_unique": false,
+     "min_value": "AK",
+     "max_value": "WY",
+     "examples": [
+      "AL",
+      "AK"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "control",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Private for-profit",
+     "max_value": "Public",
+     "examples": [
+      "Private for-profit",
+      "Private not-for-profit",
+      "Public"
+     ],
+     "top_values": [
+      [
+       "Public",
+       31374
+      ],
+      [
+       "Private for-profit",
+       26856
+      ],
+      [
+       "Private not-for-profit",
+       26712
+      ]
+     ],
+     "description": "",
+     "value_description": "Public, \nPrivate not-for-profit, \nPrivate for-profit",
+     "notes": []
+    },
+    {
+     "name": "level",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "2-year",
+     "max_value": "4-year",
+     "examples": [
+      "4-year"
+     ],
+     "top_values": [
+      [
+       "4-year",
+       58770
+      ],
+      [
+       "2-year",
+       26172
+      ]
+     ],
+     "description": "Level of institution",
+     "value_description": "commonsense evidence:\n4-year: bachelor's degree\n2-year: associate's degree",
+     "notes": []
+    },
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": 2002,
+     "max_value": 2013,
+     "examples": [
+      2011,
+      2012,
+      2013
+     ],
+     "top_values": [
+      [
+       2013,
+       7578
+      ],
+      [
+       2012,
+       7578
+      ],
+      [
+       2011,
+       7578
+      ],
+      [
+       2010,
+       7290
+      ],
+      [
+       2008,
+       7272
+      ],
+      [
+       2007,
+       7218
+      ],
+      [
+       2005,
+       7128
+      ],
+      [
+       2004,
+       7128
+      ],
+      [
+       2006,
+       7110
+      ],
+      [
+       2003,
+       6966
+      ],
+      [
+       2002,
+       6912
+      ],
+      [
+       2009,
+       5184
+      ]
+     ],
+     "description": "year of data release",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "gender",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "B",
+     "max_value": "M",
+     "examples": [
+      "B",
+      "F",
+      "M"
+     ],
+     "top_values": [
+      [
+       "M",
+       28314
+      ],
+      [
+       "F",
+       28314
+      ],
+      [
+       "B",
+       28314
+      ]
+     ],
+     "description": "gender of students",
+     "value_description": "B' = both genders; 'M' = male; 'F' = female",
+     "notes": []
+    },
+    {
+     "name": "race",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "X",
+     "examples": [
+      "A",
+      "Ai",
+      "B",
+      "H",
+      "W"
+     ],
+     "top_values": [
+      [
+       "X",
+       14157
+      ],
+      [
+       "W",
+       14157
+      ],
+      [
+       "H",
+       14157
+      ],
+      [
+       "B",
+       14157
+      ],
+      [
+       "Ai",
+       14157
+      ],
+      [
+       "A",
+       14157
+      ]
+     ],
+     "description": "race/ethnicity of students",
+     "value_description": "commonsense evidence:\n'X' = all students; 'Ai' = American Indian; 'A' = Asian; 'B' = Black; 'H' = Hispanic; 'W' = White",
+     "notes": []
+    },
+    {
+     "name": "cohort",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "2y all",
+     "max_value": "4y other",
+     "examples": [
+      "4y bach"
+     ],
+     "top_values": [
+      [
+       "4y bach",
+       31140
+      ],
+      [
+       "4y other",
+       27630
+      ],
+      [
+       "2y all",
+       26172
+      ]
+     ],
+     "description": "degree-seeking cohort type",
+     "value_description": "commonsense evidence:\n '4y bach' = Bachelor's/equivalent-seeking cohort at 4-year institutions; \n '4y other' = Students seeking another type of degree or certificate at a 4-year institution; \n '2y all' = Degree-seeking students at 2-year institutions\n4-year degree is bachelor's degree\n2-year degree is associate's degree",
+     "notes": []
+    },
+    {
+     "name": "grad_cohort",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9815,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "9998",
+     "examples": [
+      "0",
+      "1",
+      "51",
+      "66",
+      "209"
+     ],
+     "top_values": [],
+     "description": "graduation cohort. Number of first-time, full-time, degree-seeking students in the cohort being tracked, minus any exclusions",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "grad_100",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4582,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "0",
+      "2",
+      "15",
+      "39",
+      "6"
+     ],
+     "top_values": [],
+     "description": "graduation 100. Number of students who graduated within 100 percent of normal/expected time",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "grad_150",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6675,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "9999",
+     "examples": [
+      "0",
+      "3",
+      "18",
+      "49",
+      "6"
+     ],
+     "top_values": [],
+     "description": "graduation 150. Number of students who graduated within 150 percent of normal/expected time",
+     "value_description": "",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "grad_100_rate",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 846,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "NULL",
+      "0",
+      "3.9",
+      "22.7",
+      "18.7"
+     ],
+     "top_values": [],
+     "description": "Percentage of students who graduated within 100 percent of normal/expected time",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "grad_150_rate",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 963,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "NULL",
+     "examples": [
+      "NULL",
+      "0",
+      "5.9",
+      "27.3",
+      "23.4"
+     ],
+     "top_values": [],
+     "description": "Percentage of students who graduated within 150 percent of normal/expected time",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "grad_cohort_ct",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 154,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1180,
+     "examples": [
+      9,
+      16,
+      13,
+      1
+     ],
+     "top_values": [],
+     "description": "graduation cohort count. Number of institutions with data included in the cohort",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "stateid": 1,
+     "state": "Alabama",
+     "state_abbr": "AL",
+     "control": "Private for-profit",
+     "level": "4-year",
+     "year": 2011,
+     "gender": "B",
+     "race": "A",
+     "cohort": "4y bach",
+     "grad_cohort": "0",
+     "grad_100": "0",
+     "grad_150": "0",
+     "grad_100_rate": "NULL",
+     "grad_150_rate": "NULL",
+     "grad_cohort_ct": 9
+    },
+    {
+     "stateid": 1,
+     "state": "Alabama",
+     "state_abbr": "AL",
+     "control": "Private for-profit",
+     "level": "4-year",
+     "year": 2011,
+     "gender": "B",
+     "race": "Ai",
+     "cohort": "4y bach",
+     "grad_cohort": "1",
+     "grad_100": "0",
+     "grad_150": "0",
+     "grad_100_rate": "0",
+     "grad_150_rate": "0",
+     "grad_cohort_ct": 9
+    },
+    {
+     "stateid": 1,
+     "state": "Alabama",
+     "state_abbr": "AL",
+     "control": "Private for-profit",
+     "level": "4-year",
+     "year": 2011,
+     "gender": "B",
+     "race": "B",
+     "cohort": "4y bach",
+     "grad_cohort": "51",
+     "grad_100": "2",
+     "grad_150": "3",
+     "grad_100_rate": "3.9",
+     "grad_150_rate": "5.9",
+     "grad_cohort_ct": 9
+    }
+   ],
+   "notes": [
+    "no declared primary key; beware duplicate rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "institution_grads",
+   "from_column": "unitid",
+   "to_table": "institution_details",
+   "to_column": "unitid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "state_sector_details",
+   "from_column": "state",
+   "to_table": "institution_details",
+   "to_column": "state",
+   "source": "declared",
+   "cardinality": "many-to-many",
+   "overlap": null
+  },
+  {
+   "from_table": "state_sector_grads",
+   "from_column": "stateid",
+   "to_table": "state_sector_details",
+   "to_column": "stateid",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "state_sector_grads",
+   "from_column": "state",
+   "to_table": "institution_details",
+   "to_column": "state",
+   "source": "declared",
+   "cardinality": "many-to-many",
+   "overlap": null
+  },
+  {
+   "from_table": "institution_details",
+   "from_column": "level",
+   "to_table": "state_sector_details",
+   "to_column": "level",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "institution_details",
+   "from_column": "control",
+   "to_table": "state_sector_details",
+   "to_column": "control",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "state_sector_grads",
+   "from_column": "control",
+   "to_table": "state_sector_details",
+   "to_column": "control",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "state_sector_grads",
+   "from_column": "level",
+   "to_table": "state_sector_details",
+   "to_column": "level",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

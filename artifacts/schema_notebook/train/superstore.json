@@ -1,0 +1,2576 @@
+{
+ "db_id": "superstore",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/superstore/superstore.sqlite",
+ "fingerprint": "6631424-1793993088301694659-v1.0",
+ "created_at": "2026-11-06T19:25:18+00:00",
+ "profile_seconds": 0.366,
+ "tables": [
+  {
+   "name": "central_superstore",
+   "row_count": 4646,
+   "stats_rows": 4646,
+   "columns": [
+    {
+     "name": "Row ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4646,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 4646,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique id for rows",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Order ID",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2350,
+     "is_unique": false,
+     "min_value": "CA-2011-100678",
+     "max_value": "US-2018-169502",
+     "examples": [
+      "CA-2011-103800",
+      "CA-2011-112326",
+      "CA-2011-105417",
+      "CA-2011-135405",
+      "CA-2011-167927"
+     ],
+     "top_values": [],
+     "description": "the unique identifier for the order",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Order Date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1264,
+     "is_unique": false,
+     "min_value": "2013-01-03",
+     "max_value": "2018-12-30",
+     "examples": [
+      "2013-01-03",
+      "2013-01-04",
+      "2013-01-07",
+      "2013-01-09",
+      "2013-01-20"
+     ],
+     "top_values": [],
+     "description": "the date of the order",
+     "value_description": "yyyy-mm-dd",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Ship Date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1298,
+     "is_unique": false,
+     "min_value": "2013-01-07",
+     "max_value": "2019-01-05",
+     "examples": [
+      "2013-01-07",
+      "2013-01-08",
+      "2013-01-12",
+      "2013-01-13",
+      "2013-01-26"
+     ],
+     "top_values": [],
+     "description": "the date of the shipment",
+     "value_description": "yyyy-mm-dd\ncommonsense evidence: \n'shipment time' refers to the time interval between order_date and ship_date.",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Ship Mode",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "First Class",
+     "max_value": "Standard Class",
+     "examples": [
+      "Standard Class",
+      "First Class",
+      "Second Class",
+      "Same Day"
+     ],
+     "top_values": [
+      [
+       "Standard Class",
+       2878
+      ],
+      [
+       "Second Class",
+       930
+      ],
+      [
+       "First Class",
+       598
+      ],
+      [
+       "Same Day",
+       240
+      ]
+     ],
+     "description": "the ship mode of the order",
+     "value_description": "First Class / Second Class / Standard Class\ncommonsense evidence: Among three ship modes, First Class has the fastest delivery speed, followed by Second Class and the speed of the Standard Class is the slowest.",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Customer ID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 629,
+     "is_unique": false,
+     "min_value": "AA-10315",
+     "max_value": "ZD-21925",
+     "examples": [
+      "DP-13000",
+      "PO-19195",
+      "VS-21820",
+      "MS-17830",
+      "XP-21865"
+     ],
+     "top_values": [],
+     "description": "the id of the customer",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "Central",
+     "max_value": "Central",
+     "examples": [
+      "Central"
+     ],
+     "top_values": [
+      [
+       "Central",
+       4646
+      ]
+     ],
+     "description": "region of the customer's address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Product ID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1310,
+     "is_unique": false,
+     "min_value": "FUR-BO-10000112",
+     "max_value": "TEC-PH-10004977",
+     "examples": [
+      "OFF-PA-10000174",
+      "OFF-LA-10003223",
+      "OFF-ST-10002743",
+      "OFF-BI-10004094",
+      "FUR-FU-10004864"
+     ],
+     "top_values": [],
+     "description": "the id of the product",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Sales",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1917,
+     "is_unique": false,
+     "min_value": 0.444,
+     "max_value": 17499.95,
+     "examples": [
+      16.448,
+      11.784,
+      272.736,
+      3.54,
+      76.728
+     ],
+     "top_values": [],
+     "description": "the sales of the product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Quantity",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 14,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 14,
+     "examples": [
+      2,
+      3,
+      7,
+      1,
+      5
+     ],
+     "top_values": [
+      [
+       2,
+       1134
+      ],
+      [
+       3,
+       1098
+      ],
+      [
+       5,
+       620
+      ],
+      [
+       4,
+       546
+      ],
+      [
+       1,
+       400
+      ],
+      [
+       7,
+       302
+      ],
+      [
+       6,
+       248
+      ],
+      [
+       9,
+       118
+      ],
+      [
+       8,
+       116
+      ],
+      [
+       10,
+       28
+      ],
+      [
+       11,
+       16
+      ],
+      [
+       14,
+       10
+      ],
+      [
+       13,
+       6
+      ],
+      [
+       12,
+       4
+      ]
+     ],
+     "description": "the quantity of the product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Discount",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 0.8,
+     "examples": [
+      0.2,
+      0.8,
+      0.6,
+      0.0,
+      0.1
+     ],
+     "top_values": [
+      [
+       0.2,
+       1668
+      ],
+      [
+       0.0,
+       1656
+      ],
+      [
+       0.8,
+       600
+      ],
+      [
+       0.3,
+       294
+      ],
+      [
+       0.6,
+       276
+      ],
+      [
+       0.32,
+       54
+      ],
+      [
+       0.5,
+       36
+      ],
+      [
+       0.1,
+       36
+      ],
+      [
+       0.4,
+       26
+      ]
+     ],
+     "description": "the discount of the product",
+     "value_description": "commonsense evidence: original price = sales / (1- discount)",
+     "notes": []
+    },
+    {
+     "name": "Profit",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2074,
+     "is_unique": false,
+     "min_value": -3701.8928,
+     "max_value": 8399.976,
+     "examples": [
+      5.5512,
+      4.2717,
+      -64.7748,
+      -5.487,
+      -53.7096
+     ],
+     "top_values": [],
+     "description": "the profit that the company got by selling the product",
+     "value_description": "commonsense evidence:\ntotal cost of products =  sales / (1- discount) * quantity - profit\ndeficiency: if the value is negative",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Row ID"
+   ],
+   "sample_rows": [
+    {
+     "Row ID": 1,
+     "Order ID": "CA-2011-103800",
+     "Order Date": "2013-01-03",
+     "Ship Date": "2013-01-07",
+     "Ship Mode": "Standard Class",
+     "Customer ID": "DP-13000",
+     "Region": "Central",
+     "Product ID": "OFF-PA-10000174",
+     "Sales": 16.448,
+     "Quantity": 2,
+     "Discount": 0.2,
+     "Profit": 5.5512
+    },
+    {
+     "Row ID": 2,
+     "Order ID": "CA-2011-112326",
+     "Order Date": "2013-01-04",
+     "Ship Date": "2013-01-08",
+     "Ship Mode": "Standard Class",
+     "Customer ID": "PO-19195",
+     "Region": "Central",
+     "Product ID": "OFF-LA-10003223",
+     "Sales": 11.784,
+     "Quantity": 3,
+     "Discount": 0.2,
+     "Profit": 4.2717
+    },
+    {
+     "Row ID": 3,
+     "Order ID": "CA-2011-112326",
+     "Order Date": "2013-01-04",
+     "Ship Date": "2013-01-08",
+     "Ship Mode": "Standard Class",
+     "Customer ID": "PO-19195",
+     "Region": "Central",
+     "Product ID": "OFF-ST-10002743",
+     "Sales": 272.736,
+     "Quantity": 3,
+     "Discount": 0.2,
+     "Profit": -64.7748
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "east_superstore",
+   "row_count": 5696,
+   "stats_rows": 5696,
+   "columns": [
+    {
+     "name": "Row ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5696,
+     "is_unique": true,
+     "min_value": 4647,
+     "max_value": 10342,
+     "examples": [
+      4647,
+      4648,
+      4649,
+      4650,
+      4651
+     ],
+     "top_values": [],
+     "description": "the unique id for rows",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Order ID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2802,
+     "is_unique": false,
+     "min_value": "CA-2011-100006",
+     "max_value": "US-2018-169551",
+     "examples": [
+      "CA-2011-141817",
+      "CA-2011-130092",
+      "CA-2011-118192",
+      "CA-2011-149524",
+      "CA-2011-115791"
+     ],
+     "top_values": [],
+     "description": "the unique identifier for the order",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Order Date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1354,
+     "is_unique": false,
+     "min_value": "2013-01-05",
+     "max_value": "2018-12-30",
+     "examples": [
+      "2013-01-05",
+      "2013-01-11",
+      "2013-01-13",
+      "2013-01-14",
+      "2013-01-16"
+     ],
+     "top_values": [],
+     "description": "the date of the order",
+     "value_description": "yyyy-mm-dd",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Ship Date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1412,
+     "is_unique": false,
+     "min_value": "2013-01-12",
+     "max_value": "2019-01-04",
+     "examples": [
+      "2013-01-12",
+      "2013-01-14",
+      "2013-01-18",
+      "2013-01-15",
+      "2013-02-03"
+     ],
+     "top_values": [],
+     "description": "the date of the shipment",
+     "value_description": "yyyy-mm-dd\ncommonsense evidence: 'shipment time' refers to the time interval between order_date and ship_date.",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Ship Mode",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "First Class",
+     "max_value": "Standard Class",
+     "examples": [
+      "Standard Class",
+      "First Class",
+      "Second Class",
+      "Same Day"
+     ],
+     "top_values": [
+      [
+       "Standard Class",
+       3346
+      ],
+      [
+       "Second Class",
+       1060
+      ],
+      [
+       "First Class",
+       980
+      ],
+      [
+       "Same Day",
+       310
+      ]
+     ],
+     "description": "the ship mode of the order",
+     "value_description": "First Class / Second Class / Standard Class\ncommonsense evidence: Among three ship modes, First Class has the fastest delivery speed, followed by Second Class and the speed of the Standard Class is the slowest.",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Customer ID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 674,
+     "is_unique": false,
+     "min_value": "AA-10315",
+     "max_value": "ZC-21910",
+     "examples": [
+      "MB-18085",
+      "SV-20365",
+      "MM-17920",
+      "BS-11590",
+      "DL-13315"
+     ],
+     "top_values": [],
+     "description": "the id of the customer",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "East",
+     "max_value": "East",
+     "examples": [
+      "East"
+     ],
+     "top_values": [
+      [
+       "East",
+       5696
+      ]
+     ],
+     "description": "region of the customer's address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Product ID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1422,
+     "is_unique": false,
+     "min_value": "FUR-BO-10000362",
+     "max_value": "TEC-PH-10004977",
+     "examples": [
+      "OFF-AR-10003478",
+      "FUR-FU-10000010",
+      "OFF-PA-10002947",
+      "OFF-BI-10003476",
+      "FUR-BO-10003433"
+     ],
+     "top_values": [],
+     "description": "the id of the product",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Sales",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2257,
+     "is_unique": false,
+     "min_value": 0.852,
+     "max_value": 11199.968,
+     "examples": [
+      19.536,
+      9.94,
+      37.408,
+      3.438,
+      61.96
+     ],
+     "top_values": [],
+     "description": "the sales of the product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Quantity",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 14,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 14,
+     "examples": [
+      3,
+      2,
+      7,
+      4,
+      6
+     ],
+     "top_values": [
+      [
+       2,
+       1422
+      ],
+      [
+       3,
+       1382
+      ],
+      [
+       4,
+       670
+      ],
+      [
+       5,
+       628
+      ],
+      [
+       1,
+       542
+      ],
+      [
+       6,
+       354
+      ],
+      [
+       7,
+       324
+      ],
+      [
+       9,
+       150
+      ],
+      [
+       8,
+       126
+      ],
+      [
+       10,
+       38
+      ],
+      [
+       13,
+       20
+      ],
+      [
+       11,
+       18
+      ],
+      [
+       14,
+       16
+      ],
+      [
+       12,
+       6
+      ]
+     ],
+     "description": "the quantity of the product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Discount",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 0.7,
+     "examples": [
+      0.2,
+      0.0,
+      0.7,
+      0.5,
+      0.4
+     ],
+     "top_values": [
+      [
+       0.0,
+       2898
+      ],
+      [
+       0.2,
+       1724
+      ],
+      [
+       0.7,
+       372
+      ],
+      [
+       0.4,
+       354
+      ],
+      [
+       0.3,
+       160
+      ],
+      [
+       0.1,
+       152
+      ],
+      [
+       0.5,
+       36
+      ]
+     ],
+     "description": "the discount of the product",
+     "value_description": "commonsense evidence: original price = sales / (1- discount)",
+     "notes": []
+    },
+    {
+     "name": "Profit",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2494,
+     "is_unique": false,
+     "min_value": -6599.978,
+     "max_value": 5039.9856,
+     "examples": [
+      4.884,
+      3.0814,
+      13.0928,
+      -2.5212,
+      -53.2856
+     ],
+     "top_values": [],
+     "description": "the profit that the company got by selling the product",
+     "value_description": "commonsense evidence: total cost of products =  sales / (1- discount) * quantity - profit\ndeficiency: if the value is negative",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Row ID"
+   ],
+   "sample_rows": [
+    {
+     "Row ID": 4647,
+     "Order ID": "CA-2011-141817",
+     "Order Date": "2013-01-05",
+     "Ship Date": "2013-01-12",
+     "Ship Mode": "Standard Class",
+     "Customer ID": "MB-18085",
+     "Region": "East",
+     "Product ID": "OFF-AR-10003478",
+     "Sales": 19.536,
+     "Quantity": 3,
+     "Discount": 0.2,
+     "Profit": 4.884
+    },
+    {
+     "Row ID": 4648,
+     "Order ID": "CA-2011-130092",
+     "Order Date": "2013-01-11",
+     "Ship Date": "2013-01-14",
+     "Ship Mode": "First Class",
+     "Customer ID": "SV-20365",
+     "Region": "East",
+     "Product ID": "FUR-FU-10000010",
+     "Sales": 9.94,
+     "Quantity": 2,
+     "Discount": 0.0,
+     "Profit": 3.0814
+    },
+    {
+     "Row ID": 4649,
+     "Order ID": "CA-2011-118192",
+     "Order Date": "2013-01-13",
+     "Ship Date": "2013-01-18",
+     "Ship Mode": "Standard Class",
+     "Customer ID": "MM-17920",
+     "Region": "East",
+     "Product ID": "OFF-PA-10002947",
+     "Sales": 37.408,
+     "Quantity": 7,
+     "Discount": 0.2,
+     "Profit": 13.0928
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "people",
+   "row_count": 2501,
+   "stats_rows": 2501,
+   "columns": [
+    {
+     "name": "Customer ID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 793,
+     "is_unique": false,
+     "min_value": "AA-10315",
+     "max_value": "ZD-21925",
+     "examples": [
+      "AA-10315",
+      "AA-10375",
+      "AA-10480",
+      "AA-10645",
+      "AB-10015"
+     ],
+     "top_values": [],
+     "description": "the id of the customers",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Customer Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 793,
+     "is_unique": false,
+     "min_value": "Aaron Bergman",
+     "max_value": "Zuschuss Donatelli",
+     "examples": [
+      "Alex Avila",
+      "Allen Armold",
+      "Andrew Allen",
+      "Anna Andreadi",
+      "Aaron Bergman"
+     ],
+     "top_values": [],
+     "description": "the name of the customers",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Segment",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Consumer",
+     "max_value": "Home Office",
+     "examples": [
+      "Consumer",
+      "Home Office",
+      "Corporate"
+     ],
+     "top_values": [
+      [
+       "Consumer",
+       1306
+      ],
+      [
+       "Corporate",
+       742
+      ],
+      [
+       "Home Office",
+       453
+      ]
+     ],
+     "description": "the segment that the customers belong to",
+     "value_description": "commonsense evidence: \n consumer \n home office: synonym: headquarter. \n corporate",
+     "notes": []
+    },
+    {
+     "name": "Country",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "United States",
+     "max_value": "United States",
+     "examples": [
+      "United States"
+     ],
+     "top_values": [
+      [
+       "United States",
+       2501
+      ]
+     ],
+     "description": "the country of people",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "City",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 434,
+     "is_unique": false,
+     "min_value": "Akron",
+     "max_value": "York",
+     "examples": [
+      "Round Rock",
+      "Omaha",
+      "Springfield",
+      "Oklahoma City",
+      "Arlington"
+     ],
+     "top_values": [],
+     "description": "the city of people",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "State",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 45,
+     "is_unique": false,
+     "min_value": "Alabama",
+     "max_value": "Wisconsin",
+     "examples": [
+      "Texas",
+      "Nebraska",
+      "Missouri",
+      "Oklahoma",
+      "Indiana"
+     ],
+     "top_values": [
+      [
+       "California",
+       443
+      ],
+      [
+       "New York",
+       283
+      ],
+      [
+       "Texas",
+       264
+      ],
+      [
+       "Illinois",
+       149
+      ],
+      [
+       "Pennsylvania",
+       145
+      ],
+      [
+       "Florida",
+       131
+      ],
+      [
+       "Washington",
+       103
+      ],
+      [
+       "Ohio",
+       98
+      ],
+      [
+       "North Carolina",
+       87
+      ],
+      [
+       "Virginia",
+       76
+      ],
+      [
+       "Michigan",
+       60
+      ],
+      [
+       "Tennessee",
+       55
+      ],
+      [
+       "Georgia",
+       50
+      ],
+      [
+       "Arizona",
+       40
+      ],
+      [
+       "Kentucky",
+       36
+      ],
+      [
+       "Indiana",
+       35
+      ],
+      [
+       "New Jersey",
+       32
+      ],
+      [
+       "Colorado",
+       32
+      ],
+      [
+       "Delaware",
+       29
+      ],
+      [
+       "Wisconsin",
+       27
+      ],
+      [
+       "Oregon",
+       27
+      ],
+      [
+       "Minnesota",
+       24
+      ],
+      [
+       "Massachusetts",
+       24
+      ],
+      [
+       "Oklahoma",
+       22
+      ],
+      [
+       "Maryland",
+       22
+      ],
+      [
+       "Connecticut",
+       20
+      ],
+      [
+       "Alabama",
+       20
+      ],
+      [
+       "Missouri",
+       17
+      ],
+      [
+       "Mississippi",
+       17
+      ],
+      [
+       "Louisiana",
+       14
+      ],
+      [
+       "Arkansas",
+       14
+      ],
+      [
+       "Iowa",
+       13
+      ],
+      [
+       "Utah",
+       12
+      ],
+      [
+       "South Carolina",
+       12
+      ],
+      [
+       "Rhode Island",
+       10
+      ],
+      [
+       "New Mexico",
+       10
+      ],
+      [
+       "Nevada",
+       10
+      ],
+      [
+       "Nebraska",
+       10
+      ],
+      [
+       "New Hampshire",
+       8
+      ],
+      [
+       "Kansas",
+       6
+      ],
+      [
+       "Montana",
+       5
+      ],
+      [
+       "Idaho",
+       4
+      ],
+      [
+       "South Dakota",
+       2
+      ],
+      [
+       "Maine",
+       2
+      ],
+      [
+       "District of Columbia",
+       1
+      ]
+     ],
+     "description": "the state of people",
+     "value_description": "commonsense evidence: please mention its full name in the question, by referring to \nhttps://www23.statcan.gc.ca/imdb/p3VD.pl?Function=getVD&TVD=53971\ne.g., New York --> NY",
+     "notes": []
+    },
+    {
+     "name": "Postal Code",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 523,
+     "is_unique": false,
+     "min_value": 1752,
+     "max_value": 99301,
+     "examples": [
+      78664,
+      68104,
+      65807,
+      73120,
+      76017
+     ],
+     "top_values": [],
+     "description": "the postal code",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "Central",
+     "max_value": "West",
+     "examples": [
+      "Central"
+     ],
+     "top_values": [
+      [
+       "West",
+       686
+      ],
+      [
+       "East",
+       674
+      ],
+      [
+       "Central",
+       629
+      ],
+      [
+       "South",
+       512
+      ]
+     ],
+     "description": "the region of people",
+     "value_description": " Central: \n East: \n West: \n South:",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Customer ID",
+    "Region"
+   ],
+   "sample_rows": [
+    {
+     "Customer ID": "AA-10315",
+     "Customer Name": "Alex Avila",
+     "Segment": "Consumer",
+     "Country": "United States",
+     "City": "Round Rock",
+     "State": "Texas",
+     "Postal Code": 78664,
+     "Region": "Central"
+    },
+    {
+     "Customer ID": "AA-10375",
+     "Customer Name": "Allen Armold",
+     "Segment": "Consumer",
+     "Country": "United States",
+     "City": "Omaha",
+     "State": "Nebraska",
+     "Postal Code": 68104,
+     "Region": "Central"
+    },
+    {
+     "Customer ID": "AA-10480",
+     "Customer Name": "Andrew Allen",
+     "Segment": "Consumer",
+     "Country": "United States",
+     "City": "Springfield",
+     "State": "Missouri",
+     "Postal Code": 65807,
+     "Region": "Central"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "product",
+   "row_count": 5298,
+   "stats_rows": 5298,
+   "columns": [
+    {
+     "name": "Product ID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1862,
+     "is_unique": false,
+     "min_value": "FUR-BO-10000112",
+     "max_value": "TEC-PH-10004977",
+     "examples": [
+      "FUR-BO-10000330",
+      "FUR-BO-10000362",
+      "FUR-BO-10000468",
+      "FUR-BO-10001337",
+      "FUR-BO-10001519"
+     ],
+     "top_values": [],
+     "description": "the id of products",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Product Name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1844,
+     "is_unique": false,
+     "min_value": "\"While you Were Out\" Message Book, One Form per Page",
+     "max_value": "netTALK DUO VoIP Telephone Service",
+     "examples": [
+      "Sauder Camden County Barrister Bookcase, Planked Cherry Fini...",
+      "Sauder Inglewood Library Bookcases",
+      "O'Sullivan 2-Shelf Heavy-Duty Bookcases",
+      "O'Sullivan Living Dimensions 2-Shelf Bookcases",
+      "O'Sullivan 3-Shelf Heavy-Duty Bookcases"
+     ],
+     "top_values": [],
+     "description": "the name of products",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Category",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Furniture",
+     "max_value": "Technology",
+     "examples": [
+      "Furniture"
+     ],
+     "top_values": [
+      [
+       "Office Supplies",
+       3156
+      ],
+      [
+       "Furniture",
+       1099
+      ],
+      [
+       "Technology",
+       1043
+      ]
+     ],
+     "description": "the categories of products",
+     "value_description": " Furniture \n Office Supplies \n Technology",
+     "notes": []
+    },
+    {
+     "name": "Sub-Category",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": "Accessories",
+     "max_value": "Tables",
+     "examples": [
+      "Bookcases",
+      "Chairs",
+      "Furnishings"
+     ],
+     "top_values": [
+      [
+       "Paper",
+       769
+      ],
+      [
+       "Binders",
+       683
+      ],
+      [
+       "Furnishings",
+       523
+      ],
+      [
+       "Phones",
+       505
+      ],
+      [
+       "Art",
+       458
+      ],
+      [
+       "Accessories",
+       408
+      ],
+      [
+       "Storage",
+       405
+      ],
+      [
+       "Chairs",
+       277
+      ],
+      [
+       "Appliances",
+       262
+      ],
+      [
+       "Labels",
+       200
+      ],
+      [
+       "Tables",
+       174
+      ],
+      [
+       "Envelopes",
+       152
+      ],
+      [
+       "Bookcases",
+       125
+      ],
+      [
+       "Fasteners",
+       121
+      ],
+      [
+       "Supplies",
+       106
+      ],
+      [
+       "Machines",
+       90
+      ],
+      [
+       "Copiers",
+       40
+      ]
+     ],
+     "description": "the sub-categories of products",
+     "value_description": " Bookcases \n Chairs \n Furnishings \n Tables \n Appliances \n Art \n Binders \n Envelopes \n Fasteners \n Labels \n Paper \n Storage \n Supplies \n Accessories \n Copiers \n Machines \n Phones",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "Central",
+     "max_value": "West",
+     "examples": [
+      "West"
+     ],
+     "top_values": [
+      [
+       "West",
+       1509
+      ],
+      [
+       "East",
+       1422
+      ],
+      [
+       "Central",
+       1310
+      ],
+      [
+       "South",
+       1057
+      ]
+     ],
+     "description": "the region of products",
+     "value_description": " Central: \n East: \n West: \n South:",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Product ID",
+    "Region"
+   ],
+   "sample_rows": [
+    {
+     "Product ID": "FUR-BO-10000330",
+     "Product Name": "Sauder Camden County Barrister Bookcase, Planked Cherry Fini...",
+     "Category": "Furniture",
+     "Sub-Category": "Bookcases",
+     "Region": "West"
+    },
+    {
+     "Product ID": "FUR-BO-10000362",
+     "Product Name": "Sauder Inglewood Library Bookcases",
+     "Category": "Furniture",
+     "Sub-Category": "Bookcases",
+     "Region": "West"
+    },
+    {
+     "Product ID": "FUR-BO-10000468",
+     "Product Name": "O'Sullivan 2-Shelf Heavy-Duty Bookcases",
+     "Category": "Furniture",
+     "Sub-Category": "Bookcases",
+     "Region": "West"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "south_superstore",
+   "row_count": 3240,
+   "stats_rows": 3240,
+   "columns": [
+    {
+     "name": "Row ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 3240,
+     "is_unique": true,
+     "min_value": 10343,
+     "max_value": 13582,
+     "examples": [
+      10343,
+      10344,
+      10345,
+      10346,
+      10347
+     ],
+     "top_values": [],
+     "description": "the unique id for rows",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Order ID",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1644,
+     "is_unique": false,
+     "min_value": "CA-2011-100293",
+     "max_value": "US-2018-168690",
+     "examples": [
+      "CA-2011-106054",
+      "CA-2011-167199",
+      "CA-2011-149020",
+      "CA-2011-162775",
+      "CA-2011-109232"
+     ],
+     "top_values": [],
+     "description": "the unique identifier for the order",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Order Date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1078,
+     "is_unique": false,
+     "min_value": "2013-01-06",
+     "max_value": "2018-12-29",
+     "examples": [
+      "2013-01-06",
+      "2013-01-10",
+      "2013-01-13",
+      "2013-01-15",
+      "2013-01-20"
+     ],
+     "top_values": [],
+     "description": "the date of the order",
+     "value_description": "yyyy-mm-dd",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Ship Date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1058,
+     "is_unique": false,
+     "min_value": "2013-01-07",
+     "max_value": "2019-01-03",
+     "examples": [
+      "2013-01-07",
+      "2013-01-10",
+      "2013-01-15",
+      "2013-01-16",
+      "2013-01-17"
+     ],
+     "top_values": [],
+     "description": "the date of the shipment",
+     "value_description": "yyyy-mm-dd \ncommonsense evidence: 'shipment time' refers to the time interval between order_date and ship_date.",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Ship Mode",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "First Class",
+     "max_value": "Standard Class",
+     "examples": [
+      "First Class",
+      "Standard Class",
+      "Second Class",
+      "Same Day"
+     ],
+     "top_values": [
+      [
+       "Standard Class",
+       1948
+      ],
+      [
+       "Second Class",
+       658
+      ],
+      [
+       "First Class",
+       468
+      ],
+      [
+       "Same Day",
+       166
+      ]
+     ],
+     "description": "the ship mode of the order",
+     "value_description": "First Class / Second Class / Standard Class\ncommonsense evidence: Among three ship modes, First Class has the fastest delivery speed, followed by Second Class and the speed of the Standard Class is the slowest.",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Customer ID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 512,
+     "is_unique": false,
+     "min_value": "AA-10375",
+     "max_value": "ZD-21925",
+     "examples": [
+      "JO-15145",
+      "ME-17320",
+      "AJ-10780",
+      "CS-12250",
+      "ND-18370"
+     ],
+     "top_values": [],
+     "description": "the id of the customer",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "South",
+     "max_value": "South",
+     "examples": [
+      "South"
+     ],
+     "top_values": [
+      [
+       "South",
+       3240
+      ]
+     ],
+     "description": "region of the customer's address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Product ID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1057,
+     "is_unique": false,
+     "min_value": "FUR-BO-10000330",
+     "max_value": "TEC-PH-10004977",
+     "examples": [
+      "OFF-AR-10002399",
+      "FUR-CH-10004063",
+      "OFF-BI-10004632",
+      "OFF-AR-10001662",
+      "TEC-PH-10004977"
+     ],
+     "top_values": [],
+     "description": "the id of the product",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Sales",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1375,
+     "is_unique": false,
+     "min_value": 1.167,
+     "max_value": 22638.48,
+     "examples": [
+      12.78,
+      2573.82,
+      609.98,
+      5.48,
+      391.98
+     ],
+     "top_values": [],
+     "description": "the sales of the product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Quantity",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 14,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 14,
+     "examples": [
+      3,
+      9,
+      2,
+      4,
+      1
+     ],
+     "top_values": [
+      [
+       3,
+       808
+      ],
+      [
+       2,
+       726
+      ],
+      [
+       4,
+       408
+      ],
+      [
+       5,
+       402
+      ],
+      [
+       1,
+       290
+      ],
+      [
+       7,
+       204
+      ],
+      [
+       6,
+       168
+      ],
+      [
+       8,
+       98
+      ],
+      [
+       9,
+       82
+      ],
+      [
+       13,
+       14
+      ],
+      [
+       14,
+       10
+      ],
+      [
+       12,
+       10
+      ],
+      [
+       11,
+       10
+      ],
+      [
+       10,
+       10
+      ]
+     ],
+     "description": "the quantity of the product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Discount",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 0.7,
+     "examples": [
+      0.0,
+      0.7,
+      0.2,
+      0.5
+     ],
+     "top_values": [
+      [
+       0.0,
+       1610
+      ],
+      [
+       0.2,
+       1288
+      ],
+      [
+       0.7,
+       264
+      ],
+      [
+       0.4,
+       32
+      ],
+      [
+       0.5,
+       24
+      ],
+      [
+       0.45,
+       22
+      ]
+     ],
+     "description": "the discount of the product",
+     "value_description": "commonsense evidence: original price = sales / (1- discount)",
+     "notes": []
+    },
+    {
+     "name": "Profit",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1469,
+     "is_unique": false,
+     "min_value": -3839.9904,
+     "max_value": 3177.475,
+     "examples": [
+      5.2398,
+      746.4078,
+      274.491,
+      1.4796,
+      113.6742
+     ],
+     "top_values": [],
+     "description": "the profit that the company got by selling the product",
+     "value_description": "commonsense evidence: total cost of products =  sales / (1- discount) * quantity - profit\ndeficiency: if the value is negative",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Row ID"
+   ],
+   "sample_rows": [
+    {
+     "Row ID": 10343,
+     "Order ID": "CA-2011-106054",
+     "Order Date": "2013-01-06",
+     "Ship Date": "2013-01-07",
+     "Ship Mode": "First Class",
+     "Customer ID": "JO-15145",
+     "Region": "South",
+     "Product ID": "OFF-AR-10002399",
+     "Sales": 12.78,
+     "Quantity": 3,
+     "Discount": 0.0,
+     "Profit": 5.2398
+    },
+    {
+     "Row ID": 10344,
+     "Order ID": "CA-2011-167199",
+     "Order Date": "2013-01-06",
+     "Ship Date": "2013-01-10",
+     "Ship Mode": "Standard Class",
+     "Customer ID": "ME-17320",
+     "Region": "South",
+     "Product ID": "FUR-CH-10004063",
+     "Sales": 2573.82,
+     "Quantity": 9,
+     "Discount": 0.0,
+     "Profit": 746.4078
+    },
+    {
+     "Row ID": 10345,
+     "Order ID": "CA-2011-167199",
+     "Order Date": "2013-01-06",
+     "Ship Date": "2013-01-10",
+     "Ship Mode": "Standard Class",
+     "Customer ID": "ME-17320",
+     "Region": "South",
+     "Product ID": "OFF-BI-10004632",
+     "Sales": 609.98,
+     "Quantity": 2,
+     "Discount": 0.0,
+     "Profit": 274.491
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "west_superstore",
+   "row_count": 6406,
+   "stats_rows": 6406,
+   "columns": [
+    {
+     "name": "Row ID",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6406,
+     "is_unique": true,
+     "min_value": 13583,
+     "max_value": 19988,
+     "examples": [
+      13583,
+      13584,
+      13585,
+      13586,
+      13587
+     ],
+     "top_values": [],
+     "description": "the unique id for rows",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Order ID",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3222,
+     "is_unique": false,
+     "min_value": "CA-2011-100090",
+     "max_value": "US-2018-168802",
+     "examples": [
+      "CA-2011-130813",
+      "CA-2011-157147",
+      "CA-2011-123477",
+      "CA-2011-146591",
+      "CA-2011-148614"
+     ],
+     "top_values": [],
+     "description": "the unique identifier for the order",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Order Date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1448,
+     "is_unique": false,
+     "min_value": "2013-01-06",
+     "max_value": "2018-12-30",
+     "examples": [
+      "2013-01-06",
+      "2013-01-13",
+      "2013-01-18",
+      "2013-01-19",
+      "2013-01-20"
+     ],
+     "top_values": [],
+     "description": "the date of the order",
+     "value_description": "yyyy-mm-dd",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Ship Date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1519,
+     "is_unique": false,
+     "min_value": "2013-01-08",
+     "max_value": "2019-01-05",
+     "examples": [
+      "2013-01-08",
+      "2013-01-18",
+      "2013-01-21",
+      "2013-01-20",
+      "2013-01-25"
+     ],
+     "top_values": [],
+     "description": "the date of the shipment",
+     "value_description": "yyyy-mm-dd\ncommonsense evidence: 'shipment time' refers to the time interval between order_date and ship_date.",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Ship Mode",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "First Class",
+     "max_value": "Standard Class",
+     "examples": [
+      "Second Class",
+      "Standard Class",
+      "First Class",
+      "Same Day"
+     ],
+     "top_values": [
+      [
+       "Standard Class",
+       3764
+      ],
+      [
+       "Second Class",
+       1242
+      ],
+      [
+       "First Class",
+       1030
+      ],
+      [
+       "Same Day",
+       370
+      ]
+     ],
+     "description": "the ship mode of the order",
+     "value_description": "First Class / Second Class / Standard Class\ncommonsense evidence: Among three ship modes, First Class has the fastest delivery speed, followed by Second Class and the speed of the Standard Class is the slowest.",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Customer ID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 686,
+     "is_unique": false,
+     "min_value": "AA-10315",
+     "max_value": "ZD-21925",
+     "examples": [
+      "LS-17230",
+      "BD-11605",
+      "DW-13195",
+      "TS-21340",
+      "MV-17485"
+     ],
+     "top_values": [],
+     "description": "the id of the customer",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Region",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "West",
+     "max_value": "West",
+     "examples": [
+      "West"
+     ],
+     "top_values": [
+      [
+       "West",
+       6406
+      ]
+     ],
+     "description": "region of the customer's address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Product ID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1509,
+     "is_unique": false,
+     "min_value": "FUR-BO-10000330",
+     "max_value": "TEC-PH-10004977",
+     "examples": [
+      "OFF-PA-10002005",
+      "OFF-ST-10000078",
+      "FUR-BO-10003034",
+      "OFF-AR-10003514",
+      "OFF-AP-10000692"
+     ],
+     "top_values": [],
+     "description": "the id of the product",
+     "value_description": "",
+     "notes": [
+      "name needs quoting in SQL (use backticks or double quotes)"
+     ]
+    },
+    {
+     "name": "Sales",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2348,
+     "is_unique": false,
+     "min_value": 0.99,
+     "max_value": 13999.96,
+     "examples": [
+      19.44,
+      1325.85,
+      333.999,
+      19.9,
+      64.864
+     ],
+     "top_values": [],
+     "description": "the sales of the product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Quantity",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 14,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 14,
+     "examples": [
+      3,
+      5,
+      4,
+      10,
+      2
+     ],
+     "top_values": [
+      [
+       3,
+       1530
+      ],
+      [
+       2,
+       1522
+      ],
+      [
+       5,
+       810
+      ],
+      [
+       4,
+       758
+      ],
+      [
+       1,
+       566
+      ],
+      [
+       7,
+       382
+      ],
+      [
+       6,
+       374
+      ],
+      [
+       8,
+       174
+      ],
+      [
+       9,
+       166
+      ],
+      [
+       10,
+       38
+      ],
+      [
+       12,
+       26
+      ],
+      [
+       11,
+       24
+      ],
+      [
+       14,
+       22
+      ],
+      [
+       13,
+       14
+      ]
+     ],
+     "description": "the quantity of the product",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "Discount",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 0.7,
+     "examples": [
+      0.0,
+      0.15,
+      0.2,
+      0.7
+     ],
+     "top_values": [
+      [
+       0.0,
+       3432
+      ],
+      [
+       0.2,
+       2634
+      ],
+      [
+       0.7,
+       200
+      ],
+      [
+       0.15,
+       104
+      ],
+      [
+       0.5,
+       36
+      ]
+     ],
+     "description": "the discount of the product",
+     "value_description": "commonsense evidence: original price = sales / (1- discount)",
+     "notes": []
+    },
+    {
+     "name": "Profit",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2614,
+     "is_unique": false,
+     "min_value": -3399.98,
+     "max_value": 6719.9808,
+     "examples": [
+      9.3312,
+      238.653,
+      3.9294,
+      6.567,
+      6.4864
+     ],
+     "top_values": [],
+     "description": "the profit that the company got by selling the product",
+     "value_description": "commonsense evidence: total cost of products =  sales / (1- discount) * quantity - profit\ndeficiency: if the value is negative",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "Row ID"
+   ],
+   "sample_rows": [
+    {
+     "Row ID": 13583,
+     "Order ID": "CA-2011-130813",
+     "Order Date": "2013-01-06",
+     "Ship Date": "2013-01-08",
+     "Ship Mode": "Second Class",
+     "Customer ID": "LS-17230",
+     "Region": "West",
+     "Product ID": "OFF-PA-10002005",
+     "Sales": 19.44,
+     "Quantity": 3,
+     "Discount": 0.0,
+     "Profit": 9.3312
+    },
+    {
+     "Row ID": 13584,
+     "Order ID": "CA-2011-157147",
+     "Order Date": "2013-01-13",
+     "Ship Date": "2013-01-18",
+     "Ship Mode": "Standard Class",
+     "Customer ID": "BD-11605",
+     "Region": "West",
+     "Product ID": "OFF-ST-10000078",
+     "Sales": 1325.85,
+     "Quantity": 5,
+     "Discount": 0.0,
+     "Profit": 238.653
+    },
+    {
+     "Row ID": 13585,
+     "Order ID": "CA-2011-157147",
+     "Order Date": "2013-01-13",
+     "Ship Date": "2013-01-18",
+     "Ship Mode": "Standard Class",
+     "Customer ID": "BD-11605",
+     "Region": "West",
+     "Product ID": "FUR-BO-10003034",
+     "Sales": 333.999,
+     "Quantity": 3,
+     "Discount": 0.15,
+     "Profit": 3.9294
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "central_superstore",
+   "from_column": "Product ID",
+   "to_table": "product",
+   "to_column": "Product ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "central_superstore",
+   "from_column": "Region",
+   "to_table": "product",
+   "to_column": "Region",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "central_superstore",
+   "from_column": "Customer ID",
+   "to_table": "people",
+   "to_column": "Customer ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "central_superstore",
+   "from_column": "Region",
+   "to_table": "people",
+   "to_column": "Region",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "east_superstore",
+   "from_column": "Product ID",
+   "to_table": "product",
+   "to_column": "Product ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "east_superstore",
+   "from_column": "Region",
+   "to_table": "product",
+   "to_column": "Region",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "east_superstore",
+   "from_column": "Customer ID",
+   "to_table": "people",
+   "to_column": "Customer ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "east_superstore",
+   "from_column": "Region",
+   "to_table": "people",
+   "to_column": "Region",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "south_superstore",
+   "from_column": "Product ID",
+   "to_table": "product",
+   "to_column": "Product ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "south_superstore",
+   "from_column": "Region",
+   "to_table": "product",
+   "to_column": "Region",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "south_superstore",
+   "from_column": "Customer ID",
+   "to_table": "people",
+   "to_column": "Customer ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "south_superstore",
+   "from_column": "Region",
+   "to_table": "people",
+   "to_column": "Region",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "west_superstore",
+   "from_column": "Product ID",
+   "to_table": "product",
+   "to_column": "Product ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "west_superstore",
+   "from_column": "Region",
+   "to_table": "product",
+   "to_column": "Region",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "west_superstore",
+   "from_column": "Customer ID",
+   "to_table": "people",
+   "to_column": "Customer ID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "west_superstore",
+   "from_column": "Region",
+   "to_table": "people",
+   "to_column": "Region",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "people",
+   "from_column": "Region",
+   "to_table": "product",
+   "to_column": "Region",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  }
+ ],
+ "notes": []
+}

@@ -1,0 +1,362 @@
+{
+ "db_id": "craftbeer",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/craftbeer/craftbeer.sqlite",
+ "fingerprint": "442368-1793993015091216128-v1.0",
+ "created_at": "2026-11-06T19:24:51+00:00",
+ "profile_seconds": 0.016,
+ "tables": [
+  {
+   "name": "beers",
+   "row_count": 2410,
+   "stats_rows": 2410,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2410,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 2692,
+     "examples": [
+      1,
+      4,
+      5,
+      6,
+      7
+     ],
+     "top_values": [],
+     "description": "unique id number of beers",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "brewery_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 558,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 557,
+     "examples": [
+      166,
+      368,
+      61,
+      371,
+      522
+     ],
+     "top_values": [],
+     "description": "brewery id. id number of the breweries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "abv",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0257,
+     "distinct_count": 74,
+     "is_unique": false,
+     "min_value": 0.001,
+     "max_value": 0.128,
+     "examples": [
+      0.065,
+      0.087,
+      0.08,
+      0.099,
+      0.053
+     ],
+     "top_values": [],
+     "description": "alcohol by volume",
+     "value_description": "Alcohol by VolumeABV is the most common measurement of alcohol content in beer; it simply indicates how much of the total volume of liquid in a beer is made up of alcohol.",
+     "notes": []
+    },
+    {
+     "name": "ibu",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.417,
+     "distinct_count": 107,
+     "is_unique": false,
+     "min_value": 4.0,
+     "max_value": 138.0,
+     "examples": [
+      65.0,
+      85.0,
+      35.0,
+      100.0,
+      98.0
+     ],
+     "top_values": [],
+     "description": "International Bitterness Units",
+     "value_description": "IBU stands for International Bitterness Units, a scale to gauge the level of a beer's bitterness. More specifically, IBUs measure the parts per million of is humulone from hops in a beer, which gives beer bitterness.",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2305,
+     "is_unique": false,
+     "min_value": "#001 Golden Amber Lager",
+     "max_value": "the Kimmie, the Yink and the Holy Gose",
+     "examples": [
+      "Dale's Pale Ale",
+      "Gordon Ale (2009)",
+      "Old Chub",
+      "GUBNA Imperial IPA",
+      "Mama's Little Yella Pils"
+     ],
+     "top_values": [],
+     "description": "name of beers",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "style",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0021,
+     "distinct_count": 99,
+     "is_unique": false,
+     "min_value": "Abbey Single Ale",
+     "max_value": "Witbier",
+     "examples": [
+      "American Pale Ale (APA)",
+      "American Double / Imperial IPA",
+      "Scottish Ale",
+      "Czech Pilsener",
+      "Russian Imperial Stout"
+     ],
+     "top_values": [],
+     "description": "style / sorts of beers",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "ounces",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": 8.4,
+     "max_value": 32.0,
+     "examples": [
+      12.0,
+      16.0,
+      24.0
+     ],
+     "top_values": [
+      [
+       12.0,
+       1525
+      ],
+      [
+       16.0,
+       841
+      ],
+      [
+       24.0,
+       22
+      ],
+      [
+       19.2,
+       15
+      ],
+      [
+       32.0,
+       5
+      ],
+      [
+       16.9,
+       1
+      ],
+      [
+       8.4,
+       1
+      ]
+     ],
+     "description": "ounces",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "brewery_id": 166,
+     "abv": 0.065,
+     "ibu": 65.0,
+     "name": "Dale's Pale Ale",
+     "style": "American Pale Ale (APA)",
+     "ounces": 12.0
+    },
+    {
+     "id": 4,
+     "brewery_id": 166,
+     "abv": 0.087,
+     "ibu": 85.0,
+     "name": "Gordon Ale (2009)",
+     "style": "American Double / Imperial IPA",
+     "ounces": 12.0
+    },
+    {
+     "id": 5,
+     "brewery_id": 166,
+     "abv": 0.08,
+     "ibu": 35.0,
+     "name": "Old Chub",
+     "style": "Scottish Ale",
+     "ounces": 12.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "breweries",
+   "row_count": 558,
+   "stats_rows": 558,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 558,
+     "is_unique": true,
+     "min_value": 0,
+     "max_value": 557,
+     "examples": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [],
+     "description": "unique ID of the breweries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 551,
+     "is_unique": false,
+     "min_value": "10 Barrel Brewing Company",
+     "max_value": "Wynkoop Brewing Company",
+     "examples": [
+      "NorthGate Brewing ",
+      "Against the Grain Brewery",
+      "Jack's Abby Craft Lagers",
+      "Mike Hess Brewing Company",
+      "Fort Point Beer Company"
+     ],
+     "top_values": [],
+     "description": "name of the breweries",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 384,
+     "is_unique": false,
+     "min_value": "Abingdon",
+     "max_value": "York",
+     "examples": [
+      "Minneapolis",
+      "Louisville",
+      "Framingham",
+      "San Diego",
+      "San Francisco"
+     ],
+     "top_values": [],
+     "description": "city",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "state",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 51,
+     "is_unique": false,
+     "min_value": "AK",
+     "max_value": "WY",
+     "examples": [
+      "MN",
+      "KY",
+      "MA",
+      "CA",
+      "SC"
+     ],
+     "top_values": [],
+     "description": "state",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 0,
+     "name": "NorthGate Brewing ",
+     "city": "Minneapolis",
+     "state": "MN"
+    },
+    {
+     "id": 1,
+     "name": "Against the Grain Brewery",
+     "city": "Louisville",
+     "state": "KY"
+    },
+    {
+     "id": 2,
+     "name": "Jack's Abby Craft Lagers",
+     "city": "Framingham",
+     "state": "MA"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "beers",
+   "from_column": "brewery_id",
+   "to_table": "breweries",
+   "to_column": "id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

@@ -1,0 +1,1803 @@
+{
+ "db_id": "movie_platform",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/movie_platform/movie_platform.sqlite",
+ "fingerprint": "4311130112-1793993045410827463-v1.0",
+ "created_at": "2026-11-06T19:25:59+00:00",
+ "profile_seconds": 61.404,
+ "tables": [
+  {
+   "name": "lists",
+   "row_count": 79565,
+   "stats_rows": 79565,
+   "columns": [
+    {
+     "name": "user_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22925,
+     "is_unique": false,
+     "min_value": 2385,
+     "max_value": 99997323,
+     "examples": [
+      88260493,
+      45204418,
+      48905025,
+      12074910,
+      67171533
+     ],
+     "top_values": [],
+     "description": "ID related to the user who created the list.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "list_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 79565,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 197192,
+     "examples": [
+      1,
+      2,
+      3,
+      7,
+      8
+     ],
+     "top_values": [],
+     "description": "ID of the list on Mubi",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "list_title",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 58898,
+     "is_unique": false,
+     "min_value": "\n \nScream: The Complete Collection",
+     "max_value": "한국어 영화도",
+     "examples": [
+      "Films that made your kid sister cry",
+      "Headscratchers",
+      "Sexy Time Movies",
+      "This is America",
+      "Best Documentaries"
+     ],
+     "top_values": [],
+     "description": "Name of the list",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "list_movie_number",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 907,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 10915,
+     "examples": [
+      5,
+      3,
+      7,
+      11,
+      41
+     ],
+     "top_values": [],
+     "description": "Number of movies added to the list",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "list_update_timestamp_utc",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 69576,
+     "is_unique": false,
+     "min_value": "2009-11-11 00:41:28",
+     "max_value": "2020-05-03 20:39:32",
+     "examples": [
+      "2019-01-24 19:16:18",
+      "2018-12-03 15:12:20",
+      "2019-05-30 03:00:07",
+      "2020-04-25 05:55:07",
+      "2009-11-11 00:41:28"
+     ],
+     "top_values": [],
+     "description": "Last update timestamp for the list",
+     "value_description": "",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "list_creation_timestamp_utc",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 79499,
+     "is_unique": false,
+     "min_value": "2009-11-11 00:02:21",
+     "max_value": "2020-05-03 19:59:00",
+     "examples": [
+      "2009-11-11 00:02:21",
+      "2009-11-11 00:05:11",
+      "2009-11-11 00:20:00",
+      "2009-11-11 00:32:52",
+      "2009-11-11 00:41:10"
+     ],
+     "top_values": [],
+     "description": "Creation timestamp for the list",
+     "value_description": "",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "list_followers",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 400,
+     "is_unique": false,
+     "min_value": -15,
+     "max_value": 4914,
+     "examples": [
+      5,
+      1,
+      6,
+      9,
+      90
+     ],
+     "top_values": [],
+     "description": "Number of followers on the list",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "list_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 79535,
+     "is_unique": false,
+     "min_value": "http://mubi.com/lists/%C2%BA",
+     "max_value": "http://mubi.com/lists/zzzzzzzz-movies",
+     "examples": [
+      "http://mubi.com/lists/films-that-made-your-kid-sister-cry",
+      "http://mubi.com/lists/headscratchers",
+      "http://mubi.com/lists/sexy-time-movies",
+      "http://mubi.com/lists/this-is-america",
+      "http://mubi.com/lists/best-documentaries"
+     ],
+     "top_values": [],
+     "description": "URL to the list page on Mubi",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "list_comments",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 76,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 190,
+     "examples": [
+      3,
+      2,
+      5,
+      4,
+      0
+     ],
+     "top_values": [],
+     "description": "Number of comments on the list",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "list_description",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.655,
+     "distinct_count": 25445,
+     "is_unique": false,
+     "min_value": "<hr>",
+     "max_value": "em falta: pepi, luci, bom; labyrinth of passion; matador; la...",
+     "examples": [
+      "<p>Don’t be such a baby!!</p>\n<p><strong>bold</strong></p>",
+      "<p>Films that need at least two viewings to really make sens...",
+      "<p>Films that get you in the mood…for love. In development.<...",
+      "<p>Stories of the people, place and things.</p>",
+      "<p>See also: <a href=\"http://www.theauteurs.com/lists/31\" re..."
+     ],
+     "top_values": [],
+     "description": "List description made by the user",
+     "value_description": "",
+     "notes": [
+      "66% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "list_cover_image_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0048,
+     "distinct_count": 19902,
+     "is_unique": false,
+     "min_value": "https://assets.mubicdn.net/images/film/1/image-w1280.jpg?158...",
+     "max_value": "https://assets.mubicdn.net/images/list/9938/image-large.jpg?...",
+     "examples": [
+      "https://assets.mubicdn.net/images/film/3822/image-w1280.jpg?...",
+      "https://assets.mubicdn.net/images/film/4343/image-w1280.jpg?...",
+      "https://assets.mubicdn.net/images/film/3491/image-w1280.jpg?...",
+      "https://assets.mubicdn.net/images/film/4058/image-w1280.jpg?...",
+      "https://assets.mubicdn.net/images/film/470/image-w1280.jpg?1..."
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "list_first_image_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0044,
+     "distinct_count": 18715,
+     "is_unique": false,
+     "min_value": "https://assets.mubicdn.net/images/film/1/image-w320.jpg?1581...",
+     "max_value": "https://assets.mubicdn.net/images/film/99997/image-w320.jpg?...",
+     "examples": [
+      "https://assets.mubicdn.net/images/film/3822/image-w320.jpg?1...",
+      "https://assets.mubicdn.net/images/film/4343/image-w320.jpg?1...",
+      "https://assets.mubicdn.net/images/film/3491/image-w320.jpg?1...",
+      "https://assets.mubicdn.net/images/film/4058/image-w320.jpg?1...",
+      "https://assets.mubicdn.net/images/film/470/image-w320.jpg?15..."
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "list_second_image_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1374,
+     "distinct_count": 18017,
+     "is_unique": false,
+     "min_value": "https://assets.mubicdn.net/images/film/1/image-w320.jpg?1581...",
+     "max_value": "https://assets.mubicdn.net/images/film/99997/image-w320.jpg?...",
+     "examples": [
+      "https://assets.mubicdn.net/images/film/506/image-w320.jpg?15...",
+      "https://assets.mubicdn.net/images/film/159/image-w320.jpg?15...",
+      "https://assets.mubicdn.net/images/film/2377/image-w320.jpg?1...",
+      "https://assets.mubicdn.net/images/film/1033/image-w320.jpg?1...",
+      "https://assets.mubicdn.net/images/film/2115/image-w320.jpg?1..."
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "list_third_image_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.195,
+     "distinct_count": 17591,
+     "is_unique": false,
+     "min_value": "https://assets.mubicdn.net/images/film/1/image-w320.jpg?1581...",
+     "max_value": "https://assets.mubicdn.net/images/film/99993/image-w320.jpg?...",
+     "examples": [
+      "https://assets.mubicdn.net/images/film/485/image-w320.jpg?15...",
+      "https://assets.mubicdn.net/images/film/142/image-w320.jpg?15...",
+      "https://assets.mubicdn.net/images/film/2874/image-w320.jpg?1...",
+      "https://assets.mubicdn.net/images/film/407/image-w320.jpg?14...",
+      "https://assets.mubicdn.net/images/film/1688/image-w320.jpg?1..."
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "list_id"
+   ],
+   "sample_rows": [
+    {
+     "user_id": 88260493,
+     "list_id": 1,
+     "list_title": "Films that made your kid sister cry",
+     "list_movie_number": 5,
+     "list_update_timestamp_utc": "2019-01-24 19:16:18",
+     "list_creation_timestamp_utc": "2009-11-11 00:02:21",
+     "list_followers": 5,
+     "list_url": "http://mubi.com/lists/films-that-made-your-kid-sister-cry",
+     "list_comments": 3,
+     "list_description": "<p>Don’t be such a baby!!</p>\n<p><strong>bold</strong></p>",
+     "list_cover_image_url": "https://assets.mubicdn.net/images/film/3822/image-w1280.jpg?...",
+     "list_first_image_url": "https://assets.mubicdn.net/images/film/3822/image-w320.jpg?1...",
+     "list_second_image_url": "https://assets.mubicdn.net/images/film/506/image-w320.jpg?15...",
+     "list_third_image_url": "https://assets.mubicdn.net/images/film/485/image-w320.jpg?15..."
+    },
+    {
+     "user_id": 45204418,
+     "list_id": 2,
+     "list_title": "Headscratchers",
+     "list_movie_number": 3,
+     "list_update_timestamp_utc": "2018-12-03 15:12:20",
+     "list_creation_timestamp_utc": "2009-11-11 00:05:11",
+     "list_followers": 1,
+     "list_url": "http://mubi.com/lists/headscratchers",
+     "list_comments": 2,
+     "list_description": "<p>Films that need at least two viewings to really make sens...",
+     "list_cover_image_url": "https://assets.mubicdn.net/images/film/4343/image-w1280.jpg?...",
+     "list_first_image_url": "https://assets.mubicdn.net/images/film/4343/image-w320.jpg?1...",
+     "list_second_image_url": "https://assets.mubicdn.net/images/film/159/image-w320.jpg?15...",
+     "list_third_image_url": "https://assets.mubicdn.net/images/film/142/image-w320.jpg?15..."
+    },
+    {
+     "user_id": 48905025,
+     "list_id": 3,
+     "list_title": "Sexy Time Movies",
+     "list_movie_number": 7,
+     "list_update_timestamp_utc": "2019-05-30 03:00:07",
+     "list_creation_timestamp_utc": "2009-11-11 00:20:00",
+     "list_followers": 6,
+     "list_url": "http://mubi.com/lists/sexy-time-movies",
+     "list_comments": 5,
+     "list_description": "<p>Films that get you in the mood…for love. In development.<...",
+     "list_cover_image_url": "https://assets.mubicdn.net/images/film/3491/image-w1280.jpg?...",
+     "list_first_image_url": "https://assets.mubicdn.net/images/film/3491/image-w320.jpg?1...",
+     "list_second_image_url": "https://assets.mubicdn.net/images/film/2377/image-w320.jpg?1...",
+     "list_third_image_url": "https://assets.mubicdn.net/images/film/2874/image-w320.jpg?1..."
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "lists_users",
+   "row_count": 80311,
+   "stats_rows": 80311,
+   "columns": [
+    {
+     "name": "user_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 23118,
+     "is_unique": false,
+     "min_value": 2385,
+     "max_value": 99997323,
+     "examples": [
+      85981819,
+      4208563,
+      9820140,
+      57756708,
+      8516503
+     ],
+     "top_values": [],
+     "description": "ID related to the user who created the list.",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "list_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 80311,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 197192,
+     "examples": [
+      1969,
+      3946,
+      6683,
+      8865,
+      13796
+     ],
+     "top_values": [],
+     "description": "ID of the list on Mubi",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "list_update_date_utc",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3801,
+     "is_unique": false,
+     "min_value": "2009-11-11",
+     "max_value": "2020-05-03",
+     "examples": [
+      "2019-11-26",
+      "2020-05-01",
+      "2020-04-12",
+      "2018-12-14",
+      "2016-04-12"
+     ],
+     "top_values": [],
+     "description": "Last update date for the list",
+     "value_description": "YYYY-MM-DD",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "list_creation_date_utc",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3798,
+     "is_unique": false,
+     "min_value": "2009-11-11",
+     "max_value": "2020-05-03",
+     "examples": [
+      "2009-12-18",
+      "2010-01-30",
+      "2010-03-31",
+      "2010-05-10",
+      "2010-08-25"
+     ],
+     "top_values": [],
+     "description": "Creation date for the list",
+     "value_description": "YYYY-MM-DD",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "user_trialist",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      1,
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       73659
+      ],
+      [
+       1,
+       6652
+      ]
+     ],
+     "description": "whether the user was a tralist when he created the list",
+     "value_description": "1 = the user was a trialist when he created the list\n 0 = the user was not a trialist when he created the list",
+     "notes": []
+    },
+    {
+     "name": "user_subscriber",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      1,
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       58557
+      ],
+      [
+       1,
+       21754
+      ]
+     ],
+     "description": "whether the user was a subscriber when he created the list",
+     "value_description": "1 = the user was a subscriber when he created the list \n0 = the user was not a subscriber when he created the list",
+     "notes": []
+    },
+    {
+     "name": "user_avatar_image_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 16565,
+     "is_unique": false,
+     "min_value": "//mubi.com/assets/placeholders/avatar-c68833eec06a12b110c74d...",
+     "max_value": "https://graph.facebook.com/999326926907394/picture?width=150...",
+     "examples": [
+      "https://assets.mubicdn.net/images/avatars/74983/images-w150....",
+      "https://graph.facebook.com/754931657/picture?width=150&heigh...",
+      "https://assets.mubicdn.net/images/avatars/24396/images-w150....",
+      "https://graph.facebook.com/1639060242/picture?width=150&heig...",
+      "https://assets.mubicdn.net/images/avatars/41627/images-w150...."
+     ],
+     "top_values": [],
+     "description": "User profile image URL on Mubi",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_cover_image_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.6004,
+     "distinct_count": 4838,
+     "is_unique": false,
+     "min_value": "https://assets.mubicdn.net/images/cover_images/100015/images...",
+     "max_value": "https://assets.mubicdn.net/images/cover_images/99985/images-...",
+     "examples": [
+      "https://assets.mubicdn.net/images/cover_images/12788/images-...",
+      "https://assets.mubicdn.net/images/cover_images/19106/images-...",
+      "https://assets.mubicdn.net/images/cover_images/67734/images-...",
+      "https://assets.mubicdn.net/images/cover_images/85215/images-...",
+      "https://assets.mubicdn.net/images/cover_images/21017/images-..."
+     ],
+     "top_values": [],
+     "description": "User profile cover image URL on Mubi",
+     "value_description": "",
+     "notes": [
+      "60% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "user_eligible_for_trial",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "1",
+     "examples": [
+      "0",
+      "1"
+     ],
+     "top_values": [
+      [
+       "1",
+       56398
+      ],
+      [
+       "0",
+       23913
+      ]
+     ],
+     "description": "whether the user was eligible for trial when he created the list",
+     "value_description": "1 = the user was eligible for trial when he created the list \n0 = the user was not eligible for trial when he created the list",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "user_has_payment_method",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "1",
+     "examples": [
+      "1",
+      "0"
+     ],
+     "top_values": [
+      [
+       "0",
+       44923
+      ],
+      [
+       "1",
+       35388
+      ]
+     ],
+     "description": "whether the user was a paying subscriber when he created the list",
+     "value_description": "1 = the user was a paying subscriber when he created the list \n0 = the user was not a paying subscriber when he created the list",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    }
+   ],
+   "primary_key": [
+    "user_id",
+    "list_id"
+   ],
+   "sample_rows": [
+    {
+     "user_id": 85981819,
+     "list_id": 1969,
+     "list_update_date_utc": "2019-11-26",
+     "list_creation_date_utc": "2009-12-18",
+     "user_trialist": 1,
+     "user_subscriber": 1,
+     "user_avatar_image_url": "https://assets.mubicdn.net/images/avatars/74983/images-w150....",
+     "user_cover_image_url": null,
+     "user_eligible_for_trial": "0",
+     "user_has_payment_method": "1"
+    },
+    {
+     "user_id": 85981819,
+     "list_id": 3946,
+     "list_update_date_utc": "2020-05-01",
+     "list_creation_date_utc": "2010-01-30",
+     "user_trialist": 1,
+     "user_subscriber": 1,
+     "user_avatar_image_url": "https://assets.mubicdn.net/images/avatars/74983/images-w150....",
+     "user_cover_image_url": null,
+     "user_eligible_for_trial": "0",
+     "user_has_payment_method": "1"
+    },
+    {
+     "user_id": 85981819,
+     "list_id": 6683,
+     "list_update_date_utc": "2020-04-12",
+     "list_creation_date_utc": "2010-03-31",
+     "user_trialist": 1,
+     "user_subscriber": 1,
+     "user_avatar_image_url": "https://assets.mubicdn.net/images/avatars/74983/images-w150....",
+     "user_cover_image_url": null,
+     "user_eligible_for_trial": "0",
+     "user_has_payment_method": "1"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "movies",
+   "row_count": 226087,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "movie_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 236960,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "ID related to the movie on Mubi",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "movie_title",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 175006,
+     "is_unique": false,
+     "min_value": "! Women Art Revolution",
+     "max_value": "❀",
+     "examples": [
+      "La Antena",
+      "Elementary Particles",
+      "It's Winter",
+      "Kirikou and the Wild Beasts",
+      "Padre Nuestro"
+     ],
+     "top_values": [],
+     "description": "Name of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "movie_release_year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 138,
+     "is_unique": false,
+     "min_value": 1878,
+     "max_value": 2021,
+     "examples": [
+      2007,
+      2006,
+      2005,
+      2003,
+      1957
+     ],
+     "top_values": [],
+     "description": "Release year of the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "movie_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 200000,
+     "is_unique": true,
+     "min_value": "http://mubi.com/films/-00030408",
+     "max_value": "http://mubi.com/films/zzzzzzz",
+     "examples": [
+      "http://mubi.com/films/la-antena",
+      "http://mubi.com/films/elementary-particles",
+      "http://mubi.com/films/its-winter",
+      "http://mubi.com/films/kirikou-and-the-wild-beasts",
+      "http://mubi.com/films/padre-nuestro"
+     ],
+     "top_values": [],
+     "description": "URL to the movie page on Mubi",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "movie_title_language",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "en",
+     "max_value": "en",
+     "examples": [
+      "en"
+     ],
+     "top_values": [
+      [
+       "en",
+       200000
+      ]
+     ],
+     "description": "By default, the title is in English.",
+     "value_description": "Only contains one value which is 'en'",
+     "notes": []
+    },
+    {
+     "name": "movie_popularity",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1275,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 13989,
+     "examples": [
+      105,
+      23,
+      21,
+      46,
+      7
+     ],
+     "top_values": [],
+     "description": "Number of Mubi users who love this movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "movie_image_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.078,
+     "distinct_count": 184403,
+     "is_unique": true,
+     "min_value": "https://images.mubicdn.net/images/film/1/cache-7927-15813894...",
+     "max_value": "https://images.mubicdn.net/images/film/99999/cache-65000-144...",
+     "examples": [
+      "https://images.mubicdn.net/images/film/1/cache-7927-15813894...",
+      "https://images.mubicdn.net/images/film/2/cache-512179-158138...",
+      "https://images.mubicdn.net/images/film/3/cache-7929-14815395...",
+      "https://images.mubicdn.net/images/film/4/cache-7930-15688800...",
+      "https://images.mubicdn.net/images/film/5/cache-7931-15813906..."
+     ],
+     "top_values": [],
+     "description": "Image URL to the movie on Mubi",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "director_id",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 83870,
+     "is_unique": false,
+     "min_value": "100",
+     "max_value": "99999",
+     "examples": [
+      "131",
+      "73",
+      "82",
+      "89, 90",
+      "92"
+     ],
+     "top_values": [],
+     "description": "ID related to the movie director on Mubi",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "director_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 83713,
+     "is_unique": false,
+     "min_value": "(Unknown)",
+     "max_value": "‎Mike Gunton‎",
+     "examples": [
+      "Esteban Sapir",
+      "Oskar Roehler",
+      "Rafi Pitts",
+      "Michel Ocelot, Bénédicte Galup",
+      "Christopher Zalla"
+     ],
+     "top_values": [],
+     "description": "Full Name of the movie director",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "director_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 83870,
+     "is_unique": false,
+     "min_value": "http://mubi.com/cast/300-ml",
+     "max_value": "http://mubi.com/cast/zz-satriani",
+     "examples": [
+      "http://mubi.com/cast/esteban-sapir",
+      "http://mubi.com/cast/oskar-roehler",
+      "http://mubi.com/cast/rafi-pitts",
+      "http://mubi.com/cast/michel-ocelot, http://mubi.com/cast/ben...",
+      "http://mubi.com/cast/christopher-zalla"
+     ],
+     "top_values": [],
+     "description": "URL to the movie director page on Mubi",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "movie_id"
+   ],
+   "sample_rows": [
+    {
+     "movie_id": 1,
+     "movie_title": "La Antena",
+     "movie_release_year": 2007,
+     "movie_url": "http://mubi.com/films/la-antena",
+     "movie_title_language": "en",
+     "movie_popularity": 105,
+     "movie_image_url": "https://images.mubicdn.net/images/film/1/cache-7927-15813894...",
+     "director_id": "131",
+     "director_name": "Esteban Sapir",
+     "director_url": "http://mubi.com/cast/esteban-sapir"
+    },
+    {
+     "movie_id": 2,
+     "movie_title": "Elementary Particles",
+     "movie_release_year": 2006,
+     "movie_url": "http://mubi.com/films/elementary-particles",
+     "movie_title_language": "en",
+     "movie_popularity": 23,
+     "movie_image_url": "https://images.mubicdn.net/images/film/2/cache-512179-158138...",
+     "director_id": "73",
+     "director_name": "Oskar Roehler",
+     "director_url": "http://mubi.com/cast/oskar-roehler"
+    },
+    {
+     "movie_id": 3,
+     "movie_title": "It's Winter",
+     "movie_release_year": 2006,
+     "movie_url": "http://mubi.com/films/its-winter",
+     "movie_title_language": "en",
+     "movie_popularity": 21,
+     "movie_image_url": "https://images.mubicdn.net/images/film/3/cache-7929-14815395...",
+     "director_id": "82",
+     "director_name": "Rafi Pitts",
+     "director_url": "http://mubi.com/cast/rafi-pitts"
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 226,087 rows"
+   ]
+  },
+  {
+   "name": "ratings",
+   "row_count": 15517252,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "movie_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 459,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1361,
+     "examples": [
+      1066,
+      1067,
+      1068,
+      1069
+     ],
+     "top_values": [],
+     "description": "Movie ID related to the rating",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "rating_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 199999,
+     "is_unique": false,
+     "min_value": 20444,
+     "max_value": 19896369,
+     "examples": [
+      15610495,
+      10704606,
+      10177114,
+      10130280,
+      8357049
+     ],
+     "top_values": [],
+     "description": "Rating ID on Mubi",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "rating_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 199999,
+     "is_unique": false,
+     "min_value": "http://mubi.com/films/101-reykjavik/ratings/10028726",
+     "max_value": "http://mubi.com/films/young-aphrodites/ratings/9901105",
+     "examples": [
+      "http://mubi.com/films/pavee-lackeen-the-traveller-girl/ratin...",
+      "http://mubi.com/films/a-way-of-life/ratings/11808064",
+      "http://mubi.com/films/a-way-of-life/ratings/10464922",
+      "http://mubi.com/films/a-way-of-life/ratings/10299920",
+      "http://mubi.com/films/a-way-of-life/ratings/8761221"
+     ],
+     "top_values": [],
+     "description": "URL to the rating on Mubi",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "rating_score",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.002,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 5,
+     "examples": [
+      3,
+      2,
+      4,
+      5,
+      1
+     ],
+     "top_values": [
+      [
+       4,
+       77468
+      ],
+      [
+       5,
+       64080
+      ],
+      [
+       3,
+       42159
+      ],
+      [
+       2,
+       11610
+      ],
+      [
+       1,
+       4274
+      ]
+     ],
+     "description": "Rating score ranging from 1 (lowest) to 5 (highest)",
+     "value_description": "commonsense evidence:\nThe score is proportional to the user's liking.\nThe higher the score is, the more the user likes the movie",
+     "notes": []
+    },
+    {
+     "name": "rating_timestamp_utc",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 199860,
+     "is_unique": false,
+     "min_value": "2008-11-22 09:29:55",
+     "max_value": "2020-04-19 12:59:30",
+     "examples": [
+      "2017-06-10 12:38:33",
+      "2014-08-15 23:42:31",
+      "2014-01-30 13:21:57",
+      "2014-01-19 01:04:23",
+      "2012-10-02 18:28:47"
+     ],
+     "top_values": [],
+     "description": "Timestamp for the movie rating made by the user on Mubi",
+     "value_description": "",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "critic",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.9653,
+     "distinct_count": 6503,
+     "is_unique": false,
+     "min_value": "\b nice nice nice ",
+     "max_value": "세리 고마 조타이가",
+     "examples": [
+      "I am a bit disappointed by this documentary film I've been w...",
+      "Splendid debut. Whatever happened to Amma Asante?",
+      "One of the more harrowing viewing experiences I have been th...",
+      "2,5",
+      "Can we all just agree to pretend that this flick didn't happ..."
+     ],
+     "top_values": [],
+     "description": "Critic made by the user rating the movie.",
+     "value_description": "If value = \"None\", the user did not write a critic when rating the movie.",
+     "notes": [
+      "97% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "critic_likes",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 22,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       194527
+      ],
+      [
+       1,
+       3964
+      ],
+      [
+       2,
+       809
+      ],
+      [
+       3,
+       297
+      ],
+      [
+       4,
+       144
+      ],
+      [
+       5,
+       95
+      ],
+      [
+       6,
+       47
+      ],
+      [
+       7,
+       32
+      ],
+      [
+       8,
+       20
+      ],
+      [
+       9,
+       16
+      ],
+      [
+       10,
+       14
+      ],
+      [
+       11,
+       10
+      ],
+      [
+       12,
+       5
+      ],
+      [
+       13,
+       4
+      ],
+      [
+       16,
+       3
+      ],
+      [
+       15,
+       3
+      ],
+      [
+       14,
+       3
+      ],
+      [
+       18,
+       2
+      ],
+      [
+       17,
+       2
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       19,
+       1
+      ]
+     ],
+     "description": "Number of likes related to the critic made by the user rating the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "critic_comments",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 15,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 29,
+     "examples": [
+      0,
+      2
+     ],
+     "top_values": [
+      [
+       0,
+       199626
+      ],
+      [
+       1,
+       237
+      ],
+      [
+       2,
+       61
+      ],
+      [
+       3,
+       19
+      ],
+      [
+       4,
+       17
+      ],
+      [
+       5,
+       12
+      ],
+      [
+       7,
+       8
+      ],
+      [
+       9,
+       4
+      ],
+      [
+       8,
+       4
+      ],
+      [
+       6,
+       4
+      ],
+      [
+       11,
+       3
+      ],
+      [
+       10,
+       2
+      ],
+      [
+       29,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       12,
+       1
+      ]
+     ],
+     "description": "Number of comments related to the critic made by the user rating the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 63369,
+     "is_unique": false,
+     "min_value": 2278,
+     "max_value": 99998902,
+     "examples": [
+      41579158,
+      85981819,
+      4208563,
+      9820140,
+      68654088
+     ],
+     "top_values": [],
+     "description": "ID related to the user rating the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_trialist",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       190930
+      ],
+      [
+       1,
+       9070
+      ]
+     ],
+     "description": "whether user was a tralist when he rated the movie",
+     "value_description": "1 = the user was a trialist when he rated the movie \n0 = the user was not a trialist when he rated the movie",
+     "notes": []
+    },
+    {
+     "name": "user_subscriber",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       159788
+      ],
+      [
+       1,
+       40212
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_eligible_for_trial",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      1,
+      0
+     ],
+     "top_values": [
+      [
+       1,
+       155469
+      ],
+      [
+       0,
+       44531
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_has_payment_method",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       129798
+      ],
+      [
+       1,
+       70202
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "movie_id": 1066,
+     "rating_id": 15610495,
+     "rating_url": "http://mubi.com/films/pavee-lackeen-the-traveller-girl/ratin...",
+     "rating_score": 3,
+     "rating_timestamp_utc": "2017-06-10 12:38:33",
+     "critic": null,
+     "critic_likes": 0,
+     "critic_comments": 0,
+     "user_id": 41579158,
+     "user_trialist": 0,
+     "user_subscriber": 0,
+     "user_eligible_for_trial": 1,
+     "user_has_payment_method": 0
+    },
+    {
+     "movie_id": 1066,
+     "rating_id": 10704606,
+     "rating_url": "http://mubi.com/films/pavee-lackeen-the-traveller-girl/ratin...",
+     "rating_score": 2,
+     "rating_timestamp_utc": "2014-08-15 23:42:31",
+     "critic": null,
+     "critic_likes": 0,
+     "critic_comments": 0,
+     "user_id": 85981819,
+     "user_trialist": 1,
+     "user_subscriber": 1,
+     "user_eligible_for_trial": 0,
+     "user_has_payment_method": 1
+    },
+    {
+     "movie_id": 1066,
+     "rating_id": 10177114,
+     "rating_url": "http://mubi.com/films/pavee-lackeen-the-traveller-girl/ratin...",
+     "rating_score": 2,
+     "rating_timestamp_utc": "2014-01-30 13:21:57",
+     "critic": null,
+     "critic_likes": 0,
+     "critic_comments": 0,
+     "user_id": 4208563,
+     "user_trialist": 0,
+     "user_subscriber": 0,
+     "user_eligible_for_trial": 1,
+     "user_has_payment_method": 1
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 15,517,252 rows",
+    "no declared primary key; beware duplicate rows"
+   ]
+  },
+  {
+   "name": "ratings_users",
+   "row_count": 4297641,
+   "stats_rows": 200000,
+   "columns": [
+    {
+     "name": "user_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 75179,
+     "is_unique": false,
+     "min_value": 176,
+     "max_value": 99998902,
+     "examples": [
+      41579158,
+      68654088,
+      84114365,
+      29755671,
+      93302487
+     ],
+     "top_values": [],
+     "description": "ID related to the user rating the movie",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "rating_date_utc",
+     "declared_type": "TEXT",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4143,
+     "is_unique": false,
+     "min_value": "2008-11-22",
+     "max_value": "2020-04-19",
+     "examples": [
+      "2017-06-10",
+      "2012-10-02",
+      "2010-12-25",
+      "2010-11-15",
+      "2010-01-05"
+     ],
+     "top_values": [],
+     "description": "Rating date for the movie rating.",
+     "value_description": "YYYY-MM-DD",
+     "notes": [
+      "dates stored as TEXT; compare as strings (YYYY-MM-DD)"
+     ]
+    },
+    {
+     "name": "user_trialist",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       186418
+      ],
+      [
+       1,
+       13582
+      ]
+     ],
+     "description": "whether the user was a trialist when he rated the movie",
+     "value_description": "1 = the user was a trialist when he rated the movie\n 0 = the user was not a trialist when he rated the movie",
+     "notes": []
+    },
+    {
+     "name": "user_subscriber",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       139038
+      ],
+      [
+       1,
+       60962
+      ]
+     ],
+     "description": "whether the user was a subscriber when he rated the movie",
+     "value_description": "1 = the user was a subscriber when he rated the movie \n0 = the user was not a subscriber when he rated the movie",
+     "notes": []
+    },
+    {
+     "name": "user_avatar_image_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 37818,
+     "is_unique": false,
+     "min_value": "//mubi.com/assets/placeholders/avatar-c68833eec06a12b110c74d...",
+     "max_value": "https://graph.facebook.com/999326926907394/picture?width=150...",
+     "examples": [
+      "https://assets.mubicdn.net/images/avatars/74283/images-w150....",
+      "https://assets.mubicdn.net/images/avatars/27714/images-w150....",
+      "https://assets.mubicdn.net/images/avatars/1808/images-w150.j...",
+      "//mubi.com/assets/placeholders/avatar-c68833eec06a12b110c74d...",
+      "https://assets.mubicdn.net/images/avatars/12246/images-w150...."
+     ],
+     "top_values": [],
+     "description": "URL to the user profile image on Mubi",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "user_cover_image_url",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.674,
+     "distinct_count": 8813,
+     "is_unique": false,
+     "min_value": "https://assets.mubicdn.net/images/cover_images/100009/images...",
+     "max_value": "https://assets.mubicdn.net/images/cover_images/99983/images-...",
+     "examples": [
+      "https://assets.mubicdn.net/images/cover_images/37844/images-...",
+      "https://assets.mubicdn.net/images/cover_images/14970/images-...",
+      "https://assets.mubicdn.net/images/cover_images/74210/images-...",
+      "https://assets.mubicdn.net/images/cover_images/56363/images-...",
+      "https://assets.mubicdn.net/images/cover_images/94691/images-..."
+     ],
+     "top_values": [],
+     "description": "URL to the user profile cover image on Mubi",
+     "value_description": "",
+     "notes": [
+      "67% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "user_eligible_for_trial",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      1,
+      0
+     ],
+     "top_values": [
+      [
+       1,
+       133217
+      ],
+      [
+       0,
+       66783
+      ]
+     ],
+     "description": "whether the user was eligible for trial when he rated the movie",
+     "value_description": "1 = the user was eligible for trial when he rated the movie\n 0 = the user was not eligible for trial when he rated the movie",
+     "notes": []
+    },
+    {
+     "name": "user_has_payment_method",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       106848
+      ],
+      [
+       1,
+       93152
+      ]
+     ],
+     "description": "whether the user was a paying subscriber when he rated the movie",
+     "value_description": "1 = the user was a paying subscriber when he rated the movie \n0 = the user was not a paying subscriber when he rated",
+     "notes": []
+    }
+   ],
+   "primary_key": [],
+   "sample_rows": [
+    {
+     "user_id": 41579158,
+     "rating_date_utc": "2017-06-10",
+     "user_trialist": 0,
+     "user_subscriber": 0,
+     "user_avatar_image_url": "https://assets.mubicdn.net/images/avatars/74283/images-w150....",
+     "user_cover_image_url": null,
+     "user_eligible_for_trial": 1,
+     "user_has_payment_method": 0
+    },
+    {
+     "user_id": 68654088,
+     "rating_date_utc": "2012-10-02",
+     "user_trialist": 0,
+     "user_subscriber": 0,
+     "user_avatar_image_url": "https://assets.mubicdn.net/images/avatars/27714/images-w150....",
+     "user_cover_image_url": null,
+     "user_eligible_for_trial": 1,
+     "user_has_payment_method": 1
+    },
+    {
+     "user_id": 84114365,
+     "rating_date_utc": "2010-12-25",
+     "user_trialist": 0,
+     "user_subscriber": 0,
+     "user_avatar_image_url": "https://assets.mubicdn.net/images/avatars/1808/images-w150.j...",
+     "user_cover_image_url": null,
+     "user_eligible_for_trial": 1,
+     "user_has_payment_method": 0
+    }
+   ],
+   "notes": [
+    "column stats computed on first 200,000 of 4,297,641 rows",
+    "no declared primary key; beware duplicate rows"
+   ]
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "lists",
+   "from_column": "user_id",
+   "to_table": "lists_users",
+   "to_column": "user_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "lists_users",
+   "from_column": "list_id",
+   "to_table": "lists",
+   "to_column": "list_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "ratings",
+   "from_column": "user_id",
+   "to_table": "ratings_users",
+   "to_column": "user_id",
+   "source": "declared",
+   "cardinality": "many-to-many",
+   "overlap": null
+  },
+  {
+   "from_table": "ratings",
+   "from_column": "user_id",
+   "to_table": "lists_users",
+   "to_column": "user_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "ratings",
+   "from_column": "movie_id",
+   "to_table": "movies",
+   "to_column": "movie_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "ratings_users",
+   "from_column": "user_id",
+   "to_table": "lists_users",
+   "to_column": "user_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

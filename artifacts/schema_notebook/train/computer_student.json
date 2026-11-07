@@ -1,0 +1,693 @@
+{
+ "db_id": "computer_student",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/computer_student/computer_student.sqlite",
+ "fingerprint": "45056-1793993025034563348-v1.0",
+ "created_at": "2026-11-06T19:24:51+00:00",
+ "profile_seconds": 0.004,
+ "tables": [
+  {
+   "name": "advisedBy",
+   "row_count": 113,
+   "stats_rows": 113,
+   "columns": [
+    {
+     "name": "p_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 91,
+     "is_unique": false,
+     "min_value": 6,
+     "max_value": 435,
+     "examples": [
+      96,
+      118,
+      183,
+      263,
+      362
+     ],
+     "top_values": [],
+     "description": "person id. id number identifying each person",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "p_id_dummy",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 39,
+     "is_unique": false,
+     "min_value": 5,
+     "max_value": 415,
+     "examples": [
+      5,
+      7,
+      29,
+      57,
+      72
+     ],
+     "top_values": [
+      [
+       342,
+       7
+      ],
+      [
+       101,
+       6
+      ],
+      [
+       72,
+       6
+      ],
+      [
+       415,
+       5
+      ],
+      [
+       104,
+       5
+      ],
+      [
+       5,
+       5
+      ],
+      [
+       335,
+       4
+      ],
+      [
+       319,
+       4
+      ],
+      [
+       240,
+       4
+      ],
+      [
+       235,
+       4
+      ],
+      [
+       179,
+       4
+      ],
+      [
+       171,
+       4
+      ],
+      [
+       165,
+       4
+      ],
+      [
+       124,
+       4
+      ],
+      [
+       407,
+       3
+      ],
+      [
+       394,
+       3
+      ],
+      [
+       393,
+       3
+      ],
+      [
+       331,
+       3
+      ],
+      [
+       234,
+       3
+      ],
+      [
+       79,
+       3
+      ],
+      [
+       29,
+       3
+      ],
+      [
+       324,
+       2
+      ],
+      [
+       292,
+       2
+      ],
+      [
+       211,
+       2
+      ],
+      [
+       201,
+       2
+      ],
+      [
+       180,
+       2
+      ],
+      [
+       168,
+       2
+      ],
+      [
+       150,
+       2
+      ],
+      [
+       7,
+       2
+      ],
+      [
+       378,
+       1
+      ],
+      [
+       375,
+       1
+      ],
+      [
+       373,
+       1
+      ],
+      [
+       349,
+       1
+      ],
+      [
+       279,
+       1
+      ],
+      [
+       213,
+       1
+      ],
+      [
+       185,
+       1
+      ],
+      [
+       107,
+       1
+      ],
+      [
+       98,
+       1
+      ],
+      [
+       57,
+       1
+      ]
+     ],
+     "description": "person id dummy. the id number identifying the advisor",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "p_id",
+    "p_id_dummy"
+   ],
+   "sample_rows": [
+    {
+     "p_id": 96,
+     "p_id_dummy": 5
+    },
+    {
+     "p_id": 118,
+     "p_id_dummy": 5
+    },
+    {
+     "p_id": 183,
+     "p_id_dummy": 5
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "course",
+   "row_count": 132,
+   "stats_rows": 132,
+   "columns": [
+    {
+     "name": "course_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 132,
+     "is_unique": true,
+     "min_value": 0,
+     "max_value": 174,
+     "examples": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [],
+     "description": "course id. unique id number identifying courses",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "courseLevel",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3,
+     "is_unique": false,
+     "min_value": "Level_300",
+     "max_value": "Level_500",
+     "examples": [
+      "Level_500",
+      "Level_300",
+      "Level_400"
+     ],
+     "top_values": [
+      [
+       "Level_500",
+       82
+      ],
+      [
+       "Level_400",
+       42
+      ],
+      [
+       "Level_300",
+       8
+      ]
+     ],
+     "description": "course level",
+     "value_description": "commonsense evidence:\n Level_300: basic or medium undergraduate courses.\n Level_400: high-level or harder undergraduate course.\n Level_500: professional or master/graduate courses",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "course_id"
+   ],
+   "sample_rows": [
+    {
+     "course_id": 0,
+     "courseLevel": "Level_500"
+    },
+    {
+     "course_id": 1,
+     "courseLevel": "Level_500"
+    },
+    {
+     "course_id": 2,
+     "courseLevel": "Level_500"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "person",
+   "row_count": 278,
+   "stats_rows": 278,
+   "columns": [
+    {
+     "name": "p_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 278,
+     "is_unique": true,
+     "min_value": 3,
+     "max_value": 435,
+     "examples": [
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "top_values": [],
+     "description": "person ID. the unique number identifying each person",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "professor",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       216
+      ],
+      [
+       1,
+       62
+      ]
+     ],
+     "description": "whether the person is a professor",
+     "value_description": "0: professor\n1: student",
+     "notes": []
+    },
+    {
+     "name": "student",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1,
+     "examples": [
+      1,
+      0
+     ],
+     "top_values": [
+      [
+       1,
+       216
+      ],
+      [
+       0,
+       62
+      ]
+     ],
+     "description": "whether the person is a student",
+     "value_description": "0: professor\n1: student",
+     "notes": []
+    },
+    {
+     "name": "hasPosition",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "Faculty_eme",
+     "examples": [
+      "0",
+      "Faculty",
+      "Faculty_adj",
+      "Faculty_eme",
+      "Faculty_aff"
+     ],
+     "top_values": [
+      [
+       "0",
+       226
+      ],
+      [
+       "Faculty",
+       40
+      ],
+      [
+       "Faculty_adj",
+       6
+      ],
+      [
+       "Faculty_eme",
+       3
+      ],
+      [
+       "Faculty_aff",
+       3
+      ]
+     ],
+     "description": "has position. whether the person has a position in the faculty",
+     "value_description": "0: the person is not a faculty member\nCommon Sense evidence:\nfaculty_aff: affiliated faculty\nfaculty_eme: faculty employee",
+     "notes": []
+    },
+    {
+     "name": "inPhase",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "Pre_Quals",
+     "examples": [
+      "0",
+      "Post_Quals",
+      "Post_Generals",
+      "Pre_Quals"
+     ],
+     "top_values": [
+      [
+       "0",
+       138
+      ],
+      [
+       "Post_Generals",
+       50
+      ],
+      [
+       "Post_Quals",
+       49
+      ],
+      [
+       "Pre_Quals",
+       41
+      ]
+     ],
+     "description": "in phase. the phase of qualification the person is undergoing",
+     "value_description": "0: the person is not undergoing the phase of qualification",
+     "notes": []
+    },
+    {
+     "name": "yearsInProgram",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "Year_9",
+     "examples": [
+      "0",
+      "Year_2",
+      "Year_5",
+      "Year_7",
+      "Year_10"
+     ],
+     "top_values": [
+      [
+       "0",
+       138
+      ],
+      [
+       "Year_5",
+       27
+      ],
+      [
+       "Year_4",
+       24
+      ],
+      [
+       "Year_3",
+       23
+      ],
+      [
+       "Year_1",
+       22
+      ],
+      [
+       "Year_2",
+       16
+      ],
+      [
+       "Year_6",
+       12
+      ],
+      [
+       "Year_7",
+       7
+      ],
+      [
+       "Year_12",
+       3
+      ],
+      [
+       "Year_9",
+       2
+      ],
+      [
+       "Year_8",
+       2
+      ],
+      [
+       "Year_10",
+       2
+      ]
+     ],
+     "description": "years in program. the year of the program the person is at",
+     "value_description": "0: the person is not in any programs\nCommon Sense evidence:\nyearX means the person is on the Xth year of the program",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "p_id"
+   ],
+   "sample_rows": [
+    {
+     "p_id": 3,
+     "professor": 0,
+     "student": 1,
+     "hasPosition": "0",
+     "inPhase": "0",
+     "yearsInProgram": "0"
+    },
+    {
+     "p_id": 4,
+     "professor": 0,
+     "student": 1,
+     "hasPosition": "0",
+     "inPhase": "0",
+     "yearsInProgram": "0"
+    },
+    {
+     "p_id": 5,
+     "professor": 1,
+     "student": 0,
+     "hasPosition": "Faculty",
+     "inPhase": "0",
+     "yearsInProgram": "0"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "taughtBy",
+   "row_count": 189,
+   "stats_rows": 189,
+   "columns": [
+    {
+     "name": "course_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 113,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 174,
+     "examples": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [],
+     "description": "course ID. the identification number identifying each course",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "p_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 64,
+     "is_unique": false,
+     "min_value": 5,
+     "max_value": 415,
+     "examples": [
+      40,
+      180,
+      279,
+      107,
+      415
+     ],
+     "top_values": [],
+     "description": "person ID. the identification number identifying each person",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "course_id",
+    "p_id"
+   ],
+   "sample_rows": [
+    {
+     "course_id": 0,
+     "p_id": 40
+    },
+    {
+     "course_id": 1,
+     "p_id": 40
+    },
+    {
+     "course_id": 2,
+     "p_id": 180
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "advisedBy",
+   "from_column": "p_id",
+   "to_table": "person",
+   "to_column": "p_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "advisedBy",
+   "from_column": "p_id_dummy",
+   "to_table": "person",
+   "to_column": "p_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "taughtBy",
+   "from_column": "course_id",
+   "to_table": "course",
+   "to_column": "course_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "taughtBy",
+   "from_column": "p_id",
+   "to_table": "person",
+   "to_column": "p_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  }
+ ],
+ "notes": []
+}

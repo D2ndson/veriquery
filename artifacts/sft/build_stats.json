@@ -1,0 +1,12 @@
+{
+ "n_train": 3785,
+ "n_val": 77,
+ "with_fewshot": 1958,
+ "reasoning": "plan",
+ "stats": {
+  "kept": 3862,
+  "dropped_empty_result": 128,
+  "dropped_execution": 10
+ },
+ "source_questions": 4000
+}

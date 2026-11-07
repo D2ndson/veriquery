@@ -1,0 +1,15 @@
+{
+ "stage": "data_bird",
+ "seconds": 232.3,
+ "finished": "2026-11-06 19:24:48",
+ "info": {
+  "minidev": {
+   "json": "/workspace/veriquery-final/data/bird/minidev/minidev/MINIDEV/mini_dev_sqlite.json",
+   "db_root": "/workspace/veriquery-final/data/bird/minidev/minidev/MINIDEV/dev_databases"
+  },
+  "train": {
+   "json": "/workspace/veriquery-final/data/bird/train/train/train.json",
+   "db_root": "/workspace/veriquery-final/data/bird/train/train/train_databases"
+  }
+ }
+}

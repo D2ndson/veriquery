@@ -1,0 +1,8032 @@
+{
+ "db_id": "professional_basketball",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/professional_basketball/professional_basketball.sqlite",
+ "fingerprint": "6668288-1793993051322946836-v1.0",
+ "created_at": "2026-11-06T19:25:07+00:00",
+ "profile_seconds": 0.539,
+ "tables": [
+  {
+   "name": "awards_coaches",
+   "row_count": 61,
+   "stats_rows": 61,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 61,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 61,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "id of this row of data",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 50,
+     "is_unique": false,
+     "min_value": 1962,
+     "max_value": 2011,
+     "examples": [
+      1962,
+      1963,
+      1964,
+      1965,
+      1966
+     ],
+     "top_values": [
+      [
+       1973,
+       3
+      ],
+      [
+       1969,
+       3
+      ],
+      [
+       1975,
+       2
+      ],
+      [
+       1974,
+       2
+      ],
+      [
+       1972,
+       2
+      ],
+      [
+       1971,
+       2
+      ],
+      [
+       1970,
+       2
+      ],
+      [
+       1968,
+       2
+      ],
+      [
+       1967,
+       2
+      ],
+      [
+       2011,
+       1
+      ],
+      [
+       2010,
+       1
+      ],
+      [
+       2009,
+       1
+      ],
+      [
+       2008,
+       1
+      ],
+      [
+       2007,
+       1
+      ],
+      [
+       2006,
+       1
+      ],
+      [
+       2005,
+       1
+      ],
+      [
+       2004,
+       1
+      ],
+      [
+       2003,
+       1
+      ],
+      [
+       2002,
+       1
+      ],
+      [
+       2001,
+       1
+      ],
+      [
+       2000,
+       1
+      ],
+      [
+       1999,
+       1
+      ],
+      [
+       1998,
+       1
+      ],
+      [
+       1997,
+       1
+      ],
+      [
+       1996,
+       1
+      ],
+      [
+       1995,
+       1
+      ],
+      [
+       1994,
+       1
+      ],
+      [
+       1993,
+       1
+      ],
+      [
+       1992,
+       1
+      ],
+      [
+       1991,
+       1
+      ],
+      [
+       1990,
+       1
+      ],
+      [
+       1989,
+       1
+      ],
+      [
+       1988,
+       1
+      ],
+      [
+       1987,
+       1
+      ],
+      [
+       1986,
+       1
+      ],
+      [
+       1985,
+       1
+      ],
+      [
+       1984,
+       1
+      ],
+      [
+       1983,
+       1
+      ],
+      [
+       1982,
+       1
+      ],
+      [
+       1981,
+       1
+      ],
+      [
+       1980,
+       1
+      ],
+      [
+       1979,
+       1
+      ],
+      [
+       1978,
+       1
+      ],
+      [
+       1977,
+       1
+      ],
+      [
+       1976,
+       1
+      ],
+      [
+       1966,
+       1
+      ],
+      [
+       1965,
+       1
+      ],
+      [
+       1964,
+       1
+      ],
+      [
+       1963,
+       1
+      ],
+      [
+       1962,
+       1
+      ]
+     ],
+     "description": "which year did the coach receive the honor?",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "coachID",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 46,
+     "is_unique": false,
+     "min_value": "auerbre01",
+     "max_value": "wilkele01",
+     "examples": [
+      "gallaha01",
+      "hannual01",
+      "auerbre01",
+      "schaydo01",
+      "kerrjo01"
+     ],
+     "top_values": [
+      [
+       "brownla01",
+       4
+      ],
+      [
+       "rileypa01",
+       3
+      ],
+      [
+       "nelsodo01",
+       3
+      ],
+      [
+       "shuege01",
+       2
+      ],
+      [
+       "sharmbi01",
+       2
+      ],
+      [
+       "popovgr01",
+       2
+      ],
+      [
+       "nissato01",
+       2
+      ],
+      [
+       "hannual01",
+       2
+      ],
+      [
+       "fitzsco01",
+       2
+      ],
+      [
+       "fitchbi01",
+       2
+      ],
+      [
+       "brownhu01",
+       2
+      ],
+      [
+       "wilkele01",
+       1
+      ],
+      [
+       "thiboto01",
+       1
+      ],
+      [
+       "scottra01",
+       1
+      ],
+      [
+       "scottby01",
+       1
+      ],
+      [
+       "schulmi01",
+       1
+      ],
+      [
+       "schaydo01",
+       1
+      ],
+      [
+       "riverdo01",
+       1
+      ],
+      [
+       "mullajo01",
+       1
+      ],
+      [
+       "mottadi01",
+       1
+      ],
+      [
+       "moedo01",
+       1
+      ],
+      [
+       "mitchsa01",
+       1
+      ],
+      [
+       "mckinja01",
+       1
+      ],
+      [
+       "mccarba01",
+       1
+      ],
+      [
+       "laydefr01",
+       1
+      ],
+      [
+       "kerrjo01",
+       1
+      ],
+      [
+       "johnsph01",
+       1
+      ],
+      [
+       "johnsav01",
+       1
+      ],
+      [
+       "jacksph01",
+       1
+      ],
+      [
+       "holzmre01",
+       1
+      ],
+      [
+       "heinsto01",
+       1
+      ],
+      [
+       "harride01",
+       1
+      ],
+      [
+       "gueriri01",
+       1
+      ],
+      [
+       "gallaha01",
+       1
+      ],
+      [
+       "fratemi01",
+       1
+      ],
+      [
+       "dunlemi01",
+       1
+      ],
+      [
+       "dantomi01",
+       1
+      ],
+      [
+       "chanedo01",
+       1
+      ],
+      [
+       "cazzevi01",
+       1
+      ],
+      [
+       "carliri01",
+       1
+      ],
+      [
+       "brownmi02",
+       1
+      ],
+      [
+       "brooksc01",
+       1
+      ],
+      [
+       "birdla01",
+       1
+      ],
+      [
+       "biancal01",
+       1
+      ],
+      [
+       "belmojo01",
+       1
+      ],
+      [
+       "auerbre01",
+       1
+      ]
+     ],
+     "description": "id number of the coaches",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "award",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "ABA Coach of the Year",
+     "max_value": "NBA Coach of the Year",
+     "examples": [
+      "NBA Coach of the Year",
+      "ABA Coach of the Year"
+     ],
+     "top_values": [
+      [
+       "NBA Coach of the Year",
+       50
+      ],
+      [
+       "ABA Coach of the Year",
+       11
+      ]
+     ],
+     "description": "the award names",
+     "value_description": "mainly categories: \"NBA\" & \"ABA\"",
+     "notes": []
+    },
+    {
+     "name": "lgID",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "ABA",
+     "max_value": "NBA",
+     "examples": [
+      "NBA",
+      "ABA"
+     ],
+     "top_values": [
+      [
+       "NBA",
+       50
+      ],
+      [
+       "ABA",
+       11
+      ]
+     ],
+     "description": "league ID. the name of the league",
+     "value_description": "mainly categories: \"NBA\" & \"ABA\"",
+     "notes": []
+    },
+    {
+     "name": "note",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9344,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "tie",
+     "max_value": "tie",
+     "examples": [
+      "tie"
+     ],
+     "top_values": [
+      [
+       "tie",
+       4
+      ]
+     ],
+     "description": "special notification",
+     "value_description": "”null“ refers to that no special things\n”tie“ represents that coaches are tied for some awards",
+     "notes": [
+      "93% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "year": 1962,
+     "coachID": "gallaha01",
+     "award": "NBA Coach of the Year",
+     "lgID": "NBA",
+     "note": null
+    },
+    {
+     "id": 2,
+     "year": 1963,
+     "coachID": "hannual01",
+     "award": "NBA Coach of the Year",
+     "lgID": "NBA",
+     "note": null
+    },
+    {
+     "id": 3,
+     "year": 1964,
+     "coachID": "auerbre01",
+     "award": "NBA Coach of the Year",
+     "lgID": "NBA",
+     "note": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "awards_players",
+   "row_count": 1719,
+   "stats_rows": 1719,
+   "columns": [
+    {
+     "name": "playerID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 441,
+     "is_unique": false,
+     "min_value": "abdulka01",
+     "max_value": "zasloma01",
+     "examples": [
+      "abdulka01",
+      "abdulma02",
+      "adamsal01",
+      "aingeda01",
+      "aldrila01"
+     ],
+     "top_values": [],
+     "description": "ID number identifying the unique number of the player",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "award",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 21,
+     "is_unique": false,
+     "min_value": "All-ABA First Team",
+     "max_value": "Sportsmanship Award",
+     "examples": [
+      "All-Defensive Second Team",
+      "All-NBA Second Team",
+      "Rookie of the Year",
+      "All-NBA First Team",
+      "Finals MVP"
+     ],
+     "top_values": [
+      [
+       "All-NBA First Team",
+       331
+      ],
+      [
+       "All-NBA Second Team",
+       330
+      ],
+      [
+       "All-Defensive First Team",
+       226
+      ],
+      [
+       "All-Defensive Second Team",
+       225
+      ],
+      [
+       "All-NBA Third Team",
+       120
+      ],
+      [
+       "Rookie of the Year",
+       85
+      ],
+      [
+       "Most Valuable Player",
+       80
+      ],
+      [
+       "Finals MVP",
+       50
+      ],
+      [
+       "All-ABA Second Team",
+       46
+      ],
+      [
+       "All-ABA First Team",
+       45
+      ],
+      [
+       "Sixth Man of the Year",
+       30
+      ],
+      [
+       "Defensive Player of the Year",
+       30
+      ],
+      [
+       "Most Improved Player",
+       27
+      ],
+      [
+       "All-Rookie First Team",
+       27
+      ],
+      [
+       "All-Rookie Second Team",
+       26
+      ],
+      [
+       "All-Defensive Team",
+       22
+      ],
+      [
+       "Comeback",
+       6
+      ],
+      [
+       "Sportsmanship Award",
+       5
+      ],
+      [
+       "J. Walter Kennedy Citizenship Award",
+       4
+      ],
+      [
+       "Finals MVP ",
+       3
+      ],
+      [
+       "Executive of the Year",
+       1
+      ]
+     ],
+     "description": "the name of the award",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 75,
+     "is_unique": false,
+     "min_value": 1937,
+     "max_value": 2011,
+     "examples": [
+      1969,
+      1970,
+      1971,
+      1972,
+      1973
+     ],
+     "top_values": [],
+     "description": "the time of this award",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lgID",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": "ABA",
+     "max_value": "NBL",
+     "examples": [
+      "NBA",
+      "ABA"
+     ],
+     "top_values": [
+      [
+       "NBA",
+       1552
+      ],
+      [
+       "ABA",
+       142
+      ],
+      [
+       "NBL",
+       24
+      ],
+      [
+       "ABL1",
+       1
+      ]
+     ],
+     "description": "league ID. the name of the league",
+     "value_description": "mainly categories: \"NBA\" & \"ABA\"",
+     "notes": []
+    },
+    {
+     "name": "note",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9785,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "tie",
+     "max_value": "tie",
+     "examples": [
+      "tie"
+     ],
+     "top_values": [
+      [
+       "tie",
+       37
+      ]
+     ],
+     "description": "notification",
+     "value_description": "”null“ refers to that no special things\n”tie“ represents that coaches are tied for some awards",
+     "notes": [
+      "98% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "pos",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.5154,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "C",
+     "max_value": "G",
+     "examples": [
+      "C",
+      "F",
+      "G",
+      "F/G"
+     ],
+     "top_values": [
+      [
+       "G",
+       333
+      ],
+      [
+       "F",
+       330
+      ],
+      [
+       "C",
+       165
+      ],
+      [
+       "F/G",
+       3
+      ],
+      [
+       "F/C",
+       2
+      ]
+     ],
+     "description": "the position of the player",
+     "value_description": "C: Center\nF: Forward\nG: Guard",
+     "notes": [
+      "52% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "playerID",
+    "year",
+    "award"
+   ],
+   "sample_rows": [
+    {
+     "playerID": "abdulka01",
+     "award": "All-Defensive Second Team",
+     "year": 1969,
+     "lgID": "NBA",
+     "note": null,
+     "pos": null
+    },
+    {
+     "playerID": "abdulka01",
+     "award": "All-NBA Second Team",
+     "year": 1969,
+     "lgID": "NBA",
+     "note": null,
+     "pos": "C"
+    },
+    {
+     "playerID": "abdulka01",
+     "award": "Rookie of the Year",
+     "year": 1969,
+     "lgID": "NBA",
+     "note": null,
+     "pos": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "coaches",
+   "row_count": 1689,
+   "stats_rows": 1689,
+   "columns": [
+    {
+     "name": "coachID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 358,
+     "is_unique": false,
+     "min_value": "adelmri01",
+     "max_value": "zasloma01",
+     "examples": [
+      "adelmri01",
+      "adubari01",
+      "aingeda01",
+      "albecst01",
+      "anderla01"
+     ],
+     "top_values": [],
+     "description": "ID number identifying the unique number of the coach",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 66,
+     "is_unique": false,
+     "min_value": 1946,
+     "max_value": 2011,
+     "examples": [
+      1988,
+      1989,
+      1990,
+      1991,
+      1992
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "tmID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 132,
+     "is_unique": false,
+     "min_value": "ANA",
+     "max_value": "WSC",
+     "examples": [
+      "POR",
+      "GSW",
+      "SAC",
+      "HOU",
+      "MIN"
+     ],
+     "top_values": [],
+     "description": "team ID. team name",
+     "value_description": "abbreviated name",
+     "notes": []
+    },
+    {
+     "name": "lgID",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "ABA",
+     "max_value": "PBLA",
+     "examples": [
+      "NBA",
+      "ABA",
+      "ABL1"
+     ],
+     "top_values": [
+      [
+       "NBA",
+       1522
+      ],
+      [
+       "ABA",
+       121
+      ],
+      [
+       "ABL1",
+       17
+      ],
+      [
+       "PBLA",
+       16
+      ],
+      [
+       "NPBL",
+       13
+      ]
+     ],
+     "description": "league ID. league name",
+     "value_description": "mainly categories: \"NBA\" & \"ABA\"",
+     "notes": []
+    },
+    {
+     "name": "stint",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 5,
+     "examples": [
+      2,
+      1,
+      4,
+      5,
+      3
+     ],
+     "top_values": [
+      [
+       1,
+       1436
+      ],
+      [
+       2,
+       213
+      ],
+      [
+       3,
+       34
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       5,
+       1
+      ]
+     ],
+     "description": "the period of the time coaching this team",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "won",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0053,
+     "distinct_count": 71,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 72,
+     "examples": [
+      14,
+      59,
+      63,
+      57,
+      51
+     ],
+     "top_values": [],
+     "description": "the number of won games",
+     "value_description": "0: no wins",
+     "notes": []
+    },
+    {
+     "name": "lost",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0053,
+     "distinct_count": 72,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 71,
+     "examples": [
+      21,
+      23,
+      19,
+      25,
+      31
+     ],
+     "top_values": [],
+     "description": "the number of lost games",
+     "value_description": "0: win all the games",
+     "notes": []
+    },
+    {
+     "name": "post_wins",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0237,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 16,
+     "examples": [
+      0,
+      12,
+      9,
+      13,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       926
+      ],
+      [
+       1,
+       139
+      ],
+      [
+       2,
+       126
+      ],
+      [
+       4,
+       64
+      ],
+      [
+       3,
+       64
+      ],
+      [
+       6,
+       61
+      ],
+      [
+       5,
+       48
+      ],
+      [
+       7,
+       41
+      ],
+      [
+       9,
+       32
+      ],
+      [
+       10,
+       30
+      ],
+      [
+       12,
+       29
+      ],
+      [
+       8,
+       24
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       13,
+       13
+      ],
+      [
+       11,
+       13
+      ],
+      [
+       16,
+       9
+      ],
+      [
+       14,
+       9
+      ]
+     ],
+     "description": "post season wins. the number of games won in the post-season (playoffs) games",
+     "value_description": "0: no wins\n\ncommonsense evidence:\n\nIf the team's post-season wins and losses are all zero, it implies that the team did not participate in the post-season (playoffs) that year.",
+     "notes": []
+    },
+    {
+     "name": "post_losses",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0237,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 11,
+     "examples": [
+      3,
+      9,
+      7,
+      8,
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       811
+      ],
+      [
+       4,
+       234
+      ],
+      [
+       3,
+       194
+      ],
+      [
+       6,
+       101
+      ],
+      [
+       5,
+       90
+      ],
+      [
+       2,
+       85
+      ],
+      [
+       7,
+       65
+      ],
+      [
+       8,
+       30
+      ],
+      [
+       9,
+       20
+      ],
+      [
+       10,
+       9
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       11,
+       4
+      ]
+     ],
+     "description": "post season losses. the number of games lost in the post-season (playoffs) games",
+     "value_description": "0: win all the games\n\ncommonsense evidence:\n\nIf the team's post-season wins and losses are all zero, it implies that the team did not participate in the post-season (playoffs) that year.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "coachID",
+    "year",
+    "tmID",
+    "stint"
+   ],
+   "sample_rows": [
+    {
+     "coachID": "adelmri01",
+     "year": 1988,
+     "tmID": "POR",
+     "lgID": "NBA",
+     "stint": 2,
+     "won": 14,
+     "lost": 21,
+     "post_wins": 0,
+     "post_losses": 3
+    },
+    {
+     "coachID": "adelmri01",
+     "year": 1989,
+     "tmID": "POR",
+     "lgID": "NBA",
+     "stint": 1,
+     "won": 59,
+     "lost": 23,
+     "post_wins": 12,
+     "post_losses": 9
+    },
+    {
+     "coachID": "adelmri01",
+     "year": 1990,
+     "tmID": "POR",
+     "lgID": "NBA",
+     "stint": 1,
+     "won": 63,
+     "lost": 19,
+     "post_wins": 9,
+     "post_losses": 7
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "draft",
+   "row_count": 8621,
+   "stats_rows": 8621,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 8621,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 9003,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique number to determine one row of the data",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "draftYear",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 65,
+     "is_unique": false,
+     "min_value": 1947,
+     "max_value": 2011,
+     "examples": [
+      1967,
+      1968
+     ],
+     "top_values": [],
+     "description": "which year does this draft happens",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "draftRound",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 23,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 99,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       1330
+      ],
+      [
+       1,
+       1308
+      ],
+      [
+       2,
+       1280
+      ],
+      [
+       3,
+       610
+      ],
+      [
+       4,
+       573
+      ],
+      [
+       5,
+       568
+      ],
+      [
+       6,
+       567
+      ],
+      [
+       7,
+       544
+      ],
+      [
+       8,
+       445
+      ],
+      [
+       9,
+       398
+      ],
+      [
+       10,
+       376
+      ],
+      [
+       11,
+       143
+      ],
+      [
+       12,
+       116
+      ],
+      [
+       13,
+       90
+      ],
+      [
+       14,
+       74
+      ],
+      [
+       15,
+       62
+      ],
+      [
+       16,
+       47
+      ],
+      [
+       17,
+       31
+      ],
+      [
+       18,
+       21
+      ],
+      [
+       19,
+       17
+      ],
+      [
+       99,
+       11
+      ],
+      [
+       20,
+       8
+      ],
+      [
+       21,
+       2
+      ]
+     ],
+     "description": "the Round number of this draft",
+     "value_description": "If the value is 0, it means that there is no draft in this year\n\n1 refers that this player was picked in the first round",
+     "notes": []
+    },
+    {
+     "name": "draftSelection",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 31,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 30,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       1928
+      ],
+      [
+       1,
+       501
+      ],
+      [
+       2,
+       457
+      ],
+      [
+       3,
+       452
+      ],
+      [
+       4,
+       441
+      ],
+      [
+       5,
+       421
+      ],
+      [
+       6,
+       402
+      ],
+      [
+       7,
+       367
+      ],
+      [
+       8,
+       366
+      ],
+      [
+       9,
+       328
+      ],
+      [
+       10,
+       278
+      ],
+      [
+       11,
+       256
+      ],
+      [
+       12,
+       253
+      ],
+      [
+       13,
+       243
+      ],
+      [
+       14,
+       238
+      ],
+      [
+       15,
+       211
+      ],
+      [
+       16,
+       210
+      ],
+      [
+       17,
+       200
+      ],
+      [
+       18,
+       164
+      ],
+      [
+       19,
+       138
+      ],
+      [
+       20,
+       137
+      ],
+      [
+       21,
+       130
+      ],
+      [
+       22,
+       128
+      ],
+      [
+       23,
+       104
+      ],
+      [
+       24,
+       52
+      ],
+      [
+       25,
+       48
+      ],
+      [
+       27,
+       44
+      ],
+      [
+       26,
+       44
+      ],
+      [
+       28,
+       34
+      ],
+      [
+       29,
+       31
+      ],
+      [
+       30,
+       15
+      ]
+     ],
+     "description": "league ID. the position that the player was picked",
+     "value_description": "0：This signifies that it doesn't contain the draft information of this player\n\n7：this player was selected in the 7th position in this round\n\ncommonsense evidence:\n\ndraftRound: 1; \ndraftSelection: 7 \nrepresents: this player was selected in the round 1, 7th position.",
+     "notes": []
+    },
+    {
+     "name": "draftOverall",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 240,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 239,
+     "examples": [
+      0
+     ],
+     "top_values": [],
+     "description": "draft overall rank. The player's overall draft position for the year",
+     "value_description": "this is the overall draft rank of the player.",
+     "notes": []
+    },
+    {
+     "name": "tmID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 89,
+     "is_unique": false,
+     "min_value": "ANA",
+     "max_value": "WSC",
+     "examples": [
+      "ANA",
+      "DNR",
+      "DLC",
+      "HSM",
+      "INA"
+     ],
+     "top_values": [],
+     "description": "team ID. team name",
+     "value_description": "abbreviated name",
+     "notes": []
+    },
+    {
+     "name": "firstName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1445,
+     "is_unique": false,
+     "min_value": "A.C.",
+     "max_value": "Zydrunas",
+     "examples": [
+      "Darrell",
+      "Bob",
+      "Mike",
+      "Tom",
+      "Jim"
+     ],
+     "top_values": [],
+     "description": "the first name of the player",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lastName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4073,
+     "is_unique": false,
+     "min_value": "Aaron",
+     "max_value": "van zant",
+     "examples": [
+      "Hardy",
+      "Krulish",
+      "Lewis",
+      "Lynn",
+      "Workman"
+     ],
+     "top_values": [],
+     "description": "the last name of the player",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "suffixName",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.9998,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "Jr.",
+     "max_value": "Jr.",
+     "examples": [],
+     "top_values": [
+      [
+       "Jr.",
+       2
+      ]
+     ],
+     "description": "the suffix name of the player",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "playerID",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.5751,
+     "distinct_count": 3055,
+     "is_unique": false,
+     "min_value": "abdelal01",
+     "max_value": "zunicma01",
+     "examples": [
+      "hardyda01",
+      "lewisbo01",
+      "lynnmi01",
+      "workmto01",
+      "holmade01"
+     ],
+     "top_values": [],
+     "description": "ID number identifying the unique number of the player",
+     "value_description": "",
+     "notes": [
+      "58% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "draftFrom",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0006,
+     "distinct_count": 1233,
+     "is_unique": false,
+     "min_value": "(Davidson) Pittsburgh",
+     "max_value": "Zagreb (Yugoslavia)",
+     "examples": [
+      "Baylor",
+      "Pacific",
+      "North Carolina",
+      "UCLA",
+      "Seattle"
+     ],
+     "top_values": [],
+     "description": "the university that the drafted players come from",
+     "value_description": "the name of the university",
+     "notes": []
+    },
+    {
+     "name": "lgID",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "ABA",
+     "max_value": "NBA",
+     "examples": [
+      "ABA"
+     ],
+     "top_values": [
+      [
+       "NBA",
+       7314
+      ],
+      [
+       "ABA",
+       1307
+      ]
+     ],
+     "description": "league ID. the league name",
+     "value_description": "mainly categories: \"NBA\" & \"ABA\"",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "draftYear": 1967,
+     "draftRound": 0,
+     "draftSelection": 0,
+     "draftOverall": 0,
+     "tmID": "ANA",
+     "firstName": "Darrell",
+     "lastName": "Hardy",
+     "suffixName": null,
+     "playerID": "hardyda01",
+     "draftFrom": "Baylor",
+     "lgID": "ABA"
+    },
+    {
+     "id": 2,
+     "draftYear": 1967,
+     "draftRound": 0,
+     "draftSelection": 0,
+     "draftOverall": 0,
+     "tmID": "ANA",
+     "firstName": "Bob",
+     "lastName": "Krulish",
+     "suffixName": null,
+     "playerID": null,
+     "draftFrom": "Pacific",
+     "lgID": "ABA"
+    },
+    {
+     "id": 3,
+     "draftYear": 1967,
+     "draftRound": 0,
+     "draftSelection": 0,
+     "draftOverall": 0,
+     "tmID": "ANA",
+     "firstName": "Bob",
+     "lastName": "Lewis",
+     "suffixName": null,
+     "playerID": "lewisbo01",
+     "draftFrom": "North Carolina",
+     "lgID": "ABA"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "player_allstar",
+   "row_count": 1608,
+   "stats_rows": 1608,
+   "columns": [
+    {
+     "name": "playerID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 443,
+     "is_unique": false,
+     "min_value": "abdulka01",
+     "max_value": "zasloma01",
+     "examples": [
+      "abdulka01",
+      "abdursh01",
+      "adamsal01",
+      "adamsmi01",
+      "aguirma01"
+     ],
+     "top_values": [],
+     "description": "ID number identifying the unique number of the player",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 366,
+     "is_unique": false,
+     "min_value": "A-Rahim",
+     "max_value": "Zaslofsky",
+     "examples": [
+      "Abdul-Jabbar",
+      "A-Rahim",
+      "Adams",
+      "Aguirre",
+      "Ainge"
+     ],
+     "top_values": [],
+     "description": "the last name of the player",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "first_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 268,
+     "is_unique": false,
+     "min_value": "A.C.",
+     "max_value": "Zydrunas",
+     "examples": [
+      "Kareem",
+      "Shareef",
+      "Alvan",
+      "Michael",
+      "Mark"
+     ],
+     "top_values": [],
+     "description": "the first name of the player",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "season_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 59,
+     "is_unique": false,
+     "min_value": 1950,
+     "max_value": 2009,
+     "examples": [
+      1969,
+      1970,
+      1971,
+      1972,
+      1973
+     ],
+     "top_values": [],
+     "description": "the id number of the season",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "conference",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "Allstars",
+     "max_value": "West",
+     "examples": [
+      "East",
+      "West",
+      "Weset",
+      "Allstars",
+      "Denver"
+     ],
+     "top_values": [
+      [
+       "East",
+       793
+      ],
+      [
+       "West",
+       791
+      ],
+      [
+       "Allstars",
+       12
+      ],
+      [
+       "Denver",
+       11
+      ],
+      [
+       "Weset",
+       1
+      ]
+     ],
+     "description": "which conference that players belong to",
+     "value_description": "two categories: west; east",
+     "notes": []
+    },
+    {
+     "name": "league_id",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "ABA",
+     "max_value": "NBA",
+     "examples": [
+      "NBA",
+      "ABA"
+     ],
+     "top_values": [
+      [
+       "NBA",
+       1405
+      ],
+      [
+       "ABA",
+       203
+      ]
+     ],
+     "description": "league ID. the league name",
+     "value_description": "two categories: NBA; ABA",
+     "notes": []
+    },
+    {
+     "name": "games_played",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       1608
+      ]
+     ],
+     "description": "how many all star games that this player played in this season",
+     "value_description": "mostly it's 1",
+     "notes": []
+    },
+    {
+     "name": "minutes",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 45,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 99,
+     "examples": [
+      18,
+      30,
+      19,
+      98,
+      23
+     ],
+     "top_values": [
+      [
+       22,
+       83
+      ],
+      [
+       20,
+       80
+      ],
+      [
+       18,
+       80
+      ],
+      [
+       21,
+       79
+      ],
+      [
+       17,
+       79
+      ],
+      [
+       19,
+       76
+      ],
+      [
+       14,
+       75
+      ],
+      [
+       25,
+       73
+      ],
+      [
+       16,
+       70
+      ],
+      [
+       15,
+       70
+      ],
+      [
+       23,
+       69
+      ],
+      [
+       24,
+       63
+      ],
+      [
+       27,
+       59
+      ],
+      [
+       26,
+       59
+      ],
+      [
+       28,
+       57
+      ],
+      [
+       99,
+       46
+      ],
+      [
+       12,
+       46
+      ],
+      [
+       29,
+       43
+      ],
+      [
+       31,
+       42
+      ],
+      [
+       13,
+       42
+      ],
+      [
+       11,
+       39
+      ],
+      [
+       30,
+       30
+      ],
+      [
+       32,
+       27
+      ],
+      [
+       36,
+       21
+      ],
+      [
+       0,
+       21
+      ],
+      [
+       33,
+       20
+      ],
+      [
+       34,
+       19
+      ],
+      [
+       9,
+       16
+      ],
+      [
+       7,
+       15
+      ],
+      [
+       10,
+       14
+      ],
+      [
+       35,
+       13
+      ],
+      [
+       8,
+       12
+      ],
+      [
+       37,
+       11
+      ],
+      [
+       4,
+       11
+      ],
+      [
+       6,
+       9
+      ],
+      [
+       5,
+       9
+      ],
+      [
+       39,
+       6
+      ],
+      [
+       40,
+       5
+      ],
+      [
+       38,
+       5
+      ],
+      [
+       42,
+       4
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       41,
+       3
+      ],
+      [
+       98,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "minutes of attendance",
+     "value_description": "18：played in 18 minutes",
+     "notes": []
+    },
+    {
+     "name": "points",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0292,
+     "distinct_count": 40,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 42,
+     "examples": [
+      10,
+      19,
+      12,
+      14,
+      7
+     ],
+     "top_values": [
+      [
+       8,
+       136
+      ],
+      [
+       4,
+       122
+      ],
+      [
+       10,
+       108
+      ],
+      [
+       6,
+       108
+      ],
+      [
+       2,
+       105
+      ],
+      [
+       12,
+       89
+      ],
+      [
+       14,
+       77
+      ],
+      [
+       7,
+       71
+      ],
+      [
+       11,
+       66
+      ],
+      [
+       13,
+       64
+      ],
+      [
+       9,
+       58
+      ],
+      [
+       15,
+       55
+      ],
+      [
+       16,
+       53
+      ],
+      [
+       5,
+       53
+      ],
+      [
+       0,
+       50
+      ],
+      [
+       17,
+       42
+      ],
+      [
+       18,
+       39
+      ],
+      [
+       3,
+       36
+      ],
+      [
+       19,
+       34
+      ],
+      [
+       21,
+       30
+      ],
+      [
+       20,
+       29
+      ],
+      [
+       22,
+       22
+      ],
+      [
+       23,
+       16
+      ],
+      [
+       25,
+       14
+      ],
+      [
+       24,
+       14
+      ],
+      [
+       1,
+       13
+      ],
+      [
+       29,
+       11
+      ],
+      [
+       26,
+       11
+      ],
+      [
+       27,
+       9
+      ],
+      [
+       28,
+       8
+      ],
+      [
+       30,
+       6
+      ],
+      [
+       34,
+       3
+      ],
+      [
+       31,
+       2
+      ],
+      [
+       42,
+       1
+      ],
+      [
+       40,
+       1
+      ],
+      [
+       38,
+       1
+      ],
+      [
+       37,
+       1
+      ],
+      [
+       36,
+       1
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       32,
+       1
+      ]
+     ],
+     "description": "points",
+     "value_description": "19: get 19 points；\n\nnull --> doesn't get points",
+     "notes": []
+    },
+    {
+     "name": "o_rebounds",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.6934,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 13,
+     "examples": [
+      1,
+      2,
+      0,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       0,
+       164
+      ],
+      [
+       1,
+       128
+      ],
+      [
+       2,
+       84
+      ],
+      [
+       3,
+       58
+      ],
+      [
+       4,
+       27
+      ],
+      [
+       6,
+       12
+      ],
+      [
+       5,
+       12
+      ],
+      [
+       7,
+       6
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       8,
+       1
+      ]
+     ],
+     "description": "offense rebounds",
+     "value_description": "empty or null refers to none offense rebounds，\n\n1: one offense rebound",
+     "notes": [
+      "69% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "d_rebounds",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.6934,
+     "distinct_count": 14,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 19,
+     "examples": [
+      2,
+      5,
+      0,
+      1,
+      4
+     ],
+     "top_values": [
+      [
+       2,
+       91
+      ],
+      [
+       1,
+       80
+      ],
+      [
+       3,
+       73
+      ],
+      [
+       0,
+       67
+      ],
+      [
+       4,
+       61
+      ],
+      [
+       5,
+       45
+      ],
+      [
+       7,
+       23
+      ],
+      [
+       6,
+       22
+      ],
+      [
+       8,
+       9
+      ],
+      [
+       9,
+       8
+      ],
+      [
+       10,
+       7
+      ],
+      [
+       11,
+       5
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       12,
+       1
+      ]
+     ],
+     "description": "defense rebounds",
+     "value_description": "empty or null refers to none defense rebounds，\n\n1: one defense rebound",
+     "notes": [
+      "69% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "rebounds",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0292,
+     "distinct_count": 27,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 27,
+     "examples": [
+      11,
+      14,
+      7,
+      8,
+      10
+     ],
+     "top_values": [
+      [
+       3,
+       208
+      ],
+      [
+       4,
+       203
+      ],
+      [
+       2,
+       194
+      ],
+      [
+       1,
+       177
+      ],
+      [
+       5,
+       136
+      ],
+      [
+       6,
+       116
+      ],
+      [
+       7,
+       108
+      ],
+      [
+       0,
+       98
+      ],
+      [
+       8,
+       67
+      ],
+      [
+       9,
+       63
+      ],
+      [
+       10,
+       57
+      ],
+      [
+       11,
+       33
+      ],
+      [
+       13,
+       23
+      ],
+      [
+       12,
+       23
+      ],
+      [
+       14,
+       12
+      ],
+      [
+       15,
+       10
+      ],
+      [
+       16,
+       9
+      ],
+      [
+       18,
+       5
+      ],
+      [
+       22,
+       4
+      ],
+      [
+       24,
+       3
+      ],
+      [
+       19,
+       3
+      ],
+      [
+       17,
+       3
+      ],
+      [
+       20,
+       2
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       21,
+       1
+      ]
+     ],
+     "description": "total rebounds",
+     "value_description": "empty or null refers to none total rebounds，\n\n3: totally gets 3 rebounds including offence and defense rebounds\n\ncommensense evidence:\n\ntotal rebounds = offense rebounds + defense rebounds",
+     "notes": []
+    },
+    {
+     "name": "assists",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0292,
+     "distinct_count": 19,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 22,
+     "examples": [
+      4,
+      1,
+      2,
+      6,
+      3
+     ],
+     "top_values": [
+      [
+       1,
+       384
+      ],
+      [
+       2,
+       314
+      ],
+      [
+       0,
+       291
+      ],
+      [
+       3,
+       201
+      ],
+      [
+       4,
+       111
+      ],
+      [
+       5,
+       100
+      ],
+      [
+       6,
+       46
+      ],
+      [
+       7,
+       31
+      ],
+      [
+       8,
+       27
+      ],
+      [
+       9,
+       16
+      ],
+      [
+       10,
+       12
+      ],
+      [
+       11,
+       8
+      ],
+      [
+       15,
+       6
+      ],
+      [
+       14,
+       5
+      ],
+      [
+       13,
+       5
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ]
+     ],
+     "description": "assistants",
+     "value_description": "null or empty refers to none\n\n2: 2 assistants",
+     "notes": []
+    },
+    {
+     "name": "steals",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.7525,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 6,
+     "examples": [
+      3,
+      0,
+      1,
+      2,
+      5
+     ],
+     "top_values": [
+      [
+       0,
+       156
+      ],
+      [
+       1,
+       126
+      ],
+      [
+       2,
+       63
+      ],
+      [
+       3,
+       26
+      ],
+      [
+       4,
+       17
+      ],
+      [
+       5,
+       9
+      ],
+      [
+       6,
+       1
+      ]
+     ],
+     "description": "steals",
+     "value_description": "null or empty refers to none\n\n2: 2 steals",
+     "notes": [
+      "75% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "blocks",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.7525,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 5,
+     "examples": [
+      2,
+      0,
+      1
+     ],
+     "top_values": [
+      [
+       0,
+       280
+      ],
+      [
+       1,
+       77
+      ],
+      [
+       2,
+       25
+      ],
+      [
+       3,
+       10
+      ],
+      [
+       4,
+       4
+      ],
+      [
+       5,
+       2
+      ]
+     ],
+     "description": "blocks",
+     "value_description": "null or empty refers to none\n\n2: 2 blocks",
+     "notes": [
+      "75% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "turnovers",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.6934,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 8,
+     "examples": [
+      1,
+      0,
+      3,
+      2,
+      4
+     ],
+     "top_values": [
+      [
+       1,
+       153
+      ],
+      [
+       2,
+       116
+      ],
+      [
+       0,
+       106
+      ],
+      [
+       3,
+       62
+      ],
+      [
+       4,
+       33
+      ],
+      [
+       6,
+       10
+      ],
+      [
+       5,
+       9
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       8,
+       1
+      ]
+     ],
+     "description": "turnovers",
+     "value_description": "null or empty refers to none\n\n2: 2 turnovers",
+     "notes": [
+      "69% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "personal_fouls",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.6642,
+     "distinct_count": 8,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 8,
+     "examples": [
+      3,
+      2,
+      0,
+      1,
+      5
+     ],
+     "top_values": [
+      [
+       0,
+       140
+      ],
+      [
+       1,
+       134
+      ],
+      [
+       2,
+       132
+      ],
+      [
+       3,
+       74
+      ],
+      [
+       4,
+       37
+      ],
+      [
+       5,
+       18
+      ],
+      [
+       6,
+       4
+      ],
+      [
+       8,
+       1
+      ]
+     ],
+     "description": "personal fouls",
+     "value_description": "null or empty refers to none\n\n2: 2 personal fouls",
+     "notes": [
+      "66% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "fg_attempted",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0292,
+     "distinct_count": 28,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 27,
+     "examples": [
+      8,
+      16,
+      10,
+      11,
+      14
+     ],
+     "top_values": [
+      [
+       8,
+       140
+      ],
+      [
+       7,
+       140
+      ],
+      [
+       9,
+       119
+      ],
+      [
+       6,
+       117
+      ],
+      [
+       11,
+       114
+      ],
+      [
+       10,
+       102
+      ],
+      [
+       5,
+       102
+      ],
+      [
+       4,
+       99
+      ],
+      [
+       12,
+       87
+      ],
+      [
+       13,
+       81
+      ],
+      [
+       3,
+       74
+      ],
+      [
+       14,
+       69
+      ],
+      [
+       15,
+       64
+      ],
+      [
+       2,
+       49
+      ],
+      [
+       16,
+       43
+      ],
+      [
+       17,
+       27
+      ],
+      [
+       19,
+       26
+      ],
+      [
+       1,
+       21
+      ],
+      [
+       18,
+       20
+      ],
+      [
+       0,
+       15
+      ],
+      [
+       20,
+       14
+      ],
+      [
+       22,
+       9
+      ],
+      [
+       23,
+       8
+      ],
+      [
+       21,
+       8
+      ],
+      [
+       24,
+       5
+      ],
+      [
+       26,
+       3
+      ],
+      [
+       25,
+       3
+      ],
+      [
+       27,
+       2
+      ]
+     ],
+     "description": "field goal attempted",
+     "value_description": "null or empty refers to none\n\n2: 2 field goal attempts",
+     "notes": []
+    },
+    {
+     "name": "fg_made",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0292,
+     "distinct_count": 18,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 17,
+     "examples": [
+      4,
+      8,
+      5,
+      7,
+      3
+     ],
+     "top_values": [
+      [
+       3,
+       227
+      ],
+      [
+       2,
+       221
+      ],
+      [
+       4,
+       207
+      ],
+      [
+       5,
+       197
+      ],
+      [
+       1,
+       165
+      ],
+      [
+       6,
+       126
+      ],
+      [
+       7,
+       119
+      ],
+      [
+       0,
+       84
+      ],
+      [
+       8,
+       76
+      ],
+      [
+       9,
+       52
+      ],
+      [
+       10,
+       40
+      ],
+      [
+       11,
+       18
+      ],
+      [
+       12,
+       13
+      ],
+      [
+       13,
+       8
+      ],
+      [
+       17,
+       3
+      ],
+      [
+       14,
+       3
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ]
+     ],
+     "description": "field goal made",
+     "value_description": "null or empty refers to none\n\n2: 2 field goal made",
+     "notes": []
+    },
+    {
+     "name": "ft_attempted",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0292,
+     "distinct_count": 17,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 16,
+     "examples": [
+      2,
+      4,
+      0,
+      6,
+      3
+     ],
+     "top_values": [
+      [
+       0,
+       511
+      ],
+      [
+       2,
+       336
+      ],
+      [
+       4,
+       142
+      ],
+      [
+       1,
+       129
+      ],
+      [
+       3,
+       122
+      ],
+      [
+       6,
+       83
+      ],
+      [
+       5,
+       71
+      ],
+      [
+       7,
+       50
+      ],
+      [
+       8,
+       41
+      ],
+      [
+       9,
+       22
+      ],
+      [
+       10,
+       17
+      ],
+      [
+       11,
+       14
+      ],
+      [
+       12,
+       10
+      ],
+      [
+       13,
+       8
+      ],
+      [
+       14,
+       3
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ]
+     ],
+     "description": "free throw attempted",
+     "value_description": "null or empty refers to none\n\n2: 2 free throw attempts",
+     "notes": []
+    },
+    {
+     "name": "ft_made",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0292,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 12,
+     "examples": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "top_values": [
+      [
+       0,
+       588
+      ],
+      [
+       2,
+       287
+      ],
+      [
+       1,
+       242
+      ],
+      [
+       3,
+       140
+      ],
+      [
+       4,
+       100
+      ],
+      [
+       5,
+       74
+      ],
+      [
+       6,
+       53
+      ],
+      [
+       7,
+       27
+      ],
+      [
+       8,
+       23
+      ],
+      [
+       9,
+       13
+      ],
+      [
+       11,
+       7
+      ],
+      [
+       10,
+       5
+      ],
+      [
+       12,
+       2
+      ]
+     ],
+     "description": "free throw made",
+     "value_description": "null or empty refers to none\n\n2: 2 free throw made",
+     "notes": []
+    },
+    {
+     "name": "three_attempted",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.6642,
+     "distinct_count": 12,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 11,
+     "examples": [
+      0,
+      1,
+      6,
+      7,
+      10
+     ],
+     "top_values": [
+      [
+       0,
+       297
+      ],
+      [
+       1,
+       84
+      ],
+      [
+       2,
+       47
+      ],
+      [
+       3,
+       32
+      ],
+      [
+       4,
+       28
+      ],
+      [
+       5,
+       19
+      ],
+      [
+       6,
+       16
+      ],
+      [
+       7,
+       8
+      ],
+      [
+       10,
+       3
+      ],
+      [
+       8,
+       3
+      ],
+      [
+       9,
+       2
+      ],
+      [
+       11,
+       1
+      ]
+     ],
+     "description": "three point attempted",
+     "value_description": "null or empty refers to none\n\n2: 2 three point attempts",
+     "notes": [
+      "66% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "three_made",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.648,
+     "distinct_count": 7,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 6,
+     "examples": [
+      0,
+      1,
+      3,
+      5,
+      4
+     ],
+     "top_values": [
+      [
+       0,
+       430
+      ],
+      [
+       1,
+       78
+      ],
+      [
+       2,
+       33
+      ],
+      [
+       3,
+       13
+      ],
+      [
+       4,
+       8
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       6,
+       1
+      ]
+     ],
+     "description": "three point made",
+     "value_description": "null or empty refers to none\n\n2: 2 three point made",
+     "notes": [
+      "65% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "playerID",
+    "season_id"
+   ],
+   "sample_rows": [
+    {
+     "playerID": "abdulka01",
+     "last_name": "Abdul-Jabbar",
+     "first_name": "Kareem",
+     "season_id": 1969,
+     "conference": "East",
+     "league_id": "NBA",
+     "games_played": 1,
+     "minutes": 18,
+     "points": 10,
+     "o_rebounds": null,
+     "d_rebounds": null,
+     "rebounds": 11,
+     "assists": 4,
+     "steals": null,
+     "blocks": null,
+     "turnovers": null,
+     "personal_fouls": null,
+     "fg_attempted": 8,
+     "fg_made": 4,
+     "ft_attempted": 2,
+     "ft_made": 2,
+     "three_attempted": null,
+     "three_made": null
+    },
+    {
+     "playerID": "abdulka01",
+     "last_name": "Abdul-Jabbar",
+     "first_name": "Kareem",
+     "season_id": 1970,
+     "conference": "West",
+     "league_id": "NBA",
+     "games_played": 1,
+     "minutes": 30,
+     "points": 19,
+     "o_rebounds": null,
+     "d_rebounds": null,
+     "rebounds": 14,
+     "assists": 1,
+     "steals": null,
+     "blocks": null,
+     "turnovers": null,
+     "personal_fouls": null,
+     "fg_attempted": 16,
+     "fg_made": 8,
+     "ft_attempted": 4,
+     "ft_made": 3,
+     "three_attempted": null,
+     "three_made": null
+    },
+    {
+     "playerID": "abdulka01",
+     "last_name": "Abdul-Jabbar",
+     "first_name": "Kareem",
+     "season_id": 1971,
+     "conference": "West",
+     "league_id": "NBA",
+     "games_played": 1,
+     "minutes": 19,
+     "points": 12,
+     "o_rebounds": null,
+     "d_rebounds": null,
+     "rebounds": 7,
+     "assists": 2,
+     "steals": null,
+     "blocks": null,
+     "turnovers": null,
+     "personal_fouls": null,
+     "fg_attempted": 10,
+     "fg_made": 5,
+     "ft_attempted": 2,
+     "ft_made": 2,
+     "three_attempted": null,
+     "three_made": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "players",
+   "row_count": 5062,
+   "stats_rows": 5062,
+   "columns": [
+    {
+     "name": "playerID",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 5062,
+     "is_unique": true,
+     "min_value": "abdelal01",
+     "max_value": "zunicma01",
+     "examples": [
+      "abdelal01",
+      "abdulka01",
+      "abdulma01",
+      "abdulma02",
+      "abdulta01"
+     ],
+     "top_values": [],
+     "description": "ID number identifying the unique number of the player",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "useFirst",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1642,
+     "distinct_count": 1223,
+     "is_unique": false,
+     "min_value": "A.C.",
+     "max_value": "bioID",
+     "examples": [
+      "Alaa",
+      "Kareem",
+      "Mahdi",
+      "Mahmoud",
+      "Tariq"
+     ],
+     "top_values": [],
+     "description": "use first name",
+     "value_description": "not useful",
+     "notes": []
+    },
+    {
+     "name": "firstName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0047,
+     "distinct_count": 1270,
+     "is_unique": false,
+     "min_value": "A.",
+     "max_value": "firstName",
+     "examples": [
+      "Alaa",
+      "Kareem",
+      "Mahdi",
+      "Mahmoud",
+      "Tariq"
+     ],
+     "top_values": [],
+     "description": "the first name of the player",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "middleName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.3588,
+     "distinct_count": 914,
+     "is_unique": false,
+     "min_value": "A.",
+     "max_value": "middleName",
+     "examples": [
+      "Shareef",
+      "Craig",
+      "Edward",
+      "D.",
+      "Richard"
+     ],
+     "top_values": [],
+     "description": "the middle name of the player",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lastName",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3072,
+     "is_unique": false,
+     "min_value": "Abdelnaby",
+     "max_value": "lastName",
+     "examples": [
+      "Abdelnaby",
+      "Abdul-Jabbar",
+      "Abdul-Rahman",
+      "Abdul-Rauf",
+      "Abdul-Wahad"
+     ],
+     "top_values": [],
+     "description": "the last name of the player",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "nameGiven",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.998,
+     "distinct_count": 9,
+     "is_unique": false,
+     "min_value": "Dave",
+     "max_value": "nameGiven",
+     "examples": [],
+     "top_values": [
+      [
+       "Willie",
+       2
+      ],
+      [
+       "nameGiven",
+       1
+      ],
+      [
+       "Thomas",
+       1
+      ],
+      [
+       "Robert",
+       1
+      ],
+      [
+       "Mort",
+       1
+      ],
+      [
+       "Mike",
+       1
+      ],
+      [
+       "Jim",
+       1
+      ],
+      [
+       "Ed",
+       1
+      ],
+      [
+       "Dave",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "not useful",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "fullGivenName",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9947,
+     "distinct_count": 27,
+     "is_unique": true,
+     "min_value": "Akeem Abdul Olajuwon",
+     "max_value": "fullGivenName",
+     "examples": [
+      "Ferdinand Lewis Alcindor, Jr.",
+      "Walter Raphael Hazzard, Jr.",
+      "Chris Wayne Jackson",
+      "Olivier Michael Saint-Jean",
+      "Donald A. Smith"
+     ],
+     "top_values": [
+      [
+       "fullGivenName",
+       1
+      ],
+      [
+       "Warren Edward Armstrong",
+       1
+      ],
+      [
+       "Walter Raphael Hazzard, Jr.",
+       1
+      ],
+      [
+       "Walter Jones",
+       1
+      ],
+      [
+       "Swen Langeberg at J.C.",
+       1
+      ],
+      [
+       "Stanley J. Modzelewski",
+       1
+      ],
+      [
+       "Samb Cheikh Tidiane",
+       1
+      ],
+      [
+       "Ronald William Artest",
+       1
+      ],
+      [
+       "Ronald Charles Sobieszczyk",
+       1
+      ],
+      [
+       "Robert L. Stacey",
+       1
+      ],
+      [
+       "Olivier Michael Saint-Jean",
+       1
+      ],
+      [
+       "Maybyner Rodney Hilario",
+       1
+      ],
+      [
+       "Marcus Vinicius Viera de Souza",
+       1
+      ],
+      [
+       "Lloyd Bernard. Free",
+       1
+      ],
+      [
+       "Joel Gregory Muleski",
+       1
+      ],
+      [
+       "Jackson Keith Wilkes",
+       1
+      ],
+      [
+       "Hashim Thabit Manka",
+       1
+      ],
+      [
+       "Gjuro Gregorvitch Glamocli",
+       1
+      ],
+      [
+       "Gary Cole",
+       1
+      ],
+      [
+       "Ferdinand Lewis Alcindor, Jr.",
+       1
+      ],
+      [
+       "Ed Milkovich",
+       1
+      ],
+      [
+       "Donald A. Smith",
+       1
+      ],
+      [
+       "Clifton Nathaniel",
+       1
+      ],
+      [
+       "Chris Wayne Jackson",
+       1
+      ],
+      [
+       "Brian Carson Williams",
+       1
+      ],
+      [
+       "Armon Louis Gilliam",
+       1
+      ],
+      [
+       "Akeem Abdul Olajuwon",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "not useful",
+     "notes": [
+      "99% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "nameSuffix",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.936,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "II",
+     "max_value": "nameSuffix",
+     "examples": [
+      "Jr."
+     ],
+     "top_values": [
+      [
+       "Jr.",
+       257
+      ],
+      [
+       "III",
+       43
+      ],
+      [
+       "II",
+       13
+      ],
+      [
+       "Sr.",
+       6
+      ],
+      [
+       "IV",
+       4
+      ],
+      [
+       "nameSuffix",
+       1
+      ]
+     ],
+     "description": "the suffix name of the player",
+     "value_description": "",
+     "notes": [
+      "94% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "nameNick",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.465,
+     "distinct_count": 1314,
+     "is_unique": false,
+     "min_value": " Bob Arceneaux in hs",
+     "max_value": "nameNick",
+     "examples": [
+      "Lew, Cap",
+      "Walt",
+      "Don, The Kangaroo",
+      "Shareef, Reef",
+      "Tom"
+     ],
+     "top_values": [],
+     "description": "nick name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "pos",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.036,
+     "distinct_count": 14,
+     "is_unique": false,
+     "min_value": " G",
+     "max_value": "pos",
+     "examples": [
+      "F-C",
+      "C",
+      "G",
+      "G-F",
+      "C-F"
+     ],
+     "top_values": [
+      [
+       "G",
+       1625
+      ],
+      [
+       "F",
+       1354
+      ],
+      [
+       "C",
+       501
+      ],
+      [
+       "F-C",
+       444
+      ],
+      [
+       "G-F",
+       427
+      ],
+      [
+       "F-G",
+       254
+      ],
+      [
+       "C-F",
+       251
+      ],
+      [
+       "F-C-G",
+       11
+      ],
+      [
+       "F-G-C",
+       7
+      ],
+      [
+       "C-G",
+       2
+      ],
+      [
+       "pos",
+       1
+      ],
+      [
+       "G-F-C",
+       1
+      ],
+      [
+       "C-F-G",
+       1
+      ],
+      [
+       " G",
+       1
+      ]
+     ],
+     "description": "the position of the player",
+     "value_description": "C: Center\r\n\r\nF: Forward\r\n\r\nG: Guard \r\n\r\ncommonsense evidence:\r\nsome player can have two positions simultaneously",
+     "notes": []
+    },
+    {
+     "name": "firstseason",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.003,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1951,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       5046
+      ],
+      [
+       1951,
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "nothing special",
+     "notes": []
+    },
+    {
+     "name": "lastseason",
+     "declared_type": "INTEGER",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.003,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1951,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       5046
+      ],
+      [
+       1951,
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "nothing special",
+     "notes": []
+    },
+    {
+     "name": "height",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0026,
+     "distinct_count": 44,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 91.0,
+     "examples": [
+      82.0,
+      85.0,
+      74.0,
+      73.0,
+      78.0
+     ],
+     "top_values": [
+      [
+       75.0,
+       475
+      ],
+      [
+       79.0,
+       446
+      ],
+      [
+       74.0,
+       421
+      ],
+      [
+       77.0,
+       411
+      ],
+      [
+       76.0,
+       395
+      ],
+      [
+       80.0,
+       391
+      ],
+      [
+       81.0,
+       374
+      ],
+      [
+       78.0,
+       365
+      ],
+      [
+       73.0,
+       297
+      ],
+      [
+       82.0,
+       273
+      ],
+      [
+       72.0,
+       246
+      ],
+      [
+       83.0,
+       194
+      ],
+      [
+       0.0,
+       194
+      ],
+      [
+       84.0,
+       124
+      ],
+      [
+       71.0,
+       109
+      ],
+      [
+       70.0,
+       86
+      ],
+      [
+       85.0,
+       41
+      ],
+      [
+       69.0,
+       39
+      ],
+      [
+       86.0,
+       22
+      ],
+      [
+       76.5,
+       18
+      ],
+      [
+       68.0,
+       13
+      ],
+      [
+       67.0,
+       13
+      ],
+      [
+       74.5,
+       12
+      ],
+      [
+       79.5,
+       11
+      ],
+      [
+       87.0,
+       10
+      ],
+      [
+       78.5,
+       10
+      ],
+      [
+       77.5,
+       10
+      ],
+      [
+       80.5,
+       6
+      ],
+      [
+       73.5,
+       6
+      ],
+      [
+       72.5,
+       5
+      ],
+      [
+       66.0,
+       5
+      ],
+      [
+       89.0,
+       4
+      ],
+      [
+       88.0,
+       4
+      ],
+      [
+       75.5,
+       3
+      ],
+      [
+       71.5,
+       3
+      ],
+      [
+       65.0,
+       3
+      ],
+      [
+       82.5,
+       2
+      ],
+      [
+       63.0,
+       2
+      ],
+      [
+       91.0,
+       1
+      ],
+      [
+       90.0,
+       1
+      ],
+      [
+       83.5,
+       1
+      ],
+      [
+       81.5,
+       1
+      ],
+      [
+       70.5,
+       1
+      ],
+      [
+       67.5,
+       1
+      ]
+     ],
+     "description": "inch",
+     "value_description": "inch",
+     "notes": []
+    },
+    {
+     "name": "weight",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0028,
+     "distinct_count": 140,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 330,
+     "examples": [
+      240,
+      225,
+      185,
+      162,
+      223
+     ],
+     "top_values": [],
+     "description": "lb",
+     "value_description": "null or empty means it doesn't have this information",
+     "notes": []
+    },
+    {
+     "name": "college",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0352,
+     "distinct_count": 687,
+     "is_unique": false,
+     "min_value": "Acadia",
+     "max_value": "none?",
+     "examples": [
+      "Duke",
+      "UCLA",
+      "Louisiana State",
+      "San Jose State",
+      "Iowa State"
+     ],
+     "top_values": [],
+     "description": "college",
+     "value_description": "null or empty means it doesn't have this information\r\n\r\nwhich colledge does this player graduate from",
+     "notes": []
+    },
+    {
+     "name": "collegeOther",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.8313,
+     "distinct_count": 625,
+     "is_unique": false,
+     "min_value": "Akron/Boise JC",
+     "max_value": "none?",
+     "examples": [
+      "Santa Monica City",
+      "Michigan",
+      "Louisville",
+      "Alma College",
+      "Kentucky (dnp)  Ph.D"
+     ],
+     "top_values": [],
+     "description": "the college that transferred from",
+     "value_description": "commonsense evidence:\r\n\r\nsome players may have the record of transferring from other colleges",
+     "notes": [
+      "83% NULL; filter or handle NULLs"
+     ]
+    },
+    {
+     "name": "birthDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0022,
+     "distinct_count": 4141,
+     "is_unique": false,
+     "min_value": "0000-00-00",
+     "max_value": "1992-08-28",
+     "examples": [
+      "1968-06-24",
+      "1947-04-16",
+      "1942-04-15",
+      "1969-03-09",
+      "1974-11-03"
+     ],
+     "top_values": [],
+     "description": "birthdate",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "birthCity",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.2319,
+     "distinct_count": 1460,
+     "is_unique": false,
+     "min_value": "(ht) Aliquippa",
+     "max_value": "birthCity",
+     "examples": [
+      "Cairo",
+      "New York",
+      "Wilmington",
+      "Gulfport",
+      "Maisons Alfort"
+     ],
+     "top_values": [],
+     "description": "birthcity",
+     "value_description": "null / empty refers to not recorded",
+     "notes": []
+    },
+    {
+     "name": "birthState",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.2872,
+     "distinct_count": 61,
+     "is_unique": false,
+     "min_value": " KS",
+     "max_value": "birthState",
+     "examples": [
+      "NY",
+      "DE",
+      "MS",
+      "GA",
+      "IN"
+     ],
+     "top_values": [],
+     "description": "birth state",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "birthCountry",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.2292,
+     "distinct_count": 81,
+     "is_unique": false,
+     "min_value": "ARG",
+     "max_value": "birthCountry",
+     "examples": [
+      "EGY",
+      "USA",
+      "FRA",
+      "NGR",
+      "TAI"
+     ],
+     "top_values": [],
+     "description": "birth country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "highSchool",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1527,
+     "distinct_count": 2562,
+     "is_unique": false,
+     "min_value": "14 Belgrade",
+     "max_value": "none",
+     "examples": [
+      "Bloomfield Senior",
+      "Power Memorial",
+      "Overbrook / Moton",
+      "Gulfport",
+      "Lycee Aristide Briand"
+     ],
+     "top_values": [],
+     "description": "high school",
+     "value_description": "null / empty refers to not recorded",
+     "notes": []
+    },
+    {
+     "name": "hsCity",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1511,
+     "distinct_count": 1616,
+     "is_unique": false,
+     "min_value": "/",
+     "max_value": "hsCity",
+     "examples": [
+      "Bloomfield",
+      "New York",
+      "Philadelphia / Easton",
+      "Gulfport",
+      "Evreux"
+     ],
+     "top_values": [],
+     "description": "high school city",
+     "value_description": "null / empty refers to not recorded",
+     "notes": []
+    },
+    {
+     "name": "hsState",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1648,
+     "distinct_count": 188,
+     "is_unique": false,
+     "min_value": "  / TX",
+     "max_value": "hsState",
+     "examples": [
+      "NJ",
+      "NY",
+      "PA / MD",
+      "MS",
+      "GA"
+     ],
+     "top_values": [],
+     "description": "high school state",
+     "value_description": "null / empty refers to not recorded",
+     "notes": []
+    },
+    {
+     "name": "hsCountry",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.1511,
+     "distinct_count": 52,
+     "is_unique": false,
+     "min_value": "ARG",
+     "max_value": "hsCountry",
+     "examples": [
+      "USA",
+      "FRA",
+      "NGR",
+      "AUS",
+      "CAN"
+     ],
+     "top_values": [],
+     "description": "high school country",
+     "value_description": "null / empty refers to not recorded",
+     "notes": []
+    },
+    {
+     "name": "deathDate",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 928,
+     "is_unique": false,
+     "min_value": "0000-00-00",
+     "max_value": "2012-06-26",
+     "examples": [
+      "0000-00-00",
+      "2011-11-18",
+      "2000-06-09",
+      "2011-07-09",
+      "1998-10-27"
+     ],
+     "top_values": [],
+     "description": "deathdate",
+     "value_description": "0000-00-00 means this player is still alive\r\n\r\nwithin clear date：\r\n2011-11-10, which means this guy was died on \"2011-11-10\"",
+     "notes": []
+    },
+    {
+     "name": "race",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0314,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": "1",
+     "max_value": "r",
+     "examples": [
+      "B",
+      "W"
+     ],
+     "top_values": [
+      [
+       "B",
+       2460
+      ],
+      [
+       "W",
+       2431
+      ],
+      [
+       "O",
+       9
+      ],
+      [
+       "1",
+       2
+      ],
+      [
+       "r",
+       1
+      ]
+     ],
+     "description": "",
+     "value_description": "B：black,\r\nW: white\r\n\r\nnull or empty: nothing",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "playerID"
+   ],
+   "sample_rows": [
+    {
+     "playerID": "abdelal01",
+     "useFirst": "Alaa",
+     "firstName": "Alaa",
+     "middleName": null,
+     "lastName": "Abdelnaby",
+     "nameGiven": null,
+     "fullGivenName": null,
+     "nameSuffix": null,
+     "nameNick": null,
+     "pos": "F-C",
+     "firstseason": 0,
+     "lastseason": 0,
+     "height": 82.0,
+     "weight": 240,
+     "college": "Duke",
+     "collegeOther": null,
+     "birthDate": "1968-06-24",
+     "birthCity": "Cairo",
+     "birthState": null,
+     "birthCountry": "EGY",
+     "highSchool": "Bloomfield Senior",
+     "hsCity": "Bloomfield",
+     "hsState": "NJ",
+     "hsCountry": "USA",
+     "deathDate": "0000-00-00",
+     "race": "B"
+    },
+    {
+     "playerID": "abdulka01",
+     "useFirst": "Kareem",
+     "firstName": "Kareem",
+     "middleName": null,
+     "lastName": "Abdul-Jabbar",
+     "nameGiven": null,
+     "fullGivenName": "Ferdinand Lewis Alcindor, Jr.",
+     "nameSuffix": null,
+     "nameNick": "Lew, Cap",
+     "pos": "C",
+     "firstseason": 0,
+     "lastseason": 0,
+     "height": 85.0,
+     "weight": 225,
+     "college": "UCLA",
+     "collegeOther": null,
+     "birthDate": "1947-04-16",
+     "birthCity": "New York",
+     "birthState": "NY",
+     "birthCountry": "USA",
+     "highSchool": "Power Memorial",
+     "hsCity": "New York",
+     "hsState": "NY",
+     "hsCountry": "USA",
+     "deathDate": "0000-00-00",
+     "race": "B"
+    },
+    {
+     "playerID": "abdulma01",
+     "useFirst": "Mahdi",
+     "firstName": "Mahdi",
+     "middleName": null,
+     "lastName": "Abdul-Rahman",
+     "nameGiven": null,
+     "fullGivenName": "Walter Raphael Hazzard, Jr.",
+     "nameSuffix": null,
+     "nameNick": "Walt",
+     "pos": "G",
+     "firstseason": 0,
+     "lastseason": 0,
+     "height": 74.0,
+     "weight": 185,
+     "college": "UCLA",
+     "collegeOther": "Santa Monica City",
+     "birthDate": "1942-04-15",
+     "birthCity": "Wilmington",
+     "birthState": "DE",
+     "birthCountry": "USA",
+     "highSchool": "Overbrook / Moton",
+     "hsCity": "Philadelphia / Easton",
+     "hsState": "PA / MD",
+     "hsCountry": "USA",
+     "deathDate": "2011-11-18",
+     "race": "B"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "players_teams",
+   "row_count": 23751,
+   "stats_rows": 23751,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 23751,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 23751,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the unique number to identify this record",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "playerID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4903,
+     "is_unique": false,
+     "min_value": "abdelal01",
+     "max_value": "zunicma01",
+     "examples": [
+      "abdelal01",
+      "abdulka01",
+      "abdulma01",
+      "abdulma02",
+      "abdulta01"
+     ],
+     "top_values": [],
+     "description": "ID number identifying the unique number of the player",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 75,
+     "is_unique": false,
+     "min_value": 1937,
+     "max_value": 2011,
+     "examples": [
+      1990,
+      1991,
+      1992,
+      1993,
+      1994
+     ],
+     "top_values": [],
+     "description": "year",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "stint",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 5,
+     "examples": [
+      1,
+      2,
+      0,
+      3
+     ],
+     "top_values": [
+      [
+       1,
+       19672
+      ],
+      [
+       2,
+       2197
+      ],
+      [
+       0,
+       1716
+      ],
+      [
+       3,
+       157
+      ],
+      [
+       4,
+       8
+      ],
+      [
+       5,
+       1
+      ]
+     ],
+     "description": "the period of the time player spent played for this team",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "tmID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 161,
+     "is_unique": false,
+     "min_value": "AFS",
+     "max_value": "YOU",
+     "examples": [
+      "POR",
+      "MIL",
+      "BOS",
+      "SAC",
+      "PHI"
+     ],
+     "top_values": [],
+     "description": "team ID. team name",
+     "value_description": "abbreviated name",
+     "notes": []
+    },
+    {
+     "name": "lgID",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "ABA",
+     "max_value": "PBLA",
+     "examples": [
+      "NBA",
+      "NBL",
+      "ABA",
+      "ABL1"
+     ],
+     "top_values": [
+      [
+       "NBA",
+       20357
+      ],
+      [
+       "ABA",
+       1463
+      ],
+      [
+       "NBL",
+       1423
+      ],
+      [
+       "ABL1",
+       205
+      ],
+      [
+       "PBLA",
+       165
+      ],
+      [
+       "NPBL",
+       138
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "GP",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 85,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 84,
+     "examples": [
+      43,
+      71,
+      12,
+      63,
+      13
+     ],
+     "top_values": [],
+     "description": "game presentatons (attendance)",
+     "value_description": "min: 0, max: 82\n\ncommonsense evidence:\n\nif this number is equal to 82, means full attendance",
+     "notes": []
+    },
+    {
+     "name": "GS",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 83,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 82,
+     "examples": [
+      0,
+      69,
+      62
+     ],
+     "top_values": [],
+     "description": "game starting",
+     "value_description": "min: 0, max: 82,\n\ncommonsense evidence:\n\nwhen GP = GS, it means that this player plays as the stating lineup fully.",
+     "notes": []
+    },
+    {
+     "name": "minutes",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3352,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 3882,
+     "examples": [
+      290,
+      934,
+      159,
+      1152,
+      476
+     ],
+     "top_values": [],
+     "description": "minutes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "points",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2116,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 4029,
+     "examples": [
+      135,
+      432,
+      64,
+      514,
+      254
+     ],
+     "top_values": [],
+     "description": "points",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "oRebounds",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 407,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 895,
+     "examples": [
+      27,
+      81,
+      12,
+      114,
+      34
+     ],
+     "top_values": [],
+     "description": "offense rebounds",
+     "value_description": "empty or null refers to none offense rebounds，\n\n1: one offense rebound",
+     "notes": []
+    },
+    {
+     "name": "dRebounds",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 788,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1111,
+     "examples": [
+      62,
+      179,
+      25,
+      186,
+      34
+     ],
+     "top_values": [],
+     "description": "defense rebounds",
+     "value_description": "empty or null refers to none defense rebounds，\n\n1: one defense rebound",
+     "notes": []
+    },
+    {
+     "name": "rebounds",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1166,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 2149,
+     "examples": [
+      89,
+      260,
+      37,
+      300,
+      46
+     ],
+     "top_values": [],
+     "description": "total rebounds",
+     "value_description": "empty or null refers to none total rebounds，\n\n3: totally gets 3 rebounds including offense and defense rebounds\n\ncommensense evidence:\n\ntotal rebounds = offense rebounds + defense rebounds",
+     "notes": []
+    },
+    {
+     "name": "assists",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 768,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1164,
+     "examples": [
+      12,
+      30,
+      10,
+      17,
+      3
+     ],
+     "top_values": [],
+     "description": "assistants",
+     "value_description": "null or empty refers to none\n\n2: 2 assistants",
+     "notes": []
+    },
+    {
+     "name": "steals",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 245,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 354,
+     "examples": [
+      4,
+      25,
+      6,
+      19,
+      2
+     ],
+     "top_values": [],
+     "description": "steals",
+     "value_description": "null or empty refers to none\n\n2: 2 steals",
+     "notes": []
+    },
+    {
+     "name": "blocks",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 281,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 456,
+     "examples": [
+      12,
+      17,
+      4,
+      22,
+      3
+     ],
+     "top_values": [],
+     "description": "blocks",
+     "value_description": "null or empty refers to none\n\n2: 2 blocks",
+     "notes": []
+    },
+    {
+     "name": "turnovers",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 351,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 422,
+     "examples": [
+      22,
+      66,
+      0,
+      97,
+      17
+     ],
+     "top_values": [],
+     "description": "turnovers",
+     "value_description": "null or empty refers to none\n\n2: 2 turnovers",
+     "notes": []
+    },
+    {
+     "name": "PF",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 364,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 386,
+     "examples": [
+      39,
+      132,
+      24,
+      165,
+      20
+     ],
+     "top_values": [],
+     "description": "personal fouls",
+     "value_description": "null or empty refers to none\n\n2: 2 personal fouls",
+     "notes": []
+    },
+    {
+     "name": "fgAttempted",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1742,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 3159,
+     "examples": [
+      116,
+      361,
+      56,
+      417,
+      55
+     ],
+     "top_values": [],
+     "description": "field goal attempted",
+     "value_description": "null or empty refers to none\n\n2: 2 field goal attempts",
+     "notes": []
+    },
+    {
+     "name": "fgMade",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 913,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1597,
+     "examples": [
+      55,
+      178,
+      26,
+      219,
+      24
+     ],
+     "top_values": [],
+     "description": "field goal made",
+     "value_description": "null or empty refers to none\n\n2: 2 field goal made",
+     "notes": []
+    },
+    {
+     "name": "ftAttempted",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 812,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1363,
+     "examples": [
+      44,
+      101,
+      16,
+      100,
+      25
+     ],
+     "top_values": [],
+     "description": "free throw attempted",
+     "value_description": "null or empty refers to none\n\n2: 2 free throw attempts",
+     "notes": []
+    },
+    {
+     "name": "ftMade",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 650,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 840,
+     "examples": [
+      25,
+      76,
+      12,
+      16,
+      20
+     ],
+     "top_values": [],
+     "description": "free throw made",
+     "value_description": "null or empty refers to none\n\n2: 2 free throw made",
+     "notes": []
+    },
+    {
+     "name": "threeAttempted",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 514,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 678,
+     "examples": [
+      0,
+      1,
+      2,
+      3,
+      100
+     ],
+     "top_values": [],
+     "description": "three point attempted",
+     "value_description": "null or empty refers to none\n\n2: 2 three point attempts",
+     "notes": []
+    },
+    {
+     "name": "threeMade",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 218,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 269,
+     "examples": [
+      0,
+      1,
+      24,
+      31,
+      70
+     ],
+     "top_values": [],
+     "description": "three point made",
+     "value_description": "null or empty refers to none\n\n2: 2 three point made",
+     "notes": []
+    },
+    {
+     "name": "PostGP",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 27,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 26,
+     "examples": [
+      5,
+      8,
+      0,
+      4,
+      10
+     ],
+     "top_values": [
+      [
+       0,
+       13718
+      ],
+      [
+       3,
+       1276
+      ],
+      [
+       5,
+       1195
+      ],
+      [
+       4,
+       1097
+      ],
+      [
+       2,
+       814
+      ],
+      [
+       6,
+       710
+      ],
+      [
+       7,
+       586
+      ],
+      [
+       10,
+       537
+      ],
+      [
+       1,
+       484
+      ],
+      [
+       9,
+       440
+      ],
+      [
+       11,
+       407
+      ],
+      [
+       8,
+       380
+      ],
+      [
+       12,
+       360
+      ],
+      [
+       13,
+       286
+      ],
+      [
+       17,
+       216
+      ],
+      [
+       16,
+       212
+      ],
+      [
+       14,
+       183
+      ],
+      [
+       15,
+       182
+      ],
+      [
+       18,
+       144
+      ],
+      [
+       19,
+       126
+      ],
+      [
+       20,
+       115
+      ],
+      [
+       21,
+       94
+      ],
+      [
+       23,
+       93
+      ],
+      [
+       22,
+       46
+      ],
+      [
+       24,
+       30
+      ],
+      [
+       25,
+       15
+      ],
+      [
+       26,
+       5
+      ]
+     ],
+     "description": "post season game presentations",
+     "value_description": "0: this player doesn't present in the post season (playoffs)",
+     "notes": []
+    },
+    {
+     "name": "PostGS",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 24,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 24,
+     "examples": [
+      0,
+      6,
+      3,
+      7
+     ],
+     "top_values": [
+      [
+       0,
+       23373
+      ],
+      [
+       6,
+       54
+      ],
+      [
+       5,
+       52
+      ],
+      [
+       4,
+       31
+      ],
+      [
+       1,
+       30
+      ],
+      [
+       11,
+       24
+      ],
+      [
+       7,
+       24
+      ],
+      [
+       10,
+       21
+      ],
+      [
+       14,
+       19
+      ],
+      [
+       16,
+       16
+      ],
+      [
+       23,
+       15
+      ],
+      [
+       3,
+       14
+      ],
+      [
+       13,
+       12
+      ],
+      [
+       2,
+       12
+      ],
+      [
+       12,
+       10
+      ],
+      [
+       9,
+       10
+      ],
+      [
+       20,
+       9
+      ],
+      [
+       21,
+       7
+      ],
+      [
+       24,
+       5
+      ],
+      [
+       17,
+       5
+      ],
+      [
+       8,
+       4
+      ],
+      [
+       18,
+       2
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       19,
+       1
+      ]
+     ],
+     "description": "post season game starting",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "PostMinutes",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 862,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 1079,
+     "examples": [
+      13,
+      25,
+      0,
+      68,
+      435
+     ],
+     "top_values": [],
+     "description": "post season minutes",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "PostPoints",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 503,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 759,
+     "examples": [
+      4,
+      12,
+      0,
+      22,
+      352
+     ],
+     "top_values": [],
+     "description": "post season points",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "PostoRebounds",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 100,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 125,
+     "examples": [
+      1,
+      0,
+      2,
+      67,
+      51
+     ],
+     "top_values": [],
+     "description": "post season offense rebounds",
+     "value_description": "null or empty refers to none\n\n1: 1 offense rebounds in the post season",
+     "notes": []
+    },
+    {
+     "name": "PostdRebounds",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 186,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 273,
+     "examples": [
+      2,
+      4,
+      0,
+      11,
+      186
+     ],
+     "top_values": [],
+     "description": "post season defense rebounds",
+     "value_description": "null or empty refers to none\n\n1: 1 defense rebounds in the post season",
+     "notes": []
+    },
+    {
+     "name": "PostRebounds",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 283,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 444,
+     "examples": [
+      3,
+      4,
+      0,
+      13,
+      168
+     ],
+     "top_values": [],
+     "description": "post season defense rebounds",
+     "value_description": "null or empty refers to none\n\n3: 3 rebounds in the post season totally",
+     "notes": []
+    },
+    {
+     "name": "PostAssists",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 177,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 303,
+     "examples": [
+      0,
+      2,
+      1,
+      41,
+      35
+     ],
+     "top_values": [],
+     "description": "post season assistants",
+     "value_description": "null or empty refers to none\n\n1: 1 assistance in the post season",
+     "notes": []
+    },
+    {
+     "name": "PostSteals",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 56,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 66,
+     "examples": [
+      0,
+      20,
+      19,
+      2,
+      8
+     ],
+     "top_values": [],
+     "description": "post season steals",
+     "value_description": "null or empty refers to none\n\n1: 1 offense steals in the post season",
+     "notes": []
+    },
+    {
+     "name": "PostBlocks",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 64,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 92,
+     "examples": [
+      0,
+      1,
+      39,
+      38,
+      12
+     ],
+     "top_values": [],
+     "description": "post season blocks",
+     "value_description": "null or empty refers to none\n\n1: 1 block in the post season",
+     "notes": []
+    },
+    {
+     "name": "PostTurnovers",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 90,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 2121,
+     "examples": [
+      0,
+      2,
+      9,
+      14,
+      29
+     ],
+     "top_values": [],
+     "description": "post season turnovers",
+     "value_description": "null or empty refers to none\n\n1: 1 turnover in the post season",
+     "notes": []
+    },
+    {
+     "name": "PostPF",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 100,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 520,
+     "examples": [
+      0,
+      4,
+      7,
+      25,
+      35
+     ],
+     "top_values": [],
+     "description": "post season personal fouls",
+     "value_description": "null or empty refers to none\n\n1: 2 personal fouls in the post season",
+     "notes": []
+    },
+    {
+     "name": "PostfgAttempted",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 419,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 661,
+     "examples": [
+      6,
+      10,
+      0,
+      24,
+      245
+     ],
+     "top_values": [],
+     "description": "post season field goal attempted",
+     "value_description": "null or empty refers to none\n\n1: 1 field goal attempts in the post season",
+     "notes": []
+    },
+    {
+     "name": "PostfgMade",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 219,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 306,
+     "examples": [
+      2,
+      5,
+      0,
+      11,
+      139
+     ],
+     "top_values": [],
+     "description": "post season field goal made",
+     "value_description": "null or empty refers to none\n\n1: 1 field goal made in the post season",
+     "notes": []
+    },
+    {
+     "name": "PostftAttempted",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 201,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 296,
+     "examples": [
+      0,
+      4,
+      101,
+      54,
+      35
+     ],
+     "top_values": [],
+     "description": "post season field free throw attempted",
+     "value_description": "null or empty refers to none\n\n1: 1 free throw attempts in the post season",
+     "notes": []
+    },
+    {
+     "name": "PostftMade",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 164,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 205,
+     "examples": [
+      0,
+      2,
+      74,
+      68,
+      38
+     ],
+     "top_values": [],
+     "description": "post season free throw made",
+     "value_description": "null or empty refers to none\n\n1: 1 free throw made in the post season",
+     "notes": []
+    },
+    {
+     "name": "PostthreeAttempted",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 128,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 151,
+     "examples": [
+      0,
+      1,
+      2,
+      37,
+      12
+     ],
+     "top_values": [],
+     "description": "post season three point attempted",
+     "value_description": "null or empty refers to none\n\n1: 1 three point attempts in the post season",
+     "notes": []
+    },
+    {
+     "name": "PostthreeMade",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 56,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 58,
+     "examples": [
+      0,
+      12,
+      2,
+      17,
+      10
+     ],
+     "top_values": [],
+     "description": "post season three point made",
+     "value_description": "null or empty refers to none\n\n1: 1 three point made in the post season",
+     "notes": []
+    },
+    {
+     "name": "note",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.9982,
+     "distinct_count": 1,
+     "is_unique": false,
+     "min_value": "C",
+     "max_value": "C",
+     "examples": [
+      "C"
+     ],
+     "top_values": [
+      [
+       "C",
+       43
+      ]
+     ],
+     "description": "",
+     "value_description": "",
+     "notes": [
+      "100% NULL; filter or handle NULLs"
+     ]
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "playerID": "abdelal01",
+     "year": 1990,
+     "stint": 1,
+     "tmID": "POR",
+     "lgID": "NBA",
+     "GP": 43,
+     "GS": 0,
+     "minutes": 290,
+     "points": 135,
+     "oRebounds": 27,
+     "dRebounds": 62,
+     "rebounds": 89,
+     "assists": 12,
+     "steals": 4,
+     "blocks": 12,
+     "turnovers": 22,
+     "PF": 39,
+     "fgAttempted": 116,
+     "fgMade": 55,
+     "ftAttempted": 44,
+     "ftMade": 25,
+     "threeAttempted": 0,
+     "threeMade": 0,
+     "PostGP": 5,
+     "PostGS": 0,
+     "PostMinutes": 13,
+     "PostPoints": 4,
+     "PostoRebounds": 1,
+     "PostdRebounds": 2,
+     "PostRebounds": 3,
+     "PostAssists": 0,
+     "PostSteals": 0,
+     "PostBlocks": 0,
+     "PostTurnovers": 0,
+     "PostPF": 0,
+     "PostfgAttempted": 6,
+     "PostfgMade": 2,
+     "PostftAttempted": 0,
+     "PostftMade": 0,
+     "PostthreeAttempted": 0,
+     "PostthreeMade": 0,
+     "note": null
+    },
+    {
+     "id": 2,
+     "playerID": "abdelal01",
+     "year": 1991,
+     "stint": 1,
+     "tmID": "POR",
+     "lgID": "NBA",
+     "GP": 71,
+     "GS": 0,
+     "minutes": 934,
+     "points": 432,
+     "oRebounds": 81,
+     "dRebounds": 179,
+     "rebounds": 260,
+     "assists": 30,
+     "steals": 25,
+     "blocks": 17,
+     "turnovers": 66,
+     "PF": 132,
+     "fgAttempted": 361,
+     "fgMade": 178,
+     "ftAttempted": 101,
+     "ftMade": 76,
+     "threeAttempted": 0,
+     "threeMade": 0,
+     "PostGP": 8,
+     "PostGS": 0,
+     "PostMinutes": 25,
+     "PostPoints": 12,
+     "PostoRebounds": 0,
+     "PostdRebounds": 4,
+     "PostRebounds": 4,
+     "PostAssists": 2,
+     "PostSteals": 0,
+     "PostBlocks": 0,
+     "PostTurnovers": 2,
+     "PostPF": 4,
+     "PostfgAttempted": 10,
+     "PostfgMade": 5,
+     "PostftAttempted": 4,
+     "PostftMade": 2,
+     "PostthreeAttempted": 0,
+     "PostthreeMade": 0,
+     "note": null
+    },
+    {
+     "id": 3,
+     "playerID": "abdelal01",
+     "year": 1992,
+     "stint": 1,
+     "tmID": "MIL",
+     "lgID": "NBA",
+     "GP": 12,
+     "GS": 0,
+     "minutes": 159,
+     "points": 64,
+     "oRebounds": 12,
+     "dRebounds": 25,
+     "rebounds": 37,
+     "assists": 10,
+     "steals": 6,
+     "blocks": 4,
+     "turnovers": 0,
+     "PF": 24,
+     "fgAttempted": 56,
+     "fgMade": 26,
+     "ftAttempted": 16,
+     "ftMade": 12,
+     "threeAttempted": 1,
+     "threeMade": 0,
+     "PostGP": 0,
+     "PostGS": 0,
+     "PostMinutes": 0,
+     "PostPoints": 0,
+     "PostoRebounds": 0,
+     "PostdRebounds": 0,
+     "PostRebounds": 0,
+     "PostAssists": 0,
+     "PostSteals": 0,
+     "PostBlocks": 0,
+     "PostTurnovers": 0,
+     "PostPF": 0,
+     "PostfgAttempted": 0,
+     "PostfgMade": 0,
+     "PostftAttempted": 0,
+     "PostftMade": 0,
+     "PostthreeAttempted": 0,
+     "PostthreeMade": 0,
+     "note": null
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "series_post",
+   "row_count": 775,
+   "stats_rows": 775,
+   "columns": [
+    {
+     "name": "id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 775,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 775,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "unique number of this record",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 66,
+     "is_unique": false,
+     "min_value": 1946,
+     "max_value": 2011,
+     "examples": [
+      1946,
+      1947,
+      1948,
+      1949,
+      1950
+     ],
+     "top_values": [],
+     "description": "year",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "round",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": "CF",
+     "max_value": "SF",
+     "examples": [
+      "F",
+      "QF",
+      "SF",
+      "DT",
+      "DF"
+     ],
+     "top_values": [
+      [
+       "CFR",
+       264
+      ],
+      [
+       "CSF",
+       168
+      ],
+      [
+       "DSF",
+       94
+      ],
+      [
+       "CF",
+       84
+      ],
+      [
+       "F",
+       75
+      ],
+      [
+       "DF",
+       61
+      ],
+      [
+       "DT",
+       11
+      ],
+      [
+       "SF",
+       7
+      ],
+      [
+       "RR",
+       6
+      ],
+      [
+       "QF",
+       4
+      ],
+      [
+       "FR",
+       1
+      ]
+     ],
+     "description": "round",
+     "value_description": "known abbreviations：\n\nF：final \nSF: semi-final \n\nQF：quater-final 1/4\n\nDF：division-final \n\nDSF：division semi-final",
+     "notes": []
+    },
+    {
+     "name": "series",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11,
+     "is_unique": false,
+     "min_value": "A",
+     "max_value": "O",
+     "examples": [
+      "O",
+      "M",
+      "N",
+      "A",
+      "K"
+     ],
+     "top_values": [
+      [
+       "L",
+       264
+      ],
+      [
+       "M",
+       172
+      ],
+      [
+       "N",
+       89
+      ],
+      [
+       "O",
+       66
+      ],
+      [
+       "J",
+       62
+      ],
+      [
+       "K",
+       45
+      ],
+      [
+       "B",
+       33
+      ],
+      [
+       "C",
+       18
+      ],
+      [
+       "A",
+       11
+      ],
+      [
+       "D",
+       9
+      ],
+      [
+       "I",
+       6
+      ]
+     ],
+     "description": "",
+     "value_description": "not useful",
+     "notes": []
+    },
+    {
+     "name": "tmIDWinner",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 66,
+     "is_unique": false,
+     "min_value": "AND",
+     "max_value": "WSC",
+     "examples": [
+      "PHW",
+      "NYK",
+      "CHS",
+      "BLB",
+      "WSC"
+     ],
+     "top_values": [],
+     "description": "team id winner",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lgIDWinner",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "ABA",
+     "max_value": "NBA",
+     "examples": [
+      "NBA"
+     ],
+     "top_values": [
+      [
+       "NBA",
+       712
+      ],
+      [
+       "ABA",
+       63
+      ]
+     ],
+     "description": "league id winner",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "tmIDLoser",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0077,
+     "distinct_count": 79,
+     "is_unique": false,
+     "min_value": "AND",
+     "max_value": "WSC",
+     "examples": [
+      "CHS",
+      "CLR",
+      "STB",
+      "NYK",
+      "WSC"
+     ],
+     "top_values": [],
+     "description": "team id loser",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lgIDLoser",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "ABA",
+     "max_value": "NBA",
+     "examples": [
+      "NBA"
+     ],
+     "top_values": [
+      [
+       "NBA",
+       712
+      ],
+      [
+       "ABA",
+       63
+      ]
+     ],
+     "description": "league id loser",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "W",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 4,
+     "examples": [
+      4,
+      2,
+      1,
+      3,
+      0
+     ],
+     "top_values": [
+      [
+       4,
+       494
+      ],
+      [
+       3,
+       185
+      ],
+      [
+       2,
+       83
+      ],
+      [
+       1,
+       11
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "description": "wins",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "L",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 4,
+     "examples": [
+      1,
+      0,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       1,
+       247
+      ],
+      [
+       2,
+       218
+      ],
+      [
+       0,
+       178
+      ],
+      [
+       3,
+       130
+      ],
+      [
+       4,
+       2
+      ]
+     ],
+     "description": "loses",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "id"
+   ],
+   "sample_rows": [
+    {
+     "id": 1,
+     "year": 1946,
+     "round": "F",
+     "series": "O",
+     "tmIDWinner": "PHW",
+     "lgIDWinner": "NBA",
+     "tmIDLoser": "CHS",
+     "lgIDLoser": "NBA",
+     "W": 4,
+     "L": 1
+    },
+    {
+     "id": 2,
+     "year": 1946,
+     "round": "QF",
+     "series": "M",
+     "tmIDWinner": "NYK",
+     "lgIDWinner": "NBA",
+     "tmIDLoser": "CLR",
+     "lgIDLoser": "NBA",
+     "W": 2,
+     "L": 1
+    },
+    {
+     "id": 3,
+     "year": 1946,
+     "round": "QF",
+     "series": "M",
+     "tmIDWinner": "PHW",
+     "lgIDWinner": "NBA",
+     "tmIDLoser": "STB",
+     "lgIDLoser": "NBA",
+     "W": 2,
+     "L": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "teams",
+   "row_count": 1536,
+   "stats_rows": 1536,
+   "columns": [
+    {
+     "name": "year",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 75,
+     "is_unique": false,
+     "min_value": 1937,
+     "max_value": 2011,
+     "examples": [
+      1937,
+      1938,
+      1939,
+      1940,
+      1941
+     ],
+     "top_values": [],
+     "description": "year",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "lgID",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": "ABA",
+     "max_value": "PBLA",
+     "examples": [
+      "NBL",
+      "NBA",
+      "PBLA",
+      "NPBL"
+     ],
+     "top_values": [
+      [
+       "NBA",
+       1304
+      ],
+      [
+       "NBL",
+       99
+      ],
+      [
+       "ABA",
+       94
+      ],
+      [
+       "PBLA",
+       16
+      ],
+      [
+       "ABL1",
+       14
+      ],
+      [
+       "NPBL",
+       9
+      ]
+     ],
+     "description": "league ID. league name",
+     "value_description": "main categories:\nNBA, ABA",
+     "notes": []
+    },
+    {
+     "name": "tmID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 161,
+     "is_unique": false,
+     "min_value": "AFS",
+     "max_value": "YOU",
+     "examples": [
+      "AFS",
+      "AGW",
+      "BFB",
+      "CNC",
+      "COL"
+     ],
+     "top_values": [],
+     "description": "team id",
+     "value_description": "abbreviated name",
+     "notes": []
+    },
+    {
+     "name": "franchID",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 104,
+     "is_unique": false,
+     "min_value": "AFS",
+     "max_value": "YOU",
+     "examples": [
+      "AFS",
+      "AGW",
+      "BFB",
+      "CNC",
+      "COL"
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "not useful",
+     "notes": []
+    },
+    {
+     "name": "confID",
+     "declared_type": "TEXT",
+     "semantic_type": "boolean",
+     "is_primary_key": false,
+     "null_rate": 0.3073,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": "EC",
+     "max_value": "WC",
+     "examples": [],
+     "top_values": [
+      [
+       "WC",
+       533
+      ],
+      [
+       "EC",
+       531
+      ]
+     ],
+     "description": "",
+     "value_description": "not useful",
+     "notes": []
+    },
+    {
+     "name": "divID",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0247,
+     "distinct_count": 13,
+     "is_unique": false,
+     "min_value": "AT",
+     "max_value": "WE",
+     "examples": [
+      "EA",
+      "WE",
+      "ED",
+      "WD",
+      "SO"
+     ],
+     "top_values": [
+      [
+       "CD",
+       263
+      ],
+      [
+       "PC",
+       252
+      ],
+      [
+       "AT",
+       233
+      ],
+      [
+       "MW",
+       201
+      ],
+      [
+       "WD",
+       160
+      ],
+      [
+       "ED",
+       160
+      ],
+      [
+       "EA",
+       47
+      ],
+      [
+       "WE",
+       46
+      ],
+      [
+       "SW",
+       40
+      ],
+      [
+       "SE",
+       40
+      ],
+      [
+       "NW",
+       40
+      ],
+      [
+       "SO",
+       8
+      ],
+      [
+       "NO",
+       8
+      ]
+     ],
+     "description": "division ID",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "rank",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 9,
+     "examples": [
+      1,
+      2,
+      4,
+      5,
+      6
+     ],
+     "top_values": [
+      [
+       2,
+       285
+      ],
+      [
+       1,
+       285
+      ],
+      [
+       3,
+       277
+      ],
+      [
+       4,
+       274
+      ],
+      [
+       5,
+       216
+      ],
+      [
+       6,
+       122
+      ],
+      [
+       7,
+       63
+      ],
+      [
+       8,
+       12
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "description": "rank",
+     "value_description": "less is better",
+     "notes": []
+    },
+    {
+     "name": "confRank",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 16,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 15,
+     "examples": [
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       562
+      ],
+      [
+       8,
+       78
+      ],
+      [
+       7,
+       78
+      ],
+      [
+       6,
+       78
+      ],
+      [
+       5,
+       78
+      ],
+      [
+       4,
+       78
+      ],
+      [
+       3,
+       78
+      ],
+      [
+       2,
+       78
+      ],
+      [
+       1,
+       78
+      ],
+      [
+       9,
+       74
+      ],
+      [
+       11,
+       66
+      ],
+      [
+       10,
+       66
+      ],
+      [
+       12,
+       50
+      ],
+      [
+       13,
+       41
+      ],
+      [
+       14,
+       34
+      ],
+      [
+       15,
+       19
+      ]
+     ],
+     "description": "",
+     "value_description": "not useful",
+     "notes": []
+    },
+    {
+     "name": "playoff",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.4134,
+     "distinct_count": 15,
+     "is_unique": false,
+     "min_value": "AC",
+     "max_value": "WC",
+     "examples": [
+      "CF",
+      "WC",
+      "LC",
+      "CS",
+      "F"
+     ],
+     "top_values": [
+      [
+       "C1",
+       265
+      ],
+      [
+       "CS",
+       188
+      ],
+      [
+       "CF",
+       99
+      ],
+      [
+       "DS",
+       94
+      ],
+      [
+       "F",
+       75
+      ],
+      [
+       "NC",
+       65
+      ],
+      [
+       "DF",
+       61
+      ],
+      [
+       "WC",
+       13
+      ],
+      [
+       "LC",
+       13
+      ],
+      [
+       "AC",
+       9
+      ],
+      [
+       "SF",
+       7
+      ],
+      [
+       "R1",
+       5
+      ],
+      [
+       "DT",
+       4
+      ],
+      [
+       "DR",
+       2
+      ],
+      [
+       "D1",
+       1
+      ]
+     ],
+     "description": "another name: post season",
+     "value_description": "for brevity, if the value is not null or empty, it means this team attends the playoffs, otherwise, means not attend",
+     "notes": []
+    },
+    {
+     "name": "name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 156,
+     "is_unique": false,
+     "min_value": "Akron Firestone Non-Skids",
+     "max_value": "Youngstown Bears",
+     "examples": [
+      "Akron Firestone Non-Skids",
+      "Akron Goodyear Wingfoots",
+      "Buffalo Bisons",
+      "Richmond King Clothiers/Cincinnati Comellos",
+      "Columbus Athletic Supply"
+     ],
+     "top_values": [],
+     "description": "full name of the team",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "o_fgm",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1049,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 4059,
+     "examples": [
+      249,
+      243,
+      108,
+      110,
+      109
+     ],
+     "top_values": [],
+     "description": "how many offense field goal made by this team in this season",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "o_ftm",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 865,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 2607,
+     "examples": [
+      183,
+      159,
+      46,
+      42,
+      64
+     ],
+     "top_values": [],
+     "description": "how many offense free throw made by this team in this season",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "o_pts",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1241,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 10371,
+     "examples": [
+      681,
+      645,
+      262,
+      282,
+      347
+     ],
+     "top_values": [],
+     "description": "offense points",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "d_pts",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1275,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 10723,
+     "examples": [
+      578,
+      498,
+      275,
+      338,
+      426
+     ],
+     "top_values": [],
+     "description": "defense points",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "homeWon",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 41,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 40,
+     "examples": [
+      8,
+      2,
+      3,
+      1,
+      9
+     ],
+     "top_values": [
+      [
+       0,
+       107
+      ],
+      [
+       25,
+       75
+      ],
+      [
+       26,
+       73
+      ],
+      [
+       31,
+       72
+      ],
+      [
+       29,
+       69
+      ],
+      [
+       27,
+       68
+      ],
+      [
+       30,
+       67
+      ],
+      [
+       22,
+       65
+      ],
+      [
+       28,
+       61
+      ],
+      [
+       18,
+       59
+      ],
+      [
+       24,
+       57
+      ],
+      [
+       21,
+       55
+      ],
+      [
+       20,
+       55
+      ],
+      [
+       23,
+       54
+      ],
+      [
+       33,
+       44
+      ],
+      [
+       32,
+       42
+      ],
+      [
+       19,
+       42
+      ],
+      [
+       17,
+       41
+      ],
+      [
+       15,
+       40
+      ],
+      [
+       14,
+       35
+      ],
+      [
+       36,
+       32
+      ],
+      [
+       16,
+       32
+      ],
+      [
+       13,
+       31
+      ],
+      [
+       12,
+       30
+      ],
+      [
+       35,
+       29
+      ],
+      [
+       11,
+       29
+      ],
+      [
+       34,
+       28
+      ],
+      [
+       9,
+       24
+      ],
+      [
+       10,
+       19
+      ],
+      [
+       37,
+       16
+      ],
+      [
+       1,
+       13
+      ],
+      [
+       7,
+       12
+      ],
+      [
+       8,
+       11
+      ],
+      [
+       6,
+       9
+      ],
+      [
+       4,
+       9
+      ],
+      [
+       39,
+       7
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       2,
+       7
+      ],
+      [
+       5,
+       5
+      ],
+      [
+       38,
+       3
+      ],
+      [
+       40,
+       2
+      ]
+     ],
+     "description": "home wins. wins in the home",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "homeLost",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 36,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 35,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      0
+     ],
+     "top_values": [
+      [
+       0,
+       110
+      ],
+      [
+       10,
+       90
+      ],
+      [
+       12,
+       86
+      ],
+      [
+       11,
+       79
+      ],
+      [
+       14,
+       77
+      ],
+      [
+       15,
+       76
+      ],
+      [
+       13,
+       76
+      ],
+      [
+       5,
+       66
+      ],
+      [
+       8,
+       65
+      ],
+      [
+       16,
+       64
+      ],
+      [
+       7,
+       62
+      ],
+      [
+       9,
+       60
+      ],
+      [
+       6,
+       57
+      ],
+      [
+       19,
+       56
+      ],
+      [
+       17,
+       53
+      ],
+      [
+       21,
+       48
+      ],
+      [
+       18,
+       45
+      ],
+      [
+       20,
+       44
+      ],
+      [
+       4,
+       42
+      ],
+      [
+       23,
+       38
+      ],
+      [
+       3,
+       32
+      ],
+      [
+       2,
+       27
+      ],
+      [
+       22,
+       26
+      ],
+      [
+       26,
+       24
+      ],
+      [
+       1,
+       22
+      ],
+      [
+       27,
+       18
+      ],
+      [
+       25,
+       17
+      ],
+      [
+       30,
+       16
+      ],
+      [
+       28,
+       16
+      ],
+      [
+       24,
+       14
+      ],
+      [
+       29,
+       12
+      ],
+      [
+       32,
+       8
+      ],
+      [
+       31,
+       6
+      ],
+      [
+       33,
+       2
+      ],
+      [
+       35,
+       1
+      ],
+      [
+       34,
+       1
+      ]
+     ],
+     "description": "home loses. loses in the home",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "awayWon",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 34,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 33,
+     "examples": [
+      5,
+      1,
+      0,
+      2,
+      3
+     ],
+     "top_values": [
+      [
+       0,
+       129
+      ],
+      [
+       12,
+       94
+      ],
+      [
+       15,
+       82
+      ],
+      [
+       8,
+       78
+      ],
+      [
+       10,
+       76
+      ],
+      [
+       9,
+       76
+      ],
+      [
+       14,
+       74
+      ],
+      [
+       18,
+       70
+      ],
+      [
+       7,
+       66
+      ],
+      [
+       17,
+       63
+      ],
+      [
+       13,
+       63
+      ],
+      [
+       11,
+       62
+      ],
+      [
+       19,
+       58
+      ],
+      [
+       6,
+       56
+      ],
+      [
+       20,
+       55
+      ],
+      [
+       16,
+       55
+      ],
+      [
+       21,
+       49
+      ],
+      [
+       4,
+       44
+      ],
+      [
+       5,
+       37
+      ],
+      [
+       26,
+       31
+      ],
+      [
+       3,
+       29
+      ],
+      [
+       24,
+       28
+      ],
+      [
+       27,
+       27
+      ],
+      [
+       23,
+       25
+      ],
+      [
+       22,
+       24
+      ],
+      [
+       25,
+       22
+      ],
+      [
+       2,
+       20
+      ],
+      [
+       1,
+       16
+      ],
+      [
+       28,
+       9
+      ],
+      [
+       31,
+       6
+      ],
+      [
+       29,
+       6
+      ],
+      [
+       32,
+       3
+      ],
+      [
+       30,
+       2
+      ],
+      [
+       33,
+       1
+      ]
+     ],
+     "description": "away wins. wins in the away",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "awayLost",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 41,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 40,
+     "examples": [
+      3,
+      4,
+      5,
+      7,
+      6
+     ],
+     "top_values": [
+      [
+       0,
+       107
+      ],
+      [
+       26,
+       82
+      ],
+      [
+       22,
+       80
+      ],
+      [
+       21,
+       76
+      ],
+      [
+       25,
+       75
+      ],
+      [
+       23,
+       75
+      ],
+      [
+       19,
+       68
+      ],
+      [
+       27,
+       62
+      ],
+      [
+       20,
+       62
+      ],
+      [
+       29,
+       61
+      ],
+      [
+       24,
+       61
+      ],
+      [
+       31,
+       58
+      ],
+      [
+       28,
+       52
+      ],
+      [
+       32,
+       47
+      ],
+      [
+       33,
+       46
+      ],
+      [
+       15,
+       46
+      ],
+      [
+       18,
+       45
+      ],
+      [
+       17,
+       45
+      ],
+      [
+       14,
+       42
+      ],
+      [
+       30,
+       40
+      ],
+      [
+       16,
+       39
+      ],
+      [
+       34,
+       37
+      ],
+      [
+       35,
+       36
+      ],
+      [
+       10,
+       25
+      ],
+      [
+       12,
+       21
+      ],
+      [
+       13,
+       20
+      ],
+      [
+       11,
+       15
+      ],
+      [
+       36,
+       14
+      ],
+      [
+       7,
+       14
+      ],
+      [
+       37,
+       12
+      ],
+      [
+       38,
+       11
+      ],
+      [
+       9,
+       11
+      ],
+      [
+       8,
+       8
+      ],
+      [
+       6,
+       8
+      ],
+      [
+       4,
+       8
+      ],
+      [
+       2,
+       8
+      ],
+      [
+       5,
+       6
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       39,
+       2
+      ],
+      [
+       40,
+       1
+      ]
+     ],
+     "description": "away loses. loses in the away",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "won",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 71,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 72,
+     "examples": [
+      14,
+      13,
+      3,
+      1,
+      2
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "total wins of this team in this year.",
+     "notes": []
+    },
+    {
+     "name": "lost",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 73,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 73,
+     "examples": [
+      4,
+      5,
+      6,
+      7,
+      12
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "total losts of this team in this year.",
+     "notes": []
+    },
+    {
+     "name": "games",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 59,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 84,
+     "examples": [
+      18,
+      9,
+      10,
+      13,
+      20
+     ],
+     "top_values": [],
+     "description": "",
+     "value_description": "total number of games that this team played in this year (season)",
+     "notes": []
+    },
+    {
+     "name": "arena",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.123,
+     "distinct_count": 165,
+     "is_unique": false,
+     "min_value": "ARCO Arena (I)",
+     "max_value": "Wharton Field House",
+     "examples": [
+      "Boston Garden",
+      "Chicago Stadium",
+      "Cleveland Arena",
+      "Detroit Olympia",
+      "Madison Square Garden (III)"
+     ],
+     "top_values": [],
+     "description": "arena",
+     "value_description": "null or empty refers to the fact that this team doesn't have individual arenas, otherwise, it has individual arenas",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "year",
+    "tmID"
+   ],
+   "sample_rows": [
+    {
+     "year": 1937,
+     "lgID": "NBL",
+     "tmID": "AFS",
+     "franchID": "AFS",
+     "confID": null,
+     "divID": "EA",
+     "rank": 1,
+     "confRank": 0,
+     "playoff": "CF",
+     "name": "Akron Firestone Non-Skids",
+     "o_fgm": 249,
+     "o_ftm": 183,
+     "o_pts": 681,
+     "d_pts": 578,
+     "homeWon": 8,
+     "homeLost": 1,
+     "awayWon": 5,
+     "awayLost": 3,
+     "won": 14,
+     "lost": 4,
+     "games": 18,
+     "arena": null
+    },
+    {
+     "year": 1937,
+     "lgID": "NBL",
+     "tmID": "AGW",
+     "franchID": "AGW",
+     "confID": null,
+     "divID": "EA",
+     "rank": 2,
+     "confRank": 0,
+     "playoff": "WC",
+     "name": "Akron Goodyear Wingfoots",
+     "o_fgm": 243,
+     "o_ftm": 159,
+     "o_pts": 645,
+     "d_pts": 498,
+     "homeWon": 8,
+     "homeLost": 1,
+     "awayWon": 5,
+     "awayLost": 4,
+     "won": 13,
+     "lost": 5,
+     "games": 18,
+     "arena": null
+    },
+    {
+     "year": 1937,
+     "lgID": "NBL",
+     "tmID": "BFB",
+     "franchID": "BFB",
+     "confID": null,
+     "divID": "EA",
+     "rank": 4,
+     "confRank": 0,
+     "playoff": null,
+     "name": "Buffalo Bisons",
+     "o_fgm": 108,
+     "o_ftm": 46,
+     "o_pts": 262,
+     "d_pts": 275,
+     "homeWon": 2,
+     "homeLost": 2,
+     "awayWon": 1,
+     "awayLost": 4,
+     "won": 3,
+     "lost": 6,
+     "games": 9,
+     "arena": null
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "awards_coaches",
+   "from_column": "coachID",
+   "to_table": "coaches",
+   "to_column": "coachID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "awards_coaches",
+   "from_column": "year",
+   "to_table": "coaches",
+   "to_column": "year",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "awards_players",
+   "from_column": "playerID",
+   "to_table": "players",
+   "to_column": "playerID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "coaches",
+   "from_column": "tmID",
+   "to_table": "teams",
+   "to_column": "tmID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "coaches",
+   "from_column": "year",
+   "to_table": "teams",
+   "to_column": "year",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "draft",
+   "from_column": "tmID",
+   "to_table": "teams",
+   "to_column": "tmID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "draft",
+   "from_column": "draftYear",
+   "to_table": "teams",
+   "to_column": "year",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "player_allstar",
+   "from_column": "playerID",
+   "to_table": "players",
+   "to_column": "playerID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "players_teams",
+   "from_column": "tmID",
+   "to_table": "teams",
+   "to_column": "tmID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "players_teams",
+   "from_column": "year",
+   "to_table": "teams",
+   "to_column": "year",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "players_teams",
+   "from_column": "playerID",
+   "to_table": "players",
+   "to_column": "playerID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "series_post",
+   "from_column": "tmIDLoser",
+   "to_table": "teams",
+   "to_column": "tmID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "series_post",
+   "from_column": "year",
+   "to_table": "teams",
+   "to_column": "year",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "series_post",
+   "from_column": "tmIDWinner",
+   "to_table": "teams",
+   "to_column": "tmID",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "draft",
+   "from_column": "tmID",
+   "to_table": "coaches",
+   "to_column": "tmID",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "draft",
+   "from_column": "playerID",
+   "to_table": "players",
+   "to_column": "playerID",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "players_teams",
+   "from_column": "stint",
+   "to_table": "coaches",
+   "to_column": "stint",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.833
+  },
+  {
+   "from_table": "players_teams",
+   "from_column": "tmID",
+   "to_table": "coaches",
+   "to_column": "tmID",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.82
+  }
+ ],
+ "notes": []
+}

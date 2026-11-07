@@ -1,0 +1,2317 @@
+{
+ "db_id": "books",
+ "schema_version": "1.0",
+ "db_path": "/workspace/veriquery-final/data/bird/train/train/train_databases/books/books.sqlite",
+ "fingerprint": "4337664-1793993033472586579-v1.0",
+ "created_at": "2026-11-06T19:24:48+00:00",
+ "profile_seconds": 0.233,
+ "tables": [
+  {
+   "name": "address",
+   "row_count": 1000,
+   "stats_rows": 1000,
+   "columns": [
+    {
+     "name": "address_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 1000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 1000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "address id. the unique identifier of the address",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "street_number",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 647,
+     "is_unique": false,
+     "min_value": "0",
+     "max_value": "99923",
+     "examples": [
+      "57",
+      "86",
+      "292",
+      "5618",
+      "4"
+     ],
+     "top_values": [],
+     "description": "the street number of the address",
+     "value_description": "commonsense evidence:\nThe street number is typically used to identify a specific building or residence on a street, with higher numbers generally indicating a location further down the street from the starting point. For example, if a street starts at number 1 and goes up to number 100, a building with the number 50 would be closer to the starting point than a building with the number 75.",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "street_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 958,
+     "is_unique": false,
+     "min_value": "1st Center",
+     "max_value": "Westridge Hill",
+     "examples": [
+      "Glacier Hill Avenue",
+      "Dottie Junction",
+      "Ramsey Avenue",
+      "Thackeray Junction",
+      "2nd Park"
+     ],
+     "top_values": [],
+     "description": "the street name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "city",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 974,
+     "is_unique": false,
+     "min_value": "A Yun Pa",
+     "max_value": "Ấp Tân Ngãi",
+     "examples": [
+      "Torbat-e Jām",
+      "Beaumont",
+      "Cayambe",
+      "Caldas",
+      "Ngunguru"
+     ],
+     "top_values": [],
+     "description": "the city where the address belongs",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "country_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 109,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 232,
+     "examples": [
+      95,
+      37,
+      60,
+      47,
+      153
+     ],
+     "top_values": [],
+     "description": "country id. the id of the country where the address belongs",
+     "value_description": "commonsense evidence:\nMaps to the country (country id). The full address of the customer is 'No.street_number street_name, city, country'",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "address_id"
+   ],
+   "sample_rows": [
+    {
+     "address_id": 1,
+     "street_number": "57",
+     "street_name": "Glacier Hill Avenue",
+     "city": "Torbat-e Jām",
+     "country_id": 95
+    },
+    {
+     "address_id": 2,
+     "street_number": "86",
+     "street_name": "Dottie Junction",
+     "city": "Beaumont",
+     "country_id": 37
+    },
+    {
+     "address_id": 3,
+     "street_number": "292",
+     "street_name": "Ramsey Avenue",
+     "city": "Cayambe",
+     "country_id": 60
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "address_status",
+   "row_count": 2,
+   "stats_rows": 2,
+   "columns": [
+    {
+     "name": "status_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "status id. the unique identifier of the status",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "address_status",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": true,
+     "min_value": "Active",
+     "max_value": "Inactive",
+     "examples": [
+      "Active",
+      "Inactive"
+     ],
+     "top_values": [
+      [
+       "Inactive",
+       1
+      ],
+      [
+       "Active",
+       1
+      ]
+     ],
+     "description": "address status. the status of the address",
+     "value_description": "commonsense evidence:\n\tactive: the address is still in use\n\tinactive: the address is not in use anymore",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "status_id"
+   ],
+   "sample_rows": [
+    {
+     "status_id": 1,
+     "address_status": "Active"
+    },
+    {
+     "status_id": 2,
+     "address_status": "Inactive"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "author",
+   "row_count": 9235,
+   "stats_rows": 9235,
+   "columns": [
+    {
+     "name": "author_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9235,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 9235,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "author id. the unique identifier of the author",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "author_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 9204,
+     "is_unique": false,
+     "min_value": "A. Bartlett Giamatti",
+     "max_value": "趙丕慧",
+     "examples": [
+      "A. Bartlett Giamatti",
+      "A. Elizabeth Delany",
+      "A. Merritt",
+      "A. Roger Merrill",
+      "A. Walton Litz"
+     ],
+     "top_values": [],
+     "description": "author name. the name of the author",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "author_id"
+   ],
+   "sample_rows": [
+    {
+     "author_id": 1,
+     "author_name": "A. Bartlett Giamatti"
+    },
+    {
+     "author_id": 2,
+     "author_name": "A. Elizabeth Delany"
+    },
+    {
+     "author_id": 3,
+     "author_name": "A. Merritt"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "book",
+   "row_count": 11127,
+   "stats_rows": 11127,
+   "columns": [
+    {
+     "name": "book_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 11127,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 11127,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "book id. the unique identifier of the book",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "title",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 10352,
+     "is_unique": false,
+     "min_value": "$30 Film School: How to Write  Direct  Produce  Shoot  Edit ...",
+     "max_value": "魔戒首部曲：魔戒現身",
+     "examples": [
+      "The World's First Love: Mary  Mother of God",
+      "The Illuminati",
+      "The Servant Leader",
+      "What Life Was Like in the Jewel in the Crown: British India ...",
+      "Cliffs Notes on Aristophanes' Lysistrata  The Birds  The Clo..."
+     ],
+     "top_values": [],
+     "description": "the title of the book",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "isbn13",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 11127,
+     "is_unique": true,
+     "min_value": "20049130001",
+     "max_value": "9790007672386",
+     "examples": [
+      "8987059752",
+      "20049130001",
+      "23755004321",
+      "34406054602",
+      "49086007763"
+     ],
+     "top_values": [],
+     "description": "the International Standard Book Number of the book",
+     "value_description": "commonsense evidence:\nAn ISBN is a unique 13-digit number assigned to each book to identify it internationally. The ISBN13 of a book is the specific version of the ISBN that uses 13 digits. It is typically displayed on the back cover of a book, along with the barcode and other information.",
+     "notes": [
+      "numbers stored as TEXT; CAST before arithmetic or comparison"
+     ]
+    },
+    {
+     "name": "language_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 27,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 27,
+     "examples": [
+      2,
+      1,
+      5
+     ],
+     "top_values": [
+      [
+       1,
+       8911
+      ],
+      [
+       2,
+       1409
+      ],
+      [
+       4,
+       218
+      ],
+      [
+       5,
+       214
+      ],
+      [
+       3,
+       144
+      ],
+      [
+       10,
+       99
+      ],
+      [
+       11,
+       46
+      ],
+      [
+       6,
+       19
+      ],
+      [
+       14,
+       14
+      ],
+      [
+       7,
+       11
+      ],
+      [
+       16,
+       10
+      ],
+      [
+       9,
+       7
+      ],
+      [
+       18,
+       5
+      ],
+      [
+       15,
+       3
+      ],
+      [
+       8,
+       3
+      ],
+      [
+       23,
+       2
+      ],
+      [
+       19,
+       2
+      ],
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ]
+     ],
+     "description": "language id. the id of the book language\nMaps to book_language (language_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "num_pages",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 997,
+     "is_unique": false,
+     "min_value": 0,
+     "max_value": 6576,
+     "examples": [
+      276,
+      352,
+      128,
+      168,
+      80
+     ],
+     "top_values": [],
+     "description": "number pages. the number of the pages",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "publication_date",
+     "declared_type": "DATE",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 3678,
+     "is_unique": false,
+     "min_value": "1900-01-01",
+     "max_value": "2020-03-31",
+     "examples": [
+      "1996-09-01",
+      "2004-10-04",
+      "2003-03-11",
+      "1999-09-01",
+      "1983-12-29"
+     ],
+     "top_values": [],
+     "description": "the publication date of the book",
+     "value_description": "commonsense evidence:\nThe publication date of a book can provide information about when the book was released to the public. This can be useful for understanding the context in which the book was written, as well as for determining how current or outdated the information in the book might be. Additionally, the publication date can provide insight into the age of the book and its potential value as a collectible.",
+     "notes": []
+    },
+    {
+     "name": "publisher_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2264,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2264,
+     "examples": [
+      1010,
+      1967,
+      1978,
+      416,
+      96
+     ],
+     "top_values": [],
+     "description": "the id of the publisher\nMaps to publisher (publisher_id)",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "book_id"
+   ],
+   "sample_rows": [
+    {
+     "book_id": 1,
+     "title": "The World's First Love: Mary  Mother of God",
+     "isbn13": "8987059752",
+     "language_id": 2,
+     "num_pages": 276,
+     "publication_date": "1996-09-01",
+     "publisher_id": 1010
+    },
+    {
+     "book_id": 2,
+     "title": "The Illuminati",
+     "isbn13": "20049130001",
+     "language_id": 1,
+     "num_pages": 352,
+     "publication_date": "2004-10-04",
+     "publisher_id": 1967
+    },
+    {
+     "book_id": 3,
+     "title": "The Servant Leader",
+     "isbn13": "23755004321",
+     "language_id": 1,
+     "num_pages": 128,
+     "publication_date": "2003-03-11",
+     "publisher_id": 1967
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "book_author",
+   "row_count": 17642,
+   "stats_rows": 17642,
+   "columns": [
+    {
+     "name": "book_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 10058,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 11127,
+     "examples": [
+      10539,
+      8109,
+      2792,
+      6228,
+      1058
+     ],
+     "top_values": [],
+     "description": "book id. the id of the book\nMaps to book(book_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "author_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 9125,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 9235,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "author id. the id of the author\nMaps to author(author_id)",
+     "value_description": "commonsense evidence:\nBooks with the same author id are written by the same author.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "book_id",
+    "author_id"
+   ],
+   "sample_rows": [
+    {
+     "book_id": 10539,
+     "author_id": 1
+    },
+    {
+     "book_id": 8109,
+     "author_id": 2
+    },
+    {
+     "book_id": 2792,
+     "author_id": 3
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "book_language",
+   "row_count": 27,
+   "stats_rows": 27,
+   "columns": [
+    {
+     "name": "language_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 27,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 27,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       27,
+       1
+      ],
+      [
+       26,
+       1
+      ],
+      [
+       25,
+       1
+      ],
+      [
+       24,
+       1
+      ],
+      [
+       23,
+       1
+      ],
+      [
+       22,
+       1
+      ],
+      [
+       21,
+       1
+      ],
+      [
+       20,
+       1
+      ],
+      [
+       19,
+       1
+      ],
+      [
+       18,
+       1
+      ],
+      [
+       17,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       14,
+       1
+      ],
+      [
+       13,
+       1
+      ],
+      [
+       12,
+       1
+      ],
+      [
+       11,
+       1
+      ],
+      [
+       10,
+       1
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "language id. the unique identifier of the language",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "language_code",
+     "declared_type": "TEXT",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 27,
+     "is_unique": true,
+     "min_value": "ale",
+     "max_value": "zho",
+     "examples": [
+      "eng",
+      "en-US",
+      "fre",
+      "spa",
+      "en-GB"
+     ],
+     "top_values": [
+      [
+       "zho",
+       1
+      ],
+      [
+       "wel",
+       1
+      ],
+      [
+       "tur",
+       1
+      ],
+      [
+       "swe",
+       1
+      ],
+      [
+       "srp",
+       1
+      ],
+      [
+       "spa",
+       1
+      ],
+      [
+       "rus",
+       1
+      ],
+      [
+       "por",
+       1
+      ],
+      [
+       "nor",
+       1
+      ],
+      [
+       "nl",
+       1
+      ],
+      [
+       "mul",
+       1
+      ],
+      [
+       "msa",
+       1
+      ],
+      [
+       "lat",
+       1
+      ],
+      [
+       "jpn",
+       1
+      ],
+      [
+       "ita",
+       1
+      ],
+      [
+       "grc",
+       1
+      ],
+      [
+       "glg",
+       1
+      ],
+      [
+       "gla",
+       1
+      ],
+      [
+       "ger",
+       1
+      ],
+      [
+       "fre",
+       1
+      ],
+      [
+       "enm",
+       1
+      ],
+      [
+       "eng",
+       1
+      ],
+      [
+       "en-US",
+       1
+      ],
+      [
+       "en-GB",
+       1
+      ],
+      [
+       "en-CA",
+       1
+      ],
+      [
+       "ara",
+       1
+      ],
+      [
+       "ale",
+       1
+      ]
+     ],
+     "description": "the language code",
+     "value_description": "commonsense evidence:\nA language code is a unique identifier for a specific language. It is typically used to identify a language in computing and other technical contexts. Some common language codes include \"en\" for English, \"fr\" for French, and \"es\" for Spanish. The specific codes used for each language can vary depending on the context and the system in which they are being used.",
+     "notes": []
+    },
+    {
+     "name": "language_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 27,
+     "is_unique": true,
+     "min_value": "Aleut",
+     "max_value": "Welsh",
+     "examples": [
+      "English",
+      "United States English",
+      "French",
+      "Spanish",
+      "British English"
+     ],
+     "top_values": [
+      [
+       "Welsh",
+       1
+      ],
+      [
+       "United States English",
+       1
+      ],
+      [
+       "Turkish",
+       1
+      ],
+      [
+       "Swedish",
+       1
+      ],
+      [
+       "Spanish",
+       1
+      ],
+      [
+       "Serbian",
+       1
+      ],
+      [
+       "Russian",
+       1
+      ],
+      [
+       "Portuguese",
+       1
+      ],
+      [
+       "Norwegian",
+       1
+      ],
+      [
+       "Multiple Languages",
+       1
+      ],
+      [
+       "Middle English",
+       1
+      ],
+      [
+       "Malaysian",
+       1
+      ],
+      [
+       "Latin",
+       1
+      ],
+      [
+       "Japanese",
+       1
+      ],
+      [
+       "Italian",
+       1
+      ],
+      [
+       "Greek",
+       1
+      ],
+      [
+       "German",
+       1
+      ],
+      [
+       "Galician",
+       1
+      ],
+      [
+       "Gaelic",
+       1
+      ],
+      [
+       "French",
+       1
+      ],
+      [
+       "English",
+       1
+      ],
+      [
+       "Dutch",
+       1
+      ],
+      [
+       "Chinese",
+       1
+      ],
+      [
+       "Canadian English",
+       1
+      ],
+      [
+       "British English",
+       1
+      ],
+      [
+       "Arabic",
+       1
+      ],
+      [
+       "Aleut",
+       1
+      ]
+     ],
+     "description": "the language name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "language_id"
+   ],
+   "sample_rows": [
+    {
+     "language_id": 1,
+     "language_code": "eng",
+     "language_name": "English"
+    },
+    {
+     "language_id": 2,
+     "language_code": "en-US",
+     "language_name": "United States English"
+    },
+    {
+     "language_id": 3,
+     "language_code": "fre",
+     "language_name": "French"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "country",
+   "row_count": 232,
+   "stats_rows": 232,
+   "columns": [
+    {
+     "name": "country_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 232,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 232,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "country id. the unique identifier of the country",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "country_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 231,
+     "is_unique": false,
+     "min_value": "Afghanistan",
+     "max_value": "Zimbabwe (Rhodesia)",
+     "examples": [
+      "Afghanistan",
+      "Netherlands Antilles",
+      "Albania",
+      "Algeria",
+      "Andorra"
+     ],
+     "top_values": [],
+     "description": "the country name",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "country_id"
+   ],
+   "sample_rows": [
+    {
+     "country_id": 1,
+     "country_name": "Afghanistan"
+    },
+    {
+     "country_id": 2,
+     "country_name": "Netherlands Antilles"
+    },
+    {
+     "country_id": 3,
+     "country_name": "Albania"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "cust_order",
+   "row_count": 7550,
+   "stats_rows": 7550,
+   "columns": [
+    {
+     "name": "order_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 7550,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 11434,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "order id. the unique identifier of the customer order",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "order_date",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7548,
+     "is_unique": false,
+     "min_value": "2019-12-09 22:26:34",
+     "max_value": "2022-12-08 14:17:14",
+     "examples": [
+      "2021-07-14 10:47:19",
+      "2020-08-16 17:26:41",
+      "2021-08-19 21:43:07",
+      "2021-12-23 19:01:08",
+      "2022-06-15 01:15:35"
+     ],
+     "top_values": [],
+     "description": "order date. the date of the order",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "customer_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1697,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2000,
+     "examples": [
+      387,
+      1256,
+      1335,
+      1480,
+      400
+     ],
+     "top_values": [],
+     "description": "customer id. the id of the customer\nMaps to customer(customer_Id)",
+     "value_description": "commonsense evidence:\nThe number of orders ordered by the customer = the show-up times of the relative customer id in the table",
+     "notes": []
+    },
+    {
+     "name": "shipping_method_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      4,
+      2,
+      1,
+      3
+     ],
+     "top_values": [
+      [
+       2,
+       1917
+      ],
+      [
+       3,
+       1912
+      ],
+      [
+       1,
+       1871
+      ],
+      [
+       4,
+       1850
+      ]
+     ],
+     "description": "shipping method id. the id of the shipping method\nMaps to shipping_method(method_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "dest_address_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 720,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 736,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "destination address id. the id of the destination address\nMaps to address(address_id)",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "order_id"
+   ],
+   "sample_rows": [
+    {
+     "order_id": 1,
+     "order_date": "2021-07-14 10:47:19",
+     "customer_id": 387,
+     "shipping_method_id": 4,
+     "dest_address_id": 1
+    },
+    {
+     "order_id": 2,
+     "order_date": "2020-08-16 17:26:41",
+     "customer_id": 1256,
+     "shipping_method_id": 2,
+     "dest_address_id": 1
+    },
+    {
+     "order_id": 3,
+     "order_date": "2021-08-19 21:43:07",
+     "customer_id": 1335,
+     "shipping_method_id": 1,
+     "dest_address_id": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "customer",
+   "row_count": 2000,
+   "stats_rows": 2000,
+   "columns": [
+    {
+     "name": "customer_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2000,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 2000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "customer id. the unique identifier of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "first_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1787,
+     "is_unique": false,
+     "min_value": "Aarika",
+     "max_value": "Zorana",
+     "examples": [
+      "Ursola",
+      "Ruthanne",
+      "Reidar",
+      "Rich",
+      "Carline"
+     ],
+     "top_values": [],
+     "description": "the first name of the customer",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "last_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1957,
+     "is_unique": false,
+     "min_value": "Abbot",
+     "max_value": "todor",
+     "examples": [
+      "Purdy",
+      "Vatini",
+      "Turbitt",
+      "Kirsz",
+      "Kupis"
+     ],
+     "top_values": [],
+     "description": "the last name of the customer",
+     "value_description": "commonsense evidence:\nA person's full name is the first name, middle name (if applicable), and last name.",
+     "notes": []
+    },
+    {
+     "name": "email",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2000,
+     "is_unique": true,
+     "min_value": "aabramoviciao@hp.com",
+     "max_value": "ztussaineh1@huffingtonpost.com",
+     "examples": [
+      "upurdy0@cdbaby.com",
+      "rvatini1@fema.gov",
+      "rturbitt2@geocities.jp",
+      "rkirsz3@jalbum.net",
+      "ckupis4@tamu.edu"
+     ],
+     "top_values": [],
+     "description": "the email of the customer",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "customer_id"
+   ],
+   "sample_rows": [
+    {
+     "customer_id": 1,
+     "first_name": "Ursola",
+     "last_name": "Purdy",
+     "email": "upurdy0@cdbaby.com"
+    },
+    {
+     "customer_id": 2,
+     "first_name": "Ruthanne",
+     "last_name": "Vatini",
+     "email": "rvatini1@fema.gov"
+    },
+    {
+     "customer_id": 3,
+     "first_name": "Reidar",
+     "last_name": "Turbitt",
+     "email": "rturbitt2@geocities.jp"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "customer_address",
+   "row_count": 3350,
+   "stats_rows": 3350,
+   "columns": [
+    {
+     "name": "customer_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2000,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2000,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "customer id. the id of the customer\nMaps to customer(customer_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "address_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 972,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 1000,
+     "examples": [
+      606,
+      266,
+      376,
+      655,
+      273
+     ],
+     "top_values": [],
+     "description": "address id. the id of the address\nMaps to address(address_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "status_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 2,
+     "examples": [
+      1,
+      2
+     ],
+     "top_values": [
+      [
+       1,
+       2950
+      ],
+      [
+       2,
+       400
+      ]
+     ],
+     "description": "status id. the id of the address status",
+     "value_description": "commonsense evidence:\nA customer may have several addresses. If a customer has several addresses, the address that the status_id = 1 is the customer's current address that is in use. The other addresses with 2 as status_id is abandoned addresses.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "customer_id",
+    "address_id"
+   ],
+   "sample_rows": [
+    {
+     "customer_id": 1,
+     "address_id": 606,
+     "status_id": 1
+    },
+    {
+     "customer_id": 2,
+     "address_id": 266,
+     "status_id": 1
+    },
+    {
+     "customer_id": 3,
+     "address_id": 376,
+     "status_id": 1
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "order_history",
+   "row_count": 22348,
+   "stats_rows": 22348,
+   "columns": [
+    {
+     "name": "history_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 22348,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 25283,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "history id. the unique identifier of the order history",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "order_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7548,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 11434,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "the id of the order\nMaps to cust_order(order_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "status_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": false,
+     "min_value": 1,
+     "max_value": 6,
+     "examples": [
+      1
+     ],
+     "top_values": [
+      [
+       1,
+       7548
+      ],
+      [
+       2,
+       6800
+      ],
+      [
+       3,
+       4000
+      ],
+      [
+       4,
+       3500
+      ],
+      [
+       5,
+       300
+      ],
+      [
+       6,
+       200
+      ]
+     ],
+     "description": "status id. the id of the order\nMaps to order_status(status_id)",
+     "value_description": "commonsense evidence:\nThe order statuses include order received, pending delivery, delivery in progress, delivered, canceled, and returned.",
+     "notes": []
+    },
+    {
+     "name": "status_date",
+     "declared_type": "DATETIME",
+     "semantic_type": "date",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 22345,
+     "is_unique": false,
+     "min_value": "2019-12-10 03:20:38",
+     "max_value": "2022-12-08 09:17:39",
+     "examples": [
+      "2021-07-14 17:04:28",
+      "2020-08-16 20:23:19",
+      "2021-08-20 05:34:51",
+      "2021-12-24 01:29:55",
+      "2022-06-15 10:04:20"
+     ],
+     "top_values": [],
+     "description": "status date. the date of the status updated",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "history_id"
+   ],
+   "sample_rows": [
+    {
+     "history_id": 1,
+     "order_id": 1,
+     "status_id": 1,
+     "status_date": "2021-07-14 17:04:28"
+    },
+    {
+     "history_id": 2,
+     "order_id": 2,
+     "status_id": 1,
+     "status_date": "2020-08-16 20:23:19"
+    },
+    {
+     "history_id": 3,
+     "order_id": 3,
+     "status_id": 1,
+     "status_date": "2021-08-20 05:34:51"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "order_line",
+   "row_count": 7550,
+   "stats_rows": 7550,
+   "columns": [
+    {
+     "name": "line_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 7550,
+     "is_unique": true,
+     "min_value": 1024,
+     "max_value": 8573,
+     "examples": [
+      1024,
+      1025,
+      1026,
+      1027,
+      1028
+     ],
+     "top_values": [],
+     "description": "line id. the unique identifier of the order line",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "order_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 7550,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 11434,
+     "examples": [
+      2051,
+      899,
+      4994,
+      7041,
+      9088
+     ],
+     "top_values": [],
+     "description": "order id. the id of the order\nMaps to cust_order(order_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "book_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 5466,
+     "is_unique": false,
+     "min_value": 3,
+     "max_value": 11125,
+     "examples": [
+      10720,
+      10105,
+      6503,
+      10354,
+      4684
+     ],
+     "top_values": [],
+     "description": "book id. the id of the book\nMaps to book(book_id)",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "price",
+     "declared_type": "REAL",
+     "semantic_type": "numeric",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 1960,
+     "is_unique": false,
+     "min_value": 0.0,
+     "max_value": 20.0,
+     "examples": [
+      3.19,
+      1.24,
+      14.74,
+      8.85,
+      15.55
+     ],
+     "top_values": [],
+     "description": "the price of the order",
+     "value_description": "commonsense evidence:\nEven though the customer ordered the book with the same book id, the price could be different. The price of the order may be influenced by the shipping method, seasonal discount, and the number of books the customer ordered.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "line_id"
+   ],
+   "sample_rows": [
+    {
+     "line_id": 1024,
+     "order_id": 2051,
+     "book_id": 10720,
+     "price": 3.19
+    },
+    {
+     "line_id": 1025,
+     "order_id": 899,
+     "book_id": 10105,
+     "price": 1.24
+    },
+    {
+     "line_id": 1026,
+     "order_id": 4994,
+     "book_id": 6503,
+     "price": 14.74
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "order_status",
+   "row_count": 6,
+   "stats_rows": 6,
+   "columns": [
+    {
+     "name": "status_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 6,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [
+      [
+       6,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "status id. the unique identifier of the order status",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "status_value",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 6,
+     "is_unique": true,
+     "min_value": "Cancelled",
+     "max_value": "Returned",
+     "examples": [
+      "Order Received",
+      "Pending Delivery",
+      "Delivery In Progress",
+      "Delivered",
+      "Cancelled"
+     ],
+     "top_values": [
+      [
+       "Returned",
+       1
+      ],
+      [
+       "Pending Delivery",
+       1
+      ],
+      [
+       "Order Received",
+       1
+      ],
+      [
+       "Delivery In Progress",
+       1
+      ],
+      [
+       "Delivered",
+       1
+      ],
+      [
+       "Cancelled",
+       1
+      ]
+     ],
+     "description": "the status value",
+     "value_description": "commonsense evidence:\nThe order statuses include order received, pending delivery, delivery in progress, delivered, canceled, and returned.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "status_id"
+   ],
+   "sample_rows": [
+    {
+     "status_id": 1,
+     "status_value": "Order Received"
+    },
+    {
+     "status_id": 2,
+     "status_value": "Pending Delivery"
+    },
+    {
+     "status_id": 3,
+     "status_value": "Delivery In Progress"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "publisher",
+   "row_count": 2264,
+   "stats_rows": 2264,
+   "columns": [
+    {
+     "name": "publisher_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 2264,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 2264,
+     "examples": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "top_values": [],
+     "description": "publisher id. the unique identifier of the publisher",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "publisher_name",
+     "declared_type": "TEXT",
+     "semantic_type": "text",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 2255,
+     "is_unique": false,
+     "min_value": "10/18",
+     "max_value": "集英社",
+     "examples": [
+      "10/18",
+      "1st Book Library",
+      "1st World Library",
+      "A & C Black (Childrens books)",
+      "A Harvest Book/Harcourt Inc."
+     ],
+     "top_values": [],
+     "description": "publisher name. the name of the publisher",
+     "value_description": "",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "publisher_id"
+   ],
+   "sample_rows": [
+    {
+     "publisher_id": 1,
+     "publisher_name": "10/18"
+    },
+    {
+     "publisher_id": 2,
+     "publisher_name": "1st Book Library"
+    },
+    {
+     "publisher_id": 3,
+     "publisher_name": "1st World Library"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "name": "shipping_method",
+   "row_count": 4,
+   "stats_rows": 4,
+   "columns": [
+    {
+     "name": "method_id",
+     "declared_type": "INTEGER",
+     "semantic_type": "id",
+     "is_primary_key": true,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": 1,
+     "max_value": 4,
+     "examples": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "top_values": [
+      [
+       4,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "description": "method id. the unique identifier of the method",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "method_name",
+     "declared_type": "TEXT",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": "Express",
+     "max_value": "Standard",
+     "examples": [
+      "Standard",
+      "Priority",
+      "Express",
+      "International"
+     ],
+     "top_values": [
+      [
+       "Standard",
+       1
+      ],
+      [
+       "Priority",
+       1
+      ],
+      [
+       "International",
+       1
+      ],
+      [
+       "Express",
+       1
+      ]
+     ],
+     "description": "the method name",
+     "value_description": "",
+     "notes": []
+    },
+    {
+     "name": "cost",
+     "declared_type": "REAL",
+     "semantic_type": "categorical",
+     "is_primary_key": false,
+     "null_rate": 0.0,
+     "distinct_count": 4,
+     "is_unique": true,
+     "min_value": 5.9,
+     "max_value": 24.5,
+     "examples": [
+      5.9,
+      8.9,
+      11.9,
+      24.5
+     ],
+     "top_values": [
+      [
+       24.5,
+       1
+      ],
+      [
+       11.9,
+       1
+      ],
+      [
+       8.9,
+       1
+      ],
+      [
+       5.9,
+       1
+      ]
+     ],
+     "description": "the cost of the shipping method",
+     "value_description": "commonsense evidence:\nThe main difference between the various shipping methods, such as standard, priority, express, and international, is the speed at which the item is delivered. Standard shipping is the slowest and least expensive option, while express and priority shipping are faster and more expensive. International shipping is for items that are being shipped to a destination outside of the country where they originated.",
+     "notes": []
+    }
+   ],
+   "primary_key": [
+    "method_id"
+   ],
+   "sample_rows": [
+    {
+     "method_id": 1,
+     "method_name": "Standard",
+     "cost": 5.9
+    },
+    {
+     "method_id": 2,
+     "method_name": "Priority",
+     "cost": 8.9
+    },
+    {
+     "method_id": 3,
+     "method_name": "Express",
+     "cost": 11.9
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "join_keys": [
+  {
+   "from_table": "address",
+   "from_column": "country_id",
+   "to_table": "country",
+   "to_column": "country_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "book",
+   "from_column": "publisher_id",
+   "to_table": "publisher",
+   "to_column": "publisher_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "book",
+   "from_column": "language_id",
+   "to_table": "book_language",
+   "to_column": "language_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "book_author",
+   "from_column": "book_id",
+   "to_table": "book",
+   "to_column": "book_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "book_author",
+   "from_column": "author_id",
+   "to_table": "author",
+   "to_column": "author_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "cust_order",
+   "from_column": "dest_address_id",
+   "to_table": "address",
+   "to_column": "address_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "cust_order",
+   "from_column": "shipping_method_id",
+   "to_table": "shipping_method",
+   "to_column": "method_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "cust_order",
+   "from_column": "customer_id",
+   "to_table": "customer",
+   "to_column": "customer_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "customer_address",
+   "from_column": "customer_id",
+   "to_table": "customer",
+   "to_column": "customer_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "customer_address",
+   "from_column": "address_id",
+   "to_table": "address",
+   "to_column": "address_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "order_history",
+   "from_column": "status_id",
+   "to_table": "order_status",
+   "to_column": "status_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "order_history",
+   "from_column": "order_id",
+   "to_table": "cust_order",
+   "to_column": "order_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "order_line",
+   "from_column": "book_id",
+   "to_table": "book",
+   "to_column": "book_id",
+   "source": "declared",
+   "cardinality": "many-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "order_line",
+   "from_column": "order_id",
+   "to_table": "cust_order",
+   "to_column": "order_id",
+   "source": "declared",
+   "cardinality": "one-to-one",
+   "overlap": null
+  },
+  {
+   "from_table": "address_status",
+   "from_column": "status_id",
+   "to_table": "order_status",
+   "to_column": "status_id",
+   "source": "inferred",
+   "cardinality": "one-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "cust_order",
+   "from_column": "customer_id",
+   "to_table": "customer_address",
+   "to_column": "customer_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "customer_address",
+   "from_column": "status_id",
+   "to_table": "address_status",
+   "to_column": "status_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "customer_address",
+   "from_column": "status_id",
+   "to_table": "order_status",
+   "to_column": "status_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "order_history",
+   "from_column": "order_id",
+   "to_table": "order_line",
+   "to_column": "order_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 1.0
+  },
+  {
+   "from_table": "order_line",
+   "from_column": "book_id",
+   "to_table": "book_author",
+   "to_column": "book_id",
+   "source": "inferred",
+   "cardinality": "many-to-one",
+   "overlap": 0.917
+  }
+ ],
+ "notes": []
+}
