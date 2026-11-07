@@ -20,9 +20,11 @@ class Verifier:
         low_confidence_below: float = 0.5,
         timeout_s: float = 30.0,
         sanity_checks: bool = True,
+        metamorphic: bool = False,
     ):
         self.second_route = second_route
         self.sanity_checks = sanity_checks
+        self.metamorphic = metamorphic  # experimental scale-invariance check (WARN only)
         self.max_repair_rounds = max_repair_rounds
         self.low_confidence_below = low_confidence_below
         self.timeout_s = timeout_s
@@ -37,6 +39,12 @@ class Verifier:
                 return self._decide(inp, [check], None, None, None)
 
         checks = run_sanity_checks(build_context(inp, result)) if self.sanity_checks else []
+
+        if self.metamorphic and inp.sql and not any(c.severity is Severity.FAIL for c in checks):
+            from .metamorphic import scale_invariance_check
+            mm = scale_invariance_check(inp.db_path, inp.sql, result, timeout_s=self.timeout_s)
+            if mm is not None:
+                checks.append(mm)
 
         route, agree = None, None
         has_fail = any(c.severity is Severity.FAIL for c in checks)

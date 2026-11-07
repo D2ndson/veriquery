@@ -16,3 +16,16 @@ results/
 .cache/
 examples/data/
 cluster/logs/
+.env
+.venv/
+node_modules/
+data/bird/
+artifacts/checkpoints/
+artifacts/cache/
+artifacts/adapters/
+artifacts/backup/
+logs/
+quick_run/
+__pycache__/
+*.sqlite
+.github/

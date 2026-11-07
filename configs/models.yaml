@@ -1,0 +1,89 @@
+# ============================================================================================
+# Which model serves which agent. This is the ONLY file you edit to change models.
+# Your Hugging Face token goes in .env (HF_TOKEN=...), never in this file.
+# ============================================================================================
+endpoints:
+  hf:                                   # Hugging Face Inference Providers (OpenAI-compatible router)
+    base_url: https://router.huggingface.co/v1
+    api_key_env: HF_TOKEN
+  local:                                # vLLM server on the GPU box: scripts/serve_vllm.sh
+    base_url: http://localhost:8000/v1
+    api_key: EMPTY
+
+# The SQL writer is the agent we fine-tune with LoRA, so it runs on the GPU you rent.
+# vLLM serves the base weights as "base" and each LoRA adapter under its own name:
+#   base         Qwen2.5-Coder-7B-Instruct, no adapter  (the baseline)
+#   writer-sft   stage A: LoRA SFT on cleaned BIRD train, plan-then-SQL format
+#   writer-dpo   stage C: SFT + preference tuning with verifier-derived pairs
+#   repairer     role adapter trained on (wrong SQL + verifier feedback -> fixed SQL)
+profiles:
+  hybrid:                               # DEFAULT: local fine-tuned writer + large hosted models for other agents
+    writer:    {endpoint: local, model: writer-dpo, max_tokens: 1024}
+    repairer:  {endpoint: local, model: repairer, max_tokens: 1024}   # used only once the adapter is trained
+    clarifier: {endpoint: hf, model: Qwen/Qwen3-32B, no_think: true, max_tokens: 1500}
+    checker:   {endpoint: hf, model: Qwen/Qwen2.5-Coder-32B-Instruct, max_tokens: 1536}
+    reporter:  {endpoint: hf, model: Qwen/Qwen2.5-72B-Instruct, max_tokens: 400}
+    planner:   {endpoint: hf, model: Qwen/Qwen2.5-72B-Instruct, max_tokens: 300}
+  hybrid_base:                          # same, but the writer is the un-tuned base model (for the before/after comparison)
+    writer:    {endpoint: local, model: base, max_tokens: 1024}
+    clarifier: {endpoint: hf, model: Qwen/Qwen3-32B, no_think: true, max_tokens: 1500}
+    checker:   {endpoint: hf, model: Qwen/Qwen2.5-Coder-32B-Instruct, max_tokens: 1536}
+    reporter:  {endpoint: hf, model: Qwen/Qwen2.5-72B-Instruct, max_tokens: 400}
+    planner:   {endpoint: hf, model: Qwen/Qwen2.5-72B-Instruct, max_tokens: 300}
+  hf_api:                               # no GPU needed: everything through the Hugging Face API (uses your HF credits)
+    writer:    {endpoint: hf, model: Qwen/Qwen2.5-Coder-32B-Instruct, max_tokens: 1024}
+    clarifier: {endpoint: hf, model: Qwen/Qwen3-32B, no_think: true, max_tokens: 1500}
+    checker:   {endpoint: hf, model: Qwen/Qwen2.5-Coder-32B-Instruct, max_tokens: 1536}
+    reporter:  {endpoint: hf, model: Qwen/Qwen2.5-72B-Instruct, max_tokens: 400}
+    planner:   {endpoint: hf, model: Qwen/Qwen2.5-72B-Instruct, max_tokens: 300}
+  local_all:                            # zero API cost: every agent on the one local model (weaker clarifier / verifier)
+    writer:    {endpoint: local, model: writer-dpo, max_tokens: 1024}
+    repairer:  {endpoint: local, model: repairer, max_tokens: 1024}
+    clarifier: {endpoint: local, model: base, no_think: true, max_tokens: 1500}
+    checker:   {endpoint: local, model: base, max_tokens: 1536}
+    reporter:  {endpoint: local, model: base, max_tokens: 400}
+    planner:   {endpoint: local, model: base, max_tokens: 300}
+
+# Training. The base model is downloaded from the Hub with your HF token.
+training:
+  base_model: Qwen/Qwen2.5-Coder-7B-Instruct
+  teacher_model: Qwen/Qwen2.5-Coder-32B-Instruct     # optional: only used if you ask for teacher-written rationales
+
+# Named system variants for evaluation. "final" is the full system; the others are baselines and ablations.
+# Any Config field (veriquery/agents/orchestrator.py) can be set here.
+systems:
+  write_sql_once:        # plan baseline 1: one prompt, no repair, no agents
+    use_clarifier: false
+    use_verifier: false
+    n_candidates: 1
+    max_sql_repairs: 0
+    summarise: false
+  writer_only:           # fair writer comparison: the fine-tuned prompt format, no agents, no hosted calls (free to run)
+    use_clarifier: false
+    use_verifier: false
+    n_candidates: 1
+    max_sql_repairs: 0
+    summarise: false
+    prompt_style: text
+    reasoning: plan
+    fewshot_k: 3
+  original:              # the integrated pipeline exactly as the team delivered it (before this upgrade)
+    n_candidates: 3
+  improved:              # better prompt, few-shot retrieval, AST fixes; same agents
+    prompt_style: text
+    fewshot_k: 3
+    autofix: [literals, int_div, null_order]
+    n_candidates: 3
+  final:                 # everything on
+    prompt_style: text
+    reasoning: plan
+    fewshot_k: 3
+    autofix: [literals, int_div, null_order]
+    n_candidates: 3
+    adaptive: true
+    exec_grounded_clarify: true
+    use_semantic_layer: true
+    use_llm_planner: true
+    analysis_tools: true
+    provenance_guard: true
+    metamorphic: false

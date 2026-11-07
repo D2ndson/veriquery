@@ -24,7 +24,9 @@ import os
 import re
 import sqlite3
 import threading
+import random
 import time
+import urllib.error
 import urllib.request
 from contextlib import contextmanager
 from dataclasses import dataclass
@@ -71,6 +73,9 @@ class LLM:
         price_per_mtok: tuple[float, float] = (0.0, 0.0),  # (input, output) USD; 0 for local models
         seed: int = 6130,
         think: bool | None = None,  # Ollama: False turns off Qwen3-style reasoning output
+        max_retries: int = 4,       # transient HTTP errors (429/5xx) are retried with backoff
+        no_think: bool = False,     # append Qwen3's '/no_think' switch to the last user message
+        extra_body: dict | None = None,  # extra JSON fields for OpenAI-compatible servers (e.g. vLLM)
     ):
         if provider not in DEFAULT_BASE_URLS:
             raise ValueError(f"provider must be one of {sorted(DEFAULT_BASE_URLS)}")
@@ -85,6 +90,9 @@ class LLM:
         self.price_per_mtok = price_per_mtok
         self.seed = seed
         self.think = think
+        self.max_retries = max_retries
+        self.no_think = no_think
+        self.extra_body = extra_body
         self.stats = LLMStats()
         self.by_agent: dict[str, LLMStats] = {}
         self._local = threading.local()
@@ -92,7 +100,11 @@ class LLM:
         self._cache = None
         if cache_path:
             Path(cache_path).parent.mkdir(parents=True, exist_ok=True)
-            self._cache = sqlite3.connect(str(cache_path), check_same_thread=False)
+            self._cache = sqlite3.connect(str(cache_path), check_same_thread=False, timeout=30)
+            try:
+                self._cache.execute("PRAGMA journal_mode=WAL")  # several workers can share one cache file
+            except sqlite3.Error:
+                pass
             self._cache.execute(
                 "CREATE TABLE IF NOT EXISTS calls (key TEXT PRIMARY KEY, model TEXT, prompt TEXT, "
                 "completion TEXT, prompt_tokens INT, completion_tokens INT, seconds REAL, created REAL)"
@@ -160,6 +172,9 @@ class LLM:
         tag = tag or getattr(self._local, "agent", None) or "untagged"
         max_tokens = max_tokens or self.max_tokens
         temperature = self.temperature if temperature is None else temperature
+        if self.no_think and messages and messages[-1].get("role") == "user" \
+                and "/no_think" not in messages[-1]["content"]:
+            messages = [*messages[:-1], {**messages[-1], "content": messages[-1]["content"] + " /no_think"}]
         # Different servers can serve different weights under the same model alias.
         key_parts = ['v2', self.provider, self.base_url, self.model, self.num_ctx, temperature, max_tokens, messages]
         if self.seed != 6130:  # keep cache keys of the default seed unchanged
@@ -198,9 +213,26 @@ class LLM:
         headers = {"Content-Type": "application/json"}
         if self.api_key:
             headers["Authorization"] = f"Bearer {self.api_key}"
-        req = urllib.request.Request(url, json.dumps(body).encode(), headers)
-        with urllib.request.urlopen(req, timeout=self.timeout_s) as resp:
-            return json.load(resp)
+        payload = json.dumps(body).encode()
+        for attempt in range(self.max_retries + 1):
+            try:
+                req = urllib.request.Request(url, payload, headers)
+                with urllib.request.urlopen(req, timeout=self.timeout_s) as resp:
+                    return json.load(resp)
+            except urllib.error.HTTPError as e:
+                detail = e.read().decode("utf-8", "replace")[:500]
+                if e.code in (408, 409, 425, 429, 500, 502, 503, 504) and attempt < self.max_retries:
+                    retry_after = e.headers.get("Retry-After") if e.headers else None
+                    wait = float(retry_after) if retry_after and retry_after.isdigit() else 1.5 * 2 ** attempt
+                    time.sleep(min(wait, 60) + random.random())
+                    continue
+                raise RuntimeError(f"HTTP {e.code} from {url}: {detail}") from e
+            except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+                if attempt < self.max_retries:
+                    time.sleep(min(1.5 * 2 ** attempt, 30) + random.random())
+                    continue
+                raise RuntimeError(f"Could not reach {url}: {e}") from e
+        raise RuntimeError("unreachable")
 
     def _ollama(self, messages, max_tokens, temperature) -> tuple[str, int, int]:
         body = {
@@ -216,10 +248,11 @@ class LLM:
         return data.get("message", {}).get("content", ""), data.get("prompt_eval_count", 0), data.get("eval_count", 0)
 
     def _openai(self, messages, max_tokens, temperature) -> tuple[str, int, int]:
-        data = self._post(f"{self.base_url}/chat/completions", {
-            "model": self.model, "messages": messages, "max_tokens": max_tokens, "temperature": temperature,
-            "seed": self.seed,
-        })
+        body = {"model": self.model, "messages": messages, "max_tokens": max_tokens,
+                "temperature": temperature, "seed": self.seed}
+        if self.extra_body:
+            body.update(self.extra_body)
+        data = self._post(f"{self.base_url}/chat/completions", body)
         usage = data.get("usage") or {}
         choice = (data.get("choices") or [{}])[0]
         if choice.get('finish_reason') == 'length':

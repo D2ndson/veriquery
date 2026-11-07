@@ -11,6 +11,7 @@ import time
 from dataclasses import asdict, dataclass, field
 from typing import Any, Callable
 
+from veriquery.prompts import build_text_prompt, extract_sql_flexible
 from veriquery.sql_execution import QueryResult, SQLiteExecutor
 
 
@@ -37,6 +38,11 @@ class SQLAttempt:
     feedback: str = ""
     error: str | None = None
     action: str = "final"
+    plan: str = ""                                      # the <plan> block, if the model wrote one
+    fixes: list = field(default_factory=list)           # deterministic rewrites applied before execution
+    raw_sql: str = ""                                   # the model's SQL before those rewrites
+    prompt: str = ""                                    # only kept when the writer has record_prompts=True
+    response: str = ""                                  # the model's raw reply (same condition)
 
 
 @dataclass
@@ -87,9 +93,20 @@ def schema_text(cards: Any) -> str:
 class SQLWriter:
     def __init__(self, llm: Callable[[str], str], executor: SQLiteExecutor,
                  *, max_repairs: int = 2, max_react_steps: int = 6,
-                 few_shots: tuple[FewShotExample, ...] = (), max_prompt_chars: int = 60000):
+                 few_shots: tuple[FewShotExample, ...] = (), max_prompt_chars: int = 60000,
+                 prompt_style: str = "json", reasoning: str = "none", postprocess=None, hint_fn=None,
+                 few_shot_provider=None, record_prompts: bool = False):
         if max_repairs < 0 or max_react_steps < 1 or max_prompt_chars < 1000:
             raise ValueError("Invalid writer budget")
+        if prompt_style not in {"json", "text"}:
+            raise ValueError("prompt_style must be 'json' or 'text'")
+        # prompt_style="json" is the original C format. "text" is the readable prompt shared with training
+        # (veriquery.prompts), with optional <plan> reasoning, a flexible parser and few-shot retrieval.
+        self.prompt_style, self.reasoning = prompt_style, reasoning
+        self.postprocess = postprocess          # (sql, question) -> (sql, notes): deterministic AST fixes
+        self.hint_fn = hint_fn                  # (sql, error) -> str appended to repair feedback
+        self.few_shot_provider = few_shot_provider  # (question, db_id) -> examples
+        self.record_prompts = record_prompts        # keep prompt + raw reply per attempt (training-data mining)
         self.llm, self.executor = llm, executor
         self.max_repairs, self.max_react_steps = max_repairs, max_react_steps
         self.few_shots = tuple(few_shots)
@@ -100,6 +117,15 @@ class SQLWriter:
             raise ValueError("question must be nonempty")
         cards = self.executor.schema_cards() if data_cards is None else data_cards
         examples = [asdict(x) for x in self.few_shots if not db_id or x.db_id != db_id]
+        if self.prompt_style == "text":
+            if self.few_shot_provider is not None:
+                examples = [asdict(x) if not isinstance(x, dict) else x
+                            for x in self.few_shot_provider(question, db_id)]
+            prompt = build_text_prompt(question, schema_text(cards), evidence, examples, feedback, previous_sql,
+                                       self.reasoning)
+            if len(prompt) > self.max_prompt_chars:
+                raise ValueError("Prompt exceeds configured budget; retrieve fewer relevant data cards")
+            return prompt
         payload = {"question": question, "evidence": evidence, "schema": schema_text(cards),
                    "training_examples": examples, "previous_sql": previous_sql,
                    "repair_feedback": feedback}
@@ -130,23 +156,46 @@ class SQLWriter:
         for _ in range(budget):
             prompt = self._prompt(question, data_cards, evidence, db_id=db_id,
                                   feedback=feedback, previous_sql=previous_sql)
-            sql = ""
+            sql, plan, response = "", "", ""
             try:
                 out.model_calls += 1
-                sql = extract_sql(self.llm(prompt))
+                response = self.llm(prompt)
+                if self.prompt_style == "text":
+                    plan, sql = extract_sql_flexible(response)
+                else:
+                    sql = extract_sql(response)
             except Exception as exc:
                 # Model/format failures are logged and consume the same bounded attempt budget.
                 feedback = f"Model response failed: {type(exc).__name__}: {exc}"
-                out.attempts.append(SQLAttempt(sql, None, feedback=feedback, error=feedback))
+                out.attempts.append(SQLAttempt(sql, None, feedback=feedback, error=feedback,
+                                               prompt=prompt if self.record_prompts else "",
+                                               response=response if self.record_prompts else ""))
                 out.sql, out.execution = "", None
                 continue
+            raw_sql, fixes = sql, []
+            if self.postprocess is not None:
+                try:
+                    sql, fixes = self.postprocess(sql, question)
+                except Exception:
+                    sql, fixes = raw_sql, []
             result = self.executor.execute(sql)
+            if not result.ok and fixes:  # a rewrite broke the query: fall back to the model's own SQL
+                alt = self.executor.execute(raw_sql)
+                if alt.ok:
+                    sql, result, fixes = raw_sql, alt, []
             out.sql, out.execution = sql, result
-            out.attempts.append(SQLAttempt(sql, result, feedback=feedback))
+            out.attempts.append(SQLAttempt(sql, result, feedback=feedback, plan=plan, fixes=fixes, raw_sql=raw_sql,
+                                           prompt=prompt if self.record_prompts else "",
+                                           response=response if self.record_prompts else ""))
             if result.ok:
                 out.status = "truncated" if result.truncated else "success"
                 break
             feedback = f"SQLite execution failed ({result.error_type}): {result.error}"
+            if self.hint_fn is not None:
+                try:
+                    feedback += self.hint_fn(sql, result.error or "") or ""
+                except Exception:
+                    pass
             previous_sql = sql
         out.elapsed_seconds = time.monotonic() - started
         return out

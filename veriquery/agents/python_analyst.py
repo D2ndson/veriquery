@@ -14,6 +14,7 @@ class AnalysisResult:
     assumptions: list[str] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
     operation: str = ""
+    extras: dict = field(default_factory=dict)   # structured details for the UI (drivers, forecast, ...)
 
 
 def analyze(df: pd.DataFrame, question: str) -> AnalysisResult:
