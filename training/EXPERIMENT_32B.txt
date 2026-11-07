@@ -1,0 +1,22 @@
+VeriQuery 32B experiment — frozen plan, 7 November 2026
+
+Objective
+Improve the SQL writer using Qwen/Qwen2.5-Coder-32B-Instruct and test whether disagreement-directed database evidence improves repair. The meeting target was 80–90% accuracy among high-confidence answers. Overall accuracy and coverage must both be reported; 85–90% is a goal, not a promised result.
+
+Model
+Official checkpoint revision 381fc969f78efac66bc87ff7ddeadb7e73c218a7. Use identical NF4 double-quantized base loading and decoding for the base/adapter comparison. The friend's serving quantization and prompts remain unverified, so this is a matched 32B experiment rather than a claim to reproduce their deployment.
+
+Training
+Use existing database-disjoint official BIRD training/validation split. Start with the same all-linear rank16/alpha32 adapter, dropout0.05, learning rate0.0001, accumulation16, one-epoch horizon and 4096-token budget as the 7B experiment. Validate the longest fitting training examples on the allocated GPU before launching full training. Record actual memory and throughput. Save frequent checkpoints and stop at a step boundary before the six-hour limit; resume with the same optimizer, scheduler horizon and data. Do not shorten the horizon to fit individual jobs. If memory is insufficient, record a separate configuration rather than silently changing settings.
+
+Evaluation partitions
+The previously inspected 100 questions remain the historical comparison set. Freeze development100, calibration100 and final200 from the remaining MiniDev questions, with no overlapping IDs. Use development for method choices and the separate calibration100 for confidence-policy choices. Do not inspect final outcomes until the method is frozen. The same model checkpoint, question IDs, prompts, row limits, execution timeouts and inference budgets are required for paired runs.
+
+Novelty hypothesis
+The existing team code already votes over candidates and performs independent verification and repair. The proposed extension selects bounded database probes based on the specific structural disagreement in joins, filters or aggregation. Its contribution is to be tested; no first-ever-method claim is made. Prior work includes CHASE-SQL (arXiv2410.01943) and CHESS (arXiv2405.16755).
+
+Ablations
+Compare the existing generic disagreement repair, structural disagreement feedback without probes, and structural feedback with targeted probes at the same maximum model-call budget. Record actual tokens/calls and diagnostic SQL cost. First establish a matched untuned32B versus QLoRA32B component baseline. Keep model-size effects separate from adapter and method effects.
+
+Metrics and acceptance
+Report execution accuracy, execution errors, executable wrong answers, fixed cases, regressions, latency and confidence accuracy–coverage. Choose a confidence policy on calibration only, targeting at least85% accuracy with at least30% coverage; report failure to reach either target honestly. Treat a small high-confidence sample cautiously and include uncertainty intervals. The final200 is used once after decisions freeze. Never use gold SQL or final correctness to construct prompts or confidence labels.

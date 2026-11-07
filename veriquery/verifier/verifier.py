@@ -7,6 +7,7 @@ import pandas as pd
 
 from .compare import results_match, unit_scale
 from .db import run_sql
+from .disagreement import collect_disagreement_evidence
 from .dual_route import SecondRoute
 from .models import CheckResult, Decision, RouteResult, Severity, VerificationReport, VerifierInput
 from .sanity import build_context, run_sanity_checks
@@ -20,7 +21,11 @@ class Verifier:
         low_confidence_below: float = 0.5,
         timeout_s: float = 30.0,
         sanity_checks: bool = True,
+        disagreement_mode: str = "generic",
     ):
+        if disagreement_mode not in {"generic", "structure", "evidence"}:
+            raise ValueError("disagreement_mode must be generic, structure or evidence")
+        self.disagreement_mode = disagreement_mode
         self.second_route = second_route
         self.sanity_checks = sanity_checks
         self.max_repair_rounds = max_repair_rounds
@@ -108,6 +113,19 @@ class Verifier:
         if fails and inp.repair_round < self.max_repair_rounds:
             decision = Decision.REPAIR
             feedback = repair_feedback(fails, warns, route, result)
+            # Add evidence only to an already-required repair, with unchanged
+            # model-call budget. INFO diagnostics cannot raise confidence.
+            if (self.disagreement_mode != "generic" and route is not None
+                    and route.kind == "sql" and route.result is not None
+                    and any(c.name == "dual_route" for c in fails)):
+                diagnostic = collect_disagreement_evidence(
+                    inp.db_path, inp.sql, route.code,
+                    max_probes=4 if self.disagreement_mode == "evidence" else 0,
+                    timeout_seconds=min(self.timeout_s, 1.0))
+                checks.append(CheckResult("disagreement_diagnostics", Severity.INFO,
+                                          f"Targeted {self.disagreement_mode} diagnostics.",
+                                          {"mode": self.disagreement_mode, **diagnostic.to_dict()}))
+                feedback += "\n\n" + diagnostic.feedback()
         elif fails or confidence < self.low_confidence_below:
             decision = Decision.LOW_CONFIDENCE
         else:

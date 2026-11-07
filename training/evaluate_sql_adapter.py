@@ -8,6 +8,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from training.train_sql_lora import validate_revision, validate_adapter, runtime_metadata
 from benchmarks.bird import load_bird, fixed_subset, database_path
 from benchmarks.run_sql import evaluate, summarize, digest
+from training.freeze_sql_splits import resolve_selection
 
 
 def main():
@@ -18,12 +19,16 @@ def main():
     p.add_argument('--model', default='Qwen/Qwen2.5-Coder-7B-Instruct')
     p.add_argument('--revision', required=True)
     p.add_argument('--adapter', type=Path)
-    p.add_argument('--size', type=int, default=100)
+    p.add_argument('--size', type=int, default=100, help='Subset size without --selection; ignored with frozen selection')
+    p.add_argument('--selection', type=Path, help='Frozen split manifest created by freeze_sql_splits.py')
+    p.add_argument('--partition', choices=['historical', 'development', 'calibration', 'final'])
     p.add_argument('--mode', choices=['once', 'repair', 'react'], default='repair')
     p.add_argument('--context-tokens', type=int, default=4096)
     p.add_argument('--max-output-tokens', type=int, default=1024)
     a = p.parse_args()
     a.revision = validate_revision(a.revision)
+    if bool(a.selection) != bool(a.partition):
+        p.error('--selection and --partition must be supplied together')
     if a.adapter:
         validate_adapter(a.adapter, a.model, a.revision)
     if a.output.exists():
@@ -33,7 +38,10 @@ def main():
     from peft import PeftModel
     if not torch.cuda.is_available():
         raise RuntimeError('CUDA GPU required')
-    examples = fixed_subset(load_bird(a.data), size=a.size, seed=6130)
+    source_examples = load_bird(a.data)
+    examples = (resolve_selection(source_examples, json.loads(a.selection.read_text()),
+                                  a.partition, digest(a.data)) if a.selection else
+                fixed_subset(source_examples, size=a.size, seed=6130))
     for x in examples:
         database_path(a.db_root, x.db_id)
     tokenizer = AutoTokenizer.from_pretrained(a.model, revision=a.revision)
@@ -41,7 +49,7 @@ def main():
     model = AutoModelForCausalLM.from_pretrained(a.model, revision=a.revision,
         quantization_config=BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type='nf4',
             bnb_4bit_use_double_quant=True, bnb_4bit_compute_dtype=dtype),
-        device_map={'': 0}, torch_dtype=dtype, attn_implementation='sdpa')
+        device_map={'': 0}, torch_dtype=dtype, attn_implementation='sdpa', low_cpu_mem_usage=True)
     if a.adapter:
         model = PeftModel.from_pretrained(model, a.adapter)
     model.eval()
@@ -70,6 +78,7 @@ def main():
     a.output.mkdir(parents=True, exist_ok=False)
     manifest = {k: str(v) if isinstance(v, Path) else v for k,v in vars(a).items()}
     manifest.update(runtime=runtime_metadata(torch), dataset_sha256=digest(a.data),
+        selection_sha256=digest(a.selection) if a.selection else None, selected_count=len(examples),
         selected_ids=[{'db_id':x.db_id, 'question_id':x.question_id} for x in examples],
         database_sha256={x.db_id:digest(database_path(a.db_root,x.db_id)) for x in examples},
         adapter_sha256={p.name:digest(p) for p in a.adapter.glob('*') if p.is_file()} if a.adapter else None)

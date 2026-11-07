@@ -57,6 +57,7 @@ class Config:
     use_verifier: bool = True
     use_memory: bool = True            # False = ablation "without schema memory"
     second_route: str = "sql+pandas"   # "sql", "pandas", "sql+pandas" or "none" (sanity checks only)
+    disagreement_mode: str = "generic"  # generic, structure, evidence repair feedback
     n_candidates: int = 3              # SQL drafts per reading; the result most drafts agree on wins
     max_sql_repairs: int = 2           # execution-error repairs inside the SQL writer
     max_repair_rounds: int = 2         # verifier-triggered repairs
@@ -185,7 +186,8 @@ class VeriQuery:
         route = {"none": None, "sql": sql, "pandas": pandas,
                  "sql+pandas": FirstSuccessfulRoute(sql, pandas)}[self.config.second_route]
         return Verifier(second_route=route, max_repair_rounds=self.config.max_repair_rounds,
-                        timeout_s=self.config.query_timeout_s)
+                        timeout_s=self.config.query_timeout_s,
+                        disagreement_mode=self.config.disagreement_mode)
 
     def remember(self, db_path: str | Path, note: str, table: str | None = None, column: str | None = None) -> None:
         """Store a fact about a database in the schema notebook ("amount is in cents", "today is ...").

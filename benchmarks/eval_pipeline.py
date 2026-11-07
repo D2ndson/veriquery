@@ -48,6 +48,7 @@ def run_shard(args, questions: list[dict]) -> None:
     llm = LLM.from_env(model=args.model)
     vq = VeriQuery(llm, Config(use_clarifier=not args.no_clarifier, use_verifier=not args.no_verifier,
                                n_candidates=args.candidates, query_timeout_s=args.timeout,
+                               disagreement_mode=getattr(args, "disagreement_mode", "generic"),
                                notebook_dir=str(args.out.parent / "schema_notebook")))
     scorer = Scorer(args.timeout)
     for q in questions:
@@ -103,8 +104,18 @@ def summarize(out_dir: Path) -> dict:
         if hits:
             calib[label] = {"answers": len(hits), "share": round(len(hits) / n, 3), "accuracy": acc(hits)}
     high = [f for f in first if f["confidence"] == "high"]
+    diagnostics = [c["evidence"] for r in records for reading in r["readings"]
+                   for report in reading.get("verification_rounds", [])
+                   for c in report.get("checks", [])
+                   if c.get("name") == "disagreement_diagnostics"]
     summary = {
         "questions": n,
+        "disagreement_diagnostics": {
+            "rounds": len(diagnostics),
+            "sql_calls": sum(d.get("sql_calls", 0) for d in diagnostics),
+            "schema_reads": sum(d.get("schema_reads", 0) for d in diagnostics),
+            "seconds": sum(d.get("elapsed_seconds", 0) for d in diagnostics),
+        },
         "accuracy_primary": acc([f["correct"] for f in first]),
         "accuracy_any_reading": acc([any(x["correct"] for x in r["readings"]) for r in records]),
         "by_difficulty": {d: {"n": len(v), "accuracy": acc(v)} for d, v in sorted(by_diff.items())},
@@ -127,6 +138,7 @@ def main(argv=None) -> None:
     ap.add_argument("--subset-file", type=Path, default=Path("data/subsets/minidev_dev100.json"))
     ap.add_argument("--model", default=DEFAULT_MODEL)
     ap.add_argument("--candidates", type=int, default=3)
+    ap.add_argument("--disagreement-mode", choices=["generic", "structure", "evidence"], default="generic")
     ap.add_argument("--no-clarifier", action="store_true")
     ap.add_argument("--no-verifier", action="store_true")
     ap.add_argument("--timeout", type=float, default=30.0, help="seconds per SQL execution")
@@ -155,7 +167,8 @@ def main(argv=None) -> None:
     (args.out / "config.json").write_text(json.dumps({k: str(v) for k, v in vars(args).items()}, indent=2))
     child = ["--data", str(args.data), "--subset-file", str(args.subset_file), "--model", args.model,
              "--candidates", str(args.candidates), "--timeout", str(args.timeout), "--limit", str(args.limit),
-             "--workers", str(args.workers), "--out", str(args.out)]
+             "--workers", str(args.workers), "--out", str(args.out),
+             "--disagreement-mode", args.disagreement_mode]
     child += ["--no-clarifier"] * args.no_clarifier + ["--no-verifier"] * args.no_verifier
     procs = [subprocess.Popen([sys.executable, __file__, *child, "--shard", str(i)]) for i in range(args.workers)]
     for p in procs:

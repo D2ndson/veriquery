@@ -103,3 +103,69 @@ def test_extracts_nested_bird_database_archive(tmp_path):
     assert paths[0].read_bytes()==b'sqlite fixture'
     with pytest.raises(FileExistsError):
         extract_databases(outer,tmp_path/'db')
+
+
+def test_smoke_scans_all_rows_and_uses_longest_fitting_examples():
+    from training.train_sql_lora import select_training_examples
+    class VariableTokenizer:
+        def apply_chat_template(self, messages, **kwargs):
+            prefix = [1, 2]
+            return prefix if len(messages) == 1 else prefix + [3]*int(messages[1]['content'])
+    rows = [{'prompt': 'q', 'completion': str(n)} for n in [1, 2, 7, 20, 6]]
+    selected, counts = select_training_examples(VariableTokenizer(), rows, 10, smoke=True)
+    assert [len(item['input_ids']) for item in selected] == [9, 8]
+    assert counts == {'source': 5, 'examined': 5, 'eligible': 4, 'retained': 2,
+                      'overlength': 1, 'selected_token_lengths': [9, 8]}
+    full, counts = select_training_examples(VariableTokenizer(), rows, 10)
+    assert [len(item['input_ids']) for item in full] == [3, 4, 9, 8]
+
+
+def test_runtime_budget_saves_at_step_boundary_without_changing_horizon():
+    from types import SimpleNamespace
+    from training.train_sql_lora import RuntimeBudget
+    now = [10.0]
+    budget = RuntimeBudget(60, clock=lambda: now[0])
+    state = SimpleNamespace(global_step=3, max_steps=343)
+    control = SimpleNamespace(should_save=False, should_training_stop=False)
+    now[0] = 69
+    assert budget.on_step_end(None, state, control) is control
+    assert not control.should_training_stop
+    now[0] = 70
+    budget.on_step_end(None, state, control)
+    assert control.should_save and control.should_training_stop
+    assert state.max_steps == 343
+    assert budget.stop_reason == 'runtime_budget'
+
+
+def test_signal_waits_for_step_boundary_and_completed_run_is_not_paused():
+    import signal
+    from types import SimpleNamespace
+    from training.train_sql_lora import RuntimeBudget
+    budget = RuntimeBudget()
+    control = SimpleNamespace(should_save=False, should_training_stop=False)
+    budget.request_stop(signal.SIGUSR1)
+    assert not control.should_save
+    budget.on_step_end(None, SimpleNamespace(global_step=25, max_steps=343), control)
+    assert control.should_save and control.should_training_stop
+    assert budget.stop_reason == f'signal_{signal.SIGUSR1}'
+    complete = RuntimeBudget(1, clock=lambda: 0)
+    complete.request_stop(signal.SIGTERM)
+    control = SimpleNamespace(should_save=False, should_training_stop=False)
+    complete.on_step_end(None, SimpleNamespace(global_step=343, max_steps=343), control)
+    assert complete.stop_reason is None
+    assert not control.should_save
+
+
+def test_runtime_resume_still_rejects_changed_horizon(tmp_path):
+    import json
+    from training.train_sql_lora import validate_resume
+    checkpoint = tmp_path/'checkpoint-25'
+    checkpoint.mkdir()
+    (checkpoint/'trainer_state.json').write_text('{}')
+    identity = {'model': 'qwen', 'revision': 'a'*40, 'epochs': 1.0,
+                'max_steps': -1, 'max_length': 4096, 'smoke': False}
+    (tmp_path/'experiment.json').write_text(json.dumps(identity))
+    validate_resume(tmp_path, checkpoint, identity)  # Legacy full-run manifest remains valid.
+    for field, value in [('max_steps', 50), ('epochs', 2.0), ('max_length', 2048)]:
+        with pytest.raises(ValueError, match=field):
+            validate_resume(tmp_path, checkpoint, {**identity, field: value})
