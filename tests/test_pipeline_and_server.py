@@ -66,3 +66,20 @@ def test_scripted_server_catches_fanout(tmp_path):
         print('OK', len(types))
     """, tmp_path)
     assert r.returncode == 0 and "OK" in r.stdout, (r.stdout + r.stderr)[-1200:]
+
+
+def test_frozen_minidev_split(monkeypatch, tmp_path):
+    import json
+    from veriquery.pipeline import bird, evaluate
+    qs = [{"question_id": i, "question": f"q{i}", "evidence": "", "db_id": "d", "SQL": "SELECT 1",
+           "difficulty": "simple"} for i in range(10)]
+    (tmp_path / "data" / "subsets").mkdir(parents=True)
+    (tmp_path / "data" / "subsets" / "minidev_dev100.json").write_text(json.dumps([1, 3, 5]))
+    monkeypatch.setattr(evaluate, "path", lambda *p: tmp_path.joinpath(*p))
+    monkeypatch.setattr(bird, "get_split", lambda name: bird.BirdSplit(name, tmp_path / "x.json", tmp_path))
+    monkeypatch.setattr(bird, "load_questions", lambda name: [dict(q) for q in qs])
+    test = evaluate.load_eval_set("minidev_test", None)
+    dev = evaluate.load_eval_set("minidev_dev", None)
+    assert sorted(q["id"] for q in test) == [1, 3, 5]
+    assert sorted(q["id"] for q in dev) == [0, 2, 4, 6, 7, 8, 9]
+    assert [q["id"] for q in evaluate.load_eval_set("minidev_dev", 3)] == [q["id"] for q in dev[:3]]

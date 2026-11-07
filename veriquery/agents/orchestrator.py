@@ -27,6 +27,7 @@ from typing import Callable
 
 import pandas as pd
 
+from veriquery.agents.adjudicator import adjudicate, top_two
 from veriquery.agents.analysis_tools import auto_analysis, wants_decomposition
 from veriquery.agents.planner import llm_plan
 from veriquery.agents.provenance import check_provenance
@@ -109,6 +110,7 @@ class Config:
     metamorphic: bool = False          # experimental scale-invariance check in the verifier
     calibrator_path: str = ""          # fitted calibrator JSON (veriquery.verifier.calibrator)
     record_prompts: bool = False       # keep writer prompts / raw replies (training-data mining)
+    adjudicate: bool = False           # drafts disagree: diff them, probe the database, let a judge pick (adjudicator)
 
 
 class _Notebook(SchemaNotebook):
@@ -469,11 +471,23 @@ class VeriQuery:
                 drafts += [write(c) for c in self.samplers[1:]]
                 answer["path"] = "escalated" if adaptive else "full"
             out, groups = _vote(drafts)
+            pair = top_two(drafts, groups) if self.config.adjudicate and out.ok else None
+            if pair:
+                a, b = drafts[pair[0]], drafts[pair[1]]
+                with _tagged(self.checker, "adjudicator"):
+                    adj = adjudicate(self.checker, q, evidence, state["schema_prompt"], a.sql, b.sql,
+                                     pd.DataFrame(a.execution.rows, columns=a.execution.columns),
+                                     pd.DataFrame(b.execution.rows, columns=b.execution.columns), executor)
+                answer["adjudication"] = adj.to_dict()
+                self._emit("adjudication", "verifier", label=label, **adj.to_dict())
+                if adj.choice == "B":
+                    out = b
             if pending is not None and out is not drafts[0]:
                 pending = None  # the vote chose another draft: verify it from scratch
             answer.update(sql=out.sql, sql_status=out.status, sql_trace=out.to_dict(),
                           candidates=[{"sql": d.sql, "status": d.status, "group": g} for d, g in zip(drafts, groups)],
-                          agreement=groups.count(0) / len(drafts) if out.ok else 0.0)
+                          agreement=groups.count(groups[next(i for i, d in enumerate(drafts) if d is out)])
+                          / len(drafts) if out.ok else 0.0)
             last = out.attempts[-1] if out.attempts else None
             self._emit("sql_candidates", "sql_writer", label=label, candidates=answer["candidates"],
                        plan=last.plan if last else "", fixes=last.fixes if last else [], path=answer.get("path"),

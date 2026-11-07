@@ -43,8 +43,16 @@ def load_eval_set(dataset: str, n: int | None, seed: int = 0) -> list[dict]:
         qs = [json.loads(l) for l in path("data/shoptrap/questions.jsonl").read_text().splitlines() if l.strip()]
         return [{"id": q["id"], "question": q["question"], "evidence": q.get("evidence", ""), "db": db,
                  "gold_sql": q["gold_sql"], "readings": q.get("readings", []), "trap": q.get("trap", "")} for q in qs][:n or None]
+    frozen = None
+    if dataset in ("minidev_test", "minidev_dev"):
+        # The team's frozen split: test = the 100 ids in data/subsets/minidev_dev100.json (99 unique), used only
+        # for reported numbers; dev = every other Mini-Dev question, for choosing settings.
+        frozen = set(json.loads(path("data/subsets/minidev_dev100.json").read_text()))
+        dataset, part = "minidev", dataset.split("_")[1]
     split = bird.get_split(dataset)
     qs = bird.load_questions(dataset)
+    if frozen is not None:
+        qs = [q for q in qs if (q["question_id"] in frozen) == (part == "test")]
     random.Random(seed).shuffle(qs)          # fixed order: a run with n=100 is a prefix of the run with n=500
     qs = qs[:n] if n else qs
     return [{"id": q["question_id"], "question": q["question"], "evidence": q.get("evidence", ""),
@@ -177,7 +185,7 @@ def evaluate(dataset: str = "minidev", system: str = "final", profile: str | Non
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--dataset", default="minidev", choices=["minidev", "dev", "shoptrap"])
+    ap.add_argument("--dataset", default="minidev", choices=["minidev", "minidev_test", "minidev_dev", "dev", "shoptrap"])
     ap.add_argument("--system", default="final")
     ap.add_argument("--profile")
     ap.add_argument("--writer")
@@ -187,9 +195,15 @@ def main():
     ap.add_argument("--clarify", action="store_true")
     ap.add_argument("--token-budget", type=int)
     ap.add_argument("--no-repairer", action="store_true")
+    ap.add_argument("--set", action="append", default=[], metavar="FIELD=VALUE",
+                    help="override one Config field of the system, e.g. --set n_candidates=1 (value parsed as YAML)")
     a = ap.parse_args()
+    import yaml
+    overrides = {k: yaml.safe_load(v) for k, v in (s.split("=", 1) for s in a.set)}
+    if isinstance(overrides.get("autofix"), list):
+        overrides["autofix"] = tuple(overrides["autofix"])
     evaluate(a.dataset, a.system, a.profile, a.writer, a.tag, a.n or None, a.workers, a.clarify or None, a.token_budget,
-             with_repairer=not a.no_repairer)
+             with_repairer=not a.no_repairer, overrides=overrides)
 
 
 if __name__ == "__main__":

@@ -87,3 +87,14 @@ systems:
     analysis_tools: true
     provenance_guard: true
     metamorphic: false
+  final_json:            # "final" with C's JSON prompt: for writers trained on it (the QLoRA adapter); few-shot needs the text prompt
+    prompt_style: json
+    autofix: [literals, int_div, null_order]
+    n_candidates: 3
+    adaptive: true
+    exec_grounded_clarify: true
+    use_semantic_layer: true
+    use_llm_planner: true
+    analysis_tools: true
+    provenance_guard: true
+    metamorphic: false
