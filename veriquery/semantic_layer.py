@@ -13,7 +13,7 @@ import threading
 import time
 from pathlib import Path
 
-from veriquery.schema_memory import tokenize
+from veriquery.schema_memory import atomic_write, tokenize
 
 
 class SemanticLayer:
@@ -52,9 +52,7 @@ class SemanticLayer:
             return e
 
     def _write(self, db_id: str, entries: list[dict]) -> None:
-        tmp = self._path(db_id).with_suffix(".tmp")
-        tmp.write_text(json.dumps(entries, indent=1, ensure_ascii=False), encoding="utf-8")
-        tmp.replace(self._path(db_id))
+        atomic_write(self._path(db_id), json.dumps(entries, indent=1, ensure_ascii=False))
 
     def remove(self, db_id: str, term: str) -> bool:
         with self._lock:

@@ -496,14 +496,18 @@ class VeriQuery:
             pair = top_two(drafts, groups) if self.config.adjudicate and out.ok else None
             if pair:
                 a, b = drafts[pair[0]], drafts[pair[1]]
-                with _tagged(self.checker, "adjudicator"):
-                    adj = adjudicate(self.checker, q, evidence, state["schema_prompt"], a.sql, b.sql,
-                                     pd.DataFrame(a.execution.rows, columns=a.execution.columns),
-                                     pd.DataFrame(b.execution.rows, columns=b.execution.columns), executor)
-                answer["adjudication"] = adj.to_dict()
-                self._emit("adjudication", "verifier", label=label, **adj.to_dict())
-                if adj.choice == "B":
-                    out = b
+                try:
+                    with _tagged(self.checker, "adjudicator"):
+                        adj = adjudicate(self.checker, q, evidence, state["schema_prompt"], a.sql, b.sql,
+                                         pd.DataFrame(a.execution.rows, columns=a.execution.columns),
+                                         pd.DataFrame(b.execution.rows, columns=b.execution.columns), executor)
+                except Exception as e:  # adjudication only ever overrides the vote; a failure keeps the majority
+                    answer["adjudication"] = {"choice": "A", "error": f"{type(e).__name__}: {e}"}
+                else:
+                    answer["adjudication"] = adj.to_dict()
+                    self._emit("adjudication", "verifier", label=label, **adj.to_dict())
+                    if adj.choice == "B":
+                        out = b
             if pending is not None and out is not drafts[0]:
                 pending = None  # the vote chose another draft: verify it from scratch
             answer.update(sql=out.sql, sql_status=out.status, sql_trace=out.to_dict(),

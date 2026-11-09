@@ -30,6 +30,7 @@ import os
 import re
 import sqlite3
 import sys
+import threading
 import time
 from collections import Counter, defaultdict
 from dataclasses import asdict, dataclass, field
@@ -139,6 +140,17 @@ class DatabaseCard:
 
     def to_prompt(self, tables: list[str] | None = None, max_examples: int = 3) -> str:
         return render_prompt(self, tables, max_examples=max_examples)
+
+_WRITE_LOCK = threading.Lock()
+
+
+def atomic_write(path: Path, text: str) -> None:
+    """Write via a temp file unique to this process and thread, then rename: concurrent writers never share it.
+    The lock serialises threads (Windows refuses two renames onto one file at once)."""
+    tmp = path.with_name(f"{path.name}.{os.getpid()}.{threading.get_ident()}.tmp")
+    with _WRITE_LOCK:
+        tmp.write_text(text, encoding="utf-8")
+        tmp.replace(path)
 
 
 def validate_card(d: dict) -> list[str]:
@@ -560,18 +572,13 @@ class SchemaNotebook:
         if data is None:
             data = build_value_index(ROOT / card.db_path, card)      # absolute paths pass through unchanged
             if self.use_memory:
-                tmp = vp.with_suffix(".tmp")
-                tmp.write_text(json.dumps({"fingerprint": card.fingerprint, "values": data}, ensure_ascii=False),
-                               encoding="utf-8")
-                tmp.replace(vp)
+                atomic_write(vp, json.dumps({"fingerprint": card.fingerprint, "values": data}, ensure_ascii=False))
         self._values[db_id] = (card.fingerprint, data)
         return data
 
     def save(self, card: DatabaseCard) -> Path:
         cp = self.card_path(card.db_id)
-        tmp = cp.with_suffix(".tmp")
-        tmp.write_text(json.dumps(card.to_dict(), indent=1, ensure_ascii=False, default=str), encoding="utf-8")
-        tmp.replace(cp)                           # atomic write
+        atomic_write(cp, json.dumps(card.to_dict(), indent=1, ensure_ascii=False, default=str))
         return cp
 
     def _learned_path(self, db_id: str) -> Path:
@@ -603,9 +610,7 @@ class SchemaNotebook:
         if entry not in learned:
             learned.append(entry)
             lp = self._learned_path(db_id)
-            tmp = lp.with_suffix(".tmp")
-            tmp.write_text(json.dumps(learned, indent=1, ensure_ascii=False), encoding="utf-8")
-            tmp.replace(lp)
+            atomic_write(lp, json.dumps(learned, indent=1, ensure_ascii=False))
         card = self.get(db_id)
         self._apply_learned(card)
         if self.use_memory:

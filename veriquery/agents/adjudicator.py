@@ -191,7 +191,8 @@ def result_diff(df_a: pd.DataFrame, df_b: pd.DataFrame, k: int = 5) -> str:
              f"B returns {len(df_b)} row(s) x {df_b.shape[1]} column(s) {list(df_b.columns)}."]
     if df_a.shape[1] == df_b.shape[1]:
         sa, sb = set(map(tuple, df_a.astype(str).values)), set(map(tuple, df_b.astype(str).values))
-        only_a, only_b = sorted(sa - sb)[:k], sorted(sb - sa)[:k]
+        # astype(str) can leave NaN as a float on newer pandas; repr orders mixed rows without comparing types.
+        only_a, only_b = sorted(sa - sb, key=repr)[:k], sorted(sb - sa, key=repr)[:k]
         lines.append(f"{len(sa & sb)} row(s) are in both.")
         if only_a:
             lines.append(f"Only in A (first {len(only_a)}): {only_a}")

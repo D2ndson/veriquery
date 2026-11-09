@@ -61,6 +61,9 @@ def test_switches_only_when_both_orderings_agree(db):
 def test_result_diff_lists_rows_unique_to_each_side():
     text = result_diff(pd.DataFrame({"x": [1, 2]}), pd.DataFrame({"x": [2, 3]}))
     assert "1 row(s) are in both" in text and "Only in A" in text and "Only in B" in text
+    # Mixed text and missing values (BIRD question 27 crashed here): rows still sort.
+    mixed = result_diff(pd.DataFrame({"x": ["a", None, float("nan")]}), pd.DataFrame({"x": [1.5, "b"]}))
+    assert "Only in A" in mixed and "Only in B" in mixed
 
 
 def test_orchestrator_adjudicates_a_split_vote(db, monkeypatch, tmp_path):
@@ -99,3 +102,13 @@ def test_orchestrator_adjudicates_a_split_vote(db, monkeypatch, tmp_path):
     assert answer["adjudication"]["choice"] == "B"
     assert answer["sql"] == EAST and answer["result"].iloc[0, 0] == 105
     assert answer["agreement"] == 1 / 3
+
+
+def test_concurrent_cache_writes_do_not_collide(tmp_path):
+    # Mini-Dev's first run lost 10 questions when parallel workers shared one ".tmp" file.
+    from concurrent.futures import ThreadPoolExecutor
+    from veriquery.schema_memory import atomic_write
+    target = tmp_path / "card.values.json"
+    with ThreadPoolExecutor(16) as pool:
+        list(pool.map(lambda i: atomic_write(target, json.dumps({"i": i})), range(200)))
+    assert "i" in json.loads(target.read_text()) and list(tmp_path.glob("*.tmp")) == []
