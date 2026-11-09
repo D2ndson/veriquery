@@ -2,7 +2,8 @@
 # One harness for every writer and system: vLLM serves the base 7B plus every adapter in artifacts/adapters,
 # all helper agents use the base 7B (profile local_all), BIRD questions run without the clarifier, and the
 # reporter's summary sentence is skipped (it does not change the SQL that is scored).
-#   sbatch cluster/eval_v2.sbatch cluster/runs_dev.txt     (one run per line: TAG DATASET SYSTEM WRITER N [extra args])
+#   sbatch cluster/eval_v2.sbatch cluster/runs_dev.txt     (one run per line: TAG DATASET SYSTEM WRITER N [extra args];
+#   WRITER "-" = the profile's default writer)
 # Runs resume (predictions.jsonl is appended per question), so resubmit after the 6 h limit.
 #SBATCH --partition=MGPU-TC2
 #SBATCH --qos=normal
@@ -15,7 +16,7 @@
 #SBATCH --output=logs/%x_%j.out
 #SBATCH --error=logs/%x_%j.err
 set -eo pipefail
-cd "$HOME/vq-v2"
+cd "${SLURM_SUBMIT_DIR:-$HOME/vq-v2}"          # the checkout the job was submitted from
 module load anaconda
 eval "$(conda shell.bash hook)"
 conda activate veriquery
@@ -27,7 +28,7 @@ grep -v '^\s*#' "$RUNS" | while read -r tag dataset system writer n extra; do
   [ -n "$tag" ] || continue
   echo "== $(date +%T) $tag: $dataset system=$system writer=$writer n=$n $extra"
   python -m veriquery.pipeline.evaluate --dataset "$dataset" --system "$system" --profile local_all \
-      --writer "$writer" --tag "$tag" --n "$n" --workers 16 --set summarise=false $extra < /dev/null || echo "!! $tag failed"
+      ${writer:+$( [ "$writer" = - ] || echo --writer "$writer" )} --tag "$tag" --n "$n" --workers 16 --set summarise=false $extra < /dev/null || echo "!! $tag failed"
 done
 python -m veriquery.pipeline.vllm_server stop || true
 python - <<'PY'

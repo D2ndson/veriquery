@@ -1,0 +1,7 @@
+# Final check of the committed code in a fresh checkout (empty LLM cache, cold schema notebook).
+# "-" = the profile's default writer (writer-qlora), with the repairer as shipped, and without it as evaluated.
+v3_test_default        minidev_test final     -     0
+v3_test_default_norep  minidev_test final     -     0 --no-repairer
+v3_test_original       minidev_test original  base  0 --no-repairer
+v3_shop_default        shoptrap     final     -     0
+v3_shop_original       shoptrap     original  base  0 --no-repairer
