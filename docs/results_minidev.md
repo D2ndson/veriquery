@@ -37,6 +37,22 @@ The run files in `cluster/` (`runs_dev_a1..a3`, `runs_c1`, `runs_test`) reproduc
 | sft full → dpo full | +0 / −2 | 0.50 |
 | qlora full → qlora full + adjudication | +0 / −0 | 1.0 |
 
+## Final check: the committed code, re-run fresh (job 52679)
+
+This re-ran the committed code in a fresh checkout (`cluster/runs_final_check.txt`), with an empty LLM cache and an empty schema notebook. Every answer was generated anew. In this run 98 test questions had scorable gold SQL.
+
+| System | BIRD test | Confidently wrong | ShopTrap (40, clarifier on) |
+|---|---|---|---|
+| Original pipeline, base writer | 52.0% | 29% | 62.5% |
+| **Default as shipped** (writer-qlora, full, repairer) | **64.3%** | 23% | 60.0% |
+| Default without the repairer | 62.2% | 20% | — |
+
+- **BIRD:** the default beats the original pipeline by +17 / −5 (p = 0.017). Removing the repairer gives +16 / −6 (p = 0.052), and the repairer itself is +6 / −4.
+- **Reproducibility:**
+  - The fresh no-repairer run matches the cached evaluation of the same system: +1 / −2, 62.2% vs 63.9%.
+  - The fresh baseline reproduces exactly: +0 / −0.
+- **ShopTrap:** no gain, +3 / −4 (p = 1.0). With every agent on the local 7B, the traps (ambiguity, fan-out, units) are caught at the same rate by both systems; the catch rate is 67% for each.
+
 ## Dev split (n = 150)
 
 | Writer | System | Accuracy | Confidently wrong |
