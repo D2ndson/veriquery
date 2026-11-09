@@ -1,0 +1,6 @@
+# Each job resumes where the previous one stopped; every job is limited to 5 h 50 min.
+afterany cluster/train_lc.sbatch
+afterok  cluster/eval_v2.sbatch cluster/runs_dev_a1.txt
+afterany cluster/eval_v2.sbatch cluster/runs_dev_a2.txt
+afterany cluster/eval_v2.sbatch cluster/runs_dev_a3.txt
+afterany cluster/eval_v2.sbatch cluster/runs_dev_b1.txt

@@ -160,7 +160,7 @@ class RunRequest(BaseModel):
     evidence: str = ""
     mode: str = "scripted"                 # scripted | live
     system: str = "final"                  # any key of `systems` in configs/models.yaml
-    writer: str | None = None              # base | writer-sft | writer-dpo (live mode only)
+    writer: str | None = None              # writer-qlora (profile default) | base | writer-sft | writer-dpo (live mode only)
     interactive: bool = True               # let the clarifier ask the user
     latency: float = 0.7                   # scripted mode pacing (seconds per model call)
 

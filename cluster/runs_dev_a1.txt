@@ -1,0 +1,6 @@
+dev_base_json        minidev_dev write_sql_once base           150 --no-repairer
+dev_base_text        minidev_dev writer_only    base           150 --no-repairer
+dev_qlora_json       minidev_dev write_sql_once writer-qlora   150 --no-repairer
+dev_sft_text         minidev_dev writer_only    writer-sft     150 --no-repairer
+dev_dpo_text         minidev_dev writer_only    writer-dpo     150 --no-repairer
+dev_dpolf_text       minidev_dev writer_only    writer-dpo-lf  150 --no-repairer

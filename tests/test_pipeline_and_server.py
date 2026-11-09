@@ -83,3 +83,17 @@ def test_frozen_minidev_split(monkeypatch, tmp_path):
     assert sorted(q["id"] for q in test) == [1, 3, 5]
     assert sorted(q["id"] for q in dev) == [0, 2, 4, 6, 7, 8, 9]
     assert [q["id"] for q in evaluate.load_eval_set("minidev_dev", 3)] == [q["id"] for q in dev[:3]]
+
+
+def test_writer_gets_its_trained_prompt_format():
+    from veriquery.config import load_models_config, system_config
+    cfg = load_models_config()
+    assert cfg["profiles"]["hybrid"]["writer"]["model"] == "writer-qlora"
+    # QLoRA was trained on C's JSON prompt: "final" with it is exactly the evaluated final_json system.
+    q, j = system_config("final", writer="writer-qlora"), system_config("final_json")
+    assert (q.prompt_style, q.reasoning, q.fewshot_k) == ("json", "none", 0)
+    assert {k: v for k, v in vars(q).items()} == {k: v for k, v in vars(j).items()}
+    s = system_config("write_sql_once", writer="writer-sft")      # text-trained adapters keep the text prompt
+    assert (s.prompt_style, s.reasoning, s.n_candidates) == ("text", "plan", 1)
+    assert system_config("final", writer="writer-qlora", overrides={"fewshot_k": 2}).fewshot_k == 2
+    assert system_config("final").prompt_style == "text"           # no writer named: system as written

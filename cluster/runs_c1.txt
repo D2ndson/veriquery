@@ -1,0 +1,4 @@
+dev_base_json        minidev_dev write_sql_once base           150 --no-repairer
+dev_sft_final_adj    minidev_dev final          writer-sft     150 --no-repairer --set adjudicate=true
+dev_sft_final_adj_na minidev_dev final          writer-sft     150 --no-repairer --set adjudicate=true --set adaptive=false
+dev_qlora_final_adj  minidev_dev final_json     writer-qlora   150 --no-repairer --set adjudicate=true

@@ -10,7 +10,7 @@ interface Props {
   refreshDatasets: () => void; dataset: string; setDataset: (d: string) => void;
 }
 
-const WRITERS: [string, string][] = [["base", "Base model"], ["writer-sft", "LoRA fine-tuned"], ["writer-dpo", "LoRA + preference tuning"]];
+const WRITERS: [string, string][] = [["writer-qlora", "QLoRA fine-tuned (default)"], ["base", "Base model"], ["writer-sft", "LoRA fine-tuned"], ["writer-dpo", "LoRA + preference tuning"]];
 const SYSTEMS: [string, string][] = [["final", "Full system"], ["improved", "Better prompts, same agents"], ["original", "Original pipeline"], ["writer_only", "Writer alone, no agents"]];
 
 export default function AskPanel(p: Props) {

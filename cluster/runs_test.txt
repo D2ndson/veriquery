@@ -1,0 +1,9 @@
+test_base_original   minidev_test original      base           0 --no-repairer
+test_base_json       minidev_test write_sql_once base          0 --no-repairer
+test_qlora_json      minidev_test write_sql_once writer-qlora  0 --no-repairer
+test_dpo_text        minidev_test writer_only   writer-dpo     0 --no-repairer
+test_qlora_final     minidev_test final_json    writer-qlora   0 --no-repairer
+test_sft_final       minidev_test final         writer-sft     0 --no-repairer
+test_sft_final_adj   minidev_test final         writer-sft     0 --no-repairer --set adjudicate=true
+test_dpo_final       minidev_test final         writer-dpo     0 --no-repairer
+test_qlora_final_adj minidev_test final_json    writer-qlora   0 --no-repairer --set adjudicate=true

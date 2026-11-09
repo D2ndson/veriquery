@@ -1,0 +1,6 @@
+dev_base_original    minidev_dev original       base           150 --no-repairer
+dev_base_final       minidev_dev final          base           150 --no-repairer
+dev_qlora_final      minidev_dev final_json     writer-qlora   150 --no-repairer
+dev_sft_final        minidev_dev final          writer-sft     150 --no-repairer
+dev_dpo_final        minidev_dev final          writer-dpo     150 --no-repairer
+dev_dpo_final_rep    minidev_dev final          writer-dpo     150

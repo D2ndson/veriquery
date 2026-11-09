@@ -95,12 +95,15 @@ def build_llms(profile: str | None = None, cfg: dict | None = None, writer_model
 
 
 def system_config(system: str = "final", cfg: dict | None = None, overrides: dict | None = None,
-                  notebook_dir: str | Path = "artifacts/schema_notebook") -> Config:
+                  notebook_dir: str | Path = "artifacts/schema_notebook", writer: str | None = None) -> Config:
+    """System flags from models.yaml. `writer` applies that adapter's trained prompt format (writer_formats);
+    explicit overrides still take precedence."""
     cfg = cfg or load_models_config()
     systems = cfg.get("systems", {})
     if system not in systems:
         raise KeyError(f"unknown system {system!r}; choose from {sorted(systems)}")
-    fields = {**systems[system], **(overrides or {})}
+    fmt = (cfg.get("writer_formats") or {}).get(writer, {}) if writer else {}
+    fields = {**systems[system], **fmt, **(overrides or {})}
     if "autofix" in fields:
         fields["autofix"] = tuple(fields["autofix"])
     fields.setdefault("notebook_dir", str(path(notebook_dir)))
@@ -115,7 +118,7 @@ def build_pipeline(profile: str | None = None, system: str = "final", writer_mod
     """Everything wired from the config files: per-agent LLMs, system flags, few-shot bank, calibrator."""
     cfg = load_models_config()
     llms = llms or build_llms(profile, cfg, writer_model, use_cache=use_cache, with_repairer=with_repairer)
-    config = system_config(system, cfg, overrides)
+    config = system_config(system, cfg, overrides, writer=getattr(llms["writer"], "model", None))
     bank = FewShotBank.load(path(fewshot_path)) if (fewshot_path and config.fewshot_k > 0) else None
     cal = path(calibrator_path) if calibrator_path and path(calibrator_path).is_file() else None
     if cal:

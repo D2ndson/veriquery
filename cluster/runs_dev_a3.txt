@@ -1,0 +1,3 @@
+dev_sft_final_adj    minidev_dev final          writer-sft     150 --no-repairer --set adjudicate=true
+dev_sft_final_adj_na minidev_dev final          writer-sft     150 --no-repairer --set adjudicate=true --set adaptive=false
+dev_sft_final_na     minidev_dev final          writer-sft     150 --no-repairer --set adaptive=false

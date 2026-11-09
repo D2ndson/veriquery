@@ -12,13 +12,15 @@ endpoints:
 
 # The SQL writer is the agent we fine-tune with LoRA, so it runs on the GPU you rent.
 # vLLM serves the base weights as "base" and each LoRA adapter under its own name:
-#   base         Qwen2.5-Coder-7B-Instruct, no adapter  (the baseline)
-#   writer-sft   stage A: LoRA SFT on cleaned BIRD train, plan-then-SQL format
-#   writer-dpo   stage C: SFT + preference tuning with verifier-derived pairs
-#   repairer     role adapter trained on (wrong SQL + verifier feedback -> fixed SQL)
+#   base          Qwen2.5-Coder-7B-Instruct, no adapter  (the baseline)
+#   writer-qlora  DEFAULT: QLoRA on BIRD train with C's JSON prompt (best on the frozen Mini-Dev test split:
+#                 63.9% in the full system vs 52.6% for the original pipeline, n=97)
+#   writer-sft    stage A: LoRA SFT on cleaned BIRD train, plan-then-SQL format
+#   writer-dpo    stage C: SFT + preference tuning with verifier-derived pairs
+#   repairer      role adapter trained on (wrong SQL + verifier feedback -> fixed SQL)
 profiles:
   hybrid:                               # DEFAULT: local fine-tuned writer + large hosted models for other agents
-    writer:    {endpoint: local, model: writer-dpo, max_tokens: 1024}
+    writer:    {endpoint: local, model: writer-qlora, max_tokens: 1024}
     repairer:  {endpoint: local, model: repairer, max_tokens: 1024}   # used only once the adapter is trained
     clarifier: {endpoint: hf, model: Qwen/Qwen3-32B, no_think: true, max_tokens: 1500}
     checker:   {endpoint: hf, model: Qwen/Qwen2.5-Coder-32B-Instruct, max_tokens: 1536}
@@ -37,12 +39,20 @@ profiles:
     reporter:  {endpoint: hf, model: Qwen/Qwen2.5-72B-Instruct, max_tokens: 400}
     planner:   {endpoint: hf, model: Qwen/Qwen2.5-72B-Instruct, max_tokens: 300}
   local_all:                            # zero API cost: every agent on the one local model (weaker clarifier / verifier)
-    writer:    {endpoint: local, model: writer-dpo, max_tokens: 1024}
+    writer:    {endpoint: local, model: writer-qlora, max_tokens: 1024}
     repairer:  {endpoint: local, model: repairer, max_tokens: 1024}
     clarifier: {endpoint: local, model: base, no_think: true, max_tokens: 1500}
     checker:   {endpoint: local, model: base, max_tokens: 1536}
     reporter:  {endpoint: local, model: base, max_tokens: 400}
     planner:   {endpoint: local, model: base, max_tokens: 300}
+
+# The prompt format each writer adapter was trained on. It is applied on top of whichever system runs, so a
+# writer always sees its own format (explicit overrides still win). Writers not listed use the system as written.
+writer_formats:
+  writer-sft:   {prompt_style: text, reasoning: plan, fewshot_k: 3}
+  writer-dpo:   {prompt_style: text, reasoning: plan, fewshot_k: 3}
+  writer-dpo-lf: {prompt_style: text, reasoning: plan, fewshot_k: 3}
+  writer-qlora: {prompt_style: json, reasoning: none, fewshot_k: 0}
 
 # Training. The base model is downloaded from the Hub with your HF token.
 training:
@@ -50,6 +60,8 @@ training:
   teacher_model: Qwen/Qwen2.5-Coder-32B-Instruct     # optional: only used if you ask for teacher-written rationales
 
 # Named system variants for evaluation. "final" is the full system; the others are baselines and ablations.
+# `adjudicate: true` (disagreement-directed adjudication) is available on any system; on the test split it was
+# neutral (0 answers changed with writer-qlora, +2/-1 with writer-sft), so it is off by default.
 # Any Config field (veriquery/agents/orchestrator.py) can be set here.
 systems:
   write_sql_once:        # plan baseline 1: one prompt, no repair, no agents
