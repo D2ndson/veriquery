@@ -83,11 +83,11 @@ textarea { resize: vertical; min-height: 78px; }
 .chip.python_analyst { background: var(--a-python_analyst); } .chip.reporter { background: var(--a-reporter); }
 
 /* ---------- agent floor ---------- */
-.graph { height: 330px; padding: 0; overflow: hidden; position: relative; }
+.graph { aspect-ratio: 2.3 / 1; min-height: 340px; max-height: 72vh; flex: none; padding: 0; overflow: hidden; position: relative; }
 .graph .react-flow__attribution { background: transparent; font-size: 10px; }
 .node { width: 138px; padding: 9px 10px 8px; background: var(--sheet); border: 1.5px solid var(--rule); border-radius: 7px; position: relative; transition: background .25s, border-color .25s; }
 .node .nm { font-weight: 650; font-size: 14px; display: flex; align-items: center; gap: 6px; }
-.node .md { font-size: 11.5px; color: var(--graphite); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.node .md { font-size: 11.5px; line-height: 1.3; color: var(--graphite); overflow-wrap: anywhere; }
 .node .st { font-size: 11.5px; margin-top: 3px; min-height: 16px; color: var(--graphite); }
 .node .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--rule); flex: none; }
 .node.active { background: var(--ink); color: #fff; border-color: var(--ink); }

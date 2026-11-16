@@ -19,7 +19,7 @@ export default function MemoryView({ datasets, dataset, setDataset }: { datasets
         <select id="mds" value={dataset} onChange={(e) => setDataset(e.target.value)}>{datasets.map((d) => <option key={d.id} value={d.id}>{d.label}</option>)}</select>
       </section>
       <section className="sheet">
-        {items.length === 0 ? <p className="placeholder">Nothing remembered yet for this data. Ask "What was our revenue last quarter?" in the scripted demo, answer the clarifier, and the definition shows up here.</p> :
+        {items.length === 0 ? <p className="placeholder">Nothing remembered yet for this data. Ask "What was our revenue last quarter?" on the first tab, answer the clarifier, and the definition shows up here.</p> :
           <table className="runs"><thead><tr><th>Term</th><th>Definition</th><th>Learned from</th><th>Used</th><th /></tr></thead><tbody>
             {items.map((e) => <tr key={e.term}><td><b>{e.term}</b></td><td>{e.definition}</td><td>{e.source}</td><td className="num">{e.uses ?? 0}</td><td><button className="btn ghost" onClick={() => del(e.term)}>Forget</button></td></tr>)}</tbody></table>}
         <h3 style={{ marginTop: 18 }}>Add a definition</h3>

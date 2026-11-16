@@ -53,6 +53,13 @@ This re-ran the committed code in a fresh checkout (`cluster/runs_final_check.tx
   - The fresh baseline reproduces exactly: +0 / −0.
 - **ShopTrap:** no gain, +3 / −4 (p = 1.0). With every agent on the local 7B, the traps (ambiguity, fan-out, units) are caught at the same rate by both systems; the catch rate is 67% for each.
 
+## Local run: base 7B on a laptop GPU (Ollama)
+
+The full system with every agent on Ollama's `qwen2.5-coder:7b` (Q4, 4096-token context, un-tuned writer, no few-shot
+bank or calibrator) scored **57.7%** on the test split (56 / 97), with 19.6% confidently wrong. This setup differs
+from the cluster runs, so the comparison is not paired. Details, per-question predictions and the runner are in
+[experiments/local_ollama_base7b](../experiments/local_ollama_base7b/README.md).
+
 ## Dev split (n = 150)
 
 | Writer | System | Accuracy | Confidently wrong |

@@ -11,7 +11,7 @@ import MemoryView from "./components/MemoryView";
 export default function App() {
   const { state, start, replay, answer, reset } = useRun();
   const [tab, setTab] = useState<"run" | "results" | "memory">("run");
-  const [mode, setMode] = useState<Mode>("scripted");
+  const [mode, setMode] = useState<Mode>("live");
   const [config, setConfig] = useState<any>(null);
   const [datasets, setDatasets] = useState<any[]>([]);
   const [golden, setGolden] = useState<any[]>([]);
@@ -29,12 +29,22 @@ export default function App() {
   useEffect(() => { load(); }, [load]);
   const refreshDatasets = useCallback(async () => setDatasets(await api("/api/datasets")), []);
 
+  // Readable names for the model aliases in configs/models.yaml; the label always reflects what is really running.
+  const modelLabel = (model: string) => ({
+    base: "Qwen2.5-Coder-7B (base)",
+    "writer-qlora": "Qwen2.5-Coder-7B (fine-tuned)",
+    "writer-sft": "Qwen2.5-Coder-7B (fine-tuned, SFT)",
+    "writer-dpo": "Qwen2.5-Coder-7B (fine-tuned, DPO)",
+    "writer-dpo-lf": "Qwen2.5-Coder-7B (fine-tuned, DPO label-free)",
+    repairer: "Qwen2.5-Coder-7B (repairer adapter)",
+  } as Record<string, string>)[model] || model.split("/").pop() || model;
+
   const models = useMemo(() => {
     const m: Record<string, string> = {};
     if (mode === "scripted") return Object.fromEntries(["orchestrator", "clarifier", "sql_writer", "verifier", "reporter"].map((k) => [k, "scripted demo"]));
     (config?.roles || []).forEach((r: any) => {
       const k = ({ writer: "sql_writer", clarifier: "clarifier", checker: "verifier", reporter: "reporter", planner: "orchestrator" } as any)[r.role];
-      if (k) m[k] = r.model.split("/").pop();
+      if (k) m[k] = modelLabel(r.model);
     });
     return m;
   }, [config, mode]);

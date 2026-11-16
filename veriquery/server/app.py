@@ -274,6 +274,20 @@ def live_problem() -> str | None:
         from veriquery.pipeline.vllm_server import is_up, pipeline_cfg
         if not is_up(pipeline_cfg()["port"]):
             return "The local model server (vLLM) is not running: bash scripts/serve_vllm.sh"
+    if any(s["endpoint"] == "ollama" for s in specs.values()):
+        import urllib.request
+        base = cfg["endpoints"]["ollama"]["base_url"].rsplit("/v1", 1)[0]
+        try:
+            urllib.request.urlopen(f"{base}/api/tags", timeout=3).close()
+        except OSError:
+            return "Ollama is not running: start the Ollama app (or `ollama serve`)."
+    if any(s["endpoint"] == "llamacpp" for s in specs.values()):
+        import urllib.request
+        base = cfg["endpoints"]["llamacpp"]["base_url"].rsplit("/v1", 1)[0]
+        try:
+            urllib.request.urlopen(f"{base}/health", timeout=3).close()
+        except OSError:
+            return "The llama.cpp server is not running: powershell -File scripts/serve_llamacpp_qlora.ps1"
     return None
 
 
@@ -284,6 +298,8 @@ def api_config():
     roles = [{"role": r, "model": s["model"], "endpoint": s["endpoint"]} for r, s in cfg["profiles"].get(prof, {}).items()]
     adapters = sorted(p.name for p in path("artifacts/adapters").glob("*") if (p / "adapter_config.json").is_file()) \
         if path("artifacts/adapters").is_dir() else []
+    for s in cfg["profiles"].get(prof, {}).values():   # adapters served by a llama.cpp endpoint (switched per request)
+        adapters += [a for a in (cfg["endpoints"][s["endpoint"]].get("lora") or {}) if a not in adapters]
     problem = live_problem()
     return {"profile": prof, "roles": roles, "adapters": adapters, "systems": list(cfg.get("systems", {})),
             "live_ready": problem is None, "live_problem": problem, "has_golden": bool(api_golden()),

@@ -1,5 +1,8 @@
-import { memo, useMemo } from "react";
-import ReactFlow, { Handle, Position, MarkerType, type Edge, type Node } from "reactflow";
+import { memo, useEffect, useMemo, useRef } from "react";
+import ReactFlow, { Handle, Position, MarkerType, type Edge, type Node, type ReactFlowInstance } from "reactflow";
+
+// Extra room around the boxes so the return arrow (top) and the repair loop (bottom) are never clipped.
+const FIT = { padding: 0.15 };
 import { AGENT_LABEL, type RunState } from "../state";
 
 const POS: Record<string, [number, number]> = {
@@ -42,8 +45,20 @@ export default function AgentGraph({ state, models }: { state: RunState; models:
       markerEnd: { type: MarkerType.ArrowClosed, color: hot ? "#c23b2e" : "#9aa3b2", width: 16, height: 16 },
     } as Edge;
   }), [state.edge]);
+  // Re-fit whenever the panel changes size (window resize, labels wrapping), not just on first load.
+  const rf = useRef<ReactFlowInstance | null>(null);
+  const box = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!box.current) return;
+    const ro = new ResizeObserver(() => requestAnimationFrame(() => rf.current?.fitView(FIT)));
+    ro.observe(box.current);
+    return () => ro.disconnect();
+  }, []);
+  useEffect(() => { requestAnimationFrame(() => rf.current?.fitView(FIT)); }, [models]);
   return (
-    <ReactFlow nodes={nodes} edges={edges} nodeTypes={nodeTypes} fitView fitViewOptions={{ padding: 0.12 }} nodesConnectable={false}
+    <div ref={box} style={{ width: "100%", height: "100%" }}>
+    <ReactFlow nodes={nodes} edges={edges} nodeTypes={nodeTypes} fitView fitViewOptions={FIT} onInit={(i) => { rf.current = i; }} nodesConnectable={false}
       zoomOnScroll={false} panOnDrag={false} zoomOnDoubleClick={false} preventScrolling={false} minZoom={0.3} aria-label="Agents and the messages passed between them" />
+    </div>
   );
 }

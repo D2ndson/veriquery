@@ -25,7 +25,13 @@ export default function AskPanel(p: Props) {
   const busy = p.state.status === "running" || p.state.status === "waiting";
   const adapters: string[] = p.config?.adapters || [];
   const writers = WRITERS.filter(([k]) => k === "base" || adapters.includes(k));
-  useEffect(() => { if (!writer && writers.length) setWriter(writers[writers.length - 1][0]); }, [adapters.join()]);
+  // Default to the writer the running profile uses (e.g. writer-qlora), not whichever option happens to be listed last.
+  const profileWriter: string | undefined = (p.config?.roles || []).find((r: any) => r.role === "writer")?.model;
+  const [writerTouched, setWriterTouched] = useState(false);
+  useEffect(() => {
+    if (writerTouched && writers.some(([k]) => k === writer)) return;   // keep a choice the user made
+    if (writers.length) setWriter(writers.some(([k]) => k === profileWriter) ? profileWriter! : writers[writers.length - 1][0]);
+  }, [adapters.join(), profileWriter]);
   useEffect(() => { setReply(""); }, [p.state.pendingQuestion]);
 
   const run = (question = q, evidence = ev) => {
@@ -52,11 +58,9 @@ export default function AskPanel(p: Props) {
       <section className="sheet">
         <h2>Ask a question</h2>
         <div className="seg" role="group" aria-label="How to run">
-          <button aria-pressed={p.mode === "scripted"} onClick={() => p.setMode("scripted")}>Scripted demo</button>
           <button aria-pressed={p.mode === "live"} onClick={() => p.setMode("live")}>Live models</button>
           <button aria-pressed={p.mode === "recorded"} onClick={() => p.setMode("recorded")} disabled={!p.golden.length} title={p.golden.length ? "" : "No recorded runs yet"}>Recorded</button>
         </div>
-        {p.mode === "scripted" && <p className="muted small">No model calls: the answers are scripted for the sample questions. Everything else (schema lookup, SQL execution, checks, analysis) really runs.</p>}
         {p.mode === "live" && !p.config?.live_ready && <p className="notice">{p.config?.live_problem}</p>}
 
         {p.mode !== "recorded" ? <>
@@ -72,7 +76,7 @@ export default function AskPanel(p: Props) {
             <textarea value={ev} onChange={(e) => setEv(e.target.value)} placeholder="For example: Today is 2025-07-01. Net revenue means after discounts." /></details>
           {p.mode === "live" && <>
             <label className="field" htmlFor="wr">SQL writer model</label>
-            <select id="wr" value={writer} onChange={(e) => setWriter(e.target.value)}>{writers.map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select>
+            <select id="wr" value={writer} onChange={(e) => { setWriter(e.target.value); setWriterTouched(true); }}>{writers.map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select>
           </>}
           <label className="field" htmlFor="sy">Pipeline version</label>
           <select id="sy" value={system} onChange={(e) => setSystem(e.target.value)}>{SYSTEMS.filter(([k]) => (p.config?.systems || []).includes(k)).map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select>

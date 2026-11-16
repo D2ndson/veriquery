@@ -65,11 +65,16 @@ def make_llm(role: str, spec: dict, cfg: dict, cache_dir: str | Path = "artifact
     key = ep.get("api_key")
     if ep.get("api_key_env"):
         key = hf_token() if ep["api_key_env"] == "HF_TOKEN" else os.environ.get(ep["api_key_env"])
-    cache = path(cache_dir) / f"llm_{role}_{_slug(spec['model'])}.sqlite" if use_cache else None
-    return LLM(model=spec["model"], provider="openai", base_url=ep["base_url"], api_key=key,
+    model = (ep.get("aliases") or {}).get(spec["model"], spec["model"])   # e.g. Ollama serves "base" under its own tag
+    cache = path(cache_dir) / f"llm_{role}_{_slug(model)}.sqlite" if use_cache else None
+    extra = spec.get("extra_body")
+    if ep.get("lora"):   # llama.cpp: one server, adapters switched per request by model name (unlisted names: all off)
+        off = [{"id": a["id"], "scale": 0.0} for a in next(iter(ep["lora"].values()))]
+        extra = {**(extra or {}), "lora": ep["lora"].get(spec["model"], off)}
+    return LLM(model=model, provider="openai", base_url=ep["base_url"], api_key=key,
                temperature=spec.get("temperature", 0.0), max_tokens=spec.get("max_tokens", 1024),
                cache_path=cache, timeout_s=spec.get("timeout_s", 300.0), no_think=spec.get("no_think", False),
-               extra_body=spec.get("extra_body"), max_retries=spec.get("max_retries", 4))
+               extra_body=extra, max_retries=spec.get("max_retries", 4))
 
 
 def build_llms(profile: str | None = None, cfg: dict | None = None, writer_model: str | None = None,

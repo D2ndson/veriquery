@@ -22,7 +22,7 @@ export default function ResultsView() {
     <div className="page"><section className="sheet"><h2>No results yet</h2>
       <p>Results appear here after the evaluation stages have run on the GPU machine. From the project folder:</p>
       <pre className="sql">python -m veriquery.pipeline.runner status{"\n"}python -m veriquery.pipeline.runner run</pre>
-      <p className="muted">Until then, use the Scripted demo on the first tab. It is clearly labelled and never counts as a benchmark result.</p></section></div>);
+      </section></div>);
   const mini = runs.filter(([t]) => t.startsWith("minidev")).sort((a, b) => Object.keys(LABEL).indexOf(a[0]) - Object.keys(LABEL).indexOf(b[0]));
   const best = Math.max(...mini.map(([, m]) => m.accuracy));
   return (

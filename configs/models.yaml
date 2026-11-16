@@ -9,6 +9,16 @@ endpoints:
   local:                                # vLLM server on the GPU box: scripts/serve_vllm.sh
     base_url: http://localhost:8000/v1
     api_key: EMPTY
+  ollama:                               # laptop GPU: `ollama pull qwen2.5-coder:7b` (cannot serve LoRA adapters)
+    base_url: http://localhost:11434/v1
+    api_key: ollama
+    aliases: {base: "qwen2.5-coder:7b"}
+  llamacpp:                             # laptop GPU with the fine-tuned writer: scripts/serve_llamacpp_qlora.ps1
+    base_url: http://localhost:8081/v1  # one llama-server holds the 4-bit base model and the QLoRA adapter (id 0)
+    api_key: none
+    aliases: {base: "qwen2.5-coder-7b", writer-qlora: "qwen2.5-coder-7b-qlora"}
+    lora:                               # per-request adapter scales by model name; any other name (e.g. base) runs with all off
+      writer-qlora: [{id: 0, scale: 1.0}]
 
 # The SQL writer is the agent we fine-tune with LoRA, so it runs on the GPU you rent.
 # vLLM serves the base weights as "base" and each LoRA adapter under its own name:
@@ -45,6 +55,18 @@ profiles:
     checker:   {endpoint: local, model: base, max_tokens: 1536}
     reporter:  {endpoint: local, model: base, max_tokens: 400}
     planner:   {endpoint: local, model: base, max_tokens: 300}
+  ollama_all:                           # zero cost, no server to run: every agent on Ollama's base 7B (VERIQUERY_PROFILE=ollama_all)
+    writer:    {endpoint: ollama, model: base, max_tokens: 1024, timeout_s: 600}
+    clarifier: {endpoint: ollama, model: base, max_tokens: 1500, timeout_s: 600}
+    checker:   {endpoint: ollama, model: base, max_tokens: 1536, timeout_s: 600}
+    reporter:  {endpoint: ollama, model: base, max_tokens: 400, timeout_s: 600}
+    planner:   {endpoint: ollama, model: base, max_tokens: 300, timeout_s: 600}
+  laptop_qlora:                         # laptop GPU: the fine-tuned QLoRA writer, other agents on the same base 7B (VERIQUERY_PROFILE=laptop_qlora)
+    writer:    {endpoint: llamacpp, model: writer-qlora, max_tokens: 1024, timeout_s: 600}
+    clarifier: {endpoint: llamacpp, model: base, max_tokens: 1500, timeout_s: 600}
+    checker:   {endpoint: llamacpp, model: base, max_tokens: 1536, timeout_s: 600}
+    reporter:  {endpoint: llamacpp, model: base, max_tokens: 400, timeout_s: 600}
+    planner:   {endpoint: llamacpp, model: base, max_tokens: 300, timeout_s: 600}
 
 # The prompt format each writer adapter was trained on. It is applied on top of whichever system runs, so a
 # writer always sees its own format (explicit overrides still win). Writers not listed use the system as written.
