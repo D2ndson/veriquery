@@ -29,8 +29,17 @@ class DisagreementEvidence:
         return {**asdict(self), 'sql_calls': self.sql_calls}
 
     def feedback(self):
+        # Timing and accounting stay in traces, never in the model prompt: the
+        # inference client derives its sampling seed from the prompt content.
+        payload = {
+            'differences': self.differences,
+            'clauses': self.clauses,
+            'probes': [{key: value for key, value in probe.items()
+                        if key != 'elapsed_seconds'} for probe in self.probes],
+            'notes': self.notes,
+        }
         return ('Targeted disagreement evidence, not proof of correctness. Missing FKs do not invalidate joins.\n'
-                + json.dumps(self.to_dict(), ensure_ascii=False))
+                + json.dumps(payload, ensure_ascii=False, sort_keys=True))
 
 
 def _describe(sql):

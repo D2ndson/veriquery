@@ -73,3 +73,20 @@ def test_failed_probe_costed_without_invented_evidence(database, monkeypatch):
     report = collect_disagreement_evidence(database, A, B, max_probes=1)
     assert report.sql_calls == 1 and report.probes[0]['error'] == 'timed out'
     assert 'nonnull_rows' not in report.probes[0]
+
+
+def test_feedback_ignores_timing_and_cost_accounting(database):
+    report = collect_disagreement_evidence(database, A, B)
+    original = report.feedback()
+    report.elapsed_seconds = 123.456
+    report.schema_reads = 99
+    for probe in report.probes:
+        probe['elapsed_seconds'] = 42.0
+    assert report.feedback() == original
+    assert 'elapsed_seconds' not in original
+    assert 'schema_reads' not in original and 'sql_calls' not in original
+    trace = report.to_dict()
+    assert trace['elapsed_seconds'] == 123.456 and trace['schema_reads'] == 99
+    assert trace['sql_calls'] == 3
+    assert all(probe['elapsed_seconds'] == 42.0 for probe in trace['probes'])
+    assert 'duplicate_nonnull_rows' in original

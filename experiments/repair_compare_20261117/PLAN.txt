@@ -1,0 +1,15 @@
+Controlled SQL repair comparison — 17 November 2026
+
+Use the same original Qwen2.5-Coder-14B-Instruct model, pinned revision aedcc2d42b622764e023cf882b6652e646b95671, NF4 loading and frozen development100 for all three modes. No trained or smoke adapter is used. This isolates repair feedback from model training.
+
+Generic: existing verifier feedback.
+Structure: adds differing joins, filters and aggregation clauses; no diagnostic database reads.
+Evidence: adds bounded key-cardinality and declared-FK evidence for supported disagreements.
+
+All arms: three drafts, SQL second route, two execution-error repairs and two verifier-repair rounds, at most24 model calls/question,16384 context tokens,1024 output tokens/call,5second SQL timeout and10000row scoring cap. Gold SQL is reserved for scoring. Timing/cost counters stay in traces and are excluded from repair prompts.
+
+Report actual calls/tokens/time, accuracy, errors versus executable wrong answers, paired fixes/regressions and exact paired tests. Also report intervention coverage, successful probes and unsupported cases. Confidence scores are heuristic; report observed high-confidence accuracy and coverage, not calibrated probabilities. Do not inspect calibration100 or final200 during this development comparison.
+
+Isolation: new snapshot and outputs under the user's own NTU directory experiments/repair_compare_20261117. No changes to teammates' branches, scripts, jobs or outputs. Submit only one normal-QOS GPU job at a time. Compute-node resubmission is not used because the earlier handoff was denied; resume is submitted from login after observing status. Local work stays on experiment/sql-14b-evidence-repair.
+
+This is a project-method experiment, not a claim that candidate verification or evidence-based repair is globally novel. Whole-column key counts do not prove actual filtered join multiplicity. No accuracy improvement is claimed before real model results.
